@@ -6,49 +6,38 @@ import com.creants.creants_2x.socket.gate.protocol.serialization.SerializableQAn
 import com.seagame.ext.config.game.StageConfig;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.Transient;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * @author LamHM
  */
 @Getter
 @Setter
-@Document(collection = "hero-stages")
 public class HeroStage implements SerializableQAntType {
-    private @Id
-    long id;
+    private String playerId;
     public String index;
     public String chapterIndex;
-    private String playerId;
     public boolean unlock;
     public int starNo;
     private int chance;
-    private long lastestSweepTime;
-    private @Transient
-    Stage stage;
+    private long lastSweepTime;
 
 
     public HeroStage() {
     }
 
 
-    public HeroStage(long id, String playerId, Stage stage) {
-        this.id = id;
+    public HeroStage(String playerId, Stage stage) {
         this.playerId = playerId;
         this.index = stage.getStageIndex();
         this.chapterIndex = stage.getChapterIndex();
         this.chance = stage.getChance();
-        setLastestSweepTime(System.currentTimeMillis());
+        setLastSweepTime(System.currentTimeMillis());
         setUnlock(true);
     }
 
     public IQAntObject buildInfo() {
         IQAntObject result = QAntObject.newInstance();
-        result.putLong("id", id);
         result.putUtfString("idx", index);
-        result.putUtfString("playerId", playerId);
         result.putUtfString("chapIdx", chapterIndex);
         result.putInt("chance", chance);
         result.putInt("starNo", starNo);
@@ -77,12 +66,12 @@ public class HeroStage implements SerializableQAntType {
 
 
     private void decrSweepTimes() {
-        setLastestSweepTime(System.currentTimeMillis());
+        setLastSweepTime(System.currentTimeMillis());
         chance--;
     }
 
     public void resetSweepTimes() {
         chance = StageConfig.getInstance().getStage(this.index).getChance();
-        setLastestSweepTime(System.currentTimeMillis());
+        setLastSweepTime(System.currentTimeMillis());
     }
 }
