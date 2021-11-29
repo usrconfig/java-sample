@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="UpgradeSystem">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="EvolveHeroes" type="EvolveHeroesType" />
+				<xs:element name="LevelUpHeroByHeroes" type="LevelUpHeroByHeroType" />
+				<xs:element name="LevelUpHeroByItems" type="LevelUpHeroByItemType" />
+
+				<xs:element name="LevelUpEquipmentsLT3" type="LevelUpEquipmentsType" />
+				<xs:element name="LevelUpEquipmentsGT3" type="LevelUpEquipmentsType" />
+				<xs:element name="EquipmentBonusStatsList" type="EquipmentBonusStatsType" />
+				<xs:element name="ItemOptionSkillList" type="ItemOptionSkillType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="EvolveHeroesType">
+		<xs:sequence>
+			<xs:element ref="EvolveHero" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="EvolveHero">
+		<xs:complexType>
+			<xs:attribute name="ClassGroup" type="xs:int" />
+			<xs:attribute name="Rank" type="xs:int" />
+			<xs:attribute name="SpecialMaterial" type="xs:string" />
+			<xs:attribute name="Cost" type="xs:string" />
+			<xs:attribute name="SuccessRatePercent" type="xs:int" />
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:complexType name="LevelUpHeroByHeroType">
+		<xs:sequence>
+			<xs:element ref="LevelUpHeroByHero" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="LevelUpHeroByHero">
+		<xs:complexType>
+			<xs:attribute name="Materials" type="xs:int" />
+			<xs:attribute name="SameElementals" type="xs:int" />
+			<xs:attribute name="DifferentElementals" type="xs:int" />
+			<xs:attribute name="SuccessRatePercent" type="xs:int" />
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:complexType name="LevelUpHeroByItemType">
+		<xs:sequence>
+			<xs:element ref="LevelUpHeroByItem" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="LevelUpHeroByItem">
+		<xs:complexType>
+			<xs:attribute name="Materials" type="xs:int" />
+			<xs:attribute name="SameElementals" type="xs:int" />
+			<xs:attribute name="DifferentElementals" type="xs:int" />
+			<xs:attribute name="SuccessRatePercent" type="xs:int" />
+			<xs:attribute name="CostPerSlot" type="xs:int" />
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:complexType name="LevelUpEquipmentsType">
+		<xs:sequence>
+			<xs:element ref="LevelUpEquipment" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="LevelUpEquipment">
+		<xs:complexType>
+			<xs:attribute name="Level" type="xs:int" />
+			<xs:attribute name="CombineMaterial" type="xs:string" />
+			<xs:attribute name="Cost" type="xs:string" />
+			<xs:attribute name="SuccessRatePercent" type="xs:int" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="EquipmentBonusStatsType">
+		<xs:sequence>
+			<xs:element ref="EquipmentBonusStats" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="EquipmentBonusStats">
+		<xs:complexType>
+			<xs:attribute name="EquipLevel" type="xs:int" />
+			<xs:attribute name="EquipRank" type="xs:int" />
+			<xs:attribute name="ATK" type="xs:int" />
+			<xs:attribute name="MAG" type="xs:int" />
+			<xs:attribute name="HP" type="xs:int" />
+			<xs:attribute name="DEF" type="xs:int" />
+			<xs:attribute name="RES" type="xs:int" />
+			<xs:attribute name="CRIT" type="xs:int" />
+			<xs:attribute name="SPD" type="xs:int" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="ItemOptionSkillType">
+		<xs:sequence>
+			<xs:element ref="ItemOptionSkill" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="ItemOptionSkill">
+		<xs:complexType>
+			<xs:attribute name="OptionGroup" type="xs:int" />
+			<xs:attribute name="SkillID" type="xs:int" />
+			<xs:attribute name="OptionRate" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

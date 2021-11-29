@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="ChaosStageList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ChaosStage" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChaosStage">
+		<xs:complexType>
+			<xs:attribute name="Index" type="xs:int" />
+			<xs:attribute name="BattlePower" type="xs:string" />
+			<xs:attribute name="ZenReward" type="xs:int" />
+			<xs:attribute name="ChaosPointReward" type="xs:int" />
+			<xs:attribute name="ChestReward" type="xs:string" />
+			<xs:attribute name="BonusItemS" type="xs:string" />
+			<xs:attribute name="BonusZenS" type="xs:int" />
+			<xs:attribute name="BonusItemA" type="xs:string" />
+			<xs:attribute name="BonusZenA" type="xs:int" />
+			<xs:attribute name="BonusItemB" type="xs:string" />
+			<xs:attribute name="BonusZenB" type="xs:int" />
+			<xs:attribute name="BonusItemC" type="xs:string" />
+			<xs:attribute name="BonusZenC" type="xs:int" />
+			<xs:attribute name="BonusItemD" type="xs:string" />
+			<xs:attribute name="BonusZenD" type="xs:int" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

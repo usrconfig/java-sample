@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="NPCList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="NPC" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="NPC">
+        <xs:complexType>
+            <xs:attribute name="NPCId" type="xs:string"/>
+            <xs:attribute name="Name" type="xs:string"/>
+            <xs:attribute name="Map" type="xs:string"/>
+            <xs:attribute name="Pos" type="xs:string"/>
+            <xs:attribute name="Quest" type="xs:string"/>
+            <xs:attribute name="Shop" type="xs:string"/>
+            <xs:attribute name="ActiveTime" type="xs:string"/>
+            <xs:attribute name="ResIMG" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+

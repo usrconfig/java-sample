@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="ShopInfoList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ShopInfo" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ShopInfo">
+		<xs:complexType>
+			<xs:attribute name="ShopID" type="xs:string" />
+			<xs:attribute name="ShopName" type="xs:string" />
+			<xs:attribute name="LifeTimeSeconds" type="xs:int" />
+			<xs:attribute name="RefreshPriceList" type="xs:string" />
+			<xs:attribute name="Currency" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

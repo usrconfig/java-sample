@@ -1,0 +1,289 @@
+[
+  {
+    "id": "9908",
+    "name": "txtItemZenPack",
+    "desc": "txtDesItemZenPack",
+    "type": "rewards",
+    "rank": 1,
+    "icon": "giftboxred",
+    "rewards": [
+      {
+        "type": "consumable",
+        "id": "9900",
+        "rewardsID": "9908",
+        "level": 0,
+        "rank": 0,
+        "count": 10000,
+        "rate": 250
+      },
+      {
+        "type": "consumable",
+        "id": "9900",
+        "rewardsID": "9908",
+        "level": 0,
+        "rank": 0,
+        "count": 500000,
+        "rate": 250
+      },
+      {
+        "type": "consumable",
+        "id": "9900",
+        "rewardsID": "9908",
+        "level": 0,
+        "rank": 0,
+        "count": 10000000,
+        "rate": 250
+      },
+      {
+        "type": "consumable",
+        "id": "9900",
+        "rewardsID": "9908",
+        "level": 0,
+        "rank": 0,
+        "count": 30000000,
+        "rate": 250
+      }
+    ]
+  },
+  {
+    "id": "9909",
+    "name": "txtItemGiftBox",
+    "desc": "txtDesItemGiftBox",
+    "type": "rewards",
+    "rank": 5,
+    "icon": "gmgiftchest",
+    "rewards": [
+      {
+        "type": "equip",
+        "id": "1000",
+        "rewardsID": "9909",
+        "level": 1,
+        "rank": 1,
+        "count": 1,
+        "rate": 0
+      },
+      {
+        "type": "equip",
+        "id": "2000",
+        "rewardsID": "9909",
+        "level": 5,
+        "rank": 2,
+        "count": 1,
+        "rate": 0
+      },
+      {
+        "type": "equip",
+        "id": "3000",
+        "rewardsID": "9909",
+        "level": 3,
+        "rank": 3,
+        "count": 1,
+        "rate": 0
+      },
+      {
+        "type": "equip",
+        "id": "4000",
+        "rewardsID": "9909",
+        "level": 2,
+        "rank": 1,
+        "count": 1,
+        "rate": 0
+      },
+      {
+        "type": "equip",
+        "id": "1001",
+        "rewardsID": "9909",
+        "level": 1,
+        "rank": 2,
+        "count": 1,
+        "rate": 0
+      }
+    ]
+  },
+  {
+    "id": "9902",
+    "name": "txtItemEnegry",
+    "desc": "txtDesItemEnegry",
+    "type": "point",
+    "rank": 1,
+    "icon": "stamina"
+  },
+  {
+    "id": "9903",
+    "name": "txtItemArenaTicket",
+    "desc": "txtDesItemArenaTicket",
+    "type": "ticket",
+    "rank": 2,
+    "icon": "arenaticket"
+  },
+  {
+    "id": "9999",
+    "name": "txtItemBless",
+    "desc": "txtDesItemBless",
+    "type": "currency",
+    "rank": 5,
+    "icon": "bless"
+  },
+  {
+    "id": "9900",
+    "name": "txtItemZen",
+    "desc": "txtDesItemZen",
+    "type": "currency",
+    "rank": 1,
+    "icon": "zen"
+  },
+  {
+    "id": "9901",
+    "name": "txtItemChaos",
+    "desc": "txtDesItemChaos",
+    "type": "material",
+    "rank": 2,
+    "icon": "chaos"
+  },
+  {
+    "id": "9906",
+    "name": "txtItemHeroTicket2Star",
+    "desc": "txtDesItemHeroTicket2Star",
+    "type": "rewards",
+    "rank": 2,
+    "icon": "2starheroticket",
+    "rewards": [
+      {
+        "type": "hero",
+        "id": "400",
+        "rewardsID": "9906",
+        "level": 1,
+        "rank": 2,
+        "count": 1,
+        "rate": 200
+      },
+      {
+        "type": "hero",
+        "id": "401",
+        "rewardsID": "9906",
+        "level": 1,
+        "rank": 2,
+        "count": 1,
+        "rate": 200
+      },
+      {
+        "type": "hero",
+        "id": "402",
+        "rewardsID": "9906",
+        "level": 1,
+        "rank": 2,
+        "count": 1,
+        "rate": 200
+      },
+      {
+        "type": "hero",
+        "id": "500",
+        "rewardsID": "9906",
+        "level": 1,
+        "rank": 2,
+        "count": 1,
+        "rate": 200
+      },
+      {
+        "type": "hero",
+        "id": "501",
+        "rewardsID": "9906",
+        "level": 1,
+        "rank": 2,
+        "count": 1,
+        "rate": 200
+      }
+    ]
+  },
+  {
+    "id": "9907",
+    "name": "txtItemHeroTicket3Star",
+    "desc": "txtDesItemHeroTicket3Star",
+    "type": "rewards",
+    "rank": 3,
+    "icon": "3starheroticket",
+    "rewards": [
+      {
+        "type": "hero",
+        "id": "601",
+        "rewardsID": "9907",
+        "level": 1,
+        "rank": 1,
+        "count": 1,
+        "rate": 333
+      },
+      {
+        "type": "hero",
+        "id": "701",
+        "rewardsID": "9907",
+        "level": 1,
+        "rank": 1,
+        "count": 1,
+        "rate": 333
+      },
+      {
+        "type": "hero",
+        "id": "801",
+        "rewardsID": "9907",
+        "level": 1,
+        "rank": 1,
+        "count": 1,
+        "rate": 334
+      }
+    ]
+  },
+  {
+    "id": "9904",
+    "name": "txtItemArenaCups",
+    "desc": "txtDesItemArenaCups",
+    "type": "point",
+    "rank": 1,
+    "icon": "cuppoint"
+  },
+  {
+    "id": "9905",
+    "name": "txtItemHeroTicket1Star",
+    "desc": "txtDesItemHeroTicket1Star",
+    "type": "rewards",
+    "rank": 1,
+    "icon": "1starheroticket",
+    "rewards": [
+      {
+        "type": "hero",
+        "id": "100",
+        "rewardsID": "9905",
+        "level": 1,
+        "rank": 1,
+        "count": 1,
+        "rate": 250
+      },
+      {
+        "type": "hero",
+        "id": "200",
+        "rewardsID": "9905",
+        "level": 1,
+        "rank": 1,
+        "count": 1,
+        "rate": 250
+      },
+      {
+        "type": "hero",
+        "id": "300",
+        "rewardsID": "9905",
+        "level": 1,
+        "rank": 1,
+        "count": 1,
+        "rate": 250
+      },
+      {
+        "type": "hero",
+        "id": "400",
+        "rewardsID": "9905",
+        "level": 1,
+        "rank": 1,
+        "count": 1,
+        "rate": 250
+      }
+    ]
+  }
+]

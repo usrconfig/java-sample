@@ -1,0 +1,1674 @@
+[
+  {
+    "monsterClass": "fighter",
+    "soundAct": "boy1act",
+    "soundHurt": "boy1hurt",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "hit_slash11"
+    ],
+    "hitFXarr": [
+      "hitSlashRed1"
+    ],
+    "name": "Cow",
+    "type": "creep",
+    "id": "1000",
+    "mp": 100,
+    "spine": "bullfighter",
+    "spd": 116,
+    "expreward": 209,
+    "mag": 0,
+    "skills": [
+      "10001",
+      "10002",
+      "10003",
+      "10004"
+    ],
+    "hp": 5000,
+    "element": "fire",
+    "mpr": 20,
+    "rank": 1,
+    "level": 2,
+    "crit": 15,
+    "def": 233,
+    "atk": 400,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "wizard",
+    "soundAct": "icequeen_a",
+    "soundHurt": "icequeen_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "cast1",
+      "icepike"
+    ],
+    "hitFXarr": [
+      "hitIceBlast"
+    ],
+    "name": "Snow Queen",
+    "type": "boss",
+    "id": "1021",
+    "mp": 100,
+    "spine": "icequeen",
+    "spd": 378,
+    "expreward": 31318,
+    "mag": 0,
+    "skills": [
+      "10211",
+      "10212",
+      "10213",
+      "10214"
+    ],
+    "hp": 260260,
+    "element": "water",
+    "mpr": 20,
+    "rank": 5,
+    "level": 18,
+    "crit": 15,
+    "def": 722,
+    "atk": 6846,
+    "ranged": true,
+    "res": 0
+  },
+  {
+    "monsterClass": "lancer",
+    "soundAct": "yeti_a",
+    "soundHurt": "yeti_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "ragesmash"
+    ],
+    "hitFXarr": [
+      "hitImpactBlue1"
+    ],
+    "name": "Elite Yeti",
+    "type": "creep",
+    "id": "1020",
+    "mp": 100,
+    "spine": "eliteyeti",
+    "spd": 137,
+    "expreward": 1259,
+    "mag": 0,
+    "skills": [
+      "10201",
+      "10202",
+      "10203",
+      "10204"
+    ],
+    "hp": 30675,
+    "element": "water",
+    "mpr": 20,
+    "rank": 2,
+    "level": 15,
+    "crit": 20,
+    "def": 800,
+    "atk": 1215,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "lancer",
+    "soundAct": "yeti_a",
+    "soundHurt": "yeti_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "ragesmash"
+    ],
+    "hitFXarr": [
+      "hitImpactBlue1"
+    ],
+    "name": "Yeti",
+    "type": "creep",
+    "id": "1019",
+    "mp": 100,
+    "spine": "yeti",
+    "spd": 136,
+    "expreward": 871,
+    "mag": 0,
+    "skills": [
+      "10191",
+      "10192",
+      "10193",
+      "10194"
+    ],
+    "hp": 21165,
+    "element": "water",
+    "mpr": 20,
+    "rank": 2,
+    "level": 14,
+    "crit": 15,
+    "def": 600,
+    "atk": 1087,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "wizard",
+    "soundAct": "bossdead_a",
+    "soundHurt": "bossdead_h",
+    "hitCount": "1",
+    "hitPosition": "bottom",
+    "soundFXarr": [
+      "magic11"
+    ],
+    "hitFXarr": [
+      "hitWhiteWizardThunder"
+    ],
+    "name": "White Wizard 2",
+    "type": "boss",
+    "id": "1514",
+    "mp": 100,
+    "spine": "whitewizard",
+    "spd": 260,
+    "expreward": 4811,
+    "mag": 0,
+    "skills": [
+      "15141",
+      "15142",
+      "15143",
+      "15144"
+    ],
+    "hp": 38500,
+    "element": "dark",
+    "mpr": 20,
+    "rank": 3,
+    "level": 30,
+    "crit": 15,
+    "def": 604,
+    "atk": 1811,
+    "ranged": true,
+    "res": 0
+  },
+  {
+    "monsterClass": "fighter",
+    "soundAct": "assassin_a",
+    "soundHurt": "assassin_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "hit_slash11"
+    ],
+    "hitFXarr": [
+      "assassinhit"
+    ],
+    "name": "Ninja",
+    "type": "creep",
+    "id": "1018",
+    "mp": 100,
+    "spine": "assassin",
+    "spd": 221,
+    "expreward": 353,
+    "mag": 0,
+    "skills": [
+      "10181",
+      "10182",
+      "10183",
+      "10184"
+    ],
+    "hp": 8606,
+    "element": "water",
+    "mpr": 20,
+    "rank": 2,
+    "level": 13,
+    "crit": 25,
+    "def": 213,
+    "atk": 1699,
+    "ranged": true,
+    "res": 0
+  },
+  {
+    "monsterClass": "wizard",
+    "soundAct": "bossdead_a",
+    "soundHurt": "bossdead_h",
+    "hitCount": "1",
+    "hitPosition": "bottom",
+    "soundFXarr": [
+      "magic11"
+    ],
+    "hitFXarr": [
+      "hitWhiteWizardThunder"
+    ],
+    "name": "White Wizard 1",
+    "type": "boss",
+    "id": "1513",
+    "mp": 100,
+    "spine": "whitewizard",
+    "spd": 192,
+    "expreward": 1854,
+    "mag": 0,
+    "skills": [
+      "15131",
+      "15132",
+      "15133",
+      "15134"
+    ],
+    "hp": 14400,
+    "element": "dark",
+    "mpr": 20,
+    "rank": 2,
+    "level": 20,
+    "crit": 15,
+    "def": 399,
+    "atk": 684,
+    "ranged": true,
+    "res": 0
+  },
+  {
+    "monsterClass": "knight",
+    "soundAct": "icemonster_a",
+    "soundHurt": "icemonster_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "punch11"
+    ],
+    "hitFXarr": [
+      "hitImpactBlue1"
+    ],
+    "name": "Ice Monster",
+    "type": "creep",
+    "id": "1017",
+    "mp": 100,
+    "spine": "icemonster",
+    "spd": 128,
+    "expreward": 392,
+    "mag": 0,
+    "skills": [
+      "10171",
+      "10172",
+      "10173",
+      "10174"
+    ],
+    "hp": 9480,
+    "element": "water",
+    "mpr": 20,
+    "rank": 1,
+    "level": 12,
+    "crit": 25,
+    "def": 320,
+    "atk": 888,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "wizard",
+    "soundAct": "lich_a",
+    "soundHurt": "lich_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "magic11",
+      "hit_magic11"
+    ],
+    "hitFXarr": [
+      "hitLichAttack"
+    ],
+    "name": "Cursed Wizard",
+    "type": "creep",
+    "id": "1512",
+    "mp": 100,
+    "spine": "cursedwizard",
+    "spd": 156,
+    "expreward": 170,
+    "mag": 0,
+    "skills": [
+      "15121",
+      "15122",
+      "15123",
+      "15124"
+    ],
+    "hp": 3300,
+    "element": "dark",
+    "mpr": 20,
+    "rank": 3,
+    "level": 30,
+    "crit": 15,
+    "def": 362,
+    "atk": 2174,
+    "ranged": true,
+    "res": 0
+  },
+  {
+    "monsterClass": "knight",
+    "soundAct": "hommerd_a",
+    "soundHurt": "hommerd_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "slash11"
+    ],
+    "hitFXarr": [
+      "hitImpactBlue1"
+    ],
+    "name": "Snowman",
+    "type": "creep",
+    "id": "1016",
+    "mp": 100,
+    "spine": "hommerd",
+    "spd": 127,
+    "expreward": 384,
+    "mag": 0,
+    "skills": [
+      "10161",
+      "10162",
+      "10163",
+      "10164"
+    ],
+    "hp": 9240,
+    "element": "water",
+    "mpr": 20,
+    "rank": 1,
+    "level": 11,
+    "crit": 15,
+    "def": 350,
+    "atk": 864,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "wizard",
+    "soundAct": "lich_a",
+    "soundHurt": "lich_h",
+    "hitCount": "1",
+    "hitPosition": "bottom",
+    "soundFXarr": [
+      "lich_a",
+      "cast1"
+    ],
+    "hitFXarr": [
+      "hitThunderDark"
+    ],
+    "name": "Thunder Lich",
+    "type": "creep",
+    "id": "1511",
+    "mp": 100,
+    "spine": "thunderlich",
+    "spd": 115,
+    "expreward": 103,
+    "mag": 0,
+    "skills": [
+      "15111",
+      "15112",
+      "15113",
+      "15114"
+    ],
+    "hp": 2000,
+    "element": "dark",
+    "mpr": 20,
+    "rank": 2,
+    "level": 15,
+    "crit": 15,
+    "def": 223,
+    "atk": 1339,
+    "ranged": true,
+    "res": 0
+  },
+  {
+    "monsterClass": "fighter",
+    "soundAct": "worm_a",
+    "soundHurt": "worm_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "punch11"
+    ],
+    "hitFXarr": [
+      "hitImpactBlue1"
+    ],
+    "name": "Ice Worm",
+    "type": "creep",
+    "id": "1015",
+    "mp": 100,
+    "spine": "worm",
+    "spd": 125,
+    "expreward": 372,
+    "mag": 0,
+    "skills": [
+      "10151",
+      "10152",
+      "10153",
+      "10154"
+    ],
+    "hp": 9000,
+    "element": "water",
+    "mpr": 20,
+    "rank": 1,
+    "level": 10,
+    "crit": 15,
+    "def": 302,
+    "atk": 840,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "wizard",
+    "soundAct": "lich_a",
+    "soundHurt": "lich_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "lich_a",
+      "cast1"
+    ],
+    "hitFXarr": [
+      "hitLichAttack"
+    ],
+    "name": "Lich",
+    "type": "creep",
+    "id": "1510",
+    "mp": 100,
+    "spine": "lich",
+    "spd": 84,
+    "expreward": 62,
+    "mag": 0,
+    "skills": [
+      "15101",
+      "15102",
+      "15103",
+      "15104"
+    ],
+    "hp": 1200,
+    "element": "dark",
+    "mpr": 20,
+    "rank": 1,
+    "level": 5,
+    "crit": 15,
+    "def": 137,
+    "atk": 819,
+    "ranged": true,
+    "res": 0
+  },
+  {
+    "monsterClass": "lord",
+    "soundAct": "golem_a",
+    "soundHurt": "golem_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "punch11",
+      "hit_punch13"
+    ],
+    "hitFXarr": [
+      "hitImpactYellow1"
+    ],
+    "name": "Mountain King",
+    "type": "boss",
+    "id": "1014",
+    "mp": 100,
+    "spine": "stonegolem",
+    "spd": 233,
+    "expreward": 21742,
+    "mag": 0,
+    "skills": [
+      "10141",
+      "10142",
+      "10143",
+      "10144"
+    ],
+    "hp": 180180,
+    "element": "earth",
+    "mpr": 20,
+    "rank": 4,
+    "level": 11,
+    "crit": 15,
+    "def": 1000,
+    "atk": 1800,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "lancer",
+    "soundAct": "beetle_a",
+    "soundHurt": "beetle_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "slash11"
+    ],
+    "hitFXarr": [
+      "hitImpactBlue1"
+    ],
+    "name": "Bee",
+    "type": "creep",
+    "id": "1013",
+    "mp": 100,
+    "spine": "beetle",
+    "spd": 150,
+    "expreward": 181,
+    "mag": 0,
+    "skills": [
+      "10131",
+      "10132",
+      "10133",
+      "10134"
+    ],
+    "hp": 4380,
+    "element": "earth",
+    "mpr": 20,
+    "rank": 1,
+    "level": 9,
+    "crit": 25,
+    "def": 145,
+    "atk": 1500,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "fighter",
+    "soundAct": "goblin_a",
+    "soundHurt": "goblin_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "slash11"
+    ],
+    "hitFXarr": [
+      "hitImpactBlue1"
+    ],
+    "name": "Elite Goblin",
+    "type": "creep",
+    "id": "1012",
+    "mp": 100,
+    "spine": "elitegoblin",
+    "spd": 91,
+    "expreward": 425,
+    "mag": 0,
+    "skills": [
+      "10121",
+      "10122",
+      "10123",
+      "10124"
+    ],
+    "hp": 10224,
+    "element": "earth",
+    "mpr": 20,
+    "rank": 1,
+    "level": 8,
+    "crit": 15,
+    "def": 400,
+    "atk": 850,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "wizard",
+    "soundAct": "bossdead_a",
+    "soundHurt": "bossdead_h",
+    "hitCount": "1",
+    "hitPosition": "bottom",
+    "soundFXarr": [
+      "magic11"
+    ],
+    "hitFXarr": [
+      "hitWhiteWizardThunder"
+    ],
+    "name": "White Wizard 5",
+    "type": "boss",
+    "id": "1517",
+    "mp": 100,
+    "spine": "whitewizard",
+    "spd": 720,
+    "expreward": 280445,
+    "mag": 0,
+    "skills": [
+      "15171",
+      "15172",
+      "15173",
+      "15174"
+    ],
+    "hp": 2331000,
+    "element": "dark",
+    "mpr": 20,
+    "rank": 5,
+    "level": 80,
+    "crit": 15,
+    "def": 2258,
+    "atk": 60953,
+    "ranged": true,
+    "res": 0
+  },
+  {
+    "monsterClass": "wizard",
+    "soundAct": "bossdead_a",
+    "soundHurt": "bossdead_h",
+    "hitCount": "1",
+    "hitPosition": "bottom",
+    "soundFXarr": [
+      "magic11"
+    ],
+    "hitFXarr": [
+      "hitWhiteWizardThunder"
+    ],
+    "name": "White Wizard 4",
+    "type": "boss",
+    "id": "1516",
+    "mp": 100,
+    "spine": "whitewizard",
+    "spd": 680,
+    "expreward": 71336,
+    "mag": 0,
+    "skills": [
+      "15161",
+      "15162",
+      "15163",
+      "15164"
+    ],
+    "hp": 589000,
+    "element": "dark",
+    "mpr": 20,
+    "rank": 5,
+    "level": 70,
+    "crit": 15,
+    "def": 2048,
+    "atk": 12285,
+    "ranged": true,
+    "res": 0
+  },
+  {
+    "monsterClass": "wizard",
+    "soundAct": "bossdead_a",
+    "soundHurt": "bossdead_h",
+    "hitCount": "1",
+    "hitPosition": "bottom",
+    "soundFXarr": [
+      "magic11"
+    ],
+    "hitFXarr": [
+      "hitWhiteWizardThunder"
+    ],
+    "name": "White Wizard 3",
+    "type": "boss",
+    "id": "1515",
+    "mp": 100,
+    "spine": "whitewizard",
+    "spd": 360,
+    "expreward": 17592,
+    "mag": 0,
+    "skills": [
+      "15151",
+      "15152",
+      "15153",
+      "15154"
+    ],
+    "hp": 144000,
+    "element": "dark",
+    "mpr": 20,
+    "rank": 4,
+    "level": 50,
+    "crit": 15,
+    "def": 977,
+    "atk": 5859,
+    "ranged": true,
+    "res": 0
+  },
+  {
+    "monsterClass": "fighter",
+    "soundAct": "goblin_a",
+    "soundHurt": "goblin_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "slash11"
+    ],
+    "hitFXarr": [
+      "hitImpactBlue1"
+    ],
+    "name": "Goblin",
+    "type": "creep",
+    "id": "1011",
+    "mp": 100,
+    "spine": "goblin",
+    "spd": 119,
+    "expreward": 253,
+    "mag": 0,
+    "skills": [
+      "10111",
+      "10112",
+      "10113",
+      "10114"
+    ],
+    "hp": 6048,
+    "element": "earth",
+    "mpr": 20,
+    "rank": 1,
+    "level": 4,
+    "crit": 25,
+    "def": 272,
+    "atk": 820,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "fighter",
+    "soundAct": "budgedragon_a",
+    "soundHurt": "budgedragon_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "slash11"
+    ],
+    "hitFXarr": [
+      "hitImpactBlue1"
+    ],
+    "name": "Small Dragon",
+    "type": "creep",
+    "id": "1010",
+    "mp": 100,
+    "spine": "budgedragon",
+    "spd": 117,
+    "expreward": 225,
+    "mag": 0,
+    "skills": [
+      "10101",
+      "10102",
+      "10103",
+      "10104"
+    ],
+    "hp": 5376,
+    "element": "fire",
+    "mpr": 20,
+    "rank": 1,
+    "level": 3,
+    "crit": 15,
+    "def": 242,
+    "atk": 800,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "knight",
+    "soundAct": "hound_a",
+    "soundHurt": "hound_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitImpactBlue1"
+    ],
+    "name": "Wolf",
+    "type": "creep",
+    "id": "1008",
+    "mp": 100,
+    "spine": "hound",
+    "spd": 144,
+    "expreward": 144,
+    "mag": 0,
+    "skills": [
+      "10081",
+      "10082",
+      "10083",
+      "10084"
+    ],
+    "hp": 3480,
+    "element": "fire",
+    "mpr": 20,
+    "rank": 1,
+    "level": 4,
+    "crit": 20,
+    "def": 115,
+    "atk": 1100,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "fighter",
+    "soundAct": "goblin_a",
+    "soundHurt": "goblin_h",
+    "hitCount": "3",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "waterpillarcombo"
+    ],
+    "hitFXarr": [
+      "hitImpactPurple1",
+      "hitImpactPurple2",
+      "hitImpactPurple3"
+    ],
+    "name": "Crescent Rabbit",
+    "type": "creep",
+    "id": "1503",
+    "mp": 100,
+    "spine": "crescentrabbit",
+    "spd": 247,
+    "expreward": 14,
+    "mag": 0,
+    "skills": [
+      "15031",
+      "15032",
+      "15033",
+      "15034"
+    ],
+    "hp": 5750,
+    "element": "earth",
+    "mpr": 20,
+    "rank": 4,
+    "level": 30,
+    "crit": 15,
+    "def": 828,
+    "atk": 660,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "knight",
+    "soundAct": "goldendragon_a",
+    "soundHurt": "goldendragon_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitDragonClaw"
+    ],
+    "name": "Golden Dragon (King)",
+    "type": "boss",
+    "id": "1525",
+    "mp": 100,
+    "spine": "goldendragon",
+    "spd": 855,
+    "expreward": 28545,
+    "mag": 0,
+    "skills": [
+      "15251",
+      "15252",
+      "15253",
+      "15254"
+    ],
+    "hp": 4751250,
+    "element": "fire",
+    "mpr": 20,
+    "rank": 5,
+    "level": 80,
+    "crit": 15,
+    "def": 3780,
+    "atk": 83850,
+    "ranged": true,
+    "res": 0
+  },
+  {
+    "monsterClass": "fighter",
+    "soundAct": "spider_a",
+    "soundHurt": "spider_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "slash11"
+    ],
+    "hitFXarr": [
+      "hitImpactBlue1"
+    ],
+    "name": "Elite Spider",
+    "type": "creep",
+    "id": "1007",
+    "mp": 100,
+    "spine": "hellspider",
+    "spd": 116,
+    "expreward": 238,
+    "mag": 0,
+    "skills": [
+      "10071",
+      "10072",
+      "10073",
+      "10074"
+    ],
+    "hp": 5664,
+    "element": "earth",
+    "mpr": 20,
+    "rank": 1,
+    "level": 2,
+    "crit": 20,
+    "def": 280,
+    "atk": 450,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "fighter",
+    "soundAct": "goblin_a",
+    "soundHurt": "goblin_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "hit_arrow11"
+    ],
+    "hitFXarr": [
+      "hitDarkArrow"
+    ],
+    "name": "Elite Rabbit",
+    "type": "creep",
+    "id": "1502",
+    "mp": 100,
+    "spine": "eliterabbit",
+    "spd": 171,
+    "expreward": 9,
+    "mag": 0,
+    "skills": [
+      "15021",
+      "15022",
+      "15023",
+      "15024"
+    ],
+    "hp": 3563,
+    "element": "earth",
+    "mpr": 20,
+    "rank": 3,
+    "level": 20,
+    "crit": 15,
+    "def": 513,
+    "atk": 405,
+    "ranged": true,
+    "res": 0
+  },
+  {
+    "monsterClass": "knight",
+    "soundAct": "goldendragon_a",
+    "soundHurt": "goldendragon_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitDragonClaw"
+    ],
+    "name": "Golden Dragon (Leader)",
+    "type": "boss",
+    "id": "1524",
+    "mp": 100,
+    "spine": "goldendragon",
+    "spd": 808,
+    "expreward": 4452,
+    "mag": 0,
+    "skills": [
+      "15241",
+      "15242",
+      "15243",
+      "15244"
+    ],
+    "hp": 736250,
+    "element": "fire",
+    "mpr": 20,
+    "rank": 5,
+    "level": 70,
+    "crit": 15,
+    "def": 3420,
+    "atk": 5850,
+    "ranged": true,
+    "res": 0
+  },
+  {
+    "monsterClass": "fighter",
+    "soundAct": "spider_a",
+    "soundHurt": "spider_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "slash11"
+    ],
+    "hitFXarr": [
+      "hitImpactBlue1"
+    ],
+    "name": "Spider",
+    "type": "creep",
+    "id": "1006",
+    "mp": 100,
+    "spine": "spider",
+    "spd": 115,
+    "expreward": 229,
+    "mag": 0,
+    "skills": [
+      "10061",
+      "10062",
+      "10063",
+      "10064"
+    ],
+    "hp": 5472,
+    "element": "earth",
+    "mpr": 20,
+    "rank": 1,
+    "level": 1,
+    "crit": 15,
+    "def": 246,
+    "atk": 350,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "fighter",
+    "soundAct": "beetle_a",
+    "soundHurt": "beetle_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "hit_punch12"
+    ],
+    "hitFXarr": [
+      "hitImpactPurple1"
+    ],
+    "name": "Rabbit",
+    "type": "creep",
+    "id": "1501",
+    "mp": 100,
+    "spine": "rabbit",
+    "spd": 131,
+    "expreward": 6,
+    "mag": 0,
+    "skills": [
+      "15011",
+      "15012",
+      "15013",
+      "15014"
+    ],
+    "hp": 2344,
+    "element": "earth",
+    "mpr": 20,
+    "rank": 2,
+    "level": 10,
+    "crit": 15,
+    "def": 338,
+    "atk": 263,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "knight",
+    "soundAct": "goldendragon_a",
+    "soundHurt": "goldendragon_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitDragonClaw"
+    ],
+    "name": "Golden Dragon (Elder)",
+    "type": "boss",
+    "id": "1523",
+    "mp": 100,
+    "spine": "goldendragon",
+    "spd": 428,
+    "expreward": 1096,
+    "mag": 0,
+    "skills": [
+      "15231",
+      "15232",
+      "15233",
+      "15234"
+    ],
+    "hp": 180000,
+    "element": "fire",
+    "mpr": 20,
+    "rank": 4,
+    "level": 50,
+    "crit": 15,
+    "def": 1620,
+    "atk": 2651,
+    "ranged": true,
+    "res": 0
+  },
+  {
+    "monsterClass": "knight",
+    "soundAct": "armoredskeleton_a",
+    "soundHurt": "armoredskeleton_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "hit_slash11"
+    ],
+    "hitFXarr": [
+      "hitImpactRed1"
+    ],
+    "name": "Skeleton King",
+    "type": "boss",
+    "id": "1005",
+    "mp": 100,
+    "spine": "skeletonking",
+    "spd": 249,
+    "expreward": 5830,
+    "mag": 0,
+    "skills": [
+      "10051",
+      "10052",
+      "10053",
+      "10054"
+    ],
+    "hp": 48000,
+    "element": "dark",
+    "mpr": 20,
+    "rank": 3,
+    "level": 5,
+    "crit": 15,
+    "def": 585,
+    "atk": 1300,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "fighter",
+    "soundAct": "beetle_a",
+    "soundHurt": "beetle_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "hit_punch12"
+    ],
+    "hitFXarr": [
+      "hitImpactPurple1"
+    ],
+    "name": "Little Rabbit",
+    "type": "creep",
+    "id": "1500",
+    "mp": 100,
+    "spine": "littlerabbit",
+    "spd": 96,
+    "expreward": 4,
+    "mag": 0,
+    "skills": [
+      "15001",
+      "15002",
+      "15003",
+      "15004"
+    ],
+    "hp": 1425,
+    "element": "earth",
+    "mpr": 20,
+    "rank": 1,
+    "level": 1,
+    "crit": 15,
+    "def": 205,
+    "atk": 156,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "knight",
+    "soundAct": "goldendragon_a",
+    "soundHurt": "goldendragon_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitDragonClaw"
+    ],
+    "name": "Golden Dragon (Elite)",
+    "type": "boss",
+    "id": "1522",
+    "mp": 100,
+    "spine": "goldendragon",
+    "spd": 309,
+    "expreward": 299,
+    "mag": 0,
+    "skills": [
+      "15221",
+      "15222",
+      "15223",
+      "15224"
+    ],
+    "hp": 48125,
+    "element": "fire",
+    "mpr": 20,
+    "rank": 3,
+    "level": 30,
+    "crit": 15,
+    "def": 990,
+    "atk": 1553,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "knight",
+    "soundAct": "armoredskeleton_a",
+    "soundHurt": "armoredskeleton_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "slash11"
+    ],
+    "hitFXarr": [
+      "hitImpactBlue1"
+    ],
+    "name": "Armored Skeleton",
+    "type": "creep",
+    "id": "1004",
+    "mp": 100,
+    "spine": "armoredskeleton",
+    "spd": 88,
+    "expreward": 362,
+    "mag": 0,
+    "skills": [
+      "10041",
+      "10042",
+      "10043",
+      "10044"
+    ],
+    "hp": 8640,
+    "element": "dark",
+    "mpr": 20,
+    "rank": 1,
+    "level": 5,
+    "crit": 15,
+    "def": 400,
+    "atk": 600,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "knight",
+    "soundAct": "goldendragon_a",
+    "soundHurt": "goldendragon_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitDragonClaw"
+    ],
+    "name": "Golden Dragon",
+    "type": "boss",
+    "id": "1521",
+    "mp": 100,
+    "spine": "goldendragon",
+    "spd": 228,
+    "expreward": 114,
+    "mag": 0,
+    "skills": [
+      "15211",
+      "15212",
+      "15213",
+      "15214"
+    ],
+    "hp": 18000,
+    "element": "fire",
+    "mpr": 20,
+    "rank": 2,
+    "level": 20,
+    "crit": 15,
+    "def": 648,
+    "atk": 342,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "elf",
+    "soundAct": "skeleton_a",
+    "soundHurt": "skeleton_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "shoot11"
+    ],
+    "hitFXarr": [
+      "hitImpactBlue1"
+    ],
+    "name": "Skeleton Archer",
+    "type": "creep",
+    "id": "1003",
+    "mp": 100,
+    "spine": "skeletonarcher",
+    "spd": 119,
+    "expreward": 228,
+    "mag": 0,
+    "skills": [
+      "10031",
+      "10032",
+      "10033",
+      "10034"
+    ],
+    "hp": 5500,
+    "element": "dark",
+    "mpr": 20,
+    "rank": 1,
+    "level": 4,
+    "crit": 25,
+    "def": 200,
+    "atk": 1000,
+    "ranged": true,
+    "res": 0
+  },
+  {
+    "monsterClass": "knight",
+    "soundAct": "budgedragon_a",
+    "soundHurt": "budgedragon_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitImpactBlue1"
+    ],
+    "name": "Budge Dragon",
+    "type": "creep",
+    "id": "1520",
+    "mp": 100,
+    "spine": "budgedragon",
+    "spd": 100,
+    "expreward": 74,
+    "mag": 0,
+    "skills": [
+      "15201",
+      "15202",
+      "15203",
+      "15204"
+    ],
+    "hp": 1500,
+    "element": "fire",
+    "mpr": 20,
+    "rank": 1,
+    "level": 5,
+    "crit": 15,
+    "def": 216,
+    "atk": 390,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "knight",
+    "soundAct": "skeleton_a",
+    "soundHurt": "skeleton_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "slash11"
+    ],
+    "hitFXarr": [
+      "hitImpactBlue1"
+    ],
+    "name": "Skeleton",
+    "type": "creep",
+    "id": "1002",
+    "mp": 100,
+    "spine": "skeleton",
+    "spd": 119,
+    "expreward": 247,
+    "mag": 0,
+    "skills": [
+      "10021",
+      "10022",
+      "10023",
+      "10024"
+    ],
+    "hp": 5900,
+    "element": "dark",
+    "mpr": 20,
+    "rank": 1,
+    "level": 4,
+    "crit": 15,
+    "def": 272,
+    "atk": 800,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "fighter",
+    "soundAct": "boy2act",
+    "soundHurt": "boy2hurt",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "hit_slash12"
+    ],
+    "hitFXarr": [
+      "hitSlashRed1"
+    ],
+    "name": "Elite Cow",
+    "type": "creep",
+    "id": "1001",
+    "mp": 100,
+    "spine": "elitebull",
+    "spd": 117,
+    "expreward": 250,
+    "mag": 0,
+    "skills": [
+      "10011",
+      "10012",
+      "10013",
+      "10014"
+    ],
+    "hp": 6000,
+    "element": "fire",
+    "mpr": 20,
+    "rank": 1,
+    "level": 3,
+    "crit": 15,
+    "def": 242,
+    "atk": 500,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "fighter",
+    "soundAct": "girl1act",
+    "soundHurt": "girl1hurt",
+    "hitCount": "2",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitRabbitClaw"
+    ],
+    "name": "Moon Rabbit 5",
+    "type": "boss",
+    "id": "1508",
+    "mp": 100,
+    "spine": "moonrabbit",
+    "spd": 855,
+    "expreward": 16325,
+    "mag": 0,
+    "skills": [
+      "15081",
+      "15082",
+      "15083",
+      "15084"
+    ],
+    "hp": 2714375,
+    "element": "earth",
+    "mpr": 20,
+    "rank": 5,
+    "level": 80,
+    "crit": 15,
+    "def": 3870,
+    "atk": 69300,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "fighter",
+    "soundAct": "girl1act",
+    "soundHurt": "girl1hurt",
+    "hitCount": "2",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitRabbitClaw"
+    ],
+    "name": "Moon Rabbit 4",
+    "type": "boss",
+    "id": "1507",
+    "mp": 100,
+    "spine": "moonrabbit",
+    "spd": 760,
+    "expreward": 4100,
+    "mag": 0,
+    "skills": [
+      "15071",
+      "15072",
+      "15073",
+      "15074"
+    ],
+    "hp": 678125,
+    "element": "earth",
+    "mpr": 20,
+    "rank": 5,
+    "level": 60,
+    "crit": 15,
+    "def": 3150,
+    "atk": 2550,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "fighter",
+    "soundAct": "girl1act",
+    "soundHurt": "girl1hurt",
+    "hitCount": "2",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitRabbitClaw"
+    ],
+    "name": "Moon Rabbit 3",
+    "type": "boss",
+    "id": "1506",
+    "mp": 100,
+    "spine": "moonrabbit",
+    "spd": 428,
+    "expreward": 1133,
+    "mag": 0,
+    "skills": [
+      "15061",
+      "15062",
+      "15063",
+      "15064"
+    ],
+    "hp": 186000,
+    "element": "earth",
+    "mpr": 20,
+    "rank": 4,
+    "level": 50,
+    "crit": 15,
+    "def": 1674,
+    "atk": 1350,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "fighter",
+    "soundAct": "girl1act",
+    "soundHurt": "girl1hurt",
+    "hitCount": "2",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitRabbitClaw"
+    ],
+    "name": "Moon Rabbit 2",
+    "type": "boss",
+    "id": "1505",
+    "mp": 100,
+    "spine": "moonrabbit",
+    "spd": 309,
+    "expreward": 312,
+    "mag": 0,
+    "skills": [
+      "15051",
+      "15052",
+      "15053",
+      "15054"
+    ],
+    "hp": 50313,
+    "element": "earth",
+    "mpr": 20,
+    "rank": 3,
+    "level": 30,
+    "crit": 15,
+    "def": 1035,
+    "atk": 825,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "knight",
+    "soundAct": "hound_a",
+    "soundHurt": "hound_h",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitImpactBlue1"
+    ],
+    "name": "Hell Wolf",
+    "type": "creep",
+    "id": "1009",
+    "mp": 100,
+    "spine": "hellhound",
+    "spd": 145,
+    "expreward": 165,
+    "mag": 0,
+    "skills": [
+      "10091",
+      "10092",
+      "10093",
+      "10094"
+    ],
+    "hp": 4000,
+    "element": "fire",
+    "mpr": 20,
+    "rank": 1,
+    "level": 5,
+    "crit": 20,
+    "def": 119,
+    "atk": 1300,
+    "ranged": false,
+    "res": 0
+  },
+  {
+    "monsterClass": "fighter",
+    "soundAct": "girl1act",
+    "soundHurt": "girl1hurt",
+    "hitCount": "2",
+    "hitPosition": "center",
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitRabbitClaw"
+    ],
+    "name": "Moon Rabbit 1",
+    "type": "boss",
+    "id": "1504",
+    "mp": 100,
+    "spine": "moonrabbit",
+    "spd": 228,
+    "expreward": 121,
+    "mag": 0,
+    "skills": [
+      "15041",
+      "15042",
+      "15043",
+      "15044"
+    ],
+    "hp": 19000,
+    "element": "earth",
+    "mpr": 20,
+    "rank": 2,
+    "level": 20,
+    "crit": 15,
+    "def": 684,
+    "atk": 540,
+    "ranged": false,
+    "res": 0
+  }
+]

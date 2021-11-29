@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="SummonPackageList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SummonPackage" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SummonPackage" >
+		<xs:complexType >
+			<xs:sequence>
+				<xs:element name="SummonBoxList" type="SummonBoxListType" />
+			</xs:sequence>
+			<xs:attribute name="PackageIndex" type="xs:int" />
+			<xs:attribute name="GroupId" type="xs:int" />
+			<xs:attribute name="PackageName" type="xs:string" />
+			<xs:attribute name="Description" type="xs:string" />
+			<xs:attribute name="Event" type="xs:string" />
+			<xs:attribute name="SummonType" type="xs:string" />
+			<xs:attribute name="PackageImages" type="xs:string" />
+			<xs:attribute name="OpenTimes" type="xs:int" />
+			<xs:attribute name="BonusHeroes" type="xs:string" />
+			<xs:attribute name="BonusItems" type="xs:string" />
+			<xs:attribute name="Currency" type="xs:string" />
+			<xs:attribute name="SumTicket" type="xs:string" />
+			<xs:attribute name="CountdownSeconds" type="xs:int" />
+			
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="SummonBoxListType">
+		<xs:sequence>
+			<xs:element name="EvolveHero">
+				<xs:complexType>
+					<xs:attribute name="RewardBox" type="xs:int" />
+					<xs:attribute name="Point" type="xs:int" />
+					<xs:attribute name="Capacity" type="xs:int" />
+					<xs:attribute name="Rewards" type="xs:string" />
+					<xs:attribute name="TutorialOrder" type="xs:int" />
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+
+</xs:schema>

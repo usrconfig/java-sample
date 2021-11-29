@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="RewardsInfo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="QuickPlay8Rewards" type="Rewards"/>
+                <xs:element name="QuickPlay4Rewards" type="Rewards"/>
+                <xs:element name="DeathMatch8Rewards" type="Rewards"/>
+                <xs:element name="DeathMatch4Rewards" type="Rewards"/>
+                <xs:element name="Normal8Rewards" type="Rewards"/>
+                <xs:element name="Normal4Rewards" type="Rewards"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="Rewards">
+        <xs:sequence>
+            <xs:element ref="Reward" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="Reward">
+        <xs:complexType>
+            <xs:attribute name="TOP" type="xs:int"/>
+            <xs:attribute name="EXPGain" type="xs:int"/>
+            <xs:attribute name="GoldGain" type="xs:int"/>
+            <xs:attribute name="GoldenChest" type="xs:int"/>
+            <xs:attribute name="SilverChest" type="xs:int"/>
+            <xs:attribute name="WoodenChest" type="xs:int"/>
+            <xs:attribute name="MysteriousSack" type="xs:int"/>
+            <xs:attribute name="NormalSack" type="xs:int"/>
+            <xs:attribute name="TinyOldSack" type="xs:int"/>
+            <xs:attribute name="RankPoint" type="xs:int"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

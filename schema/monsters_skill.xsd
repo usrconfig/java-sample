@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="SkillList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Skill" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Skill">
+        <xs:complexType>
+            <xs:attribute name="ID" type="xs:string"/>
+            <xs:attribute name="Name" type="xs:string"/>
+            <xs:attribute name="Type" type="xs:string"/>
+            <xs:attribute name="Ranged" type="xs:string"/>
+            <xs:attribute name="soundFX" type="xs:string"/>
+            <xs:attribute name="hitFX" type="xs:string"/>
+            <xs:attribute name="hitCount" type="xs:int"/>
+            <xs:attribute name="hitPosition" type="xs:string"/>
+            <xs:attribute name="Cooldown" type="xs:string"/>
+            <xs:attribute name="Specs" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

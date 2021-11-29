@@ -1,0 +1,4 @@
+txtMsWelcomeTitle	Welcome to world of MU Heroes
+txtMsWelcomeShortDes	Let's enjoy your new adventure...
+txtMsWelcomeFullDes	Dear Lord,\nWe are very happy to welcome you to the MU World, your power and vision will be a great hope to our land.\nLet's enjoy your new adventure!\nRegards\nMU Team.
+txtMsGrandOpenEventTitle	Grand Opening Celebration Event!

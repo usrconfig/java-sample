@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="MonsterList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Monster" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Monster">
+        <xs:complexType>
+            <xs:attribute name="ID" type="xs:string"/>
+            <xs:attribute name="Name" type="xs:string"/>
+            <xs:attribute name="Spine" type="xs:string"/>
+            <xs:attribute name="Type" type="xs:string"/>
+            <xs:attribute name="Rank" type="xs:int"/>
+            <xs:attribute name="Level" type="xs:int"/>
+            <xs:attribute name="Element" type="xs:string"/>
+            <xs:attribute name="EXPReward" type="xs:int"/>
+            <xs:attribute name="ATK" type="xs:int"/>
+            <xs:attribute name="MAG" type="xs:int"/>
+            <xs:attribute name="HP" type="xs:int"/>
+            <xs:attribute name="DEF" type="xs:int"/>
+            <xs:attribute name="RES" type="xs:int"/>
+            <xs:attribute name="SPD" type="xs:int"/>
+            <xs:attribute name="CRIT" type="xs:int"/>
+            <xs:attribute name="MP" type="xs:int"/>
+            <xs:attribute name="MPR" type="xs:int"/>
+            <xs:attribute name="Class" type="xs:string"/>
+            <xs:attribute name="Ranged" type="xs:boolean"/>
+            <xs:attribute name="Skills" type="xs:string"/>
+            <xs:attribute name="soundAct" type="xs:string"/>
+            <xs:attribute name="soundHurt" type="xs:string"/>
+            <xs:attribute name="soundFX" type="xs:string"/>
+            <xs:attribute name="hitFX" type="xs:string"/>
+            <xs:attribute name="hitCount" type="xs:int"/>
+            <xs:attribute name="hitPosition" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+

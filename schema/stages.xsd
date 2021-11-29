@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="StageList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Stage" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Stage">
+        <xs:complexType>
+             <xs:attribute name="ChapterIndex" type="xs:string"/>
+             <xs:attribute name="ChapterName" type="xs:string"/>
+             <xs:attribute name="ChapterBG" type="xs:string"/>
+             <xs:attribute name="StageIndex" type="xs:string"/>
+             <xs:attribute name="StageName" type="xs:string"/>
+			 <xs:attribute name="UnlockStage" type="xs:string"/>
+             <xs:attribute name="BattleBG" type="xs:string"/>
+             <xs:attribute name="EnergyCost" type="xs:int"/>
+             <xs:attribute name="MonsterIndex" type="xs:string"/>
+             <xs:attribute name="Formation" type="xs:string"/>
+             <xs:attribute name="DailyFirstTimeReward" type="xs:string"/>
+             <xs:attribute name="RandomReward" type="xs:string"/>
+             <xs:attribute name="RandomRate" type="xs:string"/>
+             <xs:attribute name="ZenReward" type="xs:int"/>
+             <xs:attribute name="Mode" type="xs:string"/>
+             <xs:attribute name="Chance" type="xs:int"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

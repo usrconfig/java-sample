@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "zen": 0,
+    "chaos": 0,
+    "bless": 0
+  },
+  {
+    "id": 2,
+    "zen": 20,
+    "chaos": 1,
+    "bless": 1
+  },
+  {
+    "id": 3,
+    "zen": 90,
+    "chaos": 1,
+    "bless": 1
+  },
+  {
+    "id": 4,
+    "zen": 240,
+    "chaos": 1,
+    "bless": 1
+  },
+  {
+    "id": 5,
+    "zen": 500,
+    "chaos": 1,
+    "bless": 1
+  },
+  {
+    "id": 6,
+    "zen": 900,
+    "chaos": 1,
+    "bless": 1
+  },
+  {
+    "id": 7,
+    "zen": 1470,
+    "chaos": 2,
+    "bless": 2
+  },
+  {
+    "id": 8,
+    "zen": 2240,
+    "chaos": 2,
+    "bless": 2
+  },
+  {
+    "id": 9,
+    "zen": 3240,
+    "chaos": 2,
+    "bless": 2
+  },
+  {
+    "id": 10,
+    "zen": 4500,
+    "chaos": 2,
+    "bless": 2
+  },
+  {
+    "id": 11,
+    "zen": 6050,
+    "chaos": 2,
+    "bless": 2
+  },
+  {
+    "id": 12,
+    "zen": 7920,
+    "chaos": 3,
+    "bless": 3
+  },
+  {
+    "id": 13,
+    "zen": 10140,
+    "chaos": 3,
+    "bless": 3
+  },
+  {
+    "id": 14,
+    "zen": 12740,
+    "chaos": 3,
+    "bless": 3
+  },
+  {
+    "id": 15,
+    "zen": 15750,
+    "chaos": 3,
+    "bless": 3
+  },
+  {
+    "id": 16,
+    "zen": 19200,
+    "chaos": 3,
+    "bless": 3
+  },
+  {
+    "id": 17,
+    "zen": 23120,
+    "chaos": 4,
+    "bless": 4
+  },
+  {
+    "id": 18,
+    "zen": 27540,
+    "chaos": 4,
+    "bless": 4
+  },
+  {
+    "id": 19,
+    "zen": 32490,
+    "chaos": 4,
+    "bless": 4
+  },
+  {
+    "id": 20,
+    "zen": 38000,
+    "chaos": 4,
+    "bless": 4
+  },
+  {
+    "id": 21,
+    "zen": 44100,
+    "chaos": 5,
+    "bless": 5
+  },
+  {
+    "id": 22,
+    "zen": 50820,
+    "chaos": 5,
+    "bless": 5
+  },
+  {
+    "id": 23,
+    "zen": 58190,
+    "chaos": 5,
+    "bless": 5
+  },
+  {
+    "id": 24,
+    "zen": 66240,
+    "chaos": 5,
+    "bless": 5
+  },
+  {
+    "id": 25,
+    "zen": 75000,
+    "chaos": 5,
+    "bless": 5
+  },
+  {
+    "id": 26,
+    "zen": 84500,
+    "chaos": 6,
+    "bless": 6
+  },
+  {
+    "id": 27,
+    "zen": 94770,
+    "chaos": 6,
+    "bless": 6
+  },
+  {
+    "id": 28,
+    "zen": 105840,
+    "chaos": 6,
+    "bless": 6
+  },
+  {
+    "id": 29,
+    "zen": 117740,
+    "chaos": 6,
+    "bless": 6
+  },
+  {
+    "id": 30,
+    "zen": 130500,
+    "chaos": 6,
+    "bless": 6
+  },
+  {
+    "id": 31,
+    "zen": 144150,
+    "chaos": 7,
+    "bless": 7
+  },
+  {
+    "id": 32,
+    "zen": 158720,
+    "chaos": 7,
+    "bless": 7
+  },
+  {
+    "id": 33,
+    "zen": 174240,
+    "chaos": 7,
+    "bless": 7
+  },
+  {
+    "id": 34,
+    "zen": 190740,
+    "chaos": 7,
+    "bless": 7
+  },
+  {
+    "id": 35,
+    "zen": 208250,
+    "chaos": 7,
+    "bless": 7
+  },
+  {
+    "id": 36,
+    "zen": 226800,
+    "chaos": 8,
+    "bless": 8
+  },
+  {
+    "id": 37,
+    "zen": 246420,
+    "chaos": 8,
+    "bless": 8
+  },
+  {
+    "id": 38,
+    "zen": 267140,
+    "chaos": 8,
+    "bless": 8
+  },
+  {
+    "id": 39,
+    "zen": 288990,
+    "chaos": 8,
+    "bless": 8
+  },
+  {
+    "id": 40,
+    "zen": 312000,
+    "chaos": 8,
+    "bless": 8
+  },
+  {
+    "id": 41,
+    "zen": 336200,
+    "chaos": 9,
+    "bless": 9
+  },
+  {
+    "id": 42,
+    "zen": 361620,
+    "chaos": 9,
+    "bless": 9
+  },
+  {
+    "id": 43,
+    "zen": 388290,
+    "chaos": 9,
+    "bless": 9
+  },
+  {
+    "id": 44,
+    "zen": 416240,
+    "chaos": 9,
+    "bless": 9
+  },
+  {
+    "id": 45,
+    "zen": 445500,
+    "chaos": 9,
+    "bless": 9
+  },
+  {
+    "id": 46,
+    "zen": 476100,
+    "chaos": 10,
+    "bless": 10
+  },
+  {
+    "id": 47,
+    "zen": 508070,
+    "chaos": 10,
+    "bless": 10
+  },
+  {
+    "id": 48,
+    "zen": 541440,
+    "chaos": 10,
+    "bless": 10
+  },
+  {
+    "id": 49,
+    "zen": 576240,
+    "chaos": 10,
+    "bless": 10
+  },
+  {
+    "id": 50,
+    "zen": 612500,
+    "chaos": 10,
+    "bless": 10
+  },
+  {
+    "id": 51,
+    "zen": 650250,
+    "chaos": 12,
+    "bless": 12
+  },
+  {
+    "id": 52,
+    "zen": 689520,
+    "chaos": 12,
+    "bless": 12
+  },
+  {
+    "id": 53,
+    "zen": 730340,
+    "chaos": 12,
+    "bless": 12
+  },
+  {
+    "id": 54,
+    "zen": 772740,
+    "chaos": 12,
+    "bless": 12
+  },
+  {
+    "id": 55,
+    "zen": 816750,
+    "chaos": 12,
+    "bless": 12
+  },
+  {
+    "id": 56,
+    "zen": 862400,
+    "chaos": 15,
+    "bless": 15
+  },
+  {
+    "id": 57,
+    "zen": 909720,
+    "chaos": 15,
+    "bless": 15
+  },
+  {
+    "id": 58,
+    "zen": 958740,
+    "chaos": 15,
+    "bless": 15
+  },
+  {
+    "id": 59,
+    "zen": 1009490,
+    "chaos": 15,
+    "bless": 15
+  },
+  {
+    "id": 60,
+    "zen": 1062000,
+    "chaos": 15,
+    "bless": 15
+  }
+]

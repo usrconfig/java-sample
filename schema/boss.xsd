@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Boss">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="DmgRewards" type="DmgRewardList"/>
+                <xs:element name="DmgMinRewards" type="MinDmgRewardList"/>
+                <xs:element name="RankRewards" type="RankRewardList"/>
+                <xs:element name="LastHitRewards" type="LastHitRewardList"/>
+                <xs:element name="Monsters" type="MonsterList"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:complexType name="DmgRewardList">
+        <xs:sequence>
+            <xs:element ref="DmgReward" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="MinDmgRewardList">
+        <xs:sequence>
+            <xs:element ref="MinDmgReward" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="LastHitRewardList">
+        <xs:sequence>
+            <xs:element ref="LastHitReward" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="MonsterList">
+        <xs:sequence>
+            <xs:element ref="Monster" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="RankRewardList">
+        <xs:sequence>
+            <xs:element ref="RankReward" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="DmgReward">
+        <xs:complexType>
+            <xs:attribute name="ID" type="xs:int"/>
+            <xs:attribute name="DamageThreshold" type="xs:int"/>
+            <xs:attribute name="RandomReward" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="RankReward">
+        <xs:complexType>
+            <xs:attribute name="ID" type="xs:int"/>
+            <xs:attribute name="RandomReward" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="LastHitReward">
+        <xs:complexType>
+            <xs:attribute name="ID" type="xs:int"/>
+            <xs:attribute name="RandomReward" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="MinDmgReward">
+        <xs:complexType>
+            <xs:attribute name="ID" type="xs:int"/>
+            <xs:attribute name="MinDamageThreshold" type="xs:int"/>
+            <xs:attribute name="RandomReward" type="xs:string"/>
+            <xs:attribute name="DropRate" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Monster">
+        <xs:complexType>
+            <xs:attribute name="ID" type="xs:int"/>
+            <xs:attribute name="Monster" type="xs:string"/>
+            <xs:attribute name="Total" type="xs:string"/>
+            <xs:attribute name="SpawnTime" type="xs:int"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

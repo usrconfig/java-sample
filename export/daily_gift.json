@@ -1,0 +1,302 @@
+[
+  {
+    "day": 1,
+    "begin1": "ITE0001/5",
+    "begin2": "ITE0001/5",
+    "begin3": "ITE0001/5",
+    "begin4": "ITE0001/5",
+    "begin5": "ITE0001/5",
+    "begin6": "ITE0001/5",
+    "random": "ITE0001/5"
+  },
+  {
+    "day": 2,
+    "begin1": "EQP10001/1",
+    "begin2": "EQP10001/1",
+    "begin3": "EQP10001/1",
+    "begin4": "EQP10001/1",
+    "begin5": "EQP10001/1",
+    "begin6": "EQP10001/1",
+    "random": "EQP10001/1"
+  },
+  {
+    "day": 3,
+    "begin1": "ITE0002/5",
+    "begin2": "ITE0002/5",
+    "begin3": "ITE0002/5",
+    "begin4": "ITE0002/5",
+    "begin5": "ITE0002/5",
+    "begin6": "ITE0002/5",
+    "random": "ITE0002/5"
+  },
+  {
+    "day": 4,
+    "begin1": "ITE0000/100",
+    "begin2": "ITE0000/100",
+    "begin3": "ITE0000/100",
+    "begin4": "ITE0000/100",
+    "begin5": "ITE0000/100",
+    "begin6": "ITE0000/100",
+    "random": "ITE0000/100"
+  },
+  {
+    "day": 5,
+    "begin1": "EQP10002/1",
+    "begin2": "EQP10002/1",
+    "begin3": "EQP10002/1",
+    "begin4": "EQP10002/1",
+    "begin5": "EQP10002/1",
+    "begin6": "EQP10002/1",
+    "random": "EQP10002/1"
+  },
+  {
+    "day": 6,
+    "begin1": "ITE0000/100",
+    "begin2": "ITE0000/100",
+    "begin3": "ITE0000/100",
+    "begin4": "ITE0000/100",
+    "begin5": "ITE0000/100",
+    "begin6": "ITE0000/100",
+    "random": "ITE0000/100"
+  },
+  {
+    "day": 7,
+    "begin1": "ITE0000/300",
+    "begin2": "ITE0000/300",
+    "begin3": "ITE0000/300",
+    "begin4": "ITE0000/300",
+    "begin5": "ITE0000/300",
+    "begin6": "ITE0000/300",
+    "random": "ITE0000/300"
+  },
+  {
+    "day": 8,
+    "begin1": "ITE0000/100",
+    "begin2": "ITE0000/100",
+    "begin3": "ITE0000/100",
+    "begin4": "ITE0000/100",
+    "begin5": "ITE0000/100",
+    "begin6": "ITE0000/100",
+    "random": "ITE0000/100"
+  },
+  {
+    "day": 9,
+    "begin1": "EQP10003/1",
+    "begin2": "EQP10003/1",
+    "begin3": "EQP10003/1",
+    "begin4": "EQP10003/1",
+    "begin5": "EQP10003/1",
+    "begin6": "EQP10003/1",
+    "random": "EQP10003/1"
+  },
+  {
+    "day": 10,
+    "begin1": "ITE0001/5",
+    "begin2": "ITE0001/5",
+    "begin3": "ITE0001/5",
+    "begin4": "ITE0001/5",
+    "begin5": "ITE0001/5",
+    "begin6": "ITE0001/5",
+    "random": "ITE0001/5"
+  },
+  {
+    "day": 11,
+    "begin1": "ITE0000/100",
+    "begin2": "ITE0000/100",
+    "begin3": "ITE0000/100",
+    "begin4": "ITE0000/100",
+    "begin5": "ITE0000/100",
+    "begin6": "ITE0000/100",
+    "random": "ITE0000/100"
+  },
+  {
+    "day": 12,
+    "begin1": "EQP10004/1",
+    "begin2": "EQP10004/1",
+    "begin3": "EQP10004/1",
+    "begin4": "EQP10004/1",
+    "begin5": "EQP10004/1",
+    "begin6": "EQP10004/1",
+    "random": "EQP10004/1"
+  },
+  {
+    "day": 13,
+    "begin1": "ITE0000/100",
+    "begin2": "ITE0000/100",
+    "begin3": "ITE0000/100",
+    "begin4": "ITE0000/100",
+    "begin5": "ITE0000/100",
+    "begin6": "ITE0000/100",
+    "random": "ITE0000/100"
+  },
+  {
+    "day": 14,
+    "begin1": "ITE0000/300",
+    "begin2": "ITE0000/300",
+    "begin3": "ITE0000/300",
+    "begin4": "ITE0000/300",
+    "begin5": "ITE0000/300",
+    "begin6": "ITE0000/300",
+    "random": "ITE0000/300"
+  },
+  {
+    "day": 15,
+    "begin1": "ITE0000/100",
+    "begin2": "ITE0000/100",
+    "begin3": "ITE0000/100",
+    "begin4": "ITE0000/100",
+    "begin5": "ITE0000/100",
+    "begin6": "ITE0000/100",
+    "random": "ITE0000/100"
+  },
+  {
+    "day": 16,
+    "begin1": "EQP10005/1",
+    "begin2": "EQP10005/1",
+    "begin3": "EQP10005/1",
+    "begin4": "EQP10005/1",
+    "begin5": "EQP10005/1",
+    "begin6": "EQP10005/1",
+    "random": "EQP10005/1"
+  },
+  {
+    "day": 17,
+    "begin1": "ITE0002/5",
+    "begin2": "ITE0002/5",
+    "begin3": "ITE0002/5",
+    "begin4": "ITE0002/5",
+    "begin5": "ITE0002/5",
+    "begin6": "ITE0002/5",
+    "random": "ITE0002/5"
+  },
+  {
+    "day": 18,
+    "begin1": "ITE0000/100",
+    "begin2": "ITE0000/100",
+    "begin3": "ITE0000/100",
+    "begin4": "ITE0000/100",
+    "begin5": "ITE0000/100",
+    "begin6": "ITE0000/100",
+    "random": "ITE0000/100"
+  },
+  {
+    "day": 19,
+    "begin1": "EQP10006/1",
+    "begin2": "EQP10006/1",
+    "begin3": "EQP10006/1",
+    "begin4": "EQP10006/1",
+    "begin5": "EQP10006/1",
+    "begin6": "EQP10006/1",
+    "random": "EQP10006/1"
+  },
+  {
+    "day": 20,
+    "begin1": "ITE0000/100",
+    "begin2": "ITE0000/100",
+    "begin3": "ITE0000/100",
+    "begin4": "ITE0000/100",
+    "begin5": "ITE0000/100",
+    "begin6": "ITE0000/100",
+    "random": "ITE0000/100"
+  },
+  {
+    "day": 21,
+    "begin1": "ITE0000/300",
+    "begin2": "ITE0000/300",
+    "begin3": "ITE0000/300",
+    "begin4": "ITE0000/300",
+    "begin5": "ITE0000/300",
+    "begin6": "ITE0000/300",
+    "random": "ITE0000/300"
+  },
+  {
+    "day": 22,
+    "begin1": "ITE0000/100",
+    "begin2": "ITE0000/100",
+    "begin3": "ITE0000/100",
+    "begin4": "ITE0000/100",
+    "begin5": "ITE0000/100",
+    "begin6": "ITE0000/100",
+    "random": "ITE0000/100"
+  },
+  {
+    "day": 23,
+    "begin1": "EQP10007/1",
+    "begin2": "EQP10007/1",
+    "begin3": "EQP10007/1",
+    "begin4": "EQP10007/1",
+    "begin5": "EQP10007/1",
+    "begin6": "EQP10007/1",
+    "random": "EQP10007/1"
+  },
+  {
+    "day": 24,
+    "begin1": "ITE0000/100",
+    "begin2": "ITE0000/100",
+    "begin3": "ITE0000/100",
+    "begin4": "ITE0000/100",
+    "begin5": "ITE0000/100",
+    "begin6": "ITE0000/100",
+    "random": "ITE0000/100"
+  },
+  {
+    "day": 25,
+    "begin1": "ITE0000/100",
+    "begin2": "ITE0000/100",
+    "begin3": "ITE0000/100",
+    "begin4": "ITE0000/100",
+    "begin5": "ITE0000/100",
+    "begin6": "ITE0000/100",
+    "random": "ITE0000/100"
+  },
+  {
+    "day": 26,
+    "begin1": "EQP10008/1",
+    "begin2": "EQP10008/1",
+    "begin3": "EQP10008/1",
+    "begin4": "EQP10008/1",
+    "begin5": "EQP10008/1",
+    "begin6": "EQP10008/1",
+    "random": "EQP10008/1"
+  },
+  {
+    "day": 27,
+    "begin1": "ITE0002/50",
+    "begin2": "ITE0002/50",
+    "begin3": "ITE0002/50",
+    "begin4": "ITE0002/50",
+    "begin5": "ITE0002/50",
+    "begin6": "ITE0002/50",
+    "random": "ITE0002/50"
+  },
+  {
+    "day": 28,
+    "begin1": "ITE0000/300",
+    "begin2": "ITE0000/300",
+    "begin3": "ITE0000/300",
+    "begin4": "ITE0000/300",
+    "begin5": "ITE0000/300",
+    "begin6": "ITE0000/300",
+    "random": "ITE0000/300"
+  },
+  {
+    "day": 29,
+    "begin1": "ITE0001/50",
+    "begin2": "ITE0001/50",
+    "begin3": "ITE0001/50",
+    "begin4": "ITE0001/50",
+    "begin5": "ITE0001/50",
+    "begin6": "ITE0001/50",
+    "random": "ITE0001/50"
+  },
+  {
+    "day": 30,
+    "begin1": "ITE0000/500",
+    "begin2": "ITE0000/500",
+    "begin3": "ITE0000/500",
+    "begin4": "ITE0000/500",
+    "begin5": "ITE0000/500",
+    "begin6": "ITE0000/500",
+    "random": "ITE0000/500"
+  }
+]

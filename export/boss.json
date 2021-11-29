@@ -1,0 +1,154 @@
+{
+  "dmgRewards": [
+    {
+      "id": 1,
+      "damageThreshold": 100000,
+      "randomReward": "ITE0000/10000#EQP10009/1"
+    },
+    {
+      "id": 2,
+      "damageThreshold": 90000,
+      "randomReward": "ITE0000/9000#EQP10008/1"
+    },
+    {
+      "id": 3,
+      "damageThreshold": 80000,
+      "randomReward": "ITE0000/8000#EQP10007/1"
+    },
+    {
+      "id": 4,
+      "damageThreshold": 70000,
+      "randomReward": "ITE0000/7000#EQP10006/1"
+    },
+    {
+      "id": 5,
+      "damageThreshold": 60000,
+      "randomReward": "ITE0000/6000#EQP10005/1"
+    },
+    {
+      "id": 6,
+      "damageThreshold": 50000,
+      "randomReward": "ITE0000/5000#EQP10004/1"
+    },
+    {
+      "id": 7,
+      "damageThreshold": 40000,
+      "randomReward": "ITE0000/4000#EQP10003/1"
+    },
+    {
+      "id": 8,
+      "damageThreshold": 30000,
+      "randomReward": "ITE0000/3000#EQP10002/1"
+    },
+    {
+      "id": 9,
+      "damageThreshold": 20000,
+      "randomReward": "ITE0000/2000#EQP10001/1"
+    },
+    {
+      "id": 10,
+      "damageThreshold": 10000,
+      "randomReward": "ITE0000/1000#EQP10001/1"
+    }
+  ],
+  "dmgMinRewards": [
+    {
+      "id": 1,
+      "minDamageThreshold": 1000,
+      "randomReward": "ITE0000/10#ITE0001/1000#ITE0002/1#ITE0005/1#ITE0006/1#ITE0007/1#ITE0008/1#ITE0009/1#ITE0010/1#ITE0011/1#ITE0012/1#ITE0013/1",
+      "dropRate": "20#20#20#20#20#20#20#20#20#20#20#20"
+    }
+  ],
+  "rankRewards": [
+    {
+      "id": 1,
+      "randomReward": "ITE0000/10000#EQP10009/1"
+    },
+    {
+      "id": 2,
+      "randomReward": "ITE0000/9000#EQP10008/1"
+    },
+    {
+      "id": 3,
+      "randomReward": "ITE0000/8000#EQP10007/1"
+    },
+    {
+      "id": 4,
+      "randomReward": "ITE0000/7000#EQP10006/1"
+    },
+    {
+      "id": 5,
+      "randomReward": "ITE0000/6000#EQP10005/1"
+    },
+    {
+      "id": 6,
+      "randomReward": "ITE0000/5000#EQP10004/1"
+    },
+    {
+      "id": 7,
+      "randomReward": "ITE0000/4000#EQP10003/1"
+    },
+    {
+      "id": 8,
+      "randomReward": "ITE0000/3000#EQP10002/1"
+    },
+    {
+      "id": 9,
+      "randomReward": "ITE0000/2000#EQP10001/1"
+    },
+    {
+      "id": 10,
+      "randomReward": "ITE0000/1000#EQP10001/1"
+    }
+  ],
+  "lastHitRewards": [
+    {
+      "id": 1,
+      "randomReward": "ITE0000/100#ITE0001/100000"
+    }
+  ],
+  "monsters": [
+    {
+      "id": 1,
+      "monster": "MONS004",
+      "total": "10",
+      "spawnTime": 15
+    },
+    {
+      "id": 2,
+      "monster": "MONS004#MONS009",
+      "total": "10#5",
+      "spawnTime": 120
+    },
+    {
+      "id": 3,
+      "monster": "MONS004#MONS009",
+      "total": "10#5",
+      "spawnTime": 200
+    },
+    {
+      "id": 4,
+      "monster": "MONS009",
+      "total": "15",
+      "spawnTime": 300
+    },
+    {
+      "id": 5,
+      "monster": "MONS009#MONS014",
+      "total": "10#5",
+      "spawnTime": 400
+    },
+    {
+      "id": 6,
+      "monster": "MONS014",
+      "total": "15",
+      "spawnTime": 500
+    },
+    {
+      "id": 7,
+      "monster": "MONS014",
+      "total": "15",
+      "spawnTime": 550
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="DailyFuncResetList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DailyResetBase" minOccurs="0"
+					maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DailyResetBase">
+		<xs:complexType>
+			<xs:attribute name="ID" type="xs:int" />
+			<xs:attribute name="Function" type="xs:string" />
+			<xs:attribute name="RefreshFee" type="xs:string" />
+			<xs:attribute name="LimitRefresh" type="xs:boolean" />
+			<xs:attribute name="DailyReset" type="xs:boolean" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

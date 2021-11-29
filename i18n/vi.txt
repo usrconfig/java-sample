@@ -1,0 +1,15 @@
+txtsoky	Sơ Kỳ
+txttrungky	Trung Kỳ
+txthauky	Hậu Kỳ
+txtvienman	Viên Mãn
+txtluyenthe	Luyện Thể
+txtluyenkhi	Luyện Khí
+txttruco	Trúc Cơ
+txtketdan	Kết Đan
+txtnguyenanh	Nguyên Anh
+txthoathan	Hóa Thần
+txttang	Tầng
+txthoancap	Hoàn Cấp
+txthuyencap	Huyền Cấp
+txtdiacap	Địa Cấp
+txtthiencap	Thiên Cấp

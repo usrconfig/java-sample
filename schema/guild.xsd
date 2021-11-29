@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="GuildData">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CreateGuildRequirement" type="CreateGuildRequirementType" />
+				<xs:element name="GuildLevelList" type="GuildLevelListType" />
+				<xs:element name="DonateInfoList" type="DonateInfoListType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="CreateGuildRequirementType">
+		<xs:attribute name="Level" type="xs:int" />
+		<xs:attribute name="CreateFee" type="xs:string" />
+	</xs:complexType>
+
+	<xs:complexType name="GuildLevelListType">
+		<xs:sequence>
+			<xs:element ref="GuildLevel" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="GuildLevel">
+		<xs:complexType>
+			<xs:attribute name="Level" type="xs:int" />
+			<xs:attribute name="Members" type="xs:int" />
+			<xs:attribute name="ReqItems" type="xs:string" />
+			<xs:attribute name="CheckinRequire" type="xs:int" />
+			<xs:attribute name="CheckinRewards" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="DonateInfoListType">
+		<xs:sequence>
+			<xs:element ref="DonateInfo" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="DonateInfo">
+		<xs:complexType>
+			<xs:attribute name="DonateItemIndex" type="xs:int" />
+			<xs:attribute name="DonateValue" type="xs:int" />
+			<xs:attribute name="Reward" type="xs:string" />
+			<xs:attribute name="MaxDonateTimes" type="xs:int" />
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

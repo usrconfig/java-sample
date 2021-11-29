@@ -1,0 +1,2467 @@
+[
+  {
+    "monsterWave": [
+      [
+        "1009"
+      ],
+      [
+        "1009",
+        "1009"
+      ],
+      [
+        "1009",
+        "1010",
+        "1009"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/2",
+    "stageIndex": "100",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "101",
+    "formation": "10#8",
+    "randomReward": "1000#1100#1200#1300#1400#1500#1600#1700",
+    "monsterIndex": "1009#1009,1009#1009,1010,1009",
+    "stageName": "Toren Town 1 (Easy)",
+    "chapterBG": "c1.png",
+    "mode": "easy",
+    "zenReward": "1000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1003"
+      ],
+      [
+        "1009",
+        "1003",
+        "1009"
+      ],
+      [
+        "1003",
+        "1005",
+        "1003"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/2",
+    "stageIndex": "101",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "102",
+    "formation": "10#8",
+    "randomReward": "1000#1100#1200#1300#1400#1500#1600#1700",
+    "monsterIndex": "1003#1009,1003,1009#1003,1005,1003",
+    "stageName": "Toren Town 2 (Easy)",
+    "chapterBG": "c1.png",
+    "mode": "easy",
+    "zenReward": "1500"
+  },
+  {
+    "monsterWave": [
+      [
+        "1009",
+        "1003"
+      ],
+      [
+        "1003",
+        "1005",
+        "1009"
+      ],
+      [
+        "1005",
+        "1011",
+        "1005"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/2",
+    "stageIndex": "102",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "103",
+    "formation": "10#8",
+    "randomReward": "1000#1100#1200#1300#1400#1500#1600#1700",
+    "monsterIndex": "1009,1003#1003,1005,1009#1005,1011,1005",
+    "stageName": "Toren Town 3 (Easy)",
+    "chapterBG": "c1.png",
+    "mode": "easy",
+    "zenReward": "2000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1009",
+        "1003",
+        "1009"
+      ],
+      [
+        "1003",
+        "1005",
+        "1003"
+      ],
+      [
+        "",
+        "1009",
+        "1004",
+        "1009"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/2",
+    "stageIndex": "103",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "104",
+    "formation": "10#8",
+    "randomReward": "1000#1100#1200#1300#1400#1500#1600#1700",
+    "monsterIndex": "1009,1003,1009#1003,1005,1003#,1009,1004,1009",
+    "stageName": "Toren Town 4 (Easy)",
+    "chapterBG": "c1.png",
+    "mode": "easy",
+    "zenReward": "2500"
+  },
+  {
+    "monsterWave": [
+      [
+        "1003",
+        "1005"
+      ],
+      [
+        "1009",
+        "1010",
+        "1009"
+      ],
+      [
+        "1010",
+        "1012",
+        "1010"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/2",
+    "stageIndex": "104",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "105",
+    "formation": "10#8",
+    "randomReward": "1000#1100#1200#1300#1400#1500#1600#1700",
+    "monsterIndex": "1003,1005#1009,1010,1009#1010,1012,1010",
+    "stageName": "Toren Town 5 (Easy)",
+    "chapterBG": "c1.png",
+    "mode": "easy",
+    "zenReward": "3000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1009",
+        "1010",
+        "1009"
+      ],
+      [
+        "1003",
+        "1004",
+        "1003"
+      ],
+      [
+        "1011",
+        "1012",
+        "1011"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/2",
+    "stageIndex": "105",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "106",
+    "formation": "10#8",
+    "randomReward": "1000#1100#1200#1300#1400#1500#1600#1700",
+    "monsterIndex": "1009,1010,1009#1003,1004,1003#1011,1012,1011",
+    "stageName": "Toren Town 6 (Easy)",
+    "chapterBG": "c1.png",
+    "mode": "easy",
+    "zenReward": "3500"
+  },
+  {
+    "monsterWave": [
+      [
+        "1006",
+        "1006",
+        "1006"
+      ],
+      [
+        "1006",
+        "1005",
+        "1006",
+        "1005"
+      ],
+      [
+        "1006",
+        "1007",
+        "1006"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/2",
+    "stageIndex": "106",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "107",
+    "formation": "10#8",
+    "randomReward": "1000#1100#1200#1300#1400#1500#1600#1700",
+    "monsterIndex": "1006,1006,1006#1006,1005,1006,1005#1006,1007,1006",
+    "stageName": "Toren Town 7 (Easy)",
+    "chapterBG": "c1.png",
+    "mode": "easy",
+    "zenReward": "4000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1005",
+        "1011",
+        "1005"
+      ],
+      [
+        "1006",
+        "1005",
+        "1011",
+        "1006"
+      ],
+      [
+        "1011",
+        "1006",
+        "1012",
+        "1006",
+        "1011"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/2",
+    "stageIndex": "107",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "108",
+    "formation": "10#8",
+    "randomReward": "1000#1100#1200#1300#1400#1500#1600#1700",
+    "monsterIndex": "1005,1011,1005#1006,1005,1011,1006#1011,1006,1012,1006,1011",
+    "stageName": "Toren Town 8 (Easy)",
+    "chapterBG": "c1.png",
+    "mode": "easy",
+    "zenReward": "4500"
+  },
+  {
+    "monsterWave": [
+      [
+        "1004",
+        "1004",
+        "1004"
+      ],
+      [
+        "1012",
+        "1012",
+        "1012"
+      ],
+      [
+        "1006",
+        "1006",
+        "1007",
+        "1006",
+        "1006"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/2",
+    "stageIndex": "108",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "109",
+    "formation": "10#8",
+    "randomReward": "1000#1100#1200#1300#1400#1500#1600#1700",
+    "monsterIndex": "1004,1004,1004#1012,1012,1012#1006,1006,1007,1006,1006",
+    "stageName": "Toren Town 9 (Easy)",
+    "chapterBG": "c1.png",
+    "mode": "easy",
+    "zenReward": "5000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1005",
+        "1006",
+        "1007"
+      ],
+      [
+        "1007",
+        "1006",
+        "1006",
+        "1007"
+      ],
+      [
+        "1008"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "109",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "200",
+    "formation": "10#8",
+    "randomReward": "1000#1100#1200#1300#1400#1500#1600#1700#",
+    "monsterIndex": "1005,1006,1007#1007,1006,1006,1007#1008",
+    "stageName": "Toren Town 10 (Easy)",
+    "chapterBG": "c1.png",
+    "mode": "easy",
+    "zenReward": "5500"
+  },
+  {
+    "monsterWave": [
+      [
+        "2009"
+      ],
+      [
+        "2009",
+        "2009"
+      ],
+      [
+        "2009",
+        "2010",
+        "2009"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "110",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 3,
+    "energyCost": 4,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "111",
+    "formation": "10#8",
+    "monsterIndex": "2009#2009,2009#2009,2010,2009",
+    "stageName": "Toren Town 1 (Normal)",
+    "chapterBG": "c1.png",
+    "mode": "hard",
+    "zenReward": "2000"
+  },
+  {
+    "monsterWave": [
+      [
+        "2003"
+      ],
+      [
+        "2009",
+        "2003",
+        "2009"
+      ],
+      [
+        "2003",
+        "2005",
+        "2003"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "111",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 3,
+    "energyCost": 4,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "112",
+    "formation": "10#8",
+    "monsterIndex": "2003#2009,2003,2009#2003,2005,2003",
+    "stageName": "Toren Town 2 (Normal)",
+    "chapterBG": "c1.png",
+    "mode": "hard",
+    "zenReward": "3000"
+  },
+  {
+    "monsterWave": [
+      [
+        "2009",
+        "2003"
+      ],
+      [
+        "2003",
+        "2005",
+        "2009"
+      ],
+      [
+        "2005",
+        "2011",
+        "2005"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "112",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 3,
+    "energyCost": 4,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "113",
+    "formation": "10#8",
+    "monsterIndex": "2009,2003#2003,2005,2009#2005,2011,2005",
+    "stageName": "Toren Town 3 (Normal)",
+    "chapterBG": "c1.png",
+    "mode": "hard",
+    "zenReward": "4000"
+  },
+  {
+    "monsterWave": [
+      [
+        "2009",
+        "2003",
+        "2009"
+      ],
+      [
+        "2003",
+        "2005",
+        "2003"
+      ],
+      [
+        "2009",
+        "2004",
+        "2009"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "113",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 3,
+    "energyCost": 4,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "114",
+    "formation": "10#8",
+    "monsterIndex": "2009,2003,2009#2003,2005,2003#2009,2004,2009",
+    "stageName": "Toren Town 4 (Normal)",
+    "chapterBG": "c1.png",
+    "mode": "hard",
+    "zenReward": "5000"
+  },
+  {
+    "monsterWave": [
+      [
+        "2003",
+        "2005"
+      ],
+      [
+        "2009",
+        "2010",
+        "2009"
+      ],
+      [
+        "2010",
+        "2012",
+        "2010"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "114",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 3,
+    "energyCost": 4,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "115",
+    "formation": "10#8",
+    "monsterIndex": "2003,2005#2009,2010,2009#2010,2012,2010",
+    "stageName": "Toren Town 5 (Normal)",
+    "chapterBG": "c1.png",
+    "mode": "hard",
+    "zenReward": "6000"
+  },
+  {
+    "monsterWave": [
+      [
+        "2009",
+        "2010",
+        "2009"
+      ],
+      [
+        "2003",
+        "2004",
+        "2003"
+      ],
+      [
+        "2011",
+        "2012",
+        "2011"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "115",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 3,
+    "energyCost": 4,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "116",
+    "formation": "10#8",
+    "monsterIndex": "2009,2010,2009#2003,2004,2003#2011,2012,2011",
+    "stageName": "Toren Town 6 (Normal)",
+    "chapterBG": "c1.png",
+    "mode": "hard",
+    "zenReward": "7000"
+  },
+  {
+    "monsterWave": [
+      [
+        "2006",
+        "2006",
+        "2006"
+      ],
+      [
+        "2006",
+        "2005",
+        "2006",
+        "2005"
+      ],
+      [
+        "2006",
+        "2007",
+        "2006"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "116",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 3,
+    "energyCost": 4,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "117",
+    "formation": "10#8",
+    "monsterIndex": "2006,2006,2006#2006,2005,2006,2005#2006,2007,2006",
+    "stageName": "Toren Town 7 (Normal)",
+    "chapterBG": "c1.png",
+    "mode": "hard",
+    "zenReward": "8000"
+  },
+  {
+    "monsterWave": [
+      [
+        "2005",
+        "2011",
+        "2005"
+      ],
+      [
+        "2006",
+        "2005",
+        "2011",
+        "2006"
+      ],
+      [
+        "2011",
+        "2006",
+        "2012",
+        "2006",
+        "2011"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "117",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 3,
+    "energyCost": 4,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "118",
+    "formation": "10#8",
+    "monsterIndex": "2005,2011,2005#2006,2005,2011,2006#2011,2006,2012,2006,2011",
+    "stageName": "Toren Town 8 (Normal)",
+    "chapterBG": "c1.png",
+    "mode": "hard",
+    "zenReward": "9000"
+  },
+  {
+    "monsterWave": [
+      [
+        "2010",
+        "2010",
+        "2010"
+      ],
+      [
+        "2004",
+        "2004",
+        "2004"
+      ],
+      [
+        "2012",
+        "2012",
+        "2012"
+      ],
+      [
+        "2006",
+        "2006",
+        "2007",
+        "2006",
+        "2006"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "118",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 3,
+    "energyCost": 4,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "119",
+    "formation": "10#8",
+    "monsterIndex": "2010,2010,2010#2004,2004,2004#2012,2012,2012#2006,2006,2007,2006,2006",
+    "stageName": "Toren Town 9 (Normal)",
+    "chapterBG": "c1.png",
+    "mode": "hard",
+    "zenReward": "10000"
+  },
+  {
+    "monsterWave": [
+      [
+        "2005",
+        "2006",
+        "2005"
+      ],
+      [
+        "2006",
+        "2007",
+        "2006"
+      ],
+      [
+        "2005",
+        "2006",
+        "2007"
+      ],
+      [
+        "2007",
+        "2006",
+        "2006",
+        "2007"
+      ],
+      [
+        "2008"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "119",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 3,
+    "energyCost": 4,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "120",
+    "formation": "10#8",
+    "monsterIndex": "2005,2006,2005#2006,2007,2006#2005,2006,2007#2007,2006,2006,2007#2008",
+    "stageName": "Toren Town 10 (Normal)",
+    "chapterBG": "c1.png",
+    "mode": "hard",
+    "zenReward": "11000"
+  },
+  {
+    "monsterWave": [
+      [
+        "3009"
+      ],
+      [
+        "3009",
+        "3009"
+      ],
+      [
+        "3009",
+        "3010",
+        "3009"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "120",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 3,
+    "energyCost": 6,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "121",
+    "formation": "10#8",
+    "monsterIndex": "3009#3009,3009#3009,3010,3009",
+    "stageName": "Toren Town 1 (Hard)",
+    "chapterBG": "c1.png",
+    "mode": "hell",
+    "zenReward": "3000"
+  },
+  {
+    "monsterWave": [
+      [
+        "3003"
+      ],
+      [
+        "3009",
+        "3003",
+        "3009"
+      ],
+      [
+        "3003",
+        "3005",
+        "3003"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "121",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 3,
+    "energyCost": 6,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "122",
+    "formation": "10#8",
+    "monsterIndex": "3003#3009,3003,3009#3003,3005,3003",
+    "stageName": "Toren Town 2 (Hard)",
+    "chapterBG": "c1.png",
+    "mode": "hell",
+    "zenReward": "4500"
+  },
+  {
+    "monsterWave": [
+      [
+        "3009",
+        "3003"
+      ],
+      [
+        "3003",
+        "3005",
+        "3009"
+      ],
+      [
+        "3005",
+        "3011",
+        "3005"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "122",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 3,
+    "energyCost": 6,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "123",
+    "formation": "10#8",
+    "monsterIndex": "3009,3003#3003,3005,3009#3005,3011,3005",
+    "stageName": "Toren Town 3 (Hard)",
+    "chapterBG": "c1.png",
+    "mode": "hell",
+    "zenReward": "6000"
+  },
+  {
+    "monsterWave": [
+      [
+        "3009",
+        "3003",
+        "3009"
+      ],
+      [
+        "3003",
+        "3005",
+        "3003"
+      ],
+      [
+        "",
+        "3009",
+        "3004",
+        "3009"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "123",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 3,
+    "energyCost": 6,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "124",
+    "formation": "10#8",
+    "monsterIndex": "3009,3003,3009#3003,3005,3003#,3009,3004,3009",
+    "stageName": "Toren Town 4 (Hard)",
+    "chapterBG": "c1.png",
+    "mode": "hell",
+    "zenReward": "7500"
+  },
+  {
+    "monsterWave": [
+      [
+        "3003",
+        "3005"
+      ],
+      [
+        "3009",
+        "3010",
+        "3009"
+      ],
+      [
+        "3010",
+        "3012",
+        "3010"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "124",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 3,
+    "energyCost": 6,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "125",
+    "formation": "10#8",
+    "monsterIndex": "3003,3005#3009,3010,3009#3010,3012,3010",
+    "stageName": "Toren Town 5 (Hard)",
+    "chapterBG": "c1.png",
+    "mode": "hell",
+    "zenReward": "9000"
+  },
+  {
+    "monsterWave": [
+      [
+        "3009",
+        "3010",
+        "3009"
+      ],
+      [
+        "3003",
+        "3004",
+        "3003"
+      ],
+      [
+        "3011",
+        "3012",
+        "3011"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "125",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 3,
+    "energyCost": 6,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "126",
+    "formation": "10#8",
+    "monsterIndex": "3009,3010,3009#3003,3004,3003#3011,3012,3011",
+    "stageName": "Toren Town 6 (Hard)",
+    "chapterBG": "c1.png",
+    "mode": "hell",
+    "zenReward": "10500"
+  },
+  {
+    "monsterWave": [
+      [
+        "3006",
+        "3006",
+        "3006"
+      ],
+      [
+        "3006",
+        "3005",
+        "3006",
+        "3005"
+      ],
+      [
+        "3006",
+        "3007",
+        "3006"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "126",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 3,
+    "energyCost": 6,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "127",
+    "formation": "10#8",
+    "monsterIndex": "3006,3006,3006#3006,3005,3006,3005#3006,3007,3006",
+    "stageName": "Toren Town 7 (Hard)",
+    "chapterBG": "c1.png",
+    "mode": "hell",
+    "zenReward": "12000"
+  },
+  {
+    "monsterWave": [
+      [
+        "3005",
+        "3011",
+        "3005"
+      ],
+      [
+        "3006",
+        "3005",
+        "3011",
+        "3006"
+      ],
+      [
+        "3011",
+        "3006",
+        "3012",
+        "3006",
+        "3011"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "127",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 3,
+    "energyCost": 6,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "128",
+    "formation": "10#8",
+    "monsterIndex": "3005,3011,3005#3006,3005,3011,3006#3011,3006,3012,3006,3011",
+    "stageName": "Toren Town 8 (Hard)",
+    "chapterBG": "c1.png",
+    "mode": "hell",
+    "zenReward": "13500"
+  },
+  {
+    "monsterWave": [
+      [
+        "3010",
+        "3010",
+        "3010"
+      ],
+      [
+        "3004",
+        "3004",
+        "3004"
+      ],
+      [
+        "3012",
+        "3012",
+        "3012"
+      ],
+      [
+        "3006",
+        "3006",
+        "3007",
+        "3006",
+        "3006"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "128",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 3,
+    "energyCost": 6,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "129",
+    "formation": "10#8",
+    "monsterIndex": "3010,3010,3010#3004,3004,3004#3012,3012,3012#3006,3006,3007,3006,3006",
+    "stageName": "Toren Town 9 (Hard)",
+    "chapterBG": "c1.png",
+    "mode": "hell",
+    "zenReward": "15000"
+  },
+  {
+    "monsterWave": [
+      [
+        "3005",
+        "3006",
+        "3005"
+      ],
+      [
+        "3006",
+        "3007",
+        "3006"
+      ],
+      [
+        "3005",
+        "3006",
+        "3007"
+      ],
+      [
+        "3007",
+        "3006",
+        "3006",
+        "3007"
+      ],
+      [
+        "3008"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "129",
+    "chapterIndex": "0",
+    "chapterName": "Chapter 1 - Toren Town",
+    "chance": 3,
+    "energyCost": 6,
+    "battleBG": "loren1,loren2",
+    "unlockStage": "10001",
+    "formation": "10#8",
+    "monsterIndex": "3005,3006,3005#3006,3007,3006#3005,3006,3007#3007,3006,3006,3007#3008",
+    "stageName": "Toren Town 10 (Hard)",
+    "chapterBG": "c1.png",
+    "mode": "hell",
+    "zenReward": "16500"
+  },
+  {
+    "monsterWave": [
+      [
+        "1013"
+      ],
+      [
+        "1009",
+        "1013",
+        "1009"
+      ],
+      [
+        "1010",
+        "1013",
+        "1010"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "200",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "201",
+    "formation": "10#8",
+    "monsterIndex": "1013#1009,1013,1009#1010,1013,1010",
+    "stageName": "Fairy Land 1 (Easy)",
+    "chapterBG": "c2.png",
+    "mode": "easy",
+    "zenReward": "3000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1013",
+        "1013"
+      ],
+      [
+        "1009",
+        "1009",
+        "1013",
+        "1010",
+        "1010"
+      ],
+      [
+        "1013",
+        "1014",
+        "1013"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "201",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "202",
+    "formation": "10#8",
+    "monsterIndex": "1013,1013#1009,1009,1013,1010,1010#1013,1014,1013",
+    "stageName": "Fairy Land 2 (Easy)",
+    "chapterBG": "c2.png",
+    "mode": "easy",
+    "zenReward": "4000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1013",
+        "1014",
+        "1013"
+      ],
+      [
+        "1010",
+        "1013",
+        "1014",
+        "1010",
+        "1013"
+      ],
+      [
+        "1014",
+        "1015",
+        "1014"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "202",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "203",
+    "formation": "10#8",
+    "monsterIndex": "1013,1014,1013#1010,1013,1014,1010,1013#1014,1015,1014",
+    "stageName": "Fairy Land 3 (Easy)",
+    "chapterBG": "c2.png",
+    "mode": "easy",
+    "zenReward": "5000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1004",
+        "1014",
+        "1004"
+      ],
+      [
+        "1013",
+        "1014",
+        "1013"
+      ],
+      [
+        "1014",
+        "1013",
+        "1015",
+        "1014",
+        "1013"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "203",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "204",
+    "formation": "10#8",
+    "monsterIndex": "1004,1014,1004#1013,1014,1013#1014,1013,1015,1014,1013",
+    "stageName": "Fairy Land 4 (Easy)",
+    "chapterBG": "c2.png",
+    "mode": "easy",
+    "zenReward": "6000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1011",
+        "1014",
+        "1011"
+      ],
+      [
+        "1014",
+        "1012",
+        "1014"
+      ],
+      [
+        "1012",
+        "1016",
+        "1012"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "204",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "205",
+    "formation": "10#8",
+    "monsterIndex": "1011,1014,1011#1014,1012,1014#1012,1016,1012",
+    "stageName": "Fairy Land 5 (Easy)",
+    "chapterBG": "c2.png",
+    "mode": "easy",
+    "zenReward": "7000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1006",
+        "1013",
+        "1006"
+      ],
+      [
+        "1006",
+        "1014",
+        "1007",
+        "1014",
+        "1006"
+      ],
+      [
+        "1006",
+        "1007",
+        "1016",
+        "1007",
+        "1006"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "205",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "206",
+    "formation": "10#8",
+    "monsterIndex": "1006,1013,1006#1006,1014,1007,1014,1006#1006,1007,1016,1007,1006",
+    "stageName": "Fairy Land 6 (Easy)",
+    "chapterBG": "c2.png",
+    "mode": "easy",
+    "zenReward": "8000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1013",
+        "1014",
+        "1013"
+      ],
+      [
+        "1006",
+        "1013",
+        "1014",
+        "1010",
+        "1006"
+      ],
+      [
+        "1007",
+        "1014",
+        "1016",
+        "1014",
+        "1007"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "206",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "207",
+    "formation": "10#8",
+    "monsterIndex": "1013,1014,1013#1006,1013,1014,1010,1006#1007,1014,1016,1014,1007",
+    "stageName": "Fairy Land 7 (Easy)",
+    "chapterBG": "c2.png",
+    "mode": "easy",
+    "zenReward": "9000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1011",
+        "1015",
+        "1011"
+      ],
+      [
+        "1012",
+        "1013",
+        "1014",
+        "1012",
+        "1013"
+      ],
+      [
+        "1006",
+        "1014",
+        "1015",
+        "1014",
+        "1006"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "207",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "208",
+    "formation": "10#8",
+    "monsterIndex": "1011,1015,1011#1012,1013,1014,1012,1013#1006,1014,1015,1014,1006",
+    "stageName": "Fairy Land 8 (Easy)",
+    "chapterBG": "c2.png",
+    "mode": "easy",
+    "zenReward": "10000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1012",
+        "1012",
+        "1014",
+        "1014"
+      ],
+      [
+        "1006",
+        "1007",
+        "1015",
+        "1007"
+      ],
+      [
+        "1012",
+        "1012",
+        "1016",
+        "1014",
+        "1014"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/4",
+    "stageIndex": "208",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "209",
+    "formation": "10#8",
+    "monsterIndex": "1012,1012,1014,1014#1006,1007,1015,1007#1012,1012,1016,1014,1014",
+    "stageName": "Fairy Land 9 (Easy)",
+    "chapterBG": "c2.png",
+    "mode": "easy",
+    "zenReward": "11000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1014",
+        "1013",
+        "1015",
+        "1014"
+      ],
+      [
+        "1013",
+        "1013",
+        "1016",
+        "1015",
+        "1015"
+      ],
+      [
+        "1017"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "209",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "300",
+    "formation": "10#8",
+    "monsterIndex": "1014,1013,1015,1014#1013,1013,1016,1015,1015#1017",
+    "stageName": "Fairy Land 10 (Easy)",
+    "chapterBG": "c2.png",
+    "mode": "easy",
+    "zenReward": "12000"
+  },
+  {
+    "monsterWave": [
+      [
+        "2013"
+      ],
+      [
+        "2009",
+        "2013",
+        "2009"
+      ],
+      [
+        "2010",
+        "2013",
+        "2010"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "210",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 3,
+    "energyCost": 5,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "211",
+    "formation": "10#8",
+    "monsterIndex": "2013#2009,2013,2009#2010,2013,2010",
+    "stageName": "Fairy Land 1 (Normal)",
+    "chapterBG": "c2.png",
+    "mode": "hard",
+    "zenReward": "6000"
+  },
+  {
+    "monsterWave": [
+      [
+        "2013",
+        "2013"
+      ],
+      [
+        "2009",
+        "2009",
+        "2013",
+        "2010",
+        "2010"
+      ],
+      [
+        "2013",
+        "2014",
+        "2013"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "211",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 3,
+    "energyCost": 5,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "212",
+    "formation": "10#8",
+    "monsterIndex": "2013,2013#2009,2009,2013,2010,2010#2013,2014,2013",
+    "stageName": "Fairy Land 2 (Normal)",
+    "chapterBG": "c2.png",
+    "mode": "hard",
+    "zenReward": "8000"
+  },
+  {
+    "monsterWave": [
+      [
+        "2013",
+        "2014",
+        "2013"
+      ],
+      [
+        "2010",
+        "2013",
+        "2014",
+        "2010",
+        "2013"
+      ],
+      [
+        "2014",
+        "2015",
+        "2014"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "212",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 3,
+    "energyCost": 5,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "213",
+    "formation": "10#8",
+    "monsterIndex": "2013,2014,2013#2010,2013,2014,2010,2013#2014,2015,2014",
+    "stageName": "Fairy Land 3 (Normal)",
+    "chapterBG": "c2.png",
+    "mode": "hard",
+    "zenReward": "10000"
+  },
+  {
+    "monsterWave": [
+      [
+        "2004",
+        "2014",
+        "2004"
+      ],
+      [
+        "2013",
+        "2014",
+        "2013"
+      ],
+      [
+        "2014",
+        "2013",
+        "2015",
+        "2014",
+        "2013"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "213",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 3,
+    "energyCost": 5,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "214",
+    "formation": "10#8",
+    "monsterIndex": "2004,2014,2004#2013,2014,2013#2014,2013,2015,2014,2013",
+    "stageName": "Fairy Land 4 (Normal)",
+    "chapterBG": "c2.png",
+    "mode": "hard",
+    "zenReward": "12000"
+  },
+  {
+    "monsterWave": [
+      [
+        "2011",
+        "2014",
+        "2011"
+      ],
+      [
+        "2014",
+        "2012",
+        "2014"
+      ],
+      [
+        "2012",
+        "2016",
+        "2012"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "214",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 3,
+    "energyCost": 5,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "215",
+    "formation": "10#8",
+    "monsterIndex": "2011,2014,2011#2014,2012,2014#2012,2016,2012",
+    "stageName": "Fairy Land 5 (Normal)",
+    "chapterBG": "c2.png",
+    "mode": "hard",
+    "zenReward": "14000"
+  },
+  {
+    "monsterWave": [
+      [
+        "2006",
+        "2013",
+        "2006"
+      ],
+      [
+        "2006",
+        "2014",
+        "2007",
+        "2014",
+        "2006"
+      ],
+      [
+        "2006",
+        "2007",
+        "2016",
+        "2007",
+        "2006"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "215",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 3,
+    "energyCost": 5,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "216",
+    "formation": "10#8",
+    "monsterIndex": "2006,2013,2006#2006,2014,2007,2014,2006#2006,2007,2016,2007,2006",
+    "stageName": "Fairy Land 6 (Normal)",
+    "chapterBG": "c2.png",
+    "mode": "hard",
+    "zenReward": "16000"
+  },
+  {
+    "monsterWave": [
+      [
+        "2013",
+        "2014",
+        "2013"
+      ],
+      [
+        "2006",
+        "2013",
+        "2014",
+        "2010",
+        "2006"
+      ],
+      [
+        "2007",
+        "2014",
+        "2016",
+        "2014",
+        "2007"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "216",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 3,
+    "energyCost": 5,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "217",
+    "formation": "10#8",
+    "monsterIndex": "2013,2014,2013#2006,2013,2014,2010,2006#2007,2014,2016,2014,2007",
+    "stageName": "Fairy Land 7 (Normal)",
+    "chapterBG": "c2.png",
+    "mode": "hard",
+    "zenReward": "18000"
+  },
+  {
+    "monsterWave": [
+      [
+        "2011",
+        "2015",
+        "2011"
+      ],
+      [
+        "2012",
+        "2013",
+        "2014",
+        "2012",
+        "2013"
+      ],
+      [
+        "2006",
+        "2014",
+        "2015",
+        "2014",
+        "2006"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "217",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 3,
+    "energyCost": 5,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "218",
+    "formation": "10#8",
+    "monsterIndex": "2011,2015,2011#2012,2013,2014,2012,2013#2006,2014,2015,2014,2006",
+    "stageName": "Fairy Land 8 (Normal)",
+    "chapterBG": "c2.png",
+    "mode": "hard",
+    "zenReward": "20000"
+  },
+  {
+    "monsterWave": [
+      [
+        "2011",
+        "2015",
+        "2011"
+      ],
+      [
+        "2012",
+        "2012",
+        "2014",
+        "2014"
+      ],
+      [
+        "2006",
+        "2007",
+        "2015",
+        "2007"
+      ],
+      [
+        "2012",
+        "2012",
+        "2016",
+        "2014",
+        "2014"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "218",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 3,
+    "energyCost": 5,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "219",
+    "formation": "10#8",
+    "monsterIndex": "2011,2015,2011#2012,2012,2014,2014#2006,2007,2015,2007#2012,2012,2016,2014,2014",
+    "stageName": "Fairy Land 9 (Normal)",
+    "chapterBG": "c2.png",
+    "mode": "hard",
+    "zenReward": "22000"
+  },
+  {
+    "monsterWave": [
+      [
+        "2014",
+        "2013",
+        "2014"
+      ],
+      [
+        "2013",
+        "2013",
+        "2014",
+        "2014"
+      ],
+      [
+        "2014",
+        "2013",
+        "2015",
+        "2014"
+      ],
+      [
+        "2013",
+        "2013",
+        "2016",
+        "2015",
+        "2015"
+      ],
+      [
+        "2017"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "219",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 3,
+    "energyCost": 5,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "220",
+    "formation": "10#8",
+    "monsterIndex": "2014,2013,2014#2013,2013,2014,2014#2014,2013,2015,2014#2013,2013,2016,2015,2015#2017",
+    "stageName": "Fairy Land 10 (Normal)",
+    "chapterBG": "c2.png",
+    "mode": "hard",
+    "zenReward": "24000"
+  },
+  {
+    "monsterWave": [
+      [
+        "3013"
+      ],
+      [
+        "3009",
+        "3013",
+        "3009"
+      ],
+      [
+        "3010",
+        "3013",
+        "3010"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "220",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 3,
+    "energyCost": 7,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "221",
+    "formation": "10#8",
+    "monsterIndex": "3013#3009,3013,3009#3010,3013,3010",
+    "stageName": "Fairy Land 1 (Hard)",
+    "chapterBG": "c2.png",
+    "mode": "hell",
+    "zenReward": "9000"
+  },
+  {
+    "monsterWave": [
+      [
+        "3013",
+        "3013"
+      ],
+      [
+        "3009",
+        "3009",
+        "3013",
+        "3010",
+        "3010"
+      ],
+      [
+        "3013",
+        "3014",
+        "3013"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "221",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 3,
+    "energyCost": 7,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "222",
+    "formation": "10#8",
+    "monsterIndex": "3013,3013#3009,3009,3013,3010,3010#3013,3014,3013",
+    "stageName": "Fairy Land 2 (Hard)",
+    "chapterBG": "c2.png",
+    "mode": "hell",
+    "zenReward": "12000"
+  },
+  {
+    "monsterWave": [
+      [
+        "3013",
+        "3014",
+        "3013"
+      ],
+      [
+        "3010",
+        "3013",
+        "3014",
+        "3010",
+        "3013"
+      ],
+      [
+        "3014",
+        "3015",
+        "3014"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "222",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 3,
+    "energyCost": 7,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "223",
+    "formation": "10#8",
+    "monsterIndex": "3013,3014,3013#3010,3013,3014,3010,3013#3014,3015,3014",
+    "stageName": "Fairy Land 3 (Hard)",
+    "chapterBG": "c2.png",
+    "mode": "hell",
+    "zenReward": "15000"
+  },
+  {
+    "monsterWave": [
+      [
+        "3004",
+        "3014",
+        "3004"
+      ],
+      [
+        "3013",
+        "3014",
+        "3013"
+      ],
+      [
+        "3014",
+        "3013",
+        "3015",
+        "3014",
+        "3013"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "223",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 3,
+    "energyCost": 7,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "224",
+    "formation": "10#8",
+    "monsterIndex": "3004,3014,3004#3013,3014,3013#3014,3013,3015,3014,3013",
+    "stageName": "Fairy Land 4 (Hard)",
+    "chapterBG": "c2.png",
+    "mode": "hell",
+    "zenReward": "18000"
+  },
+  {
+    "monsterWave": [
+      [
+        "3011",
+        "3014",
+        "3011"
+      ],
+      [
+        "3014",
+        "3012",
+        "3014"
+      ],
+      [
+        "3012",
+        "3016",
+        "3012"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "224",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 3,
+    "energyCost": 7,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "225",
+    "formation": "10#8",
+    "monsterIndex": "3011,3014,3011#3014,3012,3014#3012,3016,3012",
+    "stageName": "Fairy Land 5 (Hard)",
+    "chapterBG": "c2.png",
+    "mode": "hell",
+    "zenReward": "21000"
+  },
+  {
+    "monsterWave": [
+      [
+        "3006",
+        "3013",
+        "3006"
+      ],
+      [
+        "3006",
+        "3014",
+        "3007",
+        "3014",
+        "3006"
+      ],
+      [
+        "3006",
+        "3007",
+        "3016",
+        "3007",
+        "3006"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "225",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 3,
+    "energyCost": 7,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "226",
+    "formation": "10#8",
+    "monsterIndex": "3006,3013,3006#3006,3014,3007,3014,3006#3006,3007,3016,3007,3006",
+    "stageName": "Fairy Land 6 (Hard)",
+    "chapterBG": "c2.png",
+    "mode": "hell",
+    "zenReward": "24000"
+  },
+  {
+    "monsterWave": [
+      [
+        "3013",
+        "3014",
+        "3013"
+      ],
+      [
+        "3006",
+        "3013",
+        "3014",
+        "3010",
+        "3006"
+      ],
+      [
+        "3007",
+        "3014",
+        "3016",
+        "3014",
+        "3007"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "226",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 3,
+    "energyCost": 7,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "227",
+    "formation": "10#8",
+    "monsterIndex": "3013,3014,3013#3006,3013,3014,3010,3006#3007,3014,3016,3014,3007",
+    "stageName": "Fairy Land 7 (Hard)",
+    "chapterBG": "c2.png",
+    "mode": "hell",
+    "zenReward": "27000"
+  },
+  {
+    "monsterWave": [
+      [
+        "3011",
+        "3015",
+        "3011"
+      ],
+      [
+        "3012",
+        "3013",
+        "3014",
+        "3012",
+        "3013"
+      ],
+      [
+        "3006",
+        "3014",
+        "3015",
+        "3014",
+        "3006"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "227",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 3,
+    "energyCost": 7,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "228",
+    "formation": "10#8",
+    "monsterIndex": "3011,3015,3011#3012,3013,3014,3012,3013#3006,3014,3015,3014,3006",
+    "stageName": "Fairy Land 8 (Hard)",
+    "chapterBG": "c2.png",
+    "mode": "hell",
+    "zenReward": "30000"
+  },
+  {
+    "monsterWave": [
+      [
+        "3011",
+        "3015",
+        "3011"
+      ],
+      [
+        "3012",
+        "3012",
+        "3014",
+        "3014"
+      ],
+      [
+        "3006",
+        "3007",
+        "3015",
+        "3007"
+      ],
+      [
+        "3012",
+        "3012",
+        "3016",
+        "3014",
+        "3014"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "228",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 3,
+    "energyCost": 7,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "229",
+    "formation": "10#8",
+    "monsterIndex": "3011,3015,3011#3012,3012,3014,3014#3006,3007,3015,3007#3012,3012,3016,3014,3014",
+    "stageName": "Fairy Land 9 (Hard)",
+    "chapterBG": "c2.png",
+    "mode": "hell",
+    "zenReward": "33000"
+  },
+  {
+    "monsterWave": [
+      [
+        "3014",
+        "3013",
+        "3014"
+      ],
+      [
+        "3013",
+        "3013",
+        "3014",
+        "3014"
+      ],
+      [
+        "3014",
+        "3013",
+        "3015",
+        "3014"
+      ],
+      [
+        "3013",
+        "3013",
+        "3016",
+        "3015",
+        "3015"
+      ],
+      [
+        "3017"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "229",
+    "chapterIndex": "1",
+    "chapterName": "Chapter 2 - Fairy Land",
+    "chance": 3,
+    "energyCost": 7,
+    "battleBG": "noria1,noria2",
+    "unlockStage": "10002",
+    "formation": "10#8",
+    "monsterIndex": "3014,3013,3014#3013,3013,3014,3014#3014,3013,3015,3014#3013,3013,3016,3015,3015#3017",
+    "stageName": "Fairy Land 10 (Hard)",
+    "chapterBG": "c2.png",
+    "mode": "hell",
+    "zenReward": "36000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1018"
+      ],
+      [
+        "1018",
+        "1018"
+      ],
+      [
+        "1018",
+        "1019",
+        "1018"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "300",
+    "chapterIndex": "2",
+    "chapterName": "Chapter 3 - Snowy Land",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "devias1,devias2",
+    "unlockStage": "301",
+    "formation": "10#8",
+    "monsterIndex": "1018#1018,1018#1018,1019,1018",
+    "stageName": "Snowy Land 1 (Easy)",
+    "chapterBG": "c3.png",
+    "mode": "easy",
+    "zenReward": "5000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1018",
+        "1019"
+      ],
+      [
+        "1020",
+        "1019",
+        "1018"
+      ],
+      [
+        "1019",
+        "1020",
+        "1019",
+        "1018"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "301",
+    "chapterIndex": "2",
+    "chapterName": "Chapter 3 - Snowy Land",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "devias1,devias2",
+    "unlockStage": "302",
+    "formation": "10#8",
+    "monsterIndex": "1018,1019#1020,1019,1018#1019,1020,1019,1018",
+    "stageName": "Snowy Land 2 (Easy)",
+    "chapterBG": "c3.png",
+    "mode": "easy",
+    "zenReward": "6000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1019",
+        "1020",
+        "1019"
+      ],
+      [
+        "1018",
+        "1019",
+        "1020",
+        "1018"
+      ],
+      [
+        "1020",
+        "1021",
+        "1020"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "302",
+    "chapterIndex": "2",
+    "chapterName": "Chapter 3 - Snowy Land",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "devias1,devias2",
+    "unlockStage": "303",
+    "formation": "10#8",
+    "monsterIndex": "1019,1020,1019#1018,1019,1020,1018#1020,1021,1020",
+    "stageName": "Snowy Land 3 (Easy)",
+    "chapterBG": "c3.png",
+    "mode": "easy",
+    "zenReward": "7000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1019",
+        "1020",
+        "1019"
+      ],
+      [
+        "1019",
+        "1018",
+        "1020",
+        "1018"
+      ],
+      [
+        "1019",
+        "1020",
+        "1021",
+        "1019",
+        "1020"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "303",
+    "chapterIndex": "2",
+    "chapterName": "Chapter 3 - Snowy Land",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "devias1,devias2",
+    "unlockStage": "304",
+    "formation": "10#8",
+    "monsterIndex": "1019,1020,1019#1019,1018,1020,1018#1019,1020,1021,1019,1020",
+    "stageName": "Snowy Land 4 (Easy)",
+    "chapterBG": "c3.png",
+    "mode": "easy",
+    "zenReward": "8000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1019",
+        "1020",
+        "1020",
+        "1019"
+      ],
+      [
+        "1018",
+        "1019",
+        "1021",
+        "1018",
+        "1019"
+      ],
+      [
+        "1020",
+        "1021",
+        "1022",
+        "1021",
+        "1020"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "304",
+    "chapterIndex": "2",
+    "chapterName": "Chapter 3 - Snowy Land",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "devias1,devias2",
+    "unlockStage": "305",
+    "formation": "10#8",
+    "monsterIndex": "1019,1020,1020,1019#1018,1019,1021,1018,1019#1020,1021,1022,1021,1020",
+    "stageName": "Snowy Land 5 (Easy)",
+    "chapterBG": "c3.png",
+    "mode": "easy",
+    "zenReward": "9000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1020",
+        "1021",
+        "1021",
+        "1020"
+      ],
+      [
+        "1019",
+        "1020",
+        "1022",
+        "1019",
+        "1020"
+      ],
+      [
+        "1021",
+        "1021",
+        "1023",
+        "1022",
+        "1021"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "305",
+    "chapterIndex": "2",
+    "chapterName": "Chapter 3 - Snowy Land",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "devias1,devias2",
+    "unlockStage": "306",
+    "formation": "10#8",
+    "monsterIndex": "1020,1021,1021,1020#1019,1020,1022,1019,1020#1021,1021,1023,1022,1021",
+    "stageName": "Snowy Land 6 (Easy)",
+    "chapterBG": "c3.png",
+    "mode": "easy",
+    "zenReward": "10000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1021",
+        "1022",
+        "1022",
+        "1021"
+      ],
+      [
+        "1021",
+        "1020",
+        "1022",
+        "1021",
+        "1020"
+      ],
+      [
+        "1022",
+        "1022",
+        "1023",
+        "1022",
+        "1022"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "306",
+    "chapterIndex": "2",
+    "chapterName": "Chapter 3 - Snowy Land",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "devias1,devias2",
+    "unlockStage": "307",
+    "formation": "10#8",
+    "monsterIndex": "1021,1022,1022,1021#1021,1020,1022,1021,1020#1022,1022,1023,1022,1022",
+    "stageName": "Snowy Land 7 (Easy)",
+    "chapterBG": "c3.png",
+    "mode": "easy",
+    "zenReward": "11000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1021",
+        "1023",
+        "1023",
+        "1021"
+      ],
+      [
+        "1022",
+        "1022",
+        "1023",
+        "1021",
+        "1021"
+      ],
+      [
+        "1022",
+        "1023",
+        "1023",
+        "1022",
+        "1022"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "307",
+    "chapterIndex": "2",
+    "chapterName": "Chapter 3 - Snowy Land",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "devias1,devias2",
+    "unlockStage": "308",
+    "formation": "10#8",
+    "monsterIndex": "1021,1023,1023,1021#1022,1022,1023,1021,1021#1022,1023,1023,1022,1022",
+    "stageName": "Snowy Land 8 (Easy)",
+    "chapterBG": "c3.png",
+    "mode": "easy",
+    "zenReward": "12000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1021",
+        "1021",
+        "1022",
+        "1022"
+      ],
+      [
+        "1022",
+        "1022",
+        "1023",
+        "1022",
+        "1022"
+      ],
+      [
+        "1022",
+        "1023",
+        "1023",
+        "1023",
+        "1022"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/6",
+    "stageIndex": "308",
+    "chapterIndex": "2",
+    "chapterName": "Chapter 3 - Snowy Land",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "devias1,devias2",
+    "unlockStage": "309",
+    "formation": "10#8",
+    "monsterIndex": "1021,1021,1022,1022,#1022,1022,1023,1022,1022#1022,1023,1023,1023,1022",
+    "stageName": "Snowy Land 9 (Easy)",
+    "chapterBG": "c3.png",
+    "mode": "easy",
+    "zenReward": "13000"
+  },
+  {
+    "monsterWave": [
+      [
+        "1020",
+        "1020",
+        "1022",
+        "1020",
+        "1020"
+      ],
+      [
+        "1023",
+        "1023",
+        "1023",
+        "1023"
+      ],
+      [
+        "1024"
+      ]
+    ],
+    "dailyFirstTimeReward": "9999/8",
+    "stageIndex": "309",
+    "chapterIndex": "2",
+    "chapterName": "Chapter 3 - Snowy Land",
+    "chance": 5,
+    "energyCost": 1,
+    "battleBG": "devias1,devias2",
+    "unlockStage": "#",
+    "formation": "10#8",
+    "monsterIndex": "1020,1020,1022,1020,1020#1023,1023,1023,1023#1024",
+    "stageName": "Snowy Land 10 (Easy)",
+    "chapterBG": "c3.png",
+    "mode": "easy",
+    "zenReward": "14000"
+  }
+]

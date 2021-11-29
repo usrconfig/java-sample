@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ZoneList>
+	<ZoneSettings ZoneName="nf1" CustomLogin="true" Encrypted="false" MaxUsers="1000" GuestUserNamePrefix="Guest#" key="GS1tEwNVeoRMjAv4AK3lQ9R6E33gDI_BeAKIstBmy9DmbtwGmtIc5doijyT">
+		<ExtensionSettings Name="ext.jar" Type="JAVA" File="com.seagame.ext.GameExtension" PropertiesFile="" ReloadMode="AUTO"/>
+	</ZoneSettings>
+	<ZoneSettings ZoneName="nf2" CustomLogin="true" Encrypted="false" MaxUsers="1000" GuestUserNamePrefix="Guest#" key="GS1tEwNVeoRMjAv4AK3lQ9R6E33gDI_BeAKIstBmy9DmbtwGmtIc5doijyT">
+		<ExtensionSettings Name="ext.jar" Type="JAVA" File="com.seagame.ext.GameExtension" PropertiesFile="" ReloadMode="AUTO"/>
+	</ZoneSettings>
+</ZoneList>
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="GuildBossStageBaseList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="GuildBossStageBase" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GuildBossStageBase">
+        <xs:complexType>
+             <xs:attribute name="StageIndex" type="xs:int"/>
+             <xs:attribute name="NextStage" type="xs:int"/>
+             <xs:attribute name="StageName" type="xs:string"/>
+             <xs:attribute name="BossIndex" type="xs:int"/>
+             <xs:attribute name="BattleTimeSeconds" type="xs:int"/>
+             <xs:attribute name="FirstTimeReward" type="xs:string"/>
+             <xs:attribute name="RandomBonus" type="xs:string"/>
+             <xs:attribute name="DropRate" type="xs:string"/>
+             <xs:attribute name="Bonus25" type="xs:string"/>
+             <xs:attribute name="Bonus50" type="xs:string"/>
+             <xs:attribute name="Bonus75" type="xs:string"/>
+             <xs:attribute name="Bonus100" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+

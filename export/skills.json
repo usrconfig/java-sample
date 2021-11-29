@@ -1,0 +1,4221 @@
+[
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "fire"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 10
+            }
+          ]
+        },
+        "id": "1000",
+        "level": 1,
+        "description": "txtZegaLeaderDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "fire"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 15
+            }
+          ]
+        },
+        "id": "1000",
+        "level": 2,
+        "description": "txtZegaLeaderDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "fire"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 20
+            }
+          ]
+        },
+        "id": "1000",
+        "level": 3,
+        "description": "txtZegaLeaderDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtZegaLeader",
+    "type": "leader",
+    "id": "1000",
+    "ranged": false,
+    "icon": "zegaleader"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "2",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.2
+            },
+            {
+              "type": "decover",
+              "turn": 3
+            }
+          ]
+        },
+        "id": "1001",
+        "level": 1,
+        "description": "txtZegaActiveDesLV_1",
+        "cooldown": 3,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.5
+            },
+            {
+              "type": "decover",
+              "turn": 4
+            }
+          ]
+        },
+        "id": "1001",
+        "level": 2,
+        "description": "txtZegaActiveDesLV_2",
+        "cooldown": 3,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 2.0
+            },
+            {
+              "type": "decover",
+              "turn": 5
+            }
+          ]
+        },
+        "id": "1001",
+        "level": 3,
+        "description": "txtZegaActiveDesLV_3",
+        "cooldown": 3,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "boy1act",
+      "cast1",
+      "twistingslash1",
+      "hit_slash12",
+      "hit_slash11"
+    ],
+    "hitFXarr": [
+      "hitSlashRed1",
+      "hitSlashRed1"
+    ],
+    "name": "txtZegaActive",
+    "type": "active",
+    "id": "1001",
+    "ranged": false,
+    "icon": "zegaactive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "heal",
+              "percentHP": 5
+            },
+            {
+              "type": "buffATK",
+              "turn": 2
+            }
+          ]
+        },
+        "id": "1002",
+        "level": 1,
+        "description": "txtZegaAutoDesLV_1",
+        "cooldown": 1,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "heal",
+              "percentHP": 10
+            },
+            {
+              "type": "buffATK",
+              "turn": 2
+            }
+          ]
+        },
+        "id": "1002",
+        "level": 2,
+        "description": "txtZegaAutoDesLV_2",
+        "cooldown": 1,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "heal",
+              "percentHP": 15
+            },
+            {
+              "type": "buffATK",
+              "turn": 2
+            }
+          ]
+        },
+        "id": "1002",
+        "level": 3,
+        "description": "txtZegaAutoDesLV_3",
+        "cooldown": 1,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "magic11"
+    ],
+    "hitFXarr": [],
+    "name": "txtZegaAuto",
+    "type": "auto",
+    "id": "1002",
+    "ranged": true,
+    "icon": "zegaauto"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentHP",
+              "value": 5
+            }
+          ]
+        },
+        "id": "1003",
+        "level": 1,
+        "description": "txtZegaPassiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentHP",
+              "value": 10
+            }
+          ]
+        },
+        "id": "1003",
+        "level": 2,
+        "description": "txtZegaPassiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentHP",
+              "value": 20
+            }
+          ]
+        },
+        "id": "1003",
+        "level": 3,
+        "description": "txtZegaPassiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtZegaPassive",
+    "type": "passive",
+    "id": "1003",
+    "ranged": false,
+    "icon": "zegapassive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "1010",
+        "level": 1,
+        "description": "txtZebanLeaderDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "1010",
+        "level": 2,
+        "description": "txtZebanLeaderDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "1010",
+        "level": 3,
+        "description": "txtZebanLeaderDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtZebanLeader",
+    "type": "leader",
+    "id": "1010",
+    "ranged": false,
+    "icon": "zebanleader"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "id": "1011",
+        "level": 1,
+        "description": "txtZebanActiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "1011",
+        "level": 2,
+        "description": "txtZebanActiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "1011",
+        "level": 3,
+        "description": "txtZebanActiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "cast1",
+      "powercharge",
+      "shieldbuff"
+    ],
+    "hitFXarr": [],
+    "name": "txtZebanActive",
+    "type": "active",
+    "id": "1011",
+    "ranged": false,
+    "icon": "zebanactive"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "id": "1012",
+        "level": 1,
+        "description": "txtZebanAutoDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "1012",
+        "level": 2,
+        "description": "txtZebanAutoDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "1012",
+        "level": 3,
+        "description": "txtZebanAutoDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "moonslash",
+      "hit_slash11"
+    ],
+    "hitFXarr": [
+      "hitSlashYellow1"
+    ],
+    "name": "txtZebanAuto",
+    "type": "auto",
+    "id": "1012",
+    "ranged": false,
+    "icon": "zebanauto"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "1013",
+        "level": 1,
+        "description": "txtZebanPassiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "1013",
+        "level": 2,
+        "description": "txtZebanPassiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "1013",
+        "level": 3,
+        "description": "txtZebanPassiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtZebanPassive",
+    "type": "passive",
+    "id": "1013",
+    "ranged": false,
+    "icon": "zebanpassive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "1020",
+        "level": 1,
+        "description": "txtKaiLeaderDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "1020",
+        "level": 2,
+        "description": "txtKaiLeaderDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "1020",
+        "level": 3,
+        "description": "txtKaiLeaderDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtKaiLeader",
+    "type": "leader",
+    "id": "1020",
+    "ranged": false,
+    "icon": "kaileader"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "3",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "id": "1021",
+        "level": 1,
+        "description": "txtKaiActiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "1021",
+        "level": 2,
+        "description": "txtKaiActiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "1021",
+        "level": 3,
+        "description": "txtKaiActiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "twistingslash1",
+      "slashdarkfury3"
+    ],
+    "hitFXarr": [
+      "DarkFuryDragonHit2"
+    ],
+    "name": "txtKaiActive",
+    "type": "active",
+    "id": "1021",
+    "ranged": false,
+    "icon": "kaiactive"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "id": "1022",
+        "level": 1,
+        "description": "txtKaiAutoDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "1022",
+        "level": 2,
+        "description": "txtKaiAutoDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "1022",
+        "level": 3,
+        "description": "txtKaiAutoDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "ragecharge",
+      "slashdarkfury3"
+    ],
+    "hitFXarr": [
+      "DarkFuryDragonHit3"
+    ],
+    "name": "txtKaiAuto",
+    "type": "auto",
+    "id": "1022",
+    "ranged": false,
+    "icon": "kaiauto"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "1023",
+        "level": 1,
+        "description": "txtKaiPassiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "1023",
+        "level": 2,
+        "description": "txtKaiPassiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "1023",
+        "level": 3,
+        "description": "txtKaiPassiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtKaiPassive",
+    "type": "passive",
+    "id": "1023",
+    "ranged": false,
+    "icon": "kaipassive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "water"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 10
+            }
+          ]
+        },
+        "id": "2000",
+        "level": 1,
+        "description": "txtAbelLeaderDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "water"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 15
+            }
+          ]
+        },
+        "id": "2000",
+        "level": 2,
+        "description": "txtAbelLeaderDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "water"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 25
+            }
+          ]
+        },
+        "id": "2000",
+        "level": 3,
+        "description": "txtAbelLeaderDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtAbelLeader",
+    "type": "leader",
+    "id": "2000",
+    "ranged": true,
+    "icon": "abelleader"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "bottom",
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.5
+            },
+            {
+              "type": "freeze",
+              "turn": 1,
+              "chance": 65
+            }
+          ]
+        },
+        "id": "2001",
+        "level": 1,
+        "description": "txtAbelActiveDesLV_1",
+        "cooldown": 3,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 2.0
+            },
+            {
+              "type": "freeze",
+              "turn": 1,
+              "chance": 65
+            }
+          ]
+        },
+        "id": "2001",
+        "level": 2,
+        "description": "txtAbelActiveDesLV_2",
+        "cooldown": 3,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 2.5
+            },
+            {
+              "type": "freeze",
+              "turn": 2,
+              "chance": 65
+            }
+          ]
+        },
+        "id": "2001",
+        "level": 3,
+        "description": "txtAbelActiveDesLV_3",
+        "cooldown": 3,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "cast1",
+      "darkexplosion"
+    ],
+    "hitFXarr": [
+      "hitIceWallBlast"
+    ],
+    "name": "txtAbelActive",
+    "type": "active",
+    "id": "2001",
+    "ranged": true,
+    "icon": "abelactive"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "bottom",
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.2
+            },
+            {
+              "type": "debuffSPD",
+              "turn": 2
+            }
+          ]
+        },
+        "id": "2002",
+        "level": 1,
+        "description": "txtAbelAutoDesLV_1",
+        "cooldown": 1,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.4
+            },
+            {
+              "type": "debuffSPD",
+              "turn": 2
+            }
+          ]
+        },
+        "id": "2002",
+        "level": 2,
+        "description": "txtAbelAutoDesLV_2",
+        "cooldown": 1,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.6
+            },
+            {
+              "type": "debuffSPD",
+              "turn": 3
+            }
+          ]
+        },
+        "id": "2002",
+        "level": 3,
+        "description": "txtAbelAutoDesLV_3",
+        "cooldown": 1,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "cast1",
+      "icestorm"
+    ],
+    "hitFXarr": [
+      "hitIceRain"
+    ],
+    "name": "txtAbelAuto",
+    "type": "auto",
+    "id": "2002",
+    "ranged": true,
+    "icon": "abelauto"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 10
+            }
+          ]
+        },
+        "id": "2003",
+        "level": 1,
+        "description": "txtAbelPassiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 20
+            }
+          ]
+        },
+        "id": "2003",
+        "level": 2,
+        "description": "txtAbelPassiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 30
+            }
+          ]
+        },
+        "id": "2003",
+        "level": 3,
+        "description": "txtAbelPassiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtAbelPassive",
+    "type": "passive",
+    "id": "2003",
+    "ranged": true,
+    "icon": "abelpassive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "2010",
+        "level": 1,
+        "description": "txtWinchyLeaderDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "2010",
+        "level": 2,
+        "description": "txtWinchyLeaderDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "2010",
+        "level": 3,
+        "description": "txtWinchyLeaderDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtWinchyLeader",
+    "type": "leader",
+    "id": "2010",
+    "ranged": false,
+    "icon": "winchyleader"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "bottom",
+    "levels": [
+      {
+        "id": "2011",
+        "level": 1,
+        "description": "txtWinchyActiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "2011",
+        "level": 2,
+        "description": "txtWinchyActiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "2011",
+        "level": 3,
+        "description": "txtWinchyActiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "darkcharge",
+      "darkexplosion"
+    ],
+    "hitFXarr": [
+      "hitHexDarkness"
+    ],
+    "name": "txtWinchyActive",
+    "type": "active",
+    "id": "2011",
+    "ranged": false,
+    "icon": "winchyactive"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "3",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "id": "2012",
+        "level": 1,
+        "description": "txtWinchyAutoDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "2012",
+        "level": 2,
+        "description": "txtWinchyAutoDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "2012",
+        "level": 3,
+        "description": "txtWinchyAutoDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "darkcharge",
+      "darkexplosion",
+      "darkexplosion",
+      "darkexplosion"
+    ],
+    "hitFXarr": [
+      "hitDeathlyRain"
+    ],
+    "name": "txtWinchyAuto",
+    "type": "auto",
+    "id": "2012",
+    "ranged": false,
+    "icon": "winchyauto"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "2013",
+        "level": 1,
+        "description": "txtWinchyPassiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "2013",
+        "level": 2,
+        "description": "txtWinchyPassiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "2013",
+        "level": 3,
+        "description": "txtWinchyPassiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtWinchyPassive",
+    "type": "passive",
+    "id": "2013",
+    "ranged": false,
+    "icon": "winchypassive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "3000",
+        "level": 1,
+        "description": "txtErikaLeaderDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "3000",
+        "level": 2,
+        "description": "txtErikaLeaderDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "3000",
+        "level": 3,
+        "description": "txtErikaLeaderDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtErikaLeader",
+    "type": "leader",
+    "id": "3000",
+    "ranged": false,
+    "icon": "erikaleader"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "3",
+    "hitPosition": "bottom",
+    "levels": [
+      {
+        "id": "3001",
+        "level": 1,
+        "description": "txtErikaActiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "3001",
+        "level": 2,
+        "description": "txtErikaActiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "3001",
+        "level": 3,
+        "description": "txtErikaActiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "cast1",
+      "shoot11",
+      "shoot11",
+      "shoot11"
+    ],
+    "hitFXarr": [
+      "hitArrowLightFalling",
+      "hitArrowLightFalling",
+      "hitArrowLightFalling"
+    ],
+    "name": "txtErikaActive",
+    "type": "active",
+    "id": "3001",
+    "ranged": false,
+    "icon": "erikaactive"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "id": "3002",
+        "level": 1,
+        "description": "txtErikaAutoDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "3002",
+        "level": 2,
+        "description": "txtErikaAutoDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "3002",
+        "level": 3,
+        "description": "txtErikaAutoDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "shoot11",
+      "hit_arrow11"
+    ],
+    "hitFXarr": [
+      "hitArrowLight"
+    ],
+    "name": "txtErikaAuto",
+    "type": "auto",
+    "id": "3002",
+    "ranged": false,
+    "icon": "erikaauto"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "3003",
+        "level": 1,
+        "description": "txtErikaPassiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "3003",
+        "level": 2,
+        "description": "txtErikaPassiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "3003",
+        "level": 3,
+        "description": "txtErikaPassiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtErikaPassive",
+    "type": "passive",
+    "id": "3003",
+    "ranged": false,
+    "icon": "erikapassive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "allied"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": 15
+            }
+          ]
+        },
+        "id": "3010",
+        "level": 1,
+        "description": "txtLisaLeaderDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "allied"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": 25
+            }
+          ]
+        },
+        "id": "3010",
+        "level": 2,
+        "description": "txtLisaLeaderDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "allied"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": 35
+            }
+          ]
+        },
+        "id": "3010",
+        "level": 3,
+        "description": "txtLisaLeaderDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtLisaLeader",
+    "type": "leader",
+    "id": "3010",
+    "ranged": false,
+    "icon": "lisaleader"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "allied"
+          },
+          "effects": [
+            {
+              "type": "heal",
+              "percentHP": 10
+            },
+            {
+              "type": "removal"
+            }
+          ]
+        },
+        "id": "3011",
+        "level": 1,
+        "description": "txtLisaActiveDesLV_1",
+        "cooldown": 3,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "allied"
+          },
+          "effects": [
+            {
+              "type": "heal",
+              "percentHP": 15
+            },
+            {
+              "type": "removal"
+            }
+          ]
+        },
+        "id": "3011",
+        "level": 2,
+        "description": "txtLisaActiveDesLV_2",
+        "cooldown": 3,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "allied"
+          },
+          "effects": [
+            {
+              "type": "heal",
+              "percentHP": 20
+            },
+            {
+              "type": "removal"
+            }
+          ]
+        },
+        "id": "3011",
+        "level": 3,
+        "description": "txtLisaActiveDesLV_3",
+        "cooldown": 3,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "cast1",
+      "heal1"
+    ],
+    "hitFXarr": [
+      "hitHeal"
+    ],
+    "name": "txtLisaActive",
+    "type": "active",
+    "id": "3011",
+    "ranged": true,
+    "icon": "lisaactive"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "buffPercentDAMAGE",
+              "turn": 3
+            }
+          ]
+        },
+        "id": "3012",
+        "level": 1,
+        "description": "txtLisaAutoDesLV_1",
+        "cooldown": 1,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "buffPercentDAMAGE",
+              "turn": 3
+            }
+          ]
+        },
+        "id": "3012",
+        "level": 2,
+        "description": "txtLisaAutoDesLV_2",
+        "cooldown": 1,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "buffPercentDAMAGE",
+              "turn": 3
+            }
+          ]
+        },
+        "id": "3012",
+        "level": 3,
+        "description": "txtLisaAutoDesLV_3",
+        "cooldown": 1,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "dambuff"
+    ],
+    "hitFXarr": [
+      "hitDamBuff"
+    ],
+    "name": "txtLisaAuto",
+    "type": "auto",
+    "id": "3012",
+    "ranged": true,
+    "icon": "lisaauto"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": 10
+            }
+          ]
+        },
+        "id": "3013",
+        "level": 1,
+        "description": "txtLisaPassiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": 15
+            }
+          ]
+        },
+        "id": "3013",
+        "level": 2,
+        "description": "txtLisaPassiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": 25
+            }
+          ]
+        },
+        "id": "3013",
+        "level": 3,
+        "description": "txtLisaPassiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtLisaPassive",
+    "type": "passive",
+    "id": "3013",
+    "ranged": false,
+    "icon": "lisapassive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "fire"
+          },
+          "effects": [
+            {
+              "type": "percentDAMAGE",
+              "value": 10
+            }
+          ]
+        },
+        "id": "3020",
+        "level": 1,
+        "description": "txtHanaLeaderDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "fire"
+          },
+          "effects": [
+            {
+              "type": "percentDAMAGE",
+              "value": 15
+            }
+          ]
+        },
+        "id": "3020",
+        "level": 2,
+        "description": "txtHanaLeaderDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "fire"
+          },
+          "effects": [
+            {
+              "type": "percentDAMAGE",
+              "value": 20
+            }
+          ]
+        },
+        "id": "3020",
+        "level": 3,
+        "description": "txtHanaLeaderDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtHanaLeader",
+    "type": "leader",
+    "id": "3020",
+    "ranged": false,
+    "icon": "hanaleader"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 2,
+              "excellent": true
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 2
+            }
+          ]
+        },
+        "id": "3021",
+        "level": 1,
+        "description": "txtHanaActiveDesLV_1",
+        "cooldown": 3,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 2.2,
+              "excellent": true
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 2
+            }
+          ]
+        },
+        "id": "3021",
+        "level": 2,
+        "description": "txtHanaActiveDesLV_2",
+        "cooldown": 3,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 2.5,
+              "excellent": true
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 2
+            }
+          ]
+        },
+        "id": "3021",
+        "level": 3,
+        "description": "txtHanaActiveDesLV_3",
+        "cooldown": 3,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "cast1",
+      "charging1",
+      "powerarrow1",
+      "powerhit1"
+    ],
+    "hitFXarr": [
+      "hitFirePenetration"
+    ],
+    "name": "txtHanaActive",
+    "type": "active",
+    "id": "3021",
+    "ranged": true,
+    "icon": "hanaactive"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1
+            }
+          ]
+        },
+        "id": "3022",
+        "level": 1,
+        "description": "txtHanaAutoDesLV_1",
+        "cooldown": 1,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.2
+            }
+          ]
+        },
+        "id": "3022",
+        "level": 2,
+        "description": "txtHanaAutoDesLV_2",
+        "cooldown": 1,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.5
+            }
+          ]
+        },
+        "id": "3022",
+        "level": 3,
+        "description": "txtHanaAutoDesLV_3",
+        "cooldown": 1,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "shoot11",
+      "hit_arrow11"
+    ],
+    "hitFXarr": [
+      "hitFireArrow"
+    ],
+    "name": "txtHanaAuto",
+    "type": "auto",
+    "id": "3022",
+    "ranged": true,
+    "icon": "hanaauto"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 10
+            }
+          ]
+        },
+        "id": "3023",
+        "level": 1,
+        "description": "txtHanaPassiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 20
+            }
+          ]
+        },
+        "id": "3023",
+        "level": 2,
+        "description": "txtHanaPassiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 25
+            }
+          ]
+        },
+        "id": "3023",
+        "level": 3,
+        "description": "txtHanaPassiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtHanaPassive",
+    "type": "passive",
+    "id": "3023",
+    "ranged": false,
+    "icon": "hanapassive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "3030",
+        "level": 1,
+        "description": "txtLegolasLeaderDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "3030",
+        "level": 2,
+        "description": "txtLegolasLeaderDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "3030",
+        "level": 3,
+        "description": "txtLegolasLeaderDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtLegolasLeader",
+    "type": "leader",
+    "id": "3030",
+    "ranged": false,
+    "icon": "legolasleader"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "4",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "id": "3031",
+        "level": 1,
+        "description": "txtLegolasActiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "3031",
+        "level": 2,
+        "description": "txtLegolasActiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "3031",
+        "level": 3,
+        "description": "txtLegolasActiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "legolasmulti",
+      "jump1",
+      "legolaspowershot"
+    ],
+    "hitFXarr": [
+      "hitLegolas2"
+    ],
+    "name": "txtLegolasActive",
+    "type": "active",
+    "id": "3031",
+    "ranged": false,
+    "icon": "legolasactive"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "id": "3032",
+        "level": 1,
+        "description": "txtLegolasAutoDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "3032",
+        "level": 2,
+        "description": "txtLegolasAutoDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "3032",
+        "level": 3,
+        "description": "txtLegolasAutoDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "legolasauto"
+    ],
+    "hitFXarr": [],
+    "name": "txtLegolasAuto",
+    "type": "auto",
+    "id": "3032",
+    "ranged": false,
+    "icon": "legolasauto"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "3033",
+        "level": 1,
+        "description": "txtLegolasPassiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "3033",
+        "level": 2,
+        "description": "txtLegolasPassiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "3033",
+        "level": 3,
+        "description": "txtLegolasPassiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtLegolasPassive",
+    "type": "passive",
+    "id": "3033",
+    "ranged": false,
+    "icon": "legolaspassive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "fire"
+          },
+          "effects": [
+            {
+              "type": "flatCRIT",
+              "value": 10
+            }
+          ]
+        },
+        "id": "4000",
+        "level": 1,
+        "description": "txtJackobLeaderDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "fire"
+          },
+          "effects": [
+            {
+              "type": "flatCRIT",
+              "value": 15
+            }
+          ]
+        },
+        "id": "4000",
+        "level": 2,
+        "description": "txtJackobLeaderDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "fire"
+          },
+          "effects": [
+            {
+              "type": "flatCRIT",
+              "value": 20
+            }
+          ]
+        },
+        "id": "4000",
+        "level": 3,
+        "description": "txtJackobLeaderDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtJackobLeader",
+    "type": "leader",
+    "id": "4000",
+    "ranged": false,
+    "icon": "jackobleader"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.25
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 2
+            }
+          ]
+        },
+        "id": "4001",
+        "level": 1,
+        "description": "txtJackobActiveDesLV_1",
+        "cooldown": 3,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.45
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 2
+            }
+          ]
+        },
+        "id": "4001",
+        "level": 2,
+        "description": "txtJackobActiveDesLV_2",
+        "cooldown": 3,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.75
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 2
+            }
+          ]
+        },
+        "id": "4001",
+        "level": 3,
+        "description": "txtJackobActiveDesLV_3",
+        "cooldown": 3,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "cast1",
+      "ragecharge",
+      "darkexplosion"
+    ],
+    "hitFXarr": [
+      "hitFireImpact"
+    ],
+    "name": "txtJackobActive",
+    "type": "active",
+    "id": "4001",
+    "ranged": false,
+    "icon": "jackobactive"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "shield",
+              "value": 1500,
+              "turn": 1
+            }
+          ]
+        },
+        "id": "4002",
+        "level": 1,
+        "description": "txtJackobAutoDesLV_1",
+        "cooldown": 1,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "shield",
+              "value": 2500,
+              "turn": 2
+            }
+          ]
+        },
+        "id": "4002",
+        "level": 2,
+        "description": "txtJackobAutoDesLV_2",
+        "cooldown": 1,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "shield",
+              "value": 4500,
+              "turn": 3
+            }
+          ]
+        },
+        "id": "4002",
+        "level": 3,
+        "description": "txtJackobAutoDesLV_3",
+        "cooldown": 1,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "powercharge"
+    ],
+    "hitFXarr": [
+      "hitShieldLightAppear"
+    ],
+    "name": "txtJackobAuto",
+    "type": "auto",
+    "id": "4002",
+    "ranged": true,
+    "icon": "jackobauto"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentHP",
+              "value": 10
+            }
+          ]
+        },
+        "id": "4003",
+        "level": 1,
+        "description": "txtJackobPassiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentHP",
+              "value": 15
+            }
+          ]
+        },
+        "id": "4003",
+        "level": 2,
+        "description": "txtJackobPassiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentHP",
+              "value": 20
+            }
+          ]
+        },
+        "id": "4003",
+        "level": 3,
+        "description": "txtJackobPassiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtJackobPassive",
+    "type": "passive",
+    "id": "4003",
+    "ranged": false,
+    "icon": "jackobpassive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "earth"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 10
+            }
+          ]
+        },
+        "id": "4010",
+        "level": 1,
+        "description": "txtBardLeaderDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "earth"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 15
+            }
+          ]
+        },
+        "id": "4010",
+        "level": 2,
+        "description": "txtBardLeaderDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "earth"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 20
+            }
+          ]
+        },
+        "id": "4010",
+        "level": 3,
+        "description": "txtBardLeaderDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtBardLeader",
+    "type": "leader",
+    "id": "4010",
+    "ranged": false,
+    "icon": "bardleader"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.2
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 3,
+              "chance": 50
+            }
+          ]
+        },
+        "id": "4011",
+        "level": 1,
+        "description": "txtBardActiveDesLV_1",
+        "cooldown": 3,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.4
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 3,
+              "chance": 55
+            }
+          ]
+        },
+        "id": "4011",
+        "level": 2,
+        "description": "txtBardActiveDesLV_2",
+        "cooldown": 3,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.6
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 3,
+              "chance": 60
+            }
+          ]
+        },
+        "id": "4011",
+        "level": 3,
+        "description": "txtBardActiveDesLV_3",
+        "cooldown": 3,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "ragecharge",
+      "ragesmash"
+    ],
+    "hitFXarr": [
+      "hitImpactYellow1"
+    ],
+    "name": "txtBardActive",
+    "type": "active",
+    "id": "4011",
+    "ranged": false,
+    "icon": "bardactive"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1
+            },
+            {
+              "type": "debuffATK",
+              "turn": 2
+            }
+          ]
+        },
+        "id": "4012",
+        "level": 1,
+        "description": "txtBardAutoDesLV_1",
+        "cooldown": 1,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.1
+            },
+            {
+              "type": "debuffATK",
+              "turn": 2
+            }
+          ]
+        },
+        "id": "4012",
+        "level": 2,
+        "description": "txtBardAutoDesLV_2",
+        "cooldown": 1,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.2
+            },
+            {
+              "type": "debuffATK",
+              "turn": 3
+            }
+          ]
+        },
+        "id": "4012",
+        "level": 3,
+        "description": "txtBardAutoDesLV_3",
+        "cooldown": 1,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "cast1",
+      "ragecharge",
+      "ragesmash"
+    ],
+    "hitFXarr": [
+      "hitLightMagic"
+    ],
+    "name": "txtBardAuto",
+    "type": "auto",
+    "id": "4012",
+    "ranged": false,
+    "icon": "bardauto"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy"
+          },
+          "effects": [
+            {
+              "type": "percentDAMAGE",
+              "value": -5
+            }
+          ]
+        },
+        "id": "4013",
+        "level": 1,
+        "description": "txtBardPassiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy"
+          },
+          "effects": [
+            {
+              "type": "percentDAMAGE",
+              "value": -10
+            }
+          ]
+        },
+        "id": "4013",
+        "level": 2,
+        "description": "txtBardPassiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy"
+          },
+          "effects": [
+            {
+              "type": "percentDAMAGE",
+              "value": -15
+            }
+          ]
+        },
+        "id": "4013",
+        "level": 3,
+        "description": "txtBardPassiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtBardPassive",
+    "type": "passive",
+    "id": "4013",
+    "ranged": false,
+    "icon": "bardpassive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "dark"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 15
+            }
+          ]
+        },
+        "id": "4020",
+        "level": 1,
+        "description": "txtHenryLeaderDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "dark"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 20
+            }
+          ]
+        },
+        "id": "4020",
+        "level": 2,
+        "description": "txtHenryLeaderDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "dark"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 25
+            }
+          ]
+        },
+        "id": "4020",
+        "level": 3,
+        "description": "txtHenryLeaderDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtHenryLeader",
+    "type": "leader",
+    "id": "4020",
+    "ranged": false,
+    "icon": "henryleader"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "3",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.3
+            },
+            {
+              "type": "dot",
+              "turn": 2,
+              "chance": 50
+            }
+          ]
+        },
+        "id": "4021",
+        "level": 1,
+        "description": "txtHenryActiveDesLV_1",
+        "cooldown": 3,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.5
+            },
+            {
+              "type": "dot",
+              "turn": 2,
+              "chance": 60
+            }
+          ]
+        },
+        "id": "4021",
+        "level": 2,
+        "description": "txtHenryActiveDesLV_2",
+        "cooldown": 3,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 2
+            },
+            {
+              "type": "dot",
+              "turn": 3,
+              "chance": 80
+            }
+          ]
+        },
+        "id": "4021",
+        "level": 3,
+        "description": "txtHenryActiveDesLV_3",
+        "cooldown": 3,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "cast1",
+      "bigclaw1",
+      "bigclaw2",
+      "bigclaw1"
+    ],
+    "hitFXarr": [
+      "hitSlashRed1",
+      "hitSlashRed1",
+      "hitSlashRed1"
+    ],
+    "name": "txtHenryActive",
+    "type": "active",
+    "id": "4021",
+    "ranged": false,
+    "icon": "henryactive"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.2
+            },
+            {
+              "type": "silence",
+              "turn": 1
+            }
+          ]
+        },
+        "id": "4022",
+        "level": 1,
+        "description": "txtHenryAutoDesLV_1",
+        "cooldown": 1,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.5
+            },
+            {
+              "type": "silence",
+              "turn": 2
+            }
+          ]
+        },
+        "id": "4022",
+        "level": 2,
+        "description": "txtHenryAutoDesLV_2",
+        "cooldown": 1,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.8
+            },
+            {
+              "type": "silence",
+              "turn": 2
+            }
+          ]
+        },
+        "id": "4022",
+        "level": 3,
+        "description": "txtHenryAutoDesLV_3",
+        "cooldown": 1,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "ragecharge",
+      "slash11",
+      "hit_slash11"
+    ],
+    "hitFXarr": [
+      "hitSlashBlue1"
+    ],
+    "name": "txtHenryAuto",
+    "type": "auto",
+    "id": "4022",
+    "ranged": false,
+    "icon": "henryauto"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "flatCRIT",
+              "value": 10
+            }
+          ]
+        },
+        "id": "4023",
+        "level": 1,
+        "description": "txtHenryPassiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "flatCRIT",
+              "value": 15
+            }
+          ]
+        },
+        "id": "4023",
+        "level": 2,
+        "description": "txtHenryPassiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "flatCRIT",
+              "value": 20
+            }
+          ]
+        },
+        "id": "4023",
+        "level": 3,
+        "description": "txtHenryPassiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtHenryPassive",
+    "type": "passive",
+    "id": "4023",
+    "ranged": false,
+    "icon": "henrypassive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "water"
+          },
+          "effects": [
+            {
+              "type": "percentDAMAGE",
+              "value": 5
+            }
+          ]
+        },
+        "id": "5000",
+        "level": 1,
+        "description": "txtRoyLeaderDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "water"
+          },
+          "effects": [
+            {
+              "type": "percentDAMAGE",
+              "value": 10
+            }
+          ]
+        },
+        "id": "5000",
+        "level": 2,
+        "description": "txtRoyLeaderDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "water"
+          },
+          "effects": [
+            {
+              "type": "percentDAMAGE",
+              "value": 15
+            }
+          ]
+        },
+        "id": "5000",
+        "level": 3,
+        "description": "txtRoyLeaderDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtRoyLeader",
+    "type": "leader",
+    "id": "5000",
+    "ranged": false,
+    "icon": "royleader"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 3,
+              "chance": 50
+            }
+          ]
+        },
+        "id": "5001",
+        "level": 1,
+        "description": "txtRoyActiveDesLV_1",
+        "cooldown": 3,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.2
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 3,
+              "chance": 60
+            }
+          ]
+        },
+        "id": "5001",
+        "level": 2,
+        "description": "txtRoyActiveDesLV_2",
+        "cooldown": 3,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.8
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 3,
+              "chance": 70
+            }
+          ]
+        },
+        "id": "5001",
+        "level": 3,
+        "description": "txtRoyActiveDesLV_3",
+        "cooldown": 3,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "ragecharge",
+      "deathstab1",
+      "thrush1"
+    ],
+    "hitFXarr": [
+      "hitSlashBlue1"
+    ],
+    "name": "txtRoyActive",
+    "type": "active",
+    "id": "5001",
+    "ranged": false,
+    "icon": "royactive"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "2",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 0.5
+            },
+            {
+              "type": "freeze",
+              "turn": 2,
+              "chance": 50
+            }
+          ]
+        },
+        "id": "5002",
+        "level": 1,
+        "description": "txtRoyAutoDesLV_1",
+        "cooldown": 1,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 0.8
+            },
+            {
+              "type": "freeze",
+              "turn": 2,
+              "chance": 60
+            }
+          ]
+        },
+        "id": "5002",
+        "level": 2,
+        "description": "txtRoyAutoDesLV_2",
+        "cooldown": 1,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.2
+            },
+            {
+              "type": "freeze",
+              "turn": 2,
+              "chance": 80
+            }
+          ]
+        },
+        "id": "5002",
+        "level": 3,
+        "description": "txtRoyAutoDesLV_3",
+        "cooldown": 1,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "twistingslash1",
+      "hit_slash11",
+      "hit_slash12"
+    ],
+    "hitFXarr": [
+      "hitJackAuto"
+    ],
+    "name": "txtRoyAuto",
+    "type": "auto",
+    "id": "5002",
+    "ranged": false,
+    "icon": "royauto"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 10
+            }
+          ]
+        },
+        "id": "5003",
+        "level": 1,
+        "description": "txtRoyPassiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 15
+            }
+          ]
+        },
+        "id": "5003",
+        "level": 2,
+        "description": "txtRoyPassiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 20
+            }
+          ]
+        },
+        "id": "5003",
+        "level": 3,
+        "description": "txtRoyPassiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtRoyPassive",
+    "type": "passive",
+    "id": "5003",
+    "ranged": false,
+    "icon": "roypassive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "5010",
+        "level": 1,
+        "description": "txtDamonLeaderDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "5010",
+        "level": 2,
+        "description": "txtDamonLeaderDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "5010",
+        "level": 3,
+        "description": "txtDamonLeaderDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtDamonLeader",
+    "type": "leader",
+    "id": "5010",
+    "ranged": false,
+    "icon": "damonleader"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "bottom",
+    "levels": [
+      {
+        "id": "5011",
+        "level": 1,
+        "description": "txtDamonActiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "5011",
+        "level": 2,
+        "description": "txtDamonActiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "5011",
+        "level": 3,
+        "description": "txtDamonActiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "darkcharge",
+      "weaponrotate",
+      "slash12",
+      "darkexplosion"
+    ],
+    "hitFXarr": [
+      "hitJackActive"
+    ],
+    "name": "txtDamonActive",
+    "type": "active",
+    "id": "5011",
+    "ranged": false,
+    "icon": "damonactive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "5012",
+        "level": 1,
+        "description": "txtDamonAutoDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "5012",
+        "level": 2,
+        "description": "txtDamonAutoDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "5012",
+        "level": 3,
+        "description": "txtDamonAutoDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtDamonAuto",
+    "type": "auto",
+    "id": "5012",
+    "ranged": false,
+    "icon": "damonauto"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "5013",
+        "level": 1,
+        "description": "txtDamonPassiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "5013",
+        "level": 2,
+        "description": "txtDamonPassiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "5013",
+        "level": 3,
+        "description": "txtDamonPassiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtDamonPassive",
+    "type": "passive",
+    "id": "5013",
+    "ranged": false,
+    "icon": "damonpassive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "6000",
+        "level": 1,
+        "description": "txtTharjaLeaderDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "6000",
+        "level": 2,
+        "description": "txtTharjaLeaderDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "6000",
+        "level": 3,
+        "description": "txtTharjaLeaderDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtTharjaLeader",
+    "type": "leader",
+    "id": "6000",
+    "ranged": false,
+    "icon": "tharjaleader"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "bottom",
+    "levels": [
+      {
+        "id": "6001",
+        "level": 1,
+        "description": "txtTharjaActiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "6001",
+        "level": 2,
+        "description": "txtTharjaActiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "6001",
+        "level": 3,
+        "description": "txtTharjaActiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "cast1",
+      "darkcharge",
+      "darkexplosion"
+    ],
+    "hitFXarr": [
+      "hitBlackRoseShock"
+    ],
+    "name": "txtTharjaActive",
+    "type": "active",
+    "id": "6001",
+    "ranged": false,
+    "icon": "tharjaactive"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "bottom",
+    "levels": [
+      {
+        "id": "6002",
+        "level": 1,
+        "description": "txtTharjaAutoDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "6002",
+        "level": 2,
+        "description": "txtTharjaAutoDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "6002",
+        "level": 3,
+        "description": "txtTharjaAutoDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "darkcharge",
+      "shieldbuff"
+    ],
+    "hitFXarr": [],
+    "name": "txtTharjaAuto",
+    "type": "auto",
+    "id": "6002",
+    "ranged": false,
+    "icon": "tharjaauto"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "6003",
+        "level": 1,
+        "description": "txtTharjaPassiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "6003",
+        "level": 2,
+        "description": "txtTharjaPassiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "6003",
+        "level": 3,
+        "description": "txtTharjaPassiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtTharjaPassive",
+    "type": "passive",
+    "id": "6003",
+    "ranged": false,
+    "icon": "tharjapassive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "6010",
+        "level": 1,
+        "description": "txtElsaLeaderDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "6010",
+        "level": 2,
+        "description": "txtElsaLeaderDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "6010",
+        "level": 3,
+        "description": "txtElsaLeaderDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtElsaLeader",
+    "type": "leader",
+    "id": "6010",
+    "ranged": false,
+    "icon": "elsaleader"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "3",
+    "hitPosition": "bottom",
+    "levels": [
+      {
+        "id": "6011",
+        "level": 1,
+        "description": "txtElsaActiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "6011",
+        "level": 2,
+        "description": "txtElsaActiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "6011",
+        "level": 3,
+        "description": "txtElsaActiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "cast1",
+      "icestorm",
+      "twistingslash1",
+      "icepike",
+      "icepike",
+      "icepike"
+    ],
+    "hitFXarr": [
+      "hitFrostBlades"
+    ],
+    "name": "txtElsaActive",
+    "type": "active",
+    "id": "6011",
+    "ranged": false,
+    "icon": "elsaactive"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "bottom",
+    "levels": [
+      {
+        "id": "6012",
+        "level": 1,
+        "description": "txtElsaAutoDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "6012",
+        "level": 2,
+        "description": "txtElsaAutoDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "6012",
+        "level": 3,
+        "description": "txtElsaAutoDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "cast1",
+      "icepike",
+      "icepike"
+    ],
+    "hitFXarr": [
+      "hitIceJail"
+    ],
+    "name": "txtElsaAuto",
+    "type": "auto",
+    "id": "6012",
+    "ranged": false,
+    "icon": "elsaauto"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "6013",
+        "level": 1,
+        "description": "txtElsaPassiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "6013",
+        "level": 2,
+        "description": "txtElsaPassiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "6013",
+        "level": 3,
+        "description": "txtElsaPassiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtElsaPassive",
+    "type": "passive",
+    "id": "6013",
+    "ranged": false,
+    "icon": "elsapassive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "7000",
+        "level": 1,
+        "description": "txtSerraLeaderDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "7000",
+        "level": 2,
+        "description": "txtSerraLeaderDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "7000",
+        "level": 3,
+        "description": "txtSerraLeaderDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtSerraLeader",
+    "type": "leader",
+    "id": "7000",
+    "ranged": false,
+    "icon": "serraleader"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "3",
+    "hitPosition": "bottom",
+    "levels": [
+      {
+        "id": "7001",
+        "level": 1,
+        "description": "txtSerraActiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "7001",
+        "level": 2,
+        "description": "txtSerraActiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "7001",
+        "level": 3,
+        "description": "txtSerraActiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "cast1",
+      "weaponrotate",
+      "waterpillar1",
+      "waterpillar2",
+      "waterpillar3"
+    ],
+    "hitFXarr": [
+      "hitWaterPillar"
+    ],
+    "name": "txtSerraActive",
+    "type": "active",
+    "id": "7001",
+    "ranged": false,
+    "icon": "serraactive"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "levels": [
+      {
+        "id": "7002",
+        "level": 1,
+        "description": "txtSerraAutoDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "7002",
+        "level": 2,
+        "description": "txtSerraAutoDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "7002",
+        "level": 3,
+        "description": "txtSerraAutoDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "tidewrath"
+    ],
+    "hitFXarr": [],
+    "name": "txtSerraAuto",
+    "type": "auto",
+    "id": "7002",
+    "ranged": false,
+    "icon": "serraauto"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "7003",
+        "level": 1,
+        "description": "txtSerraPassiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "7003",
+        "level": 2,
+        "description": "txtSerraPassiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "7003",
+        "level": 3,
+        "description": "txtSerraPassiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtSerraPassive",
+    "type": "passive",
+    "id": "7003",
+    "ranged": false,
+    "icon": "serrapassive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "7010",
+        "level": 1,
+        "description": "txtLynLeaderDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "7010",
+        "level": 2,
+        "description": "txtLynLeaderDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "7010",
+        "level": 3,
+        "description": "txtLynLeaderDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtLynLeader",
+    "type": "leader",
+    "id": "7010",
+    "ranged": false,
+    "icon": "lynleader"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "3",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "id": "7011",
+        "level": 1,
+        "description": "txtLynActiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "7011",
+        "level": 2,
+        "description": "txtLynActiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "7011",
+        "level": 3,
+        "description": "txtLynActiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "cast1",
+      "harshtrike"
+    ],
+    "hitFXarr": [
+      "hitImpactRed1",
+      "hitSlashRed1",
+      "hitFireImpact"
+    ],
+    "name": "txtLynActive",
+    "type": "active",
+    "id": "7011",
+    "ranged": false,
+    "icon": "lynactive"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "bottom",
+    "levels": [
+      {
+        "id": "7012",
+        "level": 1,
+        "description": "txtLynAutoDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "7012",
+        "level": 2,
+        "description": "txtLynAutoDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "7012",
+        "level": 3,
+        "description": "txtLynAutoDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "hailsofarrows"
+    ],
+    "hitFXarr": [
+      "hitDamBuff"
+    ],
+    "name": "txtLynAuto",
+    "type": "auto",
+    "id": "7012",
+    "ranged": false,
+    "icon": "lynauto"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "7013",
+        "level": 1,
+        "description": "txtLynPassiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "7013",
+        "level": 2,
+        "description": "txtLynPassiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "7013",
+        "level": 3,
+        "description": "txtLynPassiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtLynPassive",
+    "type": "passive",
+    "id": "7013",
+    "ranged": false,
+    "icon": "lynpassive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "8000",
+        "level": 1,
+        "description": "txtAthasLeaderDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "8000",
+        "level": 2,
+        "description": "txtAthasLeaderDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "8000",
+        "level": 3,
+        "description": "txtAthasLeaderDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtAthasLeader",
+    "type": "leader",
+    "id": "8000",
+    "ranged": false,
+    "icon": "athasleader"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "id": "8001",
+        "level": 1,
+        "description": "txtAthasActiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "8001",
+        "level": 2,
+        "description": "txtAthasActiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "8001",
+        "level": 3,
+        "description": "txtAthasActiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "cast1",
+      "powercharge",
+      "hypershot1"
+    ],
+    "hitFXarr": [
+      "hitImpactBlue1"
+    ],
+    "name": "txtAthasActive",
+    "type": "active",
+    "id": "8001",
+    "ranged": false,
+    "icon": "athasactive"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "id": "8002",
+        "level": 1,
+        "description": "txtAthasAutoDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "8002",
+        "level": 2,
+        "description": "txtAthasAutoDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "8002",
+        "level": 3,
+        "description": "txtAthasAutoDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "powercharge",
+      "shieldbuff"
+    ],
+    "hitFXarr": [],
+    "name": "txtAthasAuto",
+    "type": "auto",
+    "id": "8002",
+    "ranged": false,
+    "icon": "athasauto"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "8003",
+        "level": 1,
+        "description": "txtAthasPassiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "8003",
+        "level": 2,
+        "description": "txtAthasPassiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "8003",
+        "level": 3,
+        "description": "txtAthasPassiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtAthasPassive",
+    "type": "passive",
+    "id": "8003",
+    "ranged": false,
+    "icon": "athaspassive"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "8010",
+        "level": 1,
+        "description": "txtJuliusLeaderDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "8010",
+        "level": 2,
+        "description": "txtJuliusLeaderDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "8010",
+        "level": 3,
+        "description": "txtJuliusLeaderDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtJuliusLeader",
+    "type": "leader",
+    "id": "8010",
+    "ranged": false,
+    "icon": "juliusleader"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "id": "8011",
+        "level": 1,
+        "description": "txtJuliusActiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "8011",
+        "level": 2,
+        "description": "txtJuliusActiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "8011",
+        "level": 3,
+        "description": "txtJuliusActiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "cast1",
+      "hailsofarrows",
+      "darkexplosion"
+    ],
+    "hitFXarr": [
+      "hitActiveLavaWarlord"
+    ],
+    "name": "txtJuliusActive",
+    "type": "active",
+    "id": "8011",
+    "ranged": false,
+    "icon": "juliusactive"
+  },
+  {
+    "maxLevel": 3,
+    "hitCount": "3",
+    "hitPosition": "center",
+    "levels": [
+      {
+        "id": "8012",
+        "level": 1,
+        "description": "txtJuliusAutoDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "8012",
+        "level": 2,
+        "description": "txtJuliusAutoDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "8012",
+        "level": 3,
+        "description": "txtJuliusAutoDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [
+      "darkexplosion",
+      "explosion_multi3"
+    ],
+    "hitFXarr": [
+      "hitLavaWarlordAuto"
+    ],
+    "name": "txtJuliusAuto",
+    "type": "auto",
+    "id": "8012",
+    "ranged": false,
+    "icon": "juliusauto"
+  },
+  {
+    "maxLevel": 3,
+    "levels": [
+      {
+        "id": "8013",
+        "level": 1,
+        "description": "txtJuliusPassiveDesLV_1",
+        "cooldown": 0,
+        "battlePower": 1000
+      },
+      {
+        "id": "8013",
+        "level": 2,
+        "description": "txtJuliusPassiveDesLV_2",
+        "cooldown": 0,
+        "battlePower": 5000
+      },
+      {
+        "id": "8013",
+        "level": 3,
+        "description": "txtJuliusPassiveDesLV_3",
+        "cooldown": 0,
+        "battlePower": 10000
+      }
+    ],
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtJuliusPassive",
+    "type": "passive",
+    "id": "8013",
+    "ranged": false,
+    "icon": "juliuspassive"
+  }
+]

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="EffectList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Effect" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Effect">
+        <xs:complexType>
+            <xs:attribute name="ID" type="xs:string"/>
+            <xs:attribute name="Effect" type="xs:string"/>
+            <xs:attribute name="Type" type="xs:string"/>
+            <xs:attribute name="ValueKey" type="xs:string"/>
+            <xs:attribute name="Style" type="xs:string"/>
+            <xs:attribute name="Target" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

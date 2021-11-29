@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="MapInfos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="MapInfos" type="MapList"/>
+                <xs:element name="MapMonsters" type="MapMonsterList"/>
+                <xs:element name="Portals" type="PortalList"/>
+                <xs:element name="NPCs" type="MapNPCList"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:complexType name="PortalList">
+        <xs:sequence>
+            <xs:element ref="Portal" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="MapList">
+        <xs:sequence>
+            <xs:element ref="Map" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="MapMonsterList">
+        <xs:sequence>
+            <xs:element ref="MapMonster" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="MapNPCList">
+        <xs:sequence>
+            <xs:element ref="NPC" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="MapMonster">
+        <xs:complexType>
+            <xs:attribute name="STT" type="xs:int"/>
+            <xs:attribute name="MonsterID" type="xs:string"/>
+            <xs:attribute name="RespawnPrefab" type="xs:string"/>
+            <xs:attribute name="MaxCount" type="xs:int"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Map">
+        <xs:complexType>
+            <xs:attribute name="MapID" type="xs:string"/>
+            <xs:attribute name="MapName" type="xs:string"/>
+            <xs:attribute name="PortID" type="xs:string"/>
+            <xs:attribute name="PortPrefab" type="xs:string"/>
+            <xs:attribute name="Monsters" type="xs:string"/>
+            <xs:attribute name="NpcIDs" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Portal">
+        <xs:complexType>
+            <xs:attribute name="STT" type="xs:int"/>
+            <xs:attribute name="PortID" type="xs:string"/>
+            <xs:attribute name="MapID" type="xs:string"/>
+            <xs:attribute name="GoToPortID" type="xs:string"/>
+            <xs:attribute name="GoToMapID" type="xs:string"/>
+            <xs:attribute name="Active" type="xs:int"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="NPC">
+        <xs:complexType>
+            <xs:attribute name="NpcID" type="xs:string"/>
+            <xs:attribute name="NpcName" type="xs:string"/>
+            <xs:attribute name="PositionIndex" type="xs:int"/>
+            <xs:attribute name="Asset" type="xs:string"/>
+            <xs:attribute name="ShopID" type="xs:string"/>
+            <xs:attribute name="MsgID" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

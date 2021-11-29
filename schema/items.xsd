@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Items">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Items" type="ItemList"/>
+                <xs:element name="Rewards" type="RewardList"/>
+                <xs:element name="Equips" type="EquipList"/>
+                <xs:element name="Ranks" type="RankList"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="RewardList">
+        <xs:sequence>
+            <xs:element ref="Reward" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ItemList">
+        <xs:sequence>
+            <xs:element ref="Item" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EquipList">
+        <xs:sequence>
+            <xs:element ref="Equip" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="RankList">
+        <xs:sequence>
+            <xs:element ref="Rank" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Item">
+        <xs:complexType>
+            <xs:attribute name="ID" type="xs:string"/>
+            <xs:attribute name="Name" type="xs:string"/>
+            <xs:attribute name="Description" type="xs:string"/>
+            <xs:attribute name="Type" type="xs:string"/>
+            <xs:attribute name="Rank" type="xs:int"/>
+            <xs:attribute name="Icon" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Equip">
+        <xs:complexType>
+            <xs:attribute name="ID" type="xs:string"/>
+            <xs:attribute name="Name" type="xs:string"/>
+            <xs:attribute name="Description" type="xs:string"/>
+            <xs:attribute name="Slot" type="xs:string"/>
+            <xs:attribute name="Rank" type="xs:int"/>
+            <xs:attribute name="OptionType" type="xs:string"/>
+            <xs:attribute name="HeroClass" type="xs:string"/>
+            <xs:attribute name="RefundCost" type="xs:int"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Reward">
+        <xs:complexType>
+            <xs:attribute name="RewardsID" type="xs:string"/>
+            <xs:attribute name="Rate" type="xs:int"/>
+            <xs:attribute name="ID" type="xs:int"/>
+            <xs:attribute name="Type" type="xs:int"/>
+            <xs:attribute name="Count" type="xs:int"/>
+            <xs:attribute name="Rank" type="xs:int"/>
+            <xs:attribute name="Level" type="xs:int"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Rank">
+        <xs:complexType>
+            <xs:attribute name="ID" type="xs:string"/>
+            <xs:attribute name="Rank" type="xs:int"/>
+            <xs:attribute name="Icon" type="xs:string"/>
+            <xs:attribute name="maxLevel" type="xs:int"/>
+            <xs:attribute name="baseATK" type="xs:int"/>
+            <xs:attribute name="baseMAG" type="xs:int"/>
+            <xs:attribute name="baseHP" type="xs:int"/>
+            <xs:attribute name="baseDEF" type="xs:int"/>
+            <xs:attribute name="baseRES" type="xs:int"/>
+            <xs:attribute name="baseSPD" type="xs:int"/>
+            <xs:attribute name="baseCRIT" type="xs:int"/>
+            <xs:attribute name="baseMPR" type="xs:int"/>
+            <xs:attribute name="growthATK" type="xs:int"/>
+            <xs:attribute name="growthMAG" type="xs:int"/>
+            <xs:attribute name="growthHP" type="xs:int"/>
+            <xs:attribute name="growthDEF" type="xs:int"/>
+            <xs:attribute name="growthRES" type="xs:int"/>
+            <xs:attribute name="growthSPD" type="xs:int"/>
+            <xs:attribute name="growthCRIT" type="xs:int"/>
+            <xs:attribute name="Description" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,322 @@
+{
+  "quickPlay8Rewards": [
+    {
+      "top": 1,
+      "exPGain": 40,
+      "goldGain": 800,
+      "goldenChest": 30,
+      "silverChest": 70,
+      "woodenChest": 0,
+      "mysteriousSack": 0,
+      "normalSack": 0,
+      "tinyOldSack": 0
+    },
+    {
+      "top": 2,
+      "exPGain": 35,
+      "goldGain": 600,
+      "goldenChest": 20,
+      "silverChest": 50,
+      "woodenChest": 30,
+      "mysteriousSack": 0,
+      "normalSack": 0,
+      "tinyOldSack": 0
+    },
+    {
+      "top": 3,
+      "exPGain": 30,
+      "goldGain": 500,
+      "goldenChest": 10,
+      "silverChest": 30,
+      "woodenChest": 60,
+      "mysteriousSack": 0,
+      "normalSack": 0,
+      "tinyOldSack": 0
+    },
+    {
+      "top": 4,
+      "exPGain": 25,
+      "goldGain": 400,
+      "goldenChest": 0,
+      "silverChest": 20,
+      "woodenChest": 50,
+      "mysteriousSack": 30,
+      "normalSack": 0,
+      "tinyOldSack": 0
+    },
+    {
+      "top": 5,
+      "exPGain": 20,
+      "goldGain": 300,
+      "goldenChest": 0,
+      "silverChest": 0,
+      "woodenChest": 20,
+      "mysteriousSack": 30,
+      "normalSack": 50,
+      "tinyOldSack": 0
+    },
+    {
+      "top": 6,
+      "exPGain": 15,
+      "goldGain": 200,
+      "goldenChest": 0,
+      "silverChest": 0,
+      "woodenChest": 20,
+      "mysteriousSack": 30,
+      "normalSack": 50,
+      "tinyOldSack": 0
+    },
+    {
+      "top": 7,
+      "exPGain": 10,
+      "goldGain": 100,
+      "goldenChest": 0,
+      "silverChest": 0,
+      "woodenChest": 0,
+      "mysteriousSack": 20,
+      "normalSack": 30,
+      "tinyOldSack": 50
+    },
+    {
+      "top": 8,
+      "exPGain": 0,
+      "goldGain": 100,
+      "goldenChest": 0,
+      "silverChest": 0,
+      "woodenChest": 0,
+      "mysteriousSack": 20,
+      "normalSack": 30,
+      "tinyOldSack": 50
+    }
+  ],
+  "quickPlay4Rewards": [
+    {
+      "top": 1,
+      "exPGain": 20,
+      "goldGain": 200,
+      "goldenChest": 0,
+      "silverChest": 0,
+      "woodenChest": 20,
+      "mysteriousSack": 30,
+      "normalSack": 50,
+      "tinyOldSack": 0
+    },
+    {
+      "top": 2,
+      "exPGain": 15,
+      "goldGain": 100,
+      "goldenChest": 0,
+      "silverChest": 0,
+      "woodenChest": 10,
+      "mysteriousSack": 30,
+      "normalSack": 60,
+      "tinyOldSack": 0
+    },
+    {
+      "top": 3,
+      "exPGain": 10,
+      "goldGain": 50,
+      "goldenChest": 0,
+      "silverChest": 0,
+      "woodenChest": 0,
+      "mysteriousSack": 20,
+      "normalSack": 30,
+      "tinyOldSack": 50
+    },
+    {
+      "top": 4,
+      "exPGain": 0,
+      "goldGain": 50,
+      "goldenChest": 0,
+      "silverChest": 0,
+      "woodenChest": 0,
+      "mysteriousSack": 20,
+      "normalSack": 30,
+      "tinyOldSack": 50
+    }
+  ],
+  "deathMatch8Rewards": [
+    {
+      "top": 1,
+      "exPGain": 30,
+      "goldGain": 300,
+      "goldenChest": 0,
+      "silverChest": 30,
+      "woodenChest": 40,
+      "mysteriousSack": 30,
+      "normalSack": 0,
+      "tinyOldSack": 0
+    },
+    {
+      "top": 2,
+      "exPGain": 20,
+      "goldGain": 200,
+      "goldenChest": 0,
+      "silverChest": 10,
+      "woodenChest": 50,
+      "mysteriousSack": 40,
+      "normalSack": 0,
+      "tinyOldSack": 0
+    },
+    {
+      "top": 3,
+      "exPGain": 15,
+      "goldGain": 150,
+      "goldenChest": 0,
+      "silverChest": 0,
+      "woodenChest": 40,
+      "mysteriousSack": 60,
+      "normalSack": 0,
+      "tinyOldSack": 0
+    },
+    {
+      "top": 4,
+      "exPGain": 10,
+      "goldGain": 100,
+      "goldenChest": 0,
+      "silverChest": 0,
+      "woodenChest": 20,
+      "mysteriousSack": 50,
+      "normalSack": 30,
+      "tinyOldSack": 0
+    },
+    {
+      "top": 5,
+      "exPGain": 10,
+      "goldGain": 100,
+      "goldenChest": 0,
+      "silverChest": 0,
+      "woodenChest": 0,
+      "mysteriousSack": 20,
+      "normalSack": 50,
+      "tinyOldSack": 30
+    },
+    {
+      "top": 6,
+      "exPGain": 5,
+      "goldGain": 50,
+      "goldenChest": 0,
+      "silverChest": 0,
+      "woodenChest": 0,
+      "mysteriousSack": 10,
+      "normalSack": 40,
+      "tinyOldSack": 50
+    },
+    {
+      "top": 7,
+      "exPGain": 5,
+      "goldGain": 50,
+      "goldenChest": 0,
+      "silverChest": 0,
+      "woodenChest": 0,
+      "mysteriousSack": 10,
+      "normalSack": 40,
+      "tinyOldSack": 50
+    },
+    {
+      "top": 8,
+      "exPGain": 0,
+      "goldGain": 50,
+      "goldenChest": 0,
+      "silverChest": 0,
+      "woodenChest": 0,
+      "mysteriousSack": 0,
+      "normalSack": 40,
+      "tinyOldSack": 60
+    }
+  ],
+  "deathMatch4Rewards": [
+    {
+      "top": 1,
+      "exPGain": 20,
+      "goldGain": 200,
+      "goldenChest": 0,
+      "silverChest": 0,
+      "woodenChest": 0,
+      "mysteriousSack": 20,
+      "normalSack": 50,
+      "tinyOldSack": 30
+    },
+    {
+      "top": 2,
+      "exPGain": 15,
+      "goldGain": 100,
+      "goldenChest": 0,
+      "silverChest": 0,
+      "woodenChest": 0,
+      "mysteriousSack": 10,
+      "normalSack": 40,
+      "tinyOldSack": 30
+    },
+    {
+      "top": 3,
+      "exPGain": 10,
+      "goldGain": 50,
+      "goldenChest": 0,
+      "silverChest": 0,
+      "woodenChest": 0,
+      "mysteriousSack": 10,
+      "normalSack": 40,
+      "tinyOldSack": 50
+    },
+    {
+      "top": 4,
+      "exPGain": 0,
+      "goldGain": 50,
+      "goldenChest": 0,
+      "silverChest": 0,
+      "woodenChest": 0,
+      "mysteriousSack": 0,
+      "normalSack": 40,
+      "tinyOldSack": 60
+    }
+  ],
+  "normal8Rewards": [
+    {
+      "top": 1,
+      "exPGain": 20,
+      "goldGain": 200,
+      "goldenChest": 0,
+      "silverChest": 10,
+      "woodenChest": 20,
+      "mysteriousSack": 70,
+      "normalSack": 0,
+      "tinyOldSack": 0
+    },
+    {
+      "top": 2,
+      "exPGain": 0,
+      "goldGain": 0,
+      "goldenChest": 0,
+      "silverChest": 0,
+      "woodenChest": 10,
+      "mysteriousSack": 20,
+      "normalSack": 30,
+      "tinyOldSack": 50
+    }
+  ],
+  "normal4Rewards": [
+    {
+      "top": 1,
+      "exPGain": 20,
+      "goldGain": 100,
+      "goldenChest": 0,
+      "silverChest": 10,
+      "woodenChest": 20,
+      "mysteriousSack": 70,
+      "normalSack": 0,
+      "tinyOldSack": 0
+    },
+    {
+      "top": 2,
+      "exPGain": 0,
+      "goldGain": 0,
+      "goldenChest": 0,
+      "silverChest": 0,
+      "woodenChest": 0,
+      "mysteriousSack": 10,
+      "normalSack": 20,
+      "tinyOldSack": 70
+    }
+  ]
+}

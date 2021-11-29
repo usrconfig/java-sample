@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="EquipmentList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Equip" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Equip">
+        <xs:complexType>
+            <xs:attribute name="EquipID" type="xs:string"/>
+            <xs:attribute name="EquipName" type="xs:string"/>
+            <xs:attribute name="EquipSlot" type="xs:int"/>
+            <xs:attribute name="EquipRank" type="xs:int"/>
+            <xs:attribute name="CharClassRequire" type="xs:int"/>
+            <xs:attribute name="ATK" type="xs:int"/>
+            <xs:attribute name="HP" type="xs:int"/>
+            <xs:attribute name="DEF" type="xs:int"/>
+            <xs:attribute name="SPD" type="xs:int"/>
+            <xs:attribute name="INT" type="xs:int"/>
+            <xs:attribute name="CRIT" type="xs:int"/>
+            <xs:attribute name="GoldCost" type="xs:int"/>
+            <xs:attribute name="RefunCost" type="xs:int"/>
+            <xs:attribute name="Upgrade" type="xs:string"/>
+            <xs:attribute name="MaxLevel" type="xs:int"/>
+            <xs:attribute name="LvUpATK" type="xs:int"/>
+            <xs:attribute name="LvUpHP" type="xs:int"/>
+            <xs:attribute name="LvUpDEF" type="xs:int"/>
+            <xs:attribute name="LvUpSPD" type="xs:int"/>
+            <xs:attribute name="LvUpINT" type="xs:int"/>
+            <xs:attribute name="LvUpCRIT" type="xs:int"/>
+            <xs:attribute name="Image" type="xs:string"/>
+            <xs:attribute name="TextCaution" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

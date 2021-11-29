@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="QuestInfo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Quests" type="QuestList"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="QuestList">
+        <xs:sequence>
+            <xs:element ref="QuestBase" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="QuestBase">
+        <xs:complexType>
+            <xs:attribute name="QuestID" type="xs:string"/>
+            <xs:attribute name="Group" type="xs:string"/>
+            <xs:attribute name="Name" type="xs:string"/>
+            <xs:attribute name="Description" type="xs:string"/>
+            <xs:attribute name="NextQuest" type="xs:string"/>
+            <xs:attribute name="TaskRequire" type="xs:string"/>
+            <xs:attribute name="TaskType" type="xs:int"/>
+            <xs:attribute name="Reward" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

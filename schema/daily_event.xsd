@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="DailyEventInfo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="EventGroups" type="EventGroup"/>
+                <xs:element name="HeroTowers" type="HeroTower"/>
+                <xs:element name="DailyChallenges" type="DailyChallenge"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="HeroTower">
+        <xs:sequence>
+            <xs:element ref="DailyEvent" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DailyChallenge">
+        <xs:sequence>
+            <xs:element ref="DailyEvent" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EventGroup">
+        <xs:sequence>
+            <xs:element ref="DailyEventGroup" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="DailyEvent">
+        <xs:complexType>
+            <xs:attribute name="ID" type="xs:string"/>
+            <xs:attribute name="GroupID" type="xs:string"/>
+            <xs:attribute name="Name" type="xs:string"/>
+            <xs:attribute name="ReqLevel" type="xs:int"/>
+            <xs:attribute name="WaveID" type="xs:int"/>
+            <xs:attribute name="BattleTime" type="xs:int"/>
+            <xs:attribute name="BattleMap" type="xs:string"/>
+            <xs:attribute name="MonsterID" type="xs:string"/>
+            <xs:attribute name="ExpReward" type="xs:int"/>
+            <xs:attribute name="Reward" type="xs:string"/>
+            <xs:attribute name="RandomBonus" type="xs:string"/>
+            <xs:attribute name="DropRate" type="xs:string"/>
+            <xs:attribute name="EventGroup" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="DailyEventGroup">
+        <xs:complexType>
+            <xs:attribute name="ID" type="xs:string"/>
+            <xs:attribute name="Name" type="xs:string"/>
+            <xs:attribute name="EventChance" type="xs:int"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="CharList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Char" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Char">
+        <xs:complexType>
+            <xs:attribute name="CharID" type="xs:string"/>
+            <xs:attribute name="CharName" type="xs:string"/>
+            <xs:attribute name="FlySpeed" type="xs:int"/>
+            <xs:attribute name="Projectile" type="xs:int"/>
+            <xs:attribute name="Pushing" type="xs:int"/>
+            <xs:attribute name="Resistance" type="xs:int"/>
+            <xs:attribute name="Affective" type="xs:int"/>
+            <xs:attribute name="CharTitle" type="xs:string"/>
+            <xs:attribute name="CharAsset" type="xs:string"/>
+            <xs:attribute name="Balloon" type="xs:string"/>
+            <xs:attribute name="AssetReady" type="xs:string"/>
+            <xs:attribute name="CharDescription" type="xs:string"/>
+            <xs:attribute name="CharAvatar" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

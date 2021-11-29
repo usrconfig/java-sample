@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="DynamicEventList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DynamicEvent" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DynamicEvent">
+		<xs:complexType>
+			<xs:attribute name="SeasonEventID" type="xs:int" />
+			<xs:attribute name="StartDate" type="xs:string" />
+			<xs:attribute name="ToDate" type="xs:string" />
+			<xs:attribute name="EventIcon" type="xs:string" />
+			<xs:attribute name="EventBanner" type="xs:string" />
+			<xs:attribute name="QuestGroup" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Heroes>
+	<HeroList>
+		<Hero ID="100" Name="txtZega" Class="knight" ClassTitle="txtTheFireDragon" EnegryCAP="2" Rarity="2" MaxRank="3" Element="fire" Ranged="false" AtkType="atk" Active="true" Spine="Zega" soundAct="boy1act" soundHurt="boy1hurt" soundFX="hit_slash11#hit_slash12#hit_slash11" hitFX="hitSlashRed1#hitSlashRed1#hitSlashRed1" hitCount="3" hitPosition="center"/>
+		<Hero ID="101" Name="txtZeban" Class="knight" ClassTitle="txtTheScaleArmor" EnegryCAP="2" Rarity="2" MaxRank="3" Element="earth" Ranged="false" AtkType="atk" Active="true" Spine="Zeban" soundAct="boy2act" soundHurt="boy2hurt" soundFX="hit_slash11#hit_slash12" hitFX="hitSlashBlue1#hitSlashBlue1" hitCount="2" hitPosition="center"/>
+		<Hero ID="102" Name="txtKai" Class="knight" ClassTitle="txtTheDarkDragon" EnegryCAP="2" Rarity="3" MaxRank="3" Element="dark" Ranged="false" AtkType="atk" Active="true" Spine="Kai" soundAct="boy3act" soundHurt="boy3hurt" soundFX="slashdarkfury1#slashdarkfury2#slashdarkfury3" hitFX="DarkFuryDragonHit1" hitCount="3" hitPosition="center"/>
+		<Hero ID="200" Name="txtAbel" Class="wizard" ClassTitle="txtTheBlizzardSpirit" EnegryCAP="2" Rarity="2" MaxRank="3" Element="water" Ranged="true" AtkType="mag" Active="true" Spine="Abel" soundAct="boy4act" soundHurt="boy4hurt" soundFX="magic11#hit_magic11" hitFX="hitMagicIce" hitCount="1" hitPosition="center"/>
+		<Hero ID="201" Name="txtWinchy" Class="wizard" ClassTitle="txtTheHalloweenMaiden" EnegryCAP="2" Rarity="3" MaxRank="3" Element="dark" Ranged="true" AtkType="mag" Active="true" Spine="Winchy" soundAct="girl1act" soundHurt="girl1hurt" soundFX="hit_magic11" hitFX="hitAttackHallowWizard" hitCount="1" hitPosition="center"/>
+		<Hero ID="300" Name="txtErika" Class="elf" ClassTitle="txtTheGuardianOfLight" EnegryCAP="2" Rarity="2" MaxRank="3" Element="light" Ranged="true" AtkType="atk" Active="true" Spine="Erika" soundAct="girl1act" soundHurt="girl1hurt" soundFX="shoot11#hit_arrow11" hitFX="hitArrowLight" hitCount="1" hitPosition="center"/>
+		<Hero ID="301" Name="txtLisa" Class="elf" ClassTitle="txtTheChildOfBlessing" EnegryCAP="2" Rarity="2" MaxRank="3" Element="water" Ranged="true" AtkType="mag" Active="true" Spine="Lisa" soundAct="girl2act" soundHurt="girl2hurt" soundFX="hit_slash11#hit_slash12" hitFX="hitSlashBlue1#hitSlashBlue2" hitCount="2" hitPosition="center"/>
+		<Hero ID="302" Name="txtHana" Class="elf" ClassTitle="txtTheFlameRoseLady" EnegryCAP="2" Rarity="2" MaxRank="3" Element="fire" Ranged="true" AtkType="atk" Active="true" Spine="Hana" soundAct="girl3act" soundHurt="girl3hurt" soundFX="shoot11#hit_arrow11" hitFX="hitFireArrow" hitCount="1" hitPosition="center"/>
+		<Hero ID="303" Name="txtLegolas" Class="elf" ClassTitle="txtThePrinceOfJungle" EnegryCAP="2" Rarity="4" MaxRank="3" Element="fire" Ranged="true" AtkType="atk" Active="true" Spine="Legolas" soundAct="boy4act" soundHurt="boy4hurt" soundFX="legolasatk" hitFX="hitLegolas1" hitCount="1" hitPosition="center"/>
+		<Hero ID="400" Name="txtJackob" Class="fighter" ClassTitle="txtTheVanguardShield" EnegryCAP="2" Rarity="2" MaxRank="3" Element="earth" Ranged="false" AtkType="atk" Active="true" Spine="Jackob" soundAct="boy2act" soundHurt="boy2hurt" soundFX="hit_punch11#hit_punch12#hit_punch11" hitFX="hitImpactYellow1#hitImpactYellow2#hitImpactYellow3" hitCount="3" hitPosition="center"/>
+		<Hero ID="401" Name="txtBard" Class="fighter" ClassTitle="txtTheFistOfFlame" EnegryCAP="2" Rarity="2" MaxRank="3" Element="fire" Ranged="false" AtkType="atk" Active="true" Spine="Bard" soundAct="boy1act" soundHurt="boy1hurt" soundFX="hit_punch11#hit_punch12" hitFX="hitImpactRed1#hitImpactRed2" hitCount="2" hitPosition="center"/>
+		<Hero ID="402" Name="txtHenry" Class="fighter" ClassTitle="txtTheMetalClaw" EnegryCAP="2" Rarity="2" MaxRank="3" Element="dark" Ranged="false" AtkType="atk" Active="true" Spine="Henry" soundAct="boy3act" soundHurt="boy3hurt" soundFX="claw1#claw2" hitFX="hitSlashRed1#hitSlashRed2" hitCount="2" hitPosition="center"/>
+		<Hero ID="500" Name="txtRoy" Class="gladiator" ClassTitle="txtTheCrystalBlade" EnegryCAP="3" Rarity="2" MaxRank="3" Element="water" Ranged="false" AtkType="mag" Active="true" Spine="Roy" soundAct="boy1act" soundHurt="boy1hurt" soundFX="slash11#hit_slash11" hitFX="hitSlashBlue1" hitCount="1" hitPosition="center"/>
+		<Hero ID="501" Name="txtDamon" Class="gladiator" ClassTitle="txtTheDarkDemon" EnegryCAP="3" Rarity="3" MaxRank="3" Element="dark" Ranged="false" AtkType="mag" Active="true" Spine="Damon" soundAct="boy2act" soundHurt="boy2hurt" soundFX="hit_slash11" hitFX="hitJackSlash" hitCount="1" hitPosition="center"/>
+		<Hero ID="600" Name="txtTharja" Class="summoner" ClassTitle="txtTheBlackRose" EnegryCAP="3" Rarity="3" MaxRank="3" Element="dark" Ranged="true" AtkType="mag" Active="true" Spine="Tharja" soundAct="girl2act" soundHurt="girl2hurt" soundFX="magic11#hit_magic11" hitFX="hitBlackRose" hitCount="1" hitPosition="center"/>
+		<Hero ID="601" Name="txtElsa" Class="summoner" ClassTitle="txtTheFrozenPrincess" EnegryCAP="3" Rarity="4" MaxRank="3" Element="water" Ranged="true" AtkType="mag" Active="true" Spine="Elsa" soundAct="girl1act" soundHurt="girl1hurt" soundFX="weaponrotate#vg01a1#hit_magic11" hitFX="hitIceBlades" hitCount="1" hitPosition="center"/>
+		<Hero ID="700" Name="txtSerra" Class="lancer" ClassTitle="txtTheLapidLancer" EnegryCAP="3" Rarity="2" MaxRank="3" Element="water" Ranged="false" AtkType="atk" Active="true" Spine="Serra" soundAct="girl3act" soundHurt="girl3hurt" soundFX="thrush1#thrush2#thrush3" hitFX="hitLanceThrust" hitCount="3" hitPosition="center"/>
+		<Hero ID="701" Name="txtLyn" Class="lancer" ClassTitle="txtTheLightGuardian" EnegryCAP="3" Rarity="4" MaxRank="3" Element="light" Ranged="false" AtkType="atk" Active="true" Spine="Lyn" soundAct="girl4act" soundHurt="girl4hurt" soundFX="thrush1#thrush1" hitFX="hitImpactRed1" hitCount="1" hitPosition="center"/>
+		<Hero ID="800" Name="txtAthas" Class="lord" ClassTitle="txtTheDarkMaster" EnegryCAP="3" Rarity="2" MaxRank="3" Element="water" Ranged="false" AtkType="atk" Active="true" Spine="Uther" soundAct="boy4act" soundHurt="boy4hurt" soundFX="slash11#slash12#weaponrotate#thrush1" hitFX="hitSlashBlue1#hitSlashBlue2#hitImpactBlue1" hitCount="3" hitPosition="center"/>
+		<Hero ID="801" Name="txtJulius" Class="lord" ClassTitle="txtTheLordOfFlame" EnegryCAP="3" Rarity="3" MaxRank="3" Element="fire" Ranged="false" AtkType="atk" Active="true" Spine="Julius" soundAct="boy2act" soundHurt="boy2hurt" soundFX="hit_slash11#hit_slash11#hit_slash12" hitFX="hitAttackLavaWarlord" hitCount="3" hitPosition="center"/>
+	</HeroList>
+	<RankList>
+		<RankInfo ID="100" Rank="1" maxLevel="20" skills="1000#1001" baseATK="360" baseMAG="33" baseHP="2500" baseDEF="180" baseRES="120" baseSPD="95" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="13" growthMAG="1" growthHP="38" growthDEF="2" growthRES="1" growthSPD="1" growthMPR="1"/>
+		<RankInfo ID="100" Rank="2" maxLevel="40" skills="1000#1001#1002" baseATK="540" baseMAG="50" baseHP="3750" baseDEF="270" baseRES="180" baseSPD="143" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="24" growthMAG="1" growthHP="66" growthDEF="3" growthRES="2" growthSPD="2" growthMPR="1"/>
+		<RankInfo ID="100" Rank="3" maxLevel="60" skills="1000#1001#1002#1003" baseATK="720" baseMAG="66" baseHP="5000" baseDEF="360" baseRES="240" baseSPD="190" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="40" growthMAG="2" growthHP="100" growthDEF="5" growthRES="2" growthSPD="2" growthMPR="1"/>
+		<RankInfo ID="101" Rank="1" maxLevel="20" skills="1010#1011" baseATK="216" baseMAG="15" baseHP="3960" baseDEF="270" baseRES="210" baseSPD="63" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="6" growthMAG="0" growthHP="50" growthDEF="14" growthRES="2" growthSPD="0" growthMPR="1"/>
+		<RankInfo ID="101" Rank="2" maxLevel="40" skills="1010#1011#1012" baseATK="324" baseMAG="23" baseHP="5940" baseDEF="405" baseRES="315" baseSPD="95" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="13" growthMAG="1" growthHP="89" growthDEF="20" growthRES="4" growthSPD="0" growthMPR="1"/>
+		<RankInfo ID="101" Rank="3" maxLevel="60" skills="1010#1011#1012#1013" baseATK="432" baseMAG="30" baseHP="7920" baseDEF="540" baseRES="420" baseSPD="126" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="22" growthMAG="1" growthHP="139" growthDEF="27" growthRES="6" growthSPD="0" growthMPR="1"/>
+		<RankInfo ID="102" Rank="1" maxLevel="20" skills="1020#1021" baseATK="480" baseMAG="24" baseHP="1925" baseDEF="83" baseRES="90" baseSPD="115" baseCRIT="7" baseMP="1000" baseMPR="200" growthATK="14" growthMAG="1" growthHP="29" growthDEF="1" growthRES="1" growthSPD="1" growthMPR="1"/>
+		<RankInfo ID="102" Rank="2" maxLevel="40" skills="1020#1021#1022" baseATK="720" baseMAG="36" baseHP="2888" baseDEF="124" baseRES="135" baseSPD="173" baseCRIT="7" baseMP="1000" baseMPR="200" growthATK="29" growthMAG="1" growthHP="51" growthDEF="2" growthRES="2" growthSPD="2" growthMPR="1"/>
+		<RankInfo ID="102" Rank="3" maxLevel="60" skills="1020#1021#1022#1023" baseATK="959" baseMAG="48" baseHP="3850" baseDEF="165" baseRES="180" baseSPD="230" baseCRIT="7" baseMP="1000" baseMPR="200" growthATK="48" growthMAG="1" growthHP="77" growthDEF="2" growthRES="3" growthSPD="3" growthMPR="2"/>
+		<RankInfo ID="200" Rank="1" maxLevel="20" skills="2000#2001" baseATK="180" baseMAG="330" baseHP="2400" baseDEF="105" baseRES="198" baseSPD="80" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="2" growthMAG="10" growthHP="24" growthDEF="1" growthRES="9" growthSPD="1" growthMPR="2"/>
+		<RankInfo ID="200" Rank="2" maxLevel="40" skills="2000#2001#2002" baseATK="270" baseMAG="495" baseHP="3600" baseDEF="158" baseRES="297" baseSPD="120" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="3" growthMAG="20" growthHP="45" growthDEF="2" growthRES="15" growthSPD="1" growthMPR="3"/>
+		<RankInfo ID="200" Rank="3" maxLevel="60" skills="2000#2001#2002#2003" baseATK="360" baseMAG="660" baseHP="4800" baseDEF="210" baseRES="396" baseSPD="160" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="5" growthMAG="33" growthHP="72" growthDEF="3" growthRES="24" growthSPD="2" growthMPR="4"/>
+		<RankInfo ID="201" Rank="1" maxLevel="20" skills="2010#2011" baseATK="207" baseMAG="380" baseHP="2200" baseDEF="105" baseRES="180" baseSPD="120" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="2" growthMAG="11" growthHP="22" growthDEF="1" growthRES="8" growthSPD="1" growthMPR="2"/>
+		<RankInfo ID="201" Rank="2" maxLevel="40" skills="2010#2011#2012" baseATK="311" baseMAG="569" baseHP="3300" baseDEF="158" baseRES="270" baseSPD="180" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="4" growthMAG="23" growthHP="41" growthDEF="2" growthRES="14" growthSPD="2" growthMPR="3"/>
+		<RankInfo ID="201" Rank="3" maxLevel="60" skills="2010#2011#2012#2013" baseATK="414" baseMAG="759" baseHP="4400" baseDEF="210" baseRES="360" baseSPD="240" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="6" growthMAG="38" growthHP="66" growthDEF="3" growthRES="22" growthSPD="3" growthMPR="4"/>
+		<RankInfo ID="300" Rank="1" maxLevel="20" skills="3000#3001" baseATK="441" baseMAG="32" baseHP="2475" baseDEF="144" baseRES="119" baseSPD="86" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="35" growthMAG="1" growthHP="25" growthDEF="1" growthRES="1" growthSPD="1" growthMPR="1"/>
+		<RankInfo ID="300" Rank="2" maxLevel="40" skills="3000#3001#3002" baseATK="662" baseMAG="47" baseHP="3713" baseDEF="216" baseRES="178" baseSPD="128" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="60" growthMAG="1" growthHP="46" growthDEF="2" growthRES="2" growthSPD="2" growthMPR="1"/>
+		<RankInfo ID="300" Rank="3" maxLevel="60" skills="3000#3001#3002#3003" baseATK="882" baseMAG="63" baseHP="4950" baseDEF="288" baseRES="238" baseSPD="171" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="88" growthMAG="2" growthHP="67" growthDEF="3" growthRES="2" growthSPD="2" growthMPR="2"/>
+		<RankInfo ID="301" Rank="1" maxLevel="20" skills="3010#3011" baseATK="165" baseMAG="300" baseHP="2475" baseDEF="144" baseRES="240" baseSPD="85" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="9" growthMAG="3" growthHP="31" growthDEF="1" growthRES="2" growthSPD="1" growthMPR="2"/>
+		<RankInfo ID="301" Rank="2" maxLevel="40" skills="3010#3011#3012" baseATK="248" baseMAG="450" baseHP="3713" baseDEF="216" baseRES="360" baseSPD="128" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="15" growthMAG="7" growthHP="56" growthDEF="3" growthRES="4" growthSPD="2" growthMPR="2"/>
+		<RankInfo ID="301" Rank="3" maxLevel="60" skills="3010#3011#3012#3013" baseATK="330" baseMAG="600" baseHP="4950" baseDEF="288" baseRES="480" baseSPD="170" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="23" growthMAG="12" growthHP="87" growthDEF="4" growthRES="5" growthSPD="2" growthMPR="3"/>
+		<RankInfo ID="302" Rank="1" maxLevel="20" skills="3020#3021" baseATK="486" baseMAG="33" baseHP="2125" baseDEF="162" baseRES="126" baseSPD="95" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="27" growthMAG="1" growthHP="21" growthDEF="2" growthRES="1" growthSPD="1" growthMPR="1"/>
+		<RankInfo ID="302" Rank="2" maxLevel="40" skills="3020#3021#3022" baseATK="729" baseMAG="50" baseHP="3188" baseDEF="243" baseRES="189" baseSPD="143" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="44" growthMAG="1" growthHP="40" growthDEF="3" growthRES="2" growthSPD="2" growthMPR="1"/>
+		<RankInfo ID="302" Rank="3" maxLevel="60" skills="3020#3021#3022#3023" baseATK="972" baseMAG="66" baseHP="4250" baseDEF="324" baseRES="252" baseSPD="190" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="87" growthMAG="2" growthHP="64" growthDEF="5" growthRES="3" growthSPD="3" growthMPR="1"/>
+		<RankInfo ID="303" Rank="1" maxLevel="20" skills="3030#3031" baseATK="555" baseMAG="21" baseHP="1925" baseDEF="94" baseRES="86" baseSPD="127" baseCRIT="7" baseMP="1000" baseMPR="200" growthATK="29" growthMAG="1" growthHP="19" growthDEF="1" growthRES="1" growthSPD="2" growthMPR="1"/>
+		<RankInfo ID="303" Rank="2" maxLevel="40" skills="3030#3031#3032" baseATK="888" baseMAG="32" baseHP="2888" baseDEF="141" baseRES="128" baseSPD="190" baseCRIT="7" baseMP="1000" baseMPR="200" growthATK="47" growthMAG="1" growthHP="36" growthDEF="1" growthRES="1" growthSPD="3" growthMPR="1"/>
+		<RankInfo ID="303" Rank="3" maxLevel="60" skills="3030#3031#3032#3033" baseATK="1111" baseMAG="42" baseHP="3850" baseDEF="188" baseRES="171" baseSPD="253" baseCRIT="7" baseMP="1000" baseMPR="200" growthATK="74" growthMAG="1" growthHP="58" growthDEF="2" growthRES="2" growthSPD="4" growthMPR="2"/>
+		<RankInfo ID="400" Rank="1" maxLevel="20" skills="4000#4001" baseATK="288" baseMAG="17" baseHP="3000" baseDEF="338" baseRES="315" baseSPD="70" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="16" growthMAG="0" growthHP="30" growthDEF="5" growthRES="3" growthSPD="1" growthMPR="1"/>
+		<RankInfo ID="400" Rank="2" maxLevel="40" skills="4000#4001#4002" baseATK="432" baseMAG="25" baseHP="4500" baseDEF="506" baseRES="473" baseSPD="105" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="26" growthMAG="1" growthHP="56" growthDEF="9" growthRES="6" growthSPD="1" growthMPR="1"/>
+		<RankInfo ID="400" Rank="3" maxLevel="60" skills="4000#4001#4002#4003" baseATK="576" baseMAG="33" baseHP="6000" baseDEF="675" baseRES="630" baseSPD="140" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="40" growthMAG="1" growthHP="90" growthDEF="14" growthRES="9" growthSPD="2" growthMPR="1"/>
+		<RankInfo ID="401" Rank="1" maxLevel="20" skills="4010#4011" baseATK="270" baseMAG="30" baseHP="2750" baseDEF="216" baseRES="120" baseSPD="95" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="12" growthMAG="1" growthHP="28" growthDEF="2" growthRES="1" growthSPD="1" growthMPR="1"/>
+		<RankInfo ID="401" Rank="2" maxLevel="40" skills="4010#4011#4012" baseATK="405" baseMAG="45" baseHP="4125" baseDEF="324" baseRES="180" baseSPD="143" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="20" growthMAG="1" growthHP="52" growthDEF="4" growthRES="2" growthSPD="2" growthMPR="1"/>
+		<RankInfo ID="401" Rank="3" maxLevel="60" skills="4010#4011#4012#4013" baseATK="540" baseMAG="60" baseHP="5500" baseDEF="432" baseRES="240" baseSPD="190" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="30" growthMAG="2" growthHP="83" growthDEF="6" growthRES="2" growthSPD="2" growthMPR="1"/>
+		<RankInfo ID="402" Rank="1" maxLevel="20" skills="4020#4021" baseATK="373" baseMAG="24" baseHP="1750" baseDEF="83" baseRES="90" baseSPD="115" baseCRIT="7" baseMP="1000" baseMPR="200" growthATK="17" growthMAG="1" growthHP="18" growthDEF="1" growthRES="1" growthSPD="1" growthMPR="1"/>
+		<RankInfo ID="402" Rank="2" maxLevel="40" skills="4020#4021#4022" baseATK="559" baseMAG="36" baseHP="2625" baseDEF="124" baseRES="135" baseSPD="173" baseCRIT="7" baseMP="1000" baseMPR="200" growthATK="28" growthMAG="1" growthHP="33" growthDEF="1" growthRES="1" growthSPD="2" growthMPR="1"/>
+		<RankInfo ID="402" Rank="3" maxLevel="60" skills="4020#4021#4022#4023" baseATK="745" baseMAG="48" baseHP="3500" baseDEF="165" baseRES="180" baseSPD="230" baseCRIT="7" baseMP="1000" baseMPR="200" growthATK="41" growthMAG="1" growthHP="53" growthDEF="2" growthRES="2" growthSPD="3" growthMPR="1"/>
+		<RankInfo ID="500" Rank="1" maxLevel="20" skills="5000#5001" baseATK="375" baseMAG="180" baseHP="3000" baseDEF="180" baseRES="132" baseSPD="95" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="21" growthMAG="5" growthHP="30" growthDEF="2" growthRES="1" growthSPD="1" growthMPR="1"/>
+		<RankInfo ID="500" Rank="2" maxLevel="40" skills="5000#5001#5002" baseATK="563" baseMAG="270" baseHP="4500" baseDEF="270" baseRES="198" baseSPD="143" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="34" growthMAG="8" growthHP="56" growthDEF="3" growthRES="2" growthSPD="2" growthMPR="1"/>
+		<RankInfo ID="500" Rank="3" maxLevel="60" skills="5000#5001#5002#5003" baseATK="750" baseMAG="360" baseHP="6000" baseDEF="360" baseRES="264" baseSPD="190" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="53" growthMAG="13" growthHP="90" growthDEF="5" growthRES="3" growthSPD="2" growthMPR="1"/>
+		<RankInfo ID="501" Rank="1" maxLevel="20" skills="5010#5011" baseATK="466" baseMAG="36" baseHP="1838" baseDEF="99" baseRES="72" baseSPD="104" baseCRIT="7" baseMP="1000" baseMPR="200" growthATK="12" growthMAG="4" growthHP="18" growthDEF="1" growthRES="1" growthSPD="3" growthMPR="1"/>
+		<RankInfo ID="501" Rank="2" maxLevel="40" skills="5010#5011#5012" baseATK="699" baseMAG="54" baseHP="2756" baseDEF="149" baseRES="108" baseSPD="155" baseCRIT="7" baseMP="1000" baseMPR="200" growthATK="21" growthMAG="8" growthHP="34" growthDEF="1" growthRES="1" growthSPD="5" growthMPR="1"/>
+		<RankInfo ID="501" Rank="3" maxLevel="60" skills="5010#5011#5012#5013" baseATK="932" baseMAG="72" baseHP="3675" baseDEF="198" baseRES="144" baseSPD="207" baseCRIT="7" baseMP="1000" baseMPR="200" growthATK="37" growthMAG="12" growthHP="55" growthDEF="2" growthRES="1" growthSPD="6" growthMPR="1"/>
+		<RankInfo ID="600" Rank="1" maxLevel="20" skills="6000#6001" baseATK="186" baseMAG="380" baseHP="2400" baseDEF="106" baseRES="182" baseSPD="81" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="2" growthMAG="23" growthHP="30" growthDEF="1" growthRES="2" growthSPD="1" growthMPR="1"/>
+		<RankInfo ID="600" Rank="2" maxLevel="40" skills="6000#6001#6002" baseATK="279" baseMAG="569" baseHP="3600" baseDEF="159" baseRES="273" baseSPD="121" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="3" growthMAG="40" growthHP="54" growthDEF="2" growthRES="3" growthSPD="1" growthMPR="1"/>
+		<RankInfo ID="600" Rank="3" maxLevel="60" skills="6000#6001#6002#6003" baseATK="373" baseMAG="863" baseHP="5000" baseDEF="212" baseRES="364" baseSPD="168" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="4" growthMAG="69" growthHP="88" growthDEF="3" growthRES="4" growthSPD="2" growthMPR="2"/>
+		<RankInfo ID="601" Rank="1" maxLevel="20" skills="6010#6011" baseATK="144" baseMAG="600" baseHP="2160" baseDEF="105" baseRES="198" baseSPD="80" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="0" growthMAG="36" growthHP="29" growthDEF="1" growthRES="2" growthSPD="1" growthMPR="1"/>
+		<RankInfo ID="601" Rank="2" maxLevel="40" skills="6010#6011#6012" baseATK="216" baseMAG="900" baseHP="3240" baseDEF="158" baseRES="297" baseSPD="120" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="0" growthMAG="63" growthHP="49" growthDEF="2" growthRES="3" growthSPD="1" growthMPR="1"/>
+		<RankInfo ID="601" Rank="3" maxLevel="60" skills="6010#6011#6012#6013" baseATK="288" baseMAG="1200" baseHP="4320" baseDEF="210" baseRES="396" baseSPD="160" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="0" growthMAG="96" growthHP="71" growthDEF="3" growthRES="4" growthSPD="2" growthMPR="2"/>
+		<RankInfo ID="700" Rank="1" maxLevel="20" skills="7000#7001" baseATK="240" baseMAG="15" baseHP="3600" baseDEF="225" baseRES="231" baseSPD="70" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="13" growthMAG="0" growthHP="45" growthDEF="2" growthRES="2" growthSPD="1" growthMPR="1"/>
+		<RankInfo ID="700" Rank="2" maxLevel="40" skills="7000#7001#7002" baseATK="360" baseMAG="23" baseHP="5400" baseDEF="338" baseRES="347" baseSPD="105" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="22" growthMAG="1" growthHP="81" growthDEF="4" growthRES="3" growthSPD="1" growthMPR="1"/>
+		<RankInfo ID="700" Rank="3" maxLevel="60" skills="7000#7001#7002#7003" baseATK="480" baseMAG="30" baseHP="7200" baseDEF="450" baseRES="462" baseSPD="140" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="34" growthMAG="1" growthHP="126" growthDEF="6" growthRES="5" growthSPD="2" growthMPR="1"/>
+		<RankInfo ID="701" Rank="1" maxLevel="20" skills="7010#7011" baseATK="378" baseMAG="32" baseHP="2750" baseDEF="180" baseRES="132" baseSPD="97" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="13" growthMAG="0" growthHP="28" growthDEF="2" growthRES="5" growthSPD="1" growthMPR="1"/>
+		<RankInfo ID="701" Rank="2" maxLevel="40" skills="7010#7011#7012" baseATK="567" baseMAG="47" baseHP="4125" baseDEF="270" baseRES="198" baseSPD="145" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="23" growthMAG="0" growthHP="52" growthDEF="3" growthRES="8" growthSPD="2" growthMPR="1"/>
+		<RankInfo ID="701" Rank="3" maxLevel="60" skills="7010#7011#7012#7013" baseATK="756" baseMAG="63" baseHP="5500" baseDEF="360" baseRES="264" baseSPD="194" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="38" growthMAG="1" growthHP="83" growthDEF="5" growthRES="13" growthSPD="3" growthMPR="2"/>
+		<RankInfo ID="800" Rank="1" maxLevel="20" skills="8000#8001" baseATK="264" baseMAG="15" baseHP="3420" baseDEF="236" baseRES="243" baseSPD="70" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="15" growthMAG="0" growthHP="43" growthDEF="2" growthRES="2" growthSPD="1" growthMPR="1"/>
+		<RankInfo ID="800" Rank="2" maxLevel="40" skills="8000#8001#8002" baseATK="396" baseMAG="23" baseHP="5130" baseDEF="354" baseRES="364" baseSPD="105" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="24" growthMAG="1" growthHP="77" growthDEF="4" growthRES="4" growthSPD="1" growthMPR="1"/>
+		<RankInfo ID="800" Rank="3" maxLevel="60" skills="8000#8001#8002#8003" baseATK="528" baseMAG="30" baseHP="6840" baseDEF="473" baseRES="485" baseSPD="140" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="37" growthMAG="1" growthHP="120" growthDEF="7" growthRES="7" growthSPD="2" growthMPR="1"/>
+		<RankInfo ID="801" Rank="1" maxLevel="20" skills="8010#8011" baseATK="317" baseMAG="17" baseHP="2850" baseDEF="236" baseRES="221" baseSPD="70" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="17" growthMAG="0" growthHP="36" growthDEF="2" growthRES="2" growthSPD="1" growthMPR="1"/>
+		<RankInfo ID="801" Rank="2" maxLevel="40" skills="8010#8011#8012" baseATK="475" baseMAG="25" baseHP="4275" baseDEF="354" baseRES="331" baseSPD="105" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="29" growthMAG="1" growthHP="64" growthDEF="4" growthRES="4" growthSPD="1" growthMPR="1"/>
+		<RankInfo ID="801" Rank="3" maxLevel="60" skills="8010#8011#8012#8013" baseATK="634" baseMAG="33" baseHP="5700" baseDEF="473" baseRES="441" baseSPD="140" baseCRIT="5" baseMP="1000" baseMPR="200" growthATK="44" growthMAG="1" growthHP="100" growthDEF="7" growthRES="6" growthSPD="2" growthMPR="1"/>
+	</RankList>
+	<RankUpList>
+		<LevelUp ID="1" Zen="0" Bless="0" Chaos="0"/>
+		<LevelUp ID="2" Zen="100000" Bless="500" Chaos="500"/>
+		<LevelUp ID="3" Zen="500000" Bless="1000" Chaos="1000"/>
+	</RankUpList>
+	<LevelUpList>
+		<LevelUp ID="1" Zen="0" Bless="0" Chaos="0"/>
+		<LevelUp ID="2" Zen="20" Bless="1" Chaos="1"/>
+		<LevelUp ID="3" Zen="90" Bless="1" Chaos="1"/>
+		<LevelUp ID="4" Zen="240" Bless="1" Chaos="1"/>
+		<LevelUp ID="5" Zen="500" Bless="1" Chaos="1"/>
+		<LevelUp ID="6" Zen="900" Bless="1" Chaos="1"/>
+		<LevelUp ID="7" Zen="1470" Bless="2" Chaos="2"/>
+		<LevelUp ID="8" Zen="2240" Bless="2" Chaos="2"/>
+		<LevelUp ID="9" Zen="3240" Bless="2" Chaos="2"/>
+		<LevelUp ID="10" Zen="4500" Bless="2" Chaos="2"/>
+		<LevelUp ID="11" Zen="6050" Bless="2" Chaos="2"/>
+		<LevelUp ID="12" Zen="7920" Bless="3" Chaos="3"/>
+		<LevelUp ID="13" Zen="10140" Bless="3" Chaos="3"/>
+		<LevelUp ID="14" Zen="12740" Bless="3" Chaos="3"/>
+		<LevelUp ID="15" Zen="15750" Bless="3" Chaos="3"/>
+		<LevelUp ID="16" Zen="19200" Bless="3" Chaos="3"/>
+		<LevelUp ID="17" Zen="23120" Bless="4" Chaos="4"/>
+		<LevelUp ID="18" Zen="27540" Bless="4" Chaos="4"/>
+		<LevelUp ID="19" Zen="32490" Bless="4" Chaos="4"/>
+		<LevelUp ID="20" Zen="38000" Bless="4" Chaos="4"/>
+		<LevelUp ID="21" Zen="44100" Bless="5" Chaos="5"/>
+		<LevelUp ID="22" Zen="50820" Bless="5" Chaos="5"/>
+		<LevelUp ID="23" Zen="58190" Bless="5" Chaos="5"/>
+		<LevelUp ID="24" Zen="66240" Bless="5" Chaos="5"/>
+		<LevelUp ID="25" Zen="75000" Bless="5" Chaos="5"/>
+		<LevelUp ID="26" Zen="84500" Bless="6" Chaos="6"/>
+		<LevelUp ID="27" Zen="94770" Bless="6" Chaos="6"/>
+		<LevelUp ID="28" Zen="105840" Bless="6" Chaos="6"/>
+		<LevelUp ID="29" Zen="117740" Bless="6" Chaos="6"/>
+		<LevelUp ID="30" Zen="130500" Bless="6" Chaos="6"/>
+		<LevelUp ID="31" Zen="144150" Bless="7" Chaos="7"/>
+		<LevelUp ID="32" Zen="158720" Bless="7" Chaos="7"/>
+		<LevelUp ID="33" Zen="174240" Bless="7" Chaos="7"/>
+		<LevelUp ID="34" Zen="190740" Bless="7" Chaos="7"/>
+		<LevelUp ID="35" Zen="208250" Bless="7" Chaos="7"/>
+		<LevelUp ID="36" Zen="226800" Bless="8" Chaos="8"/>
+		<LevelUp ID="37" Zen="246420" Bless="8" Chaos="8"/>
+		<LevelUp ID="38" Zen="267140" Bless="8" Chaos="8"/>
+		<LevelUp ID="39" Zen="288990" Bless="8" Chaos="8"/>
+		<LevelUp ID="40" Zen="312000" Bless="8" Chaos="8"/>
+		<LevelUp ID="41" Zen="336200" Bless="9" Chaos="9"/>
+		<LevelUp ID="42" Zen="361620" Bless="9" Chaos="9"/>
+		<LevelUp ID="43" Zen="388290" Bless="9" Chaos="9"/>
+		<LevelUp ID="44" Zen="416240" Bless="9" Chaos="9"/>
+		<LevelUp ID="45" Zen="445500" Bless="9" Chaos="9"/>
+		<LevelUp ID="46" Zen="476100" Bless="10" Chaos="10"/>
+		<LevelUp ID="47" Zen="508070" Bless="10" Chaos="10"/>
+		<LevelUp ID="48" Zen="541440" Bless="10" Chaos="10"/>
+		<LevelUp ID="49" Zen="576240" Bless="10" Chaos="10"/>
+		<LevelUp ID="50" Zen="612500" Bless="10" Chaos="10"/>
+		<LevelUp ID="51" Zen="650250" Bless="12" Chaos="12"/>
+		<LevelUp ID="52" Zen="689520" Bless="12" Chaos="12"/>
+		<LevelUp ID="53" Zen="730340" Bless="12" Chaos="12"/>
+		<LevelUp ID="54" Zen="772740" Bless="12" Chaos="12"/>
+		<LevelUp ID="55" Zen="816750" Bless="12" Chaos="12"/>
+		<LevelUp ID="56" Zen="862400" Bless="15" Chaos="15"/>
+		<LevelUp ID="57" Zen="909720" Bless="15" Chaos="15"/>
+		<LevelUp ID="58" Zen="958740" Bless="15" Chaos="15"/>
+		<LevelUp ID="59" Zen="1009490" Bless="15" Chaos="15"/>
+		<LevelUp ID="60" Zen="1062000" Bless="15" Chaos="15"/>
+	</LevelUpList>
+</Heroes>

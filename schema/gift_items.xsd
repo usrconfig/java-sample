@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="GiftItemList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="GiftBox" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GiftBox">
+        <xs:complexType>
+            <xs:attribute name="Index" type="xs:string"/>
+            <xs:attribute name="Group" type="xs:string"/>
+            <xs:attribute name="Name" type="xs:string"/>
+            <xs:attribute name="Description" type="xs:string"/>
+            <xs:attribute name="Rank" type="xs:int"/>
+            <xs:attribute name="BuyPrice" type="xs:string"/>
+            <xs:attribute name="SellPrice" type="xs:string"/>
+            <xs:attribute name="Icon" type="xs:string"/>
+            <xs:attribute name="Award" type="xs:int"/>
+            <xs:attribute name="Reward" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

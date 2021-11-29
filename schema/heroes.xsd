@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Heroes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="HeroList" type="HeroList"/>
+                <xs:element name="RankList" type="RankList"/>
+                <xs:element name="RankUpList" type="RankUpList"/>
+                <xs:element name="LevelUpList" type="LevelUpList"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="HeroList">
+        <xs:sequence>
+            <xs:element ref="Hero" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="LevelUpList">
+        <xs:sequence>
+            <xs:element ref="LevelUp" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="RankUpList">
+        <xs:sequence>
+            <xs:element ref="LevelUp" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="RankList">
+        <xs:sequence>
+            <xs:element ref="RankInfo" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Hero">
+        <xs:complexType>
+            <xs:attribute name="ID" type="xs:int"/>
+            <xs:attribute name="Name" type="xs:string"/>
+            <xs:attribute name="Class" type="xs:string"/>
+            <xs:attribute name="ClassTitle" type="xs:string"/>
+            <xs:attribute name="EnegryCAP" type="xs:int"/>
+            <xs:attribute name="Rarity" type="xs:int"/>
+            <xs:attribute name="MaxRank" type="xs:int"/>
+            <xs:attribute name="Element" type="xs:string"/>
+            <xs:attribute name="Ranged" type="xs:string"/>
+            <xs:attribute name="AtkType" type="xs:string"/>
+            <xs:attribute name="Active" type="xs:string"/>
+            <xs:attribute name="Spine" type="xs:string"/>
+            <xs:attribute name="soundAct" type="xs:string"/>
+            <xs:attribute name="soundHurt" type="xs:string"/>
+            <xs:attribute name="soundFX" type="xs:string"/>
+            <xs:attribute name="hitFX" type="xs:string"/>
+            <xs:attribute name="hitCount" type="xs:int"/>
+            <xs:attribute name="hitPosition" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="RankInfo">
+        <xs:complexType>
+            <xs:attribute name="ID" type="xs:int"/>
+            <xs:attribute name="Rank" type="xs:int"/>
+            <xs:attribute name="maxLevel" type="xs:int"/>
+            <xs:attribute name="skills" type="xs:string"/>
+            <xs:attribute name="baseATK" type="xs:int"/>
+            <xs:attribute name="baseMAG" type="xs:int"/>
+            <xs:attribute name="baseHP" type="xs:int"/>
+            <xs:attribute name="baseDEF" type="xs:int"/>
+            <xs:attribute name="baseRES" type="xs:int"/>
+            <xs:attribute name="baseSPD" type="xs:int"/>
+            <xs:attribute name="baseCRIT" type="xs:int"/>
+            <xs:attribute name="baseMP" type="xs:int"/>
+            <xs:attribute name="baseMPR" type="xs:int"/>
+            <xs:attribute name="growthATK" type="xs:int"/>
+            <xs:attribute name="growthMAG" type="xs:int"/>
+            <xs:attribute name="growthHP" type="xs:int"/>
+            <xs:attribute name="growthDEF" type="xs:int"/>
+            <xs:attribute name="growthRES" type="xs:int"/>
+            <xs:attribute name="growthSPD" type="xs:int"/>
+            <xs:attribute name="growthMPR" type="xs:int"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="LevelUp">
+        <xs:complexType>
+            <xs:attribute name="ID" type="xs:int"/>
+            <xs:attribute name="Zen" type="xs:int"/>
+            <xs:attribute name="Bless" type="xs:int"/>
+            <xs:attribute name="Chaos" type="xs:int"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Skills">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="LevelList" type="LevelList"/>
+                <xs:element name="SkillList" type="SkillList"/>
+                <xs:element name="UpgradeList" type="UpgradeList"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="SkillList">
+        <xs:sequence>
+            <xs:element ref="Skill" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="UpgradeList">
+        <xs:sequence>
+            <xs:element ref="Upgrade" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="LevelList">
+        <xs:sequence>
+            <xs:element ref="Level" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Level">
+        <xs:complexType>
+            <xs:attribute name="ID" type="xs:string"/>
+            <xs:attribute name="Description" type="xs:string"/>
+            <xs:attribute name="Level" type="xs:int"/>
+            <xs:attribute name="BattlePower" type="xs:string"/>
+            <xs:attribute name="Cooldown" type="xs:string"/>
+            <xs:attribute name="Specs" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Skill">
+        <xs:complexType>
+            <xs:attribute name="ID" type="xs:string"/>
+            <xs:attribute name="Name" type="xs:string"/>
+            <xs:attribute name="maxLevel" type="xs:int"/>
+            <xs:attribute name="Type" type="xs:string"/>
+            <xs:attribute name="Ranged" type="xs:string"/>
+            <xs:attribute name="Icon" type="xs:string"/>
+            <xs:attribute name="soundFX" type="xs:string"/>
+            <xs:attribute name="hitFX" type="xs:string"/>
+            <xs:attribute name="hitCount" type="xs:int"/>
+            <xs:attribute name="hitPosition" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Upgrade">
+        <xs:complexType>
+            <xs:attribute name="Level" type="xs:int"/>
+            <xs:attribute name="ItemID" type="xs:string"/>
+            <xs:attribute name="Count" type="xs:int"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="AssetList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Asset" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Asset">
+        <xs:complexType>
+             <xs:attribute name="Index" type="xs:string"/>
+             <xs:attribute name="ResChar" type="xs:string"/>
+             <xs:attribute name="JsonChar" type="xs:string"/>
+             <xs:attribute name="HurtSound" type="xs:string"/>
+             <xs:attribute name="AttackSound" type="xs:string"/>
+             <xs:attribute name="AttackHitEffect" type="xs:string"/>
+             <xs:attribute name="AttackHit" type="xs:int"/>
+             <xs:attribute name="AttackHitPosition" type="xs:string"/>
+             <xs:attribute name="SkillActiveSound" type="xs:string"/>
+             <xs:attribute name="SkillActiveHitEffect" type="xs:string"/>
+             <xs:attribute name="SkillActiveHit" type="xs:int"/>
+             <xs:attribute name="SkillActiveHitPosition" type="xs:string"/>
+             <xs:attribute name="SkillAutoCastSound" type="xs:string"/>
+             <xs:attribute name="SkillAutoCastHitEffect" type="xs:string"/>
+             <xs:attribute name="SkillAutoCastHit" type="xs:int"/>
+             <xs:attribute name="SkillAutoCastHitPosition" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

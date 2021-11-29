@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="WorldBossData">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MaxDameRewardList" type="MaxDameRewardListType" />
+				<xs:element name="TopDameRewardList" type="TopDameRewardListType" />
+				<xs:element name="BossList" type="BossListType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="MaxDameRewardListType">
+		<xs:sequence>
+			<xs:element ref="MaxDameReward" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="MaxDameReward">
+		<xs:complexType>
+			<xs:attribute name="Order" type="xs:int" />
+			<xs:attribute name="BossIndex" type="xs:int" />
+			<xs:attribute name="Grade" type="xs:string" />
+			<xs:attribute name="DamageThreshold" type="xs:int" />
+			<xs:attribute name="Rewards" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="TopDameRewardListType">
+		<xs:sequence>
+			<xs:element ref="TopDameReward" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="TopDameReward">
+		<xs:complexType>
+			<xs:attribute name="Top" type="xs:string" />
+			<xs:attribute name="BossIndex" type="xs:int" />
+			<xs:attribute name="Reward" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="BossListType">
+		<xs:sequence>
+			<xs:element ref="WorldBossBase" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="WorldBossBase">
+		<xs:complexType>
+			<xs:attribute name="Order" type="xs:int" />
+			<xs:attribute name="BossIndex" type="xs:int" />
+			<xs:attribute name="RandomBonus" type="xs:string" />
+			<xs:attribute name="DropRate" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

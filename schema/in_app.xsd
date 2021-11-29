@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="InAppList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="InAppPackage" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="InAppPackage">
+        <xs:complexType>
+             <xs:attribute name="Order" type="xs:string"/>
+             <xs:attribute name="ProductID" type="xs:string"/>
+             <xs:attribute name="Name" type="xs:string"/>
+             <xs:attribute name="LimitBuy" type="xs:string"/>
+             <xs:attribute name="Active" type="xs:int"/>
+             <xs:attribute name="Description" type="xs:int"/>
+             <xs:attribute name="Reward" type="xs:string"/>
+             <xs:attribute name="FirstBuyBonus" type="xs:string"/>
+             <xs:attribute name="Image" type="xs:float"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

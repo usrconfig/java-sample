@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ArenaInfo>
+	<TopWeek>
+		<ArenaTopReward Rank="1" Name="Top1" Reward="9999/3000#9901/300"/>
+		<ArenaTopReward Rank="2" Name="Top2" Reward="9999/2800#9901/280"/>
+		<ArenaTopReward Rank="3" Name="Top3" Reward="9999/2600#9901/260"/>
+		<ArenaTopReward Rank="4" Name="Top4" Reward="9999/2500#9901/250"/>
+		<ArenaTopReward Rank="5" Name="Top5" Reward="9999/2400#9901/240"/>
+		<ArenaTopReward Rank="6" Name="Top6" Reward="9999/2300#9901/230"/>
+		<ArenaTopReward Rank="7" Name="Top7" Reward="9999/2200#9901/220"/>
+		<ArenaTopReward Rank="8" Name="Top8" Reward="9999/2100#9901/210"/>
+		<ArenaTopReward Rank="9" Name="Top9" Reward="9999/2000#9901/200"/>
+		<ArenaTopReward Rank="10" Name="Top10" Reward="9999/1900#9901/190"/>
+		<ArenaTopReward Rank="11" Name="Top11" Reward="9999/1800#9901/180"/>
+		<ArenaTopReward Rank="12" Name="Top12" Reward="9999/1700#9901/170"/>
+		<ArenaTopReward Rank="13" Name="Top13" Reward="9999/1600#9901/160"/>
+		<ArenaTopReward Rank="14" Name="Top14" Reward="9999/1500#9901/150"/>
+		<ArenaTopReward Rank="15" Name="Top15" Reward="9999/1400#9901/140"/>
+		<ArenaTopReward Rank="16" Name="Top16" Reward="9999/1300#9901/130"/>
+		<ArenaTopReward Rank="17" Name="Top17" Reward="9999/1200#9901/120"/>
+		<ArenaTopReward Rank="18" Name="Top18" Reward="9999/1100#9901/110"/>
+		<ArenaTopReward Rank="19" Name="Top19" Reward="9999/1000#9901/100"/>
+		<ArenaTopReward Rank="20" Name="Top20" Reward="9999/1000#9901/50"/>
+	</TopWeek>
+	<TopMonth>
+		<ArenaTopReward Rank="1" Name="Top1" Reward="9999/10000#9901/1000"/>
+		<ArenaTopReward Rank="2" Name="Top2" Reward="9999/9500#9901/950"/>
+		<ArenaTopReward Rank="3" Name="Top3" Reward="9999/9000#9901/900"/>
+		<ArenaTopReward Rank="4" Name="Top4" Reward="9999/8500#9901/850"/>
+		<ArenaTopReward Rank="5" Name="Top5" Reward="9999/8000#9901/800"/>
+		<ArenaTopReward Rank="6" Name="Top6" Reward="9999/7500#9901/750"/>
+		<ArenaTopReward Rank="7" Name="Top7" Reward="9999/7000#9901/700"/>
+		<ArenaTopReward Rank="8" Name="Top8" Reward="9999/6500#9901/650"/>
+		<ArenaTopReward Rank="9" Name="Top9" Reward="9999/6000#9901/600"/>
+		<ArenaTopReward Rank="10" Name="Top10" Reward="9999/5500#9901/550"/>
+		<ArenaTopReward Rank="11" Name="Top11" Reward="9999/5000#9901/500"/>
+		<ArenaTopReward Rank="12" Name="Top12" Reward="9999/4500#9901/450"/>
+		<ArenaTopReward Rank="13" Name="Top13" Reward="9999/4000#9901/400"/>
+		<ArenaTopReward Rank="14" Name="Top14" Reward="9999/3500#9901/350"/>
+		<ArenaTopReward Rank="15" Name="Top15" Reward="9999/3000#9901/300"/>
+		<ArenaTopReward Rank="16" Name="Top16" Reward="9999/2500#9901/250"/>
+		<ArenaTopReward Rank="17" Name="Top17" Reward="9999/2000#9901/200"/>
+		<ArenaTopReward Rank="18" Name="Top18" Reward="9999/2000#9901/150"/>
+		<ArenaTopReward Rank="19" Name="Top19" Reward="9999/2000#9901/100"/>
+		<ArenaTopReward Rank="20" Name="Top20" Reward="9999/2000#9901/50"/>
+	</TopMonth>
+</ArenaInfo>

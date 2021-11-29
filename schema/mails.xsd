@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="MailList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="MailBase" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MailBase">
+		<xs:complexType>
+			<xs:attribute name="Id" type="xs:string" />
+			<xs:attribute name="Group" type="xs:string" />
+			<xs:attribute name="Title" type="xs:string" />
+			<xs:attribute name="ShortDescription" type="xs:string" />
+			<xs:attribute name="Description" type="xs:string" />
+			<xs:attribute name="GiftString" type="xs:string" />
+			<xs:attribute name="HeroString" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
+

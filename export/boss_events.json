@@ -1,0 +1,22 @@
+[
+  {
+    "index": 1,
+    "monsterIndex": 1029,
+    "eventName": "Blood Castle",
+    "notificationTime": "0 26,27,28 15 * * ?",
+    "eventTime": "0 30 14 * * ?",
+    "bossEventRewardIndex": 1,
+    "desc": "Cốt Tinh Vương đang phá làng phá xóm, các chiến sĩ hay mau tới tiêu diệt",
+    "image": ""
+  },
+  {
+    "index": 2,
+    "monsterIndex": 1029,
+    "eventName": "Blood Castle1",
+    "notificationTime": "0 26,27,28 15 * * ?",
+    "eventTime": "0 30 14 * * ?",
+    "bossEventRewardIndex": 1,
+    "desc": "Cốt Tinh Vương đang phá làng phá xóm, các chiến sĩ hay mau tới tiêu diệt",
+    "image": ""
+  }
+]

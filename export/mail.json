@@ -1,0 +1,68 @@
+[
+  {
+    "id": "ev_special_1",
+    "group": "special_bundle",
+    "title": "txtMsgTitleSpecialBundleRewardLv5",
+    "content": "txtMsgFullSpecialBundleRewardLv5",
+    "shortContent": "txtMsgShortSpecialBundleRewardLv5"
+  },
+  {
+    "id": "ev_special_3",
+    "group": "special_bundle",
+    "title": "txtMsgTitleSpecialBundleRewardLv25",
+    "content": "txtMsgFullSpecialBundleRewardLv25",
+    "shortContent": "txtMsgShortSpecialBundleRewardLv25"
+  },
+  {
+    "id": "ev_special_2",
+    "group": "special_bundle",
+    "title": "txtMsgTitleSpecialBundleRewardLv15",
+    "content": "txtMsgFullSpecialBundleRewardLv15",
+    "shortContent": "txtMsgShortSpecialBundleRewardLv15"
+  },
+  {
+    "id": "ia_refund",
+    "group": "in_app",
+    "title": "txtMsgTitleInAppRefund",
+    "content": "txtMsgFullInAppRefund",
+    "shortContent": "txtMsgShortInAppRefund"
+  },
+  {
+    "id": "mt",
+    "group": "mt",
+    "title": "txtMsgTitleMaintenanceGifts",
+    "content": "txtMsgFullMaintenanceGifts",
+    "shortContent": "txtMsgShortMaintenanceGifts"
+  },
+  {
+    "id": "ia_first",
+    "group": "in_app",
+    "title": "txtMsgTitleFirstPurchaseReward",
+    "content": "txtMsgFullFirstPurchaseReward",
+    "shortContent": "txtMsgShortFirstPurchaseReward",
+    "giftString": "SKIN000/1#SKIN001/1#SKIN002/1#SKIN003/1#SKIN004/1#SKIN005/1#SKIN006/1"
+  },
+  {
+    "id": "ev_special_4",
+    "group": "special_bundle",
+    "title": "txtMsgTitleSpecialBundleRewardLv35",
+    "content": "txtMsgFullSpecialBundleRewardLv35",
+    "shortContent": "txtMsgShortSpecialBundleRewardLv35"
+  },
+  {
+    "id": "np1",
+    "group": "new_player",
+    "title": "txtMsgTitleWelcome",
+    "content": "txtMsgFullWelcome",
+    "shortContent": "txtMsgShortWelcome",
+    "giftString": "ITEM003/1#ITEM000/30",
+    "heroString": "2"
+  },
+  {
+    "id": "ia_success",
+    "group": "in_app",
+    "title": "txtMsgTitleInAppSuccess",
+    "content": "txtMsgFullInAppSuccess",
+    "shortContent": "txtMsgShortInAppSuccess"
+  }
+]

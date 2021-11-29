@@ -1,0 +1,42 @@
+
+12/10/2018
+-------------------------
+- fixbug: tra thu arena thua cong cup
+- implement spin
+- raid x5
+- new date job
+10/10/2018
+-------------------------
+- fixbug: muon friend nhieu lan
+- ko log request payment action la lay so luong
+- short so cup trong top friend arena
+- fixbug hien so power qua lon khi muon friend
+08/10/2018
+------------------------
+-fixbug: nhan mail nhieu lan khi reconnect.
+
+13/08/2018
+- Implement dynamic event, fix bug chaos, fix bug top arena, xóa thưởng
+top arena cách cũ
+--------------------------------
+- Fixbug chaoscastle khong co doi thu
+-------------------------------
+02/08/2018
+- Claim all, remove all mail
+- Update data
+- Support chat
+- Fixbug Không tìm thấy đối thủ trong arena
+--------------------------------
+30/7/2018
+- Raid tru stamina
+- Fixbug ban item
+- Fixbug use item
+----------------------------------
+27/7/2018
+- Sửa nhiệm vụ xem shop thành mua vật phẩm trong shop
+----------------------------------
+26/7/2018
+- Fixbug ghép item
+- Fixbug notify arena
+- Fixbug xóa mail xong sinh lại
+- Fixbug BOT team power

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Vip">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="VipBase" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="VipBase">
+        <xs:complexType>
+            <xs:attribute name="VipLevel" type="xs:int"/>
+            <xs:attribute name="VipPointRequire" type="xs:int"/>
+            <xs:attribute name="VipUpRewards" type="xs:string"/>
+            <xs:attribute name="VipDailyRewards" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
