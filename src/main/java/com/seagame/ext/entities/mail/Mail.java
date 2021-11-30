@@ -3,7 +3,6 @@ package com.seagame.ext.entities.mail;
 import com.creants.creants_2x.socket.gate.entities.IQAntObject;
 import com.creants.creants_2x.socket.gate.entities.QAntObject;
 import com.creants.creants_2x.socket.gate.protocol.serialization.SerializableQAntType;
-import com.seagame.ext.Utils;
 import com.seagame.ext.config.game.MailConfig;
 import com.seagame.ext.util.NetworkConstant;
 import lombok.Getter;
@@ -28,12 +27,12 @@ public class Mail implements SerializableQAntType, NetworkConstant {
     public @Id
     long id;
     private @Indexed
-    long heroId;
+    String playerId;
     private String title;
     private boolean isSys;
     private boolean seen;
     private boolean claimed;
-    private long sender;
+    private String sender;
     private String content;
     private String shortContent;
     private String giftString;
@@ -52,9 +51,9 @@ public class Mail implements SerializableQAntType, NetworkConstant {
     }
 
 
-    public Mail(long receiver, long sender) {
+    public Mail(String receiver, String sender) {
         this.id = System.currentTimeMillis();
-        this.heroId = receiver;
+        this.playerId = receiver;
         this.sender = sender;
         this.createTime = System.currentTimeMillis();
     }
@@ -71,9 +70,9 @@ public class Mail implements SerializableQAntType, NetworkConstant {
     }
 
 
-    public Mail(long receiver, MailBase mailBase) {
+    public Mail(String receiver, MailBase mailBase) {
         this.id = System.currentTimeMillis();
-        this.heroId = receiver;
+        this.playerId = receiver;
         this.createTime = System.currentTimeMillis();
         this.baseId = mailBase.getId();
     }
@@ -94,14 +93,6 @@ public class Mail implements SerializableQAntType, NetworkConstant {
         mailObj.putBool("seen", this.seen);
         mailObj.putBool("isSys", this.isSys);
         mailObj.putBool("claimed", this.claimed);
-        String title = getTitle();
-        if (title != null)
-            mailObj.putUtfString("title", title);
-        String giftString = getGiftString();
-        if (giftString != null)
-            mailObj.putBool("gift", !Utils.isNullOrEmpty(giftString));
-
-        mailObj.putUtfString("expiredDate", getExpiredDate());
         return mailObj;
     }
 
@@ -135,8 +126,8 @@ public class Mail implements SerializableQAntType, NetworkConstant {
         return mailObj;
     }
 
-    public Mail setHeroId(long receiverId) {
-        this.heroId = receiverId;
+    public Mail setPlayerId(String receiverId) {
+        this.playerId = receiverId;
         return this;
     }
 

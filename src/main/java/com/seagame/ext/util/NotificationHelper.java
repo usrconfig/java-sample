@@ -5,6 +5,7 @@ import com.creants.creants_2x.socket.gate.entities.IQAntObject;
 import com.creants.creants_2x.socket.gate.entities.QAntArray;
 import com.creants.creants_2x.socket.gate.entities.QAntObject;
 import com.seagame.ext.controllers.ExtensionEvent;
+import com.seagame.ext.entities.GroupCount;
 
 import java.util.List;
 import java.util.Map;
@@ -67,4 +68,12 @@ public class NotificationHelper implements ExtensionEvent {
         return notification;
     }
 
+    public static IQAntObject buildFriendNtfObject(List<GroupCount> ntfCount) {
+        IQAntObject notification = QAntObject.newInstance();
+        notification.putUtfString("group", NTF_GROUP_FRIEND);
+        notification.putUtfString("type", NTF_TYPE_COUNT);
+        notification.putQAntArray("mapNo", buildCountArray(
+                ntfCount.stream().collect(Collectors.toMap(GroupCount::getGroup, GroupCount::getCount))));
+        return notification;
+    }
 }

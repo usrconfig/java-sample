@@ -11,15 +11,15 @@ public class MailManager {
     @Autowired
     private MailRepository mailRepository;
 
-    public Mail sendSystemMail(long toHeroId, String mailId) {
+    public Mail sendSystemMail(String toGameHeroId, String mailId) {
         MailBase mailBase = MailConfig.getInstance().getMailById(mailId);
-        Mail mail = new Mail(toHeroId, mailBase);
+        Mail mail = new Mail(toGameHeroId, mailBase);
         mail.setSys(true);
         return mailRepository.save(mail);
     }
 
-    public Mail sendPrivateMail(long fromHeroId, long toHeroId, String title, String content, String gift) {
-        Mail mail = new Mail(toHeroId, fromHeroId);
+    public Mail sendPrivateMail(String fromGameHeroId, String toGameHeroId, String title, String content, String gift) {
+        Mail mail = new Mail(toGameHeroId, fromGameHeroId);
         mail.setSys(false);
         mail.setTitle(title);
         mail.setContent(content);

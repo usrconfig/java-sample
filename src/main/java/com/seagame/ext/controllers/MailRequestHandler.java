@@ -9,7 +9,6 @@ import com.creants.creants_2x.socket.gate.wood.QAntUser;
 import com.seagame.ext.ExtApplication;
 import com.seagame.ext.config.game.ItemConfig;
 import com.seagame.ext.dao.MailRepository;
-import com.seagame.ext.entities.Player;
 import com.seagame.ext.entities.item.HeroItem;
 import com.seagame.ext.entities.mail.Mail;
 import com.seagame.ext.entities.mail.MailManager;
@@ -33,7 +32,8 @@ public class MailRequestHandler extends ZClientRequestHandler {
     private static final int MAIL_ACTION = 2;
     private static final int CLAIM_ALL_REWARDS = 3;
     private static final int REMOVE_ALL_INFO_MAIL = 4;
-    private static final int GET_SHORT_LIST = 5;
+    private static final int GET_INBOX_SHORT_LIST = 5;
+    private static final int GET_OUTBOX_SHORT_LIST = 7;
 
     private static final int ACTION_ACCEPT = 1;
     private static final int ACTION_DENIE = 2;
@@ -58,11 +58,14 @@ public class MailRequestHandler extends ZClientRequestHandler {
     public void handleClientRequest(QAntUser user, IQAntObject params) {
         Integer action = this.getAction(params);
         if (action == null)
-            action = GET_SHORT_LIST;
+            action = GET_INBOX_SHORT_LIST;
 
         switch (action) {
-            case GET_SHORT_LIST:
-                getShortListInfo(user, params);
+            case GET_INBOX_SHORT_LIST:
+                getInboxShortListInfo(user, params);
+                break;
+            case GET_OUTBOX_SHORT_LIST:
+                getGetOutboxShortList(user, params);
                 break;
             case OPEN_MAIL:
                 processOpenMail(user, params);
@@ -76,6 +79,7 @@ public class MailRequestHandler extends ZClientRequestHandler {
             case CLAIM_ALL_REWARDS:
                 claimAllRewards(user, params);
                 break;
+
             default:
                 break;
         }
@@ -89,7 +93,7 @@ public class MailRequestHandler extends ZClientRequestHandler {
             responseError(user, GameErrorCode.LACK_OF_INFOMATION);
             return;
         }
-        Mail mail = mailRepository.getMail(id);
+        Mail mail = mailRepository.getMail(id, user.getName());
         if (mail == null) {
             responseError(user, GameErrorCode.UNKNOW_EXCEPTION);
             return;
@@ -100,11 +104,11 @@ public class MailRequestHandler extends ZClientRequestHandler {
         send(mail.buildFullInfo(), user);
     }
 
+
     private void claimAllRewards(QAntUser user, IQAntObject params) {
         try {
             String gameHeroId = user.getName();
-            Player player = playerManager.getPlayer(gameHeroId);
-            List<Mail> mails = mailRepository.getAllByHeroId(player.getActiveHeroId());
+            List<Mail> mails = mailRepository.getAllByPlayerId(gameHeroId);
             if (mails.size() > 0) {
                 List<Mail> mailStream = mails.stream().filter(Mail::canDoActionClaim).collect(Collectors.toList());
                 params.putLongArray("ids", mailStream.stream().map(Mail::getId).collect(Collectors.toList()));
@@ -129,8 +133,7 @@ public class MailRequestHandler extends ZClientRequestHandler {
     private void removeAllInfoMail(QAntUser user, IQAntObject params) {
         try {
             String gameHeroId = user.getName();
-            Player player = playerManager.getPlayer(gameHeroId);
-            List<Mail> mails = mailRepository.getAllByHeroId(player.getActiveHeroId());
+            List<Mail> mails = mailRepository.getAllByPlayerId(gameHeroId);
             if (mails.size() > 0) {
                 List<Mail> mailStream = mails.stream().filter(Mail::canDoRemove).collect(Collectors.toList());
                 params.putLongArray("ids", mailStream.stream().map(Mail::getId).collect(Collectors.toList()));
@@ -144,8 +147,9 @@ public class MailRequestHandler extends ZClientRequestHandler {
 
 
     private void mailAction(QAntUser user, IQAntObject params) throws NumberFormatException {
+        String gameHeroId = user.getName();
         long id = params.getLong("id");
-        Mail mail = mailRepository.getMail(id);
+        Mail mail = mailRepository.getMail(id, gameHeroId);
         if (mail == null || mail.isClaimed()) {
             responseError(user, GameErrorCode.MAIL_RECEIVED);
             return;
@@ -192,13 +196,33 @@ public class MailRequestHandler extends ZClientRequestHandler {
     }
 
 
-    private void getShortListInfo(QAntUser user, IQAntObject params) {
+    private void getInboxShortListInfo(QAntUser user, IQAntObject params) {
         int page = params.getInt("page");
-        Player player = playerManager.getPlayer(user.getName());
-        List<Mail> mails = mailRepository.getMailList(player.getActiveHeroId(),
+
+        List<Mail> mails = mailRepository.getInboxMailList(user.getName(),
                 PageRequest.of(page, 20, Sort.by(Sort.Direction.DESC, "_id")));
 
-        int countMail = mailRepository.countMailByHeroId(player.getActiveHeroId());
+        int countMail = mailRepository.countInboxMailByPlayerId(user.getName());
+        int maxPage = countMail <= 0 ? 1 : countMail / 20;
+
+        IQAntArray mailArr = QAntArray.newInstance();
+        mails.forEach(mail -> {
+                    mail.initMailBase();
+                    mailArr.addQAntObject(mail.buildShortInfo());
+                }
+        );
+        params.putQAntArray("mails", mailArr);
+        params.putInt("maxPage", maxPage);
+        send(params, user);
+    }
+
+    private void getGetOutboxShortList(QAntUser user, IQAntObject params) {
+        int page = params.getInt("page");
+
+        List<Mail> mails = mailRepository.getOutboxMailList(user.getName(),
+                PageRequest.of(page, 20, Sort.by(Sort.Direction.DESC, "_id")));
+
+        int countMail = mailRepository.countOutboxMailBySender(user.getName());
         int maxPage = countMail <= 0 ? 1 : countMail / 20;
 
         IQAntArray mailArr = QAntArray.newInstance();

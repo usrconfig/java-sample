@@ -14,37 +14,42 @@ import java.util.List;
  */
 @Repository
 public interface MailRepository extends MongoRepository<Mail, Long> {
-    @Query("{'heroId' : ?0}")
-    List<Mail> getMailList(long heroId, Pageable page);
+    @Query("{'playerId' : ?0}")
+    List<Mail> getInboxMailList(String gameHeroId, Pageable page);
 
-    List<Mail> getAllByHeroId(long heroId);
+    List<Mail> getAllByPlayerId(String gameHeroId);
 
-    @Query("{heroId : {$in : ?0}, type : ?1}")
-    List<Mail> getMailList(List<Long> heroIds, int type);
+    @Query("{playerId : {$in : ?0}, type : ?1}")
+    List<Mail> getInboxMailList(List<String> gameHeroIds, int type);
 
 
     @Query("{title:?0}")
-    List<Mail> getMailList(String title);
+    List<Mail> getInboxMailList(String title);
 
 
-    @Query(value = "{'heroId' : ?0, $or: [{seen: false}, {claim:true}]}", count = true)
-    int countNtf(long heroId);
+    @Query(value = "{'playerId' : ?0, $or: [{seen: false}, {claim:true}]}", count = true)
+    int countNtf(String gameHeroId);
 
-    int countMailByHeroId(long heroId);
-
-
-    @Query("{'heroId' : ?0, 'claim':true}")
-    List<Mail> getMailClaimIsTrue(long heroId);
+    int countInboxMailByPlayerId(String gameHeroId);
 
 
-    @Query("{'id':?0}")
-    Mail getMail(long id);
+    @Query("{'playerId' : ?0, 'claim':true}")
+    List<Mail> getMailClaimIsTrue(String gameHeroId);
 
 
-    @Query(value = "{ heroId: ?0}", delete = true)
-    void remove(long heroId);
+    @Query("{'id':?0, 'playerId' : ?1}")
+    Mail getMail(long id, String gameHeroId);
+
+
+    @Query(value = "{ playerId: ?0}", delete = true)
+    void remove(String gameHeroId);
 
 
     @Query(value = "{'id' : {'$in' : ?0}}", delete = true)
     void remove(Collection<Long> ids);
+
+    @Query("{'sender' : ?0}")
+    List<Mail> getOutboxMailList(String gameHeroId, Pageable page);
+
+    int countOutboxMailBySender(String gameHeroId);
 }
