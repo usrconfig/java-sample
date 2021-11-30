@@ -55,6 +55,6 @@ public class EquipRankBase implements Serializable {
     private int growthSPD;
     @JacksonXmlProperty(localName = "growthCRIT", isAttribute = true)
     private int growthCRIT;
-    @JacksonXmlProperty(localName = "Description", isAttribute = true)
-    private String Description;
+    @JacksonXmlProperty(localName = "growthMPR", isAttribute = true)
+    private int Description;
 }

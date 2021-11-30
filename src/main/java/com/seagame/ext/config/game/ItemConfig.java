@@ -32,8 +32,6 @@ import java.util.stream.Stream;
  */
 @Getter
 public class ItemConfig implements NetworkConstant {
-    public static final int MAX_LEVEL = 15;
-    public static final int MAX_RANK = 5;
     public static final String ITEM_CONFIG = "items.xml";
     private static ItemConfig instance;
     private Map<String, ItemBase> itemMap;
@@ -43,13 +41,6 @@ public class ItemConfig implements NetworkConstant {
     private Items items;
 
     public static final String GOLD_REWARDS = "ITEM001/";
-
-    public static final String GOLDEN_CHEST = "ITEM100/1";
-    public static final String SILVER_CHEST = "ITEM101/1";
-    public static final String WOODEN_CHEST = "ITEM102/1";
-    public static final String MY_SACK = "ITEM103/1";
-    public static final String NOR_SACK = "ITEM104/1";
-    public static final String TINY_SACK = "ITEM105/1";
 
 
     public static ItemConfig getInstance() {
@@ -461,10 +452,6 @@ public class ItemConfig implements NetworkConstant {
 //    }
 
 
-    public boolean canRankUp(HeroEquipment item) {
-        int level = item.getLevel();
-        return level == MAX_LEVEL && item.getRank() < MAX_RANK;
-    }
 
 
     public String getRanDomAttackItem() {

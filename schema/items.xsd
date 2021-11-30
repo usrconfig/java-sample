@@ -47,7 +47,7 @@
             <xs:attribute name="Name" type="xs:string"/>
             <xs:attribute name="Description" type="xs:string"/>
             <xs:attribute name="Slot" type="xs:string"/>
-            <xs:attribute name="Rank" type="xs:int"/>
+            <xs:attribute name="maxRank" type="xs:int"/>
             <xs:attribute name="OptionType" type="xs:string"/>
             <xs:attribute name="HeroClass" type="xs:string"/>
             <xs:attribute name="RefundCost" type="xs:int"/>
@@ -85,7 +85,7 @@
             <xs:attribute name="growthRES" type="xs:int"/>
             <xs:attribute name="growthSPD" type="xs:int"/>
             <xs:attribute name="growthCRIT" type="xs:int"/>
-            <xs:attribute name="Description" type="xs:string"/>
+            <xs:attribute name="growthMPR" type="xs:int"/>
         </xs:complexType>
     </xs:element>
 </xs:schema>

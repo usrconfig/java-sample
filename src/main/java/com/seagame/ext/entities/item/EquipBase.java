@@ -1,5 +1,6 @@
 package com.seagame.ext.entities.item;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
@@ -18,8 +19,11 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-@JsonInclude(Include.NON_NULL)
+@JsonInclude(Include.NON_DEFAULT)
+@JsonIgnoreProperties(value = {"Rank"})
 public class EquipBase extends ItemBase implements Serializable {
+    @JacksonXmlProperty(localName = "maxRank", isAttribute = true)
+    private int maxRank;
     @JacksonXmlProperty(localName = "Slot", isAttribute = true)
     private String slot;
     @JacksonXmlProperty(localName = "OptionType", isAttribute = true)

@@ -3,7 +3,7 @@
     "id": "1220",
     "name": "txtEquipGuardianBow",
     "desc": "txtEquipDesGuardianBow",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "elf",
@@ -29,7 +29,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1220",
-        "description": "Normal - ATK+1500;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -51,7 +51,7 @@
         "growthSPD": 30,
         "growthCRIT": 0,
         "id": "1220",
-        "description": "Rare - ATK+1875; SPD+500;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -60,20 +60,20 @@
         "baseATK": 2350,
         "baseMAG": 0,
         "baseHP": 0,
-        "baseDEF": 0,
-        "baseRES": 800,
+        "baseDEF": 500,
+        "baseRES": 0,
         "baseSPD": 550,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 376,
         "growthMAG": 0,
         "growthHP": 0,
-        "growthDEF": 0,
-        "growthRES": 128,
+        "growthDEF": 64,
+        "growthRES": 0,
         "growthSPD": 44,
         "growthCRIT": 0,
         "id": "1220",
-        "description": "Excellent - ATK+2350; RES+800; SPD+550;"
+        "description": 0
       }
     ]
   },
@@ -81,7 +81,7 @@
     "id": "3200",
     "name": "txtEquipToxicRing",
     "desc": "txtEquipDesToxicRing",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Ring",
     "optionType": "Offensive",
     "heroClass": "all",
@@ -107,7 +107,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "3200",
-        "description": "Normal - ATK+50;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -129,7 +129,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "3200",
-        "description": "Rare - ATK+100;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -151,7 +151,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "3200",
-        "description": "Excellent - ATK+150;"
+        "description": 0
       }
     ]
   },
@@ -159,7 +159,7 @@
     "id": "2110",
     "name": "txtEquipLegendaryArmor",
     "desc": "txtEquipDesLegendaryArmor",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Armor",
     "optionType": "Defensive",
     "heroClass": "wizard",
@@ -173,19 +173,19 @@
         "baseMAG": 0,
         "baseHP": 1150,
         "baseDEF": 50,
-        "baseRES": 420,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 92,
-        "growthDEF": 10,
-        "growthRES": 126,
+        "growthDEF": 50,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2110",
-        "description": "Normal - HP+1150; DEF+50; RES+420;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -195,19 +195,19 @@
         "baseMAG": 0,
         "baseHP": 1350,
         "baseDEF": 75,
-        "baseRES": 600,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 162,
-        "growthDEF": 23,
-        "growthRES": 270,
+        "growthDEF": 70,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2110",
-        "description": "Rare - HP+1350; DEF+75; RES+600;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -217,19 +217,19 @@
         "baseMAG": 0,
         "baseHP": 1500,
         "baseDEF": 100,
-        "baseRES": 800,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 240,
-        "growthDEF": 40,
-        "growthRES": 480,
+        "growthDEF": 110,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2110",
-        "description": "Excellent - HP+1500; DEF+100; RES+800;"
+        "description": 0
       }
     ]
   },
@@ -237,7 +237,7 @@
     "id": "1020",
     "name": "txtEquipLightningSword",
     "desc": "txtEquipDesLightningSword",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "knight",
@@ -263,7 +263,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1020",
-        "description": "Normal - ATK+360;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -285,7 +285,7 @@
         "growthSPD": 7,
         "growthCRIT": 0,
         "id": "1020",
-        "description": "Rare - ATK+450; SPD+120;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -294,20 +294,20 @@
         "baseATK": 560,
         "baseMAG": 0,
         "baseHP": 0,
-        "baseDEF": 0,
-        "baseRES": 300,
+        "baseDEF": 300,
+        "baseRES": 0,
         "baseSPD": 175,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 90,
         "growthMAG": 0,
         "growthHP": 0,
-        "growthDEF": 0,
-        "growthRES": 48,
+        "growthDEF": 48,
+        "growthRES": 0,
         "growthSPD": 14,
         "growthCRIT": 0,
         "id": "1020",
-        "description": "Excellent - ATK+560; RES+300; SPD+175;"
+        "description": 0
       }
     ]
   },
@@ -315,7 +315,7 @@
     "id": "3000",
     "name": "txtEquipSkeletonRing",
     "desc": "txtEquipDesSkeletonRing",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Ring",
     "optionType": "Offensive",
     "heroClass": "all",
@@ -341,7 +341,7 @@
         "growthSPD": 0,
         "growthCRIT": 1,
         "id": "3000",
-        "description": "Normal - ATK+50; CRIT+5;"
+        "description": 1
       },
       {
         "rank": 2,
@@ -363,7 +363,7 @@
         "growthSPD": 0,
         "growthCRIT": 1,
         "id": "3000",
-        "description": "Rare - ATK+100; CRIT+10;"
+        "description": 1
       },
       {
         "rank": 3,
@@ -385,7 +385,7 @@
         "growthSPD": 0,
         "growthCRIT": 2,
         "id": "3000",
-        "description": "Excellent - ATK+150; CRIT+20;"
+        "description": 2
       }
     ]
   },
@@ -393,7 +393,7 @@
     "id": "2700",
     "name": "txtEquipScaleArmor",
     "desc": "txtEquipDesScaleArmor",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Armor",
     "optionType": "Defensive",
     "heroClass": "gladiator",
@@ -407,19 +407,19 @@
         "baseMAG": 0,
         "baseHP": 1200,
         "baseDEF": 60,
-        "baseRES": 130,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 104,
-        "growthDEF": 13,
-        "growthRES": 41,
+        "growthDEF": 41,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2700",
-        "description": "Normal - HP+1200; DEF+60; RES+130;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -429,19 +429,19 @@
         "baseMAG": 0,
         "baseHP": 1500,
         "baseDEF": 80,
-        "baseRES": 175,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 186,
-        "growthDEF": 27,
-        "growthRES": 81,
+        "growthDEF": 81,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2700",
-        "description": "Rare - HP+1500; DEF+80; RES+175;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -451,19 +451,19 @@
         "baseMAG": 0,
         "baseHP": 1850,
         "baseDEF": 110,
-        "baseRES": 255,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 304,
-        "growthDEF": 48,
-        "growthRES": 150,
+        "growthDEF": 150,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2700",
-        "description": "Excellent - HP+1850; DEF+110; RES+255;"
+        "description": 0
       }
     ]
   },
@@ -471,7 +471,7 @@
     "id": "1610",
     "name": "txtEquipLapidLancer",
     "desc": "txtEquipDesLapidLancer",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "lancer",
@@ -497,7 +497,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1610",
-        "description": "Normal - ATK+410;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -519,7 +519,7 @@
         "growthSPD": 5,
         "growthCRIT": 0,
         "id": "1610",
-        "description": "Rare - ATK+500; SPD+80;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -541,7 +541,7 @@
         "growthSPD": 8,
         "growthCRIT": 0,
         "id": "1610",
-        "description": "Excellent - ATK+650; DEF+250; SPD+100;"
+        "description": 0
       }
     ]
   },
@@ -549,7 +549,7 @@
     "id": "2500",
     "name": "txtEquipLightPlateArmor",
     "desc": "txtEquipDesLightPlateArmor",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Armor",
     "optionType": "Defensive",
     "heroClass": "lord",
@@ -563,19 +563,19 @@
         "baseMAG": 0,
         "baseHP": 1000,
         "baseDEF": 15,
-        "baseRES": 75,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 60,
-        "growthDEF": 6,
-        "growthRES": 45,
+        "growthDEF": 45,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2500",
-        "description": "Normal - HP+1000; DEF+15; RES+75;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -585,19 +585,19 @@
         "baseMAG": 0,
         "baseHP": 1200,
         "baseDEF": 35,
-        "baseRES": 125,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 102,
-        "growthDEF": 21,
-        "growthRES": 113,
+        "growthDEF": 113,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2500",
-        "description": "Rare - HP+1200; DEF+35; RES+125;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -607,19 +607,19 @@
         "baseMAG": 0,
         "baseHP": 1500,
         "baseDEF": 55,
-        "baseRES": 175,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 180,
-        "growthDEF": 44,
-        "growthRES": 210,
+        "growthDEF": 150,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2500",
-        "description": "Excellent - HP+1500; DEF+55; RES+175;"
+        "description": 0
       }
     ]
   },
@@ -627,7 +627,7 @@
     "id": "1410",
     "name": "txtEquipLegendarySword",
     "desc": "txtEquipDesLegendarySword",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "gladiator",
@@ -653,7 +653,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1410",
-        "description": "Normal - ATK+720;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -675,7 +675,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1410",
-        "description": "Rare - ATK+900; HP+400;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -684,20 +684,20 @@
         "baseATK": 1125,
         "baseMAG": 0,
         "baseHP": 500,
-        "baseDEF": 0,
-        "baseRES": 300,
+        "baseDEF": 300,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 180,
         "growthMAG": 0,
         "growthHP": 80,
-        "growthDEF": 0,
-        "growthRES": 48,
+        "growthDEF": 48,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1410",
-        "description": "Excellent - ATK+1125; HP+500; RES+300;"
+        "description": 0
       }
     ]
   },
@@ -705,7 +705,7 @@
     "id": "2300",
     "name": "txtEquipVioletWingArmor",
     "desc": "txtEquipDesVioletWingArmor",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Armor",
     "optionType": "Defensive",
     "heroClass": "summoner",
@@ -719,19 +719,19 @@
         "baseMAG": 0,
         "baseHP": 580,
         "baseDEF": 20,
-        "baseRES": 120,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 46,
-        "growthDEF": 4,
-        "growthRES": 36,
+        "growthDEF": 36,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2300",
-        "description": "Normal - HP+580; DEF+20; RES+120;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -741,19 +741,19 @@
         "baseMAG": 0,
         "baseHP": 800,
         "baseDEF": 50,
-        "baseRES": 200,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 96,
-        "growthDEF": 15,
-        "growthRES": 90,
+        "growthDEF": 90,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2300",
-        "description": "Rare - HP+800; DEF+50; RES+200;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -763,19 +763,19 @@
         "baseMAG": 0,
         "baseHP": 1150,
         "baseDEF": 100,
-        "baseRES": 250,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 184,
-        "growthDEF": 40,
-        "growthRES": 150,
+        "growthDEF": 150,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2300",
-        "description": "Excellent - HP+1150; DEF+100; RES+250;"
+        "description": 0
       }
     ]
   },
@@ -783,7 +783,7 @@
     "id": "1210",
     "name": "txtEquipIrisBow",
     "desc": "txtEquipDesIrisBow",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "elf",
@@ -809,7 +809,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1210",
-        "description": "Normal - ATK+830;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -831,7 +831,7 @@
         "growthSPD": 18,
         "growthCRIT": 0,
         "id": "1210",
-        "description": "Rare - ATK+1050; SPD+300;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -840,20 +840,20 @@
         "baseATK": 1300,
         "baseMAG": 0,
         "baseHP": 0,
-        "baseDEF": 0,
-        "baseRES": 350,
+        "baseDEF": 350,
+        "baseRES": 0,
         "baseSPD": 450,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 208,
         "growthMAG": 0,
         "growthHP": 0,
-        "growthDEF": 0,
-        "growthRES": 56,
+        "growthDEF": 56,
+        "growthRES": 0,
         "growthSPD": 36,
         "growthCRIT": 0,
         "id": "1210",
-        "description": "Excellent - ATK+1300; RES+350; SPD+450;"
+        "description": 0
       }
     ]
   },
@@ -861,7 +861,7 @@
     "id": "4400",
     "name": "txtEquipDarkPendant",
     "desc": "txtEquipDesDarkPendant",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Pendant",
     "optionType": "Defensive",
     "heroClass": "all",
@@ -887,51 +887,51 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "4400",
-        "description": "Normal - ATK+90; HP+100;"
+        "description": 0
       },
       {
         "rank": 2,
         "icon": "ico_pendant_dark2",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 250,
+        "baseATK": 250,
+        "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 25,
+        "growthATK": 25,
+        "growthMAG": 0,
         "growthHP": 0,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "4400",
-        "description": "Rare - MAG+250;"
+        "description": 0
       },
       {
         "rank": 3,
         "icon": "ico_pendant_dark3",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 500,
+        "baseATK": 500,
+        "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 50,
+        "growthATK": 50,
+        "growthMAG": 0,
         "growthHP": 0,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "4400",
-        "description": "Excellent - MAG+500;"
+        "description": 0
       }
     ]
   },
@@ -939,7 +939,7 @@
     "id": "4100",
     "name": "txtEquipWaterPendant",
     "desc": "txtEquipDesWaterPendant",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Pendant",
     "optionType": "Defensive",
     "heroClass": "all",
@@ -952,20 +952,20 @@
         "baseATK": 0,
         "baseMAG": 0,
         "baseHP": 100,
-        "baseDEF": 0,
-        "baseRES": 120,
+        "baseDEF": 120,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 8,
-        "growthDEF": 0,
-        "growthRES": 10,
+        "growthDEF": 10,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "4100",
-        "description": "Normal - HP+100; RES+120;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -974,20 +974,20 @@
         "baseATK": 25,
         "baseMAG": 0,
         "baseHP": 150,
-        "baseDEF": 0,
-        "baseRES": 180,
+        "baseDEF": 180,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 4,
         "growthMAG": 0,
         "growthHP": 16,
-        "growthDEF": 0,
-        "growthRES": 19,
+        "growthDEF": 19,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "4100",
-        "description": "Rare - ATK+25; HP+150; RES+180;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -996,20 +996,20 @@
         "baseATK": 50,
         "baseMAG": 0,
         "baseHP": 200,
-        "baseDEF": 0,
-        "baseRES": 240,
+        "baseDEF": 240,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 8,
         "growthMAG": 0,
         "growthHP": 32,
-        "growthDEF": 0,
-        "growthRES": 38,
+        "growthDEF": 38,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "4100",
-        "description": "Excellent - ATK+50; HP+200; RES+240;"
+        "description": 0
       }
     ]
   },
@@ -1017,7 +1017,7 @@
     "id": "4300",
     "name": "txtEquipLightPendant",
     "desc": "txtEquipDesLightPendant",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Pendant",
     "optionType": "Defensive",
     "heroClass": "all",
@@ -1031,19 +1031,19 @@
         "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 80,
-        "baseRES": 150,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 0,
-        "growthDEF": 6,
-        "growthRES": 12,
+        "growthDEF": 12,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "4300",
-        "description": "Normal - DEF+80; RES+150;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -1052,20 +1052,20 @@
         "baseATK": 90,
         "baseMAG": 0,
         "baseHP": 100,
-        "baseDEF": 0,
-        "baseRES": 50,
+        "baseDEF": 120,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 15,
         "growthMAG": 0,
         "growthHP": 16,
-        "growthDEF": 0,
-        "growthRES": 8,
+        "growthDEF": 8,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "4300",
-        "description": "Rare - ATK+90; HP+100; RES+50;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -1074,20 +1074,20 @@
         "baseATK": 180,
         "baseMAG": 0,
         "baseHP": 200,
-        "baseDEF": 0,
-        "baseRES": 100,
+        "baseDEF": 150,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 29,
         "growthMAG": 0,
         "growthHP": 32,
-        "growthDEF": 0,
-        "growthRES": 16,
+        "growthDEF": 16,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "4300",
-        "description": "Excellent - ATK+180; HP+200; RES+100;"
+        "description": 0
       }
     ]
   },
@@ -1095,7 +1095,7 @@
     "id": "1110",
     "name": "txtEquipGorgonStaff",
     "desc": "txtEquipDesGorgonStaff",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "wizard",
@@ -1105,67 +1105,67 @@
         "rank": 1,
         "icon": "ico_staff_gorgon1",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 460,
+        "baseATK": 460,
+        "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 37,
+        "growthATK": 37,
+        "growthMAG": 0,
         "growthHP": 0,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1110",
-        "description": "Normal - MAG+460;"
+        "description": 0
       },
       {
         "rank": 2,
         "icon": "ico_staff_gorgon2",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 575,
+        "baseATK": 575,
+        "baseMAG": 0,
         "baseHP": 100,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 69,
+        "growthATK": 69,
+        "growthMAG": 0,
         "growthHP": 12,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1110",
-        "description": "Rare - MAG+575; HP+100;"
+        "description": 0
       },
       {
         "rank": 3,
         "icon": "ico_staff_gorgon3",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 720,
+        "baseATK": 720,
+        "baseMAG": 0,
         "baseHP": 120,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 50,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 115,
+        "growthATK": 115,
+        "growthMAG": 0,
         "growthHP": 19,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 4,
         "growthCRIT": 0,
         "id": "1110",
-        "description": "Excellent - MAG+720; HP+120; SPD+50;"
+        "description": 0
       }
     ]
   },
@@ -1173,7 +1173,7 @@
     "id": "1230",
     "name": "txtEquipKriss",
     "desc": "txtEquipDesKriss",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "elf",
@@ -1183,67 +1183,67 @@
         "rank": 1,
         "icon": "ico_kriss_kriss1",
         "maxLevel": 6,
-        "baseATK": 120,
-        "baseMAG": 300,
+        "baseATK": 300,
+        "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 24,
+        "growthATK": 24,
+        "growthMAG": 0,
         "growthHP": 0,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1230",
-        "description": "Normal - ATK+120; MAG+300;"
+        "description": 0
       },
       {
         "rank": 2,
         "icon": "ico_kriss_kriss2",
         "maxLevel": 6,
-        "baseATK": 240,
-        "baseMAG": 375,
+        "baseATK": 375,
+        "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 300,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 45,
+        "growthATK": 45,
+        "growthMAG": 0,
         "growthHP": 0,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 18,
         "growthCRIT": 0,
         "id": "1230",
-        "description": "Rare - ATK+240; MAG+375; SPD+300;"
+        "description": 0
       },
       {
         "rank": 3,
         "icon": "ico_kriss_kriss3",
         "maxLevel": 6,
-        "baseATK": 360,
-        "baseMAG": 450,
+        "baseATK": 450,
+        "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 400,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 19,
-        "growthMAG": 72,
+        "growthATK": 72,
+        "growthMAG": 0,
         "growthHP": 0,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 32,
         "growthCRIT": 0,
         "id": "1230",
-        "description": "Excellent - ATK+360; MAG+450; SPD+400;"
+        "description": 0
       }
     ]
   },
@@ -1251,7 +1251,7 @@
     "id": "2000",
     "name": "txtEquipLeatherArmor",
     "desc": "txtEquipDesLeatherArmor",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Armor",
     "optionType": "Defensive",
     "heroClass": "knight",
@@ -1265,19 +1265,19 @@
         "baseMAG": 0,
         "baseHP": 600,
         "baseDEF": 50,
-        "baseRES": 80,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 0,
-        "growthDEF": 8,
-        "growthRES": 32,
+        "growthDEF": 20,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2000",
-        "description": "Normal - HP+600; DEF+50; RES+80;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -1287,19 +1287,19 @@
         "baseMAG": 0,
         "baseHP": 800,
         "baseDEF": 70,
-        "baseRES": 120,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 0,
-        "growthDEF": 16,
-        "growthRES": 72,
+        "growthDEF": 60,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2000",
-        "description": "Rare - HP+800; DEF+70; RES+120;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -1309,19 +1309,19 @@
         "baseMAG": 0,
         "baseHP": 1000,
         "baseDEF": 100,
-        "baseRES": 160,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 29,
-        "growthDEF": 32,
-        "growthRES": 128,
+        "growthDEF": 80,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2000",
-        "description": "Excellent - HP+1000; DEF+100; RES+160;"
+        "description": 0
       }
     ]
   },
@@ -1329,7 +1329,7 @@
     "id": "1700",
     "name": "txtEquipBattleScepter",
     "desc": "txtEquipDesBattleScepter",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "lord",
@@ -1355,7 +1355,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1700",
-        "description": "Normal - ATK+250;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -1377,7 +1377,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1700",
-        "description": "Rare - ATK+330; HP+400;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -1399,7 +1399,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1700",
-        "description": "Excellent - ATK+480; HP+600; DEF+200;"
+        "description": 0
       }
     ]
   },
@@ -1407,7 +1407,7 @@
     "id": "1500",
     "name": "txtEquipAncientStick",
     "desc": "txtEquipDesAncientStick",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "summoner",
@@ -1417,67 +1417,67 @@
         "rank": 1,
         "icon": "ico_stick_ancient1",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 200,
+        "baseATK": 200,
+        "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 38,
+        "growthATK": 38,
+        "growthMAG": 0,
         "growthHP": 0,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1500",
-        "description": "Normal - MAG+200;"
+        "description": 0
       },
       {
         "rank": 2,
         "icon": "ico_stick_ancient2",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 300,
+        "baseATK": 300,
+        "baseMAG": 0,
         "baseHP": 150,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 72,
+        "growthATK": 72,
+        "growthMAG": 0,
         "growthHP": 18,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1500",
-        "description": "Rare - MAG+300; HP+150;"
+        "description": 0
       },
       {
         "rank": 3,
         "icon": "ico_stick_ancient3",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 450,
+        "baseATK": 450,
+        "baseMAG": 0,
         "baseHP": 220,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 60,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 60,
+        "growthATK": 60,
+        "growthMAG": 0,
         "growthHP": 36,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 10,
         "growthCRIT": 0,
         "id": "1500",
-        "description": "Excellent - MAG+450; HP+220; SPD+60;"
+        "description": 0
       }
     ]
   },
@@ -1485,7 +1485,7 @@
     "id": "2710",
     "name": "txtEquipHurricaneArmor",
     "desc": "txtEquipDesHurricaneArmor",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Armor",
     "optionType": "Defensive",
     "heroClass": "gladiator",
@@ -1499,19 +1499,19 @@
         "baseMAG": 0,
         "baseHP": 1550,
         "baseDEF": 95,
-        "baseRES": 155,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 104,
-        "growthDEF": 13,
-        "growthRES": 41,
+        "growthDEF": 41,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2710",
-        "description": "Normal - HP+1550; DEF+95; RES+155;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -1521,19 +1521,19 @@
         "baseMAG": 0,
         "baseHP": 1800,
         "baseDEF": 125,
-        "baseRES": 210,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 186,
-        "growthDEF": 27,
-        "growthRES": 81,
+        "growthDEF": 81,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2710",
-        "description": "Rare - HP+1800; DEF+125; RES+210;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -1543,19 +1543,19 @@
         "baseMAG": 0,
         "baseHP": 2400,
         "baseDEF": 155,
-        "baseRES": 290,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 304,
-        "growthDEF": 48,
-        "growthRES": 150,
+        "growthDEF": 150,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2710",
-        "description": "Excellent - HP+2400; DEF+155; RES+290;"
+        "description": 0
       }
     ]
   },
@@ -1563,7 +1563,7 @@
     "id": "1620",
     "name": "txtEquipPrincieLancer1",
     "desc": "txtEquipDesPrincieLancer1",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "lancer",
@@ -1589,7 +1589,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1620",
-        "description": "Normal - ATK+820;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -1611,7 +1611,7 @@
         "growthSPD": 9,
         "growthCRIT": 0,
         "id": "1620",
-        "description": "Rare - ATK+1025; SPD+150;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -1633,7 +1633,7 @@
         "growthSPD": 16,
         "growthCRIT": 0,
         "id": "1620",
-        "description": "Excellent - ATK+1300; DEF+500; SPD+200;"
+        "description": 0
       }
     ]
   },
@@ -1641,7 +1641,7 @@
     "id": "1300",
     "name": "txtEquipBronzeClaw",
     "desc": "txtEquipDesBronzeClaw",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "fighter",
@@ -1667,7 +1667,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1300",
-        "description": "Normal - ATK+360;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -1689,7 +1689,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1300",
-        "description": "Rare - ATK+450; DEF+100;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -1711,7 +1711,7 @@
         "growthSPD": 7,
         "growthCRIT": 0,
         "id": "1300",
-        "description": "Excellent - ATK+570; DEF+130; SPD+90;"
+        "description": 0
       }
     ]
   },
@@ -1719,7 +1719,7 @@
     "id": "2510",
     "name": "txtEquipAdamantinArmor",
     "desc": "txtEquipDesAdamantinArmor",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Armor",
     "optionType": "Defensive",
     "heroClass": "lord",
@@ -1733,19 +1733,19 @@
         "baseMAG": 0,
         "baseHP": 1400,
         "baseDEF": 30,
-        "baseRES": 150,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 112,
-        "growthDEF": 6,
-        "growthRES": 45,
+        "growthDEF": 45,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2510",
-        "description": "Normal - HP+1400; DEF+30; RES+150;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -1755,19 +1755,19 @@
         "baseMAG": 0,
         "baseHP": 1700,
         "baseDEF": 70,
-        "baseRES": 250,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 204,
-        "growthDEF": 21,
-        "growthRES": 113,
+        "growthDEF": 113,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2510",
-        "description": "Rare - HP+1700; DEF+70; RES+250;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -1777,19 +1777,19 @@
         "baseMAG": 0,
         "baseHP": 2100,
         "baseDEF": 110,
-        "baseRES": 350,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 336,
-        "growthDEF": 44,
-        "growthRES": 210,
+        "growthDEF": 160,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2510",
-        "description": "Excellent - HP+2100; DEF+110; RES+350;"
+        "description": 0
       }
     ]
   },
@@ -1797,7 +1797,7 @@
     "id": "1420",
     "name": "txtEquipCrystalSword",
     "desc": "txtEquipDesCrystalSword",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "gladiator",
@@ -1823,14 +1823,14 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1420",
-        "description": "Normal - ATK+1080;"
+        "description": 0
       },
       {
         "rank": 2,
         "icon": "ico_sword_crystal2",
         "maxLevel": 6,
         "baseATK": 1350,
-        "baseMAG": 500,
+        "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 0,
         "baseRES": 0,
@@ -1838,21 +1838,21 @@
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 162,
-        "growthMAG": 60,
+        "growthMAG": 0,
         "growthHP": 0,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1420",
-        "description": "Rare - ATK+1350; MAG+500;"
+        "description": 0
       },
       {
         "rank": 3,
         "icon": "ico_sword_crystal3",
         "maxLevel": 6,
         "baseATK": 1700,
-        "baseMAG": 700,
+        "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 500,
         "baseRES": 0,
@@ -1860,14 +1860,14 @@
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 272,
-        "growthMAG": 168,
+        "growthMAG": 0,
         "growthHP": 0,
         "growthDEF": 80,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1420",
-        "description": "Excellent - ATK+1700; MAG+700; DEF+500;"
+        "description": 0
       }
     ]
   },
@@ -1875,7 +1875,7 @@
     "id": "3400",
     "name": "txtEquipDragonRing",
     "desc": "txtEquipDesDragonRing",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Ring",
     "optionType": "Offensive",
     "heroClass": "all",
@@ -1901,7 +1901,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "3400",
-        "description": "Normal - ATK+150;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -1923,7 +1923,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "3400",
-        "description": "Rare - ATK+250;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -1945,7 +1945,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "3400",
-        "description": "Excellent - ATK+350;"
+        "description": 0
       }
     ]
   },
@@ -1953,7 +1953,7 @@
     "id": "1100",
     "name": "txtEquipSerpentStaff",
     "desc": "txtEquipDesSerpentStaff",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "wizard",
@@ -1963,8 +1963,8 @@
         "rank": 1,
         "icon": "ico_staff_serpent1",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 200,
+        "baseATK": 200,
+        "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 0,
         "baseRES": 0,
@@ -1972,21 +1972,21 @@
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
-        "growthMAG": 12,
+        "growthMAG": 0,
         "growthHP": 0,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1100",
-        "description": "Normal - MAG+200;"
+        "description": 0
       },
       {
         "rank": 2,
         "icon": "ico_staff_serpent2",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 300,
+        "baseATK": 300,
+        "baseMAG": 0,
         "baseHP": 50,
         "baseDEF": 0,
         "baseRES": 0,
@@ -1994,36 +1994,36 @@
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
-        "growthMAG": 40,
+        "growthMAG": 0,
         "growthHP": 6,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1100",
-        "description": "Rare - MAG+300; HP+50;"
+        "description": 0
       },
       {
         "rank": 3,
         "icon": "ico_staff_serpent3",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 480,
+        "baseATK": 480,
+        "baseMAG": 0,
         "baseHP": 80,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 40,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 80,
+        "growthATK": 80,
+        "growthMAG": 0,
         "growthHP": 8,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 4,
         "growthCRIT": 0,
         "id": "1100",
-        "description": "Excellent - MAG+480; HP+80; SPD+40;"
+        "description": 0
       }
     ]
   },
@@ -2031,7 +2031,7 @@
     "id": "2310",
     "name": "txtEquipRedWingArmor",
     "desc": "txtEquipDesRedWingArmor",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Armor",
     "optionType": "Defensive",
     "heroClass": "summoner",
@@ -2045,19 +2045,19 @@
         "baseMAG": 0,
         "baseHP": 1300,
         "baseDEF": 35,
-        "baseRES": 210,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 104,
-        "growthDEF": 7,
-        "growthRES": 63,
+        "growthDEF": 63,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2310",
-        "description": "Normal - HP+1300; DEF+35; RES+210;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -2067,19 +2067,19 @@
         "baseMAG": 0,
         "baseHP": 1600,
         "baseDEF": 80,
-        "baseRES": 350,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 192,
-        "growthDEF": 24,
-        "growthRES": 158,
+        "growthDEF": 158,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2310",
-        "description": "Rare - HP+1600; DEF+80; RES+350;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -2089,19 +2089,19 @@
         "baseMAG": 0,
         "baseHP": 2010,
         "baseDEF": 125,
-        "baseRES": 500,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 322,
-        "growthDEF": 50,
-        "growthRES": 300,
+        "growthDEF": 300,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2310",
-        "description": "Excellent - HP+2010; DEF+125; RES+500;"
+        "description": 0
       }
     ]
   },
@@ -2109,7 +2109,7 @@
     "id": "1000",
     "name": "txtEquipShortSword",
     "desc": "txtEquipDesShortSword",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "knight",
@@ -2135,7 +2135,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1000",
-        "description": "Normal - ATK+80;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -2157,7 +2157,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1000",
-        "description": "Rare - ATK+120;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -2179,7 +2179,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1000",
-        "description": "Excellent - ATK+150;"
+        "description": 0
       }
     ]
   },
@@ -2187,7 +2187,7 @@
     "id": "2210",
     "name": "txtEquipGuardianArmor",
     "desc": "txtEquipDesGuardianArmor",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Armor",
     "optionType": "Defensive",
     "heroClass": "elf",
@@ -2201,19 +2201,19 @@
         "baseMAG": 0,
         "baseHP": 1100,
         "baseDEF": 35,
-        "baseRES": 360,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 88,
-        "growthDEF": 7,
-        "growthRES": 108,
+        "growthDEF": 80,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2210",
-        "description": "Normal - HP+1100; DEF+35; RES+360;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -2223,19 +2223,19 @@
         "baseMAG": 0,
         "baseHP": 1300,
         "baseDEF": 80,
-        "baseRES": 500,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 156,
-        "growthDEF": 24,
-        "growthRES": 225,
+        "growthDEF": 120,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2210",
-        "description": "Rare - HP+1300; DEF+80; RES+500;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -2245,19 +2245,19 @@
         "baseMAG": 0,
         "baseHP": 1600,
         "baseDEF": 130,
-        "baseRES": 750,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 256,
-        "growthDEF": 52,
-        "growthRES": 450,
+        "growthDEF": 160,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2210",
-        "description": "Excellent - HP+1600; DEF+130; RES+750;"
+        "description": 0
       }
     ]
   },
@@ -2265,7 +2265,7 @@
     "id": "1120",
     "name": "txtEquipLegendaryStaff",
     "desc": "txtEquipDesLegendaryStaff",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "wizard",
@@ -2275,67 +2275,67 @@
         "rank": 1,
         "icon": "ico_staff_legendary1",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 1050,
+        "baseATK": 1050,
+        "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 84,
+        "growthATK": 84,
+        "growthMAG": 0,
         "growthHP": 0,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1120",
-        "description": "Normal - MAG+1050;"
+        "description": 0
       },
       {
         "rank": 2,
         "icon": "ico_staff_legendary2",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 1400,
+        "baseATK": 1400,
+        "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 120,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 168,
+        "growthATK": 168,
+        "growthMAG": 0,
         "growthHP": 0,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 7,
         "growthCRIT": 0,
         "id": "1120",
-        "description": "Rare - MAG+1400; SPD+120;"
+        "description": 0
       },
       {
         "rank": 3,
         "icon": "ico_staff_legendary3",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 1750,
+        "baseATK": 1750,
+        "baseMAG": 0,
         "baseHP": 0,
-        "baseDEF": 0,
-        "baseRES": 300,
+        "baseDEF": 300,
+        "baseRES": 0,
         "baseSPD": 140,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 280,
+        "growthATK": 280,
+        "growthMAG": 0,
         "growthHP": 0,
-        "growthDEF": 0,
-        "growthRES": 48,
+        "growthDEF": 48,
+        "growthRES": 0,
         "growthSPD": 11,
         "growthCRIT": 0,
         "id": "1120",
-        "description": "Excellent - MAG+1750; RES+300; SPD+140;"
+        "description": 0
       }
     ]
   },
@@ -2343,7 +2343,7 @@
     "id": "3100",
     "name": "txtEquipWizardRing",
     "desc": "txtEquipDesWizardRing",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Ring",
     "optionType": "Offensive",
     "heroClass": "all",
@@ -2353,67 +2353,67 @@
         "rank": 1,
         "icon": "ico_ring_wizard1",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 112,
+        "baseATK": 112,
+        "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 18,
+        "growthATK": 18,
+        "growthMAG": 0,
         "growthHP": 0,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "3100",
-        "description": "Normal - MAG+112;"
+        "description": 0
       },
       {
         "rank": 2,
         "icon": "ico_ring_wizard2",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 225,
+        "baseATK": 225,
+        "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 36,
+        "growthATK": 36,
+        "growthMAG": 0,
         "growthHP": 0,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "3100",
-        "description": "Rare - MAG+225;"
+        "description": 0
       },
       {
         "rank": 3,
         "icon": "ico_ring_wizard3",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 450,
+        "baseATK": 450,
+        "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 72,
+        "growthATK": 72,
+        "growthMAG": 0,
         "growthHP": 0,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "3100",
-        "description": "Excellent - MAG+450;"
+        "description": 0
       }
     ]
   },
@@ -2421,7 +2421,7 @@
     "id": "2010",
     "name": "txtEquipDragonArmor",
     "desc": "txtEquipDesDragonArmor",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Armor",
     "optionType": "Defensive",
     "heroClass": "knight",
@@ -2435,19 +2435,19 @@
         "baseMAG": 0,
         "baseHP": 1200,
         "baseDEF": 120,
-        "baseRES": 180,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 96,
-        "growthDEF": 16,
-        "growthRES": 54,
+        "growthDEF": 30,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2010",
-        "description": "Normal - HP+1200; DEF+120; RES+180;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -2457,19 +2457,19 @@
         "baseMAG": 0,
         "baseHP": 1500,
         "baseDEF": 150,
-        "baseRES": 220,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 180,
-        "growthDEF": 30,
-        "growthRES": 99,
+        "growthDEF": 60,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2010",
-        "description": "Rare - HP+1500; DEF+150; RES+220;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -2479,19 +2479,19 @@
         "baseMAG": 0,
         "baseHP": 1875,
         "baseDEF": 200,
-        "baseRES": 270,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 300,
-        "growthDEF": 50,
-        "growthRES": 162,
+        "growthDEF": 90,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2010",
-        "description": "Excellent - HP+1875; DEF+200; RES+270;"
+        "description": 0
       }
     ]
   },
@@ -2499,7 +2499,7 @@
     "id": "1710",
     "name": "txtEquipGreatScepter",
     "desc": "txtEquipDesGreatScepter",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "lord",
@@ -2525,7 +2525,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1710",
-        "description": "Normal - ATK+520;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -2547,7 +2547,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1710",
-        "description": "Rare - ATK+650; HP+650;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -2569,7 +2569,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1710",
-        "description": "Excellent - ATK+900; HP+800; DEF+400;"
+        "description": 0
       }
     ]
   },
@@ -2577,7 +2577,7 @@
     "id": "2600",
     "name": "txtEquipSacredFireArmor",
     "desc": "txtEquipDesSacredFireArmor",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Armor",
     "optionType": "Defensive",
     "heroClass": "fighter",
@@ -2591,19 +2591,19 @@
         "baseMAG": 0,
         "baseHP": 1300,
         "baseDEF": 65,
-        "baseRES": 135,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 104,
-        "growthDEF": 13,
-        "growthRES": 41,
+        "growthDEF": 41,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2600",
-        "description": "Normal - HP+1300; DEF+65; RES+135;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -2613,19 +2613,19 @@
         "baseMAG": 0,
         "baseHP": 1550,
         "baseDEF": 90,
-        "baseRES": 180,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 186,
-        "growthDEF": 27,
-        "growthRES": 81,
+        "growthDEF": 81,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2600",
-        "description": "Rare - HP+1550; DEF+90; RES+180;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -2635,19 +2635,19 @@
         "baseMAG": 0,
         "baseHP": 1900,
         "baseDEF": 120,
-        "baseRES": 250,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 304,
-        "growthDEF": 48,
-        "growthRES": 150,
+        "growthDEF": 150,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2600",
-        "description": "Excellent - HP+1900; DEF+120; RES+250;"
+        "description": 0
       }
     ]
   },
@@ -2655,7 +2655,7 @@
     "id": "1510",
     "name": "txtEquipRedwingStick",
     "desc": "txtEquipDesRedwingStick",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "summoner",
@@ -2665,67 +2665,67 @@
         "rank": 1,
         "icon": "ico_stick_redwing1",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 480,
+        "baseATK": 480,
+        "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 38,
+        "growthATK": 38,
+        "growthMAG": 0,
         "growthHP": 0,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1510",
-        "description": "Normal - MAG+480;"
+        "description": 0
       },
       {
         "rank": 2,
         "icon": "ico_stick_redwing2",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 600,
+        "baseATK": 600,
+        "baseMAG": 0,
         "baseHP": 300,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 72,
+        "growthATK": 72,
+        "growthMAG": 0,
         "growthHP": 36,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1510",
-        "description": "Rare - MAG+600; HP+300;"
+        "description": 0
       },
       {
         "rank": 3,
         "icon": "ico_stick_redwing3",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 750,
+        "baseATK": 750,
+        "baseMAG": 0,
         "baseHP": 450,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 120,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 120,
+        "growthATK": 120,
+        "growthMAG": 0,
         "growthHP": 72,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 10,
         "growthCRIT": 0,
         "id": "1510",
-        "description": "Excellent - MAG+750; HP+450; SPD+120;"
+        "description": 0
       }
     ]
   },
@@ -2733,7 +2733,7 @@
     "id": "2400",
     "name": "txtEquipRobustArmor",
     "desc": "txtEquipDesRobustArmor",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Armor",
     "optionType": "Defensive",
     "heroClass": "lancer",
@@ -2747,19 +2747,19 @@
         "baseMAG": 0,
         "baseHP": 620,
         "baseDEF": 15,
-        "baseRES": 100,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 50,
-        "growthDEF": 3,
-        "growthRES": 30,
+        "growthDEF": 30,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2400",
-        "description": "Normal - HP+620; DEF+15; RES+100;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -2769,19 +2769,19 @@
         "baseMAG": 0,
         "baseHP": 1000,
         "baseDEF": 50,
-        "baseRES": 210,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 120,
-        "growthDEF": 15,
-        "growthRES": 95,
+        "growthDEF": 95,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2400",
-        "description": "Rare - HP+1000; DEF+50; RES+210;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -2791,19 +2791,19 @@
         "baseMAG": 0,
         "baseHP": 1450,
         "baseDEF": 110,
-        "baseRES": 260,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 232,
-        "growthDEF": 44,
-        "growthRES": 156,
+        "growthDEF": 156,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2400",
-        "description": "Excellent - HP+1450; DEF+110; RES+260;"
+        "description": 0
       }
     ]
   },
@@ -2811,7 +2811,7 @@
     "id": "1310",
     "name": "txtEquipGoldenClaw",
     "desc": "txtEquipDesGoldenClaw",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "fighter",
@@ -2837,7 +2837,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1310",
-        "description": "Normal - ATK+800;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -2859,7 +2859,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1310",
-        "description": "Rare - ATK+1000; HP+500;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -2881,7 +2881,7 @@
         "growthSPD": 8,
         "growthCRIT": 0,
         "id": "1310",
-        "description": "Excellent - ATK+1250; HP+750; SPD+100;"
+        "description": 0
       }
     ]
   },
@@ -2889,7 +2889,7 @@
     "id": "2200",
     "name": "txtEquipSilkArmor",
     "desc": "txtEquipDesSilkArmor",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Armor",
     "optionType": "Defensive",
     "heroClass": "elf",
@@ -2903,19 +2903,19 @@
         "baseMAG": 0,
         "baseHP": 150,
         "baseDEF": 18,
-        "baseRES": 180,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 44,
-        "growthDEF": 4,
-        "growthRES": 60,
+        "growthDEF": 60,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2200",
-        "description": "Normal - HP+150; DEF+18; RES+180;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -2925,19 +2925,19 @@
         "baseMAG": 0,
         "baseHP": 350,
         "baseDEF": 40,
-        "baseRES": 250,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 78,
-        "growthDEF": 12,
-        "growthRES": 120,
+        "growthDEF": 80,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2200",
-        "description": "Rare - HP+350; DEF+40; RES+250;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -2947,19 +2947,19 @@
         "baseMAG": 0,
         "baseHP": 550,
         "baseDEF": 65,
-        "baseRES": 400,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 128,
-        "growthDEF": 26,
-        "growthRES": 225,
+        "growthDEF": 150,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2200",
-        "description": "Excellent - HP+550; DEF+65; RES+400;"
+        "description": 0
       }
     ]
   },
@@ -2967,7 +2967,7 @@
     "id": "4000",
     "name": "txtEquipFirePendant",
     "desc": "txtEquipDesFirePendant",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Pendant",
     "optionType": "Defensive",
     "heroClass": "all",
@@ -2980,20 +2980,20 @@
         "baseATK": 80,
         "baseMAG": 0,
         "baseHP": 0,
-        "baseDEF": 0,
-        "baseRES": 60,
+        "baseDEF": 50,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 6,
         "growthMAG": 0,
         "growthHP": 0,
-        "growthDEF": 0,
-        "growthRES": 5,
+        "growthDEF": 5,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "4000",
-        "description": "Normal - ATK+80; RES+60;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -3002,20 +3002,20 @@
         "baseATK": 120,
         "baseMAG": 0,
         "baseHP": 0,
-        "baseDEF": 20,
-        "baseRES": 100,
+        "baseDEF": 80,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 15,
         "growthMAG": 0,
         "growthHP": 0,
-        "growthDEF": 5,
-        "growthRES": 15,
+        "growthDEF": 15,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "4000",
-        "description": "Rare - ATK+120; DEF+20; RES+100;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -3024,20 +3024,20 @@
         "baseATK": 165,
         "baseMAG": 0,
         "baseHP": 0,
-        "baseDEF": 40,
-        "baseRES": 160,
+        "baseDEF": 120,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 26,
         "growthMAG": 0,
         "growthHP": 0,
-        "growthDEF": 6,
-        "growthRES": 26,
+        "growthDEF": 26,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "4000",
-        "description": "Excellent - ATK+165; DEF+40; RES+160;"
+        "description": 0
       }
     ]
   },
@@ -3045,7 +3045,7 @@
     "id": "4200",
     "name": "txtEquipEarthPendant",
     "desc": "txtEquipDesEarthPendant",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Pendant",
     "optionType": "Defensive",
     "heroClass": "all",
@@ -3058,20 +3058,20 @@
         "baseATK": 105,
         "baseMAG": 0,
         "baseHP": 0,
-        "baseDEF": 0,
-        "baseRES": 100,
+        "baseDEF": 60,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 8,
         "growthMAG": 0,
         "growthHP": 0,
-        "growthDEF": 0,
-        "growthRES": 8,
+        "growthDEF": 8,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "4200",
-        "description": "Normal - ATK+105; RES+100;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -3080,20 +3080,20 @@
         "baseATK": 165,
         "baseMAG": 0,
         "baseHP": 0,
-        "baseDEF": 20,
-        "baseRES": 150,
+        "baseDEF": 80,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 21,
         "growthMAG": 0,
         "growthHP": 0,
-        "growthDEF": 8,
-        "growthRES": 20,
+        "growthDEF": 20,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "4200",
-        "description": "Rare - ATK+165; DEF+20; RES+150;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -3102,20 +3102,20 @@
         "baseATK": 210,
         "baseMAG": 0,
         "baseHP": 0,
-        "baseDEF": 40,
-        "baseRES": 200,
+        "baseDEF": 130,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 42,
         "growthMAG": 0,
         "growthHP": 0,
-        "growthDEF": 8,
+        "growthDEF": 40,
         "growthRES": 40,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "4200",
-        "description": "Excellent - ATK+210; DEF+40; RES+200;"
+        "description": 0
       }
     ]
   },
@@ -3123,7 +3123,7 @@
     "id": "2100",
     "name": "txtEquipBoneArmor",
     "desc": "txtEquipDesBoneArmor",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Armor",
     "optionType": "Defensive",
     "heroClass": "wizard",
@@ -3137,19 +3137,19 @@
         "baseMAG": 0,
         "baseHP": 100,
         "baseDEF": 25,
-        "baseRES": 210,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 46,
-        "growthDEF": 6,
-        "growthRES": 65,
+        "growthDEF": 50,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2100",
-        "description": "Normal - HP+100; DEF+25; RES+210;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -3159,19 +3159,19 @@
         "baseMAG": 0,
         "baseHP": 250,
         "baseDEF": 38,
-        "baseRES": 300,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 81,
-        "growthDEF": 12,
-        "growthRES": 135,
+        "growthDEF": 120,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2100",
-        "description": "Rare - HP+250; DEF+38; RES+300;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -3181,19 +3181,19 @@
         "baseMAG": 0,
         "baseHP": 400,
         "baseDEF": 50,
-        "baseRES": 400,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 120,
-        "growthDEF": 20,
-        "growthRES": 240,
+        "growthDEF": 150,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2100",
-        "description": "Excellent - HP+400; DEF+50; RES+400;"
+        "description": 0
       }
     ]
   },
@@ -3201,7 +3201,7 @@
     "id": "1010",
     "name": "txtEquipDoubleBlade",
     "desc": "txtEquipDesDoubleBlade",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "knight",
@@ -3227,7 +3227,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1010",
-        "description": "Normal - ATK+260;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -3249,7 +3249,7 @@
         "growthSPD": 3,
         "growthCRIT": 0,
         "id": "1010",
-        "description": "Rare - ATK+325; SPD+50;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -3271,7 +3271,7 @@
         "growthSPD": 8,
         "growthCRIT": 0,
         "id": "1010",
-        "description": "Excellent - ATK+410; DEF+150; SPD+100;"
+        "description": 0
       }
     ]
   },
@@ -3279,7 +3279,7 @@
     "id": "1600",
     "name": "txtEquipRobustLancer",
     "desc": "txtEquipDesRobustLancer",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "lancer",
@@ -3305,7 +3305,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1600",
-        "description": "Normal - ATK+200;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -3327,7 +3327,7 @@
         "growthSPD": 3,
         "growthCRIT": 0,
         "id": "1600",
-        "description": "Rare - ATK+250; SPD+60;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -3349,7 +3349,7 @@
         "growthSPD": 5,
         "growthCRIT": 0,
         "id": "1600",
-        "description": "Excellent - ATK+400; DEF+200; SPD+80;"
+        "description": 0
       }
     ]
   },
@@ -3357,7 +3357,7 @@
     "id": "1720",
     "name": "txtEquipMasterScepter",
     "desc": "txtEquipDesMasterScepter",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "lord",
@@ -3383,7 +3383,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1720",
-        "description": "Normal - ATK+1210;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -3405,7 +3405,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1720",
-        "description": "Rare - ATK+1550; HP+1200;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -3414,20 +3414,20 @@
         "baseATK": 2000,
         "baseMAG": 0,
         "baseHP": 1800,
-        "baseDEF": 0,
-        "baseRES": 900,
+        "baseDEF": 900,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 320,
         "growthMAG": 0,
         "growthHP": 288,
-        "growthDEF": 0,
-        "growthRES": 144,
+        "growthDEF": 96,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1720",
-        "description": "Excellent - ATK+2000; HP+1800; RES+900;"
+        "description": 0
       }
     ]
   },
@@ -3435,7 +3435,7 @@
     "id": "1400",
     "name": "txtEquipBlade",
     "desc": "txtEquipDesBlade",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "gladiator",
@@ -3461,7 +3461,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1400",
-        "description": "Normal - ATK+260;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -3483,7 +3483,7 @@
         "growthSPD": 3,
         "growthCRIT": 0,
         "id": "1400",
-        "description": "Rare - ATK+325; SPD+50;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -3505,7 +3505,7 @@
         "growthSPD": 8,
         "growthCRIT": 0,
         "id": "1400",
-        "description": "Excellent - ATK+410; DEF+150; SPD+100;"
+        "description": 0
       }
     ]
   },
@@ -3513,7 +3513,7 @@
     "id": "2610",
     "name": "txtEquipStormZahardArmor",
     "desc": "txtEquipDesStormZahardArmor",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Armor",
     "optionType": "Defensive",
     "heroClass": "fighter",
@@ -3527,19 +3527,19 @@
         "baseMAG": 0,
         "baseHP": 1600,
         "baseDEF": 90,
-        "baseRES": 150,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 104,
-        "growthDEF": 13,
-        "growthRES": 41,
+        "growthDEF": 41,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2610",
-        "description": "Normal - HP+1600; DEF+90; RES+150;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -3549,19 +3549,19 @@
         "baseMAG": 0,
         "baseHP": 2000,
         "baseDEF": 120,
-        "baseRES": 200,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 186,
-        "growthDEF": 27,
-        "growthRES": 81,
+        "growthDEF": 81,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2610",
-        "description": "Rare - HP+2000; DEF+120; RES+200;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -3571,19 +3571,19 @@
         "baseMAG": 0,
         "baseHP": 2500,
         "baseDEF": 150,
-        "baseRES": 300,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 304,
-        "growthDEF": 48,
-        "growthRES": 150,
+        "growthDEF": 150,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2610",
-        "description": "Excellent - HP+2500; DEF+150; RES+300;"
+        "description": 0
       }
     ]
   },
@@ -3591,7 +3591,7 @@
     "id": "1520",
     "name": "txtEquipRavenStick",
     "desc": "txtEquipDesRavenStick",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "summoner",
@@ -3601,67 +3601,67 @@
         "rank": 1,
         "icon": "ico_stick_raven1",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 980,
+        "baseATK": 980,
+        "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 78,
+        "growthATK": 78,
+        "growthMAG": 0,
         "growthHP": 0,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1520",
-        "description": "Normal - MAG+980;"
+        "description": 0
       },
       {
         "rank": 2,
         "icon": "ico_stick_raven2",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 1225,
+        "baseATK": 1225,
+        "baseMAG": 0,
         "baseHP": 0,
-        "baseDEF": 0,
-        "baseRES": 300,
+        "baseDEF": 300,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 147,
+        "growthATK": 147,
+        "growthMAG": 0,
         "growthHP": 0,
-        "growthDEF": 0,
-        "growthRES": 36,
+        "growthDEF": 36,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1520",
-        "description": "Rare - MAG+1225; RES+300;"
+        "description": 0
       },
       {
         "rank": 3,
         "icon": "ico_stick_raven3",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 1550,
+        "baseATK": 1550,
+        "baseMAG": 0,
         "baseHP": 600,
-        "baseDEF": 0,
-        "baseRES": 500,
+        "baseDEF": 500,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 248,
+        "growthATK": 248,
+        "growthMAG": 0,
         "growthHP": 96,
-        "growthDEF": 0,
-        "growthRES": 80,
+        "growthDEF": 80,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1520",
-        "description": "Excellent - MAG+1550; HP+600; RES+500;"
+        "description": 0
       }
     ]
   },
@@ -3669,7 +3669,7 @@
     "id": "1200",
     "name": "txtEquipWoodenBow",
     "desc": "txtEquipDesWoodenBow",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "elf",
@@ -3695,7 +3695,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1200",
-        "description": "Normal - ATK+800;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -3717,7 +3717,7 @@
         "growthSPD": 12,
         "growthCRIT": 0,
         "id": "1200",
-        "description": "Rare - ATK+1000; SPD+200;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -3739,7 +3739,7 @@
         "growthSPD": 20,
         "growthCRIT": 0,
         "id": "1200",
-        "description": "Excellent - ATK+1250; HP+400; SPD+250;"
+        "description": 0
       }
     ]
   },
@@ -3747,7 +3747,7 @@
     "id": "2410",
     "name": "txtEquipLapidArmor",
     "desc": "txtEquipDesLapidArmor",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Armor",
     "optionType": "Defensive",
     "heroClass": "lancer",
@@ -3761,19 +3761,19 @@
         "baseMAG": 0,
         "baseHP": 1200,
         "baseDEF": 75,
-        "baseRES": 130,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 96,
-        "growthDEF": 15,
-        "growthRES": 39,
+        "growthDEF": 30,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2410",
-        "description": "Normal - HP+1200; DEF+75; RES+130;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -3783,19 +3783,19 @@
         "baseMAG": 0,
         "baseHP": 1450,
         "baseDEF": 150,
-        "baseRES": 200,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 174,
-        "growthDEF": 45,
-        "growthRES": 90,
+        "growthDEF": 90,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2410",
-        "description": "Rare - HP+1450; DEF+150; RES+200;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -3805,19 +3805,19 @@
         "baseMAG": 0,
         "baseHP": 1800,
         "baseDEF": 250,
-        "baseRES": 300,
+        "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
         "growthATK": 0,
         "growthMAG": 0,
         "growthHP": 288,
-        "growthDEF": 100,
-        "growthRES": 180,
+        "growthDEF": 120,
+        "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "2410",
-        "description": "Excellent - HP+1800; DEF+250; RES+300;"
+        "description": 0
       }
     ]
   },
@@ -3825,7 +3825,7 @@
     "id": "1320",
     "name": "txtEquipSacredGlove",
     "desc": "txtEquipDesSacredGlove",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Weapon",
     "optionType": "Offensive",
     "heroClass": "fighter",
@@ -3851,7 +3851,7 @@
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "1320",
-        "description": "Normal - ATK+1550;"
+        "description": 0
       },
       {
         "rank": 2,
@@ -3873,7 +3873,7 @@
         "growthSPD": 7,
         "growthCRIT": 0,
         "id": "1320",
-        "description": "Rare - ATK+1950; SPD+120;"
+        "description": 0
       },
       {
         "rank": 3,
@@ -3895,7 +3895,7 @@
         "growthSPD": 12,
         "growthCRIT": 0,
         "id": "1320",
-        "description": "Excellent - ATK+2450; HP+1200; SPD+150;"
+        "description": 0
       }
     ]
   },
@@ -3903,7 +3903,7 @@
     "id": "3300",
     "name": "txtEquipMoonRing",
     "desc": "txtEquipDesMoonRing",
-    "rank": 1,
+    "maxRank": 3,
     "slot": "Ring",
     "optionType": "Offensive",
     "heroClass": "all",
@@ -3913,67 +3913,67 @@
         "rank": 1,
         "icon": "ico_ring_moon1",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 150,
+        "baseATK": 150,
+        "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 14,
+        "growthATK": 14,
+        "growthMAG": 0,
         "growthHP": 0,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "3300",
-        "description": "Normal - MAG+150;"
+        "description": 0
       },
       {
         "rank": 2,
         "icon": "ico_ring_moon2",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 250,
+        "baseATK": 250,
+        "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 28,
+        "growthATK": 28,
+        "growthMAG": 0,
         "growthHP": 0,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "3300",
-        "description": "Rare - MAG+250;"
+        "description": 0
       },
       {
         "rank": 3,
         "icon": "ico_ring_moon3",
         "maxLevel": 6,
-        "baseATK": 0,
-        "baseMAG": 350,
+        "baseATK": 350,
+        "baseMAG": 0,
         "baseHP": 0,
         "baseDEF": 0,
         "baseRES": 0,
         "baseSPD": 0,
         "baseCRIT": 0,
         "baseMPR": 0,
-        "growthATK": 0,
-        "growthMAG": 56,
+        "growthATK": 56,
+        "growthMAG": 0,
         "growthHP": 0,
         "growthDEF": 0,
         "growthRES": 0,
         "growthSPD": 0,
         "growthCRIT": 0,
         "id": "3300",
-        "description": "Excellent - MAG+350;"
+        "description": 0
       }
     ]
   }
