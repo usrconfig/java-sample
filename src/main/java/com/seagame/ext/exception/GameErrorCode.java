@@ -26,6 +26,7 @@ public enum GameErrorCode implements IErrorCode {
     NOT_ENOUGH_STAT_POINT("NOT_ENOUGH_STAT_POINT", 15),
     STAGE_NOT_FOUND("STAGE_NOT_FOUND", 16),
     NOT_ENOUGH_TICKET("NOT_ENOUGH_TICKET", 17),
+    NOT_ENOUGH_ENERGY("NOT_ENOUGH_ENERGY", 18),
 
 
     //Hero 1xx

@@ -39,7 +39,9 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
     private static final int REVENGE = 7;
     private static final int GET_OPPONENT_INFO = 8;
     private static final int GET_ARENA_RANKING = 9;
+
     private static final String ZEN_INDEX = "";
+    private static final int ARENA_ENERGY_COST = 1;
 
     private ArenaManager arenaManager;
     private QuestSystem questSystem;
@@ -170,11 +172,11 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
                 .findFirst().get();
         IQAntObject battleObj = QAntObject.newFromObject(arenaHistory);
         battleObj.removeElement("opponentInfo");
-        battleObj.putUtfString("opponent", arenaHistory.getOpponent());
 
         battle.remove(arenaHistory);
-        battleObj.putUtfString("your_team", battle.get(0).getOpponent());
 
+        params.putUtfString("opponent", arenaHistory.getOpponent());
+        params.putUtfString("your_team", battle.get(0).getOpponent());
         params.putQAntObject("battle", battleObj);
         send(params, user);
     }
@@ -196,7 +198,7 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
         QAntTracer.debug(this.getClass(), "------------ Arena fight finish -----------------");
         Boolean isWin = params.getBool("win");
         ArenaPower arenaPower = arenaManager.finish(user, isWin, params);
-        params.putQAntObject("arena_info", arenaPower.buildInfo());
+        params.putQAntObject("arena", arenaPower.buildInfo());
         send(params, user);
     }
 
@@ -209,6 +211,14 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
             responseError(user, GameErrorCode.NOT_ENOUGH_TICKET);
             return;
         }
+
+        try {
+            playerManager.useEnergy(user.getName(), ARENA_ENERGY_COST);
+        } catch (UseItemException e) {
+            responseError(user, GameErrorCode.NOT_ENOUGH_ENERGY);
+            return;
+        }
+
 
         ArenaPower attacker = arenaManager.getArenaPower(user.getName());
         ArenaPower defender = arenaManager.fight(user, attacker, params.getUtfString("id"));
@@ -242,7 +252,7 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
 
             IQAntArray opponentArr = QAntArray.newInstance();
 
-            opponents.stream().forEach(arenaPower -> {
+            opponents.forEach(arenaPower -> {
 
                 IQAntObject buildArenaInfo = arenaPower.buildInfo();
                 buildArenaInfo.putInt("winPoint",

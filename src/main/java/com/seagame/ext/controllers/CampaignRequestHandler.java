@@ -149,7 +149,7 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
             int energyCost = StageConfig.getInstance().getStage(idx).getEnergyCost();
             playerManager.useEnergy(user.getName(), energyCost);
         } catch (UseItemException e) {
-            responseError(user, GameErrorCode.NOT_ENOUGH_TICKET);
+            responseError(user, GameErrorCode.NOT_ENOUGH_ENERGY);
             return;
         }
         String playerId = user.getName();
