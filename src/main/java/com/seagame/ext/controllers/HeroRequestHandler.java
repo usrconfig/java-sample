@@ -97,6 +97,7 @@ public class HeroRequestHandler extends ZClientRequestHandler {
         }
 
         heroWithId.levelUp(1);
+        heroClassManager.save(heroWithId);
         params.putQAntObject("hero", heroWithId.buildInfo());
         send(params, user);
     }
@@ -127,6 +128,7 @@ public class HeroRequestHandler extends ZClientRequestHandler {
         }
 
         heroWithId.rankUp();
+        heroClassManager.save(heroWithId);
         params.putQAntObject("hero", heroWithId.buildInfo());
         send(params, user);
     }
