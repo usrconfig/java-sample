@@ -51,8 +51,6 @@ public class MonsterBase {
     private int SPD;
     @JacksonXmlProperty(localName = "CRIT", isAttribute = true)
     private int CRIT;
-    @JacksonXmlProperty(localName = "MP", isAttribute = true)
-    private int MP;
     @JacksonXmlProperty(localName = "MPR", isAttribute = true)
     private int MPR;
     @JacksonXmlProperty(localName = "Class", isAttribute = true)

@@ -32,8 +32,6 @@ public class HeroBase {
     private String Element;
     @JacksonXmlProperty(localName = "Ranged", isAttribute = true)
     private boolean Ranged;
-    @JacksonXmlProperty(localName = "AtkType", isAttribute = true)
-    private String AtkType;
     @JacksonXmlProperty(localName = "Active", isAttribute = true)
     private String Active;
     @JacksonXmlProperty(localName = "Spine", isAttribute = true)

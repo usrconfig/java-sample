@@ -41,7 +41,6 @@
             <xs:attribute name="MaxRank" type="xs:int"/>
             <xs:attribute name="Element" type="xs:string"/>
             <xs:attribute name="Ranged" type="xs:string"/>
-            <xs:attribute name="AtkType" type="xs:string"/>
             <xs:attribute name="Active" type="xs:string"/>
             <xs:attribute name="Spine" type="xs:string"/>
             <xs:attribute name="soundAct" type="xs:string"/>
@@ -65,7 +64,6 @@
             <xs:attribute name="baseRES" type="xs:int"/>
             <xs:attribute name="baseSPD" type="xs:int"/>
             <xs:attribute name="baseCRIT" type="xs:int"/>
-            <xs:attribute name="baseMP" type="xs:int"/>
             <xs:attribute name="baseMPR" type="xs:int"/>
             <xs:attribute name="growthATK" type="xs:int"/>
             <xs:attribute name="growthMAG" type="xs:int"/>

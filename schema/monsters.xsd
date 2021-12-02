@@ -24,7 +24,6 @@
             <xs:attribute name="RES" type="xs:int"/>
             <xs:attribute name="SPD" type="xs:int"/>
             <xs:attribute name="CRIT" type="xs:int"/>
-            <xs:attribute name="MP" type="xs:int"/>
             <xs:attribute name="MPR" type="xs:int"/>
             <xs:attribute name="Class" type="xs:string"/>
             <xs:attribute name="Ranged" type="xs:boolean"/>

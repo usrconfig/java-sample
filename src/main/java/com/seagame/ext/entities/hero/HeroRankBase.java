@@ -30,8 +30,6 @@ public class HeroRankBase {
     private int baseSPD;
     @JacksonXmlProperty(localName = "baseCRIT", isAttribute = true)
     private int baseCRIT;
-    @JacksonXmlProperty(localName = "baseMP", isAttribute = true)
-    private int baseMP;
     @JacksonXmlProperty(localName = "baseMPR", isAttribute = true)
     private int baseMPR;
     @JacksonXmlProperty(localName = "growthATK", isAttribute = true)

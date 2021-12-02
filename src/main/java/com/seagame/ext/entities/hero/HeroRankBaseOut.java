@@ -35,7 +35,6 @@ public class HeroRankBaseOut {
         stats.put("baseRES", heroRankBase.getBaseRES());
         stats.put("baseSPD", heroRankBase.getBaseSPD());
         stats.put("baseCRIT", heroRankBase.getBaseCRIT());
-        stats.put("baseMP", heroRankBase.getBaseMP());
         stats.put("baseMPR", heroRankBase.getBaseMPR());
         stats.put("growthATK", heroRankBase.getGrowthATK());
         stats.put("growthMAG", heroRankBase.getGrowthMAG());
