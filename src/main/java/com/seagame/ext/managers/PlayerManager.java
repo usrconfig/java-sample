@@ -385,10 +385,10 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
         String gameHeroId = user.getName();
         Player player = playerRepo.findPlayerById(gameHeroId);
         if (player != null) {
-//            List<HeroItem> currencyItemList = heroItemManager.getCurrencyItem(gameHeroId, player.getActiveHeroId());
-//            QAntTracer.debug(PlayerManager.class, currencyItemList.toString());
-//            player.setAssetMap(currencyItemList.stream()
-//                    .collect(Collectors.toMap(HeroItem::getIndex, HeroItem::getNo)));
+            List<HeroItem> currencyItemList = heroItemManager.getCurrencyItem(gameHeroId, player.getActiveHeroId());
+            QAntTracer.debug(PlayerManager.class, currencyItemList.toString());
+            player.setAssetMap(currencyItemList.stream()
+                    .collect(Collectors.toMap(HeroItem::getIndex, HeroItem::getNo)));
         }
 
         return player;
