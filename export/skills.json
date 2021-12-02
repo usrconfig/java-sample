@@ -310,6 +310,17 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "allied"
+          },
+          "effects": [
+            {
+              "type": "percentHP",
+              "value": 10
+            }
+          ]
+        },
         "id": "1010",
         "level": 1,
         "description": "txtZebanLeaderDesLV_1",
@@ -317,6 +328,17 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied"
+          },
+          "effects": [
+            {
+              "type": "percentHP",
+              "value": 20
+            }
+          ]
+        },
         "id": "1010",
         "level": 2,
         "description": "txtZebanLeaderDesLV_2",
@@ -324,6 +346,17 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied"
+          },
+          "effects": [
+            {
+              "type": "percentHP",
+              "value": 30
+            }
+          ]
+        },
         "id": "1010",
         "level": 3,
         "description": "txtZebanLeaderDesLV_3",
@@ -345,6 +378,18 @@
     "hitPosition": "center",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "self&allied",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "buffDEF",
+              "turn": 1
+            }
+          ]
+        },
         "id": "1011",
         "level": 1,
         "description": "txtZebanActiveDesLV_1",
@@ -352,6 +397,18 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self&allied",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "buffDEF",
+              "turn": 2
+            }
+          ]
+        },
         "id": "1011",
         "level": 2,
         "description": "txtZebanActiveDesLV_2",
@@ -359,6 +416,18 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self&allied",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "buffDEF",
+              "turn": 3
+            }
+          ]
+        },
         "id": "1011",
         "level": 3,
         "description": "txtZebanActiveDesLV_3",
@@ -384,6 +453,19 @@
     "hitPosition": "center",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.05,
+              "percentHP": 3
+            }
+          ]
+        },
         "id": "1012",
         "level": 1,
         "description": "txtZebanAutoDesLV_1",
@@ -391,6 +473,19 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.15,
+              "percentHP": 6
+            }
+          ]
+        },
         "id": "1012",
         "level": 2,
         "description": "txtZebanAutoDesLV_2",
@@ -398,6 +493,19 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.5,
+              "percentHP": 10
+            }
+          ]
+        },
         "id": "1012",
         "level": 3,
         "description": "txtZebanAutoDesLV_3",
@@ -422,6 +530,17 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": 15
+            }
+          ]
+        },
         "id": "1013",
         "level": 1,
         "description": "txtZebanPassiveDesLV_1",
@@ -429,6 +548,17 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": 25
+            }
+          ]
+        },
         "id": "1013",
         "level": 2,
         "description": "txtZebanPassiveDesLV_2",
@@ -436,6 +566,17 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": 35
+            }
+          ]
+        },
         "id": "1013",
         "level": 3,
         "description": "txtZebanPassiveDesLV_3",
@@ -455,6 +596,22 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "dark"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 5
+            },
+            {
+              "type": "percentHP",
+              "value": 5
+            }
+          ]
+        },
         "id": "1020",
         "level": 1,
         "description": "txtKaiLeaderDesLV_1",
@@ -462,6 +619,22 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "dark"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 10
+            },
+            {
+              "type": "percentHP",
+              "value": 10
+            }
+          ]
+        },
         "id": "1020",
         "level": 2,
         "description": "txtKaiLeaderDesLV_2",
@@ -469,6 +642,22 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "dark"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 15
+            },
+            {
+              "type": "percentHP",
+              "value": 15
+            }
+          ]
+        },
         "id": "1020",
         "level": 3,
         "description": "txtKaiLeaderDesLV_3",
@@ -490,6 +679,22 @@
     "hitPosition": "center",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.5
+            },
+            {
+              "type": "decover",
+              "turn": 3
+            }
+          ]
+        },
         "id": "1021",
         "level": 1,
         "description": "txtKaiActiveDesLV_1",
@@ -497,6 +702,22 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.8
+            },
+            {
+              "type": "decover",
+              "turn": 3
+            }
+          ]
+        },
         "id": "1021",
         "level": 2,
         "description": "txtKaiActiveDesLV_2",
@@ -504,6 +725,22 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 2.2
+            },
+            {
+              "type": "decover",
+              "turn": 3
+            }
+          ]
+        },
         "id": "1021",
         "level": 3,
         "description": "txtKaiActiveDesLV_3",
@@ -530,6 +767,24 @@
     "hitPosition": "center",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2,
+            "line": "back"
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.2
+            },
+            {
+              "type": "debuffATK",
+              "turn": 3,
+              "chance": 50
+            }
+          ]
+        },
         "id": "1022",
         "level": 1,
         "description": "txtKaiAutoDesLV_1",
@@ -537,6 +792,24 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2,
+            "line": "back"
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.6
+            },
+            {
+              "type": "debuffATK",
+              "turn": 3,
+              "chance": 50
+            }
+          ]
+        },
         "id": "1022",
         "level": 2,
         "description": "txtKaiAutoDesLV_2",
@@ -544,6 +817,24 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2,
+            "line": "back"
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.8
+            },
+            {
+              "type": "debuffATK",
+              "turn": 3,
+              "chance": 50
+            }
+          ]
+        },
         "id": "1022",
         "level": 3,
         "description": "txtKaiAutoDesLV_3",
@@ -568,6 +859,17 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "flatCRIT",
+              "value": 15
+            }
+          ]
+        },
         "id": "1023",
         "level": 1,
         "description": "txtKaiPassiveDesLV_1",
@@ -575,6 +877,17 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "flatCRIT",
+              "value": 25
+            }
+          ]
+        },
         "id": "1023",
         "level": 2,
         "description": "txtKaiPassiveDesLV_2",
@@ -582,6 +895,17 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "flatCRIT",
+              "value": 35
+            }
+          ]
+        },
         "id": "1023",
         "level": 3,
         "description": "txtKaiPassiveDesLV_3",
@@ -915,6 +1239,18 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "dark"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 15
+            }
+          ]
+        },
         "id": "2010",
         "level": 1,
         "description": "txtWinchyLeaderDesLV_1",
@@ -922,6 +1258,18 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "dark"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 20
+            }
+          ]
+        },
         "id": "2010",
         "level": 2,
         "description": "txtWinchyLeaderDesLV_2",
@@ -929,6 +1277,18 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "dark"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 25
+            }
+          ]
+        },
         "id": "2010",
         "level": 3,
         "description": "txtWinchyLeaderDesLV_3",
@@ -950,6 +1310,18 @@
     "hitPosition": "bottom",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "hex",
+              "turn": 2
+            }
+          ]
+        },
         "id": "2011",
         "level": 1,
         "description": "txtWinchyActiveDesLV_1",
@@ -957,6 +1329,18 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "hex",
+              "turn": 2
+            }
+          ]
+        },
         "id": "2011",
         "level": 2,
         "description": "txtWinchyActiveDesLV_2",
@@ -964,6 +1348,18 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "hex",
+              "turn": 3
+            }
+          ]
+        },
         "id": "2011",
         "level": 3,
         "description": "txtWinchyActiveDesLV_3",
@@ -990,6 +1386,18 @@
     "hitPosition": "center",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.2
+            }
+          ]
+        },
         "id": "2012",
         "level": 1,
         "description": "txtWinchyAutoDesLV_1",
@@ -997,6 +1405,18 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.6
+            }
+          ]
+        },
         "id": "2012",
         "level": 2,
         "description": "txtWinchyAutoDesLV_2",
@@ -1004,6 +1424,18 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 2.0
+            }
+          ]
+        },
         "id": "2012",
         "level": 3,
         "description": "txtWinchyAutoDesLV_3",
@@ -1030,6 +1462,17 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": -15
+            }
+          ]
+        },
         "id": "2013",
         "level": 1,
         "description": "txtWinchyPassiveDesLV_1",
@@ -1037,6 +1480,17 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": -20
+            }
+          ]
+        },
         "id": "2013",
         "level": 2,
         "description": "txtWinchyPassiveDesLV_2",
@@ -1044,6 +1498,17 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": -25
+            }
+          ]
+        },
         "id": "2013",
         "level": 3,
         "description": "txtWinchyPassiveDesLV_3",
@@ -1063,6 +1528,21 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "allied"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 5
+            },
+            {
+              "type": "percentDEF",
+              "value": 5
+            }
+          ]
+        },
         "id": "3000",
         "level": 1,
         "description": "txtErikaLeaderDesLV_1",
@@ -1070,6 +1550,21 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 10
+            },
+            {
+              "type": "percentDEF",
+              "value": 10
+            }
+          ]
+        },
         "id": "3000",
         "level": 2,
         "description": "txtErikaLeaderDesLV_2",
@@ -1077,6 +1572,21 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 15
+            },
+            {
+              "type": "percentDEF",
+              "value": 15
+            }
+          ]
+        },
         "id": "3000",
         "level": 3,
         "description": "txtErikaLeaderDesLV_3",
@@ -1098,6 +1608,23 @@
     "hitPosition": "bottom",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2,
+            "line": "back"
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.35
+            },
+            {
+              "type": "blind",
+              "turn": 2
+            }
+          ]
+        },
         "id": "3001",
         "level": 1,
         "description": "txtErikaActiveDesLV_1",
@@ -1105,6 +1632,23 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2,
+            "line": "back"
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.65
+            },
+            {
+              "type": "blind",
+              "turn": 2
+            }
+          ]
+        },
         "id": "3001",
         "level": 2,
         "description": "txtErikaActiveDesLV_2",
@@ -1112,6 +1656,23 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2,
+            "line": "back"
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.95
+            },
+            {
+              "type": "blind",
+              "turn": 3
+            }
+          ]
+        },
         "id": "3001",
         "level": 3,
         "description": "txtErikaActiveDesLV_3",
@@ -1142,6 +1703,22 @@
     "hitPosition": "center",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.25
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 2
+            }
+          ]
+        },
         "id": "3002",
         "level": 1,
         "description": "txtErikaAutoDesLV_1",
@@ -1149,6 +1726,22 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.55
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 2
+            }
+          ]
+        },
         "id": "3002",
         "level": 2,
         "description": "txtErikaAutoDesLV_2",
@@ -1156,6 +1749,22 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 2
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 3
+            }
+          ]
+        },
         "id": "3002",
         "level": 3,
         "description": "txtErikaAutoDesLV_3",
@@ -1180,6 +1789,17 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "flatCRIT",
+              "value": 10
+            }
+          ]
+        },
         "id": "3003",
         "level": 1,
         "description": "txtErikaPassiveDesLV_1",
@@ -1187,6 +1807,17 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "flatCRIT",
+              "value": 15
+            }
+          ]
+        },
         "id": "3003",
         "level": 2,
         "description": "txtErikaPassiveDesLV_2",
@@ -1194,6 +1825,17 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "flatCRIT",
+              "value": 20
+            }
+          ]
+        },
         "id": "3003",
         "level": 3,
         "description": "txtErikaPassiveDesLV_3",
@@ -1806,6 +2448,18 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "class": "elf"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 15
+            }
+          ]
+        },
         "id": "3030",
         "level": 1,
         "description": "txtLegolasLeaderDesLV_1",
@@ -1813,6 +2467,18 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "class": "elf"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 25
+            }
+          ]
+        },
         "id": "3030",
         "level": 2,
         "description": "txtLegolasLeaderDesLV_2",
@@ -1820,6 +2486,18 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "class": "elf"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 35
+            }
+          ]
+        },
         "id": "3030",
         "level": 3,
         "description": "txtLegolasLeaderDesLV_3",
@@ -1841,6 +2519,23 @@
     "hitPosition": "center",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.4
+            },
+            {
+              "type": "silence",
+              "turn": 3,
+              "chance": 40
+            }
+          ]
+        },
         "id": "3031",
         "level": 1,
         "description": "txtLegolasActiveDesLV_1",
@@ -1848,6 +2543,23 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.6
+            },
+            {
+              "type": "silence",
+              "turn": 3,
+              "chance": 60
+            }
+          ]
+        },
         "id": "3031",
         "level": 2,
         "description": "txtLegolasActiveDesLV_2",
@@ -1855,6 +2567,23 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.8
+            },
+            {
+              "type": "silence",
+              "turn": 3,
+              "chance": 70
+            }
+          ]
+        },
         "id": "3031",
         "level": 3,
         "description": "txtLegolasActiveDesLV_3",
@@ -1882,6 +2611,17 @@
     "hitPosition": "center",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "invisible",
+              "turn": 1
+            }
+          ]
+        },
         "id": "3032",
         "level": 1,
         "description": "txtLegolasAutoDesLV_1",
@@ -1889,6 +2629,17 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "invisible",
+              "turn": 2
+            }
+          ]
+        },
         "id": "3032",
         "level": 2,
         "description": "txtLegolasAutoDesLV_2",
@@ -1896,6 +2647,17 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "invisible",
+              "turn": 3
+            }
+          ]
+        },
         "id": "3032",
         "level": 3,
         "description": "txtLegolasAutoDesLV_3",
@@ -1917,6 +2679,17 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentBurnMP",
+              "value": 10
+            }
+          ]
+        },
         "id": "3033",
         "level": 1,
         "description": "txtLegolasPassiveDesLV_1",
@@ -1924,6 +2697,17 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentBurnMP",
+              "value": 15
+            }
+          ]
+        },
         "id": "3033",
         "level": 2,
         "description": "txtLegolasPassiveDesLV_2",
@@ -1931,6 +2715,17 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentBurnMP",
+              "value": 20
+            }
+          ]
+        },
         "id": "3033",
         "level": 3,
         "description": "txtLegolasPassiveDesLV_3",
@@ -2645,7 +3440,7 @@
               "multi": 1.3
             },
             {
-              "type": "dot",
+              "type": "bleed",
               "turn": 2,
               "chance": 50
             }
@@ -2669,7 +3464,7 @@
               "multi": 1.5
             },
             {
-              "type": "dot",
+              "type": "bleed",
               "turn": 2,
               "chance": 60
             }
@@ -2693,7 +3488,7 @@
               "multi": 2
             },
             {
-              "type": "dot",
+              "type": "bleed",
               "turn": 3,
               "chance": 80
             }
@@ -3201,34 +3996,70 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "dark"
+          },
+          "effects": [
+            {
+              "type": "flatCRIT",
+              "value": 15
+            }
+          ]
+        },
         "id": "5010",
         "level": 1,
-        "description": "txtDamonLeaderDesLV_1",
+        "description": "txtJackLeaderDesLV_1",
         "cooldown": 0,
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "dark"
+          },
+          "effects": [
+            {
+              "type": "flatCRIT",
+              "value": 20
+            }
+          ]
+        },
         "id": "5010",
         "level": 2,
-        "description": "txtDamonLeaderDesLV_2",
+        "description": "txtJackLeaderDesLV_2",
         "cooldown": 0,
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "dark"
+          },
+          "effects": [
+            {
+              "type": "flatCRIT",
+              "value": 25
+            }
+          ]
+        },
         "id": "5010",
         "level": 3,
-        "description": "txtDamonLeaderDesLV_3",
+        "description": "txtJackLeaderDesLV_3",
         "cooldown": 0,
         "battlePower": 10000
       }
     ],
     "soundFXarr": [],
     "hitFXarr": [],
-    "name": "txtDamonLeader",
+    "name": "txtJackLeader",
     "type": "leader",
     "id": "5010",
     "ranged": false,
-    "icon": "damonleader"
+    "icon": "jackleader"
   },
   {
     "maxLevel": 3,
@@ -3236,23 +4067,62 @@
     "hitPosition": "bottom",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2,
+            "line": "front"
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.1
+            }
+          ]
+        },
         "id": "5011",
         "level": 1,
-        "description": "txtDamonActiveDesLV_1",
+        "description": "txtJackActiveDesLV_1",
         "cooldown": 0,
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2,
+            "line": "front"
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.5
+            }
+          ]
+        },
         "id": "5011",
         "level": 2,
-        "description": "txtDamonActiveDesLV_2",
+        "description": "txtJackActiveDesLV_2",
         "cooldown": 0,
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2,
+            "line": "front"
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 2
+            }
+          ]
+        },
         "id": "5011",
         "level": 3,
-        "description": "txtDamonActiveDesLV_3",
+        "description": "txtJackActiveDesLV_3",
         "cooldown": 0,
         "battlePower": 10000
       }
@@ -3266,82 +4136,183 @@
     "hitFXarr": [
       "hitJackActive"
     ],
-    "name": "txtDamonActive",
+    "name": "txtJackActive",
     "type": "active",
     "id": "5011",
     "ranged": false,
-    "icon": "damonactive"
+    "icon": "jackactive"
   },
   {
     "maxLevel": 3,
+    "hitCount": "1",
+    "hitPosition": "center",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2,
+            "line": "front"
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 2
+            }
+          ]
+        },
         "id": "5012",
         "level": 1,
-        "description": "txtDamonAutoDesLV_1",
+        "description": "txtJackAutoDesLV_1",
         "cooldown": 0,
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2,
+            "line": "front"
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.2
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 3
+            }
+          ]
+        },
         "id": "5012",
         "level": 2,
-        "description": "txtDamonAutoDesLV_2",
+        "description": "txtJackAutoDesLV_2",
         "cooldown": 0,
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2,
+            "line": "front"
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.4
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 4
+            }
+          ]
+        },
         "id": "5012",
         "level": 3,
-        "description": "txtDamonAutoDesLV_3",
+        "description": "txtJackAutoDesLV_3",
         "cooldown": 0,
         "battlePower": 10000
       }
     ],
-    "soundFXarr": [],
-    "hitFXarr": [],
-    "name": "txtDamonAuto",
+    "soundFXarr": [
+      "slash12"
+    ],
+    "hitFXarr": [
+      "hitJackAuto"
+    ],
+    "name": "txtJackAuto",
     "type": "auto",
     "id": "5012",
     "ranged": false,
-    "icon": "damonauto"
+    "icon": "jackauto"
   },
   {
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentHP",
+              "value": 10
+            }
+          ]
+        },
         "id": "5013",
         "level": 1,
-        "description": "txtDamonPassiveDesLV_1",
+        "description": "txtJackPassiveDesLV_1",
         "cooldown": 0,
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentHP",
+              "value": 15
+            }
+          ]
+        },
         "id": "5013",
         "level": 2,
-        "description": "txtDamonPassiveDesLV_2",
+        "description": "txtJackPassiveDesLV_2",
         "cooldown": 0,
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentHP",
+              "value": 20
+            }
+          ]
+        },
         "id": "5013",
         "level": 3,
-        "description": "txtDamonPassiveDesLV_3",
+        "description": "txtJackPassiveDesLV_3",
         "cooldown": 0,
         "battlePower": 10000
       }
     ],
     "soundFXarr": [],
     "hitFXarr": [],
-    "name": "txtDamonPassive",
+    "name": "txtJackPassive",
     "type": "passive",
     "id": "5013",
     "ranged": false,
-    "icon": "damonpassive"
+    "icon": "jackpassive"
   },
   {
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": -10
+            }
+          ]
+        },
         "id": "6000",
         "level": 1,
         "description": "txtTharjaLeaderDesLV_1",
@@ -3349,6 +4320,17 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": -15
+            }
+          ]
+        },
         "id": "6000",
         "level": 2,
         "description": "txtTharjaLeaderDesLV_2",
@@ -3356,6 +4338,17 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": -20
+            }
+          ]
+        },
         "id": "6000",
         "level": 3,
         "description": "txtTharjaLeaderDesLV_3",
@@ -3377,6 +4370,22 @@
     "hitPosition": "bottom",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1
+            },
+            {
+              "type": "debuffPercentDAMAGE",
+              "turn": 1
+            }
+          ]
+        },
         "id": "6001",
         "level": 1,
         "description": "txtTharjaActiveDesLV_1",
@@ -3384,6 +4393,22 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.2
+            },
+            {
+              "type": "debuffPercentDAMAGE",
+              "turn": 2
+            }
+          ]
+        },
         "id": "6001",
         "level": 2,
         "description": "txtTharjaActiveDesLV_2",
@@ -3391,6 +4416,22 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.4
+            },
+            {
+              "type": "debuffPercentDAMAGE",
+              "turn": 3
+            }
+          ]
+        },
         "id": "6001",
         "level": 3,
         "description": "txtTharjaActiveDesLV_3",
@@ -3418,6 +4459,21 @@
     "hitPosition": "bottom",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentHPCost",
+              "value": 25
+            },
+            {
+              "type": "buffATK",
+              "turn": 2
+            }
+          ]
+        },
         "id": "6002",
         "level": 1,
         "description": "txtTharjaAutoDesLV_1",
@@ -3425,6 +4481,21 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentHPCost",
+              "value": 25
+            },
+            {
+              "type": "buffATK",
+              "turn": 3
+            }
+          ]
+        },
         "id": "6002",
         "level": 2,
         "description": "txtTharjaAutoDesLV_2",
@@ -3432,6 +4503,21 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentHPCost",
+              "value": 25
+            },
+            {
+              "type": "buffATK",
+              "turn": 4
+            }
+          ]
+        },
         "id": "6002",
         "level": 3,
         "description": "txtTharjaAutoDesLV_3",
@@ -3454,6 +4540,17 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy"
+          },
+          "effects": [
+            {
+              "type": "percentDAMAGE",
+              "value": -10
+            }
+          ]
+        },
         "id": "6003",
         "level": 1,
         "description": "txtTharjaPassiveDesLV_1",
@@ -3461,6 +4558,17 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy"
+          },
+          "effects": [
+            {
+              "type": "percentDAMAGE",
+              "value": -15
+            }
+          ]
+        },
         "id": "6003",
         "level": 2,
         "description": "txtTharjaPassiveDesLV_2",
@@ -3468,6 +4576,17 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy"
+          },
+          "effects": [
+            {
+              "type": "percentDAMAGE",
+              "value": -20
+            }
+          ]
+        },
         "id": "6003",
         "level": 3,
         "description": "txtTharjaPassiveDesLV_3",
@@ -3487,6 +4606,22 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "element": "water"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": -15
+            },
+            {
+              "type": "percentATK",
+              "value": -15
+            }
+          ]
+        },
         "id": "6010",
         "level": 1,
         "description": "txtElsaLeaderDesLV_1",
@@ -3494,6 +4629,22 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "element": "water"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": -20
+            },
+            {
+              "type": "percentATK",
+              "value": -20
+            }
+          ]
+        },
         "id": "6010",
         "level": 2,
         "description": "txtElsaLeaderDesLV_2",
@@ -3501,6 +4652,22 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "element": "water"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": -30
+            },
+            {
+              "type": "percentATK",
+              "value": -30
+            }
+          ]
+        },
         "id": "6010",
         "level": 3,
         "description": "txtElsaLeaderDesLV_3",
@@ -3522,6 +4689,28 @@
     "hitPosition": "bottom",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.2
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 2,
+              "chance": 50
+            },
+            {
+              "type": "debuffATK",
+              "turn": 2,
+              "chance": 50
+            }
+          ]
+        },
         "id": "6011",
         "level": 1,
         "description": "txtElsaActiveDesLV_1",
@@ -3529,6 +4718,28 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.5
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 2,
+              "chance": 60
+            },
+            {
+              "type": "debuffATK",
+              "turn": 2,
+              "chance": 60
+            }
+          ]
+        },
         "id": "6011",
         "level": 2,
         "description": "txtElsaActiveDesLV_2",
@@ -3536,6 +4747,28 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 2
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 2,
+              "chance": 70
+            },
+            {
+              "type": "debuffATK",
+              "turn": 2,
+              "chance": 70
+            }
+          ]
+        },
         "id": "6011",
         "level": 3,
         "description": "txtElsaActiveDesLV_3",
@@ -3566,6 +4799,23 @@
     "hitPosition": "bottom",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.1
+            },
+            {
+              "type": "freeze",
+              "turn": 2,
+              "chance": 50
+            }
+          ]
+        },
         "id": "6012",
         "level": 1,
         "description": "txtElsaAutoDesLV_1",
@@ -3573,6 +4823,23 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.3
+            },
+            {
+              "type": "freeze",
+              "turn": 2,
+              "chance": 60
+            }
+          ]
+        },
         "id": "6012",
         "level": 2,
         "description": "txtElsaAutoDesLV_2",
@@ -3580,6 +4847,23 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.5
+            },
+            {
+              "type": "freeze",
+              "turn": 2,
+              "chance": 70
+            }
+          ]
+        },
         "id": "6012",
         "level": 3,
         "description": "txtElsaAutoDesLV_3",
@@ -3605,6 +4889,17 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy"
+          },
+          "effects": [
+            {
+              "type": "percentSPD",
+              "value": -10
+            }
+          ]
+        },
         "id": "6013",
         "level": 1,
         "description": "txtElsaPassiveDesLV_1",
@@ -3612,6 +4907,17 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy"
+          },
+          "effects": [
+            {
+              "type": "percentSPD",
+              "value": -15
+            }
+          ]
+        },
         "id": "6013",
         "level": 2,
         "description": "txtElsaPassiveDesLV_2",
@@ -3619,6 +4925,17 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy"
+          },
+          "effects": [
+            {
+              "type": "percentSPD",
+              "value": -20
+            }
+          ]
+        },
         "id": "6013",
         "level": 3,
         "description": "txtElsaPassiveDesLV_3",
@@ -3638,6 +4955,22 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "water"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 10
+            },
+            {
+              "type": "percentDEF",
+              "value": 10
+            }
+          ]
+        },
         "id": "7000",
         "level": 1,
         "description": "txtSerraLeaderDesLV_1",
@@ -3645,6 +4978,22 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "water"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 10
+            },
+            {
+              "type": "percentDEF",
+              "value": 15
+            }
+          ]
+        },
         "id": "7000",
         "level": 2,
         "description": "txtSerraLeaderDesLV_2",
@@ -3652,6 +5001,22 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "water"
+          },
+          "effects": [
+            {
+              "type": "percentATK",
+              "value": 20
+            },
+            {
+              "type": "percentDEF",
+              "value": 20
+            }
+          ]
+        },
         "id": "7000",
         "level": 3,
         "description": "txtSerraLeaderDesLV_3",
@@ -3673,6 +5038,23 @@
     "hitPosition": "bottom",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.1
+            },
+            {
+              "type": "stun",
+              "turn": 2,
+              "chance": 45
+            }
+          ]
+        },
         "id": "7001",
         "level": 1,
         "description": "txtSerraActiveDesLV_1",
@@ -3680,6 +5062,23 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.2
+            },
+            {
+              "type": "stun",
+              "turn": 2,
+              "chance": 55
+            }
+          ]
+        },
         "id": "7001",
         "level": 2,
         "description": "txtSerraActiveDesLV_2",
@@ -3687,6 +5086,23 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.5
+            },
+            {
+              "type": "stun",
+              "turn": 2,
+              "chance": 65
+            }
+          ]
+        },
         "id": "7001",
         "level": 3,
         "description": "txtSerraActiveDesLV_3",
@@ -3715,6 +5131,18 @@
     "hitCount": "1",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "buffDEF",
+              "turn": 1
+            }
+          ]
+        },
         "id": "7002",
         "level": 1,
         "description": "txtSerraAutoDesLV_1",
@@ -3722,6 +5150,18 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "buffDEF",
+              "turn": 2
+            }
+          ]
+        },
         "id": "7002",
         "level": 2,
         "description": "txtSerraAutoDesLV_2",
@@ -3729,6 +5169,18 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "buffDEF",
+              "turn": 3
+            }
+          ]
+        },
         "id": "7002",
         "level": 3,
         "description": "txtSerraAutoDesLV_3",
@@ -3750,6 +5202,17 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": 10
+            }
+          ]
+        },
         "id": "7003",
         "level": 1,
         "description": "txtSerraPassiveDesLV_1",
@@ -3757,6 +5220,17 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": 15
+            }
+          ]
+        },
         "id": "7003",
         "level": 2,
         "description": "txtSerraPassiveDesLV_2",
@@ -3764,6 +5238,17 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": 20
+            }
+          ]
+        },
         "id": "7003",
         "level": 3,
         "description": "txtSerraPassiveDesLV_3",
@@ -3783,6 +5268,18 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "light"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": 15
+            }
+          ]
+        },
         "id": "7010",
         "level": 1,
         "description": "txtLynLeaderDesLV_1",
@@ -3790,6 +5287,18 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "light"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": 25
+            }
+          ]
+        },
         "id": "7010",
         "level": 2,
         "description": "txtLynLeaderDesLV_2",
@@ -3797,6 +5306,18 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "light"
+          },
+          "effects": [
+            {
+              "type": "percentDEF",
+              "value": 35
+            }
+          ]
+        },
         "id": "7010",
         "level": 3,
         "description": "txtLynLeaderDesLV_3",
@@ -3818,6 +5339,17 @@
     "hitPosition": "center",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "dmgReduction",
+              "turn": 1
+            }
+          ]
+        },
         "id": "7011",
         "level": 1,
         "description": "txtLynActiveDesLV_1",
@@ -3825,6 +5357,17 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "dmgReduction",
+              "turn": 2
+            }
+          ]
+        },
         "id": "7011",
         "level": 2,
         "description": "txtLynActiveDesLV_2",
@@ -3832,6 +5375,17 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "dmgReduction",
+              "turn": 3
+            }
+          ]
+        },
         "id": "7011",
         "level": 3,
         "description": "txtLynActiveDesLV_3",
@@ -3860,6 +5414,23 @@
     "hitPosition": "bottom",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.2
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 3,
+              "chance": 50
+            }
+          ]
+        },
         "id": "7012",
         "level": 1,
         "description": "txtLynAutoDesLV_1",
@@ -3867,6 +5438,23 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.6
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 3,
+              "chance": 60
+            }
+          ]
+        },
         "id": "7012",
         "level": 2,
         "description": "txtLynAutoDesLV_2",
@@ -3874,6 +5462,23 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 2
+            },
+            {
+              "type": "debuffDEF",
+              "turn": 3,
+              "chance": 80
+            }
+          ]
+        },
         "id": "7012",
         "level": 3,
         "description": "txtLynAutoDesLV_3",
@@ -3897,6 +5502,18 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "element": "dark"
+          },
+          "effects": [
+            {
+              "type": "percentDAMAGE",
+              "value": -10
+            }
+          ]
+        },
         "id": "7013",
         "level": 1,
         "description": "txtLynPassiveDesLV_1",
@@ -3904,6 +5521,18 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "element": "dark"
+          },
+          "effects": [
+            {
+              "type": "percentDAMAGE",
+              "value": -15
+            }
+          ]
+        },
         "id": "7013",
         "level": 2,
         "description": "txtLynPassiveDesLV_2",
@@ -3911,6 +5540,18 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "element": "dark"
+          },
+          "effects": [
+            {
+              "type": "percentDAMAGE",
+              "value": -20
+            }
+          ]
+        },
         "id": "7013",
         "level": 3,
         "description": "txtLynPassiveDesLV_3",
@@ -3930,6 +5571,21 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "allied"
+          },
+          "effects": [
+            {
+              "type": "percentHP",
+              "value": 15
+            },
+            {
+              "type": "percentDEF",
+              "value": 15
+            }
+          ]
+        },
         "id": "8000",
         "level": 1,
         "description": "txtAthasLeaderDesLV_1",
@@ -3937,6 +5593,21 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied"
+          },
+          "effects": [
+            {
+              "type": "percentHP",
+              "value": 20
+            },
+            {
+              "type": "percentDEF",
+              "value": 20
+            }
+          ]
+        },
         "id": "8000",
         "level": 2,
         "description": "txtAthasLeaderDesLV_2",
@@ -3944,6 +5615,21 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied"
+          },
+          "effects": [
+            {
+              "type": "percentHP",
+              "value": 25
+            },
+            {
+              "type": "percentDEF",
+              "value": 25
+            }
+          ]
+        },
         "id": "8000",
         "level": 3,
         "description": "txtAthasLeaderDesLV_3",
@@ -3965,6 +5651,22 @@
     "hitPosition": "center",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.15
+            },
+            {
+              "type": "debuffATK",
+              "turn": 1
+            }
+          ]
+        },
         "id": "8001",
         "level": 1,
         "description": "txtAthasActiveDesLV_1",
@@ -3972,6 +5674,22 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.25
+            },
+            {
+              "type": "debuffATK",
+              "turn": 2
+            }
+          ]
+        },
         "id": "8001",
         "level": 2,
         "description": "txtAthasActiveDesLV_2",
@@ -3979,6 +5697,22 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.45
+            },
+            {
+              "type": "debuffATK",
+              "turn": 3
+            }
+          ]
+        },
         "id": "8001",
         "level": 3,
         "description": "txtAthasActiveDesLV_3",
@@ -4006,6 +5740,18 @@
     "hitPosition": "center",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "count": 1
+          },
+          "effects": [
+            {
+              "type": "buffDEF",
+              "turn": 3
+            }
+          ]
+        },
         "id": "8002",
         "level": 1,
         "description": "txtAthasAutoDesLV_1",
@@ -4013,6 +5759,18 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "buffDEF",
+              "turn": 3
+            }
+          ]
+        },
         "id": "8002",
         "level": 2,
         "description": "txtAthasAutoDesLV_2",
@@ -4020,6 +5778,18 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "buffDEF",
+              "turn": 3
+            }
+          ]
+        },
         "id": "8002",
         "level": 3,
         "description": "txtAthasAutoDesLV_3",
@@ -4042,6 +5812,17 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentHPR",
+              "value": 5
+            }
+          ]
+        },
         "id": "8003",
         "level": 1,
         "description": "txtAthasPassiveDesLV_1",
@@ -4049,6 +5830,17 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentHPR",
+              "value": 10
+            }
+          ]
+        },
         "id": "8003",
         "level": 2,
         "description": "txtAthasPassiveDesLV_2",
@@ -4056,6 +5848,17 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "self"
+          },
+          "effects": [
+            {
+              "type": "percentHPR",
+              "value": 15
+            }
+          ]
+        },
         "id": "8003",
         "level": 3,
         "description": "txtAthasPassiveDesLV_3",
@@ -4075,6 +5878,22 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "fire"
+          },
+          "effects": [
+            {
+              "type": "percentHP",
+              "value": 20
+            },
+            {
+              "type": "percentDEF",
+              "value": 20
+            }
+          ]
+        },
         "id": "8010",
         "level": 1,
         "description": "txtJuliusLeaderDesLV_1",
@@ -4082,6 +5901,22 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "fire"
+          },
+          "effects": [
+            {
+              "type": "percentHP",
+              "value": 25
+            },
+            {
+              "type": "percentDEF",
+              "value": 25
+            }
+          ]
+        },
         "id": "8010",
         "level": 2,
         "description": "txtJuliusLeaderDesLV_2",
@@ -4089,6 +5924,22 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "allied",
+            "element": "fire"
+          },
+          "effects": [
+            {
+              "type": "percentHP",
+              "value": 30
+            },
+            {
+              "type": "percentDEF",
+              "value": 30
+            }
+          ]
+        },
         "id": "8010",
         "level": 3,
         "description": "txtJuliusLeaderDesLV_3",
@@ -4110,6 +5961,23 @@
     "hitPosition": "center",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.2
+            },
+            {
+              "type": "stun",
+              "turn": 1,
+              "chance": 60
+            }
+          ]
+        },
         "id": "8011",
         "level": 1,
         "description": "txtJuliusActiveDesLV_1",
@@ -4117,6 +5985,23 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.3
+            },
+            {
+              "type": "stun",
+              "turn": 1,
+              "chance": 60
+            }
+          ]
+        },
         "id": "8011",
         "level": 2,
         "description": "txtJuliusActiveDesLV_2",
@@ -4124,6 +6009,23 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 3
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.5
+            },
+            {
+              "type": "stun",
+              "turn": 1,
+              "chance": 60
+            }
+          ]
+        },
         "id": "8011",
         "level": 3,
         "description": "txtJuliusActiveDesLV_3",
@@ -4151,6 +6053,23 @@
     "hitPosition": "center",
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1
+            },
+            {
+              "type": "silence",
+              "turn": 2,
+              "chance": 50
+            }
+          ]
+        },
         "id": "8012",
         "level": 1,
         "description": "txtJuliusAutoDesLV_1",
@@ -4158,6 +6077,23 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.2
+            },
+            {
+              "type": "silence",
+              "turn": 2,
+              "chance": 60
+            }
+          ]
+        },
         "id": "8012",
         "level": 2,
         "description": "txtJuliusAutoDesLV_2",
@@ -4165,6 +6101,23 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "count": 2
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "multi": 1.4
+            },
+            {
+              "type": "silence",
+              "turn": 2,
+              "chance": 70
+            }
+          ]
+        },
         "id": "8012",
         "level": 3,
         "description": "txtJuliusAutoDesLV_3",
@@ -4189,6 +6142,18 @@
     "maxLevel": 3,
     "levels": [
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "element": "fire"
+          },
+          "effects": [
+            {
+              "type": "percentDAMAGE",
+              "value": -10
+            }
+          ]
+        },
         "id": "8013",
         "level": 1,
         "description": "txtJuliusPassiveDesLV_1",
@@ -4196,6 +6161,18 @@
         "battlePower": 1000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "element": "fire"
+          },
+          "effects": [
+            {
+              "type": "percentDAMAGE",
+              "value": -15
+            }
+          ]
+        },
         "id": "8013",
         "level": 2,
         "description": "txtJuliusPassiveDesLV_2",
@@ -4203,6 +6180,18 @@
         "battlePower": 5000
       },
       {
+        "specs": {
+          "targets": {
+            "group": "enemy",
+            "element": "fire"
+          },
+          "effects": [
+            {
+              "type": "percentDAMAGE",
+              "value": -20
+            }
+          ]
+        },
         "id": "8013",
         "level": 3,
         "description": "txtJuliusPassiveDesLV_3",

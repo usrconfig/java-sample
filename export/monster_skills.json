@@ -65,7 +65,7 @@
     "type": "active",
     "id": "10092",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentDEF\",\"value\":15}]}",
@@ -89,24 +89,100 @@
     "cooldown": 0
   },
   {
-    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"water\"},\"effects\":[{\"type\":\"percentATK\",\"value\":15}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"earth\"},\"effects\":[{\"type\":\"percentATK\",\"value\":25}]}",
     "specs": {
       "targets": {
         "group": "allied",
-        "element": "water"
+        "element": "earth"
       },
       "effects": [
         {
           "type": "percentATK",
-          "value": 15
+          "value": 25
         }
       ]
     },
     "soundFXarr": [],
     "hitFXarr": [],
-    "name": "txtIceCrescentRabbitLeader",
+    "name": "txtCrescentRabbitLeader",
     "type": "leader",
     "id": "10251",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1.8},{\"type\":\"decover\",\"turn\":3}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 3
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.8
+        },
+        {
+          "type": "decover",
+          "turn": 3
+        }
+      ]
+    },
+    "soundFXarr": [
+      "darkcharge",
+      "darkexplosion"
+    ],
+    "hitFXarr": [
+      "hitWhiteWizardEvilHand"
+    ],
+    "name": "txtWhiteWizard4Active",
+    "type": "active",
+    "id": "10372",
+    "ranged": false,
+    "cooldown": 5
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"dark\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
+    "specs": {
+      "targets": {
+        "group": "allied",
+        "element": "dark"
+      },
+      "effects": [
+        {
+          "type": "percentATK",
+          "value": 20
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtWhiteWizard4Leader",
+    "type": "leader",
+    "id": "10371",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHP\",\"value\":30}]}",
+    "specs": {
+      "targets": {
+        "group": "self"
+      },
+      "effects": [
+        {
+          "type": "percentHP",
+          "value": 30
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtGoldenDragonElitePassive",
+    "type": "passive",
+    "id": "10414",
     "ranged": false,
     "cooldown": 0
   },
@@ -163,35 +239,58 @@
     "type": "active",
     "id": "10132",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "hitCount": "1",
     "hitPosition": "center",
-    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":1},\"effects\":[{\"type\":\"damage\",\"multi\":2}]},{\"type\":\"stun\",\"turn\":1}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1}]},{\"type\":\"stun\",\"turn\":1}]}",
     "specs": {
       "targets": {
         "group": "enemy",
-        "count": 1
+        "count": 3
       },
       "effects": [
         {
           "type": "damage",
-          "multi": 2
+          "multi": 1
         }
       ]
     },
     "soundFXarr": [
-      "punch11"
+      "waterpillarcombo"
     ],
     "hitFXarr": [
-      "hitImpactBlue1"
+      "hitImpactPurple1",
+      "hitImpactPurple2",
+      "hitImpactPurple3"
     ],
-    "name": "txtIceCrescentRabbitAuto",
+    "name": "txtCrescentRabbitAuto",
     "type": "auto",
     "id": "10253",
     "ranged": false,
     "cooldown": 3
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHP\",\"value\":20}]}",
+    "specs": {
+      "targets": {
+        "group": "self"
+      },
+      "effects": [
+        {
+          "type": "percentHP",
+          "value": 20
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtWhiteWizard4Passive",
+    "type": "passive",
+    "id": "10374",
+    "ranged": false,
+    "cooldown": 0
   },
   {
     "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"earth\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
@@ -233,16 +332,44 @@
     },
     "soundFXarr": [
       "ragecharge",
-      "punch11"
+      "ragesmash"
     ],
     "hitFXarr": [
-      "hitImpactBlue1"
+      "hitEarthSmash"
     ],
-    "name": "txtIceCrescentRabbitActive",
+    "name": "txtCrescentRabbitActive",
     "type": "active",
     "id": "10252",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":1.6}]},{\"type\":\"stun\",\"turn\":2}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 2
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.6
+        }
+      ]
+    },
+    "soundFXarr": [
+      "magic11"
+    ],
+    "hitFXarr": [
+      "hitWhiteWizardThunder"
+    ],
+    "name": "txtWhiteWizard4Auto",
+    "type": "auto",
+    "id": "10373",
+    "ranged": false,
+    "cooldown": 3
   },
   {
     "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"heal\",\"percentHP\":10}]}",
@@ -264,7 +391,7 @@
     "name": "txtEliteCowAuto",
     "type": "auto",
     "id": "10013",
-    "ranged": false,
+    "ranged": true,
     "cooldown": 3
   },
   {
@@ -319,7 +446,7 @@
     "type": "active",
     "id": "10012",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "hitCount": "1",
@@ -364,9 +491,19 @@
     },
     "soundFXarr": [],
     "hitFXarr": [],
-    "name": "txtIceCrescentRabbitPassive",
+    "name": "txtCrescentRabbitPassive",
     "type": "passive",
     "id": "10254",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"fire},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtGoldenDragonEliteLeader",
+    "type": "leader",
+    "id": "10411",
     "ranged": false,
     "cooldown": 0
   },
@@ -388,6 +525,89 @@
     "name": "txtEliteCowPassive",
     "type": "passive",
     "id": "10014",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1.6}]},{\"type\":\"stun\",\"turn\":1}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 3
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.6
+        }
+      ]
+    },
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitDragonClaw"
+    ],
+    "name": "txtGoldenDragonEliteAuto",
+    "type": "auto",
+    "id": "10413",
+    "ranged": false,
+    "cooldown": 3
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":5},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"decover\",\"turn\":3}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 5
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.5
+        },
+        {
+          "type": "decover",
+          "turn": 3
+        }
+      ]
+    },
+    "soundFXarr": [
+      "cast1",
+      "twistingslash1"
+    ],
+    "hitFXarr": [
+      "hitTornadoFire"
+    ],
+    "name": "txtGoldenDragonEliteActive",
+    "type": "active",
+    "id": "10412",
+    "ranged": false,
+    "cooldown": 5
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"dark\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
+    "specs": {
+      "targets": {
+        "group": "allied",
+        "element": "dark"
+      },
+      "effects": [
+        {
+          "type": "percentATK",
+          "value": 20
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtWhiteWizard5Leader",
+    "type": "leader",
+    "id": "10381",
     "ranged": false,
     "cooldown": 0
   },
@@ -416,35 +636,57 @@
   {
     "hitCount": "1",
     "hitPosition": "center",
-    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1.2},{\"type\":\"debuffDEF\",\"turn\":2}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHPR\",\"value\":20}]}",
     "specs": {
       "targets": {
-        "group": "enemy",
-        "count": 3
+        "group": "self"
       },
       "effects": [
         {
-          "type": "damage",
-          "multi": 1.2
-        },
-        {
-          "type": "debuffDEF",
-          "turn": 2
+          "type": "percentHPR",
+          "value": 20
         }
       ]
     },
     "soundFXarr": [
-      "ragecharge",
-      "slash11"
+      "powercharge"
     ],
     "hitFXarr": [
-      "hitImpactBlue1"
+      "hitRabbitShield"
     ],
-    "name": "txtMoonRabbitActive",
+    "name": "txtMoonRabbit1Active",
     "type": "active",
     "id": "10262",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":1.6}]},{\"type\":\"stun\",\"turn\":2}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 2
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.6
+        }
+      ]
+    },
+    "soundFXarr": [
+      "magic11"
+    ],
+    "hitFXarr": [
+      "hitWhiteWizardThunder"
+    ],
+    "name": "txtWhiteWizard5Auto",
+    "type": "auto",
+    "id": "10383",
+    "ranged": false,
+    "cooldown": 3
   },
   {
     "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"water\"},\"effects\":[{\"type\":\"percentDEF\",\"value\":20}]}",
@@ -462,28 +704,61 @@
     },
     "soundFXarr": [],
     "hitFXarr": [],
-    "name": "txtMoonRabbitLeader",
+    "name": "txtMoonRabbit1Leader",
     "type": "leader",
     "id": "10261",
     "ranged": false,
     "cooldown": 0
   },
   {
-    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentDEF\",\"value\":15}]}",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1.8},{\"type\":\"decover\",\"turn\":3}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 3
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.8
+        },
+        {
+          "type": "decover",
+          "turn": 3
+        }
+      ]
+    },
+    "soundFXarr": [
+      "darkcharge",
+      "darkexplosion"
+    ],
+    "hitFXarr": [
+      "hitWhiteWizardEvilHand"
+    ],
+    "name": "txtWhiteWizard5Active",
+    "type": "active",
+    "id": "10382",
+    "ranged": false,
+    "cooldown": 5
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
     "specs": {
       "targets": {
         "group": "self"
       },
       "effects": [
         {
-          "type": "percentDEF",
-          "value": 15
+          "type": "percentATK",
+          "value": 20
         }
       ]
     },
     "soundFXarr": [],
     "hitFXarr": [],
-    "name": "txtEliteYetiPassive",
+    "name": "txtMoonRabbit5Passive",
     "type": "passive",
     "id": "10304",
     "ranged": false,
@@ -516,7 +791,7 @@
     "type": "active",
     "id": "10022",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "hitCount": "1",
@@ -551,7 +826,7 @@
     "cooldown": 3
   },
   {
-    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentATK\",\"value\":15}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
     "specs": {
       "targets": {
         "group": "self"
@@ -559,13 +834,13 @@
       "effects": [
         {
           "type": "percentATK",
-          "value": 15
+          "value": 20
         }
       ]
     },
     "soundFXarr": [],
     "hitFXarr": [],
-    "name": "txtMoonRabbitPassive",
+    "name": "txtMoonRabbit1Passive",
     "type": "passive",
     "id": "10264",
     "ranged": false,
@@ -624,16 +899,16 @@
     "type": "active",
     "id": "10142",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "hitCount": "1",
     "hitPosition": "center",
-    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":1},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"debuffATK\",\"turn\":3}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"debuffATK\",\"turn\":3}]}",
     "specs": {
       "targets": {
         "group": "enemy",
-        "count": 1
+        "count": 3
       },
       "effects": [
         {
@@ -647,16 +922,37 @@
       ]
     },
     "soundFXarr": [
-      "slash11"
+      "claw1"
     ],
     "hitFXarr": [
-      "hitImpactBlue1"
+      "hitRabbitClaw"
     ],
-    "name": "txtMoonRabbitAuto",
+    "name": "txtMoonRabbit1Auto",
     "type": "auto",
     "id": "10263",
     "ranged": false,
     "cooldown": 3
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHP\",\"value\":20}]}",
+    "specs": {
+      "targets": {
+        "group": "self"
+      },
+      "effects": [
+        {
+          "type": "percentHP",
+          "value": 20
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtWhiteWizard5Passive",
+    "type": "passive",
+    "id": "10384",
+    "ranged": false,
+    "cooldown": 0
   },
   {
     "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHP\",\"value\":15}]}",
@@ -729,10 +1025,22 @@
     "cooldown": 0
   },
   {
-    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"water\"},\"effects\":[{\"type\":\"percentDEF,\"value\":20}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"water\"},\"effects\":[{\"type\":\"percentDEF\",\"value\":20}]}",
+    "specs": {
+      "targets": {
+        "group": "allied",
+        "element": "water"
+      },
+      "effects": [
+        {
+          "type": "percentDEF",
+          "value": 20
+        }
+      ]
+    },
     "soundFXarr": [],
     "hitFXarr": [],
-    "name": "txtEliteYetiLeader",
+    "name": "txtMoonRabbit5Leader",
     "type": "leader",
     "id": "10301",
     "ranged": false,
@@ -741,63 +1049,153 @@
   {
     "hitCount": "1",
     "hitPosition": "center",
-    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":1},\"effects\":[{\"type\":\"damage\",\"multi\":2}]}{\"type\":\"debuffDEF\",\"turn\":3}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":5},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"decover\",\"turn\":3}]}",
     "specs": {
       "targets": {
         "group": "enemy",
-        "count": 1
+        "count": 5
       },
       "effects": [
         {
           "type": "damage",
-          "multi": 2
+          "multi": 1.5
+        },
+        {
+          "type": "decover",
+          "turn": 3
         }
       ]
     },
     "soundFXarr": [
-      "ragesmash"
+      "cast1",
+      "twistingslash1"
     ],
     "hitFXarr": [
-      "hitImpactBlue1"
+      "hitTornadoFire"
     ],
-    "name": "txtEliteYetiAuto",
+    "name": "txtGoldenDragonElderActive",
+    "type": "active",
+    "id": "10422",
+    "ranged": false,
+    "cooldown": 5
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"fire},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtGoldenDragonElderLeader",
+    "type": "leader",
+    "id": "10421",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"debuffATK\",\"turn\":3}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 3
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.5
+        },
+        {
+          "type": "debuffATK",
+          "turn": 3
+        }
+      ]
+    },
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitRabbitClaw"
+    ],
+    "name": "txtMoonRabbit5Auto",
     "type": "auto",
     "id": "10303",
     "ranged": false,
     "cooldown": 3
   },
   {
-    "hitCount": "1",
-    "hitPosition": "center",
-    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":2},{\"type\":\"freeze\",\"turn\":1}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHP\",\"value\":30}]}",
     "specs": {
       "targets": {
-        "group": "enemy",
-        "count": 2
+        "group": "self"
       },
       "effects": [
         {
-          "type": "damage",
-          "multi": 2
-        },
+          "type": "percentHP",
+          "value": 30
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtGoldenDragonElderPassive",
+    "type": "passive",
+    "id": "10424",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHPR\",\"value\":20}]}",
+    "specs": {
+      "targets": {
+        "group": "self"
+      },
+      "effects": [
         {
-          "type": "freeze",
-          "turn": 1
+          "type": "percentHPR",
+          "value": 20
         }
       ]
     },
     "soundFXarr": [
-      "ragecharge",
-      "ragesmash"
+      "powercharge"
     ],
     "hitFXarr": [
-      "hitImpactBlue1"
+      "hitRabbitShield"
     ],
-    "name": "txtEliteYetiActive",
+    "name": "txtMoonRabbit5Active",
     "type": "active",
     "id": "10302",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1.6}]},{\"type\":\"stun\",\"turn\":1}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 3
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.6
+        }
+      ]
+    },
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitDragonClaw"
+    ],
+    "name": "txtGoldenDragonElderAuto",
+    "type": "auto",
+    "id": "10423",
+    "ranged": false,
+    "cooldown": 3
   },
   {
     "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"earth\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
@@ -852,7 +1250,7 @@
     "type": "active",
     "id": "10192",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"water\"},\"effects\":[{\"type\":\"percentDEF,\"value\":20}]}",
@@ -948,7 +1346,7 @@
     "type": "active",
     "id": "10072",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "hitCount": "1",
@@ -1024,6 +1422,61 @@
   {
     "hitCount": "1",
     "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1.8},{\"type\":\"decover\",\"turn\":3}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 3
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.8
+        },
+        {
+          "type": "decover",
+          "turn": 3
+        }
+      ]
+    },
+    "soundFXarr": [
+      "darkcharge",
+      "darkexplosion"
+    ],
+    "hitFXarr": [
+      "hitWhiteWizardEvilHand"
+    ],
+    "name": "txtWhiteWizard2Active",
+    "type": "active",
+    "id": "10352",
+    "ranged": false,
+    "cooldown": 5
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"dark\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
+    "specs": {
+      "targets": {
+        "group": "allied",
+        "element": "dark"
+      },
+      "effects": [
+        {
+          "type": "percentATK",
+          "value": 20
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtWhiteWizard2Leader",
+    "type": "leader",
+    "id": "10351",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
     "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"debuffDEF\",\"turn\":3}]}",
     "specs": {
       "targets": {
@@ -1052,12 +1505,12 @@
     "type": "active",
     "id": "10112",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "hitCount": "1",
     "hitPosition": "center",
-    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":1},\"effects\":[{\"type\":\"damage\",\"multi\":2}]}{\"type\":\"debuffDEF\",\"turn\":3}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":1},\"effects\":[{\"type\":\"damage\",\"multi\":2}]}{\"type\":\"debuffDEF\",\"turn\":2}]}",
     "specs": {
       "targets": {
         "group": "enemy",
@@ -1071,16 +1524,37 @@
       ]
     },
     "soundFXarr": [
-      "slash11"
+      "hit_punch12"
     ],
     "hitFXarr": [
-      "hitImpactBlue1"
+      "hitImpactPurple1"
     ],
     "name": "txtRabbitAuto",
     "type": "auto",
     "id": "10233",
     "ranged": false,
     "cooldown": 3
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHP\",\"value\":20}]}",
+    "specs": {
+      "targets": {
+        "group": "self"
+      },
+      "effects": [
+        {
+          "type": "percentHP",
+          "value": 20
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtWhiteWizard2Passive",
+    "type": "passive",
+    "id": "10354",
+    "ranged": false,
+    "cooldown": 0
   },
   {
     "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"earth\"},\"effects\":[{\"type\":\"percentDEF\",\"value\":15}]}",
@@ -1107,7 +1581,7 @@
   {
     "hitCount": "1",
     "hitPosition": "center",
-    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":2},{\"type\":\"decover\",\"turn\":3}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"decover\",\"turn\":2}]}",
     "specs": {
       "targets": {
         "group": "enemy",
@@ -1116,26 +1590,54 @@
       "effects": [
         {
           "type": "damage",
-          "multi": 2
+          "multi": 1.5
         },
         {
           "type": "decover",
-          "turn": 3
+          "turn": 2
         }
       ]
     },
     "soundFXarr": [
       "ragecharge",
-      "slash11"
+      "hit_punch12"
     ],
     "hitFXarr": [
-      "hitImpactBlue1"
+      "hitImpactPurple1"
     ],
     "name": "txtRabbitActive",
     "type": "active",
     "id": "10232",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":1.6}]},{\"type\":\"stun\",\"turn\":2}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 2
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.6
+        }
+      ]
+    },
+    "soundFXarr": [
+      "magic11"
+    ],
+    "hitFXarr": [
+      "hitWhiteWizardThunder"
+    ],
+    "name": "txtWhiteWizard2Auto",
+    "type": "auto",
+    "id": "10353",
+    "ranged": false,
+    "cooldown": 3
   },
   {
     "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentATK\",\"value\":10}]}",
@@ -1191,7 +1693,7 @@
     "cooldown": 3
   },
   {
-    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentATK\",\"value\":10}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
     "specs": {
       "targets": {
         "group": "self"
@@ -1199,7 +1701,7 @@
       "effects": [
         {
           "type": "percentATK",
-          "value": 10
+          "value": 20
         }
       ]
     },
@@ -1242,7 +1744,7 @@
     "type": "active",
     "id": "10082",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"fire\"},\"effects\":[{\"type\":\"percentHP\",\"value\":15}]}",
@@ -1313,6 +1815,77 @@
     "cooldown": 3
   },
   {
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"dark\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
+    "specs": {
+      "targets": {
+        "group": "allied",
+        "element": "dark"
+      },
+      "effects": [
+        {
+          "type": "percentATK",
+          "value": 20
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtWhiteWizard3Leader",
+    "type": "leader",
+    "id": "10361",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHP\",\"value\":30}]}",
+    "specs": {
+      "targets": {
+        "group": "self"
+      },
+      "effects": [
+        {
+          "type": "percentHP",
+          "value": 30
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtGoldenDragonPassive",
+    "type": "passive",
+    "id": "10404",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1.6}]},{\"type\":\"stun\",\"turn\":1}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 3
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.6
+        }
+      ]
+    },
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitDragonClaw"
+    ],
+    "name": "txtGoldenDragonAuto",
+    "type": "auto",
+    "id": "10403",
+    "ranged": false,
+    "cooldown": 3
+  },
+  {
     "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"earth\"},\"effects\":[{\"type\":\"percentDEF\",\"value\":20}]}",
     "specs": {
       "targets": {
@@ -1337,16 +1910,16 @@
   {
     "hitCount": "1",
     "hitPosition": "center",
-    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"stun\",\"turn\":1}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":1.2},{\"type\":\"stun\",\"turn\":1}]}",
     "specs": {
       "targets": {
         "group": "enemy",
-        "count": 3
+        "count": 2
       },
       "effects": [
         {
           "type": "damage",
-          "multi": 1.5
+          "multi": 1.2
         },
         {
           "type": "stun",
@@ -1356,19 +1929,47 @@
     },
     "soundFXarr": [
       "ragecharge",
-      "ragesmash"
+      "darkexplosion"
     ],
     "hitFXarr": [
-      "hitEarthSmash"
+      "hitGravityShot"
     ],
     "name": "txtEliteRabbitActive",
     "type": "active",
     "id": "10242",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
-    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"earth\"},\"effects\":[{\"type\":\"percentHP\",\"value\":30}]}",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":1.6}]},{\"type\":\"stun\",\"turn\":2}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 2
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.6
+        }
+      ]
+    },
+    "soundFXarr": [
+      "magic11"
+    ],
+    "hitFXarr": [
+      "hitWhiteWizardThunder"
+    ],
+    "name": "txtWhiteWizard3Auto",
+    "type": "auto",
+    "id": "10363",
+    "ranged": false,
+    "cooldown": 3
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"earth\"},\"effects\":[{\"type\":\"percentHP\",\"value\":25}]}",
     "specs": {
       "targets": {
         "group": "allied",
@@ -1377,17 +1978,50 @@
       "effects": [
         {
           "type": "percentHP",
-          "value": 30
+          "value": 25
         }
       ]
     },
     "soundFXarr": [],
     "hitFXarr": [],
-    "name": "txtHEliteRabbitLeader",
+    "name": "txtEliteRabbitLeader",
     "type": "leader",
     "id": "10241",
     "ranged": false,
     "cooldown": 0
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1.8},{\"type\":\"decover\",\"turn\":3}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 3
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.8
+        },
+        {
+          "type": "decover",
+          "turn": 3
+        }
+      ]
+    },
+    "soundFXarr": [
+      "darkcharge",
+      "darkexplosion"
+    ],
+    "hitFXarr": [
+      "hitWhiteWizardEvilHand"
+    ],
+    "name": "txtWhiteWizard3Active",
+    "type": "active",
+    "id": "10362",
+    "ranged": false,
+    "cooldown": 5
   },
   {
     "hitCount": "1",
@@ -1420,7 +2054,7 @@
     "type": "active",
     "id": "10002",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "hitCount": "1",
@@ -1455,14 +2089,14 @@
     "cooldown": 3
   },
   {
-    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentDEF\",\"value\":20}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
     "specs": {
       "targets": {
         "group": "self"
       },
       "effects": [
         {
-          "type": "percentDEF",
+          "type": "percentATK",
           "value": 20
         }
       ]
@@ -1528,11 +2162,11 @@
     "type": "active",
     "id": "10122",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "hitCount": "1",
-    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":1},\"effects\":[{\"type\":\"damage\",\"multi\":2},{\"type\":\"stun\",\"turn\":2}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":1},\"effects\":[{\"type\":\"damage\",\"multi\":2},{\"type\":\"stun\",\"turn\":1}]}",
     "specs": {
       "targets": {
         "group": "enemy",
@@ -1545,22 +2179,42 @@
         },
         {
           "type": "stun",
-          "turn": 2
+          "turn": 1
         }
       ]
     },
     "soundFXarr": [
-      "punch11",
-      "hit_punch13"
+      "hit_arrow11"
     ],
     "hitFXarr": [
-      "hitImpactYellow1"
+      "hitDarkArrow"
     ],
     "name": "txtEliteRabbitAuto",
     "type": "auto",
     "id": "10243",
     "ranged": false,
     "cooldown": 3
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHP\",\"value\":20}]}",
+    "specs": {
+      "targets": {
+        "group": "self"
+      },
+      "effects": [
+        {
+          "type": "percentHP",
+          "value": 20
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtWhiteWizard3Passive",
+    "type": "passive",
+    "id": "10364",
+    "ranged": false,
+    "cooldown": 0
   },
   {
     "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHP\",\"value\":10}]}",
@@ -1603,7 +2257,7 @@
     "name": "txtCowAuto",
     "type": "auto",
     "id": "10003",
-    "ranged": false,
+    "ranged": true,
     "cooldown": 3
   },
   {
@@ -1628,10 +2282,65 @@
     "cooldown": 0
   },
   {
-    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"water\"},\"effects\":[{\"type\":\"percentDEF,\"value\":20}]}",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":5},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"decover\",\"turn\":3}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 5
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.5
+        },
+        {
+          "type": "decover",
+          "turn": 3
+        }
+      ]
+    },
+    "soundFXarr": [
+      "cast1",
+      "twistingslash1"
+    ],
+    "hitFXarr": [
+      "hitTornadoFire"
+    ],
+    "name": "txtGoldenDragonActive",
+    "type": "active",
+    "id": "10402",
+    "ranged": false,
+    "cooldown": 5
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"fire},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
     "soundFXarr": [],
     "hitFXarr": [],
-    "name": "txtYetiLeader",
+    "name": "txtGoldenDragonLeader",
+    "type": "leader",
+    "id": "10401",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"water\"},\"effects\":[{\"type\":\"percentDEF\",\"value\":20}]}",
+    "specs": {
+      "targets": {
+        "group": "allied",
+        "element": "water"
+      },
+      "effects": [
+        {
+          "type": "percentDEF",
+          "value": 20
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtMoonRabbit4Leader",
     "type": "leader",
     "id": "10291",
     "ranged": false,
@@ -1690,31 +2399,35 @@
     "type": "active",
     "id": "10172",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "hitCount": "1",
     "hitPosition": "center",
-    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":1},\"effects\":[{\"type\":\"damage\",\"multi\":1.5}]}{\"type\":\"debuffDEF\",\"turn\":3}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"debuffATK\",\"turn\":3}]}",
     "specs": {
       "targets": {
         "group": "enemy",
-        "count": 1
+        "count": 3
       },
       "effects": [
         {
           "type": "damage",
           "multi": 1.5
+        },
+        {
+          "type": "debuffATK",
+          "turn": 3
         }
       ]
     },
     "soundFXarr": [
-      "ragesmash"
+      "claw1"
     ],
     "hitFXarr": [
-      "hitImpactBlue1"
+      "hitRabbitClaw"
     ],
-    "name": "txtYetiAuto",
+    "name": "txtMoonRabbit4Auto",
     "type": "auto",
     "id": "10293",
     "ranged": false,
@@ -1745,35 +2458,29 @@
   {
     "hitCount": "1",
     "hitPosition": "center",
-    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"freeze\",\"turn\":1}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHPR\",\"value\":20}]}",
     "specs": {
       "targets": {
-        "group": "enemy",
-        "count": 2
+        "group": "self"
       },
       "effects": [
         {
-          "type": "damage",
-          "multi": 1.5
-        },
-        {
-          "type": "freeze",
-          "turn": 1
+          "type": "percentHPR",
+          "value": 20
         }
       ]
     },
     "soundFXarr": [
-      "ragecharge",
-      "ragesmash"
+      "powercharge"
     ],
     "hitFXarr": [
-      "hitImpactBlue1"
+      "hitRabbitShield"
     ],
-    "name": "txtYetiActive",
+    "name": "txtMoonRabbit4Active",
     "type": "active",
     "id": "10292",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "hitCount": "1",
@@ -1855,7 +2562,7 @@
     "type": "active",
     "id": "10052",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "hitCount": "1",
@@ -1886,21 +2593,21 @@
     "cooldown": 3
   },
   {
-    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentDEF\",\"value\":10}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
     "specs": {
       "targets": {
         "group": "self"
       },
       "effects": [
         {
-          "type": "percentDEF",
-          "value": 10
+          "type": "percentATK",
+          "value": 20
         }
       ]
     },
     "soundFXarr": [],
     "hitFXarr": [],
-    "name": "txtYetiPassive",
+    "name": "txtMoonRabbit4Passive",
     "type": "passive",
     "id": "10294",
     "ranged": false,
@@ -1952,6 +2659,61 @@
   {
     "hitCount": "1",
     "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"debuffDEF\",\"turn\":2}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 2
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.5
+        },
+        {
+          "type": "debuffDEF",
+          "turn": 2
+        }
+      ]
+    },
+    "soundFXarr": [
+      "powercharge",
+      "cast1"
+    ],
+    "hitFXarr": [
+      "hitLichAttack"
+    ],
+    "name": "txtCursedWizardActive",
+    "type": "active",
+    "id": "10332",
+    "ranged": false,
+    "cooldown": 5
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"dark\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
+    "specs": {
+      "targets": {
+        "group": "allied",
+        "element": "dark"
+      },
+      "effects": [
+        {
+          "type": "percentATK",
+          "value": 20
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtCursedWizardLeader",
+    "type": "leader",
+    "id": "10331",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
     "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":2}]}{\"type\":\"debuffDEF\",\"turn\":2}]}",
     "specs": {
       "targets": {
@@ -1977,6 +2739,27 @@
     "id": "10213",
     "ranged": false,
     "cooldown": 3
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentDEF\",\"value\":25}]}",
+    "specs": {
+      "targets": {
+        "group": "self"
+      },
+      "effects": [
+        {
+          "type": "percentDEF",
+          "value": 25
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtCursedWizardPassive",
+    "type": "passive",
+    "id": "10334",
+    "ranged": false,
+    "cooldown": 0
   },
   {
     "hitCount": "1",
@@ -2009,7 +2792,38 @@
     "type": "active",
     "id": "10212",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
+  },
+  {
+    "hitCount": "1",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":1.3},{\"type\":\"decover\",\"turn\":2}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 2
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.3
+        },
+        {
+          "type": "decover",
+          "turn": 2
+        }
+      ]
+    },
+    "soundFXarr": [
+      "cast1"
+    ],
+    "hitFXarr": [
+      "hitLichAttack"
+    ],
+    "name": "txtCursedWizardAuto",
+    "type": "auto",
+    "id": "10333",
+    "ranged": false,
+    "cooldown": 3
   },
   {
     "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHP\",\"value\":20}]}",
@@ -2085,7 +2899,7 @@
     "type": "active",
     "id": "10062",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "hitCount": "1",
@@ -2173,7 +2987,7 @@
     "type": "active",
     "id": "10182",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentATK\",\"value\":10}]}",
@@ -2250,6 +3064,28 @@
     "cooldown": 0
   },
   {
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"dark\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
+    "specs": {
+      "targets": {
+        "group": "allied",
+        "element": "dark"
+      },
+      "effects": [
+        {
+          "type": "percentATK",
+          "value": 20
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtWhiteWizard1Leader",
+    "type": "leader",
+    "id": "10341",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
     "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"fire\"},\"effects\":[{\"type\":\"percentATK\",\"value\":15}]}",
     "specs": {
       "targets": {
@@ -2274,11 +3110,11 @@
   {
     "hitCount": "1",
     "hitPosition": "center",
-    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":2},{\"type\":\"debuffDEF\",\"turn\":3}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":1},\"effects\":[{\"type\":\"damage\",\"multi\":2},{\"type\":\"debuffDEF\",\"turn\":2}]}",
     "specs": {
       "targets": {
         "group": "enemy",
-        "count": 2
+        "count": 1
       },
       "effects": [
         {
@@ -2287,25 +3123,53 @@
         },
         {
           "type": "debuffDEF",
-          "turn": 3
+          "turn": 2
         }
       ]
     },
     "soundFXarr": [
       "ragecharge",
-      "slash11"
+      "hit_punch12"
     ],
     "hitFXarr": [
-      "hitImpactBlue1"
+      "hitImpactPurple1"
     ],
     "name": "txtLittleRabbitActive",
     "type": "active",
     "id": "10222",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
-    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"earth\"},\"effects\":[{\"type\":\"percentDEF\",\"value\":20}]}",
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":1.6}]},{\"type\":\"stun\",\"turn\":2}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 2
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.6
+        }
+      ]
+    },
+    "soundFXarr": [
+      "magic11"
+    ],
+    "hitFXarr": [
+      "hitWhiteWizardThunder"
+    ],
+    "name": "txtWhiteWizard1Auto",
+    "type": "auto",
+    "id": "10343",
+    "ranged": false,
+    "cooldown": 3
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"earth\"},\"effects\":[{\"type\":\"percentDEF\",\"value\":10}]}",
     "specs": {
       "targets": {
         "group": "allied",
@@ -2314,7 +3178,7 @@
       "effects": [
         {
           "type": "percentDEF",
-          "value": 20
+          "value": 10
         }
       ]
     },
@@ -2325,6 +3189,39 @@
     "id": "10221",
     "ranged": false,
     "cooldown": 0
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1.8},{\"type\":\"decover\",\"turn\":3}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 3
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.8
+        },
+        {
+          "type": "decover",
+          "turn": 3
+        }
+      ]
+    },
+    "soundFXarr": [
+      "darkcharge",
+      "darkexplosion"
+    ],
+    "hitFXarr": [
+      "hitWhiteWizardEvilHand"
+    ],
+    "name": "txtWhiteWizard1Active",
+    "type": "active",
+    "id": "10342",
+    "ranged": false,
+    "cooldown": 5
   },
   {
     "hitCount": "1",
@@ -2402,39 +3299,60 @@
     "type": "active",
     "id": "10102",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "hitCount": "1",
     "hitPosition": "center",
-    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":1},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"debuffATK\",\"turn\":3}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":1},{\"type\":\"debuffATK\",\"turn\":2}]}",
     "specs": {
       "targets": {
         "group": "enemy",
-        "count": 1
+        "count": 2
       },
       "effects": [
         {
           "type": "damage",
-          "multi": 1.5
+          "multi": 1
         },
         {
           "type": "debuffATK",
-          "turn": 3
+          "turn": 2
         }
       ]
     },
     "soundFXarr": [
-      "slash11"
+      "hit_punch12"
     ],
     "hitFXarr": [
-      "hitImpactBlue1"
+      "hitImpactPurple1"
     ],
     "name": "txtLittleRabbitAuto",
     "type": "auto",
     "id": "10223",
     "ranged": false,
     "cooldown": 3
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHP\",\"value\":20}]}",
+    "specs": {
+      "targets": {
+        "group": "self"
+      },
+      "effects": [
+        {
+          "type": "percentHP",
+          "value": 20
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtWhiteWizard1Passive",
+    "type": "passive",
+    "id": "10344",
+    "ranged": false,
+    "cooldown": 0
   },
   {
     "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHP\",\"value\":10}]}",
@@ -2458,11 +3376,66 @@
     "cooldown": 0
   },
   {
-    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"water\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"water\"},\"effects\":[{\"type\":\"percentDEF\",\"value\":20}]}",
     "specs": {
       "targets": {
         "group": "allied",
         "element": "water"
+      },
+      "effects": [
+        {
+          "type": "percentDEF",
+          "value": 20
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtMoonRabbit2Leader",
+    "type": "leader",
+    "id": "10271",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":1.8},{\"type\":\"debuffDEF\",\"turn\":2}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 2
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.8
+        },
+        {
+          "type": "debuffDEF",
+          "turn": 2
+        }
+      ]
+    },
+    "soundFXarr": [
+      "ragecharge",
+      "slash11"
+    ],
+    "hitFXarr": [
+      "hitImpactBlue1"
+    ],
+    "name": "txtBudgeDragonActive",
+    "type": "active",
+    "id": "10392",
+    "ranged": false,
+    "cooldown": 5
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"fire\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
+    "specs": {
+      "targets": {
+        "group": "allied",
+        "element": "fire"
       },
       "effects": [
         {
@@ -2473,9 +3446,9 @@
     },
     "soundFXarr": [],
     "hitFXarr": [],
-    "name": "txtMoonRabbit1Leader",
+    "name": "txtBudgeDragonLeader",
     "type": "leader",
-    "id": "10271",
+    "id": "10391",
     "ranged": false,
     "cooldown": 0
   },
@@ -2528,35 +3501,60 @@
     "type": "active",
     "id": "10152",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "hitCount": "1",
     "hitPosition": "center",
-    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":1},\"effects\":[{\"type\":\"damage\",\"multi\":1.5}]}{\"type\":\"debuffDEF\",\"turn\":3}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"debuffATK\",\"turn\":3}]}",
     "specs": {
       "targets": {
         "group": "enemy",
-        "count": 1
+        "count": 3
       },
       "effects": [
         {
           "type": "damage",
           "multi": 1.5
+        },
+        {
+          "type": "debuffATK",
+          "turn": 3
         }
       ]
     },
     "soundFXarr": [
-      "punch11"
+      "claw1"
     ],
     "hitFXarr": [
-      "hitImpactBlue1"
+      "hitRabbitClaw"
     ],
-    "name": "txtMoonRabbit1Auto",
+    "name": "txtMoonRabbit2Auto",
     "type": "auto",
     "id": "10273",
     "ranged": false,
     "cooldown": 3
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
+    "specs": {
+      "targets": {
+        "group": "self"
+      },
+      "effects": [
+        {
+          "type": "percentATK",
+          "value": 20
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtBudgeDragonPassive",
+    "type": "passive",
+    "id": "10394",
+    "ranged": false,
+    "cooldown": 0
   },
   {
     "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"water\"},\"effects\":[{\"type\":\"percentATK\",\"value\":15}]}",
@@ -2583,16 +3581,42 @@
   {
     "hitCount": "1",
     "hitPosition": "center",
-    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":2},{\"type\":\"decover\",\"turn\":2}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHPR\",\"value\":20}]}",
+    "specs": {
+      "targets": {
+        "group": "self"
+      },
+      "effects": [
+        {
+          "type": "percentHPR",
+          "value": 20
+        }
+      ]
+    },
+    "soundFXarr": [
+      "powercharge"
+    ],
+    "hitFXarr": [
+      "hitRabbitShield"
+    ],
+    "name": "txtMoonRabbit2Active",
+    "type": "active",
+    "id": "10272",
+    "ranged": false,
+    "cooldown": 5
+  },
+  {
+    "hitCount": "1",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":1},\"effects\":[{\"type\":\"damage\",\"multi\":1.3},{\"type\":\"decover\",\"turn\":2}]}",
     "specs": {
       "targets": {
         "group": "enemy",
-        "count": 2
+        "count": 1
       },
       "effects": [
         {
           "type": "damage",
-          "multi": 2
+          "multi": 1.3
         },
         {
           "type": "decover",
@@ -2601,17 +3625,16 @@
       ]
     },
     "soundFXarr": [
-      "ragecharge",
-      "punch11"
+      "slash11"
     ],
     "hitFXarr": [
       "hitImpactBlue1"
     ],
-    "name": "txtMoonRabbit1Active",
-    "type": "active",
-    "id": "10272",
+    "name": "txtBudgeDragonAuto",
+    "type": "auto",
+    "id": "10393",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 3
   },
   {
     "hitCount": "1",
@@ -2694,7 +3717,7 @@
     "type": "active",
     "id": "10032",
     "ranged": true,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "hitCount": "1",
@@ -2725,23 +3748,33 @@
     "cooldown": 3
   },
   {
-    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHP\",\"value\":15}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
     "specs": {
       "targets": {
         "group": "self"
       },
       "effects": [
         {
-          "type": "percentHP",
-          "value": 15
+          "type": "percentATK",
+          "value": 20
         }
       ]
     },
     "soundFXarr": [],
     "hitFXarr": [],
-    "name": "txtMoonRabbit1Passive",
+    "name": "txtMoonRabbit2Passive",
     "type": "passive",
     "id": "10274",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"fire},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtGoldenDragonLeaderLeader",
+    "type": "leader",
+    "id": "10431",
     "ranged": false,
     "cooldown": 0
   },
@@ -2763,6 +3796,196 @@
     "name": "txtSkeletonArcherPassive",
     "type": "passive",
     "id": "10034",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":1.2},{\"type\":\"debuffDEF\",\"turn\":2}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 2
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.2
+        },
+        {
+          "type": "debuffDEF",
+          "turn": 2
+        }
+      ]
+    },
+    "soundFXarr": [
+      "powercharge",
+      "cast1"
+    ],
+    "hitFXarr": [
+      "hitLichAttack"
+    ],
+    "name": "txtLichActive",
+    "type": "active",
+    "id": "10312",
+    "ranged": false,
+    "cooldown": 5
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1.6}]},{\"type\":\"stun\",\"turn\":1}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 3
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.6
+        }
+      ]
+    },
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitDragonClaw"
+    ],
+    "name": "txtGoldenDragonLeaderAuto",
+    "type": "auto",
+    "id": "10433",
+    "ranged": false,
+    "cooldown": 3
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"dark\"},\"effects\":[{\"type\":\"percentATK\",\"value\":10}]}",
+    "specs": {
+      "targets": {
+        "group": "allied",
+        "element": "dark"
+      },
+      "effects": [
+        {
+          "type": "percentATK",
+          "value": 10
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtLichLeader",
+    "type": "leader",
+    "id": "10311",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":5},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"decover\",\"turn\":3}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 5
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.5
+        },
+        {
+          "type": "decover",
+          "turn": 3
+        }
+      ]
+    },
+    "soundFXarr": [
+      "cast1",
+      "twistingslash1"
+    ],
+    "hitFXarr": [
+      "hitTornadoFire"
+    ],
+    "name": "txtGoldenDragonLeaderActive",
+    "type": "active",
+    "id": "10432",
+    "ranged": false,
+    "cooldown": 5
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentATK\",\"value\":15}]}",
+    "specs": {
+      "targets": {
+        "group": "self"
+      },
+      "effects": [
+        {
+          "type": "percentATK",
+          "value": 15
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtLichPassive",
+    "type": "passive",
+    "id": "10314",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":1},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"debuffATK\",\"turn\":2}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 1
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.5
+        },
+        {
+          "type": "debuffATK",
+          "turn": 2
+        }
+      ]
+    },
+    "soundFXarr": [
+      "cast1"
+    ],
+    "hitFXarr": [
+      "hitLichAttack"
+    ],
+    "name": "txtLichAuto",
+    "type": "auto",
+    "id": "10313",
+    "ranged": false,
+    "cooldown": 3
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHP\",\"value\":30}]}",
+    "specs": {
+      "targets": {
+        "group": "self"
+      },
+      "effects": [
+        {
+          "type": "percentHP",
+          "value": 30
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtGoldenDragonLeaderPassive",
+    "type": "passive",
+    "id": "10434",
     "ranged": false,
     "cooldown": 0
   },
@@ -2791,39 +4014,32 @@
   {
     "hitCount": "1",
     "hitPosition": "center",
-    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":1},\"effects\":[{\"type\":\"damage\",\"multi\":2},{\"type\":\"debuffDEF\",\"turn\":3}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHPR\",\"value\":20}]}",
     "specs": {
       "targets": {
-        "group": "enemy",
-        "count": 1
+        "group": "self"
       },
       "effects": [
         {
-          "type": "damage",
-          "multi": 2
-        },
-        {
-          "type": "debuffDEF",
-          "turn": 3
+          "type": "percentHPR",
+          "value": 20
         }
       ]
     },
     "soundFXarr": [
-      "ragecharge",
-      "hit_slash11",
-      "hit_slash12"
+      "powercharge"
     ],
     "hitFXarr": [
-      "assassinskill"
+      "hitRabbitShield"
     ],
-    "name": "txtNinjaActive",
+    "name": "txtMoonRabbit3Active",
     "type": "active",
     "id": "10282",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
-    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"water\"},\"effects\":[{\"type\":\"percentATK\",\"value\":25}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"water\"},\"effects\":[{\"type\":\"percentDEF\",\"value\":20}]}",
     "specs": {
       "targets": {
         "group": "allied",
@@ -2831,14 +4047,14 @@
       },
       "effects": [
         {
-          "type": "percentATK",
-          "value": 25
+          "type": "percentDEF",
+          "value": 20
         }
       ]
     },
     "soundFXarr": [],
     "hitFXarr": [],
-    "name": "txtNinjaLeader",
+    "name": "txtMoonRabbit3Leader",
     "type": "leader",
     "id": "10281",
     "ranged": false,
@@ -2871,7 +4087,7 @@
     "type": "active",
     "id": "10042",
     "ranged": true,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "hitCount": "1",
@@ -2920,7 +4136,7 @@
     },
     "soundFXarr": [],
     "hitFXarr": [],
-    "name": "txtNinjaPassive",
+    "name": "txtMoonRabbit3Passive",
     "type": "passive",
     "id": "10284",
     "ranged": false,
@@ -2979,35 +4195,35 @@
     "type": "active",
     "id": "10162",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
   },
   {
     "hitCount": "1",
     "hitPosition": "center",
-    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":1},\"effects\":[{\"type\":\"damage\",\"multi\":2},{\"type\":\"debuffDEF\",\"turn\":3}]}",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"debuffATK\",\"turn\":3}]}",
     "specs": {
       "targets": {
         "group": "enemy",
-        "count": 1
+        "count": 3
       },
       "effects": [
         {
           "type": "damage",
-          "multi": 2
+          "multi": 1.5
         },
         {
-          "type": "debuffDEF",
+          "type": "debuffATK",
           "turn": 3
         }
       ]
     },
     "soundFXarr": [
-      "slash11"
+      "claw1"
     ],
     "hitFXarr": [
-      "hitImpactBlue1"
+      "hitRabbitClaw"
     ],
-    "name": "txtNinjaAuto",
+    "name": "txtMoonRabbit3Auto",
     "type": "auto",
     "id": "10283",
     "ranged": false,
@@ -3084,6 +4300,71 @@
     "cooldown": 0
   },
   {
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"dark\"},\"effects\":[{\"type\":\"percentATK\",\"value\":15}]}",
+    "specs": {
+      "targets": {
+        "group": "allied",
+        "element": "dark"
+      },
+      "effects": [
+        {
+          "type": "percentATK",
+          "value": 15
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtThunderLichLeader",
+    "type": "leader",
+    "id": "10321",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":5},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"decover\",\"turn\":3}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 5
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.5
+        },
+        {
+          "type": "decover",
+          "turn": 3
+        }
+      ]
+    },
+    "soundFXarr": [
+      "cast1",
+      "twistingslash1"
+    ],
+    "hitFXarr": [
+      "hitTornadoFire"
+    ],
+    "name": "txtGoldenDragonKingActive",
+    "type": "active",
+    "id": "10442",
+    "ranged": false,
+    "cooldown": 5
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"fire},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtGoldenDragonKingLeader",
+    "type": "leader",
+    "id": "10441",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
     "hitCount": "1",
     "hitPosition": "center",
     "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":2},{\"type\":\"freeze\",\"turn\":1}]}",
@@ -3114,7 +4395,60 @@
     "type": "active",
     "id": "10202",
     "ranged": false,
-    "cooldown": 4
+    "cooldown": 5
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":1},\"effects\":[{\"type\":\"damage\",\"multi\":1.6},{\"type\":\"debuffATK\",\"turn\":2}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 1
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.6
+        },
+        {
+          "type": "debuffATK",
+          "turn": 2
+        }
+      ]
+    },
+    "soundFXarr": [
+      "cast1"
+    ],
+    "hitFXarr": [
+      "hitThunderDark"
+    ],
+    "name": "txtThunderLichAuto",
+    "type": "auto",
+    "id": "10323",
+    "ranged": false,
+    "cooldown": 3
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHP\",\"value\":30}]}",
+    "specs": {
+      "targets": {
+        "group": "self"
+      },
+      "effects": [
+        {
+          "type": "percentHP",
+          "value": 30
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtGoldenDragonKingPassive",
+    "type": "passive",
+    "id": "10444",
+    "ranged": false,
+    "cooldown": 0
   },
   {
     "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"water\"},\"effects\":[{\"type\":\"percentDEF,\"value\":20}]}",
@@ -3125,6 +4459,67 @@
     "id": "10201",
     "ranged": false,
     "cooldown": 0
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":2},\"effects\":[{\"type\":\"damage\",\"multi\":1.4},{\"type\":\"debuffDEF\",\"turn\":2}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 2
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.4
+        },
+        {
+          "type": "debuffDEF",
+          "turn": 2
+        }
+      ]
+    },
+    "soundFXarr": [
+      "powercharge",
+      "cast1"
+    ],
+    "hitFXarr": [
+      "hitThunderDark"
+    ],
+    "name": "txtThunderLichActive",
+    "type": "active",
+    "id": "10322",
+    "ranged": false,
+    "cooldown": 5
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1.6}]},{\"type\":\"stun\",\"turn\":1}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 3
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.6
+        }
+      ]
+    },
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitDragonClaw"
+    ],
+    "name": "txtGoldenDragonKingAuto",
+    "type": "auto",
+    "id": "10443",
+    "ranged": false,
+    "cooldown": 3
   },
   {
     "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentDEF\",\"value\":15}]}",
@@ -3174,5 +4569,26 @@
     "id": "10203",
     "ranged": false,
     "cooldown": 3
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentATK\",\"value\":15}]}",
+    "specs": {
+      "targets": {
+        "group": "self"
+      },
+      "effects": [
+        {
+          "type": "percentATK",
+          "value": 15
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtThunderLichPassive",
+    "type": "passive",
+    "id": "10324",
+    "ranged": false,
+    "cooldown": 0
   }
 ]
