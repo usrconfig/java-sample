@@ -12,6 +12,7 @@ import com.seagame.ext.entities.Player;
 import com.seagame.ext.entities.arena.ArenaHistory;
 import com.seagame.ext.entities.arena.ArenaPower;
 import com.seagame.ext.entities.arena.RevengeInfo;
+import com.seagame.ext.entities.item.HeroItem;
 import com.seagame.ext.exception.GameErrorCode;
 import com.seagame.ext.exception.GameException;
 import com.seagame.ext.exception.UseItemException;
@@ -21,6 +22,9 @@ import com.seagame.ext.managers.PlayerManager;
 import com.seagame.ext.quest.QuestSystem;
 import com.seagame.ext.util.CalculateUtil;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -29,7 +33,7 @@ import java.util.stream.Stream;
  */
 @Instantiation(Instantiation.InstantiationMode.SINGLE_INSTANCE)
 public class ArenaRequestHandler extends ZClientRequestHandler {
-    private static final int FEE = 10000;
+    private static final int FIND_FEE = 1;
     private static final int JOIN = 1;
     private static final int FIND = 2;
     private static final int FIGHT = 3;
@@ -40,7 +44,7 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
     private static final int GET_OPPONENT_INFO = 8;
     private static final int GET_ARENA_RANKING = 9;
 
-    private static final String ZEN_INDEX = "";
+    private static final String BLESS_INDEX = "9999";
     private static final int ARENA_ENERGY_COST = 1;
 
     private ArenaManager arenaManager;
@@ -134,9 +138,9 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
         if (defender == null) {
 //            IQAntObject createErrorMsg = MessageFactory.createErrorMsg(CMD_ARENA, GameErrorCode.OPPONENT_IN_BATTLE);
 //            createErrorMsg.putInt(KEYI_ACTION, REVENGE);
-//            createErrorMsg.putUtfString("msg", "You have been returned " + FEE + " Zen");
+//            createErrorMsg.putUtfString("msg", "You have been returned " + FIND_FEE + " Zen");
 //            sendError(createErrorMsg, user);
-//            heroItemManger.addConsumeableItem(user, ZEN_INDEX, FEE);
+//            heroItemManger.addConsumeableItem(user, ZEN_INDEX, FIND_FEE);
             return;
         }
 
@@ -226,9 +230,9 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
         if (defender == null) {
 //            IQAntObject createErrorMsg = MessageFactory.createErrorMsg(CMD_ARENA, GameErrorCode.OPPONENT_IN_BATTLE);
 //            createErrorMsg.putInt(KEYI_ACTION, FIGHT);
-//            createErrorMsg.putUtfString("msg", "You have been returned " + FEE + " Zen");
+//            createErrorMsg.putUtfString("msg", "You have been returned " + FIND_FEE + " Zen");
 //            sendError(createErrorMsg, user);
-//            heroItemManger.addConsumeableItem(user, ZEN_INDEX, FEE);
+//            heroItemManger.addConsumeableItem(user, ZEN_INDEX, FIND_FEE);
             return;
         }
 
@@ -244,10 +248,8 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
     private void find(QAntUser user, IQAntObject params) {
 
         try {
-
             ArenaPower attacker = arenaManager.getArenaPower(user.getName());
             Player playerRequest = playerManager.getPlayer(user.getName());
-            heroItemManger.useItem(user, ZEN_INDEX, FEE);
             List<ArenaPower> opponents = arenaManager.findOpponent(attacker, playerRequest.getZoneName());
 
             IQAntArray opponentArr = QAntArray.newInstance();
@@ -263,7 +265,8 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
                                 attacker.getAtkTeam().getTeamPower(), arenaPower.getAtkTeam().getTeamPower()));
                 opponentArr.addQAntObject(buildArenaInfo);
             });
-
+            HeroItem heroItem = heroItemManger.useItem(user, BLESS_INDEX, FIND_FEE);
+            heroItemManger.notifyAssetChange(user, Collections.singletonList(heroItem));
             params.putQAntArray("opponents", opponentArr);
             send(params, user);
 
