@@ -29,4 +29,8 @@ public class CampaignManager extends AbstractExtensionManager {
         heroCampaignRepo.save(stage);
         return stage;
     }
+
+    public boolean isDailyFirstTime(String idx) {
+        return false;
+    }
 }

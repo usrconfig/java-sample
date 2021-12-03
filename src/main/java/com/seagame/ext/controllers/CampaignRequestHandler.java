@@ -6,18 +6,24 @@ import com.creants.creants_2x.socket.gate.entities.IQAntObject;
 import com.creants.creants_2x.socket.gate.entities.QAntArray;
 import com.creants.creants_2x.socket.gate.wood.QAntUser;
 import com.seagame.ext.ExtApplication;
+import com.seagame.ext.Utils;
 import com.seagame.ext.config.game.GameConfig;
 import com.seagame.ext.config.game.ItemConfig;
 import com.seagame.ext.config.game.StageConfig;
 import com.seagame.ext.dao.HeroCampaignRepository;
 import com.seagame.ext.entities.campaign.HeroCampaign;
 import com.seagame.ext.entities.campaign.MatchInfo;
+import com.seagame.ext.entities.campaign.Stage;
+import com.seagame.ext.entities.item.HeroItem;
 import com.seagame.ext.exception.GameErrorCode;
 import com.seagame.ext.exception.UseItemException;
 import com.seagame.ext.managers.*;
 import com.seagame.ext.quest.QuestSystem;
 import com.seagame.ext.services.AutoIncrementService;
 import com.seagame.ext.util.NetworkConstant;
+import com.seagame.ext.util.RandomRangeUtil;
+
+import java.util.List;
 
 
 /**
@@ -125,21 +131,16 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
 
 
     public void processReward(IQAntObject params, QAntUser user, String idx, String group, int no) {
-//        Collection<DailyEvent> eventGroup = DailyEventConfig.getInstance().getEvent(idx, group);
-//        String rewards = eventGroup.stream().map(dailyEvent -> RandomRangeUtil.randomDroprate(dailyEvent.getRandomBonus(), dailyEvent.getDropRate(), 1, 1000) + NetworkConstant.SEPERATE_OTHER_ITEM + dailyEvent.getReward()).collect(Collectors.joining(NetworkConstant.SEPERATE_OTHER_ITEM));
-//        List<HeroItem> addItems = heroItemManager.addItems(user, rewards);
-//        heroItemManager.notifyAssetChange(user, addItems);
-//        ItemConfig.getInstance().buildUpdateRewardsReceipt(params, addItems);
-//        ItemConfig.getInstance().buildRewardsReceipt(params, rewards);
-//        int expTotal = eventGroup.stream().mapToInt(DailyEvent::getExpReward).sum();
-//        HeroClass heroClass = heroClassManager.getHeroActive(user.getName());
-//        if (heroClass != null && expTotal > 0) {
-//            boolean levelUp = heroClass.expUp(expTotal);
-//            heroClassManager.save(heroClass);
-//            NotifySystem notifySystem = ExtApplication.getBean(NotifySystem.class);
-//            notifySystem.notifyExpChange(user.getName(), heroClass.buildInfoLevel(levelUp), null);
-//        }
-//        questSystem.notifyObservers(JoinWinTask.init(user.getName(), idx));
+        Stage stage = StageConfig.getInstance().getStage(idx);
+        String rewards = RandomRangeUtil.randomRewardV2(stage.getRandomReward(), 1);
+        String dailyFirstTimeReward = stage.getDailyFirstTimeReward();
+        if (campaignManager.isDailyFirstTime(idx) && !Utils.isNullOrEmpty(dailyFirstTimeReward)) {
+            rewards += "#" + dailyFirstTimeReward;
+        }
+        List<HeroItem> addItems = heroItemManager.addItems(user, rewards);
+        heroItemManager.notifyAssetChange(user, addItems);
+        ItemConfig.getInstance().buildUpdateRewardsReceipt(params, addItems);
+        ItemConfig.getInstance().buildRewardsReceipt(params, rewards);
     }
 
 
