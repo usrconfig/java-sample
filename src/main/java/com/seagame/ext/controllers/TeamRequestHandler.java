@@ -61,7 +61,7 @@ public class TeamRequestHandler extends ZClientRequestHandler {
         BattleTeam battleTeam = battleTeamRep.findById(playerId).orElse(new BattleTeam(playerId));
         Collection<Long> heroIds = params.getLongArray("heroes");
 
-        Team oldTeam = battleTeam.getTeam(TeamType.valueOf(idx));
+        Team oldTeam = battleTeam.getTeam(idx);
         List<HeroClass> heroes = heroClassManager.findHeroes(heroIds, false);
         Team team = Team.createTeam(idx, heroes);
         team.setFormation(heroIds.toArray(new Long[]{}));

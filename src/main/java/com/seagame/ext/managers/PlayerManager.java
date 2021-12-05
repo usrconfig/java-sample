@@ -13,6 +13,9 @@ import com.seagame.ext.entities.hero.HeroClass;
 import com.seagame.ext.entities.item.HeroConsumeItem;
 import com.seagame.ext.entities.item.HeroEquipment;
 import com.seagame.ext.entities.item.HeroItem;
+import com.seagame.ext.entities.team.BattleTeam;
+import com.seagame.ext.entities.team.Team;
+import com.seagame.ext.entities.team.TeamType;
 import com.seagame.ext.exception.UseItemException;
 import com.seagame.ext.services.AutoIncrementService;
 import com.seagame.ext.services.ServiceHelper;
@@ -25,6 +28,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -130,8 +134,36 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                shopManager.getShopPackage("os1#1002", "shop_npc01");
 //
 //                questSystem.notifyObservers(CollectionTask.init("sk1#1002","login",1));
+//                buildHeroTestDefault();
+//                Page<HeroClass> heroPage = heroClassManager.getHeroPage("nf1#1001", 1);
+//                List<HeroClass> heroes = heroClassManager.findHeroes(heroPage.getContent().stream().limit(5).map(HeroClass::getId).collect(Collectors.toList()), false);
 
-                heroClassManager.getHeroPage("nf1#1001", 1);
+//                String playerId = "nf1#1001";
+//                String idx = "cp";//cp/ar/df
+//                BattleTeamRepository battleTeamRep=ExtApplication.getBean(BattleTeamRepository.class);
+//                BattleTeam battleTeam = battleTeamRep.findById(playerId).orElse(new BattleTeam(playerId));
+//                Collection<Long> heroIds = new ArrayList<>();
+//                heroIds.add(1001L);
+//                heroIds.add(1002L);
+//                heroIds.add(1003L);
+//
+//                Team oldTeam = battleTeam.getTeam(idx);
+//                List<HeroClass> heroes = heroClassManager.findHeroes(heroIds, false);
+//                Team team = Team.createTeam(idx, heroes);
+//                team.setFormation(heroIds.toArray(new Long[]{}));
+//                int leaderIndex = 0;
+//                team.setLeaderIndex(leaderIndex);
+//                battleTeam.addTeam(team);
+//                battleTeamRep.save(battleTeam);
+//                team.buildObject();
+//                heroes.forEach(heroClass -> heroClass.updateTeam(idx));
+//                if (oldTeam != null) {
+//                    List<HeroClass> oldHeroes = heroClassManager.findHeroes(oldTeam.getHeroIds().stream().filter(aLong -> !heroIds.contains(aLong)).collect(Collectors.toList()), false);
+//                    oldHeroes.forEach(heroClass -> heroClass.removeTeam(idx));
+//                    heroes.addAll(oldHeroes);
+//                }
+//                heroClassManager.save(heroes);
+
             }
         }, 3000, 100000000);
 
@@ -292,6 +324,17 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
         list.forEach(heroBase -> {
             HeroClass heroClass = new HeroClass(heroBase.getID(), 1);
             heroClass.setPlayerId(user.getName());
+            heroClass.setId(autoIncrService.genHeroId());
+            heroes.add(heroClass);
+        });
+        heroClassManager.save(heroes);
+    }
+    private void buildHeroTestDefault() {
+        ArrayList<HeroBase> list = new ArrayList<>(HeroConfig.getInstance().getHeroes());
+        List<HeroClass> heroes = new ArrayList<>();
+        list.forEach(heroBase -> {
+            HeroClass heroClass = new HeroClass(heroBase.getID(), 1);
+            heroClass.setPlayerId("nf1#1001");
             heroClass.setId(autoIncrService.genHeroId());
             heroes.add(heroClass);
         });

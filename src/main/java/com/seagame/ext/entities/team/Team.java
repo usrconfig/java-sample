@@ -23,7 +23,7 @@ import java.util.stream.Stream;
 @Getter
 @Setter
 public class Team implements SerializableQAntType {
-    private TeamType teamType;
+    private String teamType;
     public Long[] heroes;
     private @Transient
     List<HeroClass> heroList;
@@ -40,7 +40,7 @@ public class Team implements SerializableQAntType {
     }
 
 
-    private Team(TeamType teamType, List<HeroClass> heroes) {
+    private Team(String teamType, List<HeroClass> heroes) {
         this.heroes = new Long[]{-1L, -1L, -1L, -1L, -1L};
         leaderIndex = 0;
         this.teamType = teamType;
@@ -59,13 +59,11 @@ public class Team implements SerializableQAntType {
     }
 
 
-
-
-    public static Team createTeam(String idx,List<HeroClass> heroes) {
-        switch (TeamType.valueOf(idx)){
-            case ARENA:
+    public static Team createTeam(String idx, List<HeroClass> heroes) {
+        switch (idx) {
+            case "ar":
                 return createArenaTeam(heroes);
-            case DEFENCE:
+            case "df":
                 return createDefenceTeam(heroes);
             default:
                 return createCampaignTeam(heroes);
@@ -73,24 +71,24 @@ public class Team implements SerializableQAntType {
     }
 
     public static Team createCampaignTeam(List<HeroClass> heroes) {
-        return new Team(TeamType.CAMPAIGN, heroes);
+        return new Team(TeamType.CAMPAIGN.getCode(), heroes);
     }
 
 
     public static Team createArenaTeam(List<HeroClass> heroes) {
-        return new Team(TeamType.ARENA, heroes);
+        return new Team(TeamType.ARENA.getCode(), heroes);
     }
 
 
     public static Team createDefenceTeam(List<HeroClass> heroes) {
-        return new Team(TeamType.DEFENCE, heroes);
+        return new Team(TeamType.DEFENCE.getCode(), heroes);
     }
 
 
     public IQAntObject buildObject() {
         QAntObject teamObj = QAntObject.newInstance();
-        teamObj.putUtfString("idx", teamType.getCode());
-        teamObj.putUtfString("id", teamType.getCode());
+        teamObj.putUtfString("idx", teamType);
+        teamObj.putUtfString("id", teamType);
         teamObj.putLongArray("heroes", getFormation());
         teamObj.putInt("leaderIndex", getLeaderIndex());
         teamObj.putInt("teamPower", getTeamPower());
@@ -108,7 +106,7 @@ public class Team implements SerializableQAntType {
     }
 
 
-    public TeamType getTeamType() {
+    public String getTeamType() {
         return teamType;
     }
 

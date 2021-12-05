@@ -18,7 +18,7 @@ import java.util.Map;
 public class BattleTeam {
     @Id
     private String playerId;
-    private Map<TeamType, Team> teamMap;
+    private Map<String, Team> teamMap;
 
     public BattleTeam(String playerId) {
         this.playerId = playerId;
@@ -32,21 +32,21 @@ public class BattleTeam {
 
 
     public Team getArenaTeam() {
-        return getTeam(TeamType.ARENA);
+        return getTeam(TeamType.ARENA.getCode());
     }
 
-    public Team getTeam(TeamType type) {
+    public Team getTeam(String type) {
         return teamMap.get(type);
     }
 
 
     public Team getCampaignTeam() {
-        return getTeam(TeamType.CAMPAIGN);
+        return getTeam(TeamType.CAMPAIGN.getCode());
     }
 
 
     public Team getDefenceTeam() {
-        return getTeam(TeamType.DEFENCE);
+        return getTeam(TeamType.DEFENCE.getCode());
     }
 
 
