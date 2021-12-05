@@ -68,6 +68,7 @@ public class TeamRequestHandler extends ZClientRequestHandler {
         Integer leaderIndex = params.getInt("leaderIndex");
         team.setLeaderIndex(leaderIndex);
         battleTeam.addTeam(team);
+        battleTeamRep.save(battleTeam);
         params.putQAntObject("team", team.buildObject());
         send(params, user);
         heroes.forEach(heroClass -> heroClass.updateTeam(idx));
