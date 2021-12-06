@@ -351,6 +351,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
                 case ITEM_TICKET://material
                 case ITEM_POINT://material
                 case ITEM_REWARDS://material
+                case ITEM_MATERIAL://material
                     heroItem = new HeroConsumeItem(itemBase);
                     heroItem.setNo(300);
                     collection.add(heroItem);
