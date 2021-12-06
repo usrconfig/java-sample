@@ -92,7 +92,7 @@ public class PlayerRequestHandler extends ZClientRequestHandler {
 
     private void addItemHero(QAntUser user, IQAntObject params) {
         String giftCode = params.getUtfString("code");
-        if (giftCode.startsWith("ADD:")) {
+        if (giftCode.startsWith("add:")) {
             customeGift(user, giftCode);
             send(params, user);
         }
@@ -100,11 +100,11 @@ public class PlayerRequestHandler extends ZClientRequestHandler {
 
     private void customeGift(QAntUser user, String giftCode) {
         String gameHeroId = user.getName();
-        String[] addItemArr = StringUtils.substringsBetween(giftCode, "AI", "|");
+        String[] addItemArr = StringUtils.substringsBetween(giftCode, "ai:", "|");
         if (addItemArr != null && addItemArr.length > 0) {
             heroItemManager.addItems(gameHeroId, addItemArr[0].trim());
         }
-        String[] addHeroArr = StringUtils.substringsBetween(giftCode, "AH", "|");
+        String[] addHeroArr = StringUtils.substringsBetween(giftCode, "ah:", "|");
         if (addHeroArr != null && addHeroArr.length > 0) {
             Arrays.stream(addHeroArr[0].trim().split("#")).forEach(s -> {
                 HeroBase heroBase = HeroConfig.getInstance().getHeroBase(s);
