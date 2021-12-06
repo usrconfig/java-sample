@@ -503,8 +503,6 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
 
     public List<ArenaPower> findOpponent(ArenaPower attacker, String zone) {
 
-        List<ArenaPower> opponents = new ArrayList<>();
-
         // tìm người chơi trên hệ thống loại trừ người đang trong trận
 
         BattleTeam atkBattleTeam = battleTeamRepo.findById(attacker.getPlayerId()).orElse(null);
@@ -538,11 +536,9 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
         if (updateList.size() > 0)
             update(updateList);
 
-        opponents
-                .addAll(powerList.stream()
-                        .filter(power -> !searchMap.containsKey(power.getPlayerId())
-                                && !power.getPlayerId().equals(attacker.getPlayerId()))
-                        .collect(Collectors.toList()));
+        List<ArenaPower> opponents = powerList.stream()
+                .filter(power -> !searchMap.containsKey(power.getPlayerId())
+                        && !power.getPlayerId().equals(attacker.getPlayerId())).collect(Collectors.toList());
 
         if (opponents.size() == 3)
             opponents.remove(2);
