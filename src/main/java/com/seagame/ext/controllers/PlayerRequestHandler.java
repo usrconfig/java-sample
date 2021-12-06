@@ -4,18 +4,24 @@ import com.creants.creants_2x.core.annotations.Instantiation;
 import com.creants.creants_2x.core.service.WebService;
 import com.creants.creants_2x.core.util.QAntTracer;
 import com.creants.creants_2x.socket.gate.entities.IQAntObject;
-import com.creants.creants_2x.socket.gate.entities.QAntArray;
 import com.creants.creants_2x.socket.gate.entities.QAntObject;
 import com.creants.creants_2x.socket.gate.wood.QAntUser;
 import com.seagame.ext.ExtApplication;
+import com.seagame.ext.config.game.HeroConfig;
 import com.seagame.ext.entities.Player;
+import com.seagame.ext.entities.hero.HeroBase;
+import com.seagame.ext.entities.hero.HeroClass;
 import com.seagame.ext.exception.GameErrorCode;
 import com.seagame.ext.exception.NameException;
+import com.seagame.ext.managers.HeroClassManager;
+import com.seagame.ext.managers.HeroItemManager;
 import com.seagame.ext.managers.PlayerManager;
+import com.seagame.ext.services.AutoIncrementService;
 import com.seagame.ext.util.GameUtils;
 import net.sf.json.JSONObject;
+import org.apache.commons.lang.StringUtils;
 
-import java.util.List;
+import java.util.Arrays;
 
 import static com.seagame.ext.exception.GameErrorCode.LACK_OF_INFOMATION;
 
@@ -32,12 +38,20 @@ public class PlayerRequestHandler extends ZClientRequestHandler {
     private static final int LINK_ACCOUNT_3RD = 5;
     private static final int UN_LINK_ACCOUNT_FB_GG = 6;
 
+    private static final int ADD_ITEM_HERO_TEST = 7;
+
 
     private PlayerManager playerManager;
+    private HeroClassManager heroClassManager;
+    private HeroItemManager heroItemManager;
+    private AutoIncrementService autoIncrementService;
 
 
     public PlayerRequestHandler() {
         playerManager = ExtApplication.getBean(PlayerManager.class);
+        heroClassManager = ExtApplication.getBean(HeroClassManager.class);
+        heroItemManager = ExtApplication.getBean(HeroItemManager.class);
+        autoIncrementService = ExtApplication.getBean(AutoIncrementService.class);
     }
 
 
@@ -68,8 +82,37 @@ public class PlayerRequestHandler extends ZClientRequestHandler {
             case CHECK_NAME:
                 checkName(user, params);
                 break;
+            case ADD_ITEM_HERO_TEST:
+                addItemHero(user, params);
+                break;
             default:
                 break;
+        }
+    }
+
+    private void addItemHero(QAntUser user, IQAntObject params) {
+        String giftCode = params.getUtfString("code");
+        if (giftCode.startsWith("ADD:")) {
+            customeGift(user, giftCode);
+            send(params, user);
+        }
+    }
+
+    private void customeGift(QAntUser user, String giftCode) {
+        String gameHeroId = user.getName();
+        String[] addItemArr = StringUtils.substringsBetween(giftCode, "AI", "|");
+        if (addItemArr != null && addItemArr.length > 0) {
+            heroItemManager.addItems(gameHeroId, addItemArr[0].trim());
+        }
+        String[] addHeroArr = StringUtils.substringsBetween(giftCode, "AH", "|");
+        if (addHeroArr != null && addHeroArr.length > 0) {
+            Arrays.stream(addHeroArr[0].trim().split("#")).forEach(s -> {
+                HeroBase heroBase = HeroConfig.getInstance().getHeroBase(s);
+                HeroClass heroClass = new HeroClass(heroBase.getID(), 1);
+                heroClass.setId(autoIncrementService.genHeroId());
+                heroClass.setPlayerId(user.getName());
+                heroClassManager.save(heroClass);
+            });
         }
     }
 
