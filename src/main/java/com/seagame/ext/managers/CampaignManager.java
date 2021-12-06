@@ -24,13 +24,17 @@ public class CampaignManager extends AbstractExtensionManager {
         if (byId.isPresent()) {
             return byId.get();
         }
-        HeroCampaign stage = new HeroCampaign(playerId);
-        stage.getStages().add(new HeroStage(playerId, stageConfig.getFirstStage()));
-        heroCampaignRepo.save(stage);
-        return stage;
+        HeroCampaign heroCampaign = new HeroCampaign(playerId);
+        heroCampaign.getStages().add(new HeroStage(playerId, stageConfig.getFirstStage()));
+        heroCampaignRepo.save(heroCampaign);
+        return heroCampaign;
     }
 
     public boolean isDailyFirstTime(String idx) {
         return false;
+    }
+
+    public HeroCampaign save(HeroCampaign campaign) {
+        return heroCampaignRepo.save(campaign);
     }
 }

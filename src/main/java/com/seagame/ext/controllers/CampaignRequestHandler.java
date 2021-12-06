@@ -7,22 +7,24 @@ import com.creants.creants_2x.socket.gate.entities.QAntArray;
 import com.creants.creants_2x.socket.gate.wood.QAntUser;
 import com.seagame.ext.ExtApplication;
 import com.seagame.ext.Utils;
-import com.seagame.ext.config.game.GameConfig;
 import com.seagame.ext.config.game.ItemConfig;
 import com.seagame.ext.config.game.StageConfig;
-import com.seagame.ext.dao.HeroCampaignRepository;
 import com.seagame.ext.entities.campaign.HeroCampaign;
+import com.seagame.ext.entities.campaign.HeroStage;
 import com.seagame.ext.entities.campaign.MatchInfo;
 import com.seagame.ext.entities.campaign.Stage;
 import com.seagame.ext.entities.item.HeroItem;
 import com.seagame.ext.exception.GameErrorCode;
 import com.seagame.ext.exception.UseItemException;
-import com.seagame.ext.managers.*;
-import com.seagame.ext.quest.QuestSystem;
-import com.seagame.ext.services.AutoIncrementService;
+import com.seagame.ext.managers.CampaignManager;
+import com.seagame.ext.managers.HeroItemManager;
+import com.seagame.ext.managers.MatchManager;
+import com.seagame.ext.managers.PlayerManager;
 import com.seagame.ext.util.NetworkConstant;
 import com.seagame.ext.util.RandomRangeUtil;
+import org.apache.commons.lang.StringUtils;
 
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -39,22 +41,13 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
 
 
     private MatchManager matchManager;
-    private QuestSystem questSystem;
-    private HeroClassManager heroManager;
-    private AutoIncrementService autoIncrService;
     private HeroItemManager heroItemManager;
     private PlayerManager playerManager;
     private CampaignManager campaignManager;
 
-    private static final StageConfig stageConfig = StageConfig.getInstance();
-    private static final ItemConfig itemConfig = ItemConfig.getInstance();
-    private static final GameConfig gameConfig = GameConfig.getInstance();
 
     public CampaignRequestHandler() {
         matchManager = ExtApplication.getBean(MatchManager.class);
-        questSystem = ExtApplication.getBean(QuestSystem.class);
-        autoIncrService = ExtApplication.getBean(AutoIncrementService.class);
-        heroManager = ExtApplication.getBean(HeroClassManager.class);
         heroItemManager = ExtApplication.getBean(HeroItemManager.class);
         playerManager = ExtApplication.getBean(PlayerManager.class);
         campaignManager = ExtApplication.getBean(CampaignManager.class);
@@ -113,7 +106,33 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
             return;
         }
         processReward(params, user, event, group, 1);
+        HeroCampaign heroCampaign = processHeroCampaign(user, event, 3);
+        QAntArray qAntArray = new QAntArray();
+        heroCampaign.getStages().forEach(heroStage -> qAntArray.addQAntObject(heroStage.buildInfo()));
+        params.putQAntArray("list", qAntArray);
         send(params, user);
+    }
+
+    private HeroCampaign processHeroCampaign(QAntUser user, String idx, int starNo) {
+        String playerId = user.getName();
+        HeroCampaign campaign = campaignManager.getOrCreateCampaign(playerId);
+        HeroStage heroStage = campaign.getStages().stream().filter(stage -> stage.getIndex().equals(idx)).findFirst().get();
+        if (heroStage.isFirstClearOrUpdateStar(starNo)) {
+            Stage finishStage = StageConfig.getInstance().getStage(idx);
+            String[] stageArr = StringUtils.split(finishStage.getUnlockStage(), "#");
+            // mở stage mới
+            int newStageIndex = Integer.parseInt(stageArr[0]);
+            if (newStageIndex <= -1) {
+                return campaignManager.save(campaign);
+            }
+            Arrays.stream(stageArr).forEach(s -> {
+                Stage stage = StageConfig.getInstance().getStage(s);
+                if (stage != null)
+                    campaign.getStages().add(new HeroStage(playerId, stage));
+            });
+            return campaignManager.save(campaign);
+        }
+        return campaign;
     }
 
     private void doSweep(QAntUser user, IQAntObject params, int no) {
