@@ -123,14 +123,6 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
     }
 
     public long getNextRankingSeconds() {
-        try {
-            return (Objects.requireNonNull(schedulerFactory.getObject()).getTrigger(arenaRankingKey).getNextFireTime().getTime()
-                    - System.currentTimeMillis()) / 1000;
-        } catch (SchedulerException e) {
-            e.printStackTrace();
-        }
-
-        // lỗi thì báo là chờ 30 ngày
         return 2592000;
     }
 

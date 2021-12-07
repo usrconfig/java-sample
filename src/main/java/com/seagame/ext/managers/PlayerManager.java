@@ -202,7 +202,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 ////
 //                ArenaManager arenaManager = ExtApplication.getBean(ArenaManager.class);
 //                ArenaPower arenaPower = arenaManager.join("nf1#1001");
-//                QAntObject params = new QAntObject();
+                QAntObject params = new QAntObject();
 //                if (arenaPower == null) {
 //                    params.putQAntObject("arena", QAntObject.newFromObject(new ArenaPower()));
 //                    return;
@@ -210,7 +210,16 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                params.putQAntObject("arena",
 //                        arenaPower.getAtkTeam() != null ? arenaPower.buildInfo() : arenaPower.buildNewbieArenaInfo());
 //                params.putLong("rankingSeconds", arenaManager.getNextRankingSeconds());
+//      get ArenaInfo
 
+//                ArenaPower arenaPower = arenaManager.join("nf1#1012");
+//                if (arenaPower == null) {
+//                    params.putQAntObject("arena", QAntObject.newFromObject(new ArenaPower()));
+//                    return;
+//                }
+//                params.putQAntObject("arena",
+//                        arenaPower.getAtkTeam() != null ? arenaPower.buildInfo() : arenaPower.buildNewbieArenaInfo());
+//                params.putLong("rankingSeconds", arenaManager.getNextRankingSeconds());
 
             }
         }, 3000, 100000000);
