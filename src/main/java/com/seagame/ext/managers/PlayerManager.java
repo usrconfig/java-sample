@@ -379,7 +379,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
         campaignManager.getOrCreateCampaign(player.getId());
 
         // tạo nhiệm vụ cho hero
-        questSystem.getOrCreateQuest(player.getId());
+//        questSystem.getOrCreateQuest(player.getId());
 
         arenaManager.registerArena(player, battleTeam);
     }
