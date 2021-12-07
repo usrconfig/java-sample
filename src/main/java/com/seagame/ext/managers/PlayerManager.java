@@ -179,29 +179,29 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                heroClassManager.save(heroes);
 
                 //Test AreanInfo
-                String playerID="nf1#1001";
-                BattleTeam battleTeam = new BattleTeam(playerID);
-                battleTeam.addTeam(Team.createCampaignTeam(heroClassManager.getHeroes().stream().limit(3).collect(Collectors.toList())));
-                battleTeamRepository.save(battleTeam);
-
-                // mở world, chapter, stage, mission
-                campaignManager.getOrCreateCampaign(playerID);
+//                String playerID="nf1#1001";
+//                BattleTeam battleTeam = new BattleTeam(playerID);
+//                battleTeam.addTeam(Team.createCampaignTeam(heroClassManager.getHeroes().stream().limit(3).collect(Collectors.toList())));
+//                battleTeamRepository.save(battleTeam);
+//
+//                // mở world, chapter, stage, mission
+//                campaignManager.getOrCreateCampaign(playerID);
 
                 // tạo nhiệm vụ cho hero
-                questSystem.getOrCreateQuest(playerID);
+//                questSystem.getOrCreateQuest(playerID);
 
-                arenaManager.registerArena(getPlayer(playerID), battleTeam);
-
-                ArenaManager arenaManager = ExtApplication.getBean(ArenaManager.class);
-                ArenaPower arenaPower = arenaManager.join("nf1#1001");
-                QAntObject params = new QAntObject();
-                if (arenaPower == null) {
-                    params.putQAntObject("arena", QAntObject.newFromObject(new ArenaPower()));
-                    return;
-                }
-                params.putQAntObject("arena",
-                        arenaPower.getAtkTeam() != null ? arenaPower.buildInfo() : arenaPower.buildNewbieArenaInfo());
-                params.putLong("rankingSeconds", arenaManager.getNextRankingSeconds());
+//                arenaManager.registerArena(getPlayer(playerID), battleTeam);
+//
+//                ArenaManager arenaManager = ExtApplication.getBean(ArenaManager.class);
+//                ArenaPower arenaPower = arenaManager.join("nf1#1001");
+//                QAntObject params = new QAntObject();
+//                if (arenaPower == null) {
+//                    params.putQAntObject("arena", QAntObject.newFromObject(new ArenaPower()));
+//                    return;
+//                }
+//                params.putQAntObject("arena",
+//                        arenaPower.getAtkTeam() != null ? arenaPower.buildInfo() : arenaPower.buildNewbieArenaInfo());
+//                params.putLong("rankingSeconds", arenaManager.getNextRankingSeconds());
 
 
             }
