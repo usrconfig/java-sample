@@ -178,7 +178,15 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                }
 //                heroClassManager.save(heroes);
 
-                //Test AreanInfo
+//                String playerId = "nf1" + "#" + 1001;
+//                String fullname = "Guest#" + 1001;
+//
+//                Player player = new Player(playerId, 1001, fullname);
+//                player.setDeviceId("");
+//                player.setZoneName("nf1");
+//                playerManager.updateGameHero(player);
+//
+//                //Test AreanInfo
 //                String playerID="nf1#1001";
 //                BattleTeam battleTeam = new BattleTeam(playerID);
 //                battleTeam.addTeam(Team.createCampaignTeam(heroClassManager.getHeroes().stream().limit(3).collect(Collectors.toList())));
@@ -191,7 +199,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                questSystem.getOrCreateQuest(playerID);
 
 //                arenaManager.registerArena(getPlayer(playerID), battleTeam);
-//
+////
 //                ArenaManager arenaManager = ExtApplication.getBean(ArenaManager.class);
 //                ArenaPower arenaPower = arenaManager.join("nf1#1001");
 //                QAntObject params = new QAntObject();
