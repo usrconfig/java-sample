@@ -8,9 +8,12 @@ import com.creants.creants_2x.socket.gate.wood.QAntUser;
 import com.seagame.ext.ExtApplication;
 import com.seagame.ext.config.game.HeroConfig;
 import com.seagame.ext.config.game.ItemConfig;
+import com.seagame.ext.config.game.SkillConfig;
 import com.seagame.ext.entities.hero.HeroBase;
 import com.seagame.ext.entities.hero.HeroClass;
 import com.seagame.ext.entities.hero.LevelBase;
+import com.seagame.ext.entities.hero.skill.Skill;
+import com.seagame.ext.entities.hero.skill.SkillBase;
 import com.seagame.ext.entities.item.HeroItem;
 import com.seagame.ext.exception.GameErrorCode;
 import com.seagame.ext.exception.UseItemException;
@@ -22,6 +25,7 @@ import org.springframework.data.domain.Page;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.stream.Collectors;
 
 import static com.seagame.ext.exception.GameErrorCode.LACK_OF_INFOMATION;
 
@@ -35,6 +39,7 @@ public class HeroRequestHandler extends ZClientRequestHandler {
     private static final int SUMMON_HERO = 2;
     private static final int RANK_UP_HERO = 3;
     private static final int LEVEL_UP_HERO = 4;
+    private static final int SKILL_UP_HERO = 5;
 
     private HeroItemManager heroItemManager;
     private HeroClassManager heroClassManager;
@@ -67,6 +72,9 @@ public class HeroRequestHandler extends ZClientRequestHandler {
             case LEVEL_UP_HERO:
                 levelUpHero(user, params);
                 break;
+            case SKILL_UP_HERO:
+                skillUpHero(user, params);
+                break;
         }
     }
 
@@ -97,6 +105,46 @@ public class HeroRequestHandler extends ZClientRequestHandler {
         }
 
         heroWithId.levelUp(1);
+        heroClassManager.save(heroWithId);
+        params.putQAntObject("hero", heroWithId.buildInfo());
+        send(params, user);
+    }
+
+    private void skillUpHero(QAntUser user, IQAntObject params) {
+        long id = params.getLong("id");
+        String skillIdx = params.getUtfString("skillIdx");
+        HeroClass heroWithId = heroClassManager.getHeroWithId(user.getName(), id);
+        if (heroWithId == null) {
+            responseError(user, GameErrorCode.LACK_OF_INFOMATION);
+            return;
+        }
+        Skill upSkill = heroWithId.getSkills().stream().filter(skill -> skill.getIndex().equals(skillIdx)).findFirst().orElse(null);
+        if (upSkill == null) {
+            responseError(user, GameErrorCode.SKILL_NOT_FOUND);
+            return;
+        }
+        SkillBase skillBase = SkillConfig.getInstance().getSkillMap().get(skillIdx);
+        if (skillBase == null) {
+            responseError(user, GameErrorCode.SKILL_NOT_FOUND);
+            return;
+        }
+        if (upSkill.getLevel() >= skillBase.getMaxLevel()) {
+            responseError(user, GameErrorCode.SKILL_MAX_LEVEL);
+            return;
+        }
+
+        try {
+            String upgradeCost = SkillConfig.getInstance().getUpgradeBaseMap().get(upSkill.level).stream().map(skillUpgradeBase -> skillUpgradeBase.getItemID() + "/" + skillUpgradeBase.getCount()).collect(Collectors.joining("#"));
+            Collection<HeroItem> heroItems = heroItemManager.useItemWithIndex(user, upgradeCost);
+            heroItemManager.notifyAssetChange(user, heroItems);
+            ItemConfig.getInstance().buildUpdateRewardsReceipt(params, heroItems);
+            heroItemManager.save(heroItems);
+        } catch (UseItemException e) {
+            responseError(user, GameErrorCode.NOT_ENOUGH_CURRENCY_ITEM);
+            return;
+        }
+
+        upSkill.levelUp(1);
         heroClassManager.save(heroWithId);
         params.putQAntObject("hero", heroWithId.buildInfo());
         send(params, user);

@@ -48,7 +48,7 @@ public class Skill {
 
     }
 
-    private void levelUp(int i) {
+    public void levelUp(int i) {
         this.level += i;
         levelUpCheck();
     }
