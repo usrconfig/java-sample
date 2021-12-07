@@ -316,11 +316,11 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 
         if (player.isNewUser()) {
             player.setNewUser(false);
-            buildNewPlayer(user, player);
             playerRepo.save(player);
             ServiceHelper serviceHelper = ExtApplication.getBean(ServiceHelper.class);
             serviceHelper.createWelcomeNewPlayerMail(player.getId());
             resetItemForNewDay(user);
+            buildNewPlayer(user, player);
         }
 
         //TODO test

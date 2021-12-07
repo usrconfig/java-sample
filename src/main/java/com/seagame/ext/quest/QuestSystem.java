@@ -114,12 +114,12 @@ public class QuestSystem extends AbstractExtensionManager implements Initializin
     }
 
     public HeroQuest getOrCreateQuest(String id) {
-        Player player = playerManager.getPlayer(id);
-        HeroQuest heroQuest = questRepo.getByPlayerIdAndHeroId(id, player.getActiveHeroId());
+        long activeHero=1;
+        int level = 1;
+        HeroQuest heroQuest = questRepo.getByPlayerIdAndHeroId(id, activeHero);
         if (heroQuest == null) {
-            heroQuest = new HeroQuest(id, player.getActiveHeroId());
+            heroQuest = new HeroQuest(id, activeHero);
             ArrayList<QuestBase> quests = new ArrayList<>(questConfig.getQuestList());
-            int level = player.getLevel();
             heroQuest.buildQuestList(quests, level);
             questRepo.save(heroQuest);
         }
