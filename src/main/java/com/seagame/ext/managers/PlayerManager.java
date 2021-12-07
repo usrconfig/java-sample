@@ -2,12 +2,14 @@ package com.seagame.ext.managers;
 
 import com.creants.creants_2x.core.util.QAntTracer;
 import com.creants.creants_2x.socket.gate.entities.IQAntObject;
+import com.creants.creants_2x.socket.gate.entities.QAntObject;
 import com.creants.creants_2x.socket.gate.wood.QAntUser;
 import com.seagame.ext.ExtApplication;
 import com.seagame.ext.config.game.HeroConfig;
 import com.seagame.ext.config.game.ItemConfig;
 import com.seagame.ext.dao.*;
 import com.seagame.ext.entities.*;
+import com.seagame.ext.entities.arena.ArenaPower;
 import com.seagame.ext.entities.hero.HeroBase;
 import com.seagame.ext.entities.hero.HeroClass;
 import com.seagame.ext.entities.item.HeroConsumeItem;
@@ -15,8 +17,8 @@ import com.seagame.ext.entities.item.HeroEquipment;
 import com.seagame.ext.entities.item.HeroItem;
 import com.seagame.ext.entities.team.BattleTeam;
 import com.seagame.ext.entities.team.Team;
-import com.seagame.ext.entities.team.TeamType;
 import com.seagame.ext.exception.UseItemException;
+import com.seagame.ext.quest.QuestSystem;
 import com.seagame.ext.services.AutoIncrementService;
 import com.seagame.ext.services.ServiceHelper;
 import com.seagame.ext.util.NetworkConstant;
@@ -28,7 +30,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -51,11 +52,24 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 
     @Autowired
     private PlayerRepository playerRepo;
+
+    @Autowired
+    private BattleTeamRepository battleTeamRepository;
+
     @Autowired
     private AutoIncrementService autoIncrService;
 
     @Autowired
     private HeroItemManager heroItemManager;
+
+    @Autowired
+    private QuestSystem questSystem;
+
+    @Autowired
+    private ArenaManager arenaManager;
+
+    @Autowired
+    private CampaignManager campaignManager;
 
     @Autowired
     private HeroClassManager heroClassManager;
@@ -146,7 +160,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                heroIds.add(1001L);
 //                heroIds.add(1002L);
 //                heroIds.add(1003L);
-//
+//Test Team
 //                Team oldTeam = battleTeam.getTeam(idx);
 //                List<HeroClass> heroes = heroClassManager.findHeroes(heroIds, false);
 //                Team team = Team.createTeam(idx, heroes);
@@ -163,6 +177,32 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                    heroes.addAll(oldHeroes);
 //                }
 //                heroClassManager.save(heroes);
+
+                //Test AreanInfo
+                String playerID="nf1#1001";
+                BattleTeam battleTeam = new BattleTeam(playerID);
+                battleTeam.addTeam(Team.createCampaignTeam(heroClassManager.getHeroes().stream().limit(3).collect(Collectors.toList())));
+                battleTeamRepository.save(battleTeam);
+
+                // mở world, chapter, stage, mission
+                campaignManager.getOrCreateCampaign(playerID);
+
+                // tạo nhiệm vụ cho hero
+                questSystem.getOrCreateQuest(playerID);
+
+                arenaManager.registerArena(getPlayer(playerID), battleTeam);
+
+                ArenaManager arenaManager = ExtApplication.getBean(ArenaManager.class);
+                ArenaPower arenaPower = arenaManager.join("nf1#1001");
+                QAntObject params = new QAntObject();
+                if (arenaPower == null) {
+                    params.putQAntObject("arena", QAntObject.newFromObject(new ArenaPower()));
+                    return;
+                }
+                params.putQAntObject("arena",
+                        arenaPower.getAtkTeam() != null ? arenaPower.buildInfo() : arenaPower.buildNewbieArenaInfo());
+                params.putLong("rankingSeconds", arenaManager.getNextRankingSeconds());
+
 
             }
         }, 3000, 100000000);
@@ -268,8 +308,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 
         if (player.isNewUser()) {
             player.setNewUser(false);
-            this.buildItemDefault(user, player);
-            this.buildHeroTestDefault(user);
+            buildNewPlayer(user, player);
             playerRepo.save(player);
             ServiceHelper serviceHelper = ExtApplication.getBean(ServiceHelper.class);
             serviceHelper.createWelcomeNewPlayerMail(player.getId());
@@ -318,7 +357,26 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
         return player;
     }
 
-    private void buildHeroTestDefault(QAntUser user) {
+    private void buildNewPlayer(QAntUser user, Player player) {
+
+        this.buildItemDefault(user, player);
+        List<HeroClass> heroClasses = this.buildHeroTestDefault(user);
+
+        // tạo team battle
+        BattleTeam battleTeam = new BattleTeam(player.getId());
+        battleTeam.addTeam(Team.createCampaignTeam(heroClasses.stream().limit(3).collect(Collectors.toList())));
+        battleTeamRepository.save(battleTeam);
+
+        // mở world, chapter, stage, mission
+        campaignManager.getOrCreateCampaign(player.getId());
+
+        // tạo nhiệm vụ cho hero
+        questSystem.getOrCreateQuest(player.getId());
+
+        arenaManager.registerArena(player, battleTeam);
+    }
+
+    private List<HeroClass> buildHeroTestDefault(QAntUser user) {
         ArrayList<HeroBase> list = new ArrayList<>(HeroConfig.getInstance().getHeroes());
         List<HeroClass> heroes = new ArrayList<>();
         list.forEach(heroBase -> {
@@ -328,7 +386,9 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
             heroes.add(heroClass);
         });
         heroClassManager.save(heroes);
+        return heroes;
     }
+
     private void buildHeroTestDefault() {
         ArrayList<HeroBase> list = new ArrayList<>(HeroConfig.getInstance().getHeroes());
         List<HeroClass> heroes = new ArrayList<>();
