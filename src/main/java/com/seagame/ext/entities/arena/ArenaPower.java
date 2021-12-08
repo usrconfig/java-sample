@@ -33,13 +33,10 @@ public class ArenaPower implements SerializableQAntType {
     int season;
     private int claimedSeason;
     public String name;
-    public @Transient
-    String icon;
     public int rank;
     public int winNo;
     public int refreshNo;
     private transient long beginTime;
-    private transient boolean isNPC;
     private long resetTime;
     private boolean isBeginner;
     public int accLevel;
@@ -54,6 +51,8 @@ public class ArenaPower implements SerializableQAntType {
     private Team atkTeam;
     @Transient
     private Team defTeam;
+
+    private boolean active;
 
 
     public ArenaPower() {
