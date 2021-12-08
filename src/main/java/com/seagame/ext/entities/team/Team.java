@@ -101,7 +101,7 @@ public class Team implements SerializableQAntType {
         if (heroList != null) {
             heroList.forEach(heroClass -> heroes.addQAntObject(heroClass.buildInfo()));
         }
-        teamObj.putQAntArray("heroes", heroes);
+        teamObj.putQAntArray("heroList", heroes);
         teamObj.putInt("leaderIndex", getLeaderIndex());
         teamObj.putInt("teamPower", getTeamPower());
         return teamObj;
