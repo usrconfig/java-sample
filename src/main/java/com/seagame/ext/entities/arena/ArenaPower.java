@@ -69,6 +69,8 @@ public class ArenaPower implements SerializableQAntType {
         arenaInfo.putInt("accLevel", accLevel);
         arenaInfo.putLong("winNo", winNo);
         arenaInfo.putInt("rank", rank);
+        if (atkTeam != null)
+            arenaInfo.putQAntObject("atkTeam", atkTeam.buildObjectHeroes());
         return arenaInfo;
     }
 
