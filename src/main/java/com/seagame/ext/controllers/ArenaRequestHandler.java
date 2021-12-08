@@ -148,7 +148,7 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
         params.putQAntObject("your_team", defender.getOpponent().buildInfo());
         params.putQAntObject("opponent", defender.buildInfo());
         send(params, user);
-
+        trackParams(params);
     }
 
 
@@ -166,6 +166,7 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
                         attackerPower.getAtkTeam().getTeamPower(), opponentPower.getAtkTeam().getTeamPower()));
         params.putQAntObject("opponent", buildArenaInfo);
         send(params, user);
+        trackParams(params);
     }
 
 
@@ -183,6 +184,7 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
         params.putUtfString("your_team", battle.get(0).getOpponent());
         params.putQAntObject("battle", battleObj);
         send(params, user);
+        trackParams(params);
     }
 
 
@@ -195,6 +197,7 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
                 QAntArray.newFromListObject(arenaManager.getHistoryList(user.getName(), page)));
 
         send(params, user);
+        trackParams(params);
     }
 
 
@@ -204,6 +207,7 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
         ArenaPower arenaPower = arenaManager.finish(user, isWin, params);
         params.putQAntObject("arena", arenaPower.buildInfo());
         send(params, user);
+        trackParams(params);
     }
 
 
@@ -242,6 +246,7 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
         params.putQAntObject("your_team", defender.getOpponent().buildInfo());
         params.putQAntObject("opponent", defender.buildInfo());
         send(params, user);
+        trackParams(params);
     }
 
 
@@ -269,7 +274,7 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
             heroItemManger.notifyAssetChange(user, Collections.singletonList(heroItem));
             params.putQAntArray("opponents", opponentArr);
             send(params, user);
-
+            trackParams(params);
         } catch (UseItemException e) {
             responseError(user, GameErrorCode.NOT_ENOUGH_CURRENCY_ITEM);
         }
@@ -284,9 +289,10 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
             send(params, user);
             return;
         }
-        params.putQAntObject("arena",arenaPower.buildInfo());
+        params.putQAntObject("arena", arenaPower.buildInfo());
         params.putLong("rankingSeconds", arenaManager.getNextRankingSeconds());
         send(params, user);
+        trackParams(params);
     }
 
 
