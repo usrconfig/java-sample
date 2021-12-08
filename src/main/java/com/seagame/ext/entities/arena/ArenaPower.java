@@ -147,4 +147,11 @@ public class ArenaPower implements SerializableQAntType {
     public IQAntObject buildNewbieArenaInfo() {
         return buildInfo();
     }
+
+    public IQAntObject buildInfoWithDef() {
+        IQAntObject iqAntObject = buildInfo();
+        if (defTeam != null)
+            iqAntObject.putQAntObject("defTeam", defTeam.buildObjectHeroes());
+        return iqAntObject;
+    }
 }

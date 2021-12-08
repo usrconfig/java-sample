@@ -1,18 +1,16 @@
 package com.seagame.ext.entities.team;
 
 import com.creants.creants_2x.socket.gate.entities.IQAntObject;
+import com.creants.creants_2x.socket.gate.entities.QAntArray;
 import com.creants.creants_2x.socket.gate.entities.QAntObject;
 import com.creants.creants_2x.socket.gate.protocol.serialization.SerializableQAntType;
-import com.seagame.ext.config.game.ItemConfig;
 import com.seagame.ext.entities.hero.HeroClass;
 import com.seagame.ext.util.CalculateUtil;
 import lombok.Getter;
 import lombok.Setter;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.data.annotation.Transient;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -90,6 +88,20 @@ public class Team implements SerializableQAntType {
         teamObj.putUtfString("idx", teamType);
         teamObj.putUtfString("id", teamType);
         teamObj.putLongArray("heroes", getFormation());
+        teamObj.putInt("leaderIndex", getLeaderIndex());
+        teamObj.putInt("teamPower", getTeamPower());
+        return teamObj;
+    }
+
+    public IQAntObject buildObjectHeroes() {
+        QAntObject teamObj = QAntObject.newInstance();
+        teamObj.putUtfString("idx", teamType);
+        teamObj.putUtfString("id", teamType);
+        QAntArray heroes = new QAntArray();
+        if (heroList != null) {
+            heroList.forEach(heroClass -> heroes.addQAntObject(heroClass.buildInfo()));
+        }
+        teamObj.putQAntArray("heroes", heroes);
         teamObj.putInt("leaderIndex", getLeaderIndex());
         teamObj.putInt("teamPower", getTeamPower());
         return teamObj;

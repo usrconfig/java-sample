@@ -250,7 +250,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
         IQAntArray opponentArr = QAntArray.newInstance();
 
         opponents.forEach(arenaPower -> {
-            IQAntObject buildArenaInfo = arenaPower.buildInfo();
+            IQAntObject buildArenaInfo = arenaPower.buildInfoWithDef();
             buildArenaInfo.putInt("winPoint",
                     CalculateUtil.calcTrophyAttackerWin());
             buildArenaInfo.putInt("losePoint",

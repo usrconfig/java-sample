@@ -482,17 +482,6 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
         return systemSetting.getArenaSeason();
     }
 
-
-    /**
-     * Tìm đối thủ, nếu không tìm thấy thì thực hiện sinh Boss
-     *
-     * @param attacker
-     * @return
-     */
-    public List<ArenaPower> findOpponent(ArenaPower attacker) {
-        return findOpponent(attacker, null);
-    }
-
     public List<ArenaPower> findOpponent(ArenaPower attacker, String zone) {
 
         // tìm người chơi trên hệ thống loại trừ người đang trong trận
@@ -505,6 +494,7 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
         Team attackerTeam = atkBattleTeam.getArenaTeam();
         int fromPower = attackerTeam.getSearchPower() * opponentPowerMin / 100;
         int toPower = opponentPowerMax / 100 * attackerTeam.getSearchPower();
+        fromPower = 0;
         toPower = Math.max(500, toPower);
 
 

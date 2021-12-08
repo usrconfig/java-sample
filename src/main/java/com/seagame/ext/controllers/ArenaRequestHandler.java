@@ -156,7 +156,7 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
         String opponentId = params.getUtfString("id");
         ArenaPower opponentPower = arenaManager.getDefenderTeam(opponentId);
 
-        IQAntObject buildArenaInfo = opponentPower.buildInfo();
+        IQAntObject buildArenaInfo = opponentPower.buildInfoWithDef();
         buildArenaInfo.putInt("winPoint",
                 CalculateUtil.calcTrophyAttackerWin());
         buildArenaInfo.putInt("losePoint",
@@ -257,8 +257,7 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
             IQAntArray opponentArr = QAntArray.newInstance();
 
             opponents.forEach(arenaPower -> {
-
-                IQAntObject buildArenaInfo = arenaPower.buildInfo();
+                IQAntObject buildArenaInfo = arenaPower.buildInfoWithDef();
                 buildArenaInfo.putInt("winPoint",
                         CalculateUtil.calcTrophyAttackerWin());
                 buildArenaInfo.putInt("losePoint",
