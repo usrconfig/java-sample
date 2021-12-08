@@ -27,7 +27,7 @@ public abstract class ZClientRequestHandler extends BaseClientRequestHandler imp
 
     public void trackParams(IQAntObject params) {
         if (this.isTrackDebug)
-            QAntTracer.debug(PlayerManager.class, getHandlerCmd() + "/" + this.action + params.getDump());
+            QAntTracer.info(PlayerManager.class, getHandlerCmd() + "/" + this.action + params.getDump());
     }
 
 
