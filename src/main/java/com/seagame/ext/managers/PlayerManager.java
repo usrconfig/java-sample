@@ -1,7 +1,10 @@
 package com.seagame.ext.managers;
 
 import com.creants.creants_2x.core.util.QAntTracer;
+import com.creants.creants_2x.socket.gate.entities.IQAntArray;
 import com.creants.creants_2x.socket.gate.entities.IQAntObject;
+import com.creants.creants_2x.socket.gate.entities.QAntArray;
+import com.creants.creants_2x.socket.gate.entities.QAntObject;
 import com.creants.creants_2x.socket.gate.wood.QAntUser;
 import com.seagame.ext.ExtApplication;
 import com.seagame.ext.config.game.HeroConfig;
@@ -9,6 +12,7 @@ import com.seagame.ext.config.game.ItemConfig;
 import com.seagame.ext.dao.BattleTeamRepository;
 import com.seagame.ext.dao.PlayerRepository;
 import com.seagame.ext.entities.Player;
+import com.seagame.ext.entities.arena.ArenaPower;
 import com.seagame.ext.entities.hero.HeroBase;
 import com.seagame.ext.entities.hero.HeroClass;
 import com.seagame.ext.entities.item.HeroConsumeItem;
@@ -20,6 +24,7 @@ import com.seagame.ext.exception.UseItemException;
 import com.seagame.ext.quest.QuestSystem;
 import com.seagame.ext.services.AutoIncrementService;
 import com.seagame.ext.services.ServiceHelper;
+import com.seagame.ext.util.CalculateUtil;
 import com.seagame.ext.util.NetworkConstant;
 import com.seagame.ext.util.TimeExUtil;
 import org.apache.commons.lang.math.RandomUtils;
@@ -211,6 +216,9 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                        arenaPower.getAtkTeam() != null ? arenaPower.buildInfo() : arenaPower.buildNewbieArenaInfo());
 //                params.putLong("rankingSeconds", arenaManager.getNextRankingSeconds());
 //                QAntTracer.debug(PlayerManager.class,params.getDump());
+//                testFindArena();
+
+
             }
         }, 3000, 100000000);
 
@@ -230,6 +238,28 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                LongStream.range(900, 999).forEach(value -> createBot(value));
 //            }
 //        }, 3000);
+    }
+
+    private void testFindArena() {
+        String playerId = "nf1#1012";
+        ArenaPower attacker = arenaManager.getArenaPower(playerId);
+        PlayerManager playerManager = ExtApplication.getBean(PlayerManager.class);
+        Player playerRequest = playerManager.getPlayer(playerId);
+        List<ArenaPower> opponents = arenaManager.findOpponent(attacker, playerRequest.getZoneName());
+
+        IQAntArray opponentArr = QAntArray.newInstance();
+
+        opponents.forEach(arenaPower -> {
+            IQAntObject buildArenaInfo = arenaPower.buildInfo();
+            buildArenaInfo.putInt("winPoint",
+                    CalculateUtil.calcTrophyAttackerWin());
+            buildArenaInfo.putInt("losePoint",
+                    CalculateUtil.calcTrophyAttackerLose());
+            opponentArr.addQAntObject(buildArenaInfo);
+        });
+
+        IQAntObject params = new QAntObject();
+        params.putQAntArray("opponents", opponentArr);
     }
 
 

@@ -43,8 +43,7 @@ public class ArenaPower implements SerializableQAntType {
     private long resetTime;
     private boolean isBeginner;
     public int accLevel;
-    private int maxTeamPower;
-    private int searchMaxPower;
+    private int searchPower;
     public @Transient
     String avatar;
     private @Transient

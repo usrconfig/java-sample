@@ -186,6 +186,7 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
     public void registerArena(Player player, BattleTeam battleTeam) {
         ArenaPower arenaPower = new ArenaPower();
         arenaPower.setName(player.getName());
+        arenaPower.setZone(player.getZoneName());
         arenaPower.setPlayerId(player.getId());
         arenaPower.setBeginTime(System.currentTimeMillis());
 
@@ -350,13 +351,13 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
             defender.setShieldTime(shieldTime);
             int rewardCoin = 10;
             heroItemManager.addItems(attacker.getPlayerId(), ARENA_COIN_INDEX + "/" + rewardCoin);
-            attackerTrophy = RandomRangeUtil.ranBetween(100, 120);
-            defenderTrophy = -RandomRangeUtil.ranBetween(40, 50);
+            attackerTrophy = CalculateUtil.calcTrophyAttackerWin();
+            defenderTrophy = CalculateUtil.calcTrophyDefLose();
             attacker.incrTrophy(attackerTrophy);
             defender.decrTrophy(defenderTrophy);
         } else {
-            attackerTrophy = -RandomRangeUtil.ranBetween(50, 60);
-            defenderTrophy = RandomRangeUtil.ranBetween(110, 130);
+            attackerTrophy = CalculateUtil.calcTrophyAttackerLose();
+            defenderTrophy = CalculateUtil.calcTrophyDefWin();
             defender.incrTrophy(defenderTrophy);
             attacker.decrTrophy(attackerTrophy);
         }
@@ -505,21 +506,20 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
         Team attackerTeam = atkBattleTeam.getArenaTeam();
         int fromPower = attackerTeam.getSearchPower() * opponentPowerMin / 100;
         int toPower = opponentPowerMax / 100 * attackerTeam.getSearchPower();
+        toPower = Math.max(500, toPower);
 
 
 //		System.out.println("fromPower " + fromPower);
 //		System.out.println("toPower " + toPower);
 //		System.out.println("(int) attacker.getArenaPoint() " + (int) attacker.getArenaPoint());
         // count all game hero with max power from fromPower to toPower,
-        int rowNo = Utils.isNullOrEmpty(zone) ? arenaSearchRepo.countByPower(System.currentTimeMillis(), fromPower, toPower,
-                (int) attacker.getArenaPoint()) : arenaSearchRepo.countByPower(System.currentTimeMillis(), fromPower, toPower,
+        int rowNo = arenaSearchRepo.countByPower(System.currentTimeMillis(), fromPower, toPower,
                 (int) attacker.getArenaPoint(), zone);
         System.out.println("rowNo" + rowNo);
         int randomNum = Math.max(rowNo - 3, 1);
         System.out.println("randomNum" + randomNum);
         // get 3 game hero from random rowNo
-        List<ArenaPower> powerList = Utils.isNullOrEmpty(zone) ? arenaSearchRepo.findOpponent(System.currentTimeMillis(), fromPower, toPower,
-                RandomUtils.nextInt(randomNum), (int) attacker.getArenaPoint()) : arenaSearchRepo.findOpponent(System.currentTimeMillis(), fromPower, toPower,
+        List<ArenaPower> powerList = arenaSearchRepo.findOpponent(System.currentTimeMillis(), fromPower, toPower,
                 RandomUtils.nextInt(randomNum), (int) attacker.getArenaPoint(), zone);
         System.out.println("powerList " + powerList);
         List<ArenaPower> updateList = powerList.stream().filter(this::checkUpdateNewSeason)
@@ -527,13 +527,10 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
 
         if (updateList.size() > 0)
             update(updateList);
-
+        Collections.shuffle(powerList);
         List<ArenaPower> opponents = powerList.stream()
                 .filter(power -> !searchMap.containsKey(power.getPlayerId())
-                        && !power.getPlayerId().equals(attacker.getPlayerId())).collect(Collectors.toList());
-
-        if (opponents.size() == 3)
-            opponents.remove(2);
+                        && !power.getPlayerId().equals(attacker.getPlayerId())).limit(3).collect(Collectors.toList());
 
         return opponents.stream().map(defender -> {
             Player player = playerManager.getPlayer(defender.getPlayerId());

@@ -25,7 +25,6 @@ public class CalculateUtil {
     }
 
 
-
     public static int calcBattleCoins(double attackerPower, double defenderPower) {
         return (int) Math.round((Math.abs(attackerPower - defenderPower) / (attackerPower / defenderPower)) / 2000);
     }
@@ -37,16 +36,22 @@ public class CalculateUtil {
     }
 
 
-    public static int calcTrophyAttackerWin(long attackerTrophy, long defenderTrophy, long attackerPower,
-                                            long defenderPower) {
-        return 1;
-
+    public static int calcTrophyAttackerWin() {
+        return RandomRangeUtil.ranBetween(100, 120);
     }
 
 
-    public static int calcTrophyAttackerLose(long attackerTrophy, long defenderTrophy, long attackerPower,
-                                             long defenderPower) {
-        return 1;
+    public static int calcTrophyAttackerLose() {
+        return RandomRangeUtil.ranBetween(50, 60);
+    }
+
+    public static int calcTrophyDefWin() {
+        return RandomRangeUtil.ranBetween(110, 130);
+    }
+
+
+    public static int calcTrophyDefLose() {
+        return RandomRangeUtil.ranBetween(40, 50);
     }
 
 
@@ -55,36 +60,6 @@ public class CalculateUtil {
     }
 
 
-    public static int calcTrophyDefenderWin(long attackerTrophy, long defenderTrophy, long attackerPower,
-                                            long defenderPower) {
-        // int result = (int) Math.round(-100 * calcX(attackerTrophy,
-        // defenderTrophy) / 6000 + 75);
-        // if (result > 199)
-        // return result = 199;
-        //
-        // return result < 0 ? 1 : result;
-        return Math.round(calcTrophy(attackerTrophy, defenderTrophy, attackerPower, defenderPower) >> 1);
-
-    }
-
-
-    /**
-     * Giá trị luôn <=0
-     *
-     * @param attackerTrophy
-     * @param defenderTrophy
-     * @return
-     */
-    public static int calcTrophyDefenderLose(long attackerTrophy, long defenderTrophy, long attackerPower,
-                                             long defenderPower) {
-        // int result = (int) Math.round(-100 * Math.abs(calcX(attackerTrophy,
-        // defenderTrophy) / 6000) - 50);
-        // if (result < -199)
-        // return result = -199;
-        // return result > 0 ? -3 : result;
-        return (-1 * Math.round(calcTrophy(attackerTrophy, defenderTrophy, attackerPower, defenderPower) >> 2));
-
-    }
 
 
     private static int calcTrophy(long attackerTrophy, long defenderTrophy, long attackerPower, long defenderPower) {
@@ -106,13 +81,12 @@ public class CalculateUtil {
     }
 
     public static int calcPower(List<HeroClass> heroes) {
-        return 0;
+        return 50;
     }
 
     public static int calcSearchPower(List<HeroClass> heroes) {
-        return 0;
+        return 100;
     }
-
 
     public long betweenDates(Date firstDate, Date secondDate) throws IOException {
         return ChronoUnit.DAYS.between(firstDate.toInstant(), secondDate.toInstant());

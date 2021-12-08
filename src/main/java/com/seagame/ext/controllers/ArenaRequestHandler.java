@@ -154,16 +154,13 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
 
     private void getOpponentInfo(QAntUser user, IQAntObject params) {
         String opponentId = params.getUtfString("id");
-        ArenaPower attackerPower = arenaManager.getArenaPower(user.getName());
         ArenaPower opponentPower = arenaManager.getDefenderTeam(opponentId);
 
         IQAntObject buildArenaInfo = opponentPower.buildInfo();
         buildArenaInfo.putInt("winPoint",
-                CalculateUtil.calcTrophyAttackerWin(attackerPower.getArenaPoint(), opponentPower.getArenaPoint(),
-                        attackerPower.getAtkTeam().getTeamPower(), opponentPower.getAtkTeam().getTeamPower()));
+                CalculateUtil.calcTrophyAttackerWin());
         buildArenaInfo.putInt("losePoint",
-                CalculateUtil.calcTrophyAttackerLose(attackerPower.getArenaPoint(), opponentPower.getArenaPoint(),
-                        attackerPower.getAtkTeam().getTeamPower(), opponentPower.getAtkTeam().getTeamPower()));
+                CalculateUtil.calcTrophyAttackerLose());
         params.putQAntObject("opponent", buildArenaInfo);
         send(params, user);
         trackParams(params);
@@ -263,11 +260,9 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
 
                 IQAntObject buildArenaInfo = arenaPower.buildInfo();
                 buildArenaInfo.putInt("winPoint",
-                        CalculateUtil.calcTrophyAttackerWin(attacker.getArenaPoint(), arenaPower.getArenaPoint(),
-                                attacker.getAtkTeam().getTeamPower(), arenaPower.getAtkTeam().getTeamPower()));
+                        CalculateUtil.calcTrophyAttackerWin());
                 buildArenaInfo.putInt("losePoint",
-                        CalculateUtil.calcTrophyAttackerLose(attacker.getArenaPoint(), arenaPower.getArenaPoint(),
-                                attacker.getAtkTeam().getTeamPower(), arenaPower.getAtkTeam().getTeamPower()));
+                        CalculateUtil.calcTrophyAttackerLose());
                 opponentArr.addQAntObject(buildArenaInfo);
             });
             HeroItem heroItem = heroItemManger.useItem(user, BLESS_INDEX, FIND_FEE);
