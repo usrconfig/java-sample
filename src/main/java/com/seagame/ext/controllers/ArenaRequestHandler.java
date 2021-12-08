@@ -146,7 +146,7 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
 
 //        send(CMD_NTF, MessageFactory.buildNotiUpdateArenaInfo(attacker), user);
         params.putQAntObject("your_team", defender.getOpponent().buildInfo());
-        params.putQAntObject("opponent", defender.buildInfo());
+        params.putQAntObject("opponent", defender.buildInfoWithDef());
         send(params, user);
         trackParams(params);
     }
@@ -241,7 +241,7 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
 
 //        send(CMD_NTF, MessageFactory.buildNotiUpdateArenaInfo(attacker), user);
         params.putQAntObject("your_team", defender.getOpponent().buildInfo());
-        params.putQAntObject("opponent", defender.buildInfo());
+        params.putQAntObject("opponent", defender.buildInfoWithDef());
         send(params, user);
         trackParams(params);
     }
