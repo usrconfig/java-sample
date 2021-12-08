@@ -6,11 +6,8 @@ import com.creants.creants_2x.socket.gate.entities.IQAntObject;
 import com.creants.creants_2x.socket.gate.entities.QAntArray;
 import com.creants.creants_2x.socket.gate.wood.QAntUser;
 import com.seagame.ext.ExtApplication;
-import com.seagame.ext.config.game.HeroConfig;
 import com.seagame.ext.config.game.ItemConfig;
 import com.seagame.ext.entities.Player;
-import com.seagame.ext.entities.hero.HeroBase;
-import com.seagame.ext.entities.hero.HeroClass;
 import com.seagame.ext.entities.item.HeroEquipment;
 import com.seagame.ext.entities.item.HeroItem;
 import com.seagame.ext.entities.item.ItemBase;
@@ -18,7 +15,6 @@ import com.seagame.ext.exception.GameErrorCode;
 import com.seagame.ext.exception.UseItemException;
 import com.seagame.ext.managers.HeroItemManager;
 import com.seagame.ext.managers.PlayerManager;
-import io.netty.util.internal.StringUtil;
 import org.springframework.data.domain.Page;
 
 import java.util.ArrayList;
@@ -27,7 +23,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static com.seagame.ext.exception.GameErrorCode.*;
-import static com.seagame.ext.exception.GameErrorCode.LACK_OF_MATIRIAL;
 
 /**
  * @author LamHM
@@ -72,7 +67,7 @@ public class ItemRequestHandler extends ZClientRequestHandler {
     }
 
     private void useItem(QAntUser user, IQAntObject params) {
-        String itemIdx = params.getUtfString("index");
+        String itemIdx = params.getUtfString("idx");
         int no = params.getInt("no");
 
         ItemBase itemBase = ItemConfig.getInstance().getItem(itemIdx);
@@ -119,7 +114,6 @@ public class ItemRequestHandler extends ZClientRequestHandler {
             responseError(user, GameErrorCode.NOT_EXIST_ITEM);
             return;
         }
-
         send(params, user);
     }
 

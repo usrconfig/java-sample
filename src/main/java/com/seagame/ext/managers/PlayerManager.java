@@ -2,14 +2,13 @@ package com.seagame.ext.managers;
 
 import com.creants.creants_2x.core.util.QAntTracer;
 import com.creants.creants_2x.socket.gate.entities.IQAntObject;
-import com.creants.creants_2x.socket.gate.entities.QAntObject;
 import com.creants.creants_2x.socket.gate.wood.QAntUser;
 import com.seagame.ext.ExtApplication;
 import com.seagame.ext.config.game.HeroConfig;
 import com.seagame.ext.config.game.ItemConfig;
-import com.seagame.ext.dao.*;
-import com.seagame.ext.entities.*;
-import com.seagame.ext.entities.arena.ArenaPower;
+import com.seagame.ext.dao.BattleTeamRepository;
+import com.seagame.ext.dao.PlayerRepository;
+import com.seagame.ext.entities.Player;
 import com.seagame.ext.entities.hero.HeroBase;
 import com.seagame.ext.entities.hero.HeroClass;
 import com.seagame.ext.entities.item.HeroConsumeItem;
@@ -194,24 +193,15 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //
 //                // mở world, chapter, stage, mission
 //                campaignManager.getOrCreateCampaign(playerID);
-
-                // tạo nhiệm vụ cho hero
-//                questSystem.getOrCreateQuest(playerID);
-
+//
+////                 tạo nhiệm vụ cho hero
+//
 //                arenaManager.registerArena(getPlayer(playerID), battleTeam);
 ////
 //                ArenaManager arenaManager = ExtApplication.getBean(ArenaManager.class);
-//                ArenaPower arenaPower = arenaManager.join("nf1#1001");
-                QAntObject params = new QAntObject();
-//                if (arenaPower == null) {
-//                    params.putQAntObject("arena", QAntObject.newFromObject(new ArenaPower()));
-//                    return;
-//                }
-//                params.putQAntObject("arena",
-//                        arenaPower.getAtkTeam() != null ? arenaPower.buildInfo() : arenaPower.buildNewbieArenaInfo());
-//                params.putLong("rankingSeconds", arenaManager.getNextRankingSeconds());
-//      get ArenaInfo
-
+//                QAntObject params = new QAntObject();
+////      get ArenaInfo
+//
 //                ArenaPower arenaPower = arenaManager.join("nf1#1012");
 //                if (arenaPower == null) {
 //                    params.putQAntObject("arena", QAntObject.newFromObject(new ArenaPower()));
@@ -220,7 +210,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                params.putQAntObject("arena",
 //                        arenaPower.getAtkTeam() != null ? arenaPower.buildInfo() : arenaPower.buildNewbieArenaInfo());
 //                params.putLong("rankingSeconds", arenaManager.getNextRankingSeconds());
-
+//                QAntTracer.debug(PlayerManager.class,params.getDump());
             }
         }, 3000, 100000000);
 

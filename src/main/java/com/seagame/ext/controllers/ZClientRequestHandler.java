@@ -3,8 +3,10 @@ package com.seagame.ext.controllers;
 import com.creants.creants_2x.core.extension.BaseClientRequestHandler;
 import com.creants.creants_2x.core.util.QAntTracer;
 import com.creants.creants_2x.socket.gate.entities.IQAntObject;
+import com.creants.creants_2x.socket.gate.entities.QAntObject;
 import com.creants.creants_2x.socket.gate.wood.QAntUser;
 import com.seagame.ext.exception.GameErrorCode;
+import com.seagame.ext.managers.PlayerManager;
 import com.seagame.ext.services.MessageFactory;
 import com.seagame.ext.util.NetworkConstant;
 
@@ -13,12 +15,19 @@ import java.util.List;
 public abstract class ZClientRequestHandler extends BaseClientRequestHandler implements NetworkConstant, ExtensionEvent {
     protected Integer action;
     private Integer correlationId;
+    private boolean isTrackDebug = true;
 
 
     protected void responseError(QAntUser user, GameErrorCode error, String... attrs) {
         IQAntObject createErrorMsg = MessageFactory.createErrorMsg(this.getHandlerCmd(), this.action, error, attrs);
         QAntTracer.debug(ZClientRequestHandler.class, String.join(",", attrs));
         sendError(createErrorMsg, user);
+    }
+
+
+    public void trackParams(QAntObject params) {
+        if (this.isTrackDebug)
+            QAntTracer.debug(PlayerManager.class, getHandlerCmd() + "/" + this.action + params.getDump());
     }
 
 

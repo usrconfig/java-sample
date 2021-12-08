@@ -284,8 +284,7 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
             send(params, user);
             return;
         }
-        params.putQAntObject("arena",
-                arenaPower.getAtkTeam() != null ? arenaPower.buildInfo() : arenaPower.buildNewbieArenaInfo());
+        params.putQAntObject("arena",arenaPower.buildInfo());
         params.putLong("rankingSeconds", arenaManager.getNextRankingSeconds());
         send(params, user);
     }
