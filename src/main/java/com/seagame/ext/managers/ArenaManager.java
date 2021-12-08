@@ -143,7 +143,7 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
     public ArenaPower fight(QAntUser user, ArenaPower attacker, String defenderId) {
 
         ArenaPower defender = null;
-        defender = getArenaPower(defenderId);
+        defender = getDefenderTeam(defenderId);
         BattleTeam defBattleTeam = battleTeamRepo.findById(defenderId).orElse(null);
         assert defBattleTeam != null;
         BattleTeam atkBattleTeam = battleTeamRepo.findById(defenderId).orElse(null);
@@ -297,6 +297,13 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
         ArenaPower arenaPower = getArenaPower(gameHeroId);
         Team defTeam = arenaPower.getDefTeam();
         defTeam.setHeroList(heroClassManager.findHeroes(defTeam.getHeroIds(), true));
+        return arenaPower;
+    }
+
+    public ArenaPower getAttackerTeam(String gameHeroId) {
+        ArenaPower arenaPower = getArenaPower(gameHeroId);
+        Team atkTeam = arenaPower.getAtkTeam();
+        atkTeam.setHeroList(heroClassManager.findHeroes(atkTeam.getHeroIds(), true));
         return arenaPower;
     }
 

@@ -216,7 +216,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                        arenaPower.getAtkTeam() != null ? arenaPower.buildInfo() : arenaPower.buildNewbieArenaInfo());
 //                params.putLong("rankingSeconds", arenaManager.getNextRankingSeconds());
 //                QAntTracer.debug(PlayerManager.class,params.getDump());
-                testFindArena();
+//                testFindArena();
 
 
             }

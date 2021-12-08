@@ -225,7 +225,7 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
         }
 
 
-        ArenaPower attacker = arenaManager.getArenaPower(user.getName());
+        ArenaPower attacker = arenaManager.getAttackerTeam(user.getName());
         ArenaPower defender = arenaManager.fight(user, attacker, params.getUtfString("id"));
 
         if (defender == null) {
