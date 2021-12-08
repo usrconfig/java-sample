@@ -216,7 +216,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                        arenaPower.getAtkTeam() != null ? arenaPower.buildInfo() : arenaPower.buildNewbieArenaInfo());
 //                params.putLong("rankingSeconds", arenaManager.getNextRankingSeconds());
 //                QAntTracer.debug(PlayerManager.class,params.getDump());
-//                testFindArena();
+                testFindArena();
 
 
             }
@@ -241,7 +241,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
     }
 
     private void testFindArena() {
-        String playerId = "nf1#1012";
+        String playerId = "nf1#1001";
         ArenaPower attacker = arenaManager.getArenaPower(playerId);
         PlayerManager playerManager = ExtApplication.getBean(PlayerManager.class);
         Player playerRequest = playerManager.getPlayer(playerId);

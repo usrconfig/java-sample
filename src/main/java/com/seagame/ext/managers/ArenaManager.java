@@ -161,8 +161,7 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
         if (attacker.hasShield())
             attacker.removeShield();
 
-        if (!defender.isNPC())
-            searchMap.put(defender.getPlayerId(), System.currentTimeMillis());
+        searchMap.put(defender.getPlayerId(), System.currentTimeMillis());
 
         Team atkTeam = atkBattleTeam.getArenaTeam();
         atkTeam.setHeroList(heroClassManager.findHeroes(atkTeam.getHeroIds(), true));
@@ -513,13 +512,13 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
 //		System.out.println("toPower " + toPower);
 //		System.out.println("(int) attacker.getArenaPoint() " + (int) attacker.getArenaPoint());
         // count all game hero with max power from fromPower to toPower,
-        int rowNo = arenaSearchRepo.countByPower(System.currentTimeMillis(), fromPower, toPower,
+        int rowNo = arenaSearchRepo.countByPower(fromPower, toPower,
                 (int) attacker.getArenaPoint(), zone);
         System.out.println("rowNo" + rowNo);
         int randomNum = Math.max(rowNo - 3, 1);
         System.out.println("randomNum" + randomNum);
         // get 3 game hero from random rowNo
-        List<ArenaPower> powerList = arenaSearchRepo.findOpponent(System.currentTimeMillis(), fromPower, toPower,
+        List<ArenaPower> powerList = arenaSearchRepo.findOpponent(fromPower, toPower,
                 RandomUtils.nextInt(randomNum), (int) attacker.getArenaPoint(), zone);
         System.out.println("powerList " + powerList);
         List<ArenaPower> updateList = powerList.stream().filter(this::checkUpdateNewSeason)
