@@ -94,6 +94,7 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
         MatchInfo match = matchManager.getMatch(playerId);
         if (match == null) {
             QAntTracer.warn(this.getClass(), "Request finish match not found!");
+            responseError(user, GameErrorCode.MATCH_NOT_FOUND);
             return;
         }
         matchManager.removeMatch(playerId);
@@ -152,7 +153,7 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
 
     public void processReward(IQAntObject params, QAntUser user, String idx, String group, int no) {
         Stage stage = StageConfig.getInstance().getStage(idx);
-        String rewards = RandomRangeUtil.randomDroprate(stage.getRandomReward(),stage.getRandomRate(), 1);
+        String rewards = RandomRangeUtil.randomDroprate(stage.getRandomReward(), stage.getRandomRate(), 1);
         String dailyFirstTimeReward = stage.getDailyFirstTimeReward();
         if (campaignManager.isDailyFirstTime(idx) && !Utils.isNullOrEmpty(dailyFirstTimeReward)) {
             rewards += "#" + dailyFirstTimeReward;
