@@ -502,7 +502,7 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
         int fromPower = attackerTeam.getSearchPower() * opponentPowerMin / 100;
         int toPower = opponentPowerMax / 100 * attackerTeam.getSearchPower();
         fromPower = 0;
-        toPower = Math.max(500, toPower);
+        toPower = Math.max(100000, toPower);
 
 
 //		System.out.println("fromPower " + fromPower);
@@ -525,8 +525,7 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
             update(updateList);
         Collections.shuffle(powerList);
         List<ArenaPower> opponents = powerList.stream()
-                .filter(power -> !searchMap.containsKey(power.getPlayerId())
-                        && !power.getPlayerId().equals(attacker.getPlayerId())).limit(3).collect(Collectors.toList());
+                .filter(power -> !power.getPlayerId().equals(attacker.getPlayerId())).limit(3).collect(Collectors.toList());
 
         return opponents.stream().map(defender -> {
             Player player = playerManager.getPlayer(defender.getPlayerId());

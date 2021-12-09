@@ -22,16 +22,15 @@ public class ArenaSearchRepositoryImpl implements ArenaSearchRepository {
     @Override
     public int countByPower(int fromPower, int toPower, int arenaPoint, String zone) {
         return (int) mongoOperations.count(new Query(Criteria.where("searchPower")
-                .gte(fromPower).lte(toPower).and("arenaPoint").gte(0).and("zone").is(zone)), ArenaPower.class);
+                .gte(fromPower).lte(toPower).and("zone").is(zone)), ArenaPower.class);
     }
 
     @Override
     public List<ArenaPower> findOpponent(int fromPower, int toPower, int skip, int arenaPoint, String zone) {
         Query query = new Query(Criteria.where("searchPower").gte(fromPower)
-                .lte(toPower).and("arenaPoint").gte(0).and("zone").is(zone));
+                .lte(toPower).and("zone").is(zone));
         query.limit(4);
         query.skip(skip);
-
         return mongoOperations.find(query, ArenaPower.class);
     }
 
