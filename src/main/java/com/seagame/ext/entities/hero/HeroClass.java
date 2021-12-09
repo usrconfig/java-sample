@@ -37,8 +37,8 @@ public class HeroClass implements SerializableQAntType, NetworkConstant {
     String charIndex;
     public String name;
     private int exp;
-    private int level;
-    private int rank;
+    private int level = 1;
+    private int rank = 1;
     private List<Skill> skills;
     private @Transient
     List<HeroItem> equipments;
@@ -49,7 +49,6 @@ public class HeroClass implements SerializableQAntType, NetworkConstant {
 
     public HeroClass(String id, int level) {
         this.level = level;
-        this.rank = 1;
         equipments = new ArrayList<>();
         Date date = new Date(System.currentTimeMillis());
         setLoginTime(date);
@@ -65,8 +64,6 @@ public class HeroClass implements SerializableQAntType, NetworkConstant {
     }
 
     public HeroClass(String id) {
-        this.level = 1;
-        this.rank = 1;
         equipments = new ArrayList<>();
         initBaseInfo();
         Date date = new Date(System.currentTimeMillis());
@@ -143,13 +140,8 @@ public class HeroClass implements SerializableQAntType, NetworkConstant {
     }
 
 
-    public int getPower() {
-        return level * 2;
-    }
-
-
     public int calcFullPower() {
-        return getPower() + equipments.stream().mapToInt(HeroItem::getPower).sum();
+        return level * 2 * rank + equipments.stream().mapToInt(HeroItem::getPower).sum();
     }
 
 

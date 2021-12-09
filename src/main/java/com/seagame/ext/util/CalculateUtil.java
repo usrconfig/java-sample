@@ -60,8 +60,6 @@ public class CalculateUtil {
     }
 
 
-
-
     private static int calcTrophy(long attackerTrophy, long defenderTrophy, long attackerPower, long defenderPower) {
         long l = 100 * (Math.max(defenderPower - attackerPower, 1)) / (Math.max(defenderPower + attackerPower, 1));
         int result = Math.round(-100 * calcX(attackerTrophy, defenderTrophy) / 5000
@@ -81,11 +79,11 @@ public class CalculateUtil {
     }
 
     public static int calcPower(List<HeroClass> heroes) {
-        return 50;
+        return heroes.stream().mapToInt(HeroClass::calcFullPower).sum();
     }
 
     public static int calcSearchPower(List<HeroClass> heroes) {
-        return 100;
+        return heroes.stream().mapToInt(HeroClass::calcFullPower).sum();
     }
 
     public long betweenDates(Date firstDate, Date secondDate) throws IOException {

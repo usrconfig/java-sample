@@ -61,7 +61,7 @@ public class HeroEquipment extends HeroItem implements SerializableQAntType {
 
     @Override
     public int getPower() {
-        return 0;
+        return level * rank;
     }
 
     public void levelUp() {
