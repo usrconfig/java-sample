@@ -308,7 +308,7 @@ public class Player implements Serializable {
         if (l < 0)
             return 0;
         return Math.min((int) Math.floor(l
-                / 1000f / ENERGY_PRODUCE_SPEED_SEC), MAX_ENERGY_PRODUCE);
+                / 1000f / ENERGY_PRODUCE_SPEED_SEC), energyMax - energy);
     }
 
     public void produceEnergy() {

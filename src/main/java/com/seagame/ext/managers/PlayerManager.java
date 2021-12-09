@@ -370,7 +370,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
         boolean newDate = TimeExUtil.isNewDate(player);
         if (newDate) {
             player.setLoginTime(new Date());
-            loginNewDate(user);
+            loginNewDate(player);
         }
 
 
@@ -512,10 +512,21 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
     }
 
 
-    private void loginNewDate(QAntUser user) {
-        String gameHeroId = user.getName();
+    private void loginNewDate(Player player) {
+        String gameHeroId = player.getId();
         resetDailyFunc(gameHeroId);
+        player.setEnergyMax(calMaxEnergy(player));
+        player.setEnergy(player.getEnergyMax());
+    }
 
+    private int calMaxEnergy(Player player) {
+        List<HeroClass> heroClassList = heroClassManager.getHeroes(player.getId());
+        return heroClassList.stream().mapToInt(heroClass -> {
+            HeroBase heroBase = HeroConfig.getInstance().getHeroBase(heroClass.getCharIndex());
+            if (heroBase != null)
+                return heroBase.getEnegryCAP();
+            return 0;
+        }).sum();
     }
 
     private void resetDailyFunc(String gameHeroId) {

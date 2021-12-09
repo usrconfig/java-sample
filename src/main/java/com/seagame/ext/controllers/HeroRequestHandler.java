@@ -9,6 +9,7 @@ import com.seagame.ext.ExtApplication;
 import com.seagame.ext.config.game.HeroConfig;
 import com.seagame.ext.config.game.ItemConfig;
 import com.seagame.ext.config.game.SkillConfig;
+import com.seagame.ext.entities.Player;
 import com.seagame.ext.entities.hero.HeroBase;
 import com.seagame.ext.entities.hero.HeroClass;
 import com.seagame.ext.entities.hero.LevelBase;
@@ -19,6 +20,7 @@ import com.seagame.ext.exception.GameErrorCode;
 import com.seagame.ext.exception.UseItemException;
 import com.seagame.ext.managers.HeroClassManager;
 import com.seagame.ext.managers.HeroItemManager;
+import com.seagame.ext.managers.PlayerManager;
 import com.seagame.ext.services.AutoIncrementService;
 import org.springframework.data.domain.Page;
 
@@ -43,12 +45,14 @@ public class HeroRequestHandler extends ZClientRequestHandler {
 
     private HeroItemManager heroItemManager;
     private HeroClassManager heroClassManager;
+    private PlayerManager playerManager;
     private AutoIncrementService autoIncrService;
 
     public HeroRequestHandler() {
         heroItemManager = ExtApplication.getBean(HeroItemManager.class);
         heroClassManager = ExtApplication.getBean(HeroClassManager.class);
         autoIncrService = ExtApplication.getBean(AutoIncrementService.class);
+        playerManager = ExtApplication.getBean(PlayerManager.class);
     }
 
 
@@ -191,7 +195,9 @@ public class HeroRequestHandler extends ZClientRequestHandler {
         heroClassManager.save(heroClass);
         params.putQAntObject("hero", heroClass.buildInfo());
         send(params, user);
-
+        Player player = playerManager.getPlayer(user.getName());
+        player.setEnergy(player.getEnergy() + heroBase.getEnegryCAP());
+        playerManager.updateGameHero(player);
     }
 
     private void getPageHero(QAntUser user, IQAntObject params) {
