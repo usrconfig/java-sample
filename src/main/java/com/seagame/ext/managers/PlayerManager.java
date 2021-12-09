@@ -7,12 +7,17 @@ import com.creants.creants_2x.socket.gate.entities.QAntArray;
 import com.creants.creants_2x.socket.gate.entities.QAntObject;
 import com.creants.creants_2x.socket.gate.wood.QAntUser;
 import com.seagame.ext.ExtApplication;
+import com.seagame.ext.Utils;
 import com.seagame.ext.config.game.HeroConfig;
 import com.seagame.ext.config.game.ItemConfig;
+import com.seagame.ext.config.game.StageConfig;
 import com.seagame.ext.dao.BattleTeamRepository;
 import com.seagame.ext.dao.PlayerRepository;
 import com.seagame.ext.entities.Player;
 import com.seagame.ext.entities.arena.ArenaPower;
+import com.seagame.ext.entities.campaign.HeroCampaign;
+import com.seagame.ext.entities.campaign.HeroStage;
+import com.seagame.ext.entities.campaign.Stage;
 import com.seagame.ext.entities.hero.HeroBase;
 import com.seagame.ext.entities.hero.HeroClass;
 import com.seagame.ext.entities.item.HeroConsumeItem;
@@ -27,6 +32,7 @@ import com.seagame.ext.services.ServiceHelper;
 import com.seagame.ext.util.CalculateUtil;
 import com.seagame.ext.util.NetworkConstant;
 import com.seagame.ext.util.TimeExUtil;
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.RandomUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -218,6 +224,8 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                QAntTracer.debug(PlayerManager.class,params.getDump());
 //                testFindArena();
 
+//                testCampaign();
+
 
             }
         }, 3000, 100000000);
@@ -238,6 +246,26 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                LongStream.range(900, 999).forEach(value -> createBot(value));
 //            }
 //        }, 3000);
+    }
+
+    private void testCampaign() {
+        HeroCampaign campaign = campaignManager.getOrCreateCampaign("nf1#1001");
+        HeroStage heroStage = campaign.getStages().stream().filter(stage -> stage.getIndex().equals("100")).findFirst().get();
+        if (heroStage.isFirstClearOrUpdateStar(3)) {
+            Stage finishStage = StageConfig.getInstance().getStage("100");
+            String[] stageArr = StringUtils.split(finishStage.getUnlockStage(), "#");
+            // mở stage mới
+            String newStageIndex = stageArr[0];
+            if (Utils.isNullOrEmpty(newStageIndex) || newStageIndex.equals("#")) {
+                campaignManager.save(campaign);
+            }
+            Arrays.stream(stageArr).forEach(s -> {
+                Stage stage = StageConfig.getInstance().getStage(s);
+                if (stage != null)
+                    campaign.getStages().add(new HeroStage("nf1#1001", stage));
+            });
+            campaignManager.save(campaign);
+        }
     }
 
     private void testFindArena() {
