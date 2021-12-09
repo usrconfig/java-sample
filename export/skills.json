@@ -17,9 +17,9 @@
         },
         "id": "1000",
         "level": 1,
-        "cooldown": 0,
         "description": "txtZegaLeaderDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -36,9 +36,9 @@
         },
         "id": "1000",
         "level": 2,
-        "cooldown": 0,
         "description": "txtZegaLeaderDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -55,9 +55,9 @@
         },
         "id": "1000",
         "level": 3,
-        "cooldown": 0,
         "description": "txtZegaLeaderDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -65,8 +65,8 @@
     "name": "txtZegaLeader",
     "type": "leader",
     "id": "1000",
-    "icon": "zegaleader",
-    "ranged": false
+    "ranged": false,
+    "icon": "zegaleader"
   },
   {
     "maxLevel": 3,
@@ -92,9 +92,9 @@
         },
         "id": "1001",
         "level": 1,
-        "cooldown": 3,
         "description": "txtZegaActiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -115,9 +115,9 @@
         },
         "id": "1001",
         "level": 2,
-        "cooldown": 3,
         "description": "txtZegaActiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -138,9 +138,9 @@
         },
         "id": "1001",
         "level": 3,
-        "cooldown": 3,
         "description": "txtZegaActiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 3
       }
     ],
     "soundFXarr": [
@@ -157,8 +157,8 @@
     "name": "txtZegaActive",
     "type": "active",
     "id": "1001",
-    "icon": "zegaactive",
-    "ranged": false
+    "ranged": false,
+    "icon": "zegaactive"
   },
   {
     "maxLevel": 3,
@@ -181,9 +181,9 @@
         },
         "id": "1002",
         "level": 1,
-        "cooldown": 1,
         "description": "txtZegaAutoDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -203,9 +203,9 @@
         },
         "id": "1002",
         "level": 2,
-        "cooldown": 1,
         "description": "txtZegaAutoDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -225,9 +225,9 @@
         },
         "id": "1002",
         "level": 3,
-        "cooldown": 1,
         "description": "txtZegaAutoDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 1
       }
     ],
     "soundFXarr": [
@@ -237,8 +237,8 @@
     "name": "txtZegaAuto",
     "type": "auto",
     "id": "1002",
-    "icon": "zegaauto",
-    "ranged": true
+    "ranged": true,
+    "icon": "zegaauto"
   },
   {
     "maxLevel": 3,
@@ -257,9 +257,9 @@
         },
         "id": "1003",
         "level": 1,
-        "cooldown": 0,
         "description": "txtZegaPassiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -275,9 +275,9 @@
         },
         "id": "1003",
         "level": 2,
-        "cooldown": 0,
         "description": "txtZegaPassiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -293,9 +293,9 @@
         },
         "id": "1003",
         "level": 3,
-        "cooldown": 0,
         "description": "txtZegaPassiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -303,8 +303,8 @@
     "name": "txtZegaPassive",
     "type": "passive",
     "id": "1003",
-    "icon": "zegapassive",
-    "ranged": false
+    "ranged": false,
+    "icon": "zegapassive"
   },
   {
     "maxLevel": 3,
@@ -323,9 +323,9 @@
         },
         "id": "1010",
         "level": 1,
-        "cooldown": 0,
         "description": "txtZebanLeaderDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -341,9 +341,9 @@
         },
         "id": "1010",
         "level": 2,
-        "cooldown": 0,
         "description": "txtZebanLeaderDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -359,9 +359,9 @@
         },
         "id": "1010",
         "level": 3,
-        "cooldown": 0,
         "description": "txtZebanLeaderDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -369,8 +369,8 @@
     "name": "txtZebanLeader",
     "type": "leader",
     "id": "1010",
-    "icon": "zebanleader",
-    "ranged": false
+    "ranged": false,
+    "icon": "zebanleader"
   },
   {
     "maxLevel": 3,
@@ -392,9 +392,9 @@
         },
         "id": "1011",
         "level": 1,
-        "cooldown": 3,
         "description": "txtZebanActiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -411,9 +411,9 @@
         },
         "id": "1011",
         "level": 2,
-        "cooldown": 3,
         "description": "txtZebanActiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -430,9 +430,9 @@
         },
         "id": "1011",
         "level": 3,
-        "cooldown": 3,
         "description": "txtZebanActiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 3
       }
     ],
     "soundFXarr": [
@@ -444,8 +444,8 @@
     "name": "txtZebanActive",
     "type": "active",
     "id": "1011",
-    "icon": "zebanactive",
-    "ranged": false
+    "ranged": false,
+    "icon": "zebanactive"
   },
   {
     "maxLevel": 3,
@@ -468,9 +468,9 @@
         },
         "id": "1012",
         "level": 1,
-        "cooldown": 1,
         "description": "txtZebanAutoDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -488,9 +488,9 @@
         },
         "id": "1012",
         "level": 2,
-        "cooldown": 1,
         "description": "txtZebanAutoDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -508,9 +508,9 @@
         },
         "id": "1012",
         "level": 3,
-        "cooldown": 1,
         "description": "txtZebanAutoDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 1
       }
     ],
     "soundFXarr": [
@@ -523,8 +523,8 @@
     "name": "txtZebanAuto",
     "type": "auto",
     "id": "1012",
-    "icon": "zebanauto",
-    "ranged": false
+    "ranged": false,
+    "icon": "zebanauto"
   },
   {
     "maxLevel": 3,
@@ -543,9 +543,9 @@
         },
         "id": "1013",
         "level": 1,
-        "cooldown": 0,
         "description": "txtZebanPassiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -561,9 +561,9 @@
         },
         "id": "1013",
         "level": 2,
-        "cooldown": 0,
         "description": "txtZebanPassiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -579,9 +579,9 @@
         },
         "id": "1013",
         "level": 3,
-        "cooldown": 0,
         "description": "txtZebanPassiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -589,8 +589,8 @@
     "name": "txtZebanPassive",
     "type": "passive",
     "id": "1013",
-    "icon": "zebanpassive",
-    "ranged": false
+    "ranged": false,
+    "icon": "zebanpassive"
   },
   {
     "maxLevel": 3,
@@ -614,9 +614,9 @@
         },
         "id": "1020",
         "level": 1,
-        "cooldown": 0,
         "description": "txtKaiLeaderDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -637,9 +637,9 @@
         },
         "id": "1020",
         "level": 2,
-        "cooldown": 0,
         "description": "txtKaiLeaderDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -660,9 +660,9 @@
         },
         "id": "1020",
         "level": 3,
-        "cooldown": 0,
         "description": "txtKaiLeaderDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -670,8 +670,8 @@
     "name": "txtKaiLeader",
     "type": "leader",
     "id": "1020",
-    "icon": "kaileader",
-    "ranged": false
+    "ranged": false,
+    "icon": "kaileader"
   },
   {
     "maxLevel": 3,
@@ -697,9 +697,9 @@
         },
         "id": "1021",
         "level": 1,
-        "cooldown": 3,
         "description": "txtKaiActiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -720,9 +720,9 @@
         },
         "id": "1021",
         "level": 2,
-        "cooldown": 3,
         "description": "txtKaiActiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -743,9 +743,9 @@
         },
         "id": "1021",
         "level": 3,
-        "cooldown": 3,
         "description": "txtKaiActiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 3
       }
     ],
     "soundFXarr": [
@@ -758,8 +758,8 @@
     "name": "txtKaiActive",
     "type": "active",
     "id": "1021",
-    "icon": "kaiactive",
-    "ranged": false
+    "ranged": false,
+    "icon": "kaiactive"
   },
   {
     "maxLevel": 3,
@@ -787,9 +787,9 @@
         },
         "id": "1022",
         "level": 1,
-        "cooldown": 1,
         "description": "txtKaiAutoDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -812,9 +812,9 @@
         },
         "id": "1022",
         "level": 2,
-        "cooldown": 1,
         "description": "txtKaiAutoDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -837,9 +837,9 @@
         },
         "id": "1022",
         "level": 3,
-        "cooldown": 1,
         "description": "txtKaiAutoDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 1
       }
     ],
     "soundFXarr": [
@@ -852,8 +852,8 @@
     "name": "txtKaiAuto",
     "type": "auto",
     "id": "1022",
-    "icon": "kaiauto",
-    "ranged": false
+    "ranged": false,
+    "icon": "kaiauto"
   },
   {
     "maxLevel": 3,
@@ -872,9 +872,9 @@
         },
         "id": "1023",
         "level": 1,
-        "cooldown": 0,
         "description": "txtKaiPassiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -890,9 +890,9 @@
         },
         "id": "1023",
         "level": 2,
-        "cooldown": 0,
         "description": "txtKaiPassiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -908,9 +908,9 @@
         },
         "id": "1023",
         "level": 3,
-        "cooldown": 0,
         "description": "txtKaiPassiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -918,8 +918,8 @@
     "name": "txtKaiPassive",
     "type": "passive",
     "id": "1023",
-    "icon": "kaipassive",
-    "ranged": false
+    "ranged": false,
+    "icon": "kaipassive"
   },
   {
     "maxLevel": 3,
@@ -939,9 +939,9 @@
         },
         "id": "2000",
         "level": 1,
-        "cooldown": 0,
         "description": "txtAbelLeaderDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -958,9 +958,9 @@
         },
         "id": "2000",
         "level": 2,
-        "cooldown": 0,
         "description": "txtAbelLeaderDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -977,9 +977,9 @@
         },
         "id": "2000",
         "level": 3,
-        "cooldown": 0,
         "description": "txtAbelLeaderDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -987,8 +987,8 @@
     "name": "txtAbelLeader",
     "type": "leader",
     "id": "2000",
-    "icon": "abelleader",
-    "ranged": true
+    "ranged": true,
+    "icon": "abelleader"
   },
   {
     "maxLevel": 3,
@@ -1015,9 +1015,9 @@
         },
         "id": "2001",
         "level": 1,
-        "cooldown": 3,
         "description": "txtAbelActiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -1039,9 +1039,9 @@
         },
         "id": "2001",
         "level": 2,
-        "cooldown": 3,
         "description": "txtAbelActiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -1063,9 +1063,9 @@
         },
         "id": "2001",
         "level": 3,
-        "cooldown": 3,
         "description": "txtAbelActiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 3
       }
     ],
     "soundFXarr": [
@@ -1078,8 +1078,8 @@
     "name": "txtAbelActive",
     "type": "active",
     "id": "2001",
-    "icon": "abelactive",
-    "ranged": true
+    "ranged": true,
+    "icon": "abelactive"
   },
   {
     "maxLevel": 3,
@@ -1105,9 +1105,9 @@
         },
         "id": "2002",
         "level": 1,
-        "cooldown": 1,
         "description": "txtAbelAutoDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -1128,9 +1128,9 @@
         },
         "id": "2002",
         "level": 2,
-        "cooldown": 1,
         "description": "txtAbelAutoDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -1151,9 +1151,9 @@
         },
         "id": "2002",
         "level": 3,
-        "cooldown": 1,
         "description": "txtAbelAutoDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 1
       }
     ],
     "soundFXarr": [
@@ -1166,8 +1166,8 @@
     "name": "txtAbelAuto",
     "type": "auto",
     "id": "2002",
-    "icon": "abelauto",
-    "ranged": true
+    "ranged": true,
+    "icon": "abelauto"
   },
   {
     "maxLevel": 3,
@@ -1186,9 +1186,9 @@
         },
         "id": "2003",
         "level": 1,
-        "cooldown": 0,
         "description": "txtAbelPassiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -1204,9 +1204,9 @@
         },
         "id": "2003",
         "level": 2,
-        "cooldown": 0,
         "description": "txtAbelPassiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -1222,9 +1222,9 @@
         },
         "id": "2003",
         "level": 3,
-        "cooldown": 0,
         "description": "txtAbelPassiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -1232,8 +1232,8 @@
     "name": "txtAbelPassive",
     "type": "passive",
     "id": "2003",
-    "icon": "abelpassive",
-    "ranged": true
+    "ranged": true,
+    "icon": "abelpassive"
   },
   {
     "maxLevel": 3,
@@ -1253,9 +1253,9 @@
         },
         "id": "2010",
         "level": 1,
-        "cooldown": 0,
         "description": "txtWinchyLeaderDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -1272,9 +1272,9 @@
         },
         "id": "2010",
         "level": 2,
-        "cooldown": 0,
         "description": "txtWinchyLeaderDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -1291,9 +1291,9 @@
         },
         "id": "2010",
         "level": 3,
-        "cooldown": 0,
         "description": "txtWinchyLeaderDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -1301,8 +1301,8 @@
     "name": "txtWinchyLeader",
     "type": "leader",
     "id": "2010",
-    "icon": "winchyleader",
-    "ranged": false
+    "ranged": false,
+    "icon": "winchyleader"
   },
   {
     "maxLevel": 3,
@@ -1324,9 +1324,9 @@
         },
         "id": "2011",
         "level": 1,
-        "cooldown": 3,
         "description": "txtWinchyActiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -1343,9 +1343,9 @@
         },
         "id": "2011",
         "level": 2,
-        "cooldown": 3,
         "description": "txtWinchyActiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -1362,9 +1362,9 @@
         },
         "id": "2011",
         "level": 3,
-        "cooldown": 3,
         "description": "txtWinchyActiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 3
       }
     ],
     "soundFXarr": [
@@ -1377,8 +1377,8 @@
     "name": "txtWinchyActive",
     "type": "active",
     "id": "2011",
-    "icon": "winchyactive",
-    "ranged": true
+    "ranged": true,
+    "icon": "winchyactive"
   },
   {
     "maxLevel": 3,
@@ -1400,9 +1400,9 @@
         },
         "id": "2012",
         "level": 1,
-        "cooldown": 1,
         "description": "txtWinchyAutoDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -1419,9 +1419,9 @@
         },
         "id": "2012",
         "level": 2,
-        "cooldown": 1,
         "description": "txtWinchyAutoDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -1438,9 +1438,9 @@
         },
         "id": "2012",
         "level": 3,
-        "cooldown": 1,
         "description": "txtWinchyAutoDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 1
       }
     ],
     "soundFXarr": [
@@ -1455,8 +1455,8 @@
     "name": "txtWinchyAuto",
     "type": "auto",
     "id": "2012",
-    "icon": "winchyauto",
-    "ranged": true
+    "ranged": true,
+    "icon": "winchyauto"
   },
   {
     "maxLevel": 3,
@@ -1475,9 +1475,9 @@
         },
         "id": "2013",
         "level": 1,
-        "cooldown": 0,
         "description": "txtWinchyPassiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -1493,9 +1493,9 @@
         },
         "id": "2013",
         "level": 2,
-        "cooldown": 0,
         "description": "txtWinchyPassiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -1511,9 +1511,9 @@
         },
         "id": "2013",
         "level": 3,
-        "cooldown": 0,
         "description": "txtWinchyPassiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -1521,8 +1521,8 @@
     "name": "txtWinchyPassive",
     "type": "passive",
     "id": "2013",
-    "icon": "winchypassive",
-    "ranged": false
+    "ranged": false,
+    "icon": "winchypassive"
   },
   {
     "maxLevel": 3,
@@ -1545,9 +1545,9 @@
         },
         "id": "3000",
         "level": 1,
-        "cooldown": 0,
         "description": "txtErikaLeaderDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -1567,9 +1567,9 @@
         },
         "id": "3000",
         "level": 2,
-        "cooldown": 0,
         "description": "txtErikaLeaderDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -1589,9 +1589,9 @@
         },
         "id": "3000",
         "level": 3,
-        "cooldown": 0,
         "description": "txtErikaLeaderDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -1599,8 +1599,8 @@
     "name": "txtErikaLeader",
     "type": "leader",
     "id": "3000",
-    "icon": "erikaleader",
-    "ranged": false
+    "ranged": false,
+    "icon": "erikaleader"
   },
   {
     "maxLevel": 3,
@@ -1627,9 +1627,9 @@
         },
         "id": "3001",
         "level": 1,
-        "cooldown": 3,
         "description": "txtErikaActiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -1651,9 +1651,9 @@
         },
         "id": "3001",
         "level": 2,
-        "cooldown": 3,
         "description": "txtErikaActiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -1675,9 +1675,9 @@
         },
         "id": "3001",
         "level": 3,
-        "cooldown": 3,
         "description": "txtErikaActiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 3
       }
     ],
     "soundFXarr": [
@@ -1694,8 +1694,8 @@
     "name": "txtErikaActive",
     "type": "active",
     "id": "3001",
-    "icon": "erikaactive",
-    "ranged": true
+    "ranged": true,
+    "icon": "erikaactive"
   },
   {
     "maxLevel": 3,
@@ -1721,9 +1721,9 @@
         },
         "id": "3002",
         "level": 1,
-        "cooldown": 1,
         "description": "txtErikaAutoDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -1744,9 +1744,9 @@
         },
         "id": "3002",
         "level": 2,
-        "cooldown": 1,
         "description": "txtErikaAutoDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -1767,9 +1767,9 @@
         },
         "id": "3002",
         "level": 3,
-        "cooldown": 1,
         "description": "txtErikaAutoDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 1
       }
     ],
     "soundFXarr": [
@@ -1782,8 +1782,8 @@
     "name": "txtErikaAuto",
     "type": "auto",
     "id": "3002",
-    "icon": "erikaauto",
-    "ranged": true
+    "ranged": true,
+    "icon": "erikaauto"
   },
   {
     "maxLevel": 3,
@@ -1802,9 +1802,9 @@
         },
         "id": "3003",
         "level": 1,
-        "cooldown": 0,
         "description": "txtErikaPassiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -1820,9 +1820,9 @@
         },
         "id": "3003",
         "level": 2,
-        "cooldown": 0,
         "description": "txtErikaPassiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -1838,9 +1838,9 @@
         },
         "id": "3003",
         "level": 3,
-        "cooldown": 0,
         "description": "txtErikaPassiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -1848,8 +1848,8 @@
     "name": "txtErikaPassive",
     "type": "passive",
     "id": "3003",
-    "icon": "erikapassive",
-    "ranged": false
+    "ranged": false,
+    "icon": "erikapassive"
   },
   {
     "maxLevel": 3,
@@ -1868,9 +1868,9 @@
         },
         "id": "3010",
         "level": 1,
-        "cooldown": 0,
         "description": "txtLisaLeaderDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -1886,9 +1886,9 @@
         },
         "id": "3010",
         "level": 2,
-        "cooldown": 0,
         "description": "txtLisaLeaderDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -1904,9 +1904,9 @@
         },
         "id": "3010",
         "level": 3,
-        "cooldown": 0,
         "description": "txtLisaLeaderDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -1914,8 +1914,8 @@
     "name": "txtLisaLeader",
     "type": "leader",
     "id": "3010",
-    "icon": "lisaleader",
-    "ranged": false
+    "ranged": false,
+    "icon": "lisaleader"
   },
   {
     "maxLevel": 3,
@@ -1939,9 +1939,9 @@
         },
         "id": "3011",
         "level": 1,
-        "cooldown": 3,
         "description": "txtLisaActiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -1960,9 +1960,9 @@
         },
         "id": "3011",
         "level": 2,
-        "cooldown": 3,
         "description": "txtLisaActiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -1981,9 +1981,9 @@
         },
         "id": "3011",
         "level": 3,
-        "cooldown": 3,
         "description": "txtLisaActiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 3
       }
     ],
     "soundFXarr": [
@@ -1996,8 +1996,8 @@
     "name": "txtLisaActive",
     "type": "active",
     "id": "3011",
-    "icon": "lisaactive",
-    "ranged": true
+    "ranged": true,
+    "icon": "lisaactive"
   },
   {
     "maxLevel": 3,
@@ -2019,9 +2019,9 @@
         },
         "id": "3012",
         "level": 1,
-        "cooldown": 1,
         "description": "txtLisaAutoDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -2038,9 +2038,9 @@
         },
         "id": "3012",
         "level": 2,
-        "cooldown": 1,
         "description": "txtLisaAutoDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -2057,9 +2057,9 @@
         },
         "id": "3012",
         "level": 3,
-        "cooldown": 1,
         "description": "txtLisaAutoDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 1
       }
     ],
     "soundFXarr": [
@@ -2071,8 +2071,8 @@
     "name": "txtLisaAuto",
     "type": "auto",
     "id": "3012",
-    "icon": "lisaauto",
-    "ranged": true
+    "ranged": true,
+    "icon": "lisaauto"
   },
   {
     "maxLevel": 3,
@@ -2091,9 +2091,9 @@
         },
         "id": "3013",
         "level": 1,
-        "cooldown": 0,
         "description": "txtLisaPassiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -2109,9 +2109,9 @@
         },
         "id": "3013",
         "level": 2,
-        "cooldown": 0,
         "description": "txtLisaPassiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -2127,9 +2127,9 @@
         },
         "id": "3013",
         "level": 3,
-        "cooldown": 0,
         "description": "txtLisaPassiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -2137,8 +2137,8 @@
     "name": "txtLisaPassive",
     "type": "passive",
     "id": "3013",
-    "icon": "lisapassive",
-    "ranged": false
+    "ranged": false,
+    "icon": "lisapassive"
   },
   {
     "maxLevel": 3,
@@ -2158,9 +2158,9 @@
         },
         "id": "3020",
         "level": 1,
-        "cooldown": 0,
         "description": "txtHanaLeaderDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -2177,9 +2177,9 @@
         },
         "id": "3020",
         "level": 2,
-        "cooldown": 0,
         "description": "txtHanaLeaderDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -2196,9 +2196,9 @@
         },
         "id": "3020",
         "level": 3,
-        "cooldown": 0,
         "description": "txtHanaLeaderDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -2206,8 +2206,8 @@
     "name": "txtHanaLeader",
     "type": "leader",
     "id": "3020",
-    "icon": "hanaleader",
-    "ranged": false
+    "ranged": false,
+    "icon": "hanaleader"
   },
   {
     "maxLevel": 3,
@@ -2234,9 +2234,9 @@
         },
         "id": "3021",
         "level": 1,
-        "cooldown": 3,
         "description": "txtHanaActiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -2258,9 +2258,9 @@
         },
         "id": "3021",
         "level": 2,
-        "cooldown": 3,
         "description": "txtHanaActiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -2282,9 +2282,9 @@
         },
         "id": "3021",
         "level": 3,
-        "cooldown": 3,
         "description": "txtHanaActiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 3
       }
     ],
     "soundFXarr": [
@@ -2299,8 +2299,8 @@
     "name": "txtHanaActive",
     "type": "active",
     "id": "3021",
-    "icon": "hanaactive",
-    "ranged": true
+    "ranged": true,
+    "icon": "hanaactive"
   },
   {
     "maxLevel": 3,
@@ -2322,9 +2322,9 @@
         },
         "id": "3022",
         "level": 1,
-        "cooldown": 1,
         "description": "txtHanaAutoDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -2341,9 +2341,9 @@
         },
         "id": "3022",
         "level": 2,
-        "cooldown": 1,
         "description": "txtHanaAutoDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -2360,9 +2360,9 @@
         },
         "id": "3022",
         "level": 3,
-        "cooldown": 1,
         "description": "txtHanaAutoDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 1
       }
     ],
     "soundFXarr": [
@@ -2375,8 +2375,8 @@
     "name": "txtHanaAuto",
     "type": "auto",
     "id": "3022",
-    "icon": "hanaauto",
-    "ranged": true
+    "ranged": true,
+    "icon": "hanaauto"
   },
   {
     "maxLevel": 3,
@@ -2395,9 +2395,9 @@
         },
         "id": "3023",
         "level": 1,
-        "cooldown": 0,
         "description": "txtHanaPassiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -2413,9 +2413,9 @@
         },
         "id": "3023",
         "level": 2,
-        "cooldown": 0,
         "description": "txtHanaPassiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -2431,9 +2431,9 @@
         },
         "id": "3023",
         "level": 3,
-        "cooldown": 0,
         "description": "txtHanaPassiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -2441,8 +2441,8 @@
     "name": "txtHanaPassive",
     "type": "passive",
     "id": "3023",
-    "icon": "hanapassive",
-    "ranged": false
+    "ranged": false,
+    "icon": "hanapassive"
   },
   {
     "maxLevel": 3,
@@ -2462,9 +2462,9 @@
         },
         "id": "3030",
         "level": 1,
-        "cooldown": 0,
         "description": "txtLegolasLeaderDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -2481,9 +2481,9 @@
         },
         "id": "3030",
         "level": 2,
-        "cooldown": 0,
         "description": "txtLegolasLeaderDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -2500,9 +2500,9 @@
         },
         "id": "3030",
         "level": 3,
-        "cooldown": 0,
         "description": "txtLegolasLeaderDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -2510,8 +2510,8 @@
     "name": "txtLegolasLeader",
     "type": "leader",
     "id": "3030",
-    "icon": "legolasleader",
-    "ranged": false
+    "ranged": false,
+    "icon": "legolasleader"
   },
   {
     "maxLevel": 3,
@@ -2538,9 +2538,9 @@
         },
         "id": "3031",
         "level": 1,
-        "cooldown": 3,
         "description": "txtLegolasActiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -2562,9 +2562,9 @@
         },
         "id": "3031",
         "level": 2,
-        "cooldown": 3,
         "description": "txtLegolasActiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -2586,9 +2586,9 @@
         },
         "id": "3031",
         "level": 3,
-        "cooldown": 3,
         "description": "txtLegolasActiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 3
       }
     ],
     "soundFXarr": [
@@ -2602,8 +2602,8 @@
     "name": "txtLegolasActive",
     "type": "active",
     "id": "3031",
-    "icon": "legolasactive",
-    "ranged": true
+    "ranged": true,
+    "icon": "legolasactive"
   },
   {
     "maxLevel": 3,
@@ -2624,9 +2624,9 @@
         },
         "id": "3032",
         "level": 1,
-        "cooldown": 1,
         "description": "txtLegolasAutoDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -2642,9 +2642,9 @@
         },
         "id": "3032",
         "level": 2,
-        "cooldown": 1,
         "description": "txtLegolasAutoDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -2654,15 +2654,19 @@
           "effects": [
             {
               "type": "invisible",
-              "turn": 3
+              "turn": 2
+            },
+            {
+              "type": "buffCRIT",
+              "turn": 2
             }
           ]
         },
         "id": "3032",
         "level": 3,
-        "cooldown": 1,
         "description": "txtLegolasAutoDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 1
       }
     ],
     "soundFXarr": [
@@ -2672,8 +2676,8 @@
     "name": "txtLegolasAuto",
     "type": "auto",
     "id": "3032",
-    "icon": "legolasauto",
-    "ranged": true
+    "ranged": true,
+    "icon": "legolasauto"
   },
   {
     "maxLevel": 3,
@@ -2692,9 +2696,9 @@
         },
         "id": "3033",
         "level": 1,
-        "cooldown": 0,
         "description": "txtLegolasPassiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -2710,9 +2714,9 @@
         },
         "id": "3033",
         "level": 2,
-        "cooldown": 0,
         "description": "txtLegolasPassiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -2728,9 +2732,9 @@
         },
         "id": "3033",
         "level": 3,
-        "cooldown": 0,
         "description": "txtLegolasPassiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -2738,8 +2742,8 @@
     "name": "txtLegolasPassive",
     "type": "passive",
     "id": "3033",
-    "icon": "legolaspassive",
-    "ranged": false
+    "ranged": false,
+    "icon": "legolaspassive"
   },
   {
     "maxLevel": 3,
@@ -2759,9 +2763,9 @@
         },
         "id": "4000",
         "level": 1,
-        "cooldown": 0,
         "description": "txtJackobLeaderDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -2778,9 +2782,9 @@
         },
         "id": "4000",
         "level": 2,
-        "cooldown": 0,
         "description": "txtJackobLeaderDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -2797,9 +2801,9 @@
         },
         "id": "4000",
         "level": 3,
-        "cooldown": 0,
         "description": "txtJackobLeaderDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -2807,8 +2811,8 @@
     "name": "txtJackobLeader",
     "type": "leader",
     "id": "4000",
-    "icon": "jackobleader",
-    "ranged": false
+    "ranged": false,
+    "icon": "jackobleader"
   },
   {
     "maxLevel": 3,
@@ -2834,9 +2838,9 @@
         },
         "id": "4001",
         "level": 1,
-        "cooldown": 3,
         "description": "txtJackobActiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -2857,9 +2861,9 @@
         },
         "id": "4001",
         "level": 2,
-        "cooldown": 3,
         "description": "txtJackobActiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -2880,9 +2884,9 @@
         },
         "id": "4001",
         "level": 3,
-        "cooldown": 3,
         "description": "txtJackobActiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 3
       }
     ],
     "soundFXarr": [
@@ -2896,8 +2900,8 @@
     "name": "txtJackobActive",
     "type": "active",
     "id": "4001",
-    "icon": "jackobactive",
-    "ranged": false
+    "ranged": false,
+    "icon": "jackobactive"
   },
   {
     "maxLevel": 3,
@@ -2918,9 +2922,9 @@
         },
         "id": "4002",
         "level": 1,
-        "cooldown": 1,
         "description": "txtJackobAutoDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -2937,9 +2941,9 @@
         },
         "id": "4002",
         "level": 2,
-        "cooldown": 1,
         "description": "txtJackobAutoDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -2956,9 +2960,9 @@
         },
         "id": "4002",
         "level": 3,
-        "cooldown": 1,
         "description": "txtJackobAutoDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 1
       }
     ],
     "soundFXarr": [
@@ -2970,8 +2974,8 @@
     "name": "txtJackobAuto",
     "type": "auto",
     "id": "4002",
-    "icon": "jackobauto",
-    "ranged": true
+    "ranged": true,
+    "icon": "jackobauto"
   },
   {
     "maxLevel": 3,
@@ -2990,9 +2994,9 @@
         },
         "id": "4003",
         "level": 1,
-        "cooldown": 0,
         "description": "txtJackobPassiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -3008,9 +3012,9 @@
         },
         "id": "4003",
         "level": 2,
-        "cooldown": 0,
         "description": "txtJackobPassiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -3026,9 +3030,9 @@
         },
         "id": "4003",
         "level": 3,
-        "cooldown": 0,
         "description": "txtJackobPassiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -3036,8 +3040,8 @@
     "name": "txtJackobPassive",
     "type": "passive",
     "id": "4003",
-    "icon": "jackobpassive",
-    "ranged": false
+    "ranged": false,
+    "icon": "jackobpassive"
   },
   {
     "maxLevel": 3,
@@ -3057,9 +3061,9 @@
         },
         "id": "4010",
         "level": 1,
-        "cooldown": 0,
         "description": "txtBardLeaderDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -3076,9 +3080,9 @@
         },
         "id": "4010",
         "level": 2,
-        "cooldown": 0,
         "description": "txtBardLeaderDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -3095,9 +3099,9 @@
         },
         "id": "4010",
         "level": 3,
-        "cooldown": 0,
         "description": "txtBardLeaderDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -3105,8 +3109,8 @@
     "name": "txtBardLeader",
     "type": "leader",
     "id": "4010",
-    "icon": "bardleader",
-    "ranged": false
+    "ranged": false,
+    "icon": "bardleader"
   },
   {
     "maxLevel": 3,
@@ -3133,9 +3137,9 @@
         },
         "id": "4011",
         "level": 1,
-        "cooldown": 3,
         "description": "txtBardActiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -3157,9 +3161,9 @@
         },
         "id": "4011",
         "level": 2,
-        "cooldown": 3,
         "description": "txtBardActiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -3181,9 +3185,9 @@
         },
         "id": "4011",
         "level": 3,
-        "cooldown": 3,
         "description": "txtBardActiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 3
       }
     ],
     "soundFXarr": [
@@ -3196,8 +3200,8 @@
     "name": "txtBardActive",
     "type": "active",
     "id": "4011",
-    "icon": "bardactive",
-    "ranged": false
+    "ranged": false,
+    "icon": "bardactive"
   },
   {
     "maxLevel": 3,
@@ -3223,9 +3227,9 @@
         },
         "id": "4012",
         "level": 1,
-        "cooldown": 1,
         "description": "txtBardAutoDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -3246,9 +3250,9 @@
         },
         "id": "4012",
         "level": 2,
-        "cooldown": 1,
         "description": "txtBardAutoDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -3269,9 +3273,9 @@
         },
         "id": "4012",
         "level": 3,
-        "cooldown": 1,
         "description": "txtBardAutoDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 1
       }
     ],
     "soundFXarr": [
@@ -3285,8 +3289,8 @@
     "name": "txtBardAuto",
     "type": "auto",
     "id": "4012",
-    "icon": "bardauto",
-    "ranged": false
+    "ranged": false,
+    "icon": "bardauto"
   },
   {
     "maxLevel": 3,
@@ -3305,9 +3309,9 @@
         },
         "id": "4013",
         "level": 1,
-        "cooldown": 0,
         "description": "txtBardPassiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -3323,9 +3327,9 @@
         },
         "id": "4013",
         "level": 2,
-        "cooldown": 0,
         "description": "txtBardPassiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -3341,9 +3345,9 @@
         },
         "id": "4013",
         "level": 3,
-        "cooldown": 0,
         "description": "txtBardPassiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -3351,8 +3355,8 @@
     "name": "txtBardPassive",
     "type": "passive",
     "id": "4013",
-    "icon": "bardpassive",
-    "ranged": false
+    "ranged": false,
+    "icon": "bardpassive"
   },
   {
     "maxLevel": 3,
@@ -3372,9 +3376,9 @@
         },
         "id": "4020",
         "level": 1,
-        "cooldown": 0,
         "description": "txtHenryLeaderDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -3391,9 +3395,9 @@
         },
         "id": "4020",
         "level": 2,
-        "cooldown": 0,
         "description": "txtHenryLeaderDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -3410,9 +3414,9 @@
         },
         "id": "4020",
         "level": 3,
-        "cooldown": 0,
         "description": "txtHenryLeaderDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -3420,8 +3424,8 @@
     "name": "txtHenryLeader",
     "type": "leader",
     "id": "4020",
-    "icon": "henryleader",
-    "ranged": false
+    "ranged": false,
+    "icon": "henryleader"
   },
   {
     "maxLevel": 3,
@@ -3448,9 +3452,9 @@
         },
         "id": "4021",
         "level": 1,
-        "cooldown": 3,
         "description": "txtHenryActiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -3472,9 +3476,9 @@
         },
         "id": "4021",
         "level": 2,
-        "cooldown": 3,
         "description": "txtHenryActiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -3496,9 +3500,9 @@
         },
         "id": "4021",
         "level": 3,
-        "cooldown": 3,
         "description": "txtHenryActiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 3
       }
     ],
     "soundFXarr": [
@@ -3515,12 +3519,12 @@
     "name": "txtHenryActive",
     "type": "active",
     "id": "4021",
-    "icon": "henryactive",
-    "ranged": false
+    "ranged": false,
+    "icon": "henryactive"
   },
   {
     "maxLevel": 3,
-    "hitCount": "1",
+    "hitCount": "2",
     "hitPosition": "center",
     "levels": [
       {
@@ -3542,9 +3546,9 @@
         },
         "id": "4022",
         "level": 1,
-        "cooldown": 1,
         "description": "txtHenryAutoDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -3565,9 +3569,9 @@
         },
         "id": "4022",
         "level": 2,
-        "cooldown": 1,
         "description": "txtHenryAutoDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -3588,9 +3592,9 @@
         },
         "id": "4022",
         "level": 3,
-        "cooldown": 1,
         "description": "txtHenryAutoDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 1
       }
     ],
     "soundFXarr": [
@@ -3599,13 +3603,14 @@
       "hit_slash11"
     ],
     "hitFXarr": [
-      "hitSlashBlue1"
+      "hitSlashRed1",
+      "hitSlashRed1"
     ],
     "name": "txtHenryAuto",
     "type": "auto",
     "id": "4022",
-    "icon": "henryauto",
-    "ranged": false
+    "ranged": false,
+    "icon": "henryauto"
   },
   {
     "maxLevel": 3,
@@ -3624,9 +3629,9 @@
         },
         "id": "4023",
         "level": 1,
-        "cooldown": 0,
         "description": "txtHenryPassiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -3642,9 +3647,9 @@
         },
         "id": "4023",
         "level": 2,
-        "cooldown": 0,
         "description": "txtHenryPassiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -3660,9 +3665,9 @@
         },
         "id": "4023",
         "level": 3,
-        "cooldown": 0,
         "description": "txtHenryPassiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -3670,8 +3675,8 @@
     "name": "txtHenryPassive",
     "type": "passive",
     "id": "4023",
-    "icon": "henrypassive",
-    "ranged": false
+    "ranged": false,
+    "icon": "henrypassive"
   },
   {
     "maxLevel": 3,
@@ -3691,9 +3696,9 @@
         },
         "id": "5000",
         "level": 1,
-        "cooldown": 0,
         "description": "txtRoyLeaderDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -3710,9 +3715,9 @@
         },
         "id": "5000",
         "level": 2,
-        "cooldown": 0,
         "description": "txtRoyLeaderDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -3729,9 +3734,9 @@
         },
         "id": "5000",
         "level": 3,
-        "cooldown": 0,
         "description": "txtRoyLeaderDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -3739,8 +3744,8 @@
     "name": "txtRoyLeader",
     "type": "leader",
     "id": "5000",
-    "icon": "royleader",
-    "ranged": false
+    "ranged": false,
+    "icon": "royleader"
   },
   {
     "maxLevel": 3,
@@ -3767,9 +3772,9 @@
         },
         "id": "5001",
         "level": 1,
-        "cooldown": 3,
         "description": "txtRoyActiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -3791,9 +3796,9 @@
         },
         "id": "5001",
         "level": 2,
-        "cooldown": 3,
         "description": "txtRoyActiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -3815,9 +3820,9 @@
         },
         "id": "5001",
         "level": 3,
-        "cooldown": 3,
         "description": "txtRoyActiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 3
       }
     ],
     "soundFXarr": [
@@ -3831,8 +3836,8 @@
     "name": "txtRoyActive",
     "type": "active",
     "id": "5001",
-    "icon": "royactive",
-    "ranged": false
+    "ranged": false,
+    "icon": "royactive"
   },
   {
     "maxLevel": 3,
@@ -3859,9 +3864,9 @@
         },
         "id": "5002",
         "level": 1,
-        "cooldown": 1,
         "description": "txtRoyAutoDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -3883,9 +3888,9 @@
         },
         "id": "5002",
         "level": 2,
-        "cooldown": 1,
         "description": "txtRoyAutoDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -3907,14 +3912,14 @@
         },
         "id": "5002",
         "level": 3,
-        "cooldown": 1,
         "description": "txtRoyAutoDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 1
       }
     ],
     "soundFXarr": [
       "twistingslash1",
-      "hit_slash11",
+      "slash11",
       "hit_slash12"
     ],
     "hitFXarr": [
@@ -3923,8 +3928,8 @@
     "name": "txtRoyAuto",
     "type": "auto",
     "id": "5002",
-    "icon": "royauto",
-    "ranged": false
+    "ranged": false,
+    "icon": "royauto"
   },
   {
     "maxLevel": 3,
@@ -3943,9 +3948,9 @@
         },
         "id": "5003",
         "level": 1,
-        "cooldown": 0,
         "description": "txtRoyPassiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -3961,9 +3966,9 @@
         },
         "id": "5003",
         "level": 2,
-        "cooldown": 0,
         "description": "txtRoyPassiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -3979,9 +3984,9 @@
         },
         "id": "5003",
         "level": 3,
-        "cooldown": 0,
         "description": "txtRoyPassiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -3989,8 +3994,8 @@
     "name": "txtRoyPassive",
     "type": "passive",
     "id": "5003",
-    "icon": "roypassive",
-    "ranged": false
+    "ranged": false,
+    "icon": "roypassive"
   },
   {
     "maxLevel": 3,
@@ -4010,9 +4015,9 @@
         },
         "id": "5010",
         "level": 1,
-        "cooldown": 0,
         "description": "txtJackLeaderDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -4029,9 +4034,9 @@
         },
         "id": "5010",
         "level": 2,
-        "cooldown": 0,
         "description": "txtJackLeaderDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -4048,9 +4053,9 @@
         },
         "id": "5010",
         "level": 3,
-        "cooldown": 0,
         "description": "txtJackLeaderDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -4058,8 +4063,8 @@
     "name": "txtJackLeader",
     "type": "leader",
     "id": "5010",
-    "icon": "jackleader",
-    "ranged": false
+    "ranged": false,
+    "icon": "jackleader"
   },
   {
     "maxLevel": 3,
@@ -4082,9 +4087,9 @@
         },
         "id": "5011",
         "level": 1,
-        "cooldown": 3,
         "description": "txtJackActiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -4102,9 +4107,9 @@
         },
         "id": "5011",
         "level": 2,
-        "cooldown": 3,
         "description": "txtJackActiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -4122,9 +4127,9 @@
         },
         "id": "5011",
         "level": 3,
-        "cooldown": 3,
         "description": "txtJackActiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 3
       }
     ],
     "soundFXarr": [
@@ -4139,8 +4144,8 @@
     "name": "txtJackActive",
     "type": "active",
     "id": "5011",
-    "icon": "jackactive",
-    "ranged": true
+    "ranged": true,
+    "icon": "jackactive"
   },
   {
     "maxLevel": 3,
@@ -4167,9 +4172,9 @@
         },
         "id": "5012",
         "level": 1,
-        "cooldown": 1,
         "description": "txtJackAutoDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -4191,9 +4196,9 @@
         },
         "id": "5012",
         "level": 2,
-        "cooldown": 1,
         "description": "txtJackAutoDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -4215,9 +4220,9 @@
         },
         "id": "5012",
         "level": 3,
-        "cooldown": 1,
         "description": "txtJackAutoDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 1
       }
     ],
     "soundFXarr": [
@@ -4229,8 +4234,8 @@
     "name": "txtJackAuto",
     "type": "auto",
     "id": "5012",
-    "icon": "jackauto",
-    "ranged": false
+    "ranged": false,
+    "icon": "jackauto"
   },
   {
     "maxLevel": 3,
@@ -4249,9 +4254,9 @@
         },
         "id": "5013",
         "level": 1,
-        "cooldown": 0,
         "description": "txtJackPassiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -4267,9 +4272,9 @@
         },
         "id": "5013",
         "level": 2,
-        "cooldown": 0,
         "description": "txtJackPassiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -4285,9 +4290,9 @@
         },
         "id": "5013",
         "level": 3,
-        "cooldown": 0,
         "description": "txtJackPassiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -4295,8 +4300,8 @@
     "name": "txtJackPassive",
     "type": "passive",
     "id": "5013",
-    "icon": "jackpassive",
-    "ranged": false
+    "ranged": false,
+    "icon": "jackpassive"
   },
   {
     "maxLevel": 3,
@@ -4315,9 +4320,9 @@
         },
         "id": "6000",
         "level": 1,
-        "cooldown": 0,
         "description": "txtTharjaLeaderDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -4333,9 +4338,9 @@
         },
         "id": "6000",
         "level": 2,
-        "cooldown": 0,
         "description": "txtTharjaLeaderDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -4351,9 +4356,9 @@
         },
         "id": "6000",
         "level": 3,
-        "cooldown": 0,
         "description": "txtTharjaLeaderDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -4361,8 +4366,8 @@
     "name": "txtTharjaLeader",
     "type": "leader",
     "id": "6000",
-    "icon": "tharjaleader",
-    "ranged": false
+    "ranged": false,
+    "icon": "tharjaleader"
   },
   {
     "maxLevel": 3,
@@ -4388,9 +4393,9 @@
         },
         "id": "6001",
         "level": 1,
-        "cooldown": 3,
         "description": "txtTharjaActiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -4411,9 +4416,9 @@
         },
         "id": "6001",
         "level": 2,
-        "cooldown": 3,
         "description": "txtTharjaActiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -4434,9 +4439,9 @@
         },
         "id": "6001",
         "level": 3,
-        "cooldown": 3,
         "description": "txtTharjaActiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 3
       }
     ],
     "soundFXarr": [
@@ -4450,8 +4455,8 @@
     "name": "txtTharjaActive",
     "type": "active",
     "id": "6001",
-    "icon": "tharjaactive",
-    "ranged": true
+    "ranged": true,
+    "icon": "tharjaactive"
   },
   {
     "maxLevel": 3,
@@ -4476,9 +4481,9 @@
         },
         "id": "6002",
         "level": 1,
-        "cooldown": 1,
         "description": "txtTharjaAutoDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -4498,9 +4503,9 @@
         },
         "id": "6002",
         "level": 2,
-        "cooldown": 1,
         "description": "txtTharjaAutoDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -4520,9 +4525,9 @@
         },
         "id": "6002",
         "level": 3,
-        "cooldown": 1,
         "description": "txtTharjaAutoDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 1
       }
     ],
     "soundFXarr": [
@@ -4533,8 +4538,8 @@
     "name": "txtTharjaAuto",
     "type": "auto",
     "id": "6002",
-    "icon": "tharjaauto",
-    "ranged": true
+    "ranged": true,
+    "icon": "tharjaauto"
   },
   {
     "maxLevel": 3,
@@ -4553,9 +4558,9 @@
         },
         "id": "6003",
         "level": 1,
-        "cooldown": 0,
         "description": "txtTharjaPassiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -4571,9 +4576,9 @@
         },
         "id": "6003",
         "level": 2,
-        "cooldown": 0,
         "description": "txtTharjaPassiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -4589,9 +4594,9 @@
         },
         "id": "6003",
         "level": 3,
-        "cooldown": 0,
         "description": "txtTharjaPassiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -4599,8 +4604,8 @@
     "name": "txtTharjaPassive",
     "type": "passive",
     "id": "6003",
-    "icon": "tharjapassive",
-    "ranged": false
+    "ranged": false,
+    "icon": "tharjapassive"
   },
   {
     "maxLevel": 3,
@@ -4624,9 +4629,9 @@
         },
         "id": "6010",
         "level": 1,
-        "cooldown": 0,
         "description": "txtElsaLeaderDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -4647,9 +4652,9 @@
         },
         "id": "6010",
         "level": 2,
-        "cooldown": 0,
         "description": "txtElsaLeaderDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -4670,9 +4675,9 @@
         },
         "id": "6010",
         "level": 3,
-        "cooldown": 0,
         "description": "txtElsaLeaderDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -4680,8 +4685,8 @@
     "name": "txtElsaLeader",
     "type": "leader",
     "id": "6010",
-    "icon": "elsaleader",
-    "ranged": false
+    "ranged": false,
+    "icon": "elsaleader"
   },
   {
     "maxLevel": 3,
@@ -4713,9 +4718,9 @@
         },
         "id": "6011",
         "level": 1,
-        "cooldown": 3,
         "description": "txtElsaActiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -4742,9 +4747,9 @@
         },
         "id": "6011",
         "level": 2,
-        "cooldown": 3,
         "description": "txtElsaActiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -4771,9 +4776,9 @@
         },
         "id": "6011",
         "level": 3,
-        "cooldown": 3,
         "description": "txtElsaActiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 3
       }
     ],
     "soundFXarr": [
@@ -4790,8 +4795,8 @@
     "name": "txtElsaActive",
     "type": "active",
     "id": "6011",
-    "icon": "elsaactive",
-    "ranged": true
+    "ranged": true,
+    "icon": "elsaactive"
   },
   {
     "maxLevel": 3,
@@ -4818,9 +4823,9 @@
         },
         "id": "6012",
         "level": 1,
-        "cooldown": 1,
         "description": "txtElsaAutoDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -4842,9 +4847,9 @@
         },
         "id": "6012",
         "level": 2,
-        "cooldown": 1,
         "description": "txtElsaAutoDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -4866,9 +4871,9 @@
         },
         "id": "6012",
         "level": 3,
-        "cooldown": 1,
         "description": "txtElsaAutoDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 1
       }
     ],
     "soundFXarr": [
@@ -4882,8 +4887,8 @@
     "name": "txtElsaAuto",
     "type": "auto",
     "id": "6012",
-    "icon": "elsaauto",
-    "ranged": true
+    "ranged": true,
+    "icon": "elsaauto"
   },
   {
     "maxLevel": 3,
@@ -4902,9 +4907,9 @@
         },
         "id": "6013",
         "level": 1,
-        "cooldown": 0,
         "description": "txtElsaPassiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -4920,9 +4925,9 @@
         },
         "id": "6013",
         "level": 2,
-        "cooldown": 0,
         "description": "txtElsaPassiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -4938,9 +4943,9 @@
         },
         "id": "6013",
         "level": 3,
-        "cooldown": 0,
         "description": "txtElsaPassiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -4948,8 +4953,8 @@
     "name": "txtElsaPassive",
     "type": "passive",
     "id": "6013",
-    "icon": "elsapassive",
-    "ranged": false
+    "ranged": false,
+    "icon": "elsapassive"
   },
   {
     "maxLevel": 3,
@@ -4973,9 +4978,9 @@
         },
         "id": "7000",
         "level": 1,
-        "cooldown": 0,
         "description": "txtSerraLeaderDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -4996,9 +5001,9 @@
         },
         "id": "7000",
         "level": 2,
-        "cooldown": 0,
         "description": "txtSerraLeaderDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -5019,9 +5024,9 @@
         },
         "id": "7000",
         "level": 3,
-        "cooldown": 0,
         "description": "txtSerraLeaderDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -5029,8 +5034,8 @@
     "name": "txtSerraLeader",
     "type": "leader",
     "id": "7000",
-    "icon": "serraleader",
-    "ranged": false
+    "ranged": false,
+    "icon": "serraleader"
   },
   {
     "maxLevel": 3,
@@ -5057,9 +5062,9 @@
         },
         "id": "7001",
         "level": 1,
-        "cooldown": 3,
         "description": "txtSerraActiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -5081,9 +5086,9 @@
         },
         "id": "7001",
         "level": 2,
-        "cooldown": 3,
         "description": "txtSerraActiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -5105,9 +5110,9 @@
         },
         "id": "7001",
         "level": 3,
-        "cooldown": 3,
         "description": "txtSerraActiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 3
       }
     ],
     "soundFXarr": [
@@ -5123,8 +5128,8 @@
     "name": "txtSerraActive",
     "type": "active",
     "id": "7001",
-    "icon": "serraactive",
-    "ranged": true
+    "ranged": true,
+    "icon": "serraactive"
   },
   {
     "maxLevel": 3,
@@ -5145,9 +5150,9 @@
         },
         "id": "7002",
         "level": 1,
-        "cooldown": 1,
         "description": "txtSerraAutoDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -5164,9 +5169,9 @@
         },
         "id": "7002",
         "level": 2,
-        "cooldown": 1,
         "description": "txtSerraAutoDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -5183,9 +5188,9 @@
         },
         "id": "7002",
         "level": 3,
-        "cooldown": 1,
         "description": "txtSerraAutoDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 1
       }
     ],
     "soundFXarr": [
@@ -5195,8 +5200,8 @@
     "name": "txtSerraAuto",
     "type": "auto",
     "id": "7002",
-    "icon": "serraauto",
-    "ranged": true
+    "ranged": true,
+    "icon": "serraauto"
   },
   {
     "maxLevel": 3,
@@ -5215,9 +5220,9 @@
         },
         "id": "7003",
         "level": 1,
-        "cooldown": 0,
         "description": "txtSerraPassiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -5233,9 +5238,9 @@
         },
         "id": "7003",
         "level": 2,
-        "cooldown": 0,
         "description": "txtSerraPassiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -5251,9 +5256,9 @@
         },
         "id": "7003",
         "level": 3,
-        "cooldown": 0,
         "description": "txtSerraPassiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -5261,8 +5266,8 @@
     "name": "txtSerraPassive",
     "type": "passive",
     "id": "7003",
-    "icon": "serrapassive",
-    "ranged": false
+    "ranged": false,
+    "icon": "serrapassive"
   },
   {
     "maxLevel": 3,
@@ -5282,9 +5287,9 @@
         },
         "id": "7010",
         "level": 1,
-        "cooldown": 0,
         "description": "txtLynLeaderDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -5301,9 +5306,9 @@
         },
         "id": "7010",
         "level": 2,
-        "cooldown": 0,
         "description": "txtLynLeaderDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -5320,9 +5325,9 @@
         },
         "id": "7010",
         "level": 3,
-        "cooldown": 0,
         "description": "txtLynLeaderDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -5330,8 +5335,8 @@
     "name": "txtLynLeader",
     "type": "leader",
     "id": "7010",
-    "icon": "lynleader",
-    "ranged": false
+    "ranged": false,
+    "icon": "lynleader"
   },
   {
     "maxLevel": 3,
@@ -5352,9 +5357,9 @@
         },
         "id": "7011",
         "level": 1,
-        "cooldown": 3,
         "description": "txtLynActiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -5370,9 +5375,9 @@
         },
         "id": "7011",
         "level": 2,
-        "cooldown": 3,
         "description": "txtLynActiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -5388,9 +5393,9 @@
         },
         "id": "7011",
         "level": 3,
-        "cooldown": 3,
         "description": "txtLynActiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 3
       }
     ],
     "soundFXarr": [
@@ -5405,8 +5410,8 @@
     "name": "txtLynActive",
     "type": "active",
     "id": "7011",
-    "icon": "lynactive",
-    "ranged": false
+    "ranged": false,
+    "icon": "lynactive"
   },
   {
     "maxLevel": 3,
@@ -5433,9 +5438,9 @@
         },
         "id": "7012",
         "level": 1,
-        "cooldown": 1,
         "description": "txtLynAutoDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -5457,9 +5462,9 @@
         },
         "id": "7012",
         "level": 2,
-        "cooldown": 1,
         "description": "txtLynAutoDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -5481,9 +5486,9 @@
         },
         "id": "7012",
         "level": 3,
-        "cooldown": 1,
         "description": "txtLynAutoDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 1
       }
     ],
     "soundFXarr": [
@@ -5495,8 +5500,8 @@
     "name": "txtLynAuto",
     "type": "auto",
     "id": "7012",
-    "icon": "lynauto",
-    "ranged": true
+    "ranged": true,
+    "icon": "lynauto"
   },
   {
     "maxLevel": 3,
@@ -5516,9 +5521,9 @@
         },
         "id": "7013",
         "level": 1,
-        "cooldown": 0,
         "description": "txtLynPassiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -5535,9 +5540,9 @@
         },
         "id": "7013",
         "level": 2,
-        "cooldown": 0,
         "description": "txtLynPassiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -5554,9 +5559,9 @@
         },
         "id": "7013",
         "level": 3,
-        "cooldown": 0,
         "description": "txtLynPassiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -5564,8 +5569,8 @@
     "name": "txtLynPassive",
     "type": "passive",
     "id": "7013",
-    "icon": "lynpassive",
-    "ranged": false
+    "ranged": false,
+    "icon": "lynpassive"
   },
   {
     "maxLevel": 3,
@@ -5588,9 +5593,9 @@
         },
         "id": "8000",
         "level": 1,
-        "cooldown": 0,
-        "description": "txtAthasLeaderDesLV_1",
-        "battlePower": 1000
+        "description": "txtArthasLeaderDesLV_1",
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -5610,9 +5615,9 @@
         },
         "id": "8000",
         "level": 2,
-        "cooldown": 0,
-        "description": "txtAthasLeaderDesLV_2",
-        "battlePower": 5000
+        "description": "txtArthasLeaderDesLV_2",
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -5632,18 +5637,18 @@
         },
         "id": "8000",
         "level": 3,
-        "cooldown": 0,
-        "description": "txtAthasLeaderDesLV_3",
-        "battlePower": 10000
+        "description": "txtArthasLeaderDesLV_3",
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
     "hitFXarr": [],
-    "name": "txtAthasLeader",
+    "name": "txtArthasLeader",
     "type": "leader",
     "id": "8000",
-    "icon": "athasleader",
-    "ranged": false
+    "ranged": false,
+    "icon": "arthasleader"
   },
   {
     "maxLevel": 3,
@@ -5669,9 +5674,9 @@
         },
         "id": "8001",
         "level": 1,
-        "cooldown": 3,
-        "description": "txtAthasActiveDesLV_1",
-        "battlePower": 1000
+        "description": "txtArthasActiveDesLV_1",
+        "battlePower": 1000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -5692,9 +5697,9 @@
         },
         "id": "8001",
         "level": 2,
-        "cooldown": 3,
-        "description": "txtAthasActiveDesLV_2",
-        "battlePower": 5000
+        "description": "txtArthasActiveDesLV_2",
+        "battlePower": 5000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -5715,9 +5720,9 @@
         },
         "id": "8001",
         "level": 3,
-        "cooldown": 3,
-        "description": "txtAthasActiveDesLV_3",
-        "battlePower": 10000
+        "description": "txtArthasActiveDesLV_3",
+        "battlePower": 10000,
+        "cooldown": 3
       }
     ],
     "soundFXarr": [
@@ -5728,11 +5733,11 @@
     "hitFXarr": [
       "hitImpactBlue1"
     ],
-    "name": "txtAthasActive",
+    "name": "txtArthasActive",
     "type": "active",
     "id": "8001",
-    "icon": "athasactive",
-    "ranged": false
+    "ranged": false,
+    "icon": "arthasactive"
   },
   {
     "maxLevel": 3,
@@ -5754,9 +5759,9 @@
         },
         "id": "8002",
         "level": 1,
-        "cooldown": 1,
-        "description": "txtAthasAutoDesLV_1",
-        "battlePower": 1000
+        "description": "txtArthasAutoDesLV_1",
+        "battlePower": 1000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -5773,9 +5778,9 @@
         },
         "id": "8002",
         "level": 2,
-        "cooldown": 1,
-        "description": "txtAthasAutoDesLV_2",
-        "battlePower": 5000
+        "description": "txtArthasAutoDesLV_2",
+        "battlePower": 5000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -5792,9 +5797,9 @@
         },
         "id": "8002",
         "level": 3,
-        "cooldown": 1,
-        "description": "txtAthasAutoDesLV_3",
-        "battlePower": 10000
+        "description": "txtArthasAutoDesLV_3",
+        "battlePower": 10000,
+        "cooldown": 1
       }
     ],
     "soundFXarr": [
@@ -5802,11 +5807,11 @@
       "shieldbuff"
     ],
     "hitFXarr": [],
-    "name": "txtAthasAuto",
+    "name": "txtArthasAuto",
     "type": "auto",
     "id": "8002",
-    "icon": "athasauto",
-    "ranged": true
+    "ranged": true,
+    "icon": "arthasauto"
   },
   {
     "maxLevel": 3,
@@ -5825,9 +5830,9 @@
         },
         "id": "8003",
         "level": 1,
-        "cooldown": 0,
-        "description": "txtAthasPassiveDesLV_1",
-        "battlePower": 1000
+        "description": "txtArthasPassiveDesLV_1",
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -5843,9 +5848,9 @@
         },
         "id": "8003",
         "level": 2,
-        "cooldown": 0,
-        "description": "txtAthasPassiveDesLV_2",
-        "battlePower": 5000
+        "description": "txtArthasPassiveDesLV_2",
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -5861,18 +5866,18 @@
         },
         "id": "8003",
         "level": 3,
-        "cooldown": 0,
-        "description": "txtAthasPassiveDesLV_3",
-        "battlePower": 10000
+        "description": "txtArthasPassiveDesLV_3",
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
     "hitFXarr": [],
-    "name": "txtAthasPassive",
+    "name": "txtArthasPassive",
     "type": "passive",
     "id": "8003",
-    "icon": "athaspassive",
-    "ranged": false
+    "ranged": false,
+    "icon": "arthaspassive"
   },
   {
     "maxLevel": 3,
@@ -5896,9 +5901,9 @@
         },
         "id": "8010",
         "level": 1,
-        "cooldown": 0,
         "description": "txtJuliusLeaderDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -5919,9 +5924,9 @@
         },
         "id": "8010",
         "level": 2,
-        "cooldown": 0,
         "description": "txtJuliusLeaderDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -5942,9 +5947,9 @@
         },
         "id": "8010",
         "level": 3,
-        "cooldown": 0,
         "description": "txtJuliusLeaderDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -5952,8 +5957,8 @@
     "name": "txtJuliusLeader",
     "type": "leader",
     "id": "8010",
-    "icon": "juliusleader",
-    "ranged": false
+    "ranged": false,
+    "icon": "juliusleader"
   },
   {
     "maxLevel": 3,
@@ -5980,9 +5985,9 @@
         },
         "id": "8011",
         "level": 1,
-        "cooldown": 3,
         "description": "txtJuliusActiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -6004,9 +6009,9 @@
         },
         "id": "8011",
         "level": 2,
-        "cooldown": 3,
         "description": "txtJuliusActiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 3
       },
       {
         "specs": {
@@ -6028,9 +6033,9 @@
         },
         "id": "8011",
         "level": 3,
-        "cooldown": 3,
         "description": "txtJuliusActiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 3
       }
     ],
     "soundFXarr": [
@@ -6044,8 +6049,8 @@
     "name": "txtJuliusActive",
     "type": "active",
     "id": "8011",
-    "icon": "juliusactive",
-    "ranged": true
+    "ranged": true,
+    "icon": "juliusactive"
   },
   {
     "maxLevel": 3,
@@ -6072,9 +6077,9 @@
         },
         "id": "8012",
         "level": 1,
-        "cooldown": 1,
         "description": "txtJuliusAutoDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -6096,9 +6101,9 @@
         },
         "id": "8012",
         "level": 2,
-        "cooldown": 1,
         "description": "txtJuliusAutoDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 1
       },
       {
         "specs": {
@@ -6120,9 +6125,9 @@
         },
         "id": "8012",
         "level": 3,
-        "cooldown": 1,
         "description": "txtJuliusAutoDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 1
       }
     ],
     "soundFXarr": [
@@ -6135,8 +6140,8 @@
     "name": "txtJuliusAuto",
     "type": "auto",
     "id": "8012",
-    "icon": "juliusauto",
-    "ranged": false
+    "ranged": false,
+    "icon": "juliusauto"
   },
   {
     "maxLevel": 3,
@@ -6156,9 +6161,9 @@
         },
         "id": "8013",
         "level": 1,
-        "cooldown": 0,
         "description": "txtJuliusPassiveDesLV_1",
-        "battlePower": 1000
+        "battlePower": 1000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -6175,9 +6180,9 @@
         },
         "id": "8013",
         "level": 2,
-        "cooldown": 0,
         "description": "txtJuliusPassiveDesLV_2",
-        "battlePower": 5000
+        "battlePower": 5000,
+        "cooldown": 0
       },
       {
         "specs": {
@@ -6194,9 +6199,9 @@
         },
         "id": "8013",
         "level": 3,
-        "cooldown": 0,
         "description": "txtJuliusPassiveDesLV_3",
-        "battlePower": 10000
+        "battlePower": 10000,
+        "cooldown": 0
       }
     ],
     "soundFXarr": [],
@@ -6204,7 +6209,7 @@
     "name": "txtJuliusPassive",
     "type": "passive",
     "id": "8013",
-    "icon": "juliuspassive",
-    "ranged": false
+    "ranged": false,
+    "icon": "juliuspassive"
   }
 ]
