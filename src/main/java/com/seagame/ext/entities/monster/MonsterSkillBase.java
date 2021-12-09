@@ -1,5 +1,6 @@
 package com.seagame.ext.entities.monster;
 
+import com.creants.creants_2x.core.util.QAntTracer;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -55,7 +56,7 @@ public class MonsterSkillBase {
                 try {
                     this.specs = Utils.isNullOrEmpty(tempFormat) ? null : BasicDBObject.parse(tempFormat);
                 } catch (JsonParseException e) {
-                    e.printStackTrace();
+                    System.out.println(tempFormat);
                 }
             }
         } catch (Exception e) {

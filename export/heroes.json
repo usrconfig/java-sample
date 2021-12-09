@@ -98,13 +98,13 @@
     "name": "txtZega",
     "id": "100",
     "active": "true",
-    "classTitle": "txtFireDragonKnight",
-    "maxRank": 3,
-    "element": "fire",
-    "rarity": 1,
     "ranged": false,
     "enegryCAP": 2,
-    "spine": "Zega"
+    "classTitle": "txtFireDragonKnight",
+    "spine": "Zega",
+    "rarity": 1,
+    "maxRank": 3,
+    "element": "fire"
   },
   {
     "heroClass": "knight",
@@ -203,13 +203,13 @@
     "name": "txtZeban",
     "id": "101",
     "active": "true",
-    "classTitle": "txtScaleArmorKnight",
-    "maxRank": 3,
-    "element": "earth",
-    "rarity": 1,
     "ranged": false,
     "enegryCAP": 2,
-    "spine": "Zeban"
+    "classTitle": "txtScaleArmorKnight",
+    "spine": "Zeban",
+    "rarity": 1,
+    "maxRank": 3,
+    "element": "earth"
   },
   {
     "heroClass": "wizard",
@@ -307,13 +307,13 @@
     "name": "txtAbel",
     "id": "200",
     "active": "true",
-    "classTitle": "txtIceStormWizard",
-    "maxRank": 3,
-    "element": "water",
-    "rarity": 1,
     "ranged": true,
     "enegryCAP": 2,
-    "spine": "Abel"
+    "classTitle": "txtIceStormWizard",
+    "spine": "Abel",
+    "rarity": 1,
+    "maxRank": 3,
+    "element": "water"
   },
   {
     "heroClass": "knight",
@@ -412,16 +412,16 @@
     "name": "txtKai",
     "id": "102",
     "active": "true",
-    "classTitle": "txtDarkDragonKnight",
-    "maxRank": 3,
-    "element": "dark",
-    "rarity": 2,
     "ranged": false,
     "enegryCAP": 2,
-    "spine": "Kai"
+    "classTitle": "txtDarkDragonKnight",
+    "spine": "Kai",
+    "rarity": 2,
+    "maxRank": 3,
+    "element": "dark"
   },
   {
-    "heroClass": "wizard",
+    "heroClass": "summoner",
     "soundAct": "girl1act",
     "soundHurt": "girl1hurt",
     "hitCount": 1,
@@ -515,13 +515,13 @@
     "name": "txtWinchy",
     "id": "201",
     "active": "true",
-    "classTitle": "txtHalloweenPumpkinWizard",
-    "maxRank": 3,
-    "element": "dark",
-    "rarity": 2,
     "ranged": true,
     "enegryCAP": 2,
-    "spine": "Winchy"
+    "classTitle": "txtHalloweenSummoner",
+    "spine": "Winchy",
+    "rarity": 2,
+    "maxRank": 3,
+    "element": "dark"
   },
   {
     "heroClass": "elf",
@@ -619,13 +619,13 @@
     "name": "txtErika",
     "id": "300",
     "active": "true",
-    "classTitle": "txtGuardianBattleElf",
-    "maxRank": 3,
-    "element": "light",
-    "rarity": 1,
     "ranged": true,
     "enegryCAP": 2,
-    "spine": "Erika"
+    "classTitle": "txtGuardianBattleElf",
+    "spine": "Erika",
+    "rarity": 1,
+    "maxRank": 3,
+    "element": "light"
   },
   {
     "heroClass": "elf",
@@ -724,13 +724,13 @@
     "name": "txtLisa",
     "id": "301",
     "active": "true",
-    "classTitle": "txtDivineFairyElf",
-    "maxRank": 3,
-    "element": "water",
-    "rarity": 1,
     "ranged": true,
     "enegryCAP": 2,
-    "spine": "Lisa"
+    "classTitle": "txtDivineFairyElf",
+    "spine": "Lisa",
+    "rarity": 1,
+    "maxRank": 3,
+    "element": "water"
   },
   {
     "heroClass": "fighter",
@@ -831,13 +831,13 @@
     "name": "txtJackob",
     "id": "400",
     "active": "true",
-    "classTitle": "txtSacredFireFighter",
-    "maxRank": 3,
-    "element": "earth",
-    "rarity": 1,
     "ranged": false,
     "enegryCAP": 2,
-    "spine": "Jackob"
+    "classTitle": "txtSacredFireFighter",
+    "spine": "Jackob",
+    "rarity": 1,
+    "maxRank": 3,
+    "element": "earth"
   },
   {
     "heroClass": "elf",
@@ -935,13 +935,13 @@
     "name": "txtHana",
     "id": "302",
     "active": "true",
-    "classTitle": "txtRedSpiritBattleElf",
-    "maxRank": 3,
-    "element": "fire",
-    "rarity": 1,
     "ranged": true,
     "enegryCAP": 2,
-    "spine": "Hana"
+    "classTitle": "txtFlameRoseElf",
+    "spine": "Hana",
+    "rarity": 1,
+    "maxRank": 3,
+    "element": "fire"
   },
   {
     "heroClass": "fighter",
@@ -1040,13 +1040,13 @@
     "name": "txtBard",
     "id": "401",
     "active": "true",
-    "classTitle": "txtRedFighter",
-    "maxRank": 3,
-    "element": "fire",
-    "rarity": 1,
     "ranged": false,
     "enegryCAP": 2,
-    "spine": "Bard"
+    "classTitle": "txtRedFighter",
+    "spine": "Bard",
+    "rarity": 1,
+    "maxRank": 3,
+    "element": "fire"
   },
   {
     "heroClass": "gladiator",
@@ -1144,13 +1144,13 @@
     "name": "txtRoy",
     "id": "500",
     "active": "true",
-    "classTitle": "txtCrystalMagicGladiator",
-    "maxRank": 3,
-    "element": "water",
-    "rarity": 1,
     "ranged": false,
     "enegryCAP": 3,
-    "spine": "Roy"
+    "classTitle": "txtCrystalMagicGladiator",
+    "spine": "Roy",
+    "rarity": 1,
+    "maxRank": 3,
+    "element": "water"
   },
   {
     "heroClass": "elf",
@@ -1247,13 +1247,13 @@
     "name": "txtLegolas",
     "id": "303",
     "active": "true",
-    "classTitle": "txtPrinceOfTheElves",
-    "maxRank": 3,
-    "element": "fire",
-    "rarity": 4,
     "ranged": true,
     "enegryCAP": 2,
-    "spine": "Legolas"
+    "classTitle": "txtPrinceOfTheElves",
+    "spine": "Legolas",
+    "rarity": 4,
+    "maxRank": 3,
+    "element": "fire"
   },
   {
     "heroClass": "fighter",
@@ -1352,13 +1352,13 @@
     "name": "txtHenry",
     "id": "402",
     "active": "true",
-    "classTitle": "txtMetalClawFighter",
-    "maxRank": 3,
-    "element": "dark",
-    "rarity": 1,
     "ranged": false,
     "enegryCAP": 2,
-    "spine": "Henry"
+    "classTitle": "txtDarkClawFighter",
+    "spine": "Henry",
+    "rarity": 1,
+    "maxRank": 3,
+    "element": "dark"
   },
   {
     "heroClass": "gladiator",
@@ -1455,13 +1455,13 @@
     "name": "txtJack",
     "id": "501",
     "active": "true",
-    "classTitle": "txtDarkSkellingtonGladiator",
-    "maxRank": 3,
-    "element": "dark",
-    "rarity": 2,
     "ranged": false,
     "enegryCAP": 3,
-    "spine": "Jack"
+    "classTitle": "txtDarkSkeletonGladiator",
+    "spine": "Jack",
+    "rarity": 2,
+    "maxRank": 3,
+    "element": "dark"
   },
   {
     "heroClass": "summoner",
@@ -1559,13 +1559,13 @@
     "name": "txtTharja",
     "id": "600",
     "active": "true",
-    "classTitle": "txtBlackRoseSummoner",
-    "maxRank": 3,
-    "element": "dark",
-    "rarity": 2,
     "ranged": true,
     "enegryCAP": 3,
-    "spine": "Tharja"
+    "classTitle": "txtBlackRoseSummoner",
+    "spine": "Tharja",
+    "rarity": 2,
+    "maxRank": 3,
+    "element": "dark"
   },
   {
     "heroClass": "summoner",
@@ -1664,13 +1664,13 @@
     "name": "txtElsa",
     "id": "601",
     "active": "true",
-    "classTitle": "txtFrozenPrincessSummoner",
-    "maxRank": 3,
-    "element": "water",
-    "rarity": 3,
     "ranged": true,
     "enegryCAP": 3,
-    "spine": "Elsa"
+    "classTitle": "txtFrozenPrincessSummoner",
+    "spine": "Elsa",
+    "rarity": 3,
+    "maxRank": 3,
+    "element": "water"
   },
   {
     "heroClass": "lancer",
@@ -1769,13 +1769,13 @@
     "name": "txtSerra",
     "id": "700",
     "active": "true",
-    "classTitle": "txtTheLapidLancer",
-    "maxRank": 3,
-    "element": "water",
-    "rarity": 2,
     "ranged": false,
     "enegryCAP": 3,
-    "spine": "Serra"
+    "classTitle": "txtTheLapidLancer",
+    "spine": "Serra",
+    "rarity": 2,
+    "maxRank": 3,
+    "element": "water"
   },
   {
     "heroClass": "lancer",
@@ -1873,13 +1873,13 @@
     "name": "txtLyn",
     "id": "701",
     "active": "true",
-    "classTitle": "txtLightGuardianLancer",
-    "maxRank": 3,
-    "element": "light",
-    "rarity": 2,
     "ranged": false,
     "enegryCAP": 3,
-    "spine": "Lyn"
+    "classTitle": "txtLightGuardianLancer",
+    "spine": "Lyn",
+    "rarity": 2,
+    "maxRank": 3,
+    "element": "light"
   },
   {
     "heroClass": "lord",
@@ -1978,16 +1978,16 @@
         }
       }
     ],
-    "name": "txtAthas",
+    "name": "txtArthas",
     "id": "800",
     "active": "true",
-    "classTitle": "txtDarkMasterWarlord",
-    "maxRank": 3,
-    "element": "water",
-    "rarity": 2,
     "ranged": false,
     "enegryCAP": 3,
-    "spine": "Uther"
+    "classTitle": "txtDarkMasterWarlord",
+    "spine": "Arthas",
+    "rarity": 2,
+    "maxRank": 3,
+    "element": "water"
   },
   {
     "heroClass": "lord",
@@ -2086,12 +2086,12 @@
     "name": "txtJulius",
     "id": "801",
     "active": "true",
-    "classTitle": "txtLordOfTheFlames",
-    "maxRank": 3,
-    "element": "fire",
-    "rarity": 2,
     "ranged": false,
     "enegryCAP": 3,
-    "spine": "Julius"
+    "classTitle": "txtLordOfTheFlames",
+    "spine": "Julius",
+    "rarity": 2,
+    "maxRank": 3,
+    "element": "fire"
   }
 ]
