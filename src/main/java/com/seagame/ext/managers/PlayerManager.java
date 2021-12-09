@@ -411,6 +411,9 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //        questSystem.getOrCreateQuest(player.getId());
 
         arenaManager.registerArena(player, battleTeam);
+
+        player.setEnergyMax(calMaxEnergy(heroClasses));
+        player.setEnergy(player.getEnergyMax());
     }
 
     private List<HeroClass> buildHeroTestDefault(QAntUser user) {
@@ -521,6 +524,10 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 
     private int calMaxEnergy(Player player) {
         List<HeroClass> heroClassList = heroClassManager.getHeroes(player.getId());
+        return calMaxEnergy(heroClassList);
+    }
+
+    private int calMaxEnergy(List<HeroClass> heroClassList) {
         return heroClassList.stream().mapToInt(heroClass -> {
             HeroBase heroBase = HeroConfig.getInstance().getHeroBase(heroClass.getCharIndex());
             if (heroBase != null)
