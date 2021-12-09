@@ -111,6 +111,7 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
         heroCampaign.getStages().forEach(heroStage -> qAntArray.addQAntObject(heroStage.buildInfo()));
         params.putQAntArray("list", qAntArray);
         send(params, user);
+        trackParams(params);
     }
 
     private HeroCampaign processHeroCampaign(QAntUser user, String idx, int starNo) {
@@ -178,6 +179,7 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
         params.putQAntObject("match", buildMatchInfo);
         send(params, user);
         matchManager.newMatch(playerId, matchInfo);
+        trackParams(params);
     }
 
     @Override
