@@ -53,7 +53,7 @@ public class HeroStage implements SerializableQAntType {
      */
     public boolean isFirstClearOrUpdateStar(int starNo) {
         boolean unlockNewStage = false;
-        if (starNo <= 0) {
+        if (getStarNo() <= 0) {
             setStarNo(starNo);
             unlockNewStage = true;
         } else {
