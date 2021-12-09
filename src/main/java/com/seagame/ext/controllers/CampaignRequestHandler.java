@@ -122,8 +122,8 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
             Stage finishStage = StageConfig.getInstance().getStage(idx);
             String[] stageArr = StringUtils.split(finishStage.getUnlockStage(), "#");
             // mở stage mới
-            int newStageIndex = Integer.parseInt(stageArr[0]);
-            if (newStageIndex <= -1) {
+            String newStageIndex = stageArr[0];
+            if (Utils.isNullOrEmpty(newStageIndex) || newStageIndex.equals("#")) {
                 return campaignManager.save(campaign);
             }
             Arrays.stream(stageArr).forEach(s -> {
@@ -152,7 +152,7 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
 
     public void processReward(IQAntObject params, QAntUser user, String idx, String group, int no) {
         Stage stage = StageConfig.getInstance().getStage(idx);
-        String rewards = RandomRangeUtil.randomRewardV2(stage.getRandomReward(), 1);
+        String rewards = RandomRangeUtil.randomDroprate(stage.getRandomReward(),stage.getRandomRate(), 1);
         String dailyFirstTimeReward = stage.getDailyFirstTimeReward();
         if (campaignManager.isDailyFirstTime(idx) && !Utils.isNullOrEmpty(dailyFirstTimeReward)) {
             rewards += "#" + dailyFirstTimeReward;

@@ -31,7 +31,7 @@ public class CampaignManager extends AbstractExtensionManager {
     }
 
     public boolean isDailyFirstTime(String idx) {
-        return false;
+        return true;
     }
 
     public HeroCampaign save(HeroCampaign campaign) {
