@@ -48,14 +48,10 @@ public class Stage {
     @JacksonXmlProperty(localName = "Chance", isAttribute = true)
     private int Chance;
 
-    public List<List<String>> monsterWave;
+    public List<String> monsterWave;
 
     public void init() {
-        monsterWave = new ArrayList<>();
-        Arrays.stream(MonsterIndex.split("#")).forEach(s -> {
-            List<String> strings = new ArrayList<>(Arrays.asList(s.split(",")));
-            monsterWave.add(strings);
-        });
+        monsterWave = Arrays.asList(MonsterIndex.split(","));
     }
 
 }
