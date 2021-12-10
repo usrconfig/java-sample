@@ -112,10 +112,10 @@ public class ArenaPower implements SerializableQAntType {
      * @param value
      */
     public void decrTrophy(int value) {
-        arenaPoint += value;
+        arenaPoint -= value;
         if (arenaPoint <= 0)
             arenaPoint = 0;
-        totalPoint += value;
+        totalPoint -= value;
     }
 
 
