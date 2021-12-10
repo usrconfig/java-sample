@@ -210,19 +210,19 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
 
     private void attack(QAntUser user, IQAntObject params) {
 
-        try {
-            heroItemManger.useArenaTicket(user, 1);
-        } catch (GameException e) {
-            responseError(user, GameErrorCode.NOT_ENOUGH_TICKET);
-            return;
-        }
+//        try {
+//            heroItemManger.useArenaTicket(user, 1);
+//        } catch (GameException e) {
+//            responseError(user, GameErrorCode.NOT_ENOUGH_TICKET);
+//            return;
+//        }
 
-        try {
-            playerManager.useEnergy(user.getName(), ARENA_ENERGY_COST);
-        } catch (UseItemException e) {
-            responseError(user, GameErrorCode.NOT_ENOUGH_ENERGY);
-            return;
-        }
+//        try {
+//            playerManager.useEnergy(user.getName(), ARENA_ENERGY_COST);
+//        } catch (UseItemException e) {
+//            responseError(user, GameErrorCode.NOT_ENOUGH_ENERGY);
+//            return;
+//        }
 
 
         ArenaPower attacker = arenaManager.getAttackerTeam(user.getName());
@@ -249,7 +249,7 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
 
     private void find(QAntUser user, IQAntObject params) {
 
-        try {
+//        try {
             ArenaPower attacker = arenaManager.getArenaPower(user.getName());
             Player playerRequest = playerManager.getPlayer(user.getName());
             List<ArenaPower> opponents = arenaManager.findOpponent(attacker, playerRequest.getZoneName());
@@ -264,14 +264,14 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
                         CalculateUtil.calcTrophyAttackerLose());
                 opponentArr.addQAntObject(buildArenaInfo);
             });
-            HeroItem heroItem = heroItemManger.useItem(user, BLESS_INDEX, FIND_FEE);
-            heroItemManger.notifyAssetChange(user, Collections.singletonList(heroItem));
+//            HeroItem heroItem = heroItemManger.useItem(user, BLESS_INDEX, FIND_FEE);
+//            heroItemManger.notifyAssetChange(user, Collections.singletonList(heroItem));
             params.putQAntArray("opponents", opponentArr);
             send(params, user);
             trackParams(params);
-        } catch (UseItemException e) {
-            responseError(user, GameErrorCode.NOT_ENOUGH_CURRENCY_ITEM);
-        }
+//        } catch (UseItemException e) {
+//            responseError(user, GameErrorCode.NOT_ENOUGH_CURRENCY_ITEM);
+//        }
 
     }
 
