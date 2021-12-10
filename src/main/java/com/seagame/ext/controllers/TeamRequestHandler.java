@@ -5,10 +5,12 @@ import com.creants.creants_2x.socket.gate.entities.IQAntObject;
 import com.creants.creants_2x.socket.gate.wood.QAntUser;
 import com.seagame.ext.ExtApplication;
 import com.seagame.ext.dao.BattleTeamRepository;
+import com.seagame.ext.entities.arena.ArenaPower;
 import com.seagame.ext.entities.hero.HeroClass;
 import com.seagame.ext.entities.team.BattleTeam;
 import com.seagame.ext.entities.team.Team;
 import com.seagame.ext.entities.team.TeamType;
+import com.seagame.ext.managers.ArenaManager;
 import com.seagame.ext.managers.HeroClassManager;
 
 import java.util.Collection;
@@ -28,11 +30,13 @@ public class TeamRequestHandler extends ZClientRequestHandler {
 
     private BattleTeamRepository battleTeamRep;
     private HeroClassManager heroClassManager;
+    private ArenaManager arenaManager;
 
 
     public TeamRequestHandler() {
         battleTeamRep = ExtApplication.getBean(BattleTeamRepository.class);
         heroClassManager = ExtApplication.getBean(HeroClassManager.class);
+        arenaManager = ExtApplication.getBean(ArenaManager.class);
     }
 
 
@@ -78,6 +82,15 @@ public class TeamRequestHandler extends ZClientRequestHandler {
             heroes.addAll(oldHeroes);
         }
         heroClassManager.save(heroes);
+
+        if (team.isPVPAtkTeam()) {
+            ArenaPower arenaPower = arenaManager.getArenaPower(playerId);
+            if (arenaPower != null) {
+                arenaPower.setSearchPower(team.getSearchPower());
+                arenaManager.update(arenaPower);
+            }
+
+        }
     }
 
     private void getTeams(QAntUser user, IQAntObject params) {

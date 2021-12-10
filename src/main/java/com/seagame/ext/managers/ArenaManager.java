@@ -197,6 +197,7 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
         battleTeamRepo.save(battleTeam);
 
         // 10 nam
+        arenaPower.setSearchPower(team.getSearchPower());
         arenaPower.setBeginner(true);
         arenaPower.setShieldTime(315360000000L);
         arenaPower.setClaimedSeason(getSeason() - 1);

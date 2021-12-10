@@ -68,6 +68,18 @@ public class Team implements SerializableQAntType {
         }
     }
 
+    public boolean isPVPAtkTeam(){
+        return teamType.equals("ar");
+    }
+
+    public boolean isPVPDefTeam(){
+        return teamType.equals("df");
+    }
+
+    public boolean isPVETeam(){
+        return teamType.equals("cp");
+    }
+
     public static Team createCampaignTeam(List<HeroClass> heroes) {
         return new Team(TeamType.CAMPAIGN.getCode(), heroes);
     }
