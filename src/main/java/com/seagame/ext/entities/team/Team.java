@@ -68,15 +68,15 @@ public class Team implements SerializableQAntType {
         }
     }
 
-    public boolean isPVPAtkTeam(){
+    public boolean isPVPAtkTeam() {
         return teamType.equals("ar");
     }
 
-    public boolean isPVPDefTeam(){
+    public boolean isPVPDefTeam() {
         return teamType.equals("df");
     }
 
-    public boolean isPVETeam(){
+    public boolean isPVETeam() {
         return teamType.equals("cp");
     }
 
@@ -114,6 +114,7 @@ public class Team implements SerializableQAntType {
             heroList.forEach(heroClass -> heroes.addQAntObject(heroClass.buildInfo()));
         }
         teamObj.putQAntArray("heroList", heroes);
+        teamObj.putLongArray("heroes", getFormation());
         teamObj.putInt("leaderIndex", getLeaderIndex());
         teamObj.putInt("teamPower", getTeamPower());
         return teamObj;

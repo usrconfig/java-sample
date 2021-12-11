@@ -429,7 +429,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 
         // tạo team battle
         BattleTeam battleTeam = new BattleTeam(player.getId());
-        battleTeam.addTeam(Team.createCampaignTeam(heroClasses.stream().limit(3).collect(Collectors.toList())));
+        battleTeam.addTeam(Team.createCampaignTeam(heroClasses.stream().limit(5).collect(Collectors.toList())));
         battleTeamRepository.save(battleTeam);
 
         // mở world, chapter, stage, mission
