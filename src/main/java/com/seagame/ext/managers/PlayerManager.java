@@ -661,10 +661,10 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
     }
 
     public void useEnergy(String name, int no) throws UseItemException {
-        Player player = getPlayer(name);
-        if (!player.useEnergy(no)) {
-            throw new UseItemException();
-        }
-        updateGameHero(player);
+//        Player player = getPlayer(name);
+//        if (!player.useEnergy(no)) {
+//            throw new UseItemException();
+//        }
+//        updateGameHero(player);
     }
 }

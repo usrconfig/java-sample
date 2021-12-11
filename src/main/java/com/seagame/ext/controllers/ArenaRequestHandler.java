@@ -210,19 +210,19 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
 
     private void attack(QAntUser user, IQAntObject params) {
 
-//        try {
-//            heroItemManger.useArenaTicket(user, 1);
-//        } catch (GameException e) {
-//            responseError(user, GameErrorCode.NOT_ENOUGH_TICKET);
-//            return;
-//        }
+        try {
+            heroItemManger.useArenaTicket(user, 1);
+        } catch (GameException e) {
+            responseError(user, GameErrorCode.NOT_ENOUGH_TICKET);
+            return;
+        }
 
-//        try {
-//            playerManager.useEnergy(user.getName(), ARENA_ENERGY_COST);
-//        } catch (UseItemException e) {
-//            responseError(user, GameErrorCode.NOT_ENOUGH_ENERGY);
-//            return;
-//        }
+        try {
+            playerManager.useEnergy(user.getName(), ARENA_ENERGY_COST);
+        } catch (UseItemException e) {
+            responseError(user, GameErrorCode.NOT_ENOUGH_ENERGY);
+            return;
+        }
 
 
         ArenaPower attacker = arenaManager.getAttackerTeam(user.getName());
