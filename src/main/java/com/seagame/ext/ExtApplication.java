@@ -2,7 +2,6 @@ package com.seagame.ext;
 
 import com.creants.creants_2x.QAntServer;
 import com.creants.creants_2x.core.util.AppConfig;
-import org.apache.log4j.PropertyConfigurator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -25,8 +24,7 @@ public class ExtApplication {
 
 
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("log4j.configurationFile", "config/log4j2.xml");
-        PropertyConfigurator.configure("config/log4j.properties");
+        System.setProperty("log4j.configurationFile", "resources/log4j2.xml");
         AppConfig.init("config/application.properties");
 
         context = SpringApplication.run(ExtApplication.class, args);
