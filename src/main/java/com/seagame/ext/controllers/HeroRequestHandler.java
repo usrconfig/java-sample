@@ -43,6 +43,9 @@ public class HeroRequestHandler extends ZClientRequestHandler {
     private static final int LEVEL_UP_HERO = 4;
     private static final int SKILL_UP_HERO = 5;
 
+
+    private static final String SUM_COST = "9900/10";
+
     private HeroItemManager heroItemManager;
     private HeroClassManager heroClassManager;
     private PlayerManager playerManager;
@@ -186,6 +189,15 @@ public class HeroRequestHandler extends ZClientRequestHandler {
     }
 
     private void summonHero(QAntUser user, IQAntObject params) {
+        try {
+            Collection<HeroItem> heroItems = heroItemManager.useItemWithIndex(user, SUM_COST);
+            heroItemManager.notifyAssetChange(user, heroItems);
+            ItemConfig.getInstance().buildUpdateRewardsReceipt(params, heroItems);
+            heroItemManager.save(heroItems);
+        } catch (UseItemException e) {
+            responseError(user, GameErrorCode.NOT_ENOUGH_CURRENCY_ITEM);
+            return;
+        }
         ArrayList<HeroBase> list = new ArrayList<>(HeroConfig.getInstance().getHeroes());
         Collections.shuffle(list);
         HeroBase heroBase = list.get(0);
