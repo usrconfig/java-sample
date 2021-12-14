@@ -37,7 +37,7 @@
           "baseDEF": 180,
           "baseSPD": 95,
           "growthDEF": 2,
-          "baseHP": 2500,
+          "baseHP": 4500,
           "growthRES": 1
         }
       },
@@ -63,7 +63,7 @@
           "baseDEF": 270,
           "baseSPD": 143,
           "growthDEF": 3,
-          "baseHP": 3750,
+          "baseHP": 6750,
           "growthRES": 2
         }
       },
@@ -90,21 +90,21 @@
           "baseDEF": 360,
           "baseSPD": 190,
           "growthDEF": 5,
-          "baseHP": 5000,
+          "baseHP": 9000,
           "growthRES": 2
         }
       }
     ],
     "name": "txtZega",
     "id": "100",
-    "active": "true",
-    "ranged": false,
-    "enegryCAP": 2,
     "classTitle": "txtFireDragonKnight",
-    "spine": "Zega",
-    "rarity": 1,
+    "ranged": false,
     "maxRank": 3,
-    "element": "fire"
+    "rarity": 1,
+    "element": "fire",
+    "spine": "Zega",
+    "enegryCAP": 2,
+    "active": "true"
   },
   {
     "heroClass": "knight",
@@ -142,7 +142,7 @@
           "baseDEF": 270,
           "baseSPD": 63,
           "growthDEF": 14,
-          "baseHP": 3960,
+          "baseHP": 7128,
           "growthRES": 2
         }
       },
@@ -168,7 +168,7 @@
           "baseDEF": 405,
           "baseSPD": 95,
           "growthDEF": 20,
-          "baseHP": 5940,
+          "baseHP": 10692,
           "growthRES": 4
         }
       },
@@ -195,21 +195,21 @@
           "baseDEF": 540,
           "baseSPD": 126,
           "growthDEF": 27,
-          "baseHP": 7920,
+          "baseHP": 14256,
           "growthRES": 6
         }
       }
     ],
     "name": "txtZeban",
     "id": "101",
-    "active": "true",
-    "ranged": false,
-    "enegryCAP": 2,
     "classTitle": "txtScaleArmorKnight",
-    "spine": "Zeban",
-    "rarity": 1,
+    "ranged": false,
     "maxRank": 3,
-    "element": "earth"
+    "rarity": 1,
+    "element": "earth",
+    "spine": "Zeban",
+    "enegryCAP": 2,
+    "active": "true"
   },
   {
     "heroClass": "wizard",
@@ -246,7 +246,7 @@
           "baseDEF": 105,
           "baseSPD": 80,
           "growthDEF": 1,
-          "baseHP": 2400,
+          "baseHP": 4320,
           "growthRES": 9
         }
       },
@@ -272,7 +272,7 @@
           "baseDEF": 158,
           "baseSPD": 120,
           "growthDEF": 2,
-          "baseHP": 3600,
+          "baseHP": 6480,
           "growthRES": 15
         }
       },
@@ -299,21 +299,21 @@
           "baseDEF": 210,
           "baseSPD": 160,
           "growthDEF": 3,
-          "baseHP": 4800,
+          "baseHP": 8640,
           "growthRES": 24
         }
       }
     ],
     "name": "txtAbel",
     "id": "200",
-    "active": "true",
-    "ranged": true,
-    "enegryCAP": 2,
     "classTitle": "txtIceStormWizard",
-    "spine": "Abel",
-    "rarity": 1,
+    "ranged": true,
     "maxRank": 3,
-    "element": "water"
+    "rarity": 1,
+    "element": "water",
+    "spine": "Abel",
+    "enegryCAP": 2,
+    "active": "true"
   },
   {
     "heroClass": "knight",
@@ -351,7 +351,7 @@
           "baseDEF": 83,
           "baseSPD": 115,
           "growthDEF": 1,
-          "baseHP": 1925,
+          "baseHP": 3465,
           "growthRES": 1
         }
       },
@@ -377,7 +377,7 @@
           "baseDEF": 124,
           "baseSPD": 173,
           "growthDEF": 2,
-          "baseHP": 2888,
+          "baseHP": 5198,
           "growthRES": 2
         }
       },
@@ -404,21 +404,21 @@
           "baseDEF": 165,
           "baseSPD": 230,
           "growthDEF": 2,
-          "baseHP": 3850,
+          "baseHP": 6930,
           "growthRES": 3
         }
       }
     ],
     "name": "txtKai",
     "id": "102",
-    "active": "true",
-    "ranged": false,
-    "enegryCAP": 2,
     "classTitle": "txtDarkDragonKnight",
-    "spine": "Kai",
-    "rarity": 2,
+    "ranged": false,
     "maxRank": 3,
-    "element": "dark"
+    "rarity": 2,
+    "element": "dark",
+    "spine": "Kai",
+    "enegryCAP": 2,
+    "active": "true"
   },
   {
     "heroClass": "summoner",
@@ -454,7 +454,7 @@
           "baseDEF": 105,
           "baseSPD": 120,
           "growthDEF": 1,
-          "baseHP": 2200,
+          "baseHP": 3960,
           "growthRES": 8
         }
       },
@@ -480,7 +480,7 @@
           "baseDEF": 158,
           "baseSPD": 180,
           "growthDEF": 2,
-          "baseHP": 3300,
+          "baseHP": 5940,
           "growthRES": 14
         }
       },
@@ -507,21 +507,21 @@
           "baseDEF": 210,
           "baseSPD": 240,
           "growthDEF": 3,
-          "baseHP": 4400,
+          "baseHP": 7920,
           "growthRES": 22
         }
       }
     ],
     "name": "txtWinchy",
     "id": "201",
-    "active": "true",
-    "ranged": true,
-    "enegryCAP": 2,
     "classTitle": "txtHalloweenSummoner",
-    "spine": "Winchy",
-    "rarity": 2,
+    "ranged": true,
     "maxRank": 3,
-    "element": "dark"
+    "rarity": 2,
+    "element": "dark",
+    "spine": "Winchy",
+    "enegryCAP": 2,
+    "active": "true"
   },
   {
     "heroClass": "elf",
@@ -558,7 +558,7 @@
           "baseDEF": 144,
           "baseSPD": 86,
           "growthDEF": 1,
-          "baseHP": 2475,
+          "baseHP": 4455,
           "growthRES": 1
         }
       },
@@ -584,7 +584,7 @@
           "baseDEF": 216,
           "baseSPD": 128,
           "growthDEF": 2,
-          "baseHP": 3713,
+          "baseHP": 6683,
           "growthRES": 2
         }
       },
@@ -611,21 +611,21 @@
           "baseDEF": 288,
           "baseSPD": 171,
           "growthDEF": 3,
-          "baseHP": 4950,
+          "baseHP": 8910,
           "growthRES": 2
         }
       }
     ],
     "name": "txtErika",
     "id": "300",
-    "active": "true",
-    "ranged": true,
-    "enegryCAP": 2,
     "classTitle": "txtGuardianBattleElf",
-    "spine": "Erika",
-    "rarity": 1,
+    "ranged": true,
     "maxRank": 3,
-    "element": "light"
+    "rarity": 1,
+    "element": "light",
+    "spine": "Erika",
+    "enegryCAP": 2,
+    "active": "true"
   },
   {
     "heroClass": "elf",
@@ -663,7 +663,7 @@
           "baseDEF": 144,
           "baseSPD": 85,
           "growthDEF": 1,
-          "baseHP": 2475,
+          "baseHP": 4455,
           "growthRES": 2
         }
       },
@@ -689,7 +689,7 @@
           "baseDEF": 216,
           "baseSPD": 128,
           "growthDEF": 3,
-          "baseHP": 3713,
+          "baseHP": 6683,
           "growthRES": 4
         }
       },
@@ -716,21 +716,21 @@
           "baseDEF": 288,
           "baseSPD": 170,
           "growthDEF": 4,
-          "baseHP": 4950,
+          "baseHP": 8910,
           "growthRES": 5
         }
       }
     ],
     "name": "txtLisa",
     "id": "301",
-    "active": "true",
-    "ranged": true,
-    "enegryCAP": 2,
     "classTitle": "txtDivineFairyElf",
-    "spine": "Lisa",
-    "rarity": 1,
+    "ranged": true,
     "maxRank": 3,
-    "element": "water"
+    "rarity": 1,
+    "element": "water",
+    "spine": "Lisa",
+    "enegryCAP": 2,
+    "active": "true"
   },
   {
     "heroClass": "fighter",
@@ -770,7 +770,7 @@
           "baseDEF": 338,
           "baseSPD": 70,
           "growthDEF": 5,
-          "baseHP": 3000,
+          "baseHP": 5400,
           "growthRES": 3
         }
       },
@@ -796,7 +796,7 @@
           "baseDEF": 506,
           "baseSPD": 105,
           "growthDEF": 9,
-          "baseHP": 4500,
+          "baseHP": 8100,
           "growthRES": 6
         }
       },
@@ -823,21 +823,21 @@
           "baseDEF": 675,
           "baseSPD": 140,
           "growthDEF": 14,
-          "baseHP": 6000,
+          "baseHP": 10800,
           "growthRES": 9
         }
       }
     ],
     "name": "txtJackob",
     "id": "400",
-    "active": "true",
-    "ranged": false,
-    "enegryCAP": 2,
     "classTitle": "txtSacredFireFighter",
-    "spine": "Jackob",
-    "rarity": 1,
+    "ranged": false,
     "maxRank": 3,
-    "element": "earth"
+    "rarity": 1,
+    "element": "earth",
+    "spine": "Jackob",
+    "enegryCAP": 2,
+    "active": "true"
   },
   {
     "heroClass": "elf",
@@ -874,7 +874,7 @@
           "baseDEF": 162,
           "baseSPD": 95,
           "growthDEF": 2,
-          "baseHP": 2125,
+          "baseHP": 3825,
           "growthRES": 1
         }
       },
@@ -900,7 +900,7 @@
           "baseDEF": 243,
           "baseSPD": 143,
           "growthDEF": 3,
-          "baseHP": 3188,
+          "baseHP": 5738,
           "growthRES": 2
         }
       },
@@ -927,21 +927,21 @@
           "baseDEF": 324,
           "baseSPD": 190,
           "growthDEF": 5,
-          "baseHP": 4250,
+          "baseHP": 7650,
           "growthRES": 3
         }
       }
     ],
     "name": "txtHana",
     "id": "302",
-    "active": "true",
-    "ranged": true,
-    "enegryCAP": 2,
     "classTitle": "txtFlameRoseElf",
-    "spine": "Hana",
-    "rarity": 1,
+    "ranged": true,
     "maxRank": 3,
-    "element": "fire"
+    "rarity": 1,
+    "element": "fire",
+    "spine": "Hana",
+    "enegryCAP": 2,
+    "active": "true"
   },
   {
     "heroClass": "fighter",
@@ -979,7 +979,7 @@
           "baseDEF": 216,
           "baseSPD": 95,
           "growthDEF": 2,
-          "baseHP": 2750,
+          "baseHP": 4950,
           "growthRES": 1
         }
       },
@@ -1005,7 +1005,7 @@
           "baseDEF": 324,
           "baseSPD": 143,
           "growthDEF": 4,
-          "baseHP": 4125,
+          "baseHP": 7425,
           "growthRES": 2
         }
       },
@@ -1032,21 +1032,21 @@
           "baseDEF": 432,
           "baseSPD": 190,
           "growthDEF": 6,
-          "baseHP": 5500,
+          "baseHP": 9900,
           "growthRES": 2
         }
       }
     ],
     "name": "txtBard",
     "id": "401",
-    "active": "true",
-    "ranged": false,
-    "enegryCAP": 2,
     "classTitle": "txtRedFighter",
-    "spine": "Bard",
-    "rarity": 1,
+    "ranged": false,
     "maxRank": 3,
-    "element": "fire"
+    "rarity": 1,
+    "element": "fire",
+    "spine": "Bard",
+    "enegryCAP": 2,
+    "active": "true"
   },
   {
     "heroClass": "gladiator",
@@ -1083,7 +1083,7 @@
           "baseDEF": 180,
           "baseSPD": 95,
           "growthDEF": 2,
-          "baseHP": 3000,
+          "baseHP": 5400,
           "growthRES": 1
         }
       },
@@ -1109,7 +1109,7 @@
           "baseDEF": 270,
           "baseSPD": 143,
           "growthDEF": 3,
-          "baseHP": 4500,
+          "baseHP": 8100,
           "growthRES": 2
         }
       },
@@ -1136,21 +1136,21 @@
           "baseDEF": 360,
           "baseSPD": 190,
           "growthDEF": 5,
-          "baseHP": 6000,
+          "baseHP": 10800,
           "growthRES": 3
         }
       }
     ],
     "name": "txtRoy",
     "id": "500",
-    "active": "true",
-    "ranged": false,
-    "enegryCAP": 3,
     "classTitle": "txtCrystalMagicGladiator",
-    "spine": "Roy",
-    "rarity": 1,
+    "ranged": false,
     "maxRank": 3,
-    "element": "water"
+    "rarity": 1,
+    "element": "water",
+    "spine": "Roy",
+    "enegryCAP": 3,
+    "active": "true"
   },
   {
     "heroClass": "elf",
@@ -1186,7 +1186,7 @@
           "baseDEF": 94,
           "baseSPD": 127,
           "growthDEF": 1,
-          "baseHP": 1925,
+          "baseHP": 3465,
           "growthRES": 1
         }
       },
@@ -1212,7 +1212,7 @@
           "baseDEF": 141,
           "baseSPD": 190,
           "growthDEF": 1,
-          "baseHP": 2888,
+          "baseHP": 5198,
           "growthRES": 1
         }
       },
@@ -1239,21 +1239,21 @@
           "baseDEF": 188,
           "baseSPD": 253,
           "growthDEF": 2,
-          "baseHP": 3850,
+          "baseHP": 6930,
           "growthRES": 2
         }
       }
     ],
     "name": "txtLegolas",
     "id": "303",
-    "active": "true",
-    "ranged": true,
-    "enegryCAP": 2,
     "classTitle": "txtPrinceOfTheElves",
-    "spine": "Legolas",
-    "rarity": 4,
+    "ranged": true,
     "maxRank": 3,
-    "element": "fire"
+    "rarity": 4,
+    "element": "fire",
+    "spine": "Legolas",
+    "enegryCAP": 2,
+    "active": "true"
   },
   {
     "heroClass": "fighter",
@@ -1291,7 +1291,7 @@
           "baseDEF": 83,
           "baseSPD": 115,
           "growthDEF": 1,
-          "baseHP": 1750,
+          "baseHP": 3150,
           "growthRES": 1
         }
       },
@@ -1317,7 +1317,7 @@
           "baseDEF": 124,
           "baseSPD": 173,
           "growthDEF": 1,
-          "baseHP": 2625,
+          "baseHP": 4725,
           "growthRES": 1
         }
       },
@@ -1344,21 +1344,21 @@
           "baseDEF": 165,
           "baseSPD": 230,
           "growthDEF": 2,
-          "baseHP": 3500,
+          "baseHP": 6300,
           "growthRES": 2
         }
       }
     ],
     "name": "txtHenry",
     "id": "402",
-    "active": "true",
-    "ranged": false,
-    "enegryCAP": 2,
     "classTitle": "txtDarkClawFighter",
-    "spine": "Henry",
-    "rarity": 1,
+    "ranged": false,
     "maxRank": 3,
-    "element": "dark"
+    "rarity": 1,
+    "element": "dark",
+    "spine": "Henry",
+    "enegryCAP": 2,
+    "active": "true"
   },
   {
     "heroClass": "gladiator",
@@ -1394,7 +1394,7 @@
           "baseDEF": 99,
           "baseSPD": 104,
           "growthDEF": 1,
-          "baseHP": 1838,
+          "baseHP": 3308,
           "growthRES": 1
         }
       },
@@ -1420,7 +1420,7 @@
           "baseDEF": 149,
           "baseSPD": 155,
           "growthDEF": 1,
-          "baseHP": 2756,
+          "baseHP": 4961,
           "growthRES": 1
         }
       },
@@ -1447,21 +1447,21 @@
           "baseDEF": 198,
           "baseSPD": 207,
           "growthDEF": 2,
-          "baseHP": 3675,
+          "baseHP": 6615,
           "growthRES": 1
         }
       }
     ],
     "name": "txtJack",
     "id": "501",
-    "active": "true",
-    "ranged": false,
-    "enegryCAP": 3,
     "classTitle": "txtDarkSkeletonGladiator",
-    "spine": "Jack",
-    "rarity": 2,
+    "ranged": false,
     "maxRank": 3,
-    "element": "dark"
+    "rarity": 2,
+    "element": "dark",
+    "spine": "Jack",
+    "enegryCAP": 3,
+    "active": "true"
   },
   {
     "heroClass": "summoner",
@@ -1498,7 +1498,7 @@
           "baseDEF": 106,
           "baseSPD": 81,
           "growthDEF": 1,
-          "baseHP": 2400,
+          "baseHP": 4320,
           "growthRES": 2
         }
       },
@@ -1524,7 +1524,7 @@
           "baseDEF": 159,
           "baseSPD": 121,
           "growthDEF": 2,
-          "baseHP": 3600,
+          "baseHP": 6480,
           "growthRES": 3
         }
       },
@@ -1551,21 +1551,21 @@
           "baseDEF": 212,
           "baseSPD": 168,
           "growthDEF": 3,
-          "baseHP": 5000,
+          "baseHP": 9000,
           "growthRES": 4
         }
       }
     ],
     "name": "txtTharja",
     "id": "600",
-    "active": "true",
-    "ranged": true,
-    "enegryCAP": 3,
     "classTitle": "txtBlackRoseSummoner",
-    "spine": "Tharja",
-    "rarity": 2,
+    "ranged": true,
     "maxRank": 3,
-    "element": "dark"
+    "rarity": 2,
+    "element": "dark",
+    "spine": "Tharja",
+    "enegryCAP": 3,
+    "active": "true"
   },
   {
     "heroClass": "summoner",
@@ -1603,7 +1603,7 @@
           "baseDEF": 105,
           "baseSPD": 80,
           "growthDEF": 1,
-          "baseHP": 2160,
+          "baseHP": 3888,
           "growthRES": 2
         }
       },
@@ -1629,7 +1629,7 @@
           "baseDEF": 158,
           "baseSPD": 120,
           "growthDEF": 2,
-          "baseHP": 3240,
+          "baseHP": 5832,
           "growthRES": 3
         }
       },
@@ -1656,21 +1656,21 @@
           "baseDEF": 210,
           "baseSPD": 160,
           "growthDEF": 3,
-          "baseHP": 4320,
+          "baseHP": 7776,
           "growthRES": 4
         }
       }
     ],
     "name": "txtElsa",
     "id": "601",
-    "active": "true",
-    "ranged": true,
-    "enegryCAP": 3,
     "classTitle": "txtFrozenPrincessSummoner",
-    "spine": "Elsa",
-    "rarity": 3,
+    "ranged": true,
     "maxRank": 3,
-    "element": "water"
+    "rarity": 3,
+    "element": "water",
+    "spine": "Elsa",
+    "enegryCAP": 3,
+    "active": "true"
   },
   {
     "heroClass": "lancer",
@@ -1708,7 +1708,7 @@
           "baseDEF": 225,
           "baseSPD": 70,
           "growthDEF": 2,
-          "baseHP": 3600,
+          "baseHP": 6480,
           "growthRES": 2
         }
       },
@@ -1734,7 +1734,7 @@
           "baseDEF": 338,
           "baseSPD": 105,
           "growthDEF": 4,
-          "baseHP": 5400,
+          "baseHP": 9720,
           "growthRES": 3
         }
       },
@@ -1761,21 +1761,21 @@
           "baseDEF": 450,
           "baseSPD": 140,
           "growthDEF": 6,
-          "baseHP": 7200,
+          "baseHP": 12960,
           "growthRES": 5
         }
       }
     ],
     "name": "txtSerra",
     "id": "700",
-    "active": "true",
-    "ranged": false,
-    "enegryCAP": 3,
     "classTitle": "txtTheLapidLancer",
-    "spine": "Serra",
-    "rarity": 2,
+    "ranged": false,
     "maxRank": 3,
-    "element": "water"
+    "rarity": 2,
+    "element": "water",
+    "spine": "Serra",
+    "enegryCAP": 3,
+    "active": "true"
   },
   {
     "heroClass": "lancer",
@@ -1812,7 +1812,7 @@
           "baseDEF": 180,
           "baseSPD": 97,
           "growthDEF": 2,
-          "baseHP": 2750,
+          "baseHP": 4950,
           "growthRES": 5
         }
       },
@@ -1838,7 +1838,7 @@
           "baseDEF": 270,
           "baseSPD": 145,
           "growthDEF": 3,
-          "baseHP": 4125,
+          "baseHP": 7425,
           "growthRES": 8
         }
       },
@@ -1865,21 +1865,21 @@
           "baseDEF": 360,
           "baseSPD": 194,
           "growthDEF": 5,
-          "baseHP": 5500,
+          "baseHP": 9900,
           "growthRES": 13
         }
       }
     ],
     "name": "txtLyn",
     "id": "701",
-    "active": "true",
-    "ranged": false,
-    "enegryCAP": 3,
     "classTitle": "txtLightGuardianLancer",
-    "spine": "Lyn",
-    "rarity": 2,
+    "ranged": false,
     "maxRank": 3,
-    "element": "light"
+    "rarity": 2,
+    "element": "light",
+    "spine": "Lyn",
+    "enegryCAP": 3,
+    "active": "true"
   },
   {
     "heroClass": "lord",
@@ -1920,7 +1920,7 @@
           "baseDEF": 236,
           "baseSPD": 70,
           "growthDEF": 2,
-          "baseHP": 3420,
+          "baseHP": 6156,
           "growthRES": 2
         }
       },
@@ -1946,7 +1946,7 @@
           "baseDEF": 354,
           "baseSPD": 105,
           "growthDEF": 4,
-          "baseHP": 5130,
+          "baseHP": 9234,
           "growthRES": 4
         }
       },
@@ -1973,21 +1973,21 @@
           "baseDEF": 473,
           "baseSPD": 140,
           "growthDEF": 7,
-          "baseHP": 6840,
+          "baseHP": 12312,
           "growthRES": 7
         }
       }
     ],
     "name": "txtArthas",
     "id": "800",
-    "active": "true",
-    "ranged": false,
-    "enegryCAP": 3,
     "classTitle": "txtDarkMasterWarlord",
-    "spine": "Arthas",
-    "rarity": 2,
+    "ranged": false,
     "maxRank": 3,
-    "element": "water"
+    "rarity": 2,
+    "element": "water",
+    "spine": "Arthas",
+    "enegryCAP": 3,
+    "active": "true"
   },
   {
     "heroClass": "lord",
@@ -2025,7 +2025,7 @@
           "baseDEF": 236,
           "baseSPD": 70,
           "growthDEF": 2,
-          "baseHP": 2850,
+          "baseHP": 5130,
           "growthRES": 2
         }
       },
@@ -2051,7 +2051,7 @@
           "baseDEF": 354,
           "baseSPD": 105,
           "growthDEF": 4,
-          "baseHP": 4275,
+          "baseHP": 7695,
           "growthRES": 4
         }
       },
@@ -2078,20 +2078,20 @@
           "baseDEF": 473,
           "baseSPD": 140,
           "growthDEF": 7,
-          "baseHP": 5700,
+          "baseHP": 10260,
           "growthRES": 6
         }
       }
     ],
     "name": "txtJulius",
     "id": "801",
-    "active": "true",
-    "ranged": false,
-    "enegryCAP": 3,
     "classTitle": "txtLordOfTheFlames",
-    "spine": "Julius",
-    "rarity": 2,
+    "ranged": false,
     "maxRank": 3,
-    "element": "fire"
+    "rarity": 2,
+    "element": "fire",
+    "spine": "Julius",
+    "enegryCAP": 3,
+    "active": "true"
   }
 ]
