@@ -106,7 +106,7 @@ public class QuestRequestHandler extends ZClientRequestHandler {
         if (Utils.isNullOrEmpty(consummeItemss)) {
             return;
         }
-        Collection<HeroItem> heroItem = heroItemManager.useItemWithIndex(user, consummeItemss);
+        Collection<HeroItem> heroItem = heroItemManager.useItemWithIndex(user.getName(), consummeItemss);
         heroItemManager.save(heroItem);
         heroItemManager.notifyAssetChange(user, heroItem);
         ItemConfig.getInstance().buildUpdateRewardsReceipt(params, heroItem);

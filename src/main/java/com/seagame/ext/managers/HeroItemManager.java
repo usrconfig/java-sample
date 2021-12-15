@@ -140,7 +140,7 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
 
     public HeroItem useItem(QAntUser user, String itemIndex, int useNo) throws UseItemException {
         if (StringUtils.isNotEmpty(itemIndex) && useNo > 0) {
-            Collection<HeroItem> heroItems = this.useItemWithIndex(user, itemIndex + "/" + useNo);
+            Collection<HeroItem> heroItems = this.useItemWithIndex(user.getName(), itemIndex + "/" + useNo);
             if (heroItems != null) {
                 return heroItems.stream().findFirst().orElse(null);
             }
@@ -162,13 +162,13 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
 
     }
 
-    public Collection<HeroItem> useItemWithIndex(QAntUser user, String itemString) throws UseItemException {
+    public Collection<HeroItem> useItemWithIndex(String playerId, String itemString) throws UseItemException {
         Map<String, Integer> itemMap = itemConfig.convertToMap(itemString);
-        return this.useItemWithIndex(user, itemMap);
+        return this.useItemWithIndex(playerId, itemMap);
     }
 
-    public Collection<HeroItem> useItemWithIndex(QAntUser user, Map<String, Integer> itemMap) throws UseItemException {
-        List<HeroItem> consumeAbleItems = getConsumableItemsByIndex(user.getName(), itemMap.keySet());
+    public Collection<HeroItem> useItemWithIndex(String playerId, Map<String, Integer> itemMap) throws UseItemException {
+        List<HeroItem> consumeAbleItems = getConsumableItemsByIndex(playerId, itemMap.keySet());
         if (consumeAbleItems.size() != itemMap.size())
             throw UseItemException.lackOfItem();
 

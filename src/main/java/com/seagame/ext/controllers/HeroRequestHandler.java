@@ -98,11 +98,11 @@ public class HeroRequestHandler extends ZClientRequestHandler {
             return;
         }
 
-        LevelBase levelBase = HeroConfig.getInstance().getRankUp(heroWithId.getLevel() + 1);
+        LevelBase levelBase = HeroConfig.getInstance().getLevelUp(heroWithId.getLevel() + 1);
 
         try {
             String upgradeCost = levelBase.getUpgradeCost();
-            Collection<HeroItem> heroItems = heroItemManager.useItemWithIndex(user, upgradeCost);
+            Collection<HeroItem> heroItems = heroItemManager.useItemWithIndex(user.getName(), upgradeCost);
             heroItemManager.notifyAssetChange(user, heroItems);
             ItemConfig.getInstance().buildUpdateRewardsReceipt(params, heroItems);
             heroItemManager.save(heroItems);
@@ -142,7 +142,7 @@ public class HeroRequestHandler extends ZClientRequestHandler {
 
         try {
             String upgradeCost = SkillConfig.getInstance().getUpgradeBaseMap().get(upSkill.level).stream().map(skillUpgradeBase -> skillUpgradeBase.getItemID() + "/" + skillUpgradeBase.getCount()).collect(Collectors.joining("#"));
-            Collection<HeroItem> heroItems = heroItemManager.useItemWithIndex(user, upgradeCost);
+            Collection<HeroItem> heroItems = heroItemManager.useItemWithIndex(user.getName(), upgradeCost);
             heroItemManager.notifyAssetChange(user, heroItems);
             ItemConfig.getInstance().buildUpdateRewardsReceipt(params, heroItems);
             heroItemManager.save(heroItems);
@@ -173,7 +173,7 @@ public class HeroRequestHandler extends ZClientRequestHandler {
         LevelBase levelBase = HeroConfig.getInstance().getRankUp(heroWithId.getRank() + 1);
 
         try {
-            Collection<HeroItem> heroItems = heroItemManager.useItemWithIndex(user, levelBase.getUpgradeCost());
+            Collection<HeroItem> heroItems = heroItemManager.useItemWithIndex(user.getName(), levelBase.getUpgradeCost());
             heroItemManager.notifyAssetChange(user, heroItems);
             ItemConfig.getInstance().buildUpdateRewardsReceipt(params, heroItems);
             heroItemManager.save(heroItems);
@@ -190,7 +190,7 @@ public class HeroRequestHandler extends ZClientRequestHandler {
 
     private void summonHero(QAntUser user, IQAntObject params) {
         try {
-            Collection<HeroItem> heroItems = heroItemManager.useItemWithIndex(user, SUM_COST);
+            Collection<HeroItem> heroItems = heroItemManager.useItemWithIndex(user.getName(), SUM_COST);
             heroItemManager.notifyAssetChange(user, heroItems);
             ItemConfig.getInstance().buildUpdateRewardsReceipt(params, heroItems);
             heroItemManager.save(heroItems);

@@ -35,9 +35,10 @@ public class HeroCampaign {
         Map<String, List<HeroStage>> listMap = new ConcurrentHashMap<>();
         stages.forEach(heroStage -> {
             List<HeroStage> heroStages = listMap.putIfAbsent(heroStage.getChapterIndex(), new ArrayList<>());
-            if (heroStages != null) {
-                heroStages.add(heroStage);
+            if (heroStages == null) {
+                heroStages = listMap.get(heroStage.getChapterIndex());
             }
+            heroStages.add(heroStage);
         });
         listMap.keySet().forEach(s -> {
             QAntArray qAntArray = new QAntArray();

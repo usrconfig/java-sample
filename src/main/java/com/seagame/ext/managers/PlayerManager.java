@@ -20,11 +20,13 @@ import com.seagame.ext.entities.campaign.HeroStage;
 import com.seagame.ext.entities.campaign.Stage;
 import com.seagame.ext.entities.hero.HeroBase;
 import com.seagame.ext.entities.hero.HeroClass;
+import com.seagame.ext.entities.hero.LevelBase;
 import com.seagame.ext.entities.item.HeroConsumeItem;
 import com.seagame.ext.entities.item.HeroEquipment;
 import com.seagame.ext.entities.item.HeroItem;
 import com.seagame.ext.entities.team.BattleTeam;
 import com.seagame.ext.entities.team.Team;
+import com.seagame.ext.exception.GameErrorCode;
 import com.seagame.ext.exception.UseItemException;
 import com.seagame.ext.quest.QuestSystem;
 import com.seagame.ext.services.AutoIncrementService;
@@ -224,7 +226,9 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                QAntTracer.debug(PlayerManager.class,params.getDump());
 //                testFindArena();
 
-//                testCampaign();
+//                testCampaignInfo();
+
+//                TestLevelUpHero();
 
 
             }
@@ -246,6 +250,37 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                LongStream.range(900, 999).forEach(value -> createBot(value));
 //            }
 //        }, 3000);
+    }
+
+    private void TestLevelUpHero() {
+        long id = 1001;
+        HeroClass heroWithId = heroClassManager.getHeroWithId("nf1#1001", id);
+        if (heroWithId == null) {
+            return;
+        }
+        int levelMax = HeroConfig.getInstance().getMaxLevel(heroWithId.getCharIndex(), heroWithId.getRank());
+        if (heroWithId.getLevel() >= levelMax) {
+            return;
+        }
+
+        LevelBase levelBase = HeroConfig.getInstance().getLevelUp(heroWithId.getLevel() + 1);
+
+        try {
+            String upgradeCost = levelBase.getUpgradeCost();
+            Collection<HeroItem> heroItems = heroItemManager.useItemWithIndex("nf1#1001", upgradeCost);
+            heroItemManager.save(heroItems);
+        } catch (UseItemException e) {
+            return;
+        }
+
+        heroWithId.levelUp(1);
+        heroClassManager.save(heroWithId);
+        heroWithId.buildInfo();
+    }
+
+    private void testCampaignInfo() {
+        HeroCampaign heroCampaign = campaignManager.getOrCreateCampaign("nf1#1002");
+        heroCampaign.build();
     }
 
     private void testCampaign() {

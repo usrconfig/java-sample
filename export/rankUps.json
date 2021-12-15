@@ -1,1 +1,1 @@
-[{"id":1,"bless":0,"zen":0,"chaos":0},{"id":2,"bless":500,"zen":100000,"chaos":500},{"id":3,"bless":1000,"zen":500000,"chaos":1000}]
+[{"id":1,"bless":0,"upgradeCost":"","chaos":0,"zen":0},{"id":2,"bless":500,"upgradeCost":"9900/100000#9999/500#9901/500","chaos":500,"zen":100000},{"id":3,"bless":1000,"upgradeCost":"9900/500000#9999/1000#9901/1000","chaos":1000,"zen":500000}]
