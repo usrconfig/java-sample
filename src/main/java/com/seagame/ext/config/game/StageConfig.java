@@ -4,6 +4,7 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.seagame.ext.entities.campaign.Stage;
 import com.seagame.ext.util.SourceFileHelper;
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.xml.stream.XMLStreamReader;
 import java.io.IOException;
@@ -18,6 +19,7 @@ import java.util.stream.Collectors;
 public class StageConfig {
     public static final String STAGE_CONFIG = "stages.xml";
     private static StageConfig instance;
+    private CampaignOut campaignOut;
     private Map<String, Stage> stagesMap;
     private Map<String, List<Stage>> chapters;
 
@@ -65,6 +67,9 @@ public class StageConfig {
 
             this.stagesMap = stages;
             this.chapters = chapterSet;
+            campaignOut = new CampaignOut();
+            campaignOut.setChapters(this.chapters);
+            campaignOut.setStages(this.stagesMap.values());
             sr.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -83,6 +88,9 @@ public class StageConfig {
 
 
     public String writeToJsonFile() throws IOException {
+        SourceFileHelper.exportJsonFile(
+                chapters,
+                "campaign.json");
         return SourceFileHelper.exportJsonFile(
                 stagesMap.values().stream().sorted(Comparator.comparingInt(o -> Integer.parseInt(o.getStageIndex()))).collect(Collectors.toList()),
                 "stages.json");
@@ -96,4 +104,11 @@ public class StageConfig {
     public Stage getFirstStage() {
         return stagesMap.get("100");
     }
+}
+
+@Getter
+@Setter
+class CampaignOut {
+    private Collection<Stage> stages;
+    private Map<String, List<Stage>> chapters;
 }
