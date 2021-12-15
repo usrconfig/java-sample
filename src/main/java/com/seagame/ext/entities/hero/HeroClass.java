@@ -144,7 +144,14 @@ public class HeroClass implements SerializableQAntType, NetworkConstant {
 
 
     public int calcFullPower() {
-        return equipments.stream().mapToInt(HeroItem::getPower).sum() + HeroConfig.getInstance().getHeroRankBase(this.charIndex, this.rank).getPower();
+        int sum = 0;
+        try {
+            sum = equipments.stream().mapToInt(HeroItem::getPower).sum();
+        } catch (Exception e) {
+
+        }
+
+        return sum + HeroConfig.getInstance().getHeroRankBase(this.charIndex, this.rank).getPower();
     }
 
 
