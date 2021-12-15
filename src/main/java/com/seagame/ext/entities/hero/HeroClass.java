@@ -5,13 +5,11 @@ import com.creants.creants_2x.socket.gate.entities.QAntArray;
 import com.creants.creants_2x.socket.gate.entities.QAntObject;
 import com.creants.creants_2x.socket.gate.protocol.serialization.SerializableQAntType;
 import com.seagame.ext.ExtApplication;
-import com.seagame.ext.config.game.GameConfig;
 import com.seagame.ext.config.game.HeroConfig;
 import com.seagame.ext.entities.hero.skill.Skill;
 import com.seagame.ext.entities.item.HeroEquipment;
 import com.seagame.ext.entities.item.HeroItem;
 import com.seagame.ext.services.NotifySystem;
-import com.seagame.ext.util.Consts;
 import com.seagame.ext.util.NetworkConstant;
 import lombok.Getter;
 import lombok.Setter;
@@ -43,7 +41,7 @@ public class HeroClass implements SerializableQAntType, NetworkConstant {
     private @Transient
     List<HeroItem> equipments;
     private Date loginTime;
-    private long power;
+    private int power;
     private Set<String> onTeam;
 
 
@@ -109,8 +107,8 @@ public class HeroClass implements SerializableQAntType, NetworkConstant {
 
     private void initBaseInfo() {
         this.skills = new ArrayList<>();
-        this.power = calcFullPower();
     }
+
 
     public void levelUp(int value) {
         level += value;
@@ -151,7 +149,14 @@ public class HeroClass implements SerializableQAntType, NetworkConstant {
 
         }
 
-        return sum + HeroConfig.getInstance().getHeroRankBase(this.charIndex, this.rank).getPower();
+        int power = 0;
+        try {
+            power = HeroConfig.getInstance().getHeroRankBase(this.charIndex, this.rank).getPower();
+        } catch (Exception e) {
+
+        }
+        this.power = sum + power;
+        return this.power;
     }
 
 

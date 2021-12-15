@@ -152,6 +152,7 @@ public class HeroRequestHandler extends ZClientRequestHandler {
         }
 
         upSkill.levelUp(1);
+        heroWithId.calcFullPower();
         heroClassManager.save(heroWithId);
         params.putQAntObject("hero", heroWithId.buildInfo());
         send(params, user);

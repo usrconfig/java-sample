@@ -229,7 +229,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                testCampaignInfo();
 
 //                TestLevelUpHero();
-
+//                    buildHeroTestDefault();
 
             }
         }, 3000, 100000000);
@@ -486,6 +486,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
             HeroClass heroClass = new HeroClass(heroBase.getID(), 1);
             heroClass.setPlayerId(user.getName());
             heroClass.setId(autoIncrService.genHeroId());
+            heroClass.calcFullPower();
             heroes.add(heroClass);
         });
         heroClassManager.save(heroes);
