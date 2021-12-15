@@ -115,6 +115,7 @@ public class HeroClass implements SerializableQAntType, NetworkConstant {
     public void levelUp(int value) {
         level += value;
         levelupCheck();
+        calcFullPower();
     }
 
     public void expUp(int exp) {
@@ -143,7 +144,7 @@ public class HeroClass implements SerializableQAntType, NetworkConstant {
 
 
     public int calcFullPower() {
-        return level * 2 * rank + equipments.stream().mapToInt(HeroItem::getPower).sum();
+        return equipments.stream().mapToInt(HeroItem::getPower).sum() + HeroConfig.getInstance().getHeroRankBase(this.charIndex, this.rank).getPower();
     }
 
 

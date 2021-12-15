@@ -316,6 +316,19 @@ public class ItemConfig implements NetworkConstant {
         return itemMap.get(index);
     }
 
+    public ItemBase getEquip(String index) {
+        return equipMap.get(index);
+    }
+
+    public int getEquipPower(String index, int rank) {
+        try {
+            return getRanksEquipMap().get(index).get(rank).getPower();
+        } catch (Exception e) {
+
+        }
+        return 0;
+    }
+
 
     public List<ItemBase> getItems() {
         return new ArrayList<>(itemMap.values());
@@ -450,8 +463,6 @@ public class ItemConfig implements NetworkConstant {
 //            playerManager.getHeroItemManager().notifyItemChange(gameHeroId, heroItems, items);
 //        }
 //    }
-
-
 
 
     public String getRanDomAttackItem() {

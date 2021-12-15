@@ -3,6 +3,7 @@ package com.seagame.ext.entities.item;
 import com.creants.creants_2x.socket.gate.entities.IQAntObject;
 import com.creants.creants_2x.socket.gate.entities.QAntObject;
 import com.creants.creants_2x.socket.gate.protocol.serialization.SerializableQAntType;
+import com.seagame.ext.config.game.ItemConfig;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -61,7 +62,12 @@ public class HeroEquipment extends HeroItem implements SerializableQAntType {
 
     @Override
     public int getPower() {
-        return level * rank;
+        try {
+            return ItemConfig.getInstance().getEquipPower(this.getIndex(), this.getRank());
+        } catch (Exception ignored) {
+
+        }
+        return 0;
     }
 
     public void levelUp() {

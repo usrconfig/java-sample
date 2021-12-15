@@ -1,5 +1,6 @@
 package com.seagame.ext.entities.item;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
@@ -57,4 +58,9 @@ public class EquipRankBase implements Serializable {
     private int growthCRIT;
     @JacksonXmlProperty(localName = "growthMPR", isAttribute = true)
     private int Description;
+
+    @JsonIgnore
+    public int getPower() {
+        return baseATK + baseCRIT + baseDEF + baseHP + baseMAG + baseMPR + baseRES + baseSPD;
+    }
 }

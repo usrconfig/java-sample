@@ -45,4 +45,7 @@ public class HeroRankBaseOut {
         stats.put("growthMPR", heroRankBase.getGrowthMPR());
     }
 
+    public int getPower() {
+        return stats.values().stream().mapToInt(value -> value).sum();
+    }
 }
