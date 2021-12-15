@@ -87,7 +87,7 @@ public class HeroConfig {
         if (index.contains("/")) {
             index = index.split("/")[0];
         }
-        return heroes.get(index).getRanks().get(rank);
+        return heroes.get(index).getRanks().get(Math.max(0, rank - 1));
     }
 
 

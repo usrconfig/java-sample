@@ -82,9 +82,7 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
 
     private void campaignInfo(QAntUser user, IQAntObject params) {
         HeroCampaign heroCampaign = campaignManager.getOrCreateCampaign(user.getName());
-        QAntArray qAntArray = new QAntArray();
-        heroCampaign.getStages().forEach(heroStage -> qAntArray.addQAntObject(heroStage.buildInfo()));
-        params.putQAntArray("list", qAntArray);
+        params.putQAntArray("chapters", heroCampaign.build());
         send(params, user);
     }
 

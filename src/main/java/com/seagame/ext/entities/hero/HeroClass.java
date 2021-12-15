@@ -83,7 +83,9 @@ public class HeroClass implements SerializableQAntType, NetworkConstant {
     }
 
     private void initSkills(String charIndex) {
-        HeroRankBaseOut heroBase = HeroConfig.getInstance().getHeroRankBase(charIndex, this.rank);
+//        HeroRankBaseOut heroBase = HeroConfig.getInstance().getHeroRankBase(charIndex, this.rank);
+        //Test max skill
+        HeroRankBaseOut heroBase = HeroConfig.getInstance().getHeroRankBase(charIndex, 3);
         if (heroBase != null && heroBase.getSkills() != null) {
             AtomicInteger atomicInteger = new AtomicInteger();
             heroBase.getSkills().forEach(s -> skills.add(new Skill(s, 1, atomicInteger.getAndIncrement())));
