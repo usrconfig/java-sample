@@ -3,10 +3,7 @@ package com.seagame.ext.config.game;
 import com.creants.creants_2x.core.util.QAntTracer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import com.seagame.ext.entities.hero.HeroBase;
-import com.seagame.ext.entities.hero.HeroInfoBase;
-import com.seagame.ext.entities.hero.HeroRankBaseOut;
-import com.seagame.ext.entities.hero.LevelBase;
+import com.seagame.ext.entities.hero.*;
 import com.seagame.ext.util.SourceFileHelper;
 
 import javax.xml.stream.XMLStreamReader;
@@ -52,7 +49,15 @@ public class HeroConfig {
                 heroBase.initString();
                 heroes.put(heroBase.getID(), heroBase);
             });
-            heroesInfo.getRankList().forEach(heroRankBase -> heroes.get(heroRankBase.getID()).pushRank(heroRankBase));
+            List<HeroRankBase> rankList = heroesInfo.getRankList();
+            //TODO build full skill all rank
+            rankList.forEach(heroRankBase -> {
+                if(heroRankBase.getRank()!=3){
+                    rankList.stream().filter(heroRankBase1 -> (heroRankBase1.getRank()==3&&heroRankBase1.getID().equals(heroRankBase.getID()))).limit(1).forEach(heroRankBase1 -> heroRankBase.setSkills(heroRankBase1.getSkills()));
+                }
+            });
+            //
+            rankList.forEach(heroRankBase -> heroes.get(heroRankBase.getID()).pushRank(heroRankBase));
             heroesInfo.getLevelUpList().forEach(levelBase -> levelUps.put(levelBase.getID(), levelBase));
             heroesInfo.getRankUpList().forEach(levelBase -> rankUps.put(levelBase.getID(), levelBase));
             sr.close();

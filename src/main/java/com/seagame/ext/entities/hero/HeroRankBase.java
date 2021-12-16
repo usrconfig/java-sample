@@ -2,11 +2,13 @@ package com.seagame.ext.entities.hero;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author LamHM
  */
 @Getter
+@Setter
 public class HeroRankBase {
     @JacksonXmlProperty(localName = "ID", isAttribute = true)
     private String ID;
