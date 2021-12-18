@@ -7,12 +7,18 @@
                 <xs:element name="Rewards" type="RewardList"/>
                 <xs:element name="Equips" type="EquipList"/>
                 <xs:element name="Ranks" type="RankList"/>
+                <xs:element name="EggRewards" type="EggRewardList"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:complexType name="RewardList">
         <xs:sequence>
             <xs:element ref="Reward" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EggRewardList">
+        <xs:sequence>
+            <xs:element ref="EggReward" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -62,6 +68,14 @@
             <xs:attribute name="Count" type="xs:int"/>
             <xs:attribute name="Rank" type="xs:int"/>
             <xs:attribute name="Level" type="xs:int"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="EggReward">
+        <xs:complexType>
+            <xs:attribute name="Index" type="xs:string"/>
+            <xs:attribute name="Reward" type="xs:string"/>
+            <xs:attribute name="Count" type="xs:int"/>
+            <xs:attribute name="Rate" type="xs:int"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="Rank">

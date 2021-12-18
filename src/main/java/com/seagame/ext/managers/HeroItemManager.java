@@ -379,6 +379,18 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
         return heroItems;
     }
 
+    public Collection<HeroItem> openEgg(QAntUser user, Map<Long, Integer> items, IQAntObject params) throws UseItemException {
+        Collection<HeroItem> collection = this.useItemsWithIds(user, items);
+        Map<String, Integer> refund = new ConcurrentHashMap<>();
+        String rewards = RandomRangeUtil.randomDroprate(ItemConfig.getInstance().getEggRewards(), ItemConfig.getInstance().getEggRewardsRate(), 1, 100);
+        ItemConfig.getInstance().convertToMap(refund, rewards);
+        Collection<HeroItem> items1 = ItemConfig.getInstance().convertToHeroItem(refund);
+        ItemConfig.getInstance().buildRewardsReceipt(params, refund.keySet().stream().map(heroItem -> heroItem + "/" + refund.get(heroItem)).collect(Collectors.joining("#")));
+        Collection<HeroItem> heroItems = addItems(user.getName(), items1);
+        heroItems.addAll(collection);
+        return heroItems;
+    }
+
 
     private int openItem(String index, int itemNo, Map<String, Integer> refund) {
         ItemBase item = itemConfig.getItem(index);

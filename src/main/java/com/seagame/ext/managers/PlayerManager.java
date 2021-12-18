@@ -33,6 +33,7 @@ import com.seagame.ext.services.AutoIncrementService;
 import com.seagame.ext.services.ServiceHelper;
 import com.seagame.ext.util.CalculateUtil;
 import com.seagame.ext.util.NetworkConstant;
+import com.seagame.ext.util.RandomRangeUtil;
 import com.seagame.ext.util.TimeExUtil;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.RandomUtils;
@@ -231,6 +232,8 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                TestLevelUpHero();
 //                    buildHeroTestDefault();
 
+//                testOpenEgg();
+
             }
         }, 3000, 100000000);
 
@@ -250,6 +253,13 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                LongStream.range(900, 999).forEach(value -> createBot(value));
 //            }
 //        }, 3000);
+    }
+
+    private void testOpenEgg() {
+        Map<String, Integer> refund = new ConcurrentHashMap<>();
+        String rewards = RandomRangeUtil.randomDroprate(ItemConfig.getInstance().getEggRewards(), ItemConfig.getInstance().getEggRewardsRate(), 1, 100);
+        ItemConfig.getInstance().convertToMap(refund, rewards);
+        Collection<HeroItem> items1 = ItemConfig.getInstance().convertToHeroItem(refund);
     }
 
     private void TestLevelUpHero() {

@@ -15,4 +15,6 @@ public class Items {
     private List<EquipBase> equips;
     @JacksonXmlProperty(localName = "Ranks", isAttribute = true)
     private List<EquipRankBase> ranks;
+    @JacksonXmlProperty(localName = "EggRewards", isAttribute = true)
+    private List<EggRewardBase> eggRewards;
 }

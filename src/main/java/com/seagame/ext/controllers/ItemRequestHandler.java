@@ -33,6 +33,7 @@ public class ItemRequestHandler extends ZClientRequestHandler {
     private static final int USE_ITEM = 2;
     private static final int LEVEL_UP = 3;
     private static final int EQUIP_UNEQUIP = 4;
+    private static final int OPEN_EGG = 5;
 
     private HeroItemManager heroItemManager;
     private PlayerManager playerManager;
@@ -62,6 +63,9 @@ public class ItemRequestHandler extends ZClientRequestHandler {
                 break;
             case USE_ITEM:
                 useItem(user, params);
+                break;
+            case OPEN_EGG:
+                openEgg(user, params);
                 break;
         }
     }
@@ -107,6 +111,45 @@ public class ItemRequestHandler extends ZClientRequestHandler {
             }
             useItems.forEach(heroItem -> useMap.put(heroItem.getId(), heroItem.getNo()));
             Collection<HeroItem> updateItems = heroItemManager.useItems(user, useMap, params);
+            heroItemManager.save(updateItems);
+            heroItemManager.notifyAssetChange(user, updateItems);
+            ItemConfig.getInstance().buildUpdateRewardsReceipt(params, updateItems);
+        } catch (UseItemException e) {
+            responseError(user, GameErrorCode.NOT_EXIST_ITEM);
+            return;
+        }
+        send(params, user);
+    }
+
+    private void openEgg(QAntUser user, IQAntObject params) {
+        String itemIdx = "9911";
+        ItemBase itemBase = ItemConfig.getInstance().getItem(itemIdx);
+        if (itemBase == null) {
+            responseError(user, NOT_EXIST_ITEM);
+            return;
+        }
+
+        Map<Long, Integer> useMap = new ConcurrentHashMap<>();
+        Collection<HeroItem> useItems = new ArrayList<>();
+
+        Player player = playerManager.getPlayer(user.getName());
+        Collection<HeroItem> items = heroItemManager.getItemsByIndex(user.getName(), player.getActiveHeroId(), itemIdx);
+
+        try {
+            int total = 1;
+            for (HeroItem heroItem : items) {
+                if (total > 0) {
+                    heroItem.setNo(Math.min(total, heroItem.getNo()));
+                    total -= heroItem.getNo();
+                    useItems.add(heroItem);
+                }
+            }
+            if (total > 0) {
+                responseError(user, LACK_OF_INFOMATION);
+                return;
+            }
+            useItems.forEach(heroItem -> useMap.put(heroItem.getId(), heroItem.getNo()));
+            Collection<HeroItem> updateItems = heroItemManager.openEgg(user, useMap, params);
             heroItemManager.save(updateItems);
             heroItemManager.notifyAssetChange(user, updateItems);
             ItemConfig.getInstance().buildUpdateRewardsReceipt(params, updateItems);

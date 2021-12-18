@@ -36,9 +36,12 @@ public class ItemConfig implements NetworkConstant {
     private static ItemConfig instance;
     private Map<String, ItemBase> itemMap;
     private Map<String, EquipBase> equipMap;
+    private Map<String, EggRewardBase> eggRewardMap;
     private Map<String, List<RewardBase>> rewardBaseMap;
     private Map<String, List<EquipRankBase>> ranksEquipMap;
     private Items items;
+    private String eggRewards;
+    private String eggRewardsRate;
 
     public static final String GOLD_REWARDS = "ITEM001/";
 
@@ -54,6 +57,7 @@ public class ItemConfig implements NetworkConstant {
     private ItemConfig() {
         itemMap = new HashMap<>();
         equipMap = new HashMap<>();
+        eggRewardMap = new HashMap<>();
         rewardBaseMap = new HashMap<>();
         ranksEquipMap = new HashMap<>();
         loadItems();
@@ -118,6 +122,15 @@ public class ItemConfig implements NetworkConstant {
                 }
                 equipMap.put(itemBase.getId(), itemBase);
             });
+            ArrayList<String> eggRws = new ArrayList<>();
+            ArrayList<String> eggRwsRate = new ArrayList<>();
+            items.getEggRewards().forEach(itemBase -> {
+                eggRewardMap.put(itemBase.getIndex(), itemBase);
+                eggRws.add(itemBase.getReward() + "/" + itemBase.getCount());
+                eggRwsRate.add(String.valueOf(itemBase.getRate()));
+            });
+            eggRewards = String.join("#", eggRws);
+            eggRewardsRate = String.join("#", eggRwsRate);
             sr.close();
         } catch (Exception ignored) {
             ignored.printStackTrace();
@@ -294,6 +307,7 @@ public class ItemConfig implements NetworkConstant {
         try {
             exportItems();
             exportEquips();
+            exportEggRewards();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -306,6 +320,10 @@ public class ItemConfig implements NetworkConstant {
 
     public String exportEquips() throws Exception {
         return SourceFileHelper.exportJsonFile(equipMap.values(), "equips.json");
+    }
+
+    public String exportEggRewards() throws Exception {
+        return SourceFileHelper.exportJsonFile(eggRewardMap.values(), "eggRewards.json");
     }
 
 //    public String exportItemExp() throws Exception {
@@ -475,6 +493,14 @@ public class ItemConfig implements NetworkConstant {
         List<ItemBase> attack = getItems().stream().filter(itemBase -> itemBase.getType().equals("support")).collect(Collectors.toList());
         Collections.shuffle(attack);
         return attack.get(0).getId();
+    }
+
+    public String getEggRewards() {
+        return String.join("#", eggRewards);
+    }
+
+    public String getEggRewardsRate() {
+        return String.join("#", eggRewardsRate);
     }
 
 //    public String buildRewardsForMonster(String monster, int level, PlayerManager playerManager, String playerId, boolean isBoss) {

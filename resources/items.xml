@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Items>
 	<Items>
-		<Item ID="9999" Name="txtItemBless" Description="txtDesItemBless" Type="currency" Rank="5" Icon="bless"/>
-		<Item ID="9900" Name="txtItemZen" Description="txtDesItemZen" Type="currency" Rank="1" Icon="zen"/>
+		<Item ID="9999" Name="txtItemKEN" Description="txtDesItemKEN" Type="currency" Rank="5" Icon="ken"/>
+		<Item ID="9900" Name="txtItemWOL" Description="txtDesItemWOL" Type="currency" Rank="1" Icon="wol"/>
 		<Item ID="9901" Name="txtItemChaos" Description="txtDesItemChaos" Type="material" Rank="2" Icon="chaos"/>
 		<Item ID="9902" Name="txtItemEnegry" Description="txtDesItemEnegry" Type="point" Rank="1" Icon="stamina"/>
 		<Item ID="9903" Name="txtItemArenaTicket" Description="txtDesItemArenaTicket" Type="ticket" Rank="2" Icon="arenaticket"/>
@@ -12,6 +12,8 @@
 		<Item ID="9907" Name="txtItemHeroTicket3Star" Description="txtDesItemHeroTicket3Star" Type="rewards" Rank="3" Icon="3starheroticket"/>
 		<Item ID="9908" Name="txtItemZenPack" Description="txtDesItemZenPack" Type="rewards" Rank="1" Icon="giftboxred"/>
 		<Item ID="9909" Name="txtItemGiftBox" Description="txtDesItemGiftBox" Type="rewards" Rank="5" Icon="gmgiftchest"/>
+		<Item ID="9910" Name="txtItemEggPiece" Description="txtDesItemEggPiece" Type="rewards" Rank="5" Icon="eggpiece"/>
+		<Item ID="9911" Name="txtItemEgg" Description="txtDesItemEgg" Type="rewards" Rank="5" Icon="egg"/>
 	</Items>
 	<Rewards>
 		<Reward RewardsID="9905" Rate="250" ID="100" Type="hero" Count="1" Rank="1" Level="1"/>
@@ -244,4 +246,16 @@
 		<Rank ID="4400" Rank="2" Icon="ico_pendant_dark2" maxLevel="6" baseATK="250" baseMAG="0" baseHP="0" baseDEF="0" baseRES="0" baseSPD="0" baseCRIT="0" baseMPR="0" growthATK="25" growthMAG="0" growthHP="0" growthDEF="0" growthRES="0" growthSPD="0" growthCRIT="0" growthMPR="0"/>
 		<Rank ID="4400" Rank="3" Icon="ico_pendant_dark3" maxLevel="6" baseATK="500" baseMAG="0" baseHP="0" baseDEF="0" baseRES="0" baseSPD="0" baseCRIT="0" baseMPR="0" growthATK="50" growthMAG="0" growthHP="0" growthDEF="0" growthRES="0" growthSPD="0" growthCRIT="0" growthMPR="0"/>
 	</Ranks>
+	<EggRewards>
+		<EggReward Index="1" Reward="9999" Count="1" Rate="5"/>
+		<EggReward Index="2" Reward="9900" Count="1" Rate="5"/>
+		<EggReward Index="3" Reward="9901" Count="1" Rate="10"/>
+		<EggReward Index="4" Reward="9902" Count="1" Rate="10"/>
+		<EggReward Index="5" Reward="9903" Count="1" Rate="10"/>
+		<EggReward Index="6" Reward="9904" Count="1" Rate="10"/>
+		<EggReward Index="7" Reward="9905" Count="1" Rate="10"/>
+		<EggReward Index="8" Reward="9906" Count="1" Rate="10"/>
+		<EggReward Index="9" Reward="9907" Count="1" Rate="10"/>
+		<EggReward Index="10" Reward="9908" Count="1" Rate="20"/>
+	</EggRewards>
 </Items>
