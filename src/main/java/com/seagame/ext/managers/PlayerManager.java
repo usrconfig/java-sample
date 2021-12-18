@@ -11,6 +11,7 @@ import com.seagame.ext.Utils;
 import com.seagame.ext.config.game.HeroConfig;
 import com.seagame.ext.config.game.ItemConfig;
 import com.seagame.ext.config.game.StageConfig;
+import com.seagame.ext.controllers.ItemRequestHandler;
 import com.seagame.ext.dao.BattleTeamRepository;
 import com.seagame.ext.dao.PlayerRepository;
 import com.seagame.ext.entities.Player;
@@ -231,7 +232,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 
 //                TestLevelUpHero();
 //                    buildHeroTestDefault();
-
+//                Math.floorDiv(122, 1000);
 //                testOpenEgg();
 
             }
@@ -527,7 +528,17 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
                 case ITEM_REWARDS://material
                 case ITEM_MATERIAL://material
                     heroItem = new HeroConsumeItem(itemBase);
-                    heroItem.setNo(300);
+                    switch (itemBase.getId()) {
+                        case ItemRequestHandler.EGG_PIECE:
+                            heroItem.setNo(12345);
+                            break;
+                        case ItemRequestHandler.EGG:
+                            heroItem.setNo(300);
+                            break;
+                        default:
+                            heroItem.setNo(300);
+                            break;
+                    }
                     collection.add(heroItem);
                     break;
                 case ITEM_CURRENCY://material

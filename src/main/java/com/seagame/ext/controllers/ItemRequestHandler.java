@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static com.seagame.ext.exception.GameErrorCode.*;
 
@@ -34,6 +35,9 @@ public class ItemRequestHandler extends ZClientRequestHandler {
     private static final int LEVEL_UP = 3;
     private static final int EQUIP_UNEQUIP = 4;
     private static final int OPEN_EGG = 5;
+    public static final String EGG_PIECE = "9910";
+    public static final int EGG_PIECE_TO_EGE = 1000;
+    public static final String EGG = "9911";
 
     private HeroItemManager heroItemManager;
     private PlayerManager playerManager;
@@ -185,7 +189,23 @@ public class ItemRequestHandler extends ZClientRequestHandler {
         params.putInt(KEYI_MAX_PAGE, itemPage.getTotalPages());
 
         IQAntArray arr = QAntArray.newInstance();
-        itemPage.getContent().forEach(item -> arr.addQAntObject(item.buildInfo()));
+        itemPage.getContent().forEach(item -> {
+            arr.addQAntObject(item.buildInfo());
+            if (item.getIndex().equals(EGG_PIECE)) {
+                if (item.getNo() >= EGG_PIECE_TO_EGE) {
+                    item.setNo(Math.floorMod(item.getNo(), EGG_PIECE_TO_EGE));
+                    Collection<HeroItem> itemsById = heroItemManager.getItemsById(user.getName(), EGG);
+                    AtomicInteger no = new AtomicInteger(0);
+                    itemsById.stream().limit(1).forEach(heroItem -> {
+                        no.set(heroItem.getNo() + Math.floorDiv(item.getNo(), EGG_PIECE_TO_EGE));
+                        heroItem.setNo(no.get());
+                    });
+                    itemsById.add(item);
+                    heroItemManager.save(itemsById);
+                    itemPage.getContent().stream().filter(heroItem -> heroItem.getIndex().equals(EGG)).forEach(heroItem -> heroItem.setNo(no.get()));
+                }
+            }
+        });
         params.putQAntArray(KEYQA_ITEMS, arr);
         send(params, user);
     }
