@@ -248,7 +248,7 @@
 		<Skill ID="1002" Name="txtZegaAuto" maxLevel="3" Type="auto" Ranged="true" Icon="zegaauto" soundFX="magic11"/>
 		<Skill ID="1003" Name="txtZegaPassive" maxLevel="3" Type="passive" Ranged="false" Icon="zegapassive"/>
 		<Skill ID="1010" Name="txtZebanLeader" maxLevel="3" Type="leader" Ranged="false" Icon="zebanleader"/>
-		<Skill ID="1011" Name="txtZebanActive" maxLevel="3" Type="active" Ranged="false" Icon="zebanactive" soundFX="cast1#powercharge#shieldbuff" hitCount="1" hitPosition="center"/>
+		<Skill ID="1011" Name="txtZebanActive" maxLevel="3" Type="active" Ranged="true" Icon="zebanactive" soundFX="cast1#powercharge#shieldbuff" hitCount="1" hitPosition="center"/>
 		<Skill ID="1012" Name="txtZebanAuto" maxLevel="3" Type="auto" Ranged="false" Icon="zebanauto" soundFX="moonslash#hit_slash11" hitFX="hitSlashYellow1" hitCount="1" hitPosition="center"/>
 		<Skill ID="1013" Name="txtZebanPassive" maxLevel="3" Type="passive" Ranged="false" Icon="zebanpassive"/>
 		<Skill ID="1020" Name="txtKaiLeader" maxLevel="3" Type="leader" Ranged="false" Icon="kaileader"/>
