@@ -37,6 +37,6 @@ public class JoinZoneEventHandler extends BaseServerEventHandler {
         user.setFullName(player.getName());
         IQAntObject params = player.buildLoginInfo();
         params.putQAntObject("stats", response);
-        send("cmd_login_game", params, user);
+        send("cmd_join_game", params, user);
     }
 }
