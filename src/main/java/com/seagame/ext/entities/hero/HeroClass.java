@@ -36,7 +36,7 @@ public class HeroClass implements SerializableQAntType, NetworkConstant {
     public String name;
     private int exp;
     private int level = 1;
-    private int rank = 1;
+    private int rank = 3;
     private List<Skill> skills;
     private @Transient
     List<HeroItem> equipments;
