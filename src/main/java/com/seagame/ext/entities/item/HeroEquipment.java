@@ -42,6 +42,7 @@ public class HeroEquipment extends HeroItem implements SerializableQAntType {
         IQAntObject result = QAntObject.newInstance();
         result.putLong("id", id);
         result.putUtfString("idx", index);
+        result.putUtfString("type", type);
         result.putInt("level", level != 0 ? level : 1);
         result.putInt("rank", rank != 0 ? rank : 1);
         result.putInt("equipSlot", equipSlot);
@@ -54,6 +55,7 @@ public class HeroEquipment extends HeroItem implements SerializableQAntType {
         IQAntObject result = QAntObject.newInstance();
         result.putLong("id", id);
         result.putUtfString("idx", index);
+        result.putUtfString("type", type);
         result.putInt("no", no);
         result.putInt("equipSlot", equipSlot);
         return result;

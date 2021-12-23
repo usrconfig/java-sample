@@ -13,6 +13,7 @@ public class HeroConsumeItem extends HeroItem {
         IQAntObject result = QAntObject.newInstance();
         result.putLong("id", id);
         result.putUtfString("idx", index);
+        result.putUtfString("type", type);
         result.putInt("no", no);
         result.putInt("level", level != 0 ? level : 1);
         return result;
