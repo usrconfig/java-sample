@@ -80,6 +80,10 @@ public abstract class HeroItem implements SerializableQAntType, NetworkConstant 
         return type != null && type.equals("currency");
     }
 
+    public boolean isBuildAssets() {
+        return type != null && !type.equals("equip");
+    }
+
     public void setItemBase(ItemBase itemBase) {
         if (itemBase == null) {
             QAntTracer.error(this.getClass(), "[ERROR] item not found: " + getIndex());
@@ -95,7 +99,7 @@ public abstract class HeroItem implements SerializableQAntType, NetworkConstant 
 
     @JsonIgnore
     public boolean canBeRemoved() {
-        return !isCurrencyItem() && no <= 0;
+        return !isBuildAssets() && no <= 0;
     }
 
 

@@ -70,8 +70,6 @@ public class Player implements Serializable {
     private String device;
     private @Transient
     boolean isOnline;
-    @Transient
-    private Map<String, Integer> assetMap;
     private String deviceToken;
     private String deviceType;
 
@@ -113,7 +111,6 @@ public class Player implements Serializable {
         maxVaultItemSlot = 0;
         this.id = id;
         name = fullName;
-        assetMap = new HashMap<>();
         vipLevel = 1;
         level = 1;
         maxHeroLevel = 1;
@@ -176,7 +173,6 @@ public class Player implements Serializable {
         result.putBool("named", named);
         result.putInt("trophy", trophy);
         result.putInt("rankRemain", rankRemain);
-        this.buildAssets(result);
         return result;
     }
 
@@ -187,7 +183,6 @@ public class Player implements Serializable {
         result.putInt("exp", exp);
         result.putInt("trophy", trophy);
         result.putInt("rankRemain", rankRemain);
-        this.buildAssets(result);
         return result;
     }
 
@@ -264,18 +259,18 @@ public class Player implements Serializable {
         return vipLevel > 0;
     }
 
-    private void buildAssets(IQAntObject result) {
-        if (this.assetMap != null) {
-            QAntArray array = QAntArray.newInstance();
-            this.assetMap.forEach((s, integer) -> {
-                QAntObject object = QAntObject.newInstance();
-                object.putUtfString("id", s);
-                object.putInt("value", integer);
-                array.addQAntObject(object);
-            });
-            result.putQAntArray("assets", array);
-        }
-    }
+//    private void buildAssets(IQAntObject result) {
+//        if (this.assetMap != null) {
+//            QAntArray array = QAntArray.newInstance();
+//            this.assetMap.forEach((s, integer) -> {
+//                QAntObject object = QAntObject.newInstance();
+//                object.putUtfString("id", s);
+//                object.putInt("value", integer);
+//                array.addQAntObject(object);
+//            });
+//            result.putQAntArray("assets", array);
+//        }
+//    }
 
     public void incTrophy(int rankPoint) {
         this.trophy += rankPoint;

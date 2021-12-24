@@ -234,7 +234,6 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                    buildHeroTestDefault();
 //                Math.floorDiv(122, 1000);
 //                testOpenEgg();
-
             }
         }, 3000, 100000000);
 
@@ -460,11 +459,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
         }
         updateGameHero(player);
         updateFunc(player, response);
-
-
-//        serviceHelper.sendTestMail(player);
-//        serviceHelper.sendTestInfoMail(player);
-//        questSystem.notifyObservers(TotalTask.init("os1#1001", "it1"));
+        heroItemManager.notifyAssetChange(user);
         return player;
     }
 
@@ -561,8 +556,8 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 
 //        List<HeroItem> addItems = heroItemManager.addItems(user, BEGINNER_ITEMS, false);
 
-        player.setAssetMap(addItems.stream().filter(HeroItem::isCurrencyItem)
-                .collect(Collectors.toMap(HeroItem::getIndex, HeroItem::getNo)));
+//        player.setAssetMap(addItems.stream().filter(HeroItem::isCurrencyItem)
+//                .collect(Collectors.toMap(HeroItem::getIndex, HeroItem::getNo)));
         QAntTracer.debug(this.
                 getClass(), "Create new hero: " + gameHeroId);
 
@@ -628,13 +623,12 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
     private Player getHeroAndCurrencyItem(QAntUser user) {
         String gameHeroId = user.getName();
         Player player = playerRepo.findPlayerById(gameHeroId);
-        if (player != null) {
-            List<HeroItem> currencyItemList = heroItemManager.getCurrencyItem(gameHeroId, player.getActiveHeroId());
-            QAntTracer.debug(PlayerManager.class, currencyItemList.toString());
-            player.setAssetMap(currencyItemList.stream()
-                    .collect(Collectors.toMap(HeroItem::getIndex, HeroItem::getNo)));
-        }
-
+//        if (player != null) {
+//            List<HeroItem> currencyItemList = heroItemManager.getConsumableItem(gameHeroId, player.getActiveHeroId());
+//            QAntTracer.debug(PlayerManager.class, currencyItemList.toString());
+//            player.setAssetMap(currencyItemList.stream()
+//                    .collect(Collectors.toMap(HeroItem::getIndex, HeroItem::getNo)));
+//        }
         return player;
     }
 

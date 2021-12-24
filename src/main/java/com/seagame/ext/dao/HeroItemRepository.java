@@ -18,7 +18,7 @@ import java.util.Set;
 @Repository
 public interface HeroItemRepository extends MongoRepository<HeroItem, Long> {
 
-    @Query("{playerId: ?0,  $and :[{type:{ $ne: 'currency'}}]}")
+    @Query("{playerId: ?0, type: 'equip' }")
     Page<HeroItem> getItemList(String playerId, long heroId, Pageable page);
 
 
@@ -45,17 +45,15 @@ public interface HeroItemRepository extends MongoRepository<HeroItem, Long> {
     HeroEquipment getEquipment(long itemId, String playerId);
 
 
-    @Query("{'playerId' : ?0, 'type' : ?2}")
-    List<HeroItem> getCurrencyItemList(String playerId, long activeHero, String code);
+    @Query("{'playerId' : ?0, 'type' :{ $ne: 'equip'}}}")
+    List<HeroItem> getConsumableItem(String playerId);
 
 
     @Query("{'playerId' : ?0, 'index' : {'$in' : ?2}}")
-    List<HeroItem> getConsumeAbleItemList(String playerId, long activeHero, Collection<String> indexes);
+    List<HeroItem> getItemList(String playerId, long activeHero, Collection<String> indexes);
 
 
     Collection<HeroItem> getAllByPlayerIdAndIndex(String playerId, String index);
-
-    Collection<HeroItem> getAllByPlayerIdAndHeroIdAndIndex(String playerId, long heroId, String index);
 
     Collection<HeroItem> getHeroItemsByPlayerIdAndIndex(String playerId, String index);
 

@@ -84,8 +84,8 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
         return itemPage;
     }
 
-    public List<HeroItem> getCurrencyItem(String gameHeroId, long activeHero) {
-        return heroItemRep.getCurrencyItemList(gameHeroId, activeHero, ITEM_CURRENCY);
+    public List<HeroItem> getConsumableItem(String gameHeroId) {
+        return heroItemRep.getConsumableItem(gameHeroId);
     }
 
 
@@ -168,7 +168,7 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
     }
 
     public Collection<HeroItem> useItemWithIndex(String playerId, Map<String, Integer> itemMap) throws UseItemException {
-        List<HeroItem> consumeAbleItems = getConsumableItemsByIndex(playerId, itemMap.keySet());
+        List<HeroItem> consumeAbleItems = getByIndexes(playerId, itemMap.keySet());
         if (consumeAbleItems.size() != itemMap.size())
             throw UseItemException.lackOfItem();
 
@@ -179,30 +179,14 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
         return consumeAbleItems;
     }
 
-    private Collection<HeroItem> useBattleItemWithIndex(QAntUser user, Map<String, Integer> itemMap, QAntObject object) {
-        List<HeroItem> consumeAbleItems = getConsumableItemsByIndex(user.getName(), itemMap.keySet());
-        QAntArray qAntArray = new QAntArray();
-        consumeAbleItems
-                .forEach(item -> {
-                    int value = Math.min(itemMap.get(item.getIndex()), item.getNo());
-                    item.decr(value);
-                    QAntObject qAntObject = new QAntObject();
-                    qAntObject.putUtfString("id", item.getIndex());
-                    qAntObject.putInt("count", value);
-                    qAntArray.addQAntObject(qAntObject);
-                });
-        object.putQAntArray("items", qAntArray);
-        return consumeAbleItems;
-    }
-
 
     private List<HeroItem> getConsumableItems(String gameHeroId, Set<Long> indexes) {
         return heroItemRep.getItemByItemId(gameHeroId, indexes);
     }
 
-    public List<HeroItem> getConsumableItemsByIndex(String gameHeroId, Set<String> indexes) {
+    public List<HeroItem> getByIndexes(String gameHeroId, Set<String> indexes) {
         Player player = playerManager.getPlayer(gameHeroId);
-        return heroItemRep.getConsumeAbleItemList(gameHeroId, player.getActiveHeroId(), indexes);
+        return heroItemRep.getItemList(gameHeroId, player.getActiveHeroId(), indexes);
     }
 
 
@@ -301,7 +285,7 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
         if (items.size() == 0) {
             return null;
         }
-        List<HeroItem> assetList = items.stream().filter(HeroItem::isCurrencyItem).collect(Collectors.toList());
+        List<HeroItem> assetList = items.stream().filter(HeroItem::isBuildAssets).collect(Collectors.toList());
         if (assetList.size() > 0) {
             IQAntObject result = QAntObject.newInstance();
             QAntArray array = QAntArray.newInstance();
@@ -317,23 +301,10 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
         return assetList;
     }
 
-    public void notifyAssetChange(QAntUser user, long heroId) {
-        List<HeroItem> currencyItemList = getCurrencyItem(user.getName(), heroId);
-        QAntTracer.debug(PlayerManager.class, currencyItemList.toString());
-        Map<String, Integer> assetList = currencyItemList.stream()
-                .collect(Collectors.toMap(HeroItem::getIndex, HeroItem::getNo));
-        if (assetList.size() > 0) {
-            IQAntObject result = QAntObject.newInstance();
-            QAntArray array = QAntArray.newInstance();
-            assetList.forEach((s, integer) -> {
-                QAntObject object = QAntObject.newInstance();
-                object.putUtfString("id", s);
-                object.putInt("value", integer);
-                array.addQAntObject(object);
-            });
-            result.putQAntArray("assets", array);
-            send(CMD_NTF_ASSETS_CHANGE, result, user);
-        }
+    public void notifyAssetChange(QAntUser user) {
+        List<HeroItem> consumableItems = getConsumableItem(user.getName());
+        QAntTracer.debug(PlayerManager.class, consumableItems.toString());
+        notifyAssetChange(user,consumableItems);
     }
 
 

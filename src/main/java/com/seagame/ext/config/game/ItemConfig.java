@@ -371,7 +371,7 @@ public class ItemConfig implements NetworkConstant {
 
             HeroItemManager heroItemManager = ExtApplication.getBean(HeroItemManager.class);
             heroItemManager.update(useItems);
-            List<HeroItem> assetList = useItems.stream().filter(HeroItem::isCurrencyItem).collect(Collectors.toList());
+            List<HeroItem> assetList = useItems.stream().filter(HeroItem::isBuildAssets).collect(Collectors.toList());
             if (assetList.size() > 0) {
                 useItems.removeAll(assetList);
                 IQAntArray assets = QAntArray.newInstance();
@@ -394,7 +394,7 @@ public class ItemConfig implements NetworkConstant {
 
     public void buildUpdateRewardsReceipt(IQAntObject params, Collection<HeroItem> items) {
         if (items != null) {
-            buildItemsReceipt(params, items.stream().filter(heroItem -> !heroItem.isCurrencyItem()).collect(Collectors.toList()), "updates");
+            buildItemsReceipt(params, items.stream().filter(heroItem -> !heroItem.isBuildAssets()).collect(Collectors.toList()), "updates");
         }
     }
 
