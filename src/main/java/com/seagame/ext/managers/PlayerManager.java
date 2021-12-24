@@ -459,7 +459,6 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
         }
         updateGameHero(player);
         updateFunc(player, response);
-        heroItemManager.notifyAssetChange(user);
         return player;
     }
 

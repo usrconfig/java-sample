@@ -9,6 +9,7 @@ import com.creants.creants_2x.socket.gate.entities.QAntObject;
 import com.creants.creants_2x.socket.gate.wood.QAntUser;
 import com.seagame.ext.ExtApplication;
 import com.seagame.ext.entities.Player;
+import com.seagame.ext.managers.HeroItemManager;
 import com.seagame.ext.managers.PlayerManager;
 
 import java.util.ArrayList;
@@ -21,10 +22,12 @@ import java.util.Collection;
 public class JoinZoneEventHandler extends BaseServerEventHandler {
 
     private PlayerManager playerManager;
+    private HeroItemManager heroItemManager;
 
 
     public JoinZoneEventHandler() {
         playerManager = ExtApplication.getBean(PlayerManager.class);
+        heroItemManager = ExtApplication.getBean(HeroItemManager.class);
     }
 
 
@@ -38,5 +41,6 @@ public class JoinZoneEventHandler extends BaseServerEventHandler {
         IQAntObject params = player.buildLoginInfo();
         params.putQAntObject("stats", response);
         send("cmd_join_game", params, user);
+        heroItemManager.notifyAssetChange(user);
     }
 }
