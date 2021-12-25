@@ -14,6 +14,7 @@ import lombok.Setter;
 @Setter
 public class HeroEquipment extends HeroItem implements SerializableQAntType {
     int reliability;
+    long equipFor;
 
     public HeroEquipment() {
         super();
@@ -45,7 +46,8 @@ public class HeroEquipment extends HeroItem implements SerializableQAntType {
         result.putBool("equip", true);
         result.putInt("level", level != 0 ? level : 1);
         result.putInt("rank", rank != 0 ? rank : 1);
-        result.putInt("equipSlot", equipSlot);
+        if (equipFor > 0)
+            result.putLong("equipFor", equipFor);
         result.putInt("cofferState", cofferState);
         result.putUtfString("nftToken", getNftToken());
         return result;
@@ -57,7 +59,8 @@ public class HeroEquipment extends HeroItem implements SerializableQAntType {
         result.putUtfString("idx", index);
         result.putBool("equip", true);
         result.putInt("no", no);
-        result.putInt("equipSlot", equipSlot);
+        if (equipFor > 0)
+            result.putLong("equipFor", equipFor);
         return result;
     }
 

@@ -8,11 +8,13 @@ import com.creants.creants_2x.socket.gate.wood.QAntUser;
 import com.seagame.ext.ExtApplication;
 import com.seagame.ext.config.game.ItemConfig;
 import com.seagame.ext.entities.Player;
+import com.seagame.ext.entities.hero.HeroClass;
 import com.seagame.ext.entities.item.HeroEquipment;
 import com.seagame.ext.entities.item.HeroItem;
 import com.seagame.ext.entities.item.ItemBase;
 import com.seagame.ext.exception.GameErrorCode;
 import com.seagame.ext.exception.UseItemException;
+import com.seagame.ext.managers.HeroClassManager;
 import com.seagame.ext.managers.HeroItemManager;
 import com.seagame.ext.managers.PlayerManager;
 import org.springframework.data.domain.Page;
@@ -41,10 +43,12 @@ public class ItemRequestHandler extends ZClientRequestHandler {
 
     private HeroItemManager heroItemManager;
     private PlayerManager playerManager;
+    private HeroClassManager heroClassManager;
 
     public ItemRequestHandler() {
         heroItemManager = ExtApplication.getBean(HeroItemManager.class);
         playerManager = ExtApplication.getBean(PlayerManager.class);
+        heroClassManager = ExtApplication.getBean(HeroClassManager.class);
     }
 
 
@@ -63,7 +67,7 @@ public class ItemRequestHandler extends ZClientRequestHandler {
                 levelUp(user, params);
                 break;
             case EQUIP_UNEQUIP:
-                equipUnEqupItem(user, params);
+                equipUnEquipItem(user, params);
                 break;
             case USE_ITEM:
                 useItem(user, params);
@@ -164,19 +168,37 @@ public class ItemRequestHandler extends ZClientRequestHandler {
         send(params, user);
     }
 
-    private void equipUnEqupItem(QAntUser user, IQAntObject params) {
-        long id = params.getLong("id");
-        if (id <= 0) {
+    private void equipUnEquipItem(QAntUser user, IQAntObject params) {
+        Collection<Long> ids = params.getLongArray("ids");
+        boolean isTakeOn = params.getBool("takeon");
+        long heroId = params.getLong("heroId");
+        if (ids.size() <= 0) {
             responseError(user, GameErrorCode.LACK_OF_INFOMATION);
             return;
         }
-        HeroEquipment heroItem = heroItemManager.getEquipment(id, user.getName());
-        if (heroItem == null) {
+        Collection<HeroItem> heroItems = heroItemManager.getItemsByIds(user.getName(), ids);
+        if (heroItems.size() <= 0) {
             responseError(user, GameErrorCode.LACK_OF_INFOMATION);
             return;
         }
-        heroItem.setEquipSlot(1);
-        params.putQAntObject("item", heroItem.buildInfo());
+        HeroClass heroClass = heroClassManager.getHeroWithId(user.getName(), heroId);
+        if (heroClass == null) {
+            responseError(user, GameErrorCode.LACK_OF_INFOMATION);
+            return;
+        }
+        QAntArray qAntArray = new QAntArray();
+        if (isTakeOn) {
+            heroItems.forEach(heroItem -> {
+                if (heroItem instanceof HeroEquipment) ((HeroEquipment) heroItem).setEquipFor(heroId);
+                qAntArray.addQAntObject(heroItem.buildInfo());
+            });
+        } else {
+            heroItems.forEach(heroItem -> {
+                if (heroItem instanceof HeroEquipment) ((HeroEquipment) heroItem).setEquipFor(-1);
+                qAntArray.addQAntObject(heroItem.buildInfo());
+            });
+        }
+        params.putQAntArray("items", qAntArray);
         send(params, user);
     }
 
