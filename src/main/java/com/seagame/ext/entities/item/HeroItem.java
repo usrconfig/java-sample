@@ -37,6 +37,7 @@ public abstract class HeroItem implements SerializableQAntType, NetworkConstant 
     public int no;
     int equipSlot;
     boolean lock;
+    long equipFor;
 
     private String nftToken = "tokenNFT";
 

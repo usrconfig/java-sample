@@ -35,8 +35,8 @@ public interface HeroItemRepository extends MongoRepository<HeroItem, Long> {
     @Query("{'playerId' : ?0, 'id' : {'$in' : ?1}}")
     List<HeroItem> getItemByItemId(String playerId, Collection<Long> itemIds);
 
-    @Query("{'playerId' : ?0,'heroId' : ?1, 'equipSlot' :{ $ne: 0}}")
-    List<HeroItem> getEquipmentSlots(String playerId, long heroId);
+    @Query("{'playerId' : ?0, 'equipFor' :?1}")
+    List<HeroItem> getEquipmentFor(String playerId, long heroId);
 
     List<HeroItem> getAllByPlayerIdAndIndexIsIn(String playerId, Collection<String> itemIds);
 

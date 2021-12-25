@@ -14,7 +14,6 @@ import lombok.Setter;
 @Setter
 public class HeroEquipment extends HeroItem implements SerializableQAntType {
     int reliability;
-    long equipFor;
 
     public HeroEquipment() {
         super();

@@ -109,7 +109,7 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
 
 
     public List<HeroItem> getTakeOnEquipments(String player, long heroId) {
-        List<HeroItem> items = heroItemRep.getEquipmentSlots(player, heroId);
+        List<HeroItem> items = heroItemRep.getEquipmentFor(player, heroId);
         QAntTracer.debug(HeroItemManager.class, player);
         QAntTracer.debug(HeroItemManager.class, items.toString());
         items.forEach(heroItem -> heroItem.setItemBase(itemConfig.getItem(heroItem.getIndex())));
@@ -449,6 +449,9 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
     public Collection<HeroItem> getItemsById(String gameHeroId, String index) {
         return heroItemRep.getHeroItemsByPlayerIdAndIndex(gameHeroId, index);
     }
+    public Collection<HeroItem> getItemsByEquipFor(String gameHeroId, String index) {
+        return heroItemRep.getAllByPlayerIdAndIndex(gameHeroId, index);
+    }
 
     public Collection<HeroItem> getItemsByIndexs(String gameHeroId, Collection<String> idsOn) {
         return heroItemRep.getAllByPlayerIdAndIndexIsIn(gameHeroId, idsOn);
@@ -490,39 +493,6 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
 //        }
     }
 
-
-    public Collection<HeroItem> takeOnOff(String gameHeroId, Collection<Long> itemIdsOn, Collection<Long> itemIdsOff) {
-        if ((CollectionUtils.isEmpty(itemIdsOn) && CollectionUtils.isEmpty(itemIdsOff))) {
-            return null;
-        }
-        Collection<HeroItem> items = processTake(gameHeroId, itemIdsOn, itemIdsOff);
-        if (items == null) {
-            return null;
-        }
-        this.save(items);
-        return items;
-    }
-
-    private Collection<HeroItem> processTake(String gameHeroId, Collection<Long> idsOn, Collection<Long> idsOff) {
-        Collection<HeroItem> items = new ArrayList<>();
-        Player player = playerManager.getPlayer(gameHeroId);
-        if (CollectionUtils.isNotEmpty(idsOn)) {
-            Collection<HeroItem> itemsOn = this.getItemsByIds(gameHeroId, idsOn);
-            if (itemsOn.size() != idsOn.size()) {
-                return null;
-            }
-            items.addAll(itemsOn.stream().filter(heroItem -> heroItem instanceof HeroEquipment).filter(heroItem -> heroItem.getHeroId() == player.getActiveHeroId()).peek(heroItem -> ((HeroEquipment) heroItem).takeOn(1)).collect(Collectors.toList()));
-
-        }
-        if (CollectionUtils.isNotEmpty(idsOff)) {
-            Collection<HeroItem> itemsOff = this.getItemsByIds(gameHeroId, idsOff);
-            if (itemsOff.size() != idsOff.size()) {
-                return null;
-            }
-            items.addAll(itemsOff.stream().filter(heroItem -> heroItem instanceof HeroEquipment).filter(heroItem -> heroItem.getHeroId() == player.getActiveHeroId()).peek(heroItem -> ((HeroEquipment) heroItem).takeOff()).collect(Collectors.toList()));
-        }
-        return items;
-    }
 
     public void useArenaTicket(QAntUser user, int i) throws GameException {
 
