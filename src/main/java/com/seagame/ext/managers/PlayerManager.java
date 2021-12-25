@@ -234,6 +234,8 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                    buildHeroTestDefault();
 //                Math.floorDiv(122, 1000);
 //                testOpenEgg();
+
+//                heroItemManager.getTakeOnEquipments("nf1#1001", 1001);
             }
         }, 3000, 100000000);
 
