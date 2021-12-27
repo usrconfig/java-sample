@@ -236,6 +236,8 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                testOpenEgg();
 
 //                heroItemManager.getTakeOnEquipments("nf1#1001", 1001);
+
+//                testEquip();
             }
         }, 3000, 100000000);
 
@@ -255,6 +257,32 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                LongStream.range(900, 999).forEach(value -> createBot(value));
 //            }
 //        }, 3000);
+    }
+
+    private void testEquip() {
+        String playerId = "nf1#1001";
+        Collection<Long> ids = new ArrayList<>();
+        ids.add((long) 14);
+        ids.add((long) 15);
+        ids.add((long) 16);
+        ids.add((long) 17);
+        long heroId = 1001;
+        Collection<HeroItem> takeOff = heroItemManager.getTakeOnEquipments(playerId, heroId);
+        HeroClass heroClass = heroClassManager.getHeroWithId(playerId, heroId);
+        if (heroClass == null) {
+            return;
+        }
+        QAntArray qAntArray = new QAntArray();
+        takeOff.stream().filter(heroItem -> !ids.contains(heroItem.getId())).forEach(heroItem -> {
+            if (heroItem instanceof HeroEquipment) heroItem.setEquipFor(-1);
+            qAntArray.addQAntObject(heroItem.buildInfo());
+        });
+
+        Collection<HeroItem> heroItems = heroItemManager.getItemsByIds(playerId, ids);
+        heroItems.forEach(heroItem -> {
+            if (heroItem instanceof HeroEquipment) heroItem.setEquipFor(heroId);
+            qAntArray.addQAntObject(heroItem.buildInfo());
+        });
     }
 
     private void testOpenEgg() {

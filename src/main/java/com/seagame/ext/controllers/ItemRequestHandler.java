@@ -37,7 +37,6 @@ public class ItemRequestHandler extends ZClientRequestHandler {
     private static final int LEVEL_UP = 3;
     private static final int EQUIP_UNEQUIP = 4;
     private static final int OPEN_EGG = 5;
-    private static final int TAKE_OFF_ALL = 6;
     public static final String EGG_PIECE = "9910";
     public static final int EGG_PIECE_TO_EGE = 1000;
     public static final String EGG = "9911";
@@ -69,9 +68,6 @@ public class ItemRequestHandler extends ZClientRequestHandler {
                 break;
             case EQUIP_UNEQUIP:
                 equipUnEquipItem(user, params);
-                break;
-            case TAKE_OFF_ALL:
-                takeOffAll(user, params);
                 break;
             case USE_ITEM:
                 useItem(user, params);
@@ -174,53 +170,22 @@ public class ItemRequestHandler extends ZClientRequestHandler {
 
     private void equipUnEquipItem(QAntUser user, IQAntObject params) {
         Collection<Long> ids = params.getLongArray("ids");
-        boolean isTakeOn = params.getBool("takeon");
         long heroId = params.getLong("heroId");
-        if (ids.size() <= 0) {
-            responseError(user, GameErrorCode.LACK_OF_INFOMATION);
-            return;
-        }
-        Collection<HeroItem> heroItems = heroItemManager.getItemsByIds(user.getName(), ids);
-        if (heroItems.size() <= 0) {
-            responseError(user, GameErrorCode.LACK_OF_INFOMATION);
-            return;
-        }
+        Collection<HeroItem> takeOff = heroItemManager.getTakeOnEquipments(user.getName(), heroId);
         HeroClass heroClass = heroClassManager.getHeroWithId(user.getName(), heroId);
         if (heroClass == null) {
             responseError(user, GameErrorCode.LACK_OF_INFOMATION);
             return;
         }
         QAntArray qAntArray = new QAntArray();
-        if (isTakeOn) {
-            heroItems.forEach(heroItem -> {
-                if (heroItem instanceof HeroEquipment) heroItem.setEquipFor(heroId);
-                qAntArray.addQAntObject(heroItem.buildInfo());
-            });
-        } else {
-            heroItems.forEach(heroItem -> {
-                if (heroItem instanceof HeroEquipment) heroItem.setEquipFor(-1);
-                qAntArray.addQAntObject(heroItem.buildInfo());
-            });
-        }
-        params.putQAntArray("items", qAntArray);
-        send(params, user);
-    }
-
-    private void takeOffAll(QAntUser user, IQAntObject params) {
-        long heroId = params.getLong("heroId");
-        Collection<HeroItem> heroItems = heroItemManager.getTakeOnEquipments(user.getName(), heroId);
-        if (heroItems.size() <= 0) {
-            responseError(user, GameErrorCode.LACK_OF_INFOMATION);
-            return;
-        }
-        HeroClass heroClass = heroClassManager.getHeroWithId(user.getName(), heroId);
-        if (heroClass == null) {
-            responseError(user, GameErrorCode.LACK_OF_INFOMATION);
-            return;
-        }
-        QAntArray qAntArray = new QAntArray();
-        heroItems.forEach(heroItem -> {
+        takeOff.stream().filter(heroItem -> !ids.contains(heroItem.getId())).forEach(heroItem -> {
             if (heroItem instanceof HeroEquipment) heroItem.setEquipFor(-1);
+            qAntArray.addQAntObject(heroItem.buildInfo());
+        });
+
+        Collection<HeroItem> heroItems = heroItemManager.getItemsByIds(user.getName(), ids);
+        heroItems.forEach(heroItem -> {
+            if (heroItem instanceof HeroEquipment) heroItem.setEquipFor(heroId);
             qAntArray.addQAntObject(heroItem.buildInfo());
         });
         params.putQAntArray("items", qAntArray);
