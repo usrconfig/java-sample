@@ -114,7 +114,7 @@ public class HeroClassManager implements InitializingBean, NetworkConstant {
                 .collect(Collectors.toList());
     }
 
-    private void setHeroBaseAndEquipment(HeroClass heroClass) {
+    public void setHeroBaseAndEquipment(HeroClass heroClass) {
         heroClass.setEquipments(itemManager.getTakeOnEquipments(heroClass.getPlayerId(), heroClass.getId()));
     }
 

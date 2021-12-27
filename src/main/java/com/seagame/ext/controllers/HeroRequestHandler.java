@@ -220,7 +220,10 @@ public class HeroRequestHandler extends ZClientRequestHandler {
         Page<HeroClass> heroPage = heroClassManager.getHeroPage(user.getName(), page);
         params.putInt(KEYI_MAX_PAGE, heroPage.getTotalPages());
         IQAntArray arr = QAntArray.newInstance();
-        heroPage.getContent().forEach(item -> arr.addQAntObject(item.buildInfo()));
+        heroPage.getContent().forEach(item -> {
+            heroClassManager.setHeroBaseAndEquipment(item);
+            arr.addQAntObject(item.buildInfo());
+        });
         params.putQAntArray(KEYQA_HEROES, arr);
         send(params, user);
     }
