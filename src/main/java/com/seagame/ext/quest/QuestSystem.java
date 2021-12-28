@@ -56,12 +56,8 @@ public class QuestSystem extends AbstractExtensionManager implements Initializin
     public void afterPropertiesSet() {
         observers = new ArrayList<>();
         new CollectionTask(this);
-        new TalkingTask(this);
         new KillTask(this);
         new CollectGiveTask(this);
-        new GiveTask(this);
-        new JoinTask(this);
-        new JoinWinTask(this);
     }
 
 
@@ -225,13 +221,14 @@ public class QuestSystem extends AbstractExtensionManager implements Initializin
     public boolean checkForAvaiable(String userID, HeroQuest heroQuest, QuestProgress questProgress) {
         Player player = playerManager.getPlayer(userID);
         QuestBase questBase = QuestConfig.getInstance().getQuest(questProgress.getIndex());
-        String reqClearQuestID = questBase.getReqClearQuestID();
-        if (reqClearQuestID != null) {
-            QuestProgress reqQuest = heroQuest.getQuestByIndex(reqClearQuestID);
-            if (reqQuest != null && !reqQuest.isFinish()) {
-                return false;
-            }
-        }
-        return player.getLevel() >= questBase.getCharLevel();
+//        String reqClearQuestID = questBase.getReqClearQuestID();
+//        if (reqClearQuestID != null) {
+//            QuestProgress reqQuest = heroQuest.getQuestByIndex(reqClearQuestID);
+//            if (reqQuest != null && !reqQuest.isFinish()) {
+//                return false;
+//            }
+//        }
+//        return player.getLevel() >= questBase.getCharLevel();
+        return true;
     }
 }

@@ -14,53 +14,30 @@ import lombok.ToString;
 @JsonInclude(Include.NON_NULL)
 @Getter
 @ToString
-@JsonIgnoreProperties(value = { "start","startDialog" })
+@JsonIgnoreProperties(value = {""})
 public class QuestBase implements NetworkConstant {
-    @JacksonXmlProperty(localName = "QuestID", isAttribute = true)
-    private String id;
-    @JacksonXmlProperty(localName = "Name", isAttribute = true)
-    private String name;
-    @JacksonXmlProperty(localName = "Description", isAttribute = true)
-    private String desc;
-    @JacksonXmlProperty(localName = "ReqClearQuestID", isAttribute = true)
-    private String reqClearQuestID;
-    @JacksonXmlProperty(localName = "ReqCharLevel", isAttribute = true)
-    private int charLevel;
-    @JacksonXmlProperty(localName = "QuestHolder", isAttribute = true)
-    private String questHolder;
-    @JacksonXmlProperty(localName = "AutoStart", isAttribute = true)
-    private String start;
-    @JacksonXmlProperty(localName = "TaskType", isAttribute = true)
-    private int taskType;
-    @JacksonXmlProperty(localName = "TaskRequire", isAttribute = true)
-    private String taskRequire;
-    @JacksonXmlProperty(localName = "TaskDescription", isAttribute = true)
-    private String taskDescription;
-    @JacksonXmlProperty(localName = "ReportToNpc", isAttribute = true)
-    private String reportToNpc;
-    @JacksonXmlProperty(localName = "AcceptMsg", isAttribute = true)
-    private String acceptMsg;
-    @JacksonXmlProperty(localName = "DenyMsg", isAttribute = true)
-    private String denyMsg;
-    @JacksonXmlProperty(localName = "ReportMsg", isAttribute = true)
-    private String reportMsg;
-    @JacksonXmlProperty(localName = "Rewards", isAttribute = true)
-    private String rewards;
-    @JacksonXmlProperty(localName = "DropList", isAttribute = true)
-    private String dropList;
-    @JacksonXmlProperty(localName = "EXPReward", isAttribute = true)
-    private int expReward;
-    @JacksonXmlProperty(localName = "HonorPoint", isAttribute = true)
-    private int honorPoint;
+    @JacksonXmlProperty(localName = "Index", isAttribute = true)
+    private String Index;
     @JacksonXmlProperty(localName = "Group", isAttribute = true)
-    private String group;
-    @JacksonXmlProperty(localName = "AutoStartDialog", isAttribute = true)
-    private String startDialog;
+    private String Group;
+    @JacksonXmlProperty(localName = "TaskType", isAttribute = true)
+    private int TaskType;
+    @JacksonXmlProperty(localName = "Name", isAttribute = true)
+    private String Name;
+    @JacksonXmlProperty(localName = "Description", isAttribute = true)
+    private String Description;
+    @JacksonXmlProperty(localName = "Task", isAttribute = true)
+    private String Task;
+    @JacksonXmlProperty(localName = "TargetCount", isAttribute = true)
+    private int TargetCount;
+    @JacksonXmlProperty(localName = "Win", isAttribute = true)
+    private int Win;
+    @JacksonXmlProperty(localName = "ItemReward", isAttribute = true)
+    private String ItemReward;
+    @JacksonXmlProperty(localName = "Goto", isAttribute = true)
+    private String Goto;
 
-    public boolean isAutoStart(){
-        return start.equalsIgnoreCase("TRUE");
-    }
-    public boolean isAutoStartDialog(){
-        return startDialog.equalsIgnoreCase("TRUE");
+    public boolean isAutoStart() {
+        return true;
     }
 }

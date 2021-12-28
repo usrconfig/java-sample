@@ -1,6 +1,8 @@
 package com.seagame.ext.quest;
 
+import com.seagame.ext.config.game.QuestConfig;
 import com.seagame.ext.entities.quest.HeroQuest;
+import com.seagame.ext.entities.quest.QuestBase;
 import com.seagame.ext.quest.entities.QuestData;
 import com.seagame.ext.quest.entities.QuestProgress;
 import com.seagame.ext.quest.entities.TaskProgress;
@@ -17,13 +19,9 @@ public abstract class QuestObserver {
     static final String KEYI_VALUE = "value";
     static final String KEYI_TIMES = "times";
 
-    public static final int TYPE_KILL = 0;
-    public static final int TYPE_COLLECT = 1;
-    public static final int TYPE_COLLECT_GIVE = 2;
-    public static final int TYPE_GIVE = 3;
-    public static final int TYPE_TALK = 5;
-    public static final int TYPE_JOIN = 6;
-    public static final int TYPE_JOIN_WIN = 7;
+    public static final int TYPE_KILL = 1;
+    public static final int TYPE_COLLECT = 2;
+    public static final int TYPE_COLLECT_GIVE = 4;
 
     QuestSystem questSystem;
 
@@ -57,7 +55,7 @@ public abstract class QuestObserver {
      * Xử lý mở quest mới
      */
     private void processNewQuest(HeroQuest heroQuest, QuestProgress completeQuest) {
-//        QuestBase quest = QuestConfig.getInstance().getQuest(completeQuest.getIndex());
+        QuestBase quest = QuestConfig.getInstance().getQuest(completeQuest.getIndex());
 //        String next = quest.getUnlockQuest();
 //        heroQuest.getQuestByIndex(completeQuest.getIndex()).canClaimNow();
 //        Arrays.stream(next.split("#")).forEach(s -> heroQuest.buildQuest(QuestConfig.getInstance().getQuest(s)));

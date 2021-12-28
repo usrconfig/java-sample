@@ -1,0 +1,436 @@
+{
+  "dailyChallenges": [
+    {
+      "monsterWave": [
+        [
+          "1510",
+          "1511",
+          "1510"
+        ],
+        [
+          "1511",
+          "1511",
+          "1511"
+        ],
+        [
+          "1513"
+        ]
+      ],
+      "index": "1",
+      "groupIndex": "1",
+      "eventName": "Wizard Challenge",
+      "groupImage": "daily_event0.png",
+      "stageName": "Wizard Challenge",
+      "duration": "17-19",
+      "stageIndex": "3000",
+      "monsterIndex": "1510,1511,1510#1511,1511,1511#1513",
+      "reward": "9910/1#9901/1",
+      "chance": 1,
+      "battleBG": "loren1,loren2"
+    },
+    {
+      "monsterWave": [
+        [
+          "1510",
+          "1511",
+          "1510"
+        ],
+        [
+          "1511",
+          "1511",
+          "1511"
+        ],
+        [
+          "1514"
+        ]
+      ],
+      "index": "2",
+      "groupIndex": "1",
+      "eventName": "Wizard Challenge",
+      "groupImage": "daily_event0.png",
+      "stageName": "Wizard Challenge",
+      "duration": "17-19",
+      "stageIndex": "3001",
+      "monsterIndex": "1510,1511,1510#1511,1511,1511#1514",
+      "reward": "9910/1#9901/2",
+      "chance": 1,
+      "battleBG": "loren1,loren2"
+    },
+    {
+      "monsterWave": [
+        [
+          "1510",
+          "1511",
+          "1510"
+        ],
+        [
+          "1511",
+          "1511",
+          "1511"
+        ],
+        [
+          "1515"
+        ]
+      ],
+      "index": "3",
+      "groupIndex": "1",
+      "eventName": "Wizard Challenge",
+      "groupImage": "daily_event0.png",
+      "stageName": "Wizard Challenge",
+      "duration": "17-19",
+      "stageIndex": "3002",
+      "monsterIndex": "1510,1511,1510#1511,1511,1511#1515",
+      "reward": "9910/1#9901/3",
+      "chance": 1,
+      "battleBG": "loren1,loren2"
+    },
+    {
+      "monsterWave": [
+        [
+          "1510",
+          "1511",
+          "1510"
+        ],
+        [
+          "1511",
+          "1511",
+          "1511"
+        ],
+        [
+          "1516"
+        ]
+      ],
+      "index": "4",
+      "groupIndex": "1",
+      "eventName": "Wizard Challenge",
+      "groupImage": "daily_event0.png",
+      "stageName": "Wizard Challenge",
+      "duration": "17-19",
+      "stageIndex": "3003",
+      "monsterIndex": "1510,1511,1510#1511,1511,1511#1516",
+      "reward": "9910/1#9901/4",
+      "chance": 1,
+      "battleBG": "loren1,loren2"
+    },
+    {
+      "monsterWave": [
+        [
+          "1510",
+          "1511",
+          "1510"
+        ],
+        [
+          "1511",
+          "1511",
+          "1511"
+        ],
+        [
+          "1517"
+        ]
+      ],
+      "index": "5",
+      "groupIndex": "1",
+      "eventName": "Wizard Challenge",
+      "groupImage": "daily_event0.png",
+      "stageName": "Wizard Challenge",
+      "duration": "17-19",
+      "stageIndex": "3004",
+      "monsterIndex": "1510,1511,1510#1511,1511,1511#1517",
+      "reward": "9910/1#9901/5",
+      "chance": 1,
+      "battleBG": "loren1,loren2"
+    },
+    {
+      "monsterWave": [
+        [
+          "1520",
+          "1520",
+          "1520"
+        ],
+        [
+          "1520",
+          "1520",
+          "1520",
+          "1520",
+          "1520"
+        ],
+        [
+          "1521"
+        ]
+      ],
+      "index": "6",
+      "groupIndex": "0",
+      "eventName": "Dragon Challenge",
+      "groupImage": "daily_event1.png",
+      "stageName": "Dragon Challenge",
+      "duration": "44544",
+      "stageIndex": "3005",
+      "monsterIndex": "1520,1520,1520#1520,1520,1520,1520,1520#1521",
+      "reward": "9910/1#9909/1",
+      "chance": 1,
+      "battleBG": "devias1,devias2,noria1,noria2,loren1,loren2"
+    },
+    {
+      "monsterWave": [
+        [
+          "1520",
+          "1520",
+          "1520"
+        ],
+        [
+          "1520",
+          "1520",
+          "1520",
+          "1520",
+          "1520"
+        ],
+        [
+          "1522"
+        ]
+      ],
+      "index": "7",
+      "groupIndex": "0",
+      "eventName": "Dragon Challenge",
+      "groupImage": "daily_event1.png",
+      "stageName": "Dragon Challenge",
+      "duration": "44544",
+      "stageIndex": "3006",
+      "monsterIndex": "1520,1520,1520#1520,1520,1520,1520,1520#1522",
+      "reward": "9910/1#9909/1",
+      "chance": 1,
+      "battleBG": "devias1,devias2,noria1,noria2,loren1,loren2"
+    },
+    {
+      "monsterWave": [
+        [
+          "1520",
+          "1520",
+          "1520"
+        ],
+        [
+          "1520",
+          "1520",
+          "1520",
+          "1520",
+          "1520"
+        ],
+        [
+          "1523"
+        ]
+      ],
+      "index": "8",
+      "groupIndex": "0",
+      "eventName": "Dragon Challenge",
+      "groupImage": "daily_event1.png",
+      "stageName": "Dragon Challenge",
+      "duration": "44544",
+      "stageIndex": "3007",
+      "monsterIndex": "1520,1520,1520#1520,1520,1520,1520,1520#1523",
+      "reward": "9910/1#9909/2",
+      "chance": 1,
+      "battleBG": "devias1,devias2,noria1,noria2,loren1,loren2"
+    },
+    {
+      "monsterWave": [
+        [
+          "1520",
+          "1520",
+          "1520"
+        ],
+        [
+          "1520",
+          "1520",
+          "1520",
+          "1520",
+          "1520"
+        ],
+        [
+          "1524"
+        ]
+      ],
+      "index": "9",
+      "groupIndex": "0",
+      "eventName": "Dragon Challenge",
+      "groupImage": "daily_event1.png",
+      "stageName": "Dragon Challenge",
+      "duration": "44544",
+      "stageIndex": "3008",
+      "monsterIndex": "1520,1520,1520#1520,1520,1520,1520,1520#1524",
+      "reward": "9910/1#9909/2",
+      "chance": 1,
+      "battleBG": "devias1,devias2,noria1,noria2,loren1,loren2"
+    },
+    {
+      "monsterWave": [
+        [
+          "1520",
+          "1520",
+          "1520"
+        ],
+        [
+          "1520",
+          "1520",
+          "1520",
+          "1520",
+          "1520"
+        ],
+        [
+          "1525"
+        ]
+      ],
+      "index": "10",
+      "groupIndex": "0",
+      "eventName": "Dragon Challenge",
+      "groupImage": "daily_event1.png",
+      "stageName": "Dragon Challenge",
+      "duration": "44544",
+      "stageIndex": "3009",
+      "monsterIndex": "1520,1520,1520#1520,1520,1520,1520,1520#1525",
+      "reward": "9910/1#9909/3",
+      "chance": 1,
+      "battleBG": "devias1,devias2,noria1,noria2,loren1,loren2"
+    },
+    {
+      "monsterWave": [
+        [
+          "1500",
+          "1501",
+          "1502"
+        ],
+        [
+          "1501",
+          "1503",
+          "1502"
+        ],
+        [
+          "1504"
+        ]
+      ],
+      "index": "11",
+      "groupIndex": "2",
+      "eventName": "Bunny Challenge",
+      "groupImage": "daily_event2.png",
+      "stageName": "Bunny Challenge",
+      "duration": "20-22",
+      "stageIndex": "3010",
+      "monsterIndex": "1500,1501,1502#1501,1503,1502#1504",
+      "reward": "9910/1#9900/10000",
+      "chance": 1,
+      "battleBG": "noria1,noria2"
+    },
+    {
+      "monsterWave": [
+        [
+          "1500",
+          "1501",
+          "1502"
+        ],
+        [
+          "1501",
+          "1503",
+          "1502"
+        ],
+        [
+          "1505"
+        ]
+      ],
+      "index": "12",
+      "groupIndex": "2",
+      "eventName": "Bunny Challenge",
+      "groupImage": "daily_event2.png",
+      "stageName": "Bunny Challenge",
+      "duration": "20-22",
+      "stageIndex": "3011",
+      "monsterIndex": "1500,1501,1502#1501,1503,1502#1505",
+      "reward": "9910/1#9900/20000",
+      "chance": 1,
+      "battleBG": "noria1,noria2"
+    },
+    {
+      "monsterWave": [
+        [
+          "1500",
+          "1501",
+          "1502"
+        ],
+        [
+          "1501",
+          "1503",
+          "1502"
+        ],
+        [
+          "1506"
+        ]
+      ],
+      "index": "13",
+      "groupIndex": "2",
+      "eventName": "Bunny Challenge",
+      "groupImage": "daily_event2.png",
+      "stageName": "Bunny Challenge",
+      "duration": "20-22",
+      "stageIndex": "3012",
+      "monsterIndex": "1500,1501,1502#1501,1503,1502#1506",
+      "reward": "9910/1#9900/30000",
+      "chance": 1,
+      "battleBG": "noria1,noria2"
+    },
+    {
+      "monsterWave": [
+        [
+          "1500",
+          "1501",
+          "1502"
+        ],
+        [
+          "1501",
+          "1503",
+          "1502"
+        ],
+        [
+          "1507"
+        ]
+      ],
+      "index": "14",
+      "groupIndex": "2",
+      "eventName": "Bunny Challenge",
+      "groupImage": "daily_event2.png",
+      "stageName": "Bunny Challenge",
+      "duration": "20-22",
+      "stageIndex": "3013",
+      "monsterIndex": "1500,1501,1502#1501,1503,1502#1507",
+      "reward": "9910/1#9900/40000",
+      "chance": 1,
+      "battleBG": "noria1,noria2"
+    },
+    {
+      "monsterWave": [
+        [
+          "1500",
+          "1501",
+          "1502"
+        ],
+        [
+          "1501",
+          "1503",
+          "1502"
+        ],
+        [
+          "1508"
+        ]
+      ],
+      "index": "15",
+      "groupIndex": "2",
+      "eventName": "Bunny Challenge",
+      "groupImage": "daily_event2.png",
+      "stageName": "Bunny Challenge",
+      "duration": "20-22",
+      "stageIndex": "3014",
+      "monsterIndex": "1500,1501,1502#1501,1503,1502#1508",
+      "reward": "9910/1#9900/50000",
+      "chance": 1,
+      "battleBG": "noria1,noria2"
+    }
+  ],
+  "heroTowers": null,
+  "eventGroups": null
+}

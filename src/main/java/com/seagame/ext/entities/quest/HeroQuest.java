@@ -59,7 +59,7 @@ public class HeroQuest implements SerializableQAntType {
     public void buildQuestList(List<QuestBase> quests, int level) {
         quests.forEach(questBase -> {
             QuestProgress questProgress = new QuestProgress(questBase);
-            if (questBase.getCharLevel() <= level && questBase.isAutoStart()) {
+            if (questBase.isAutoStart()) {
                 questProgress.setStarted(true);
             }
             progressMap.put(questProgress.getIndex(), questProgress);
@@ -74,7 +74,7 @@ public class HeroQuest implements SerializableQAntType {
         Collections.shuffle(limit);
         limit.stream().limit(total).forEach(questBase -> {
             QuestProgress questProgress = new QuestProgress(questBase);
-            if (questBase.getCharLevel() <= level && questBase.isAutoStart()) {
+            if (questBase.isAutoStart()) {
                 questProgress.setStarted(true);
             }
             progressMap.put(questProgress.getIndex(), questProgress);
@@ -82,7 +82,7 @@ public class HeroQuest implements SerializableQAntType {
     }
 
     public void buildQuest(QuestBase questBase) {
-        progressMap.putIfAbsent(questBase.getId(), new QuestProgress(questBase));
+        progressMap.putIfAbsent(questBase.getIndex(), new QuestProgress(questBase));
     }
 
 

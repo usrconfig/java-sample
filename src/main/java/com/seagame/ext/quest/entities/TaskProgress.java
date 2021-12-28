@@ -99,7 +99,7 @@ public class TaskProgress {
     }
 
     public boolean isFinish() {
-        return this.action == QuestObserver.TYPE_GIVE || count >= targetCount;
+        return count >= targetCount;
     }
 
     public boolean isNotFinish() {

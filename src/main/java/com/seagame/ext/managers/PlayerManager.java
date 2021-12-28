@@ -29,6 +29,7 @@ import com.seagame.ext.entities.team.BattleTeam;
 import com.seagame.ext.entities.team.Team;
 import com.seagame.ext.exception.GameErrorCode;
 import com.seagame.ext.exception.UseItemException;
+import com.seagame.ext.quest.CollectionTask;
 import com.seagame.ext.quest.QuestSystem;
 import com.seagame.ext.services.AutoIncrementService;
 import com.seagame.ext.services.ServiceHelper;

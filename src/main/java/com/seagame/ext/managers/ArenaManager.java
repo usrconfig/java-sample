@@ -14,6 +14,8 @@ import com.seagame.ext.entities.arena.ArenaPower;
 import com.seagame.ext.entities.arena.RevengeInfo;
 import com.seagame.ext.entities.team.BattleTeam;
 import com.seagame.ext.entities.team.Team;
+import com.seagame.ext.quest.CollectionTask;
+import com.seagame.ext.quest.QuestSystem;
 import com.seagame.ext.services.AutoIncrementService;
 import com.seagame.ext.util.CalculateUtil;
 import com.seagame.ext.util.RandomRangeUtil;
@@ -89,6 +91,8 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
     private SystemSettingRepository systemRepo;
     @Autowired
     private ArenaSearchRepository arenaSearchRepo;
+    @Autowired
+    private QuestSystem questSystem;
 
     private SystemSetting systemSetting;
 
@@ -401,6 +405,11 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
         saveHistory(historyList);
         update(attacker);
         params.removeElement("script");
+        try {
+            questSystem.notifyObservers(CollectionTask.init(user.getName(), "arena", 1));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return attacker;
     }
 

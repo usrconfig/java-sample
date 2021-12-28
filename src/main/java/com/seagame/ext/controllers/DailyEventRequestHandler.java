@@ -13,6 +13,7 @@ import com.seagame.ext.entities.campaign.MatchInfo;
 import com.seagame.ext.exception.GameErrorCode;
 import com.seagame.ext.exception.UseItemException;
 import com.seagame.ext.managers.*;
+import com.seagame.ext.quest.CollectionTask;
 import com.seagame.ext.quest.QuestSystem;
 
 import java.util.List;
@@ -106,8 +107,12 @@ public class DailyEventRequestHandler extends ZClientRequestHandler {
         }
         processReward(params, user, event, group);
         send(params, user);
+        try {
+            questSystem.notifyObservers(CollectionTask.init(user.getName(), "finish_quest_daily", 1));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-
 
 
     public void processReward(IQAntObject params, QAntUser user, String event, String group) {
@@ -150,7 +155,6 @@ public class DailyEventRequestHandler extends ZClientRequestHandler {
         send(params, user);
         matchManager.newMatch(playerId, matchInfo);
     }
-
 
 
 }

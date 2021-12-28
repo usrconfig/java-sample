@@ -102,7 +102,7 @@ public class QuestRequestHandler extends ZClientRequestHandler {
     }
 
     private void consumeQuestItem(QAntUser user, IQAntObject params, QuestProgress questProgress) throws UseItemException {
-        String consummeItemss = questProgress.getTasks().stream().filter(taskProgress -> (taskProgress.getAction() == QuestObserver.TYPE_GIVE || taskProgress.getAction() == QuestObserver.TYPE_COLLECT_GIVE)).map(taskProgress -> taskProgress.getTaskKey() + "/" + taskProgress.getTargetCount()).collect(Collectors.joining("#"));
+        String consummeItemss = questProgress.getTasks().stream().filter(taskProgress -> (taskProgress.getAction() == QuestObserver.TYPE_COLLECT_GIVE)).map(taskProgress -> taskProgress.getTaskKey() + "/" + taskProgress.getTargetCount()).collect(Collectors.joining("#"));
         if (Utils.isNullOrEmpty(consummeItemss)) {
             return;
         }
@@ -148,16 +148,16 @@ public class QuestRequestHandler extends ZClientRequestHandler {
         }
         QuestBase questBase = QuestConfig.getInstance().getQuest(questProgress.getIndex());
 
-        List<HeroItem> heroItems = heroItemManager.addItems(user, questBase.getRewards());
+        List<HeroItem> heroItems = heroItemManager.addItems(user, questBase.getItemReward());
         QAntTracer.debug(PlayerManager.class, "applyRewards : " + heroItems.toString());
         heroItemManager.notifyAssetChange(user, heroItems);
         ItemConfig.getInstance().buildUpdateRewardsReceipt(params, heroItems);
-        Collection<HeroItem> heroItemsRewards = ItemConfig.getInstance().buildRewardsReceipt(params, questBase.getRewards());
+        Collection<HeroItem> heroItemsRewards = ItemConfig.getInstance().buildRewardsReceipt(params, questBase.getItemReward());
         heroItemsRewards.forEach(heroItem -> questSystem.notifyObservers(CollectionTask.init(user.getName(), heroItem.getIndex(), heroItem.getNo())));
         questProgress.setClaimed(true);
         params.putQAntObject("queststat", questProgress.build());
 
-        boolean isLevelUp = player.expUp(questBase.getExpReward());
+        boolean isLevelUp = player.expUp(10);
         NotifySystem notifySystem = ExtApplication.getBean(NotifySystem.class);
         notifySystem.notifyExpChange(user.getName(), player.buildLevelInfo(), user);
 

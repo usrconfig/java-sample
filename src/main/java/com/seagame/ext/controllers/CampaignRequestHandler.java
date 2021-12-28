@@ -20,6 +20,8 @@ import com.seagame.ext.managers.CampaignManager;
 import com.seagame.ext.managers.HeroItemManager;
 import com.seagame.ext.managers.MatchManager;
 import com.seagame.ext.managers.PlayerManager;
+import com.seagame.ext.quest.CollectionTask;
+import com.seagame.ext.quest.QuestSystem;
 import com.seagame.ext.util.NetworkConstant;
 import com.seagame.ext.util.RandomRangeUtil;
 import org.apache.commons.lang.StringUtils;
@@ -44,6 +46,7 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
     private HeroItemManager heroItemManager;
     private PlayerManager playerManager;
     private CampaignManager campaignManager;
+    private QuestSystem questSystem;
 
 
     public CampaignRequestHandler() {
@@ -51,6 +54,7 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
         heroItemManager = ExtApplication.getBean(HeroItemManager.class);
         playerManager = ExtApplication.getBean(PlayerManager.class);
         campaignManager = ExtApplication.getBean(CampaignManager.class);
+        questSystem = ExtApplication.getBean(QuestSystem.class);
     }
 
 
@@ -111,6 +115,11 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
         params.putQAntArray("list", qAntArray);
         send(params, user);
         trackParams(params);
+        try{
+            questSystem.notifyObservers(CollectionTask.init(user.getName(), "campaign",1));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     private HeroCampaign processHeroCampaign(QAntUser user, String idx, int starNo) {

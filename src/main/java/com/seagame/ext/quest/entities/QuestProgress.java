@@ -37,7 +37,7 @@ public class QuestProgress {
     }
 
     public QuestProgress(QuestBase base) {
-        this.index = base.getId();
+        this.index = base.getIndex();
         this.tasks = new ArrayList<>();
         this.started = false;
         initBase(base);
@@ -49,7 +49,7 @@ public class QuestProgress {
 
     public void initBase(QuestBase base) {
         this.group = base.getGroup();
-        TaskProgress taskProgress = new TaskProgress(base.getTaskType(), base.getTaskRequire());
+        TaskProgress taskProgress = new TaskProgress(base.getTaskType(), base.getTask() + "/" + base.getTargetCount());
         taskProgress.setActive(true);
         getTasks().add(taskProgress);
     }
