@@ -171,6 +171,7 @@ public class ItemRequestHandler extends ZClientRequestHandler {
     private void equipUnEquipItem(QAntUser user, IQAntObject params) {
         Collection<Long> ids = params.getLongArray("ids");
         long heroId = params.getLong("heroId");
+        Collection<HeroItem> items = new ArrayList<>();
         Collection<HeroItem> takeOff = heroItemManager.getTakeOnEquipments(user.getName(), heroId);
         HeroClass heroClass = heroClassManager.getHeroWithId(user.getName(), heroId);
         if (heroClass == null) {
@@ -181,13 +182,16 @@ public class ItemRequestHandler extends ZClientRequestHandler {
         takeOff.stream().filter(heroItem -> !ids.contains(heroItem.getId())).forEach(heroItem -> {
             if (heroItem instanceof HeroEquipment) heroItem.setEquipFor(-1);
             qAntArray.addQAntObject(heroItem.buildInfo());
+            items.add(heroItem);
         });
 
         Collection<HeroItem> heroItems = heroItemManager.getItemsByIds(user.getName(), ids);
         heroItems.forEach(heroItem -> {
             if (heroItem instanceof HeroEquipment) heroItem.setEquipFor(heroId);
             qAntArray.addQAntObject(heroItem.buildInfo());
+            items.add(heroItem);
         });
+        heroItemManager.save(items);
         params.putQAntArray("items", qAntArray);
         send(params, user);
     }

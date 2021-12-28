@@ -238,6 +238,8 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                heroItemManager.getTakeOnEquipments("nf1#1001", 1001);
 
 //                testEquip();
+
+//                testPageHero();
             }
         }, 3000, 100000000);
 
@@ -257,6 +259,16 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                LongStream.range(900, 999).forEach(value -> createBot(value));
 //            }
 //        }, 3000);
+    }
+
+    private void testPageHero() {
+        String playerId = "nf1#1001";
+        Page<HeroClass> heroPage = heroClassManager.getHeroPage(playerId, 1);
+        IQAntArray arr = QAntArray.newInstance();
+        heroPage.getContent().forEach(item -> {
+            heroClassManager.setHeroBaseAndEquipment(item);
+            arr.addQAntObject(item.buildInfo());
+        });
     }
 
     private void testEquip() {
