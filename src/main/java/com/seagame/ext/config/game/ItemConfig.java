@@ -338,9 +338,9 @@ public class ItemConfig implements NetworkConstant {
         return equipMap.get(index);
     }
 
-    public int getEquipPower(String index, int rank) {
+    public int getEquipPower(String index, int rank, int level) {
         try {
-            return getRanksEquipMap().get(index).get(rank).getPower();
+            return getRanksEquipMap().get(index).get(rank).getPower(level);
         } catch (Exception e) {
 
         }

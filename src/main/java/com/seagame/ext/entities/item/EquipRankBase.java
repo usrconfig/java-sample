@@ -60,7 +60,12 @@ public class EquipRankBase implements Serializable {
     private int Description;
 
     @JsonIgnore
-    public int getPower() {
-        return baseATK + baseCRIT + baseDEF + baseHP + baseMAG + baseMPR + baseRES + baseSPD;
+    public int getPower(int level) {
+        float ATK = baseATK + level * growthATK;
+        float SPD = baseSPD + level * growthSPD;
+        float CRIT = baseCRIT + level * growthCRIT;
+        float HP = baseHP + level * growthHP;
+        float DEF = baseDEF + level * growthDEF;
+        return (int) ((ATK * (2 + SPD / 100 + CRIT / 100) + HP * (1 + 100 / (1000 + DEF / 2))));
     }
 }

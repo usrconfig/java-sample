@@ -45,7 +45,12 @@ public class HeroRankBaseOut {
         stats.put("growthMPR", heroRankBase.getGrowthMPR());
     }
 
-    public int getPower() {
-        return stats.values().stream().mapToInt(value -> value).sum();
+    public int getPower(int level, int rank) {
+        float ATK = stats.get("baseATK") + level * stats.get("growthATK");
+        float SPD = stats.get("baseSPD") + level * stats.get("growthSPD");
+        float CRIT = stats.get("baseCRIT");
+        float HP = stats.get("baseHP") + level * stats.get("growthHP");
+        float DEF = stats.get("baseDEF") + level * stats.get("growthDEF");
+        return (int) ((ATK * (2 + SPD / 100 + CRIT / 100) + HP * (1 + 100 / (1000 + DEF / 2))) * rank);
     }
 }

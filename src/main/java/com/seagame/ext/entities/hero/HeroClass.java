@@ -149,7 +149,7 @@ public class HeroClass implements SerializableQAntType, NetworkConstant {
 
         int power = 0;
         try {
-            power = HeroConfig.getInstance().getHeroRankBase(this.charIndex, this.rank).getPower();
+            power = HeroConfig.getInstance().getHeroRankBase(this.charIndex, this.rank).getPower(this.level, this.rank);
         } catch (Exception e) {
 
         }
