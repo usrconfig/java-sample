@@ -242,6 +242,8 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                testEquip();
 
 //                testPageHero();
+
+//                testDailyEvent();
             }
         }, 3000, 100000000);
 
@@ -261,6 +263,11 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                LongStream.range(900, 999).forEach(value -> createBot(value));
 //            }
 //        }, 3000);
+    }
+
+    private void testDailyEvent() {
+        DailyEventManager dailyEventManager=ExtApplication.getBean(DailyEventManager.class);
+        dailyEventManager.getDailyEvents("nf1#1001");
     }
 
     private void testPageHero() {
