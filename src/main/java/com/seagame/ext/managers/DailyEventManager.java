@@ -163,7 +163,7 @@ public class DailyEventManager extends AbstractExtensionManager implements Initi
         if (events == null) {
             events = eventRepository.getAllEvent(userId);
             if (events.size() <= 0) {
-                events = eventConfig.getDailyEventInfos().getDailyChallenges().stream().map(group -> new HeroDailyEvent(userId, gameHero.getActiveHeroId(), group)).collect(Collectors.toList());
+                events = eventConfig.getDailyEventInfos().getDailyChallenges().stream().map(dailyEvent -> new HeroDailyEvent(userId, gameHero.getActiveHeroId(), dailyEvent)).collect(Collectors.toList());
             }
         }
         events.forEach(HeroDailyEvent::resetChance);
