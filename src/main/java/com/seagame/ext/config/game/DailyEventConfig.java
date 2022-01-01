@@ -97,8 +97,4 @@ public class DailyEventConfig {
         }
         return false;
     }
-
-    public Collection<DailyEvent> getEvent(String event, String group) {
-        return dailyEventMap.get(event).get(group);
-    }
 }
