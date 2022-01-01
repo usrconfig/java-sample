@@ -8,15 +8,21 @@ import com.creants.creants_2x.socket.gate.wood.QAntUser;
 import com.seagame.ext.ExtApplication;
 import com.seagame.ext.config.game.DailyEventConfig;
 import com.seagame.ext.config.game.ItemConfig;
+import com.seagame.ext.entities.campaign.DailyEvent;
 import com.seagame.ext.entities.campaign.HeroDailyEvent;
 import com.seagame.ext.entities.campaign.MatchInfo;
+import com.seagame.ext.entities.item.HeroItem;
 import com.seagame.ext.exception.GameErrorCode;
 import com.seagame.ext.exception.UseItemException;
 import com.seagame.ext.managers.*;
 import com.seagame.ext.quest.CollectionTask;
 import com.seagame.ext.quest.QuestSystem;
+import com.seagame.ext.util.NetworkConstant;
+import com.seagame.ext.util.RandomRangeUtil;
 
+import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static com.seagame.ext.exception.GameErrorCode.LACK_OF_INFOMATION;
 
@@ -101,11 +107,19 @@ public class DailyEventRequestHandler extends ZClientRequestHandler {
         String group = match.getGroup();
         params.putUtfString("event", event);
         params.putUtfString("group", group);
+
+        HeroDailyEvent heroDailyEvent = dailyEventManager.getDailyEvent(playerId, event);
+        if (heroDailyEvent == null || heroDailyEvent.getChance() <= 0) {
+            QAntTracer.warn(this.getClass(), "Request finish match not enough chance");
+            return;
+        }
         if (!params.getBool("win")) {
             send(params, user);
             return;
         }
-        processReward(params, user, event, group);
+        heroDailyEvent.decrChance();
+        dailyEventManager.save(heroDailyEvent);
+        processReward(params, user, event);
         send(params, user);
         try {
             questSystem.notifyObservers(CollectionTask.init(user.getName(), "finish_quest_daily", 1));
@@ -115,22 +129,13 @@ public class DailyEventRequestHandler extends ZClientRequestHandler {
     }
 
 
-    public void processReward(IQAntObject params, QAntUser user, String event, String group) {
-//        Collection<DailyEvent> eventGroup = DailyEventConfig.getInstance().getEvent(event, group);
-//        String rewards = eventGroup.stream().map(dailyEvent -> RandomRangeUtil.randomDroprate(dailyEvent.getRandomBonus(), dailyEvent.getDropRate(), 1, 1000) + NetworkConstant.SEPERATE_OTHER_ITEM + dailyEvent.getReward()).collect(Collectors.joining(NetworkConstant.SEPERATE_OTHER_ITEM));
-//        List<HeroItem> addItems = heroItemManager.addItems(user, rewards);
-//        heroItemManager.notifyAssetChange(user, addItems);
-//        ItemConfig.getInstance().buildUpdateRewardsReceipt(params, addItems);
-//        ItemConfig.getInstance().buildRewardsReceipt(params, rewards);
-//        int expTotal = eventGroup.stream().mapToInt(DailyEvent::getExpReward).sum();
-//        HeroClass heroClass = heroClassManager.getHeroActive(user.getName());
-//        if (heroClass != null && expTotal > 0) {
-//            boolean levelUp = heroClass.expUp(expTotal);
-//            heroClassManager.save(heroClass);
-//            NotifySystem notifySystem = ExtApplication.getBean(NotifySystem.class);
-//            notifySystem.notifyExpChange(user.getName(), heroClass.buildInfoLevel(levelUp), null);
-//        }
-//        questSystem.notifyObservers(JoinWinTask.init(user.getName(), event));
+    public void processReward(IQAntObject params, QAntUser user, String event) {
+        DailyEvent dailyEvent = DailyEventConfig.getInstance().getEvents().get(event);
+        String rewards = dailyEvent.getReward();
+        List<HeroItem> addItems = heroItemManager.addItems(user, rewards);
+        heroItemManager.notifyAssetChange(user, addItems);
+        ItemConfig.getInstance().buildUpdateRewardsReceipt(params, addItems);
+        ItemConfig.getInstance().buildRewardsReceipt(params, rewards);
     }
 
 
@@ -140,12 +145,6 @@ public class DailyEventRequestHandler extends ZClientRequestHandler {
         boolean b = dailyEventConfig.checkEvent(event, group);
         if (!b) {
             responseError(user, GameErrorCode.STAGE_NOT_FOUND);
-            return;
-        }
-        try {
-            dailyEventManager.useChanceDailyEvent(user.getName(), event);
-        } catch (UseItemException e) {
-            responseError(user, GameErrorCode.NOT_ENOUGH_TICKET);
             return;
         }
         String playerId = user.getName();

@@ -14,11 +14,10 @@
     </xs:complexType>
     <xs:element name="DailyEvent">
         <xs:complexType>
-            <xs:attribute name="Index" type="xs:string"/>
+            <xs:attribute name="StageIndex" type="xs:string"/>
             <xs:attribute name="GroupIndex" type="xs:string"/>
             <xs:attribute name="GroupImage" type="xs:string"/>
             <xs:attribute name="EventName" type="xs:string"/>
-            <xs:attribute name="StageIndex" type="xs:string"/>
             <xs:attribute name="StageName" type="xs:string"/>
             <xs:attribute name="BattleBG" type="xs:string"/>
             <xs:attribute name="MonsterIndex" type="xs:string"/>

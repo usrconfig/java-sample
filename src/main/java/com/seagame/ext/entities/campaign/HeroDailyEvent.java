@@ -20,6 +20,7 @@ public class HeroDailyEvent implements SerializableQAntType {
     private String playerId;
     private long heroId;
     public String eventGroup;
+    public String stageIdx;
     public int chance;
     private int maxChance;
 
@@ -29,10 +30,11 @@ public class HeroDailyEvent implements SerializableQAntType {
 
 
     public HeroDailyEvent(String playerId, long heroId, DailyEvent group) {
-        this.id = genKey(playerId + heroId, group.getIndex());
+        this.id = genKey(playerId + heroId, group.getStageIndex());
         this.playerId = playerId;
         this.heroId = heroId;
         this.eventGroup = group.getGroupIndex();
+        this.stageIdx = group.getStageIndex();
         this.chance = group.getChance();
         this.maxChance = group.getChance();
     }
@@ -72,9 +74,7 @@ public class HeroDailyEvent implements SerializableQAntType {
 
     public IQAntObject build() {
         IQAntObject iqAntObject = new QAntObject();
-        iqAntObject.putUtfString("id", id);
-        iqAntObject.putUtfString("playerId", playerId);
-        iqAntObject.putLong("heroId", heroId);
+        iqAntObject.putUtfString("stageIdx", stageIdx);
         iqAntObject.putUtfString("eventGroup", eventGroup);
         iqAntObject.putInt("chance", chance);
         iqAntObject.putInt("maxChance", maxChance);

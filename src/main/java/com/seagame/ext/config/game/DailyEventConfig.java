@@ -56,7 +56,7 @@ public class DailyEventConfig {
             dailyEventInfos = mapper.readValue(sr, DailyEventInfo.class);
             dailyEventInfos.getDailyChallenges().forEach(dailyEvent -> {
                 dailyEvent.init();
-                events.put(dailyEvent.getIndex(), dailyEvent);
+                events.put(dailyEvent.getStageIndex(), dailyEvent);
                 addEventMap(dailyEvent);
             });
             sr.close();

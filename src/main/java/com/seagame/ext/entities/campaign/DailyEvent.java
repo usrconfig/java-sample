@@ -12,16 +12,14 @@ import java.util.stream.Collectors;
  */
 @Getter
 public class DailyEvent {
-    @JacksonXmlProperty(localName = "Index", isAttribute = true)
-    private String Index;
+    @JacksonXmlProperty(localName = "StageIndex", isAttribute = true)
+    private String StageIndex;
     @JacksonXmlProperty(localName = "GroupIndex", isAttribute = true)
     private String GroupIndex;
     @JacksonXmlProperty(localName = "GroupImage", isAttribute = true)
     private String GroupImage;
     @JacksonXmlProperty(localName = "EventName", isAttribute = true)
     private String EventName;
-    @JacksonXmlProperty(localName = "StageIndex", isAttribute = true)
-    private String StageIndex;
     @JacksonXmlProperty(localName = "StageName", isAttribute = true)
     private String StageName;
     @JacksonXmlProperty(localName = "BattleBG", isAttribute = true)

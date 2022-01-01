@@ -141,7 +141,7 @@ public class DailyEventManager extends AbstractExtensionManager implements Initi
         String key = gameHeroId + gameHero.getActiveHeroId();
         List<HeroDailyEvent> events = dailyEventCashe.get(key);
         if (events == null) {
-            events = eventRepository.getAllEvent(gameHeroId, gameHero.getActiveHeroId());
+            events = eventRepository.getAllEvent(gameHeroId);
             if (events.size() <= 0) {
                 events = eventConfig.getDailyEventInfos().getDailyChallenges().stream().map(group -> new HeroDailyEvent(gameHeroId, gameHero.getActiveHeroId(), group)).collect(Collectors.toList());
                 eventRepository.saveAll(events);
@@ -151,13 +151,17 @@ public class DailyEventManager extends AbstractExtensionManager implements Initi
         return events;
     }
 
+    public HeroDailyEvent getDailyEvent(String gameHeroId, String stageIdx) {
+        return eventRepository.getEvent(gameHeroId, stageIdx);
+    }
+
 
     public List<HeroDailyEvent> resetDailyEvents(String userId) {
         Player gameHero = playerManager.getPlayer(userId);
         String key = userId + gameHero.getActiveHeroId();
         List<HeroDailyEvent> events = dailyEventCashe.get(key);
         if (events == null) {
-            events = eventRepository.getAllEvent(userId, gameHero.getActiveHeroId());
+            events = eventRepository.getAllEvent(userId);
             if (events.size() <= 0) {
                 events = eventConfig.getDailyEventInfos().getDailyChallenges().stream().map(group -> new HeroDailyEvent(userId, gameHero.getActiveHeroId(), group)).collect(Collectors.toList());
             }
@@ -166,17 +170,6 @@ public class DailyEventManager extends AbstractExtensionManager implements Initi
 
         dailyEventCashe.put(key, events);
         return eventRepository.saveAll(events);
-    }
-
-    public HeroDailyEvent useChanceDailyEvent(String userId, String groupIndex) throws UseItemException {
-        Player gameHero = playerManager.getPlayer(userId);
-        String key = userId + gameHero.getActiveHeroId();
-        HeroDailyEvent heroDailyEvent = dailyEventCashe.get(key).stream()
-                .filter(event -> event.getEventGroup().equals(groupIndex)).findFirst().get();
-        if (heroDailyEvent.getChance() <= 0)
-            throw UseItemException.lackOfItem();
-        heroDailyEvent.decrChance();
-        return eventRepository.save(heroDailyEvent);
     }
 
 

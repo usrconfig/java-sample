@@ -10,10 +10,13 @@ import java.util.List;
 @Repository
 public interface DailyEventRepository extends MongoRepository<HeroDailyEvent, String> {
 
-	@Query("{'playerId' : ?0}")
-	List<HeroDailyEvent> getAllEvent(String playerId, long heroId);
+    @Query("{'playerId' : ?0}")
+    List<HeroDailyEvent> getAllEvent(String playerId);
+
+    @Query("{'playerId' : ?0, 'stageIdx' : ?1}")
+    HeroDailyEvent getEvent(String playerId, String stageIdx);
 
 
-	@Query(value = "{ playerId: ?0}", delete = true)
-	void remove(String gameHeroId);
+    @Query(value = "{ playerId: ?0}", delete = true)
+    void remove(String gameHeroId);
 }
