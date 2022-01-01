@@ -88,6 +88,9 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
     private CampaignManager campaignManager;
 
     @Autowired
+    private DailyEventManager dailyEventManager;
+
+    @Autowired
     private HeroClassManager heroClassManager;
 
     @Value("${enable.dynamic.event}")
@@ -266,7 +269,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
     }
 
     private void testDailyEvent() {
-        DailyEventManager dailyEventManager=ExtApplication.getBean(DailyEventManager.class);
+        DailyEventManager dailyEventManager = ExtApplication.getBean(DailyEventManager.class);
         dailyEventManager.getDailyEvents("nf1#1001");
     }
 
@@ -650,6 +653,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
         resetDailyFunc(gameHeroId);
         player.setEnergyMax(calMaxEnergy(player));
         player.setEnergy(player.getEnergyMax());
+        dailyEventManager.resetDailyEvents(gameHeroId);
     }
 
     private int calMaxEnergy(Player player) {
