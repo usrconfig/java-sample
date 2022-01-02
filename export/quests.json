@@ -1,1 +1,59 @@
-{"quests":[{"name":"txtQuestLoginCheckin","index":"100","targetCount":1,"autoStart":true,"group":"daily","description":"txtQuestDesLoginCheckin","itemReward":"9910/100","taskType":1,"task":"login"},{"name":"txtQuestClearStages","index":"101","targetCount":10,"autoStart":true,"group":"daily","description":"txtQuestDesClearStages","itemReward":"9999/10#9900/5","taskType":2,"task":"campaign"},{"name":"txtQuestWin10ArenaMatch","index":"102","targetCount":10,"autoStart":true,"group":"daily","description":"txtQuestDesWin10ArenaMatch","itemReward":"9900/5#9910/100","taskType":2,"task":"arena"},{"name":"txtQuestWin3TypeOfDailyEventChallenge","index":"103","targetCount":3,"autoStart":true,"group":"daily","description":"txtQuestDesWin3TypeOfDailyEventChallenge","itemReward":"9999/15","taskType":2,"task":"dailyevent"},{"name":"txtQuestFinishQuestDaily","index":"200","targetCount":4,"autoStart":true,"group":"special","description":"txtQuestDesFinishQuestDaily","itemReward":"9999/10#9900/5#9910/100","taskType":3,"task":"daily"}]}
+{
+  "quests": [
+    {
+      "name": "txtQuestLoginCheckin",
+      "index": "100",
+      "targetCount": 1,
+      "autoStart": true,
+      "group": "daily",
+      "description": "txtQuestDesLoginCheckin",
+      "itemReward": "9910/100",
+      "taskType": 1,
+      "task": "login"
+    },
+    {
+      "name": "txtQuestClearStages",
+      "index": "101",
+      "targetCount": 10,
+      "autoStart": true,
+      "group": "daily",
+      "description": "txtQuestDesClearStages",
+      "itemReward": "9999/10#9900/5",
+      "taskType": 2,
+      "task": "campaign"
+    },
+    {
+      "name": "txtQuestWin10ArenaMatch",
+      "index": "102",
+      "targetCount": 10,
+      "autoStart": true,
+      "group": "daily",
+      "description": "txtQuestDesWin10ArenaMatch",
+      "itemReward": "9900/5#9910/100",
+      "taskType": 2,
+      "task": "arena"
+    },
+    {
+      "name": "txtQuestWin3TypeOfDailyEventChallenge",
+      "index": "103",
+      "targetCount": 3,
+      "autoStart": true,
+      "group": "daily",
+      "description": "txtQuestDesWin3TypeOfDailyEventChallenge",
+      "itemReward": "9999/15",
+      "taskType": 2,
+      "task": "dailyevent"
+    },
+    {
+      "name": "txtQuestFinishQuestDaily",
+      "index": "200",
+      "targetCount": 4,
+      "autoStart": true,
+      "group": "special",
+      "description": "txtQuestDesFinishQuestDaily",
+      "itemReward": "9999/10#9900/5#9910/100",
+      "taskType": 3,
+      "task": "daily"
+    }
+  ]
+}

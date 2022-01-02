@@ -22,6 +22,7 @@ public abstract class QuestObserver {
     public static final int TYPE_JOIN = 1;
     public static final int TYPE_COLLECT = 2;
     public static final int TYPE_FINISH_DAILY = 3;
+    public static final int TYPE_COLLECT_GIVE = 4;
 
     QuestSystem questSystem;
 
