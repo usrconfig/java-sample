@@ -20,22 +20,18 @@ public class QuestBase implements NetworkConstant {
     private String Index;
     @JacksonXmlProperty(localName = "Group", isAttribute = true)
     private String Group;
-    @JacksonXmlProperty(localName = "TaskType", isAttribute = true)
-    private int TaskType;
     @JacksonXmlProperty(localName = "Name", isAttribute = true)
     private String Name;
     @JacksonXmlProperty(localName = "Description", isAttribute = true)
     private String Description;
+    @JacksonXmlProperty(localName = "TaskType", isAttribute = true)
+    private int TaskType;
     @JacksonXmlProperty(localName = "Task", isAttribute = true)
     private String Task;
     @JacksonXmlProperty(localName = "TargetCount", isAttribute = true)
     private int TargetCount;
-    @JacksonXmlProperty(localName = "Win", isAttribute = true)
-    private int Win;
     @JacksonXmlProperty(localName = "ItemReward", isAttribute = true)
     private String ItemReward;
-    @JacksonXmlProperty(localName = "Goto", isAttribute = true)
-    private String Goto;
 
     public boolean isAutoStart() {
         return true;

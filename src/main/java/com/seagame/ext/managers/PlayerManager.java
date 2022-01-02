@@ -30,6 +30,7 @@ import com.seagame.ext.entities.team.Team;
 import com.seagame.ext.exception.GameErrorCode;
 import com.seagame.ext.exception.UseItemException;
 import com.seagame.ext.quest.CollectionTask;
+import com.seagame.ext.quest.JoinTask;
 import com.seagame.ext.quest.QuestSystem;
 import com.seagame.ext.services.AutoIncrementService;
 import com.seagame.ext.services.ServiceHelper;
@@ -654,6 +655,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
         player.setEnergyMax(calMaxEnergy(player));
         player.setEnergy(player.getEnergyMax());
         dailyEventManager.resetDailyEvents(gameHeroId);
+        questSystem.notifyObservers(JoinTask.init(player.getId(), "login"));
     }
 
     private int calMaxEnergy(Player player) {

@@ -122,7 +122,7 @@ public class DailyEventRequestHandler extends ZClientRequestHandler {
         processReward(params, user, event);
         send(params, user);
         try {
-            questSystem.notifyObservers(CollectionTask.init(user.getName(), "finish_quest_daily", 1));
+            questSystem.notifyObservers(CollectionTask.init(user.getName(), "dailyevent", 1));
         } catch (Exception e) {
             e.printStackTrace();
         }

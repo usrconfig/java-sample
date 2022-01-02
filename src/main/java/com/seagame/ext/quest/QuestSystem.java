@@ -56,8 +56,8 @@ public class QuestSystem extends AbstractExtensionManager implements Initializin
     public void afterPropertiesSet() {
         observers = new ArrayList<>();
         new CollectionTask(this);
-        new KillTask(this);
-        new CollectGiveTask(this);
+        new JoinTask(this);
+        new FinishDailyTask(this);
     }
 
 
@@ -73,7 +73,7 @@ public class QuestSystem extends AbstractExtensionManager implements Initializin
     }
 
     private boolean testKey(int taskType, int type) {
-        return taskType == type || (taskType == QuestObserver.TYPE_COLLECT_GIVE && type == QuestObserver.TYPE_COLLECT);
+        return taskType == type || (type == QuestObserver.TYPE_COLLECT);
     }
 
 
@@ -110,7 +110,7 @@ public class QuestSystem extends AbstractExtensionManager implements Initializin
     }
 
     public HeroQuest getOrCreateQuest(String id) {
-        long activeHero=1;
+        long activeHero = 1;
         int level = 1;
         HeroQuest heroQuest = questRepo.getByPlayerIdAndHeroId(id, activeHero);
         if (heroQuest == null) {
@@ -152,8 +152,10 @@ public class QuestSystem extends AbstractExtensionManager implements Initializin
         questRepo.delete(quest);
     }
 
-    public void finishQuest(Collection<String> questFinishList, Map<String, Integer> countMap) {
-
+    public void finishQuest(String playerId,Collection<QuestProgress> questFinishList) {
+        if(questFinishList.stream().anyMatch(QuestProgress::isDailyQuest)){
+            notifyObservers(FinishDailyTask.init(playerId,"daily"));
+        };
     }
 
     public void removeGameHeroData(String gameHeroId) {

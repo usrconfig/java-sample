@@ -19,9 +19,9 @@ public abstract class QuestObserver {
     static final String KEYI_VALUE = "value";
     static final String KEYI_TIMES = "times";
 
-    public static final int TYPE_KILL = 1;
+    public static final int TYPE_JOIN = 1;
     public static final int TYPE_COLLECT = 2;
-    public static final int TYPE_COLLECT_GIVE = 4;
+    public static final int TYPE_FINISH_DAILY = 3;
 
     QuestSystem questSystem;
 
@@ -63,10 +63,10 @@ public abstract class QuestObserver {
 
     void progressFinishTask(HeroQuest heroQuest, QuestProgress questProgress,
                             TaskProgress taskProgress,
-                            Collection<String> questFinishList) {
+                            Collection<QuestProgress> questFinishList) {
         questProgress.newTask(taskProgress);
         if (questProgress.getTasks().stream().noneMatch(TaskProgress::isNotFinish)) {
-            questFinishList.add(questProgress.getIndex());
+            questFinishList.add(questProgress);
             processNewQuest(heroQuest, questProgress);
         }
     }

@@ -14,38 +14,39 @@ import java.util.concurrent.atomic.AtomicBoolean;
 /**
  * @author LamHM
  */
-public class CollectGiveTask extends QuestObserver {
-    public CollectGiveTask(QuestSystem questSystem) {
+public class FinishDailyTask extends QuestObserver {
+    public FinishDailyTask(QuestSystem questSystem) {
         super(questSystem);
     }
 
     @Override
     public void update(QuestData questData) {
         HeroQuest heroQuest = getQuestsByUser(questData);
-        Set<QuestProgress> progresses = getQuestsByHeroQuest(heroQuest, TYPE_COLLECT_GIVE);
+        Set<QuestProgress> progresses = getQuestsByHeroQuest(heroQuest, questData.getType());
 
-        QAntTracer.debug(this.getClass(), "[DEBUG] process CollectGiveTask");
+        QAntTracer.warn(this.getClass(), "[DEBUG] process FinishDailyTask");
         if (progresses.size() <= 0)
             return;
 
-        Collection<String> questFinishList = new ArrayList<>();
-        Map<String, Integer> countMap = new HashMap<>();
+        Collection<QuestProgress> questFinishList = new ArrayList<>();
         IQAntObject data = questData.getData();
         String task = data.getUtfString(KEYS_TASK);
-        int value = data.getInt(KEYI_VALUE);
+        int value = 1;
         AtomicBoolean hasChange = new AtomicBoolean(false);
         progresses.forEach(questProgress -> questProgress.getTasks().forEach(taskProgress -> {
                     if (taskProgress.isApplyAble() && task.equals(taskProgress.getTaskKey())) {
-                        if (!hasChange.get())
-                            hasChange.set(true);
-                        if (taskProgress.incr(value)) {
-                            this.progressFinishTask(heroQuest, questProgress, taskProgress, questFinishList);
+                        if (checkDailyQuest(heroQuest)) {
+                            if (!hasChange.get())
+                                hasChange.set(true);
+                            if (taskProgress.incr(value)) {
+                                this.progressFinishTask(heroQuest, questProgress, taskProgress, questFinishList);
+                            }
                         }
                     }
                 }
         ));
         if (questFinishList.size() > 0) {
-            questSystem.finishQuest(questFinishList, countMap);
+            questSystem.finishQuest(heroQuest.getPlayerId(), questFinishList);
         }
         if (hasChange.get()) {
             questSystem.notifyQuestChange(heroQuest);
@@ -54,24 +55,26 @@ public class CollectGiveTask extends QuestObserver {
 
     }
 
+    private boolean checkDailyQuest(HeroQuest heroQuest) {
+        return heroQuest.getProgressMap().values().stream().filter(questProgress -> questProgress.getGroup().equals("daily")).allMatch(QuestProgress::isFinish);
+    }
+
     @Override
     protected int getTaskType() {
-        return TYPE_COLLECT_GIVE;
+        return TYPE_FINISH_DAILY;
     }
 
 
-    public static QuestData init(QAntUser user, String task, int value) {
+    public static QuestData init(QAntUser user, String task) {
         IQAntObject data = QAntObject.newInstance();
         data.putUtfString(KEYS_TASK, task);
-        data.putInt(KEYI_VALUE, value);
-        return new QuestData(data, user, TYPE_COLLECT_GIVE);
+        return new QuestData(data, user, TYPE_FINISH_DAILY);
     }
 
-    public static QuestData init(String gameHeroid, String task, int value) {
+    public static QuestData init(String gameHeroid, String task) {
         IQAntObject data = QAntObject.newInstance();
         data.putUtfString(KEYS_TASK, task);
-        data.putInt(KEYI_VALUE, value);
-        return new QuestData(gameHeroid, data, TYPE_COLLECT_GIVE);
+        return new QuestData(gameHeroid, data, TYPE_FINISH_DAILY);
     }
 
 }

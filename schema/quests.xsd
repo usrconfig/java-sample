@@ -16,14 +16,12 @@
         <xs:complexType>
             <xs:attribute name="Index" type="xs:string"/>
             <xs:attribute name="Group" type="xs:string"/>
-            <xs:attribute name="TaskType" type="xs:int"/>
             <xs:attribute name="Name" type="xs:string"/>
             <xs:attribute name="Description" type="xs:string"/>
+            <xs:attribute name="TaskType" type="xs:int"/>
             <xs:attribute name="Task" type="xs:string"/>
             <xs:attribute name="TargetCount" type="xs:int"/>
-            <xs:attribute name="Win" type="xs:int"/>
             <xs:attribute name="ItemReward" type="xs:string"/>
-            <xs:attribute name="Goto" type="xs:string"/>
         </xs:complexType>
     </xs:element>
 </xs:schema>

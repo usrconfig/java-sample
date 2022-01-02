@@ -24,12 +24,11 @@ public class CollectionTask extends QuestObserver {
         HeroQuest heroQuest = getQuestsByUser(questData);
         Set<QuestProgress> progresses = getQuestsByHeroQuest(heroQuest, questData.getType());
 
-        QAntTracer.debug(this.getClass(), "[DEBUG] process CollectTask");
+        QAntTracer.warn(this.getClass(), "[DEBUG] process CollectTask");
         if (progresses.size() <= 0)
             return;
 
-        Collection<String> questFinishList = new ArrayList<>();
-        Map<String, Integer> countMap = new HashMap<>();
+        Collection<QuestProgress> questFinishList = new ArrayList<>();
         IQAntObject data = questData.getData();
         String task = data.getUtfString(KEYS_TASK);
         int value = data.getInt(KEYI_VALUE);
@@ -45,7 +44,7 @@ public class CollectionTask extends QuestObserver {
                 }
         ));
         if (questFinishList.size() > 0) {
-            questSystem.finishQuest(questFinishList, countMap);
+            questSystem.finishQuest(heroQuest.getPlayerId(),questFinishList);
         }
         if (hasChange.get()) {
             questSystem.notifyQuestChange(heroQuest);

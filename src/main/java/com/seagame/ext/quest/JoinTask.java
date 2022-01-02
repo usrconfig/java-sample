@@ -14,8 +14,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 /**
  * @author LamHM
  */
-public class KillTask extends QuestObserver {
-    public KillTask(QuestSystem questSystem) {
+public class JoinTask extends QuestObserver {
+    public JoinTask(QuestSystem questSystem) {
         super(questSystem);
     }
 
@@ -24,15 +24,14 @@ public class KillTask extends QuestObserver {
         HeroQuest heroQuest = getQuestsByUser(questData);
         Set<QuestProgress> progresses = getQuestsByHeroQuest(heroQuest, questData.getType());
 
-        QAntTracer.debug(this.getClass(), "[DEBUG] process KillTask");
+        QAntTracer.warn(this.getClass(), "[DEBUG] process JoinTask");
         if (progresses.size() <= 0)
             return;
 
-        Collection<String> questFinishList = new ArrayList<>();
-        Map<String, Integer> countMap = new HashMap<>();
+        Collection<QuestProgress> questFinishList = new ArrayList<>();
         IQAntObject data = questData.getData();
         String task = data.getUtfString(KEYS_TASK);
-        int value = data.getInt(KEYI_VALUE);
+        int value = 1;
         AtomicBoolean hasChange = new AtomicBoolean(false);
         progresses.forEach(questProgress -> questProgress.getTasks().forEach(taskProgress -> {
                     if (taskProgress.isApplyAble() && task.equals(taskProgress.getTaskKey())) {
@@ -45,7 +44,7 @@ public class KillTask extends QuestObserver {
                 }
         ));
         if (questFinishList.size() > 0) {
-            questSystem.finishQuest(questFinishList, countMap);
+            questSystem.finishQuest(heroQuest.getPlayerId(), questFinishList);
         }
         if (hasChange.get()) {
             questSystem.notifyQuestChange(heroQuest);
@@ -56,22 +55,20 @@ public class KillTask extends QuestObserver {
 
     @Override
     protected int getTaskType() {
-        return TYPE_KILL;
+        return TYPE_JOIN;
     }
 
 
-    public static QuestData init(QAntUser user, String task, int value) {
+    public static QuestData init(QAntUser user, String task) {
         IQAntObject data = QAntObject.newInstance();
         data.putUtfString(KEYS_TASK, task);
-        data.putInt(KEYI_VALUE, value);
-        return new QuestData(data, user, TYPE_KILL);
+        return new QuestData(data, user, TYPE_JOIN);
     }
 
-    public static QuestData init(String gameHeroid, String task, int value) {
+    public static QuestData init(String gameHeroid, String task) {
         IQAntObject data = QAntObject.newInstance();
         data.putUtfString(KEYS_TASK, task);
-        data.putInt(KEYI_VALUE, value);
-        return new QuestData(gameHeroid, data, TYPE_KILL);
+        return new QuestData(gameHeroid, data, TYPE_JOIN);
     }
 
 }
