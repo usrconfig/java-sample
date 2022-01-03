@@ -4,9 +4,14 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.seagame.ext.Utils;
+import com.seagame.ext.config.game.ItemConfig;
 import com.seagame.ext.util.NetworkConstant;
 import lombok.Getter;
 import lombok.ToString;
+
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 /**
  * @author LamHM
@@ -35,5 +40,21 @@ public class QuestBase implements NetworkConstant {
 
     public boolean isAutoStart() {
         return true;
+    }
+
+    public String getRewards() {
+        if (!Utils.isNullOrEmpty(getItemReward())) {
+            return Arrays.stream(getItemReward().split("#")).map(s -> {
+                String key = s.split("/")[0];
+                if (ItemConfig.getInstance().getEquipMap().containsKey(key)) {
+                    return "eq/" + s;
+                }
+                if (ItemConfig.getInstance().getItemMap().containsKey(key)) {
+                    return "co/" + s;
+                }
+                return s;
+            }).collect(Collectors.joining("#"));
+        }
+        return null;
     }
 }
