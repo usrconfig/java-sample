@@ -142,6 +142,11 @@ public class QuestRequestHandler extends ZClientRequestHandler {
             responseError(user, GameErrorCode.LACK_OF_INFOMATION);
             return;
         }
+
+        if (questProgress.isFinish() && questProgress.isStarted() && !questProgress.isClaim()) {
+            questProgress.canClaimNow();
+        }
+
         if (!questProgress.isClaim() || questProgress.isClaimed()) {
             responseError(user, GameErrorCode.QUEST_IS_RECEIVED);
             return;
