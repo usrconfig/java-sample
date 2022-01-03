@@ -107,7 +107,6 @@ public class QuestProgress {
         antObject.putUtfString("id", this.index);
         antObject.putBool("claim", this.claim);
         antObject.putBool("claimed", this.claimed);
-        antObject.putLong("createTime", this.createTime);
         antObject.putBool("started", this.started);
         antObject.putUtfString("group", this.group);
         if (tasks.size() > 1) {

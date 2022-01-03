@@ -118,16 +118,16 @@ public class TaskProgress {
 
     public IQAntObject build() {
         IQAntObject antObject = new QAntObject();
-        antObject.putBool("claim", this.claim);
-        antObject.putBool("claimed", this.claimed);
-        antObject.putBool("seen", this.seen);
-        antObject.putBool("active", this.active);
+//        antObject.putBool("claim", this.claim);
+//        antObject.putBool("claimed", this.claimed);
+//        antObject.putBool("seen", this.seen);
+//        antObject.putBool("active", this.active);
         antObject.putInt("action", this.action);
         if (taskKey != null)
             antObject.putUtfString("taskKey", this.taskKey);
         antObject.putInt("count", this.count);
         antObject.putInt("targetCount", this.targetCount);
-        if (this.rewards != null)
+        if (!Utils.isNullOrEmpty(this.rewards))
             antObject.putUtfString("rewards", this.rewards);
         return antObject;
     }

@@ -94,10 +94,10 @@ public class HeroQuest implements SerializableQAntType {
         IQAntObject antObject = new QAntObject();
         antObject.putUtfString("id", this.id);
         antObject.putUtfString("playerId", this.playerId);
-        antObject.putLong("heroId", this.heroId);
+//        antObject.putLong("heroId", this.heroId);
         QAntArray array = new QAntArray();
 //        progressMap.values().stream().filter(QuestProgress::isStarted).forEach(questProgress -> array.addQAntObject(questProgress.build()));
-        progressMap.values().stream().forEach(questProgress -> array.addQAntObject(questProgress.build()));
+        progressMap.values().forEach(questProgress -> array.addQAntObject(questProgress.build()));
         antObject.putQAntArray("progressMap", array);
         return antObject;
     }
