@@ -4,14 +4,18 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.mongodb.BasicDBObjectBuilder;
+import com.mongodb.DBObject;
 import com.seagame.ext.Utils;
 import com.seagame.ext.config.game.ItemConfig;
+import com.seagame.ext.entities.item.HeroItem;
 import com.seagame.ext.util.NetworkConstant;
 import lombok.Getter;
 import lombok.ToString;
 
-import java.util.Arrays;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * @author LamHM
@@ -42,18 +46,18 @@ public class QuestBase implements NetworkConstant {
         return true;
     }
 
-    public String getRewards() {
+    public List<DBObject> getRewards() {
+        List<DBObject> simpleRewardList = new ArrayList<>();
         if (!Utils.isNullOrEmpty(getItemReward())) {
-            return Arrays.stream(getItemReward().split("#")).map(s -> {
-                String key = s.split("/")[0];
-                if (ItemConfig.getInstance().getEquipMap().containsKey(key)) {
-                    return "eq/" + s;
-                }
-                if (ItemConfig.getInstance().getItemMap().containsKey(key)) {
-                    return "co/" + s;
-                }
-                return s;
-            }).collect(Collectors.joining("#"));
+            Collection<HeroItem> items = ItemConfig.getInstance().splitItemToHeroItem(getItemReward());
+            items.forEach(heroItem -> {
+                BasicDBObjectBuilder start = BasicDBObjectBuilder.start();
+                start.add("id", heroItem.getIndex());
+                start.add("equip", heroItem.isEquip());
+                start.add("count", heroItem.getNo());
+                simpleRewardList.add(start.get());
+            });
+            return simpleRewardList;
         }
         return null;
     }

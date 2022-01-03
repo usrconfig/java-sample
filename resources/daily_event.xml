@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <DailyEventInfo>
 	<DailyChallenges>
-		<DailyEvent StageIndex="3000" GroupIndex="1" GroupImage="daily_event0.png" EventName="Wizard Challenge" StageName="Wizard Challenge" BattleBG="loren1,loren2" MonsterIndex="1510,1510,1511,1511,1513" Reward="9910/1#9901/1" Chance="1" Duration="17-19"/>
-		<DailyEvent StageIndex="3001" GroupIndex="1" GroupImage="daily_event0.png" EventName="Wizard Challenge" StageName="Wizard Challenge" BattleBG="loren1,loren2" MonsterIndex="1510,1510,1511,1511,1514" Reward="9910/1#9901/2" Chance="1" Duration="17-19"/>
-		<DailyEvent StageIndex="3002" GroupIndex="1" GroupImage="daily_event0.png" EventName="Wizard Challenge" StageName="Wizard Challenge" BattleBG="loren1,loren2" MonsterIndex="1510,1510,1511,1511,1515" Reward="9910/1#9901/3" Chance="1" Duration="17-19"/>
-		<DailyEvent StageIndex="3003" GroupIndex="1" GroupImage="daily_event0.png" EventName="Wizard Challenge" StageName="Wizard Challenge" BattleBG="loren1,loren2" MonsterIndex="1510,1510,1511,1511,1516" Reward="9910/1#9901/4" Chance="1" Duration="17-19"/>
-		<DailyEvent StageIndex="3004" GroupIndex="1" GroupImage="daily_event0.png" EventName="Wizard Challenge" StageName="Wizard Challenge" BattleBG="loren1,loren2" MonsterIndex="1510,1510,1511,1511,1517" Reward="9910/1#9901/5" Chance="1" Duration="17-19"/>
-		<DailyEvent StageIndex="3005" GroupIndex="0" GroupImage="daily_event1.png" EventName="Dragon Challenge" StageName="Dragon Challenge" BattleBG="devias1,devias2,noria1,noria2,loren1,loren2" MonsterIndex="1520,1520,1520,1520,1521" Reward="9910/1#9909/1" Chance="1" Duration="12-14"/>
-		<DailyEvent StageIndex="3006" GroupIndex="0" GroupImage="daily_event1.png" EventName="Dragon Challenge" StageName="Dragon Challenge" BattleBG="devias1,devias2,noria1,noria2,loren1,loren2" MonsterIndex="1520,1520,1520,1520,1522" Reward="9910/1#9909/1" Chance="1" Duration="12-14"/>
-		<DailyEvent StageIndex="3007" GroupIndex="0" GroupImage="daily_event1.png" EventName="Dragon Challenge" StageName="Dragon Challenge" BattleBG="devias1,devias2,noria1,noria2,loren1,loren2" MonsterIndex="1520,1520,1520,1520,1523" Reward="9910/1#9909/2" Chance="1" Duration="12-14"/>
-		<DailyEvent StageIndex="3008" GroupIndex="0" GroupImage="daily_event1.png" EventName="Dragon Challenge" StageName="Dragon Challenge" BattleBG="devias1,devias2,noria1,noria2,loren1,loren2" MonsterIndex="1520,1520,1520,1520,1524" Reward="9910/1#9909/2" Chance="1" Duration="12-14"/>
-		<DailyEvent StageIndex="3009" GroupIndex="0" GroupImage="daily_event1.png" EventName="Dragon Challenge" StageName="Dragon Challenge" BattleBG="devias1,devias2,noria1,noria2,loren1,loren2" MonsterIndex="1520,1520,1520,1520,1525" Reward="9910/1#9909/3" Chance="1" Duration="12-14"/>
-		<DailyEvent StageIndex="3010" GroupIndex="2" GroupImage="daily_event2.png" EventName="Bunny Challenge" StageName="Bunny Challenge" BattleBG="noria1,noria2" MonsterIndex="1500,1501,1502,1503,1504" Reward="9910/1#9900/10000" Chance="1" Duration="20-22"/>
-		<DailyEvent StageIndex="3011" GroupIndex="2" GroupImage="daily_event2.png" EventName="Bunny Challenge" StageName="Bunny Challenge" BattleBG="noria1,noria2" MonsterIndex="1500,1501,1502,1503,1505" Reward="9910/1#9900/20000" Chance="1" Duration="20-22"/>
-		<DailyEvent StageIndex="3012" GroupIndex="2" GroupImage="daily_event2.png" EventName="Bunny Challenge" StageName="Bunny Challenge" BattleBG="noria1,noria2" MonsterIndex="1500,1501,1502,1503,1506" Reward="9910/1#9900/30000" Chance="1" Duration="20-22"/>
-		<DailyEvent StageIndex="3013" GroupIndex="2" GroupImage="daily_event2.png" EventName="Bunny Challenge" StageName="Bunny Challenge" BattleBG="noria1,noria2" MonsterIndex="1500,1501,1502,1503,1507" Reward="9910/1#9900/40000" Chance="1" Duration="20-22"/>
-		<DailyEvent StageIndex="3014" GroupIndex="2" GroupImage="daily_event2.png" EventName="Bunny Challenge" StageName="Bunny Challenge" BattleBG="noria1,noria2" MonsterIndex="1500,1501,1502,1503,1508" Reward="9910/1#9900/50000" Chance="1" Duration="20-22"/>
+		<DailyEvent Stage="100" Group="0" EventName="txtEventDragonChallenge" BattleBackground="devias1,devias2" Monster="1520,1520,1520,1520,1521" Reward="9910/1#9909/1"/>
+		<DailyEvent Stage="101" Group="0" EventName="txtEventDragonChallenge" BattleBackground="devias1,devias2" Monster="1520,1520,1520,1520,1522" Reward="9910/1#9909/1"/>
+		<DailyEvent Stage="102" Group="0" EventName="txtEventDragonChallenge" BattleBackground="devias1,devias2" Monster="1520,1520,1520,1520,1523" Reward="9910/1#9909/2"/>
+		<DailyEvent Stage="103" Group="0" EventName="txtEventDragonChallenge" BattleBackground="devias1,devias2" Monster="1520,1520,1520,1520,1524" Reward="9910/1#9909/2"/>
+		<DailyEvent Stage="104" Group="0" EventName="txtEventDragonChallenge" BattleBackground="devias1,devias2" Monster="1520,1520,1520,1520,1525" Reward="9910/1#9909/3"/>
+		<DailyEvent Stage="200" Group="1" EventName="txtEventWizardInvasionChallenge" BattleBackground="loren1,loren2" Monster="1510,1510,1511,1511,1513" Reward="9910/1#9901/1"/>
+		<DailyEvent Stage="201" Group="1" EventName="txtEventWizardInvasionChallenge" BattleBackground="loren1,loren2" Monster="1510,1510,1511,1511,1514" Reward="9910/1#9901/2"/>
+		<DailyEvent Stage="202" Group="1" EventName="txtEventWizardInvasionChallenge" BattleBackground="loren1,loren2" Monster="1510,1510,1511,1511,1515" Reward="9910/1#9901/3"/>
+		<DailyEvent Stage="203" Group="1" EventName="txtEventWizardInvasionChallenge" BattleBackground="loren1,loren2" Monster="1510,1510,1511,1511,1516" Reward="9910/1#9901/4"/>
+		<DailyEvent Stage="204" Group="1" EventName="txtEventWizardInvasionChallenge" BattleBackground="loren1,loren2" Monster="1510,1510,1511,1511,1517" Reward="9910/1#9901/5"/>
+		<DailyEvent Stage="300" Group="2" EventName="txtEventMoonRabbitChallenge" BattleBackground="noria1,noria2" Monster="1500,1501,1502,1503,1504" Reward="9910/1#9900/10000"/>
+		<DailyEvent Stage="301" Group="2" EventName="txtEventMoonRabbitChallenge" BattleBackground="noria1,noria2" Monster="1500,1501,1502,1503,1505" Reward="9910/1#9900/20000"/>
+		<DailyEvent Stage="302" Group="2" EventName="txtEventMoonRabbitChallenge" BattleBackground="noria1,noria2" Monster="1500,1501,1502,1503,1506" Reward="9910/1#9900/30000"/>
+		<DailyEvent Stage="303" Group="2" EventName="txtEventMoonRabbitChallenge" BattleBackground="noria1,noria2" Monster="1500,1501,1502,1503,1507" Reward="9910/1#9900/40000"/>
+		<DailyEvent Stage="304" Group="2" EventName="txtEventMoonRabbitChallenge" BattleBackground="noria1,noria2" Monster="1500,1501,1502,1503,1508" Reward="9910/1#9900/50000"/>
 	</DailyChallenges>
 </DailyEventInfo>

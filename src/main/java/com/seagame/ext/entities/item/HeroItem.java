@@ -116,6 +116,7 @@ public abstract class HeroItem implements SerializableQAntType, NetworkConstant 
 
 
     public abstract int getPower();
+    public abstract boolean isEquip();
 
     public String getSellPrice() {
         return "29/" + (10 * level * itemBase.getRank());

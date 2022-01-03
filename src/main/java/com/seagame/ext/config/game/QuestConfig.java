@@ -79,7 +79,7 @@ public class QuestConfig {
     }
 
     public String writeToJsonFile() throws IOException {
-        return SourceFileHelper.exportJsonFile(this.questInfo, "quests.json");
+        return SourceFileHelper.exportJsonFile(this.questInfo.getQuests(), "quests.json");
     }
 
 

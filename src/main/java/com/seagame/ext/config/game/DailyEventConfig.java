@@ -56,7 +56,7 @@ public class DailyEventConfig {
             dailyEventInfos = mapper.readValue(sr, DailyEventInfo.class);
             dailyEventInfos.getDailyChallenges().forEach(dailyEvent -> {
                 dailyEvent.init();
-                events.put(dailyEvent.getStageIndex(), dailyEvent);
+                events.put(dailyEvent.getStage(), dailyEvent);
                 addEventMap(dailyEvent);
             });
             sr.close();
@@ -66,20 +66,20 @@ public class DailyEventConfig {
     }
 
     private void addEventMap(DailyEvent dailyEvent) {
-        String key = dailyEvent.getGroupIndex();
+        String key = dailyEvent.getGroup();
         if (!dailyEventMap.containsKey(key)) {
             dailyEventMap.put(key, new ConcurrentHashMap<>());
         }
         Map<String, Collection<DailyEvent>> stringCollectionMap = dailyEventMap.get(key);
-        if (!stringCollectionMap.containsKey(dailyEvent.getGroupIndex())) {
-            stringCollectionMap.put(dailyEvent.getGroupIndex(), new ArrayList<>());
+        if (!stringCollectionMap.containsKey(dailyEvent.getGroup())) {
+            stringCollectionMap.put(dailyEvent.getGroup(), new ArrayList<>());
         }
-        stringCollectionMap.get(dailyEvent.getGroupIndex()).add(dailyEvent);
+        stringCollectionMap.get(dailyEvent.getGroup()).add(dailyEvent);
     }
 
     public String writeToJsonFile() throws IOException {
         return SourceFileHelper.exportJsonFile(
-                dailyEventInfos,
+                dailyEventInfos.getDailyChallenges(),
                 "daily_event.json");
     }
 

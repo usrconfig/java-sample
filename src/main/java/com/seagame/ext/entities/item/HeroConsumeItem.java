@@ -13,7 +13,7 @@ public class HeroConsumeItem extends HeroItem {
         IQAntObject result = QAntObject.newInstance();
         result.putLong("id", id);
         result.putUtfString("idx", index);
-        result.putBool("equip", false);
+        result.putBool("equip", isEquip());
         result.putInt("no", no);
         result.putInt("level", level != 0 ? level : 1);
         return result;
@@ -36,6 +36,11 @@ public class HeroConsumeItem extends HeroItem {
     @Override
     public int getPower() {
         return 0;
+    }
+
+    @Override
+    public boolean isEquip() {
+        return false;
     }
 
 

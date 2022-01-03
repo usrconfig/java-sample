@@ -1,64 +1,112 @@
-{
-  "quests": [
-    {
-      "name": "txtQuestLoginCheckin",
-      "index": "100",
-      "rewards": "co/9910/100",
-      "group": "daily",
-      "taskType": 1,
-      "targetCount": 1,
-      "itemReward": "9910/100",
-      "autoStart": true,
-      "description": "txtQuestDesLoginCheckin",
-      "task": "login"
-    },
-    {
-      "name": "txtQuestClearStages",
-      "index": "101",
-      "rewards": "co/9999/10#co/9900/5",
-      "group": "daily",
-      "taskType": 2,
-      "targetCount": 10,
-      "itemReward": "9999/10#9900/5",
-      "autoStart": true,
-      "description": "txtQuestDesClearStages",
-      "task": "campaign"
-    },
-    {
-      "name": "txtQuestWin10ArenaMatch",
-      "index": "102",
-      "rewards": "co/9900/5#co/9910/100",
-      "group": "daily",
-      "taskType": 2,
-      "targetCount": 10,
-      "itemReward": "9900/5#9910/100",
-      "autoStart": true,
-      "description": "txtQuestDesWin10ArenaMatch",
-      "task": "arena"
-    },
-    {
-      "name": "txtQuestWin3TypeOfDailyEventChallenge",
-      "index": "103",
-      "rewards": "co/9999/15",
-      "group": "daily",
-      "taskType": 2,
-      "targetCount": 3,
-      "itemReward": "9999/15",
-      "autoStart": true,
-      "description": "txtQuestDesWin3TypeOfDailyEventChallenge",
-      "task": "dailyevent"
-    },
-    {
-      "name": "txtQuestFinishQuestDaily",
-      "index": "200",
-      "rewards": "co/9999/10#co/9900/5#co/9910/100",
-      "group": "special",
-      "taskType": 3,
-      "targetCount": 4,
-      "itemReward": "9999/10#9900/5#9910/100",
-      "autoStart": true,
-      "description": "txtQuestDesFinishQuestDaily",
-      "task": "daily"
-    }
-  ]
-}
+[
+  {
+    "name": "txtQuestLoginCheckin",
+    "index": "100",
+    "description": "txtQuestDesLoginCheckin",
+    "task": "login",
+    "taskType": 1,
+    "autoStart": true,
+    "itemReward": "9910/100",
+    "group": "daily",
+    "targetCount": 1,
+    "rewards": [
+      {
+        "id": "9910",
+        "equip": false,
+        "count": 100
+      }
+    ]
+  },
+  {
+    "name": "txtQuestClearStages",
+    "index": "101",
+    "description": "txtQuestDesClearStages",
+    "task": "campaign",
+    "taskType": 2,
+    "autoStart": true,
+    "itemReward": "9999/10#9900/5",
+    "group": "daily",
+    "targetCount": 10,
+    "rewards": [
+      {
+        "id": "9999",
+        "equip": false,
+        "count": 10
+      },
+      {
+        "id": "9900",
+        "equip": false,
+        "count": 5
+      }
+    ]
+  },
+  {
+    "name": "txtQuestWin10ArenaMatch",
+    "index": "102",
+    "description": "txtQuestDesWin10ArenaMatch",
+    "task": "arena",
+    "taskType": 2,
+    "autoStart": true,
+    "itemReward": "9900/5#9910/100",
+    "group": "daily",
+    "targetCount": 10,
+    "rewards": [
+      {
+        "id": "9910",
+        "equip": false,
+        "count": 100
+      },
+      {
+        "id": "9900",
+        "equip": false,
+        "count": 5
+      }
+    ]
+  },
+  {
+    "name": "txtQuestWin3TypeOfDailyEventChallenge",
+    "index": "103",
+    "description": "txtQuestDesWin3TypeOfDailyEventChallenge",
+    "task": "dailyevent",
+    "taskType": 2,
+    "autoStart": true,
+    "itemReward": "9999/15",
+    "group": "daily",
+    "targetCount": 3,
+    "rewards": [
+      {
+        "id": "9999",
+        "equip": false,
+        "count": 15
+      }
+    ]
+  },
+  {
+    "name": "txtQuestFinishQuestDaily",
+    "index": "200",
+    "description": "txtQuestDesFinishQuestDaily",
+    "task": "daily",
+    "taskType": 3,
+    "autoStart": true,
+    "itemReward": "9999/10#9900/5#9910/100",
+    "group": "special",
+    "targetCount": 4,
+    "rewards": [
+      {
+        "id": "9910",
+        "equip": false,
+        "count": 100
+      },
+      {
+        "id": "9999",
+        "equip": false,
+        "count": 10
+      },
+      {
+        "id": "9900",
+        "equip": false,
+        "count": 5
+      }
+    ]
+  }
+]
