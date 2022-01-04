@@ -14,6 +14,8 @@
 		<Item ID="9909" Name="txtItemGiftBox" Description="txtDesItemGiftBox" Type="rewards" Rank="5" Icon="gmgiftchest"/>
 		<Item ID="9910" Name="txtItemEggPiece" Description="txtDesItemEggPiece" Type="rewards" Rank="5" Icon="eggpiece"/>
 		<Item ID="9911" Name="txtItemEgg" Description="txtDesItemEgg" Type="rewards" Rank="5" Icon="egg"/>
+		<Item ID="9920" Name="txtIItemEventChallengeTicketFree" Description="txtDesIItemEventChallengeTicketFree" Type="ticket" Rank="5" Icon="challengeticket"/>
+		<Item ID="9921" Name="txtIItemEventChallengeTicket" Description="txtDesIItemEventChallengeTicket" Type="ticket" Rank="5" Icon="challengeticket"/>
 	</Items>
 	<Rewards>
 		<Reward RewardsID="9905" Rate="250" ID="100" Type="hero" Count="1" Rank="1" Level="1"/>
