@@ -35,8 +35,8 @@ public class HeroDailyEvent implements SerializableQAntType {
         this.heroId = heroId;
         this.eventGroup = dailyEvent.getGroup();
         this.stageIdx = dailyEvent.getStage();
-        this.chance = 10;
-        this.maxChance = 10;
+        this.chance = 100;
+        this.maxChance = 100;
     }
 
 
@@ -76,8 +76,8 @@ public class HeroDailyEvent implements SerializableQAntType {
         IQAntObject iqAntObject = new QAntObject();
         iqAntObject.putUtfString("stageIdx", stageIdx);
         iqAntObject.putUtfString("eventGroup", eventGroup);
-        iqAntObject.putInt("chance", chance);
-        iqAntObject.putInt("maxChance", maxChance);
+//        iqAntObject.putInt("chance", chance);
+//        iqAntObject.putInt("maxChance", maxChance);
         return iqAntObject;
     }
 }
