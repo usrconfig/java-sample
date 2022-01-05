@@ -17,12 +17,9 @@ import com.seagame.ext.exception.UseItemException;
 import com.seagame.ext.managers.*;
 import com.seagame.ext.quest.CollectionTask;
 import com.seagame.ext.quest.QuestSystem;
-import com.seagame.ext.util.NetworkConstant;
-import com.seagame.ext.util.RandomRangeUtil;
 
-import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static com.seagame.ext.exception.GameErrorCode.LACK_OF_INFOMATION;
 
@@ -34,6 +31,10 @@ public class DailyEventRequestHandler extends ZClientRequestHandler {
     private static final int DAILY_EVENT_INFO = 1;
     private static final int FIGHT = 2;
     private static final int FINISH = 3;
+
+    private static final String FREE_TICKET = "9920";
+    private static final String TICKET = "9921";
+
 
     private static final ItemConfig itemConfig = ItemConfig.getInstance();
     private static final DailyEventConfig dailyEventConfig = DailyEventConfig.getInstance();
@@ -140,15 +141,32 @@ public class DailyEventRequestHandler extends ZClientRequestHandler {
 
 
     private void fight(QAntUser user, IQAntObject params) {
-        String event = params.getUtfString("event");
-        String group = params.getUtfString("group");
-        boolean b = dailyEventConfig.checkEvent(event, group);
-        if (!b) {
+        String idx = params.getUtfString("idx");
+        DailyEvent b = dailyEventConfig.getEvents().get(idx);
+        if (b == null) {
             responseError(user, GameErrorCode.STAGE_NOT_FOUND);
             return;
         }
+
+        try {
+            HeroItem heroItem = heroItemManager.useItem(user, FREE_TICKET, 1);
+            List<HeroItem> items = Collections.singletonList(heroItem);
+            heroItemManager.notifyAssetChange(user, items);
+            ItemConfig.getInstance().buildUpdateRewardsReceipt(params, items);
+        } catch (UseItemException e) {
+            try {
+                HeroItem heroItem = heroItemManager.useItem(user, TICKET, 1);
+                List<HeroItem> items = Collections.singletonList(heroItem);
+                heroItemManager.notifyAssetChange(user, items);
+                ItemConfig.getInstance().buildUpdateRewardsReceipt(params, items);
+            } catch (UseItemException exception) {
+                responseError(user, GameErrorCode.NOT_ENOUGH_TICKET);
+                return;
+            }
+        }
+
         String playerId = user.getName();
-        MatchInfo matchInfo = new MatchInfo(playerId, event, group);
+        MatchInfo matchInfo = new MatchInfo(playerId, b.getStage(), b.getGroup());
         IQAntObject buildMatchInfo = matchInfo.buildMatchInfo();
         params.putQAntObject("match", buildMatchInfo);
         send(params, user);

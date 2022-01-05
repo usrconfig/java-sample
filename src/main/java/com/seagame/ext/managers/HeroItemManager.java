@@ -304,7 +304,7 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
     public void notifyAssetChange(QAntUser user) {
         List<HeroItem> consumableItems = getConsumableItem(user.getName());
         QAntTracer.debug(PlayerManager.class, consumableItems.toString());
-        notifyAssetChange(user,consumableItems);
+        notifyAssetChange(user, consumableItems);
     }
 
 
@@ -449,6 +449,7 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
     public Collection<HeroItem> getItemsById(String gameHeroId, String index) {
         return heroItemRep.getHeroItemsByPlayerIdAndIndex(gameHeroId, index);
     }
+
     public Collection<HeroItem> getItemsByEquipFor(String gameHeroId, String index) {
         return heroItemRep.getAllByPlayerIdAndIndex(gameHeroId, index);
     }
@@ -461,12 +462,12 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
         return heroItemRep.getAllByPlayerIdAndIndex(gameHeroId, index);
     }
 
-    void resetItems(QAntUser user) {
+    void resetItems(Player player) {
         Map<String, Integer> stringIntegerMap = itemConfig.splitItemToMaxValMap(PlayerManager.DAILY_ITEMS);
         Collection<HeroItem> items = itemConfig.splitItemToHeroItem(PlayerManager.DAILY_ITEMS);
         if (items == null || items.size() <= 0)
             return;
-        String gameHeroId = user.getName();
+        String gameHeroId = player.getId();
         List<HeroItem> itemsUpdate = heroItemRep.getItemList(gameHeroId,
                 items.stream().filter(HeroItem::isOverlap).map(HeroItem::getIndex).collect(Collectors.toSet()));
 
@@ -496,5 +497,8 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
 
     public void useArenaTicket(QAntUser user, int i) throws GameException {
 
+    }
+
+    public void useDailyFreeTicket(QAntUser user, int i) {
     }
 }

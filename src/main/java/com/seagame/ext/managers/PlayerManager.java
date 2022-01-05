@@ -60,7 +60,7 @@ import java.util.stream.Collectors;
 @Service
 public class PlayerManager extends AbstractExtensionManager implements InitializingBean, NetworkConstant {
     //    public static final String BEGINNER_ITEMS = String.format("%d/1000000#%d/10000000#%d/1000000#%d/10000000#%d/5000#%d/5000#%d/5000#%d/5000#%d/5000#%d/5000#%d/5000#%d/5000#%d/5000", Z_RUBY, Z_GOLD, 9991, 9992, 1100, 1101, 1200, 1201, 1300, 1301, 1400, 1500, 1600);
-    static final String DAILY_ITEMS = "ITEM107/3";
+    static final String DAILY_ITEMS = "9920/1";
     //    static final String DAILY_ITEMS = String.format("%s/2/2#%s/2/2#%s/2/2", "as9908", "as9909", "as9910");
     private static final int SEQUENCE_MONTH = 6;
     public static long serverDay;
@@ -656,6 +656,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
         player.setEnergy(player.getEnergyMax());
         dailyEventManager.resetDailyEvents(gameHeroId);
         questSystem.notifyObservers(JoinTask.init(player.getId(), "login"));
+        heroItemManager.resetItems(player);
     }
 
     private int calMaxEnergy(Player player) {

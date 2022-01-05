@@ -88,13 +88,7 @@ public class DailyEventConfig {
         DailyEventConfig.getInstance().writeToJsonFile();
     }
 
-    public boolean checkEvent(String event, String group) {
-        if (dailyEventMap.containsKey(event)) {
-            Map<String, Collection<DailyEvent>> stringCollectionMap = dailyEventMap.get(event);
-            if (stringCollectionMap.containsKey(group)) {
-                return stringCollectionMap.get(group).size() > 0;
-            }
-        }
-        return false;
+    public boolean checkEvent(String event) {
+        return events.containsKey(event);
     }
 }
