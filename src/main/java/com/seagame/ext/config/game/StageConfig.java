@@ -1,6 +1,8 @@
 package com.seagame.ext.config.game;
 
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.mongodb.BasicDBObject;
+import com.mongodb.DBObject;
 import com.seagame.ext.entities.campaign.Stage;
 import com.seagame.ext.util.SourceFileHelper;
 import lombok.Getter;
@@ -88,11 +90,15 @@ public class StageConfig {
 
 
     public String writeToJsonFile() throws IOException {
-        SourceFileHelper.exportJsonFile(
-                chapters,
-                "campaign.json");
+        List<DBObject> collect = chapters.keySet().stream().map(s -> {
+            DBObject dbObject = new BasicDBObject();
+            dbObject.put("chapter", s);
+            dbObject.put("stages", chapters.get(s));
+            return dbObject;
+        }).collect(Collectors.toList());
+
         return SourceFileHelper.exportJsonFile(
-                stagesMap.values().stream().sorted(Comparator.comparingInt(o -> Integer.parseInt(o.getStageIndex()))).collect(Collectors.toList()),
+                collect,
                 "stages.json");
     }
 

@@ -1,6 +1,9 @@
 package com.seagame.ext.config.game;
 
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.mongodb.BasicDBList;
+import com.mongodb.BasicDBObject;
+import com.mongodb.DBObject;
 import com.seagame.ext.entities.campaign.DailyEvent;
 import com.seagame.ext.entities.campaign.DailyEventInfo;
 import com.seagame.ext.util.SourceFileHelper;
@@ -10,8 +13,10 @@ import javax.xml.stream.XMLStreamReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Collectors;
 
 /**
  * @author LamHM
@@ -22,7 +27,7 @@ public class DailyEventConfig {
     private static DailyEventConfig instance;
     private Map<String, DailyEvent> events;
     DailyEventInfo dailyEventInfos;
-    Map<String, Map<String, Collection<DailyEvent>>> dailyEventMap;
+    Map<String, Collection<DailyEvent>> dailyEventMap;
     private int eventBonus;
 
 
@@ -68,18 +73,22 @@ public class DailyEventConfig {
     private void addEventMap(DailyEvent dailyEvent) {
         String key = dailyEvent.getGroup();
         if (!dailyEventMap.containsKey(key)) {
-            dailyEventMap.put(key, new ConcurrentHashMap<>());
+            dailyEventMap.put(key, new ArrayList<>());
         }
-        Map<String, Collection<DailyEvent>> stringCollectionMap = dailyEventMap.get(key);
-        if (!stringCollectionMap.containsKey(dailyEvent.getGroup())) {
-            stringCollectionMap.put(dailyEvent.getGroup(), new ArrayList<>());
-        }
-        stringCollectionMap.get(dailyEvent.getGroup()).add(dailyEvent);
+        Collection<DailyEvent> stringCollection = dailyEventMap.get(key);
+        stringCollection.add(dailyEvent);
     }
 
     public String writeToJsonFile() throws IOException {
+        List<DBObject> collect = dailyEventMap.keySet().stream().map(s -> {
+            DBObject dbObject = new BasicDBObject();
+            dbObject.put("group", s);
+            dbObject.put("stages", dailyEventMap.get(s));
+            return dbObject;
+        }).collect(Collectors.toList());
+
         return SourceFileHelper.exportJsonFile(
-                dailyEventInfos.getDailyChallenges(),
+                collect,
                 "daily_event.json");
     }
 
