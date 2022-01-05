@@ -83,6 +83,7 @@ public class DailyEventConfig {
         List<DBObject> collect = dailyEventMap.keySet().stream().map(s -> {
             DBObject dbObject = new BasicDBObject();
             dbObject.put("group", s);
+            dbObject.put("chance", 5);
             dbObject.put("stages", dailyEventMap.get(s));
             return dbObject;
         }).collect(Collectors.toList());

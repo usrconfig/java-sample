@@ -1,6 +1,7 @@
 [
   {
     "group": "0",
+    "chance": 5,
     "stages": [
       {
         "monsterWave": [
@@ -10,9 +11,11 @@
           "1520",
           "1521"
         ],
-        "stage": "100",
         "group": "0",
-        "eventName": "txtEventDragonChallenge",
+        "stage": "100",
+        "battleBackground": "devias1,devias2",
+        "reward": "9910/1#9909/1",
+        "monster": "1520,1520,1520,1520,1521",
         "rewards": [
           {
             "id": "9909",
@@ -25,9 +28,7 @@
             "count": 1
           }
         ],
-        "reward": "9910/1#9909/1",
-        "monster": "1520,1520,1520,1520,1521",
-        "battleBackground": "devias1,devias2"
+        "eventName": "txtEventDragonChallenge"
       },
       {
         "monsterWave": [
@@ -37,9 +38,11 @@
           "1520",
           "1522"
         ],
-        "stage": "101",
         "group": "0",
-        "eventName": "txtEventDragonChallenge",
+        "stage": "101",
+        "battleBackground": "devias1,devias2",
+        "reward": "9910/1#9909/1",
+        "monster": "1520,1520,1520,1520,1522",
         "rewards": [
           {
             "id": "9909",
@@ -52,9 +55,7 @@
             "count": 1
           }
         ],
-        "reward": "9910/1#9909/1",
-        "monster": "1520,1520,1520,1520,1522",
-        "battleBackground": "devias1,devias2"
+        "eventName": "txtEventDragonChallenge"
       },
       {
         "monsterWave": [
@@ -64,9 +65,11 @@
           "1520",
           "1523"
         ],
-        "stage": "102",
         "group": "0",
-        "eventName": "txtEventDragonChallenge",
+        "stage": "102",
+        "battleBackground": "devias1,devias2",
+        "reward": "9910/1#9909/2",
+        "monster": "1520,1520,1520,1520,1523",
         "rewards": [
           {
             "id": "9909",
@@ -79,9 +82,7 @@
             "count": 1
           }
         ],
-        "reward": "9910/1#9909/2",
-        "monster": "1520,1520,1520,1520,1523",
-        "battleBackground": "devias1,devias2"
+        "eventName": "txtEventDragonChallenge"
       },
       {
         "monsterWave": [
@@ -91,9 +92,11 @@
           "1520",
           "1524"
         ],
-        "stage": "103",
         "group": "0",
-        "eventName": "txtEventDragonChallenge",
+        "stage": "103",
+        "battleBackground": "devias1,devias2",
+        "reward": "9910/1#9909/2",
+        "monster": "1520,1520,1520,1520,1524",
         "rewards": [
           {
             "id": "9909",
@@ -106,9 +109,7 @@
             "count": 1
           }
         ],
-        "reward": "9910/1#9909/2",
-        "monster": "1520,1520,1520,1520,1524",
-        "battleBackground": "devias1,devias2"
+        "eventName": "txtEventDragonChallenge"
       },
       {
         "monsterWave": [
@@ -118,9 +119,11 @@
           "1520",
           "1525"
         ],
-        "stage": "104",
         "group": "0",
-        "eventName": "txtEventDragonChallenge",
+        "stage": "104",
+        "battleBackground": "devias1,devias2",
+        "reward": "9910/1#9909/3",
+        "monster": "1520,1520,1520,1520,1525",
         "rewards": [
           {
             "id": "9909",
@@ -133,14 +136,13 @@
             "count": 1
           }
         ],
-        "reward": "9910/1#9909/3",
-        "monster": "1520,1520,1520,1520,1525",
-        "battleBackground": "devias1,devias2"
+        "eventName": "txtEventDragonChallenge"
       }
     ]
   },
   {
     "group": "1",
+    "chance": 5,
     "stages": [
       {
         "monsterWave": [
@@ -150,9 +152,11 @@
           "1511",
           "1513"
         ],
-        "stage": "200",
         "group": "1",
-        "eventName": "txtEventWizardInvasionChallenge",
+        "stage": "200",
+        "battleBackground": "loren1,loren2",
+        "reward": "9910/1#9901/1",
+        "monster": "1510,1510,1511,1511,1513",
         "rewards": [
           {
             "id": "9910",
@@ -165,9 +169,7 @@
             "count": 1
           }
         ],
-        "reward": "9910/1#9901/1",
-        "monster": "1510,1510,1511,1511,1513",
-        "battleBackground": "loren1,loren2"
+        "eventName": "txtEventWizardInvasionChallenge"
       },
       {
         "monsterWave": [
@@ -177,9 +179,11 @@
           "1511",
           "1514"
         ],
-        "stage": "201",
         "group": "1",
-        "eventName": "txtEventWizardInvasionChallenge",
+        "stage": "201",
+        "battleBackground": "loren1,loren2",
+        "reward": "9910/1#9901/2",
+        "monster": "1510,1510,1511,1511,1514",
         "rewards": [
           {
             "id": "9910",
@@ -197,9 +201,7 @@
             "count": 1
           }
         ],
-        "reward": "9910/1#9901/2",
-        "monster": "1510,1510,1511,1511,1514",
-        "battleBackground": "loren1,loren2"
+        "eventName": "txtEventWizardInvasionChallenge"
       },
       {
         "monsterWave": [
@@ -209,9 +211,11 @@
           "1511",
           "1515"
         ],
-        "stage": "202",
         "group": "1",
-        "eventName": "txtEventWizardInvasionChallenge",
+        "stage": "202",
+        "battleBackground": "loren1,loren2",
+        "reward": "9910/1#9901/3",
+        "monster": "1510,1510,1511,1511,1515",
         "rewards": [
           {
             "id": "9910",
@@ -234,9 +238,7 @@
             "count": 1
           }
         ],
-        "reward": "9910/1#9901/3",
-        "monster": "1510,1510,1511,1511,1515",
-        "battleBackground": "loren1,loren2"
+        "eventName": "txtEventWizardInvasionChallenge"
       },
       {
         "monsterWave": [
@@ -246,9 +248,11 @@
           "1511",
           "1516"
         ],
-        "stage": "203",
         "group": "1",
-        "eventName": "txtEventWizardInvasionChallenge",
+        "stage": "203",
+        "battleBackground": "loren1,loren2",
+        "reward": "9910/1#9901/4",
+        "monster": "1510,1510,1511,1511,1516",
         "rewards": [
           {
             "id": "9910",
@@ -276,9 +280,7 @@
             "count": 1
           }
         ],
-        "reward": "9910/1#9901/4",
-        "monster": "1510,1510,1511,1511,1516",
-        "battleBackground": "loren1,loren2"
+        "eventName": "txtEventWizardInvasionChallenge"
       },
       {
         "monsterWave": [
@@ -288,9 +290,11 @@
           "1511",
           "1517"
         ],
-        "stage": "204",
         "group": "1",
-        "eventName": "txtEventWizardInvasionChallenge",
+        "stage": "204",
+        "battleBackground": "loren1,loren2",
+        "reward": "9910/1#9901/5",
+        "monster": "1510,1510,1511,1511,1517",
         "rewards": [
           {
             "id": "9910",
@@ -323,14 +327,13 @@
             "count": 1
           }
         ],
-        "reward": "9910/1#9901/5",
-        "monster": "1510,1510,1511,1511,1517",
-        "battleBackground": "loren1,loren2"
+        "eventName": "txtEventWizardInvasionChallenge"
       }
     ]
   },
   {
     "group": "2",
+    "chance": 5,
     "stages": [
       {
         "monsterWave": [
@@ -340,9 +343,11 @@
           "1503",
           "1504"
         ],
-        "stage": "300",
         "group": "2",
-        "eventName": "txtEventMoonRabbitChallenge",
+        "stage": "300",
+        "battleBackground": "noria1,noria2",
+        "reward": "9910/1#9900/10000",
+        "monster": "1500,1501,1502,1503,1504",
         "rewards": [
           {
             "id": "9910",
@@ -355,9 +360,7 @@
             "count": 10000
           }
         ],
-        "reward": "9910/1#9900/10000",
-        "monster": "1500,1501,1502,1503,1504",
-        "battleBackground": "noria1,noria2"
+        "eventName": "txtEventMoonRabbitChallenge"
       },
       {
         "monsterWave": [
@@ -367,9 +370,11 @@
           "1503",
           "1505"
         ],
-        "stage": "301",
         "group": "2",
-        "eventName": "txtEventMoonRabbitChallenge",
+        "stage": "301",
+        "battleBackground": "noria1,noria2",
+        "reward": "9910/1#9900/20000",
+        "monster": "1500,1501,1502,1503,1505",
         "rewards": [
           {
             "id": "9910",
@@ -382,9 +387,7 @@
             "count": 20000
           }
         ],
-        "reward": "9910/1#9900/20000",
-        "monster": "1500,1501,1502,1503,1505",
-        "battleBackground": "noria1,noria2"
+        "eventName": "txtEventMoonRabbitChallenge"
       },
       {
         "monsterWave": [
@@ -394,9 +397,11 @@
           "1503",
           "1506"
         ],
-        "stage": "302",
         "group": "2",
-        "eventName": "txtEventMoonRabbitChallenge",
+        "stage": "302",
+        "battleBackground": "noria1,noria2",
+        "reward": "9910/1#9900/30000",
+        "monster": "1500,1501,1502,1503,1506",
         "rewards": [
           {
             "id": "9910",
@@ -409,9 +414,7 @@
             "count": 30000
           }
         ],
-        "reward": "9910/1#9900/30000",
-        "monster": "1500,1501,1502,1503,1506",
-        "battleBackground": "noria1,noria2"
+        "eventName": "txtEventMoonRabbitChallenge"
       },
       {
         "monsterWave": [
@@ -421,9 +424,11 @@
           "1503",
           "1507"
         ],
-        "stage": "303",
         "group": "2",
-        "eventName": "txtEventMoonRabbitChallenge",
+        "stage": "303",
+        "battleBackground": "noria1,noria2",
+        "reward": "9910/1#9900/40000",
+        "monster": "1500,1501,1502,1503,1507",
         "rewards": [
           {
             "id": "9910",
@@ -436,9 +441,7 @@
             "count": 40000
           }
         ],
-        "reward": "9910/1#9900/40000",
-        "monster": "1500,1501,1502,1503,1507",
-        "battleBackground": "noria1,noria2"
+        "eventName": "txtEventMoonRabbitChallenge"
       },
       {
         "monsterWave": [
@@ -448,9 +451,11 @@
           "1503",
           "1508"
         ],
-        "stage": "304",
         "group": "2",
-        "eventName": "txtEventMoonRabbitChallenge",
+        "stage": "304",
+        "battleBackground": "noria1,noria2",
+        "reward": "9910/1#9900/50000",
+        "monster": "1500,1501,1502,1503,1508",
         "rewards": [
           {
             "id": "9910",
@@ -463,9 +468,7 @@
             "count": 50000
           }
         ],
-        "reward": "9910/1#9900/50000",
-        "monster": "1500,1501,1502,1503,1508",
-        "battleBackground": "noria1,noria2"
+        "eventName": "txtEventMoonRabbitChallenge"
       }
     ]
   }
