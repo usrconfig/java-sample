@@ -110,15 +110,10 @@ public class DailyEventRequestHandler extends ZClientRequestHandler {
         params.putUtfString("group", group);
 
         HeroDailyEvent heroDailyEvent = dailyEventManager.getDailyEvent(playerId, group);
-        if (heroDailyEvent == null || heroDailyEvent.getChance() <= 0) {
-            QAntTracer.warn(this.getClass(), "Request finish match not enough chance");
-            return;
-        }
         if (!params.getBool("win")) {
             send(params, user);
             return;
         }
-        heroDailyEvent.decrChance();
         String nextStage = DailyEventConfig.getInstance().findNextStage(heroDailyEvent.getStageIdx());
         if (!nextStage.equals("x")) heroDailyEvent.setStageIdx(nextStage);
         dailyEventManager.save(heroDailyEvent);
