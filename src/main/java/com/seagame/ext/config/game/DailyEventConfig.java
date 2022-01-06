@@ -27,7 +27,7 @@ public class DailyEventConfig {
     private static DailyEventConfig instance;
     private Map<String, DailyEvent> events;
     DailyEventInfo dailyEventInfos;
-    Map<String, Collection<DailyEvent>> dailyEventMap;
+    Map<String, List<DailyEvent>> dailyEventMap;
     private int eventBonus;
 
 

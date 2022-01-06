@@ -18,7 +18,6 @@ public class HeroDailyEvent implements SerializableQAntType {
     private @Id
     String id;
     private String playerId;
-    private long heroId;
     public String eventGroup;
     public String stageIdx;
     public int chance;
@@ -29,14 +28,13 @@ public class HeroDailyEvent implements SerializableQAntType {
     }
 
 
-    public HeroDailyEvent(String playerId, long heroId, DailyEvent dailyEvent) {
-        this.id = genKey(playerId + heroId, dailyEvent.getStage());
+    public HeroDailyEvent(String playerId, DailyEvent dailyEvent) {
+        this.id = genKey(playerId, dailyEvent.getGroup());
         this.playerId = playerId;
-        this.heroId = heroId;
         this.eventGroup = dailyEvent.getGroup();
         this.stageIdx = dailyEvent.getStage();
-        this.chance = 1;
-        this.maxChance = 1;
+        this.chance = 5;
+        this.maxChance = 5;
     }
 
 

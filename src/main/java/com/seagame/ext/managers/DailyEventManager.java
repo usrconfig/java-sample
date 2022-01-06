@@ -143,7 +143,10 @@ public class DailyEventManager extends AbstractExtensionManager implements Initi
         if (events == null) {
             events = eventRepository.getAllEvent(gameHeroId);
             if (events.size() <= 0) {
-                events = eventConfig.getDailyEventInfos().getDailyChallenges().stream().map(group -> new HeroDailyEvent(gameHeroId, gameHero.getActiveHeroId(), group)).collect(Collectors.toList());
+                List<HeroDailyEvent> finalEvents = events;
+                eventConfig.getDailyEventMap().forEach((s, dailyEvents) -> {
+                    finalEvents.add(new HeroDailyEvent(gameHeroId, dailyEvents.get(0)));
+                });
                 eventRepository.saveAll(events);
             }
             dailyEventCashe.put(key, events);
@@ -163,7 +166,10 @@ public class DailyEventManager extends AbstractExtensionManager implements Initi
         if (events == null) {
             events = eventRepository.getAllEvent(userId);
             if (events.size() <= 0) {
-                events = eventConfig.getDailyEventInfos().getDailyChallenges().stream().map(dailyEvent -> new HeroDailyEvent(userId, gameHero.getActiveHeroId(), dailyEvent)).collect(Collectors.toList());
+                List<HeroDailyEvent> finalEvents = events;
+                eventConfig.getDailyEventMap().forEach((s, dailyEvents) -> {
+                    finalEvents.add(new HeroDailyEvent(gameHero.getId(), dailyEvents.get(0)));
+                });
             }
         }
         events.forEach(HeroDailyEvent::resetChance);
