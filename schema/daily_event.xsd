@@ -17,8 +17,10 @@
             <xs:attribute name="Stage" type="xs:string"/>
             <xs:attribute name="Group" type="xs:string"/>
             <xs:attribute name="EventName" type="xs:string"/>
+            <xs:attribute name="NextStage" type="xs:string"/>
             <xs:attribute name="BattleBackground" type="xs:string"/>
             <xs:attribute name="Monster" type="xs:string"/>
+            <xs:attribute name="Chance" type="xs:int"/>
             <xs:attribute name="Reward" type="xs:string"/>
         </xs:complexType>
     </xs:element>

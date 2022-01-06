@@ -101,4 +101,8 @@ public class DailyEventConfig {
     public boolean checkEvent(String event) {
         return events.containsKey(event);
     }
+
+    public String findNextStage(String stageIdx) {
+        return events.get(stageIdx).getNextStage();
+    }
 }

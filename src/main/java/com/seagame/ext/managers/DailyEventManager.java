@@ -154,8 +154,8 @@ public class DailyEventManager extends AbstractExtensionManager implements Initi
         return events;
     }
 
-    public HeroDailyEvent getDailyEvent(String gameHeroId, String stageIdx) {
-        return eventRepository.getEvent(gameHeroId, stageIdx);
+    public HeroDailyEvent getDailyEvent(String gameHeroId, String group) {
+        return eventRepository.getEvent(gameHeroId, group);
     }
 
 

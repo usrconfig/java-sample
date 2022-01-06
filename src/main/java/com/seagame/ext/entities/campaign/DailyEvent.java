@@ -25,10 +25,14 @@ public class DailyEvent {
     private String Group;
     @JacksonXmlProperty(localName = "EventName", isAttribute = true)
     private String EventName;
+    @JacksonXmlProperty(localName = "NextStage", isAttribute = true)
+    private String NextStage;
     @JacksonXmlProperty(localName = "BattleBackground", isAttribute = true)
     private String BattleBackground;
     @JacksonXmlProperty(localName = "Monster", isAttribute = true)
     private String Monster;
+    @JacksonXmlProperty(localName = "Chance", isAttribute = true)
+    private String Chance;
     @JacksonXmlProperty(localName = "Reward", isAttribute = true)
     private String Reward;
 

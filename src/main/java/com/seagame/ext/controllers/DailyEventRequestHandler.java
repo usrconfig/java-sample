@@ -109,7 +109,7 @@ public class DailyEventRequestHandler extends ZClientRequestHandler {
         params.putUtfString("event", event);
         params.putUtfString("group", group);
 
-        HeroDailyEvent heroDailyEvent = dailyEventManager.getDailyEvent(playerId, event);
+        HeroDailyEvent heroDailyEvent = dailyEventManager.getDailyEvent(playerId, group);
         if (heroDailyEvent == null || heroDailyEvent.getChance() <= 0) {
             QAntTracer.warn(this.getClass(), "Request finish match not enough chance");
             return;
@@ -119,6 +119,8 @@ public class DailyEventRequestHandler extends ZClientRequestHandler {
             return;
         }
         heroDailyEvent.decrChance();
+        String nextStage = DailyEventConfig.getInstance().findNextStage(heroDailyEvent.getStageIdx());
+        if (!nextStage.equals("x")) heroDailyEvent.setStageIdx(nextStage);
         dailyEventManager.save(heroDailyEvent);
         processReward(params, user, event);
         send(params, user);

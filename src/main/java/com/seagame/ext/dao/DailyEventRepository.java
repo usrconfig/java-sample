@@ -13,8 +13,8 @@ public interface DailyEventRepository extends MongoRepository<HeroDailyEvent, St
     @Query("{'playerId' : ?0}")
     List<HeroDailyEvent> getAllEvent(String playerId);
 
-    @Query("{'playerId' : ?0, 'stageIdx' : ?1}")
-    HeroDailyEvent getEvent(String playerId, String stageIdx);
+    @Query("{'playerId' : ?0, 'eventGroup' : ?1}")
+    HeroDailyEvent getEvent(String playerId, String eventGroup);
 
 
     @Query(value = "{ playerId: ?0}", delete = true)
