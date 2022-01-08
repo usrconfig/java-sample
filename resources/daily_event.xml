@@ -5,16 +5,16 @@
 		<DailyEvent Stage="101" Group="0" EventName="txtEventDragonChallenge" NextStage="102" BattleBackground="devias1,devias2" Monster="1520,1520,1520,1520,1522" Chance="1" Reward="9910/1#9909/1"/>
 		<DailyEvent Stage="102" Group="0" EventName="txtEventDragonChallenge" NextStage="103" BattleBackground="devias1,devias2" Monster="1520,1520,1520,1520,1523" Chance="1" Reward="9910/1#9909/2"/>
 		<DailyEvent Stage="103" Group="0" EventName="txtEventDragonChallenge" NextStage="104" BattleBackground="devias1,devias2" Monster="1520,1520,1520,1520,1524" Chance="1" Reward="9910/1#9909/2"/>
-		<DailyEvent Stage="104" Group="0" EventName="txtEventDragonChallenge" NextStage="x" BattleBackground="devias1,devias2" Monster="1520,1520,1520,1520,1525" Chance="1" Reward="9910/1#9909/3"/>
+		<DailyEvent Stage="104" Group="0" EventName="txtEventDragonChallenge" NextStage="x" BattleBackground="devias1,devias2" Monster="1520,1520,1525,1520,1520" Chance="1" Reward="9910/1#9909/3"/>
 		<DailyEvent Stage="200" Group="1" EventName="txtEventWizardInvasionChallenge" NextStage="201" BattleBackground="loren1,loren2" Monster="1510,1510,1511,1511,1513" Chance="1" Reward="9910/1#9901/1"/>
 		<DailyEvent Stage="201" Group="1" EventName="txtEventWizardInvasionChallenge" NextStage="202" BattleBackground="loren1,loren2" Monster="1510,1510,1511,1511,1514" Chance="1" Reward="9910/1#9901/2"/>
 		<DailyEvent Stage="202" Group="1" EventName="txtEventWizardInvasionChallenge" NextStage="203" BattleBackground="loren1,loren2" Monster="1510,1510,1511,1511,1515" Chance="1" Reward="9910/1#9901/3"/>
 		<DailyEvent Stage="203" Group="1" EventName="txtEventWizardInvasionChallenge" NextStage="204" BattleBackground="loren1,loren2" Monster="1510,1510,1511,1511,1516" Chance="1" Reward="9910/1#9901/4"/>
-		<DailyEvent Stage="204" Group="1" EventName="txtEventWizardInvasionChallenge" NextStage="x" BattleBackground="loren1,loren2" Monster="1510,1510,1511,1511,1517" Chance="1" Reward="9910/1#9901/5"/>
+		<DailyEvent Stage="204" Group="1" EventName="txtEventWizardInvasionChallenge" NextStage="x" BattleBackground="loren1,loren2" Monster="1510,1510,1517,1511,1511" Chance="1" Reward="9910/1#9901/5"/>
 		<DailyEvent Stage="300" Group="2" EventName="txtEventMoonRabbitChallenge" NextStage="301" BattleBackground="noria1,noria2" Monster="1500,1501,1502,1503,1504" Chance="1" Reward="9910/1#9900/10000"/>
 		<DailyEvent Stage="301" Group="2" EventName="txtEventMoonRabbitChallenge" NextStage="302" BattleBackground="noria1,noria2" Monster="1500,1501,1502,1503,1505" Chance="1" Reward="9910/1#9900/20000"/>
 		<DailyEvent Stage="302" Group="2" EventName="txtEventMoonRabbitChallenge" NextStage="303" BattleBackground="noria1,noria2" Monster="1500,1501,1502,1503,1506" Chance="1" Reward="9910/1#9900/30000"/>
 		<DailyEvent Stage="303" Group="2" EventName="txtEventMoonRabbitChallenge" NextStage="304" BattleBackground="noria1,noria2" Monster="1500,1501,1502,1503,1507" Chance="1" Reward="9910/1#9900/40000"/>
-		<DailyEvent Stage="304" Group="2" EventName="txtEventMoonRabbitChallenge" NextStage="x" BattleBackground="noria1,noria2" Monster="1500,1501,1502,1503,1508" Chance="1" Reward="9910/1#9900/50000"/>
+		<DailyEvent Stage="304" Group="2" EventName="txtEventMoonRabbitChallenge" NextStage="x" BattleBackground="noria1,noria2" Monster="1500,1501,1508,1502,1503" Chance="1" Reward="9910/1#9900/50000"/>
 	</DailyChallenges>
 </DailyEventInfo>
