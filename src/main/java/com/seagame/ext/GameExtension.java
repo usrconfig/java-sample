@@ -52,14 +52,14 @@ public class GameExtension extends QAntExtension implements ExtensionEvent {
         addRequestHandler(CMD_MAIL, MailRequestHandler.class);
         addRequestHandler(CMD_USER, PlayerRequestHandler.class);
         addRequestHandler(CMD_ARENA, ArenaRequestHandler.class);
+        addRequestHandler(CMD_CHAT, ChatRequestHandler.class);
+        addRequestHandler(CMD_FRIEND, FriendRequestHandler.class);
 
 //        addRequestHandler(CMD_SETTING, SettingRequestHandler.class);
 //        addRequestHandler(CMD_QUEST, QuestRequestHandler.class);
 //        addRequestHandler(CMD_SHOP, ShopRequestHandler.class);
-//        addRequestHandler(CMD_CHAT, ChatRequestHandler.class);
 //        addRequestHandler(CMD_COMMON, CommonRequestHandler.class);
 //        addRequestHandler(CMD_GIFT_EVENTS, GiftRequestHandler.class);
-//        addRequestHandler(CMD_FRIEND, FriendRequestHandler.class);
 //        addRequestHandler(CMD_PAYMENT, PaymentRequestHandler.class);
 //        addRequestHandler(CMD_GUILD, GuildRequestHandler.class);
 //        addRequestHandler(CMD_GM, GameMasterRequestHandler.class);
