@@ -247,7 +247,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 
 //                testPageHero();
 
-                testDailyEvent();
+//                testDailyEvent();
             }
         }, 3000, 100000000);
 
