@@ -34,7 +34,6 @@ public class DailyEventManager extends AbstractExtensionManager implements Initi
 
     private static final long TWO_HOURS = 2 * 60 * 60 * 1000;
 
-    private Map<String, List<HeroDailyEvent>> dailyEventCashe;
     private @Autowired
     DailyEventRepository eventRepository;
     private @Autowired
@@ -45,7 +44,6 @@ public class DailyEventManager extends AbstractExtensionManager implements Initi
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        dailyEventCashe = new HashMap<>();
     }
 
 
@@ -139,17 +137,12 @@ public class DailyEventManager extends AbstractExtensionManager implements Initi
     public List<HeroDailyEvent> getDailyEvents(String gameHeroId) {
         Player gameHero = playerManager.getPlayer(gameHeroId);
         String key = gameHeroId + gameHero.getActiveHeroId();
-        List<HeroDailyEvent> events = dailyEventCashe.get(key);
-        if (events == null) {
-            events = eventRepository.getAllEvent(gameHeroId);
-            if (events.size() <= 0) {
-                List<HeroDailyEvent> finalEvents = events;
-                eventConfig.getDailyEventMap().forEach((s, dailyEvents) -> {
-                    finalEvents.add(new HeroDailyEvent(gameHeroId, dailyEvents.get(0)));
-                });
-                eventRepository.saveAll(events);
-            }
-            dailyEventCashe.put(key, events);
+        List<HeroDailyEvent> events = eventRepository.getAllEvent(gameHeroId);
+        if (events.size() <= 0) {
+            eventConfig.getDailyEventMap().forEach((s, dailyEvents) -> {
+                events.add(new HeroDailyEvent(gameHeroId, dailyEvents.get(0)));
+            });
+            eventRepository.saveAll(events);
         }
         return events;
     }
@@ -162,19 +155,14 @@ public class DailyEventManager extends AbstractExtensionManager implements Initi
     public List<HeroDailyEvent> resetDailyEvents(String userId) {
         Player gameHero = playerManager.getPlayer(userId);
         String key = userId + gameHero.getActiveHeroId();
-        List<HeroDailyEvent> events = dailyEventCashe.get(key);
-        if (events == null) {
-            events = eventRepository.getAllEvent(userId);
-            if (events.size() <= 0) {
-                List<HeroDailyEvent> finalEvents = events;
-                eventConfig.getDailyEventMap().forEach((s, dailyEvents) -> {
-                    finalEvents.add(new HeroDailyEvent(gameHero.getId(), dailyEvents.get(0)));
-                });
-            }
+        List<HeroDailyEvent> events = eventRepository.getAllEvent(userId);
+        if (events.size() <= 0) {
+            List<HeroDailyEvent> finalEvents = events;
+            eventConfig.getDailyEventMap().forEach((s, dailyEvents) -> {
+                finalEvents.add(new HeroDailyEvent(gameHero.getId(), dailyEvents.get(0)));
+            });
         }
         events.forEach(HeroDailyEvent::resetChance);
-
-        dailyEventCashe.put(key, events);
         return eventRepository.saveAll(events);
     }
 
