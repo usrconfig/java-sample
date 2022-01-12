@@ -45,6 +45,7 @@ public class HeroDailyEvent implements SerializableQAntType {
 
     public void decrChance() {
         chance--;
+        chance = Math.max(0, chance);
     }
 
     public void resetChance() {
