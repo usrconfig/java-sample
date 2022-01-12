@@ -928,6 +928,28 @@
     "cooldown": 0
   },
   {
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"fire\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
+    "specs": {
+      "targets": {
+        "group": "allied",
+        "element": "fire"
+      },
+      "effects": [
+        {
+          "type": "percentATK",
+          "value": 20
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtGoldenDragonKingLeader",
+    "type": "leader",
+    "id": "15241",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
     "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"earth\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
     "specs": {
       "targets": {
@@ -1255,6 +1277,27 @@
     "cooldown": 3
   },
   {
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHP\",\"value\":30}]}",
+    "specs": {
+      "targets": {
+        "group": "self"
+      },
+      "effects": [
+        {
+          "type": "percentHP",
+          "value": 30
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtGoldenDragonKingPassive",
+    "type": "passive",
+    "id": "15244",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
     "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"earth\"},\"effects\":[{\"type\":\"percentDEF\",\"value\":10}]}",
     "specs": {
       "targets": {
@@ -1310,6 +1353,34 @@
     "cooldown": 5
   },
   {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1.6}]},{\"type\":\"stun\",\"turn\":1}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 3
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.6
+        }
+      ]
+    },
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitDragonClaw"
+    ],
+    "name": "txtGoldenDragonKingAuto",
+    "type": "auto",
+    "id": "15243",
+    "ranged": false,
+    "cooldown": 3
+  },
+  {
     "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentATK\",\"value\":15}]}",
     "specs": {
       "targets": {
@@ -1351,6 +1422,39 @@
     "id": "15121",
     "ranged": false,
     "cooldown": 0
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":5},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"decover\",\"turn\":3}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 5
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.5
+        },
+        {
+          "type": "decover",
+          "turn": 3
+        }
+      ]
+    },
+    "soundFXarr": [
+      "cast1",
+      "twistingslash1"
+    ],
+    "hitFXarr": [
+      "hitTornadoFire"
+    ],
+    "name": "txtGoldenDragonKingActive",
+    "type": "active",
+    "id": "15242",
+    "ranged": false,
+    "cooldown": 5
   },
   {
     "hitCount": "1",
@@ -1581,6 +1685,61 @@
     "name": "txtWhiteWizard2Leader",
     "type": "leader",
     "id": "15131",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":5},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"decover\",\"turn\":3}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 5
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.5
+        },
+        {
+          "type": "decover",
+          "turn": 3
+        }
+      ]
+    },
+    "soundFXarr": [
+      "cast1",
+      "twistingslash1"
+    ],
+    "hitFXarr": [
+      "hitTornadoFire"
+    ],
+    "name": "txtGoldenDragonKingActive",
+    "type": "active",
+    "id": "15252",
+    "ranged": false,
+    "cooldown": 5
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"fire\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
+    "specs": {
+      "targets": {
+        "group": "allied",
+        "element": "fire"
+      },
+      "effects": [
+        {
+          "type": "percentATK",
+          "value": 20
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtGoldenDragonKingLeader",
+    "type": "leader",
+    "id": "15251",
     "ranged": false,
     "cooldown": 0
   },
@@ -1818,6 +1977,27 @@
     "cooldown": 3
   },
   {
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHP\",\"value\":30}]}",
+    "specs": {
+      "targets": {
+        "group": "self"
+      },
+      "effects": [
+        {
+          "type": "percentHP",
+          "value": 30
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtGoldenDragonKingPassive",
+    "type": "passive",
+    "id": "15254",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
     "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"earth\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
     "specs": {
       "targets": {
@@ -1871,6 +2051,34 @@
     "id": "15132",
     "ranged": false,
     "cooldown": 5
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1.6}]},{\"type\":\"stun\",\"turn\":1}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 3
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.6
+        }
+      ]
+    },
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitDragonClaw"
+    ],
+    "name": "txtGoldenDragonKingAuto",
+    "type": "auto",
+    "id": "15253",
+    "ranged": false,
+    "cooldown": 3
   },
   {
     "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentATK\",\"value\":15}]}",
@@ -3111,6 +3319,27 @@
     "cooldown": 3
   },
   {
+    "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentHP\",\"value\":30}]}",
+    "specs": {
+      "targets": {
+        "group": "self"
+      },
+      "effects": [
+        {
+          "type": "percentHP",
+          "value": 30
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtGoldenDragonKingPassive",
+    "type": "passive",
+    "id": "15234",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
     "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"earth\"},\"effects\":[{\"type\":\"percentATK\",\"value\":15}]}",
     "specs": {
       "targets": {
@@ -3200,6 +3429,34 @@
     "cooldown": 5
   },
   {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":3},\"effects\":[{\"type\":\"damage\",\"multi\":1.6}]},{\"type\":\"stun\",\"turn\":1}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 3
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.6
+        }
+      ]
+    },
+    "soundFXarr": [
+      "claw1"
+    ],
+    "hitFXarr": [
+      "hitDragonClaw"
+    ],
+    "name": "txtGoldenDragonKingAuto",
+    "type": "auto",
+    "id": "15233",
+    "ranged": false,
+    "cooldown": 3
+  },
+  {
     "tempFormat": "{\"targets\":{\"group\":\"self\"},\"effects\":[{\"type\":\"percentATK\",\"value\":10}]}",
     "specs": {
       "targets": {
@@ -3241,6 +3498,39 @@
     "id": "15111",
     "ranged": false,
     "cooldown": 0
+  },
+  {
+    "hitCount": "1",
+    "hitPosition": "center",
+    "tempFormat": "{\"targets\":{\"group\":\"enemy\",\"count\":5},\"effects\":[{\"type\":\"damage\",\"multi\":1.5},{\"type\":\"decover\",\"turn\":3}]}",
+    "specs": {
+      "targets": {
+        "group": "enemy",
+        "count": 5
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "multi": 1.5
+        },
+        {
+          "type": "decover",
+          "turn": 3
+        }
+      ]
+    },
+    "soundFXarr": [
+      "cast1",
+      "twistingslash1"
+    ],
+    "hitFXarr": [
+      "hitTornadoFire"
+    ],
+    "name": "txtGoldenDragonKingActive",
+    "type": "active",
+    "id": "15232",
+    "ranged": false,
+    "cooldown": 5
   },
   {
     "hitCount": "1",
@@ -3292,6 +3582,28 @@
     "name": "txtNinjaPassive",
     "type": "passive",
     "id": "10184",
+    "ranged": false,
+    "cooldown": 0
+  },
+  {
+    "tempFormat": "{\"targets\":{\"group\":\"allied\",\"element\":\"fire\"},\"effects\":[{\"type\":\"percentATK\",\"value\":20}]}",
+    "specs": {
+      "targets": {
+        "group": "allied",
+        "element": "fire"
+      },
+      "effects": [
+        {
+          "type": "percentATK",
+          "value": 20
+        }
+      ]
+    },
+    "soundFXarr": [],
+    "hitFXarr": [],
+    "name": "txtGoldenDragonKingLeader",
+    "type": "leader",
+    "id": "15231",
     "ranged": false,
     "cooldown": 0
   },
