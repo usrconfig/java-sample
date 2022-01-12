@@ -166,6 +166,7 @@ public class DailyEventRequestHandler extends ZClientRequestHandler {
         String playerId = user.getName();
         HeroDailyEvent heroDailyEvent = dailyEventManager.getDailyEvent(playerId, b.getGroup());
         heroDailyEvent.decrChance();
+        dailyEventManager.save(heroDailyEvent);
         MatchInfo matchInfo = new MatchInfo(playerId, b.getStage(), b.getGroup());
         IQAntObject buildMatchInfo = matchInfo.buildMatchInfo();
         params.putQAntObject("match", buildMatchInfo);
