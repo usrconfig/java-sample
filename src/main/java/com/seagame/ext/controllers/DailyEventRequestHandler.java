@@ -118,6 +118,7 @@ public class DailyEventRequestHandler extends ZClientRequestHandler {
         if (!nextStage.equals("x")) heroDailyEvent.setStageIdx(nextStage);
         dailyEventManager.save(heroDailyEvent);
         processReward(params, user, event);
+        params.putQAntObject("eventInfo", heroDailyEvent.build());
         send(params, user);
         try {
             questSystem.notifyObservers(CollectionTask.init(user.getName(), "dailyevent", 1));
