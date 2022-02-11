@@ -38,6 +38,10 @@ public class RandomRangeUtil {
         return new Random().ints(0, maxValue).distinct().limit(randomNo).boxed().collect(Collectors.toList());
     }
 
+    public static Collection<Integer> nRandomInRange(int maxValue, int randomNo) {
+        return new Random().ints(0, maxValue).limit(randomNo).boxed().collect(Collectors.toList());
+    }
+
 
     public static int randomNPercent(List<Integer> luckyPointList, int totalRate) {
         int randomPoint = RandomUtils.nextInt(totalRate) + 1;

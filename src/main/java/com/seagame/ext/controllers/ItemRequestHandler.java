@@ -12,18 +12,22 @@ import com.seagame.ext.entities.hero.HeroClass;
 import com.seagame.ext.entities.item.HeroEquipment;
 import com.seagame.ext.entities.item.HeroItem;
 import com.seagame.ext.entities.item.ItemBase;
+import com.seagame.ext.entities.item.RewardBase;
 import com.seagame.ext.exception.GameErrorCode;
 import com.seagame.ext.exception.UseItemException;
 import com.seagame.ext.managers.HeroClassManager;
 import com.seagame.ext.managers.HeroItemManager;
 import com.seagame.ext.managers.PlayerManager;
+import com.seagame.ext.services.AutoIncrementService;
 import org.springframework.data.domain.Page;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 import static com.seagame.ext.exception.GameErrorCode.*;
 
@@ -44,11 +48,13 @@ public class ItemRequestHandler extends ZClientRequestHandler {
     private HeroItemManager heroItemManager;
     private PlayerManager playerManager;
     private HeroClassManager heroClassManager;
+    private AutoIncrementService autoIncrementService;
 
     public ItemRequestHandler() {
         heroItemManager = ExtApplication.getBean(HeroItemManager.class);
         playerManager = ExtApplication.getBean(PlayerManager.class);
         heroClassManager = ExtApplication.getBean(HeroClassManager.class);
+        autoIncrementService = ExtApplication.getBean(AutoIncrementService.class);
     }
 
 
@@ -117,7 +123,41 @@ public class ItemRequestHandler extends ZClientRequestHandler {
                 return;
             }
             useItems.forEach(heroItem -> useMap.put(heroItem.getId(), heroItem.getNo()));
-            Collection<HeroItem> updateItems = heroItemManager.useItems(user, useMap, params);
+
+            Collection<HeroItem> collection = heroItemManager.useItemsWithIds(user, useMap);
+            List<RewardBase> refund = new ArrayList<>();
+            collection.forEach(heroItem -> heroItemManager.openItem(heroItem.getIndex(), useMap.get(heroItem.getId()), refund));
+
+            Map<String, Integer> refundFinal = new ConcurrentHashMap<>();
+            List<HeroClass> heroes = new ArrayList<>();
+            refund.forEach(sRewardBase -> {
+                if (sRewardBase.getType().equals("hero")) {
+                    HeroClass heroClass = new HeroClass(sRewardBase.getID(), sRewardBase.getLevel());
+                    heroClass.setRank(sRewardBase.getRank());
+                    heroClass.setPlayerId("nf1#1001");
+                    heroClass.setId(autoIncrementService.genHeroId());
+                    heroes.add(heroClass);
+                } else {
+                    refundFinal.put(sRewardBase.getID(), sRewardBase.getCount());
+                }
+            });
+            if (heroes.size() > 0) {
+                heroClassManager.save(heroes);
+                QAntArray updateArray = QAntArray.newInstance();
+                heroes.forEach(hero -> updateArray.addQAntObject(hero.buildInfo()));
+                params.putQAntArray("heroes", updateArray);
+            }
+
+
+            Collection<HeroItem> items1 = ItemConfig.getInstance().convertToHeroItem(refundFinal);
+            ItemConfig.getInstance().buildRewardsReceipt(params, refundFinal.keySet().stream().map(heroItem -> heroItem + "/" + refundFinal.get(heroItem)).collect(Collectors.joining("#")));
+            Collection<HeroItem> updateItems = heroItemManager.addItems(user.getName(), items1);
+            updateItems.addAll(collection);
+
+            Player player = playerManager.getPlayer(user.getName());
+            playerManager.updateGameHero(player);
+
+
             heroItemManager.save(updateItems);
             heroItemManager.notifyAssetChange(user, updateItems);
             ItemConfig.getInstance().buildUpdateRewardsReceipt(params, updateItems);

@@ -335,22 +335,6 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
         return heroItems;
     }
 
-    public Collection<HeroItem> useItems(QAntUser user, Map<Long, Integer> items, IQAntObject params) throws UseItemException {
-        Collection<HeroItem> collection = this.useItemsWithIds(user, items);
-        Map<String, Integer> refund = new ConcurrentHashMap<>();
-
-        collection.forEach(heroItem -> openItem(heroItem.getIndex(), items.get(heroItem.getId()), refund));
-
-        Collection<HeroItem> items1 = ItemConfig.getInstance().convertToHeroItem(refund);
-        ItemConfig.getInstance().buildRewardsReceipt(params, refund.keySet().stream().map(heroItem -> heroItem + "/" + refund.get(heroItem)).collect(Collectors.joining("#")));
-        Collection<HeroItem> heroItems = addItems(user.getName(), items1);
-        heroItems.addAll(collection);
-
-        Player player = playerManager.getPlayer(user.getName());
-        playerManager.updateGameHero(player);
-        return heroItems;
-    }
-
     public Collection<HeroItem> openEgg(QAntUser user, Map<Long, Integer> items, IQAntObject params) throws UseItemException {
         Collection<HeroItem> collection = this.useItemsWithIds(user, items);
         Map<String, Integer> refund = new ConcurrentHashMap<>();
@@ -363,13 +347,11 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
         return heroItems;
     }
 
-    private void openItem(String index, int itemNo, Map<String, Integer> refund) {
+    public void openItem(String index, int itemNo, List<RewardBase> refund) {
         ItemBase item = itemConfig.getItem(index);
-        String rewards = ItemConfig.getInstance().getRewardBaseMap().get(index).stream().map(RewardBase::getID).collect(Collectors.joining("#"));
+        List<RewardBase> rewardBases = ItemConfig.getInstance().getRewardBaseMap().get(index);
         if (item != null) {
-            for (int i = 1; i <= itemNo; i++) {
-                ItemConfig.getInstance().convertToMap(refund, RandomRangeUtil.randomReward(rewards, 1));
-            }
+            RandomRangeUtil.nRandomInRange(rewardBases.size(), itemNo).forEach(integer -> refund.add(rewardBases.get(integer)));
         }
     }
 
