@@ -287,6 +287,7 @@ public class ItemConfig implements NetworkConstant {
                     case ITEM_REWARDS:
                     case ITEM_POINT:
                     case ITEM_MATERIAL:
+                    case ITEM_EGG:
                         HeroConsumeItem heroConsumeAble = new HeroConsumeItem(itemBase);
                         heroConsumeAble.setNo(value);
                         itemList.add(heroConsumeAble);

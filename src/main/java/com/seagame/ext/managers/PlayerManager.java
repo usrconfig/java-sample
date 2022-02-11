@@ -572,6 +572,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
         ItemConfig.getInstance().getItems().forEach(itemBase -> {
             HeroItem heroItem = null;
             switch (itemBase.getType()) {
+                case ITEM_EGG://material
                 case ITEM_TICKET://material
                 case ITEM_POINT://material
                 case ITEM_REWARDS://material

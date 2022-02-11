@@ -390,7 +390,7 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
         return heroItemRep.getAllByPlayerIdAndIndexIsIn(gameHeroId, idsOn);
     }
 
-    public Collection<HeroItem> getItemsByIndex(String gameHeroId, long heroId, String index) {
+    public Collection<HeroItem> getItemsByIndex(String gameHeroId, String index) {
         return heroItemRep.getAllByPlayerIdAndIndex(gameHeroId, index);
     }
 
