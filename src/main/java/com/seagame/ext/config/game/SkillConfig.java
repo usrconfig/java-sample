@@ -5,7 +5,6 @@ import com.seagame.ext.entities.hero.skill.SkillBase;
 import com.seagame.ext.entities.hero.skill.SkillInfoBase;
 import com.seagame.ext.entities.hero.skill.SkillLevelBase;
 import com.seagame.ext.entities.hero.skill.SkillUpgradeBase;
-import com.seagame.ext.entities.item.RewardBase;
 import com.seagame.ext.util.SourceFileHelper;
 import lombok.Getter;
 

@@ -14,6 +14,7 @@ import com.seagame.ext.entities.Player;
 import com.seagame.ext.entities.item.HeroEquipment;
 import com.seagame.ext.entities.item.HeroItem;
 import com.seagame.ext.entities.item.ItemBase;
+import com.seagame.ext.entities.item.RewardBase;
 import com.seagame.ext.exception.GameException;
 import com.seagame.ext.exception.UseItemException;
 import com.seagame.ext.services.AutoIncrementService;
@@ -338,7 +339,7 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
         Collection<HeroItem> collection = this.useItemsWithIds(user, items);
         Map<String, Integer> refund = new ConcurrentHashMap<>();
 
-        int totalExp = collection.stream().mapToInt(heroItem -> openItem(heroItem.getIndex(), items.get(heroItem.getId()), refund)).sum();
+        collection.forEach(heroItem -> openItem(heroItem.getIndex(), items.get(heroItem.getId()), refund));
 
         Collection<HeroItem> items1 = ItemConfig.getInstance().convertToHeroItem(refund);
         ItemConfig.getInstance().buildRewardsReceipt(params, refund.keySet().stream().map(heroItem -> heroItem + "/" + refund.get(heroItem)).collect(Collectors.joining("#")));
@@ -362,85 +363,16 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
         return heroItems;
     }
 
-
-    private int openItem(String index, int itemNo, Map<String, Integer> refund) {
+    private void openItem(String index, int itemNo, Map<String, Integer> refund) {
         ItemBase item = itemConfig.getItem(index);
-        int totalGold = 0;
-        int totalExp = 0;
-        int nTime = itemNo;
-
+        String rewards = ItemConfig.getInstance().getRewardBaseMap().get(index).stream().map(RewardBase::getID).collect(Collectors.joining("#"));
         if (item != null) {
-            return totalExp;
-        }
-        return 0;
-    }
-
-    private String openChest(String rewards, String rates) {
-        try {
-            Map<String, Integer> refund = new ConcurrentHashMap<>();
-            String s = RandomRangeUtil.randomDroprate(rewards, rates, 1, 1000);
-            if (!Utils.isNullOrEmpty(s)) {
-                String[] reward = s.split("/");
-                String loot = reward[0];
-                int value = Integer.parseInt(reward[1]);
-                if (value > 0) {
-                    for (int i = 0; i < value; i++) {
-                        ItemConfig.getInstance().convertToMap(refund, openLoot(loot));
-                    }
-                }
+            for (int i = 1; i <= itemNo; i++) {
+                ItemConfig.getInstance().convertToMap(refund, RandomRangeUtil.randomReward(rewards, 1));
             }
-            return refund.keySet().stream().map(s1 -> s1 + "/" + refund.get(s1)).collect(Collectors.joining("#"));
-        } catch (Exception e) {
-            e.printStackTrace();
         }
-        return "";
     }
 
-    private String openLoot(String loot) {
-//        Map<String, Integer> refund = new ConcurrentHashMap<>();
-//        LootBase lootBase = ItemConfig.getInstance().getLootMap().get(loot);
-//        String s = RandomRangeUtil.randomDroprate(lootBase.getRewardBox(), lootBase.getOpenRate(), 1, 1000);
-//        if (!ItemConfig.isNullOrEmpty(s)) {
-//            String[] reward = s.split("/");
-//            String box = reward[0];
-//            int value = Integer.parseInt(reward[1]);
-//            if (value > 0) {
-//                for (int i = 0; i < value; i++) {
-//                    ItemConfig.getInstance().convertToMap(refund, openBox(box));
-//                }
-//            }
-//        }
-//        return refund.keySet().stream().map(s1 -> s1 + "/" + refund.get(s1)).collect(Collectors.joining("#"));
-        return loot;
-    }
-
-//    private String openBox(String box) {
-//        Map<String, Integer> refund = new ConcurrentHashMap<>();
-//        BoxBase lootBase = ItemConfig.getInstance().getBoxMap().get(box);
-//        String s = RandomRangeUtil.randomDroprate(lootBase.getReward(), lootBase.getOpenRate(), 1, 1000);
-//        ItemConfig.getInstance().convertToMap(refund, s);
-//        return refund.keySet().stream().map(s1 -> s1 + "/" + refund.get(s1)).collect(Collectors.joining("#"));
-//    }
-
-//    public Collection<HeroItem> useItems(QAntUser user, Map<Long, Integer> items) throws UseItemException {
-//        Collection<HeroItem> collection = this.useItemsWithIds(user, items);
-//        Map<String, Integer> refund = new ConcurrentHashMap<>();
-//        collection.forEach(heroItem -> {
-//            ItemBase item = itemConfig.getItem(heroItem.getIndex());
-//            if (item instanceof ConsumeItemBase) {
-//                ConsumeItemBase giftItemBase = (ConsumeItemBase) item;
-//                int itemNo = items.get(heroItem.getId());
-//                String reward = giftItemBase.getRewards();
-//                if (!StringUtil.isNullOrEmpty(reward))
-//                    for (int i = 1; i <= itemNo; i++) {
-//                        ItemConfig.getInstance().convertToMap(refund, RandomRangeUtil.randomRewardV2(reward, 1));
-//                    }
-//            }
-//        });
-//        Collection<HeroItem> heroItems = addItems(user.getName(), ItemConfig.getInstance().convertToHeroItem(refund));
-//        heroItems.addAll(collection);
-//        return heroItems;
-//    }
 
     public Collection<HeroItem> getItemsByIds(String gameHeroId, Collection<Long> idsOn) {
         return heroItemRep.getItemByItemId(gameHeroId, idsOn);
