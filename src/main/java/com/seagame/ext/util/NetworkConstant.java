@@ -66,7 +66,8 @@ public interface NetworkConstant {
     String CONSUMABLE_KEY = "ic";
     String EQUIP_KEY = "vk";
 
-    String Z_RUBY = "as9999";
+    String WOL = "9999";
+    String KEN = "9900";
 
     String ITEM_CURRENCY = "currency";
     String ITEM_REWARDS = "rewards";

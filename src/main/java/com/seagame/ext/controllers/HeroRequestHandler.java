@@ -22,6 +22,7 @@ import com.seagame.ext.managers.HeroClassManager;
 import com.seagame.ext.managers.HeroItemManager;
 import com.seagame.ext.managers.PlayerManager;
 import com.seagame.ext.services.AutoIncrementService;
+import com.seagame.ext.util.RandomRangeUtil;
 import org.springframework.data.domain.Page;
 
 import java.util.ArrayList;
@@ -92,8 +93,7 @@ public class HeroRequestHandler extends ZClientRequestHandler {
             responseError(user, GameErrorCode.LACK_OF_INFOMATION);
             return;
         }
-        int levelMax = HeroConfig.getInstance().getMaxLevel(heroWithId.getCharIndex(), heroWithId.getRank());
-        if (heroWithId.getLevel() >= levelMax) {
+        if (isMaxLevel(heroWithId)) {
             responseError(user, GameErrorCode.LEVEL_MAX_NEED_RANK_UP);
             return;
         }
@@ -115,6 +115,10 @@ public class HeroRequestHandler extends ZClientRequestHandler {
         heroClassManager.save(heroWithId);
         params.putQAntObject("hero", heroWithId.buildInfo());
         send(params, user);
+    }
+
+    private boolean isMaxLevel(HeroClass heroWithId) {
+        return heroWithId.getLevel() >= HeroConfig.getInstance().getMaxLevel(heroWithId.getCharIndex(), heroWithId.getRank());
     }
 
     private void skillUpHero(QAntUser user, IQAntObject params) {
@@ -160,21 +164,31 @@ public class HeroRequestHandler extends ZClientRequestHandler {
 
     private void rankUpHero(QAntUser user, IQAntObject params) {
         long id = params.getLong("id");
+        long useHero = params.getLong("useHero");
+        long useItem = params.getLong("useItem");
         HeroClass heroWithId = heroClassManager.getHeroWithId(user.getName(), id);
-        if (heroWithId == null) {
+        if (heroWithId == null || !isMaxLevel(heroWithId)) {
             responseError(user, GameErrorCode.LACK_OF_INFOMATION);
             return;
         }
-        int maxRank = HeroConfig.getInstance().getHeroBase(heroWithId.getCharIndex()).getMaxRank();
-        if (heroWithId.getRank() >= maxRank) {
+        HeroClass heroUse = heroClassManager.getHeroWithId(user.getName(), useHero);
+        if (heroUse == null || heroUse.getRank() != heroWithId.getRank() || !isMaxLevel(heroUse)) {
+            responseError(user, GameErrorCode.LACK_OF_INFOMATION);
+            return;
+        }
+        HeroItem heroItem = heroItemManager.getEquipment(useItem, user.getName());
+        if (heroItem == null) {
+            responseError(user, GameErrorCode.LACK_OF_INFOMATION);
+            return;
+        }
+
+        if (isMaxRank(heroWithId)) {
             responseError(user, GameErrorCode.RANK_IS_MAX);
             return;
         }
 
-        LevelBase levelBase = HeroConfig.getInstance().getRankUp(heroWithId.getRank() + 1);
-
         try {
-            Collection<HeroItem> heroItems = heroItemManager.useItemWithIndex(user.getName(), levelBase.getUpgradeCost());
+            Collection<HeroItem> heroItems = heroItemManager.useItemWithIndex(user.getName(), getUpRankCost(heroWithId.getRank()));
             heroItemManager.notifyAssetChange(user, heroItems);
             ItemConfig.getInstance().buildUpdateRewardsReceipt(params, heroItems);
             heroItemManager.save(heroItems);
@@ -182,11 +196,41 @@ public class HeroRequestHandler extends ZClientRequestHandler {
             responseError(user, GameErrorCode.NOT_ENOUGH_CURRENCY_ITEM);
             return;
         }
-
-        heroWithId.rankUp();
+        heroClassManager.remove(heroUse);
+        heroItemManager.remove(heroItem);
+        if (RandomRangeUtil.isSuccessPerPercent(getUpRankRate(heroWithId.getRank()), 100))
+            heroWithId.rankUp();
         heroClassManager.save(heroWithId);
         params.putQAntObject("hero", heroWithId.buildInfo());
         send(params, user);
+    }
+
+    private boolean isMaxRank(HeroClass heroWithId) {
+        return heroWithId.getRank() >= HeroConfig.getInstance().getHeroBase(heroWithId.getCharIndex()).getMaxRank();
+    }
+
+    private String getUpRankCost(int rank) {
+        switch (rank) {
+            case 1:
+                return WOL + "/10#" + KEN + "/1000";
+            case 2:
+                return WOL + "/80##" + KEN + "/8000";
+            default:
+                return "";
+
+        }
+    }
+
+    private int getUpRankRate(int rank) {
+        switch (rank) {
+            case 1:
+                return 50;
+            case 2:
+                return 30;
+            default:
+                return 0;
+
+        }
     }
 
     private void summonHero(QAntUser user, IQAntObject params) {
