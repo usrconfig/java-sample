@@ -674,7 +674,8 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
         }).sum();
     }
 
-    private void resetDailyFunc(String gameHeroId) {
+    private void resetDailyFunc(String id) {
+        questSystem.resetDailyQuest(id);
     }
 
 

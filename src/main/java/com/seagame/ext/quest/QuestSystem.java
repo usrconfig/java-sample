@@ -77,8 +77,7 @@ public class QuestSystem extends AbstractExtensionManager implements Initializin
     }
 
 
-    public void resetDailyQuest(QAntUser user) {
-        String id = user.getName();
+    public void resetDailyQuest(String id) {
         HeroQuest quest = getOrCreateQuest(id);
         Player player = playerManager.getPlayer(id);
         if (quest == null) {
