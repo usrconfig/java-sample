@@ -313,8 +313,8 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
 
     private void notifyEggpieceConvert(QAntUser user) {
         try {
-            Collection<HeroItem> itemEgg = getItemsByIndex(user.getName(), "9910");
-            Collection<HeroItem> itemEggPiece = getItemsByIndex(user.getName(), "9911");
+            Collection<HeroItem> itemEgg = getItemsByIndex(user.getName(), "9911");
+            Collection<HeroItem> itemEggPiece = getItemsByIndex(user.getName(), "9910");
             if (itemEgg.size() > 0 && itemEggPiece.size() > 0) {
                 HeroItem eggpiece = itemEggPiece.stream().findFirst().get();
                 HeroItem egg = itemEgg.stream().findFirst().get();
@@ -325,7 +325,18 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
                     heroItemRep.saveAll(itemEgg);
                     heroItemRep.saveAll(itemEggPiece);
                     itemEgg.addAll(itemEggPiece);
-                    notifyAssetChange(user, itemEgg);
+                    if (itemEgg.size() > 0) {
+                        IQAntObject result = QAntObject.newInstance();
+                        QAntArray array = QAntArray.newInstance();
+                        itemEgg.forEach(item -> {
+                            QAntObject object = QAntObject.newInstance();
+                            object.putUtfString("id", item.getIndex());
+                            object.putInt("value", item.getNo());
+                            array.addQAntObject(object);
+                        });
+                        result.putQAntArray("assets", array);
+                        send(CMD_NTF_ASSETS_CHANGE, result, user);
+                    }
                 }
             }
         } catch (Exception e) {
