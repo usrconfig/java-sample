@@ -50,7 +50,7 @@ public interface HeroItemRepository extends MongoRepository<HeroItem, Long> {
 
 
     @Query("{'playerId' : ?0, 'index' : {'$in' : ?2}}")
-    List<HeroItem> getItemList(String playerId, long activeHero, Collection<String> indexes);
+    List<HeroItem> getItemList(String playerId, Collection<String> indexes);
 
 
     Collection<HeroItem> getAllByPlayerIdAndIndex(String playerId, String index);

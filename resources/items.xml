@@ -12,7 +12,7 @@
 		<Item ID="9907" Name="txtItemHeroTicket3Star" Description="txtDesItemHeroTicket3Star" Type="rewards" Rank="3" Icon="3starheroticket"/>
 		<Item ID="9908" Name="txtItemZenPack" Description="txtDesItemZenPack" Type="rewards" Rank="1" Icon="giftboxred"/>
 		<Item ID="9909" Name="txtItemGiftBox" Description="txtDesItemGiftBox" Type="rewards" Rank="5" Icon="gmgiftchest"/>
-		<Item ID="9910" Name="txtItemEggPiece" Description="txtDesItemEggPiece" Type="egg" Rank="5" Icon="eggpiece"/>
+		<Item ID="9910" Name="txtItemEggPiece" Description="txtDesItemEggPiece" Type="eggpiece" Rank="5" Icon="eggpiece"/>
 		<Item ID="9911" Name="txtItemEgg" Description="txtDesItemEgg" Type="egg" Rank="5" Icon="egg"/>
 		<Item ID="9920" Name="txtIItemEventChallengeTicketFree" Description="txtDesIItemEventChallengeTicketFree" Type="ticket" Rank="5" Icon="challengeticket"/>
 		<Item ID="9921" Name="txtIItemEventChallengeTicket" Description="txtDesIItemEventChallengeTicket" Type="ticket" Rank="5" Icon="challengeticket"/>

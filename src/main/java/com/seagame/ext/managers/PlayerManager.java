@@ -267,6 +267,12 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                LongStream.range(900, 999).forEach(value -> createBot(value));
 //            }
 //        }, 3000);
+
+//        int no = 324;
+//        if (no >= 100) {
+//            int n=no % 100;
+//            int nPlus=no / 100;
+//        }
     }
 
     private void testDailyEvent() {
@@ -579,9 +585,6 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
                 case ITEM_MATERIAL://material
                     heroItem = new HeroConsumeItem(itemBase);
                     switch (itemBase.getId()) {
-                        case ItemRequestHandler.EGG_PIECE:
-                            heroItem.setNo(12345);
-                            break;
                         case ItemRequestHandler.EGG:
                             heroItem.setNo(300);
                             break;

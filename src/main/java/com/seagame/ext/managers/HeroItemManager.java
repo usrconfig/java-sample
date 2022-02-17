@@ -31,6 +31,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.stream.Collectors;
 
 /**
@@ -187,7 +188,7 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
 
     public List<HeroItem> getByIndexes(String gameHeroId, Set<String> indexes) {
         Player player = playerManager.getPlayer(gameHeroId);
-        return heroItemRep.getItemList(gameHeroId, player.getActiveHeroId(), indexes);
+        return heroItemRep.getItemList(gameHeroId, indexes);
     }
 
 
@@ -286,6 +287,7 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
         if (items.size() == 0) {
             return null;
         }
+        AtomicBoolean eggPiece = new AtomicBoolean(false);
         List<HeroItem> assetList = items.stream().filter(HeroItem::isBuildAssets).collect(Collectors.toList());
         if (assetList.size() > 0) {
             IQAntObject result = QAntObject.newInstance();
@@ -295,11 +297,40 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
                 object.putUtfString("id", item.getIndex());
                 object.putInt("value", item.getNo());
                 array.addQAntObject(object);
+                if (item.getIndex().equals("9910")) {
+                    eggPiece.set(true);
+                }
             });
             result.putQAntArray("assets", array);
             send(CMD_NTF_ASSETS_CHANGE, result, user);
+
+            if (eggPiece.get()) {
+                notifyEggpieceConvert(user);
+            }
         }
         return assetList;
+    }
+
+    private void notifyEggpieceConvert(QAntUser user) {
+        try {
+            Collection<HeroItem> itemEgg = getItemsByIndex(user.getName(), "9910");
+            Collection<HeroItem> itemEggPiece = getItemsByIndex(user.getName(), "9911");
+            if (itemEgg.size() > 0 && itemEggPiece.size() > 0) {
+                HeroItem eggpiece = itemEggPiece.stream().findFirst().get();
+                HeroItem egg = itemEgg.stream().findFirst().get();
+                int no = eggpiece.getNo();
+                if (no >= 100) {
+                    eggpiece.setNo(no % 100);
+                    egg.setNo(egg.getNo() + no / 100);
+                }
+                heroItemRep.saveAll(itemEgg);
+                heroItemRep.saveAll(itemEggPiece);
+                itemEgg.addAll(itemEggPiece);
+                notifyAssetChange(user, itemEgg);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void notifyAssetChange(QAntUser user) {

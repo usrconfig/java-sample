@@ -74,6 +74,7 @@ public interface NetworkConstant {
     String ITEM_TICKET = "ticket";
     String ITEM_POINT = "point";
     String ITEM_EGG = "egg";
+    String ITEM_EGG_PIECE = "eggpiece";
     String ITEM_MATERIAL = "material";
 
     int SLOT_WEAPON_RIGHT = 1;
