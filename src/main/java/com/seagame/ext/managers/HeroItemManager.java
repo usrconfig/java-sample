@@ -322,11 +322,11 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
                 if (no >= 100) {
                     eggpiece.setNo(no % 100);
                     egg.setNo(egg.getNo() + no / 100);
+                    heroItemRep.saveAll(itemEgg);
+                    heroItemRep.saveAll(itemEggPiece);
+                    itemEgg.addAll(itemEggPiece);
+                    notifyAssetChange(user, itemEgg);
                 }
-                heroItemRep.saveAll(itemEgg);
-                heroItemRep.saveAll(itemEggPiece);
-                itemEgg.addAll(itemEggPiece);
-                notifyAssetChange(user, itemEgg);
             }
         } catch (Exception e) {
             e.printStackTrace();
