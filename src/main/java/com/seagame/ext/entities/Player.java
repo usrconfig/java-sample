@@ -32,7 +32,7 @@ public class Player implements Serializable {
     public static final String FB_PROVIDER = "fb";
     public static final String GG_PROVIDER = "gg";
     public static final String OS_PROVIDER = "os";
-    private static final long ENERGY_PRODUCE_SPEED_SEC = 3600;
+    private static final long ENERGY_PRODUCE_SPEED_SEC = 60;
     private static final int MAX_ENERGY_PRODUCE = 5;
 
     @Id
