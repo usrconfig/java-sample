@@ -32,7 +32,7 @@ public class Player implements Serializable {
     public static final String FB_PROVIDER = "fb";
     public static final String GG_PROVIDER = "gg";
     public static final String OS_PROVIDER = "os";
-    private static final long ENERGY_PRODUCE_SPEED_SEC = 30000;
+    private static final long ENERGY_PRODUCE_SPEED_SEC = 3600;
     private static final int MAX_ENERGY_PRODUCE = 5;
 
     @Id
@@ -173,6 +173,9 @@ public class Player implements Serializable {
         result.putBool("named", named);
         result.putInt("trophy", trophy);
         result.putInt("rankRemain", rankRemain);
+        result.putInt("energy", energy);
+        result.putInt("energyMax", energyMax);
+        result.putLong("energyStartBuild", energyStartBuild);
         return result;
     }
 
@@ -183,6 +186,9 @@ public class Player implements Serializable {
         result.putInt("exp", exp);
         result.putInt("trophy", trophy);
         result.putInt("rankRemain", rankRemain);
+        result.putInt("energy", energy);
+        result.putInt("energyMax", energyMax);
+        result.putLong("energyStartBuild", energyStartBuild);
         return result;
     }
 
