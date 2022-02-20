@@ -326,10 +326,10 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
                     heroItemRep.saveAll(itemEggPiece);
                     itemEgg.addAll(itemEggPiece);
                     if (itemEgg.size() > 0) {
-                        IQAntObject result = QAntObject.newInstance();
-                        QAntArray array = QAntArray.newInstance();
+                        IQAntObject result = new QAntObject();
+                        QAntArray array = new QAntArray();
                         itemEgg.forEach(item -> {
-                            QAntObject object = QAntObject.newInstance();
+                            QAntObject object = new QAntObject();
                             object.putUtfString("id", item.getIndex());
                             object.putInt("value", item.getNo());
                             array.addQAntObject(object);
