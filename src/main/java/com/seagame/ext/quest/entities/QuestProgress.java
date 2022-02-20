@@ -120,7 +120,7 @@ public class QuestProgress {
     }
 
     public boolean isDailyReset() {
-        return group.equals(QuestSystem.DAILY_GROUP) || group.equals(QuestSystem.CLAN_GROUP);
+        return group.equals(QuestSystem.DAILY_GROUP) || group.equals(QuestSystem.SPECIAL_GROUP);
     }
 
     public boolean isDailyQuest() {

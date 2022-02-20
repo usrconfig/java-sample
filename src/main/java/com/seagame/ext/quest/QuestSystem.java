@@ -37,6 +37,7 @@ public class QuestSystem extends AbstractExtensionManager implements Initializin
     public static final String CLAN_GROUP = "clan";
     public static final String WORLD_GROUP = "world";
     public static final String DAILY_GROUP = "daily";
+    public static final String SPECIAL_GROUP = "special";
 
     private static final QuestConfig questConfig = QuestConfig.getInstance();
 

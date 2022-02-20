@@ -115,9 +115,9 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
         params.putQAntArray("list", qAntArray);
         send(params, user);
         trackParams(params);
-        try{
-            questSystem.notifyObservers(CollectionTask.init(user.getName(), "campaign",1));
-        }catch (Exception e){
+        try {
+            questSystem.notifyObservers(CollectionTask.init(user.getName(), "campaign", 1));
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
