@@ -80,13 +80,6 @@ public class QuestSystem extends AbstractExtensionManager implements Initializin
 
     public void resetDailyQuest(String id) {
         HeroQuest quest = getOrCreateQuest(id);
-        Player player = playerManager.getPlayer(id);
-        if (quest == null) {
-            quest = new HeroQuest(id, player.getActiveHeroId());
-            ArrayList<QuestBase> quests = new ArrayList<>(questConfig.getQuestList());
-            int level = player.getLevel();
-            quest.resetClanDaily(quests, level);
-        }
         quest.resetDaily();
         questRepo.save(quest);
     }
@@ -152,10 +145,11 @@ public class QuestSystem extends AbstractExtensionManager implements Initializin
         questRepo.delete(quest);
     }
 
-    public void finishQuest(String playerId,Collection<QuestProgress> questFinishList) {
-        if(questFinishList.stream().anyMatch(QuestProgress::isDailyQuest)){
-            notifyObservers(FinishDailyTask.init(playerId,"daily"));
-        };
+    public void finishQuest(String playerId, Collection<QuestProgress> questFinishList) {
+        if (questFinishList.stream().anyMatch(QuestProgress::isDailyQuest)) {
+            notifyObservers(FinishDailyTask.init(playerId, "daily"));
+        }
+        ;
     }
 
     public void removeGameHeroData(String gameHeroId) {
