@@ -148,13 +148,26 @@ public class ItemRequestHandler extends ZClientRequestHandler {
                 params.putQAntArray("heroes", updateArray);
             }
 
+            Player player = playerManager.getPlayer(user.getName());
 
-            Collection<HeroItem> items1 = ItemConfig.getInstance().convertToHeroItem(refundFinal);
+            Collection<HeroItem> heroItems = ItemConfig.getInstance().convertToHeroItem(refundFinal);
+            heroItems.stream().filter(heroItem -> !heroItem.getType().equals("point")).forEach(heroItem -> {
+                switch (heroItem.getIndex()) {
+                    case "9902":
+                        player.setEnergy(Math.min(player.getEnergyMax(), player.getEnergy() + heroItem.getNo()));
+                        break;
+                    case "9904":
+                        player.setTrophy(player.getTrophy() + heroItem.getNo());
+                        break;
+                }
+            });
+            Collection<HeroItem> items1 = heroItems.stream().filter(heroItem -> !heroItem.getType().equals("point")).collect(Collectors.toList());
+
+
             ItemConfig.getInstance().buildRewardsReceipt(params, refundFinal.keySet().stream().map(heroItem -> heroItem + "/" + refundFinal.get(heroItem)).collect(Collectors.joining("#")));
             Collection<HeroItem> updateItems = heroItemManager.addItems(user.getName(), items1);
             updateItems.addAll(collection);
 
-            Player player = playerManager.getPlayer(user.getName());
             playerManager.updateGameHero(player);
 
 

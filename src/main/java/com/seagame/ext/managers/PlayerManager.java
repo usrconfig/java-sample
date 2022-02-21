@@ -580,7 +580,6 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
             switch (itemBase.getType()) {
                 case ITEM_EGG://material
                 case ITEM_TICKET://material
-                case ITEM_POINT://material
                 case ITEM_REWARDS://material
                 case ITEM_MATERIAL://material
                     heroItem = new HeroConsumeItem(itemBase);
@@ -598,6 +597,16 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
                     heroItem = new HeroConsumeItem(itemBase);
                     heroItem.setNo(90000);
                     collection.add(heroItem);
+                    break;
+                case ITEM_POINT://material
+                    switch (itemBase.getId()) {
+                        case "9902":
+                            player.setEnergy(Math.min(player.getEnergyMax(), player.getEnergy() + 100));
+                            break;
+                        case "9904":
+                            player.setTrophy(player.getTrophy() + 100);
+                            break;
+                    }
                     break;
                 default:
                     break;
