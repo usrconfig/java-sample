@@ -58,6 +58,7 @@ public class QuestProgress {
     public void reset() {
         createTime = System.currentTimeMillis();
         claim = false;
+        claimed = false;
         seen = false;
         QuestBase quest = QuestConfig.getInstance().getQuest(getIndex());
         started = quest != null && quest.isAutoStart();

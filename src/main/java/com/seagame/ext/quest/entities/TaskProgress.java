@@ -54,6 +54,7 @@ public class TaskProgress {
     public void reset() {
         createTime = System.currentTimeMillis();
         claim = false;
+        claimed = false;
         seen = false;
         count = 0;
     }
