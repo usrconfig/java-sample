@@ -52,6 +52,8 @@ import org.springframework.stereotype.Service;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 
 /**
@@ -273,6 +275,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //            int n=no % 100;
 //            int nPlus=no / 100;
 //        }
+
     }
 
     private void testDailyEvent() {
@@ -548,13 +551,14 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
     private List<HeroClass> buildHeroTestDefault(QAntUser user) {
         ArrayList<HeroBase> list = new ArrayList<>(HeroConfig.getInstance().getHeroes());
         List<HeroClass> heroes = new ArrayList<>();
-        list.forEach(heroBase -> {
+        list.forEach(heroBase -> IntStream.rangeClosed(1, heroBase.getMaxRank()).forEach(integer -> {
             HeroClass heroClass = new HeroClass(heroBase.getID(), 1);
             heroClass.setPlayerId(user.getName());
             heroClass.setId(autoIncrService.genHeroId());
+            heroClass.setRank(integer);
             heroClass.calcFullPower();
             heroes.add(heroClass);
-        });
+        }));
         heroClassManager.save(heroes);
         return heroes;
     }
