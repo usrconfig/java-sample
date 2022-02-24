@@ -19,6 +19,7 @@ import com.seagame.ext.managers.HeroClassManager;
 import com.seagame.ext.managers.HeroItemManager;
 import com.seagame.ext.managers.PlayerManager;
 import com.seagame.ext.services.AutoIncrementService;
+import com.seagame.ext.services.NotifySystem;
 import org.springframework.data.domain.Page;
 
 import java.util.ArrayList;
@@ -168,7 +169,8 @@ public class ItemRequestHandler extends ZClientRequestHandler {
             Collection<HeroItem> updateItems = heroItemManager.addItems(user.getName(), items1);
             updateItems.addAll(collection);
             playerManager.updateGameHero(player);
-            params.putQAntObject("player",player.buildPointInfo());
+            NotifySystem notifySystem = ExtApplication.getBean(NotifySystem.class);
+            notifySystem.notifyExpChange(user.getName(), player.buildPointInfo(), user);
             heroItemManager.save(updateItems);
             heroItemManager.notifyAssetChange(user, updateItems);
             ItemConfig.getInstance().buildUpdateRewardsReceipt(params, updateItems);

@@ -51,12 +51,12 @@ public class NotifySystem extends AbstractExtensionManager implements ExtensionE
         send("cmd_exception", createErrorMsg, user);
     }
 
-    public void notifyPlayerInfoChange(String playerId, IQAntObject buildInfoLevel) {
+    public void notifyPlayerPointChange(String playerId, IQAntObject infoPoint) {
         try {
             QAntUser receiverUser = getUserByName(playerId);
             IQAntObject antObject = new QAntObject();
-            antObject.putInt("act", ExtensionEvent.NOTIFY_PLAYER_INFO_CHANGE);
-            antObject.putQAntObject("player", buildInfoLevel);
+            antObject.putInt("act", ExtensionEvent.NOTIFY_PLAYER_POINT_CHANGE);
+            antObject.putQAntObject("player", infoPoint);
             send(ExtensionEvent.CMD_NTF, antObject, receiverUser);
         } catch (Exception ignored) {
         }

@@ -23,6 +23,7 @@ import com.seagame.ext.managers.MatchManager;
 import com.seagame.ext.managers.PlayerManager;
 import com.seagame.ext.quest.CollectionTask;
 import com.seagame.ext.quest.QuestSystem;
+import com.seagame.ext.services.NotifySystem;
 import com.seagame.ext.util.NetworkConstant;
 import com.seagame.ext.util.RandomRangeUtil;
 import org.apache.commons.lang.StringUtils;
@@ -150,7 +151,8 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
         try {
             int energyCost = StageConfig.getInstance().getStage(idx).getEnergyCost();
             Player player = playerManager.useEnergy(user.getName(), energyCost * no);
-            params.putQAntObject("player",player.buildPointInfo());
+            NotifySystem notifySystem = ExtApplication.getBean(NotifySystem.class);
+            notifySystem.notifyExpChange(user.getName(), player.buildPointInfo(), user);
         } catch (UseItemException e) {
             responseError(user, GameErrorCode.NOT_ENOUGH_TICKET);
             return;
@@ -179,7 +181,8 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
         try {
             int energyCost = StageConfig.getInstance().getStage(idx).getEnergyCost();
             Player player = playerManager.useEnergy(user.getName(), energyCost);
-            params.putQAntObject("player",player.buildPointInfo());
+            NotifySystem notifySystem = ExtApplication.getBean(NotifySystem.class);
+            notifySystem.notifyExpChange(user.getName(), player.buildPointInfo(), user);
         } catch (UseItemException e) {
             responseError(user, GameErrorCode.NOT_ENOUGH_ENERGY);
             return;

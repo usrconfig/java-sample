@@ -20,6 +20,7 @@ import com.seagame.ext.managers.ArenaManager;
 import com.seagame.ext.managers.HeroItemManager;
 import com.seagame.ext.managers.PlayerManager;
 import com.seagame.ext.quest.QuestSystem;
+import com.seagame.ext.services.NotifySystem;
 import com.seagame.ext.util.CalculateUtil;
 
 import java.util.ArrayList;
@@ -219,7 +220,8 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
 
         try {
             Player player = playerManager.useEnergy(user.getName(), ARENA_ENERGY_COST);
-            params.putQAntObject("player",player.buildPointInfo());
+            NotifySystem notifySystem = ExtApplication.getBean(NotifySystem.class);
+            notifySystem.notifyExpChange(user.getName(), player.buildPointInfo(), user);
         } catch (UseItemException e) {
             responseError(user, GameErrorCode.NOT_ENOUGH_ENERGY);
             return;

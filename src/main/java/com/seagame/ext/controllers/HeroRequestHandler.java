@@ -22,6 +22,7 @@ import com.seagame.ext.managers.HeroClassManager;
 import com.seagame.ext.managers.HeroItemManager;
 import com.seagame.ext.managers.PlayerManager;
 import com.seagame.ext.services.AutoIncrementService;
+import com.seagame.ext.services.NotifySystem;
 import com.seagame.ext.util.RandomRangeUtil;
 import org.springframework.data.domain.Page;
 
@@ -254,7 +255,8 @@ public class HeroRequestHandler extends ZClientRequestHandler {
         Player player = playerManager.getPlayer(user.getName());
         player.setEnergy(player.getEnergy() + heroBase.getEnegryCAP());
         playerManager.updateGameHero(player);
-        params.putQAntObject("player",player.buildPointInfo());
+        NotifySystem notifySystem = ExtApplication.getBean(NotifySystem.class);
+        notifySystem.notifyExpChange(user.getName(), player.buildPointInfo(), user);
         send(params, user);
     }
 
