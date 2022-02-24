@@ -218,7 +218,8 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
         }
 
         try {
-            playerManager.useEnergy(user.getName(), ARENA_ENERGY_COST);
+            Player player = playerManager.useEnergy(user.getName(), ARENA_ENERGY_COST);
+            params.putQAntObject("player",player.buildPointInfo());
         } catch (UseItemException e) {
             responseError(user, GameErrorCode.NOT_ENOUGH_ENERGY);
             return;

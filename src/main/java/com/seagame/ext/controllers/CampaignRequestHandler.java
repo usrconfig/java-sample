@@ -9,6 +9,7 @@ import com.seagame.ext.ExtApplication;
 import com.seagame.ext.Utils;
 import com.seagame.ext.config.game.ItemConfig;
 import com.seagame.ext.config.game.StageConfig;
+import com.seagame.ext.entities.Player;
 import com.seagame.ext.entities.campaign.HeroCampaign;
 import com.seagame.ext.entities.campaign.HeroStage;
 import com.seagame.ext.entities.campaign.MatchInfo;
@@ -148,7 +149,8 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
         String idx = params.getUtfString("idx");
         try {
             int energyCost = StageConfig.getInstance().getStage(idx).getEnergyCost();
-            playerManager.useEnergy(user.getName(), energyCost * no);
+            Player player = playerManager.useEnergy(user.getName(), energyCost * no);
+            params.putQAntObject("player",player.buildPointInfo());
         } catch (UseItemException e) {
             responseError(user, GameErrorCode.NOT_ENOUGH_TICKET);
             return;
@@ -176,7 +178,8 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
         String idx = params.getUtfString("idx");
         try {
             int energyCost = StageConfig.getInstance().getStage(idx).getEnergyCost();
-            playerManager.useEnergy(user.getName(), energyCost);
+            Player player = playerManager.useEnergy(user.getName(), energyCost);
+            params.putQAntObject("player",player.buildPointInfo());
         } catch (UseItemException e) {
             responseError(user, GameErrorCode.NOT_ENOUGH_ENERGY);
             return;

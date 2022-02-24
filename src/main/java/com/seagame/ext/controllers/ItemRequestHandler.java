@@ -167,10 +167,8 @@ public class ItemRequestHandler extends ZClientRequestHandler {
             ItemConfig.getInstance().buildRewardsReceipt(params, refundFinal.keySet().stream().map(heroItem -> heroItem + "/" + refundFinal.get(heroItem)).collect(Collectors.joining("#")));
             Collection<HeroItem> updateItems = heroItemManager.addItems(user.getName(), items1);
             updateItems.addAll(collection);
-
             playerManager.updateGameHero(player);
-
-
+            params.putQAntObject("player",player.buildPointInfo());
             heroItemManager.save(updateItems);
             heroItemManager.notifyAssetChange(user, updateItems);
             ItemConfig.getInstance().buildUpdateRewardsReceipt(params, updateItems);

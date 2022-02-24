@@ -27,9 +27,7 @@ import com.seagame.ext.entities.item.HeroEquipment;
 import com.seagame.ext.entities.item.HeroItem;
 import com.seagame.ext.entities.team.BattleTeam;
 import com.seagame.ext.entities.team.Team;
-import com.seagame.ext.exception.GameErrorCode;
 import com.seagame.ext.exception.UseItemException;
-import com.seagame.ext.quest.CollectionTask;
 import com.seagame.ext.quest.JoinTask;
 import com.seagame.ext.quest.QuestSystem;
 import com.seagame.ext.services.AutoIncrementService;
@@ -46,14 +44,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 
 /**
@@ -786,11 +782,12 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
         return playerRepo.getTopByKill(PageRequest.of(0, 10, Sort.by(Sort.Direction.DESC, "kill")));
     }
 
-    public void useEnergy(String name, int no) throws UseItemException {
+    public Player useEnergy(String name, int no) throws UseItemException {
         Player player = getPlayer(name);
         if (!player.useEnergy(no)) {
             throw new UseItemException();
         }
         updateGameHero(player);
+        return player;
     }
 }
