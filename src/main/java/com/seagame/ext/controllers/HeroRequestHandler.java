@@ -251,11 +251,11 @@ public class HeroRequestHandler extends ZClientRequestHandler {
         heroClass.setPlayerId(user.getName());
         heroClassManager.save(heroClass);
         params.putQAntObject("hero", heroClass.buildInfo());
-        send(params, user);
         Player player = playerManager.getPlayer(user.getName());
         player.setEnergy(player.getEnergy() + heroBase.getEnegryCAP());
         playerManager.updateGameHero(player);
         params.putQAntObject("player",player.buildPointInfo());
+        send(params, user);
     }
 
     private void getPageHero(QAntUser user, IQAntObject params) {
