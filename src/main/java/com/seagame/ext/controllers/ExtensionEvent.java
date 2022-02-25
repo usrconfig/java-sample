@@ -50,9 +50,9 @@ public interface ExtensionEvent {
     String NTF_TYPE_FINISH = "finish";
 
     int NOTIFY_NEW_MAIL = 1;
-    int NOTIFY_PLAYER_POINT_CHANGE = 2;
+    int NOTIFY_PLAYER_POINT_CHANGE = 4;
     int NOTIFY_FRIEND_CHANGE = 3;
-    int NOTIFY_EXP_CHANGE = 4;
+    int NOTIFY_EXP_CHANGE = 2;
     int NOTIFY_MINI_GAME = 5;
 
 
