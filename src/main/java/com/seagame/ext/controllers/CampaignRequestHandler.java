@@ -152,7 +152,7 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
             int energyCost = StageConfig.getInstance().getStage(idx).getEnergyCost();
             Player player = playerManager.useEnergy(user.getName(), energyCost * no);
             NotifySystem notifySystem = ExtApplication.getBean(NotifySystem.class);
-            notifySystem.notifyExpChange(user.getName(), player.buildPointInfo(), user);
+            notifySystem.notifyPlayerPointChange(user.getName(), player.buildPointInfo());
         } catch (UseItemException e) {
             responseError(user, GameErrorCode.NOT_ENOUGH_TICKET);
             return;
@@ -182,7 +182,7 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
             int energyCost = StageConfig.getInstance().getStage(idx).getEnergyCost();
             Player player = playerManager.useEnergy(user.getName(), energyCost);
             NotifySystem notifySystem = ExtApplication.getBean(NotifySystem.class);
-            notifySystem.notifyExpChange(user.getName(), player.buildPointInfo(), user);
+            notifySystem.notifyPlayerPointChange(user.getName(), player.buildPointInfo());
         } catch (UseItemException e) {
             responseError(user, GameErrorCode.NOT_ENOUGH_ENERGY);
             return;

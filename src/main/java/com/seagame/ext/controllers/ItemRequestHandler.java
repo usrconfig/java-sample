@@ -170,7 +170,7 @@ public class ItemRequestHandler extends ZClientRequestHandler {
             updateItems.addAll(collection);
             playerManager.updateGameHero(player);
             NotifySystem notifySystem = ExtApplication.getBean(NotifySystem.class);
-            notifySystem.notifyExpChange(user.getName(), player.buildPointInfo(), user);
+            notifySystem.notifyPlayerPointChange(user.getName(), player.buildPointInfo());
             heroItemManager.save(updateItems);
             heroItemManager.notifyAssetChange(user, updateItems);
             ItemConfig.getInstance().buildUpdateRewardsReceipt(params, updateItems);

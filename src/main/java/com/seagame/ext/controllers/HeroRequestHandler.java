@@ -256,7 +256,7 @@ public class HeroRequestHandler extends ZClientRequestHandler {
         player.setEnergy(player.getEnergy() + heroBase.getEnegryCAP());
         playerManager.updateGameHero(player);
         NotifySystem notifySystem = ExtApplication.getBean(NotifySystem.class);
-        notifySystem.notifyExpChange(user.getName(), player.buildPointInfo(), user);
+        notifySystem.notifyPlayerPointChange(user.getName(), player.buildPointInfo());
         send(params, user);
     }
 
