@@ -1,19 +1,17 @@
 package com.seagame.ext.config.game;
 
-import com.creants.creants_2x.core.util.QAntTracer;
 import com.creants.creants_2x.socket.gate.entities.IQAntArray;
 import com.creants.creants_2x.socket.gate.entities.IQAntObject;
 import com.creants.creants_2x.socket.gate.entities.QAntArray;
 import com.creants.creants_2x.socket.gate.entities.QAntObject;
-import com.creants.creants_2x.socket.gate.wood.QAntUser;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.seagame.ext.ExtApplication;
+import com.seagame.ext.Utils;
 import com.seagame.ext.entities.hero.HeroClass;
 import com.seagame.ext.entities.item.*;
 import com.seagame.ext.managers.HeroClassManager;
 import com.seagame.ext.managers.HeroItemManager;
 import com.seagame.ext.managers.PlayerManager;
-import com.seagame.ext.quest.QuestSystem;
 import com.seagame.ext.util.NetworkConstant;
 import com.seagame.ext.util.RandomRangeUtil;
 import com.seagame.ext.util.SourceFileHelper;
@@ -35,7 +33,9 @@ public class ItemConfig implements NetworkConstant {
     public static final String ITEM_CONFIG = "items.xml";
     private static ItemConfig instance;
     private Map<String, ItemBase> itemMap;
-    private Map<String, EquipBase> equipMap;
+    private Map<String, ItemBase> fullTtemMap;
+    private Map<Integer, EquipLevelBase> equipLevelMap;
+    private Map<String, ItemBase> equipMap;
     private Map<String, EggRewardBase> eggRewardMap;
     private Map<String, List<RewardBase>> rewardBaseMap;
     private Map<String, List<EquipRankBase>> ranksEquipMap;
@@ -56,10 +56,12 @@ public class ItemConfig implements NetworkConstant {
 
     private ItemConfig() {
         itemMap = new HashMap<>();
+        fullTtemMap = new HashMap<>();
         equipMap = new HashMap<>();
         eggRewardMap = new HashMap<>();
         rewardBaseMap = new HashMap<>();
         ranksEquipMap = new HashMap<>();
+        equipLevelMap = new HashMap<>();
         loadItems();
     }
 
@@ -68,34 +70,6 @@ public class ItemConfig implements NetworkConstant {
         return RandomRangeUtil.randomQuantity(reward);
     }
 
-
-    void validateItem(String itemReward) {
-        ItemConfig itemConfig = ItemConfig.getInstance();
-        try {
-            Collection<String> itemIndexList = itemConfig.convertToMap(itemReward).keySet();
-            for (String index : itemIndexList) {
-                ItemBase item = itemConfig.getItem(index);
-                if (item == null) {
-                    QAntTracer.error(this.getClass(),
-                            "[ERROR] ******************** ITEM NOT FOUND: " + index + "/ItemString:" + itemReward);
-                }
-            }
-        } catch (Exception e) {
-            QAntTracer.error(this.getClass(), "[ERROR] validate item: " + itemReward);
-        }
-
-    }
-
-    private boolean validateItem(List<Integer> indexList) {
-        boolean itemValid = true;
-        for (Integer index : indexList) {
-            if (itemMap.get(index) == null) {
-                QAntTracer.error(this.getClass(), "[ERROR] ***************** ITEM NOT FOUND: " + index);
-                itemValid = false;
-            }
-        }
-        return itemValid;
-    }
 
     private void loadItems() {
         try {
@@ -111,6 +85,9 @@ public class ItemConfig implements NetworkConstant {
                     itemBase.setRewards(rewardBaseMap.get(itemBase.getId()));
                 }
                 itemMap.put(itemBase.getId(), itemBase);
+            });
+            items.getEquipLevels().forEach(equipLevelBase -> {
+                equipLevelMap.put(equipLevelBase.getLevel(), equipLevelBase);
             });
             items.getRanks().forEach(rankBase -> {
                 ranksEquipMap.putIfAbsent(rankBase.getID(), new ArrayList<>());
@@ -131,6 +108,9 @@ public class ItemConfig implements NetworkConstant {
             });
             eggRewards = String.join("#", eggRws);
             eggRewardsRate = String.join("#", eggRwsRate);
+
+            fullTtemMap.putAll(itemMap);
+            fullTtemMap.putAll(equipMap);
             sr.close();
         } catch (Exception ignored) {
             ignored.printStackTrace();
@@ -274,7 +254,13 @@ public class ItemConfig implements NetworkConstant {
         List<HeroItem> itemList = new ArrayList<>();
 
         items.forEach((key, value) -> {
-            ItemBase itemBase = getItem(key);
+            String[] split = key.split("!");
+            String index = split[0];
+            ItemBase itemBase = getItem(index);
+            int rank = 1;
+            if (split.length > 1) {
+                rank = Integer.parseInt(split[1]);
+            }
             if (itemBase != null) {
                 switch (itemBase.getType()) {
                     case ITEM_CURRENCY: {
@@ -289,14 +275,26 @@ public class ItemConfig implements NetworkConstant {
                     case ITEM_MATERIAL:
                     case ITEM_EGG:
                     case ITEM_EGG_PIECE:
-                        HeroConsumeItem heroConsumeAble = new HeroConsumeItem(itemBase);
-                        heroConsumeAble.setNo(value);
-                        itemList.add(heroConsumeAble);
+                        if (!Utils.isNotOverLap(itemBase.getId())) {
+                            HeroConsumeItem heroConsumeAble = new HeroConsumeItem(itemBase);
+                            heroConsumeAble.setNo(value);
+                            itemList.add(heroConsumeAble);
+                        } else {
+                            for (int i = 0; i < value; i++) {
+                                HeroConsumeItem heroConsumeAble = new HeroConsumeItem(itemBase);
+                                heroConsumeAble.setNo(1);
+                                itemList.add(heroConsumeAble);
+                            }
+                        }
                         break;
                     default:
+                        if (itemBase instanceof EquipBase) {
+                            rank = Math.min(rank, ((EquipBase) itemBase).getMaxRank());
+                        }
                         for (int i = 0; i < value; i++) {
                             HeroEquipment heroEquipment = new HeroEquipment(itemBase);
                             heroEquipment.setNo(1);
+                            heroEquipment.setRank(rank);
                             itemList.add(heroEquipment);
                         }
                         break;
@@ -310,6 +308,7 @@ public class ItemConfig implements NetworkConstant {
         try {
             exportItems();
             exportEquips();
+            exportEquipLevels();
             exportEggRewards();
         } catch (Exception e) {
             e.printStackTrace();
@@ -325,6 +324,10 @@ public class ItemConfig implements NetworkConstant {
         return SourceFileHelper.exportJsonFile(equipMap.values(), "equips.json");
     }
 
+    public String exportEquipLevels() throws Exception {
+        return SourceFileHelper.exportJsonFile(equipLevelMap.values(), "equipLevelUp.json");
+    }
+
     public String exportEggRewards() throws Exception {
         return SourceFileHelper.exportJsonFile(eggRewardMap.values(), "eggRewards.json");
     }
@@ -333,13 +336,11 @@ public class ItemConfig implements NetworkConstant {
 //        return SourceFileHelper.exportJsonFile(items.getExpInfos(), "itemExp.json");
 //    }
 
+
     public ItemBase getItem(String index) {
-        return itemMap.get(index);
+        return fullTtemMap.get(index);
     }
 
-    public ItemBase getEquip(String index) {
-        return equipMap.get(index);
-    }
 
     public int getEquipPower(String index, int rank, int level) {
         try {
@@ -361,7 +362,7 @@ public class ItemConfig implements NetworkConstant {
     }
 
     public void initItemBase(Collection<HeroItem> heroItems) {
-        heroItems.forEach(heroItem -> heroItem.setItemBase(ItemConfig.getInstance().getItem(heroItem.getIndex())));
+        heroItems.forEach(HeroItem::initItemBase);
     }
 
     public void buildUseReceipt(IQAntObject params, PlayerManager playerManager, Collection<HeroItem> useItems, Collection<HeroClass> useHeroes) {
@@ -373,7 +374,7 @@ public class ItemConfig implements NetworkConstant {
             }
 
             HeroItemManager heroItemManager = ExtApplication.getBean(HeroItemManager.class);
-            heroItemManager.update(useItems);
+            heroItemManager.save(useItems);
             List<HeroItem> assetList = useItems.stream().filter(HeroItem::isBuildAssets).collect(Collectors.toList());
             if (assetList.size() > 0) {
                 useItems.removeAll(assetList);
@@ -393,6 +394,10 @@ public class ItemConfig implements NetworkConstant {
         if (params != null)
             params.putQAntObject(KEYQO_UPDATE, updateObj);
 
+    }
+
+    public EquipLevelBase getEquipLevel(int upto) {
+        return equipLevelMap.getOrDefault(upto, null);
     }
 
     public void buildUpdateRewardsReceipt(IQAntObject params, Collection<HeroItem> items) {
@@ -504,6 +509,10 @@ public class ItemConfig implements NetworkConstant {
 
     public String getEggRewardsRate() {
         return String.join("#", eggRewardsRate);
+    }
+
+    public Collection<ItemBase> getEquips() {
+        return equipMap.values();
     }
 
 //    public String buildRewardsForMonster(String monster, int level, PlayerManager playerManager, String playerId, boolean isBoss) {

@@ -9,17 +9,23 @@ import com.seagame.ext.ExtApplication;
 import com.seagame.ext.config.game.ItemConfig;
 import com.seagame.ext.entities.Player;
 import com.seagame.ext.entities.hero.HeroClass;
-import com.seagame.ext.entities.item.HeroEquipment;
-import com.seagame.ext.entities.item.HeroItem;
-import com.seagame.ext.entities.item.ItemBase;
-import com.seagame.ext.entities.item.RewardBase;
+import com.seagame.ext.entities.item.*;
 import com.seagame.ext.exception.GameErrorCode;
 import com.seagame.ext.exception.UseItemException;
 import com.seagame.ext.managers.HeroClassManager;
 import com.seagame.ext.managers.HeroItemManager;
 import com.seagame.ext.managers.PlayerManager;
+import com.seagame.ext.offchain.IApplyRewards;
+import com.seagame.ext.offchain.IApplyUseItemRewards;
+import com.seagame.ext.offchain.IGenReward;
+import com.seagame.ext.offchain.entities.WolAssetCompletedRes;
+import com.seagame.ext.offchain.services.OffChainResponseHandler;
+import com.seagame.ext.offchain.services.OffChainServices;
+import com.seagame.ext.offchain.services.WolFlowManager;
 import com.seagame.ext.services.AutoIncrementService;
 import com.seagame.ext.services.NotifySystem;
+import com.seagame.ext.util.RandomRangeUtil;
+import net.sf.json.JSONObject;
 import org.springframework.data.domain.Page;
 
 import java.util.ArrayList;
@@ -27,7 +33,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 import static com.seagame.ext.exception.GameErrorCode.*;
@@ -42,20 +47,19 @@ public class ItemRequestHandler extends ZClientRequestHandler {
     private static final int LEVEL_UP = 3;
     private static final int EQUIP_UNEQUIP = 4;
     private static final int OPEN_EGG = 5;
-    public static final String EGG_PIECE = "9910";
-    public static final int EGG_PIECE_TO_EGE = 1000;
-    public static final String EGG = "9911";
 
     private HeroItemManager heroItemManager;
     private PlayerManager playerManager;
     private HeroClassManager heroClassManager;
     private AutoIncrementService autoIncrementService;
+    private WolFlowManager wolFlowManager;
 
     public ItemRequestHandler() {
         heroItemManager = ExtApplication.getBean(HeroItemManager.class);
         playerManager = ExtApplication.getBean(PlayerManager.class);
         heroClassManager = ExtApplication.getBean(HeroClassManager.class);
         autoIncrementService = ExtApplication.getBean(AutoIncrementService.class);
+        wolFlowManager = ExtApplication.getBean(WolFlowManager.class);
     }
 
 
@@ -127,53 +131,79 @@ public class ItemRequestHandler extends ZClientRequestHandler {
 
             Collection<HeroItem> collection = heroItemManager.useItemsWithIds(user, useMap);
             List<RewardBase> refund = new ArrayList<>();
-            collection.forEach(heroItem -> heroItemManager.openItem(heroItem.getIndex(), useMap.get(heroItem.getId()), refund));
-
-            Map<String, Integer> refundFinal = new ConcurrentHashMap<>();
-            List<HeroClass> heroes = new ArrayList<>();
-            refund.forEach(sRewardBase -> {
-                if (sRewardBase.getType().equals("hero")) {
-                    HeroClass heroClass = new HeroClass(sRewardBase.getID(), sRewardBase.getLevel());
-                    heroClass.setRank(sRewardBase.getRank());
-                    heroClass.setPlayerId("nf1#1001");
-                    heroClass.setId(autoIncrementService.genHeroId());
-                    heroes.add(heroClass);
-                } else {
-                    refundFinal.put(sRewardBase.getID(), sRewardBase.getCount());
+            IGenReward genRewards = new IGenReward() {
+                @Override
+                public String genRewards() {
+                    return null;
                 }
-            });
-            if (heroes.size() > 0) {
-                heroClassManager.save(heroes);
-                QAntArray updateArray = QAntArray.newInstance();
-                heroes.forEach(hero -> updateArray.addQAntObject(hero.buildInfo()));
-                params.putQAntArray("heroes", updateArray);
-            }
 
-            Player player = playerManager.getPlayer(user.getName());
-
-            Collection<HeroItem> heroItems = ItemConfig.getInstance().convertToHeroItem(refundFinal);
-            heroItems.stream().filter(heroItem -> !heroItem.getType().equals("point")).forEach(heroItem -> {
-                switch (heroItem.getIndex()) {
-                    case "9902":
-                        player.setEnergy(Math.min(player.getEnergyMax(), player.getEnergy() + heroItem.getNo()));
-                        break;
-                    case "9904":
-                        player.setTrophy(player.getTrophy() + heroItem.getNo());
-                        break;
+                @Override
+                public List<RewardBase> genRewardsBase() {
+                    refund.clear();
+                    collection.forEach(heroItem -> heroItemManager.openItem(heroItem.getIndex(), useMap.get(heroItem.getId()), refund));
+                    return refund;
                 }
-            });
-            Collection<HeroItem> items1 = heroItems.stream().filter(heroItem -> !heroItem.getType().equals("point")).collect(Collectors.toList());
+            };
+            IApplyUseItemRewards iApplyRewards = new IApplyUseItemRewards() {
+                @Override
+                public void applyRewards(String rewards, WolAssetCompletedRes wolAssetCompletedRes, JSONObject jsonObject) {
+
+                }
+
+                @Override
+                public void applyRewards(List<RewardBase> rewardBases, WolAssetCompletedRes wolAssetCompletedRes, JSONObject jsonObject) {
+                    Map<String, Integer> refundFinal = new ConcurrentHashMap<>();
+                    List<HeroClass> heroes = new ArrayList<>();
+                    refund.forEach(sRewardBase -> {
+                        if (sRewardBase.getType().equals("hero")) {
+                            HeroClass heroClass = new HeroClass(sRewardBase.getID(), sRewardBase.getLevel());
+                            heroClass.setRank(sRewardBase.getRank());
+                            heroClass.setPlayerId(user.getName());
+                            heroClass.setId(autoIncrementService.genHeroId());
+                            heroes.add(heroClass);
+                        } else {
+                            refundFinal.put(sRewardBase.getID(), sRewardBase.getCount());
+                        }
+                    });
+                    if (heroes.size() > 0) {
+                        OffChainServices.getInstance().applyOfcToHeroes(heroes, wolAssetCompletedRes);
+                        heroClassManager.save(heroes);
+                        QAntArray updateArray = QAntArray.newInstance();
+                        heroes.forEach(hero -> updateArray.addQAntObject(hero.buildInfo()));
+                        params.putQAntArray("heroes", updateArray);
+                    }
+
+                    Player player = playerManager.getPlayer(user.getName());
+
+                    Collection<HeroItem> heroItems = ItemConfig.getInstance().convertToHeroItem(refundFinal);
+                    heroItems.stream().filter(heroItem -> !heroItem.getType().equals("point")).forEach(heroItem -> {
+                        switch (heroItem.getIndex()) {
+                            case ENERGY:
+                                player.setEnergy(Math.min(player.getEnergyMax(), player.getEnergy() + heroItem.getNo()));
+                                break;
+                            case TROPHY:
+                                player.setTrophy(player.getTrophy() + heroItem.getNo());
+                                break;
+                        }
+                    });
+                    Collection<HeroItem> items1 = heroItems.stream().filter(heroItem -> !heroItem.getType().equals("point")).collect(Collectors.toList());
 
 
-            ItemConfig.getInstance().buildRewardsReceipt(params, refundFinal.keySet().stream().map(heroItem -> heroItem + "/" + refundFinal.get(heroItem)).collect(Collectors.joining("#")));
-            Collection<HeroItem> updateItems = heroItemManager.addItems(user.getName(), items1);
-            updateItems.addAll(collection);
-            playerManager.updateGameHero(player);
-            NotifySystem notifySystem = ExtApplication.getBean(NotifySystem.class);
-            notifySystem.notifyPlayerPointChange(user.getName(), player.buildPointInfo());
-            heroItemManager.save(updateItems);
-            heroItemManager.notifyAssetChange(user, updateItems);
-            ItemConfig.getInstance().buildUpdateRewardsReceipt(params, updateItems);
+                    ItemConfig.getInstance().buildRewardsReceipt(params, refundFinal.keySet().stream().map(heroItem -> heroItem + "/" + refundFinal.get(heroItem)).collect(Collectors.joining("#")));
+                    Collection<HeroItem> updateItems = heroItemManager.addItems(user.getName(), items1);
+                    OffChainServices.getInstance().applyOfcToItem(updateItems, wolAssetCompletedRes);
+                    heroItemManager.save(updateItems);
+                    updateItems.addAll(collection);
+                    playerManager.updateGameHero(player);
+                    NotifySystem notifySystem = ExtApplication.getBean(NotifySystem.class);
+                    notifySystem.notifyPlayerPointChange(user.getName(), player.buildPointInfo());
+                    heroItemManager.save(updateItems);
+                    heroItemManager.notifyAssetChange(user);
+                    ItemConfig.getInstance().buildUpdateRewardsReceipt(params, updateItems);
+                }
+            };
+            wolFlowManager.sendUseItemRequest(user.getName(), collection, genRewards, iApplyRewards);
+
         } catch (UseItemException e) {
             responseError(user, GameErrorCode.NOT_EXIST_ITEM);
             return;
@@ -182,8 +212,7 @@ public class ItemRequestHandler extends ZClientRequestHandler {
     }
 
     private void openEgg(QAntUser user, IQAntObject params) {
-        String itemIdx = "9911";
-        String itemIdxPiece = "9910";
+        String itemIdx = EGG;
         ItemBase itemBase = ItemConfig.getInstance().getItem(itemIdx);
         if (itemBase == null) {
             responseError(user, NOT_EXIST_ITEM);
@@ -205,37 +234,13 @@ public class ItemRequestHandler extends ZClientRequestHandler {
                 }
             }
             if (total > 0) {
-                try {
-                    useItems.clear();
-                    Collection<HeroItem> itemsPiece = heroItemManager.getItemsByIndex(user.getName(), itemIdxPiece);
-                    int totalPiece = 100;
-                    for (HeroItem heroItem : itemsPiece) {
-                        if (totalPiece > 0) {
-                            heroItem.setNo(Math.min(totalPiece, heroItem.getNo()));
-                            totalPiece -= heroItem.getNo();
-                            useItems.add(heroItem);
-                        }
-                    }
-                    if (totalPiece > 0) {
-                        responseError(user, LACK_OF_INFOMATION);
-                        return;
-                    }
-                    useItems.forEach(heroItem -> useMap.put(heroItem.getId(), heroItem.getNo()));
-                    Collection<HeroItem> updateItems = heroItemManager.openEgg(user, useMap, params);
-                    heroItemManager.save(updateItems);
-                    heroItemManager.notifyAssetChange(user, updateItems);
-                    ItemConfig.getInstance().buildUpdateRewardsReceipt(params, updateItems);
-                } catch (UseItemException e) {
-                    responseError(user, GameErrorCode.NOT_EXIST_ITEM);
-                    return;
-                }
-                send(params, user);
+                responseError(user, GameErrorCode.NOT_ENOUGH_CURRENCY_ITEM);
                 return;
             }
             useItems.forEach(heroItem -> useMap.put(heroItem.getId(), heroItem.getNo()));
             Collection<HeroItem> updateItems = heroItemManager.openEgg(user, useMap, params);
             heroItemManager.save(updateItems);
-            heroItemManager.notifyAssetChange(user, updateItems);
+            heroItemManager.notifyAssetChange(user);
             ItemConfig.getInstance().buildUpdateRewardsReceipt(params, updateItems);
         } catch (UseItemException e) {
             responseError(user, GameErrorCode.NOT_EXIST_ITEM);
@@ -283,20 +288,6 @@ public class ItemRequestHandler extends ZClientRequestHandler {
         IQAntArray arr = QAntArray.newInstance();
         itemPage.getContent().forEach(item -> {
             arr.addQAntObject(item.buildInfo());
-            if (item.getIndex().equals(EGG_PIECE)) {
-                if (item.getNo() >= EGG_PIECE_TO_EGE) {
-                    item.setNo(Math.floorMod(item.getNo(), EGG_PIECE_TO_EGE));
-                    Collection<HeroItem> itemsById = heroItemManager.getItemsById(user.getName(), EGG);
-                    AtomicInteger no = new AtomicInteger(0);
-                    itemsById.stream().limit(1).forEach(heroItem -> {
-                        no.set(heroItem.getNo() + Math.floorDiv(item.getNo(), EGG_PIECE_TO_EGE));
-                        heroItem.setNo(no.get());
-                    });
-                    itemsById.add(item);
-                    heroItemManager.save(itemsById);
-                    itemPage.getContent().stream().filter(heroItem -> heroItem.getIndex().equals(EGG)).forEach(heroItem -> heroItem.setNo(no.get()));
-                }
-            }
         });
         params.putQAntArray(KEYQA_ITEMS, arr);
         send(params, user);
@@ -306,17 +297,64 @@ public class ItemRequestHandler extends ZClientRequestHandler {
     private void levelUp(QAntUser user, IQAntObject params) {
         long id = params.getLong("id");
         if (id <= 0) {
-            responseError(user, GameErrorCode.LACK_OF_INFOMATION);
+            responseError(user, GameErrorCode.LACK_OF_INFOMATION, "id");
             return;
         }
         HeroEquipment heroItem = heroItemManager.getEquipment(id, user.getName());
         if (heroItem == null) {
-            responseError(user, GameErrorCode.LACK_OF_INFOMATION);
+            responseError(user, GameErrorCode.ITEM_NOT_FOUND, String.valueOf(id));
             return;
         }
-        heroItem.levelUp();
-        params.putQAntObject("item", heroItem.buildInfo());
-        send(params, user);
+
+        if (heroItem.getEquipFor() > 0) {
+            responseError(user, ITEM_BEING_EQUIPPED);
+            return;
+        }
+
+        EquipLevelBase equipLevelBase = ItemConfig.getInstance().getEquipLevel(heroItem.getLevel() + 1);
+        String cost1 = equipLevelBase.getCost();
+
+        Player player = playerManager.getPlayer(user.getName());
+        OffChainServices.getInstance().updateBalanceFlow(player.getWalletAddress(), cost1, new OffChainResponseHandler() {
+
+            @Override
+            public JSONObject onOk(JSONObject jsonObject) {
+                try {
+                    Map<String, Integer> cost = new ConcurrentHashMap<>();
+                    ItemConfig.getInstance().convertToMap(cost, cost1);
+                    Collection<HeroItem> updateItems = heroItemManager.useItemWithIndex(user.getName(), cost);
+                    heroItemManager.save(updateItems);
+                    heroItemManager.notifyAssetChange(user, updateItems);
+                    ItemConfig.getInstance().buildUpdateRewardsReceipt(params, updateItems);
+                } catch (UseItemException e) {
+                    responseError(user, GameErrorCode.LACK_OF_MATIRIAL, "UseItemException");
+                    return jsonObject;
+                }
+                if (RandomRangeUtil.isSuccessPerPercent(equipLevelBase.getSuccessRatePercent(), 100)) {
+                    heroItem.levelUp();
+                    params.putBool("success", true);
+                } else {
+                    int levelDown = equipLevelBase.getLevelDown();
+                    heroItem.setLevel(heroItem.getLevel() - levelDown);
+                    params.putBool("success", false);
+                }
+                if (heroItem.getLevel() > 0) {
+                    heroItemManager.save(heroItem);
+                } else {
+                    heroItemManager.remove(heroItem);
+                }
+                params.putQAntObject("item", heroItem.buildInfo());
+                send(params, user);
+                return jsonObject;
+            }
+
+            @Override
+            public JSONObject onNg(JSONObject jsonObject) {
+                responseError(user, CHECK_OFFCHAIN_ASSET, jsonObject.toString());
+                return jsonObject;
+            }
+        });
+
     }
 
 

@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  mu_mongodb:
+    container_name: mu_mongodb
+    image: "mongo"
+    restart: always
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
+      - MONGO_INITDB_DATABASE=
+    volumes: 
+       - mu_game_db:/data/db
+  mu_game:
+    build: .
+    container_name: mu_game
+    depends_on:
+    - mu_mongodb
+    command: java -jar mu-game.jar -n NFT-Game
+    volumes:
+      - ./application_local.properties:/app/config/application.properties
+    ports:
+      - 9190:9190 #webapi
+      - 9194:9194 #ws
+
+volumes:
+  mu_game_db:
+    name: mu_game_db

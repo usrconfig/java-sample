@@ -50,4 +50,7 @@ public interface HeroRepository extends MongoRepository<HeroClass, Long> {
 
     @Query(value = "{ playerId: ?0 }", count = true)
     int countHero(String playerId);
+
+    @Query(value = "{ playerId: ?0 , $or: [{ofcId: {$exists: false}}, {ofcId: \"\" }]}")
+    List<HeroClass> getHeroWithoutOfcId(String playerId);
 }

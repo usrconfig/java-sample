@@ -20,6 +20,7 @@ public class HeroStage implements SerializableQAntType {
     public int starNo;
     private int chance;
     private long lastSweepTime;
+    private boolean rewardFirstTimeDaily;
 
 
     public HeroStage() {
@@ -42,6 +43,7 @@ public class HeroStage implements SerializableQAntType {
         result.putInt("chance", chance);
         result.putInt("starNo", starNo);
         result.putBool("unlock", unlock);
+        result.putBool("rewardFirstTimeDaily", rewardFirstTimeDaily);
         return result;
     }
 
@@ -70,8 +72,9 @@ public class HeroStage implements SerializableQAntType {
         chance--;
     }
 
-    public void resetSweepTimes() {
+    public void resetDaily() {
         chance = StageConfig.getInstance().getStage(this.index).getChance();
         setLastSweepTime(System.currentTimeMillis());
+        rewardFirstTimeDaily = false;
     }
 }

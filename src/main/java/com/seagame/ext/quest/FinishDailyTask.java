@@ -35,28 +35,27 @@ public class FinishDailyTask extends QuestObserver {
         AtomicBoolean hasChange = new AtomicBoolean(false);
         progresses.forEach(questProgress -> questProgress.getTasks().forEach(taskProgress -> {
                     if (taskProgress.isApplyAble() && task.equals(taskProgress.getTaskKey())) {
-                        if (checkDailyQuest(heroQuest)) {
-                            if (!hasChange.get())
-                                hasChange.set(true);
-                            if (taskProgress.incr(value)) {
-                                this.progressFinishTask(heroQuest, questProgress, taskProgress, questFinishList);
-                            }
+                        if (!hasChange.get())
+                            hasChange.set(true);
+                        if (taskProgress.incr(value)) {
+                            this.progressFinishTask(heroQuest, questProgress, taskProgress, questFinishList);
                         }
                     }
                 }
         ));
-        if (questFinishList.size() > 0) {
-            questSystem.finishQuest(heroQuest.getPlayerId(), questFinishList);
-        }
         if (hasChange.get()) {
+            hasChange.set(false);
             questSystem.notifyQuestChange(heroQuest);
             questSystem.save(heroQuest);
         }
-
+        if (questFinishList.size() > 0) {
+            questSystem.finishQuest(heroQuest.getPlayerId(), questFinishList);
+        }
     }
 
     private boolean checkDailyQuest(HeroQuest heroQuest) {
-        return heroQuest.getProgressMap().values().stream().filter(questProgress -> questProgress.getGroup().equals("daily")).allMatch(QuestProgress::isFinish);
+        return true;
+//        return heroQuest.getProgressMap().values().stream().filter(questProgress -> questProgress.getGroup().equals("daily")).allMatch(QuestProgress::isFinish);
     }
 
     @Override

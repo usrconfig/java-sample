@@ -6,6 +6,8 @@ import com.creants.creants_2x.socket.gate.entities.IQAntObject;
 import com.creants.creants_2x.socket.gate.entities.QAntArray;
 import com.creants.creants_2x.socket.gate.entities.QAntObject;
 import com.creants.creants_2x.socket.gate.wood.QAntUser;
+import com.creants.eventhandling.dto.GameAssetDTO;
+import com.creants.eventhandling.dto.UpdateAssetRequest;
 import com.seagame.ext.ExtApplication;
 import com.seagame.ext.Utils;
 import com.seagame.ext.config.game.HeroConfig;
@@ -25,12 +27,23 @@ import com.seagame.ext.entities.hero.LevelBase;
 import com.seagame.ext.entities.item.HeroConsumeItem;
 import com.seagame.ext.entities.item.HeroEquipment;
 import com.seagame.ext.entities.item.HeroItem;
+import com.seagame.ext.entities.item.RewardBase;
 import com.seagame.ext.entities.team.BattleTeam;
 import com.seagame.ext.entities.team.Team;
 import com.seagame.ext.exception.UseItemException;
+import com.seagame.ext.offchain.IApplyAssets;
+import com.seagame.ext.offchain.IGenReward;
+import com.seagame.ext.offchain.entities.WolAsset;
+import com.seagame.ext.offchain.entities.WolAssetCheckStockRes;
+import com.seagame.ext.offchain.entities.WolPlayerRes;
+import com.seagame.ext.offchain.entities.WolRewardPlayer;
+import com.seagame.ext.offchain.services.AssetMappingManager;
+import com.seagame.ext.offchain.services.OffChainServices;
+import com.seagame.ext.offchain.services.WolFlowManager;
 import com.seagame.ext.quest.JoinTask;
 import com.seagame.ext.quest.QuestSystem;
 import com.seagame.ext.services.AutoIncrementService;
+import com.seagame.ext.services.NotifySystem;
 import com.seagame.ext.services.ServiceHelper;
 import com.seagame.ext.util.CalculateUtil;
 import com.seagame.ext.util.NetworkConstant;
@@ -63,6 +76,12 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
     private static final int SEQUENCE_MONTH = 6;
     public static long serverDay;
 
+
+    public static final String IN_GAME = "in_game";
+    public static final String NFT = "nft";
+    public static final String REWARD = "reward";
+
+
     public static final int MAX_MISS_DAILY_REWARDS = 3;
 
     @Autowired
@@ -91,6 +110,15 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 
     @Autowired
     private HeroClassManager heroClassManager;
+
+    @Autowired
+    private OffChainServices offChainServices;
+    @Autowired
+    private WolFlowManager wolFlowManager;
+
+
+    @Autowired
+    private AssetMappingManager assetMappingManager;
 
     @Value("${enable.dynamic.event}")
     private boolean dynamicEvent;
@@ -246,6 +274,376 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //                testPageHero();
 
 //                testDailyEvent();
+//                sendAssetRequest("x000001");
+//                sendRewardRequest();
+//                offChainServices.rewardFlow();
+//                offChainServices.upgradeFlow();
+//                //flow open assets
+//                try {
+//                    WolPlayerRes x000001 = offChainServices.getBalance("x000001");
+//                    WolAssetCheckStockReq wolAssetCheckStockReq = new WolAssetCheckStockReq();
+//                    WolPlayerRes wolPlayerRes = new WolPlayerRes();
+//                    wolPlayerRes.setAddress("x000001");
+//                    wolPlayerRes.setKen(x000001.getKen());
+//                    wolPlayerRes.setWol(x000001.getWol());
+//                    wolAssetCheckStockReq.setPlayer(wolPlayerRes);
+//
+//                    ArrayList<WolAsset> assets = new ArrayList<>();
+//                    WolAsset e = new WolAsset();
+//                    e.setAsset_id("test_id_of_game");
+//                    e.setStatus("in_game");
+//                    e.setCategory("hero");
+//                    e.setType("dark_knight");
+//                    e.setAclass("b_rank");
+//                    e.setGame(OffChainServices.GAME_MU);
+//                    assets.add(e);
+//                    wolAssetCheckStockReq.setAssets(assets);
+//                    WolAssetCheckStockRes wolAssetCheckStockRes = offChainServices.checkStockAsset(wolAssetCheckStockReq);
+//
+//                    WolAssetCompletedReq wolAssetCompletedReq = new WolAssetCompletedReq();
+//                    wolAssetCompletedReq.setPlayer(wolAssetCheckStockRes.getPlayer());
+//                    wolAssetCompletedReq.setAssets(wolAssetCheckStockRes.getAssets());
+//                    WolAssetCompletedRes wolAssetCompletedRes1 = offChainServices.assetCompleted(wolAssetCompletedReq);
+//                    WolAssetCompletedRes wolAssetCompletedRes = wolAssetCompletedRes1;
+//
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//
+//                //flow rewards
+//                try {
+//                    int totalKenRewards = 200;
+//                    int totalWolRewards = 100;
+//
+//                    WolRewardCheckStockReq wolRewardCheckStockReq = new WolRewardCheckStockReq();
+//                    ArrayList<WolAsset> assets = new ArrayList<>();
+//                    WolAsset e = new WolAsset();
+//                    e.setAsset_id("test_id_of_game");
+//                    e.setStatus("in_game");
+//                    e.setCategory("hero");
+//                    e.setType("dark_knight");
+//                    e.setAclass("b_rank");
+//                    e.setGame(OffChainServices.GAME_MU);
+//                    WolAsset b = new WolAsset();
+//                    b.setAsset_id("test_id_of_game");
+//                    b.setStatus("in_game");
+//                    b.setCategory("hero");
+//                    b.setType("dark_knight");
+//                    b.setAclass("a_rank");
+//                    b.setGame(OffChainServices.GAME_MU);
+//                    assets.add(e);
+//                    assets.add(b);
+//                    wolRewardCheckStockReq.setAssets(assets);
+//                    wolRewardCheckStockReq.setKen(totalKenRewards);
+//                    wolRewardCheckStockReq.setWol(totalWolRewards);
+//                    wolRewardCheckStockReq.setReward_id("reward_id_of_game_server_" + System.currentTimeMillis());
+//
+//
+//                    WolRewardCheckStockRes wolRewardCheckStockRes = offChainServices.checkStockReward(wolRewardCheckStockReq);
+//                    List<WolRewardCheckStockRes> wolRewardCheckStockRess = new ArrayList<>();
+//                    wolRewardCheckStockRess.add(wolRewardCheckStockRes);
+//
+//                    WolRewardCompleteReq wolRewardCompleteReq = new WolRewardCompleteReq();
+//                    wolRewardCompleteReq.setReward_id(wolRewardCheckStockRes.getReward_id());
+//
+//                    WolPlayerRes x000001 = new WolPlayerRes();
+//                    x000001.setKen(totalKenRewards);
+//                    x000001.setWol(totalWolRewards);
+//                    x000001.setAddress("x000001");
+//
+//                    ArrayList<WolRewardPlayer> players = new ArrayList<>();
+//                    WolRewardPlayer rewardPlayer = new WolRewardPlayer();
+//                    rewardPlayer.setPlayer(x000001);
+//                    rewardPlayer.setAssets(wolRewardCheckStockRes.getAssets());
+//                    players.add(rewardPlayer);
+//
+//                    wolRewardCompleteReq.setPlayers(players);
+//                    WolRewardCompleteRes wolAssetCompletedRes1 = offChainServices.rewardCompleted(wolRewardCompleteReq);
+//                    WolRewardCompleteRes wolAssetCompletedRes = wolAssetCompletedRes1;
+//
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//                //upgrade flow
+//                try {
+//                    WolPlayerRes x000001 = offChainServices.getBalance("x000001");
+//                    WolAssetUpgradeReq wolAssetUpgradeReq = new WolAssetUpgradeReq();
+//                    ArrayList<WolAsset> assetsIn = new ArrayList<>();
+//                    ArrayList<WolAsset> assetsOut = new ArrayList<>();
+//                    WolAsset e = new WolAsset();
+//                    e.setAsset_id("test_id_of_game");
+//                    e.setStatus("in_game");
+//                    e.setCategory("hero");
+//                    e.setType("dark_knight");
+//                    e.setAclass("b_rank");
+//                    e.setGame(OffChainServices.GAME_MU);
+//                    WolAsset b = new WolAsset();
+//                    b.setAsset_id("test_id_of_game");
+//                    b.setStatus("in_game");
+//                    b.setCategory("hero");
+//                    b.setType("dark_knight");
+//                    b.setAclass("a_rank");
+//                    b.setGame(OffChainServices.GAME_MU);
+//                    assetsIn.add(e);
+//                    assetsOut.add(b);
+//                    wolAssetUpgradeReq.setInputs(assetsIn);
+//                    wolAssetUpgradeReq.setOutputs(assetsOut);
+//                    wolAssetUpgradeReq.setPlayer(x000001);
+//
+//
+//                    WolAssetUpgradeRes wolAssetUpgradeRes = offChainServices.assetUpgrade(wolAssetUpgradeReq);
+//
+//                    WolAssetCompletedReq wolAssetCompletedReq = new WolAssetCompletedReq();
+//                    wolAssetCompletedReq.setAssets(wolAssetUpgradeRes.getAssets());
+//                    wolAssetCompletedReq.setPlayer(wolAssetUpgradeRes.getPlayer());
+//
+//                    WolAssetCompletedRes wolAssetCompletedRes1 = offChainServices.assetCompleted(wolAssetCompletedReq);
+//                    WolAssetCompletedRes wolAssetCompletedRes = wolAssetCompletedRes1;
+//
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+
+//                customeGift("taolao", "add:ai:1000!12/2#1010!3/1|");
+
+//                Utils.parseWalletAddress("0xbBE34AD3BCF74c08de4181E4FD23804fb851a18A");
+
+                String walletAddress = "0xbbe34ad3bcf74c08de4181e4fd23804fb851a18a";
+//                try {
+//                    WolPlayerRes balance = OffChainServices.getInstance().getBalance(walletAddress);
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//
+                String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZGRyZXNzIjoiMHgzNWJiZjMxZjI3ODdiMDNiNDJhZGU2Yzk5YWM0ODU5MjkwMjQxMDdhIiwibm9uY2UiOjMxMDc0NTIsInN0YXR1cyI6ImFjdGl2ZSIsImlhdCI6MTY0ODAwODQwOSwiZXhwIjoxNjQ4MDEyMDA5fQ.UtGS76P6C4qIdM5bDBUSXH-ONnrC5wHgQgAGaGAkDMA";
+//                try {
+//                    DecodedJWT decodedJWT = AuthHelper.verifyToken(token);
+//                    Claim address = decodedJWT.getClaim("address");
+//                } catch (UnsupportedEncodingException e) {
+//                    e.printStackTrace();
+//                }
+
+//                JSONObject verifyToken = null;
+//                try {
+//                    verifyToken = OffChainServices.getInstance().verifyToken(token);
+//                    if (verifyToken.containsKey("status")&&verifyToken.getString("status").equals("active")) {
+//                        String deviceId = verifyToken.getString("address");}
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+
+                //Test sum Hero
+//                AtomicBoolean success = new AtomicBoolean(false);
+//                Player player = playerManager.getPlayer("nf1#1008");
+//                AtomicReference<HeroBase> heroBase = new AtomicReference<>();
+//                OffChainResponseHandler checkStock = new OffChainResponseHandler() {
+//                    @Override
+//                    public JSONObject onOk(JSONObject jsonObject) {
+//                        WolAssetCheckStockRes wolAssetCheckStockRes = new WolAssetCheckStockRes().init(jsonObject);
+//                        HeroClass heroClass = new HeroClass(heroBase.get().getID(), 1);
+//                        heroClass.setId(autoIncrService.genHeroId());
+//                        heroClass.setPlayerId(player.getId());
+//                        heroClassManager.save(heroClass);
+//                        player.setEnergy(player.getEnergy() + heroBase.get().getEnegryCAP());
+//                        playerManager.updateGameHero(player);
+//                        NotifySystem notifySystem = ExtApplication.getBean(NotifySystem.class);
+//                        notifySystem.notifyPlayerPointChange(player.getId(), player.buildPointInfo());
+//                        success.set(true);
+//                        return jsonObject;
+//                    }
+//
+//                    @Override
+//                    public JSONObject onNg(JSONObject jsonObject) {
+//                        return null;
+//                    }
+//                };
+//
+//
+//                ArrayList<HeroBase> list = new ArrayList<>(HeroConfig.getInstance().getHeroes());
+//                IntStream.range(1, 100).forEach(value -> {
+//                    if (success.get()) {
+//                        return;
+//                    }
+//                    Collections.shuffle(list);
+//                    HeroBase newValue = list.get(0);
+//                    heroBase.set(newValue);
+//                    ArrayList<WolAsset> assets = new ArrayList<>();
+//                    WolAsset e = new WolAsset();
+//                    e.setAsset_id(String.valueOf(autoIncrService.getHeroId()));
+//                    e.setStatus("in_game");
+//                    e.setCategory("hero");
+//                    e.setType(Utils.getOTypeHero(newValue.getHeroClass()));
+//                    e.setAclass(Utils.getOClassHero(newValue.getRarity()));
+//                    e.setGame(OffChainServices.getInstance().getGAME_KEY());
+//                    assets.add(e);
+//                    OffChainServices.getInstance().assetFlow(player.getWalletAddress(), assets, checkStock);
+//                });
+                //Test sum Hero
+
+
+                //               Test reward
+//                String idx = "100";
+//                Stage stage = StageConfig.getInstance().getStage(idx);
+//                IGenRewards genRewards = () -> {
+//                    String rewards = RandomRangeUtil.randomDroprate(stage.getRandomReward(), stage.getRandomRate(), 1);
+//                    String dailyFirstTimeReward = stage.getDailyFirstTimeReward();
+//                    if (campaignManager.isDailyFirstTime(idx) && !Utils.isNullOrEmpty(dailyFirstTimeReward)) {
+//                        rewards += "#" + dailyFirstTimeReward;
+//                    }
+//                    return rewards;
+//                };
+//
+//                IApplyRewards iApplyRewards = new IApplyRewards() {
+//                    @Override
+//                    public void applyRewards(String rewards) {
+////                        List<HeroItem> addItems = heroItemManager.addItems(user, rewards);
+////                        heroItemManager.notifyAssetChange(user, addItems);
+////                        ItemConfig.getInstance().buildUpdateRewardsReceipt(params, addItems);
+////                        ItemConfig.getInstance().buildRewardsReceipt(params, rewards);
+//                    }
+//                };
+//                wolAssetRewardManager.sendRewardRequest("nf1#1008", genRewards, iApplyRewards);
+//               Test reward
+
+//                ArrayList<WolAsset> assetIn = new ArrayList<>();
+//                ArrayList<WolAsset> assetOut = new ArrayList<>();
+//
+//                OffChainServices.getInstance().buildHeroAssets(Collections.singletonList(HeroConfig.getInstance().getHeroBase("100")), assetOut);
+//                List<HeroBase> heroInput = Arrays.asList(HeroConfig.getInstance().getHeroBase("100"), HeroConfig.getInstance().getHeroBase("100"));
+//                OffChainServices.getInstance().buildHeroAssets(heroInput, assetIn);
+//                AtomicInteger wol = new AtomicInteger();
+//                AtomicInteger ken = new AtomicInteger();
+//                OffChainServices.getInstance().buildItemAsset(Collections.singletonList(new HeroEquipment(ItemConfig.getInstance().getItem("1000"))), assetIn, wol, ken);
+//                wolFlowManager.sendUpgradeRequest("nf1#1008", assetIn, assetOut, success -> {
+//                    if (success) {
+//
+//                    } else {
+//
+//                    }
+//                });
+
+//                OffChainServices.getInstance().updateBalanceFlow(walletAddress, 1, 1, new OffChainResponseHandler() {
+//                    @Override
+//                    public JSONObject onOk(JSONObject jsonObject) {
+//                        return jsonObject;
+//                    }
+//
+//                    @Override
+//                    public JSONObject onNg(JSONObject jsonObject) {
+//                        return jsonObject;
+//                    }
+//                });
+
+//                try {
+//
+//                    OffChainServices.getInstance().getBalance(walletAddress);
+//                    OffChainServices.getInstance().getExchangeRate();
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+
+//                testSumHeroNew();
+
+                // test upgrade equip
+//                EquipLevelBase equipLevelBase = ItemConfig.getInstance().getEquipLevel(3);
+//                String cost1 = equipLevelBase.getCost();
+//
+//                String gameHeroId = "nf1#1008";
+//                Player player = playerManager.getPlayer(gameHeroId);
+//                OffChainServices.getInstance().updateBalanceFlow(player.getWalletAddress(), cost1, new OffChainResponseHandler() {
+//                    @Override
+//                    public JSONObject onOk(JSONObject jsonObject) {
+//                        try {
+//                            Map<String, Integer> cost = new ConcurrentHashMap<>();
+//                            ItemConfig.getInstance().convertToMap(cost, cost1);
+//                            Collection<HeroItem> updateItems = heroItemManager.useItemWithIndex(gameHeroId, cost);
+//                            heroItemManager.save(updateItems);
+//                        } catch (UseItemException e) {
+//                            return jsonObject;
+//                        }
+//                        if (RandomRangeUtil.isSuccessPerPercent(equipLevelBase.getSuccessRatePercent(), 100)) {
+//                        } else {
+//                        }
+//                        return jsonObject;
+//                    }
+//
+//                    @Override
+//                    public JSONObject onNg(JSONObject jsonObject) {
+//                        IQAntObject createErrorMsg = MessageFactory.createErrorMsg("cmd_test", 1, GameErrorCode.LACK_OF_INFOMATION, jsonObject.toString());
+//                        QAntTracer.debug(ZClientRequestHandler.class, String.join(",", jsonObject.toString()));
+//                        return jsonObject;
+//                    }
+//                });
+// test upgrade equip
+//Test open Egg
+//                String itemIdx = "9911";
+//                ItemBase itemBase = ItemConfig.getInstance().getItem(itemIdx);
+//                if (itemBase == null) {
+////                    responseError(user, NOT_EXIST_ITEM);
+//                    return;
+//                }
+//
+//                Map<Long, Integer> useMap = new ConcurrentHashMap<>();
+//                Collection<HeroItem> useItems = new ArrayList<>();
+//
+//                String name = "nf1#1002";
+//                Collection<HeroItem> items = heroItemManager.getItemsByIndex(name, itemIdx);
+//
+//                QAntUser user=getUserByName(name);
+//                user=new QAntUser(name,new EmbeddedChannel());
+//                IQAntObject params=new QAntObject();
+//                try {
+//                    int total = 1;
+//                    for (HeroItem heroItem : items) {
+//                        if (total > 0) {
+//                            heroItem.setNo(Math.min(total, heroItem.getNo()));
+//                            total -= heroItem.getNo();
+//                            useItems.add(heroItem);
+//                        }
+//                    }
+//                    if (total > 0) {
+//                        return;
+//                    }
+//                    useItems.forEach(heroItem -> useMap.put(heroItem.getId(), heroItem.getNo()));
+//                    Collection<HeroItem> updateItems = heroItemManager.openEgg(user, useMap, params);
+//                    heroItemManager.save(updateItems);
+//                    heroItemManager.notifyAssetChange(user, updateItems);
+//                    ItemConfig.getInstance().buildUpdateRewardsReceipt(params, updateItems);
+//                } catch (UseItemException e) {
+////                    responseError(user, GameErrorCode.NOT_EXIST_ITEM);
+//                    return;
+//                }
+//Test open Egg
+
+
+//            heroItemManager.notifyAssetChange(new QAntUser("nf1#1002",new EmbeddedChannel()));
+
+
+                final String name = "nf1#1018";
+//                Player player = playerManager.getPlayer(name);
+//
+//                LevelBase levelBase = HeroConfig.getInstance().getLevelUp(2);
+//                String upgradeCost = levelBase.getUpgradeCost();
+//
+//                OffChainServices.getInstance().updateBalanceFlow(player.getWalletAddress(), upgradeCost, new OffChainResponseHandler() {
+//                    @Override
+//                    public JSONObject onOk(JSONObject jsonObject) {
+//                        try {
+//                            Collection<HeroItem> heroItems = heroItemManager.useItemWithIndex(name, upgradeCost);
+//                        } catch (UseItemException e) {
+//                            return jsonObject;
+//                        }
+//                        return jsonObject;
+//                    }
+//
+//                    @Override
+//                    public JSONObject onNg(JSONObject jsonObject) {
+//                        return jsonObject;
+//                    }
+//                });
+
+//                Player player = playerManager.getPlayer(name);
+//                syncOffchainBalance(player);
             }
         }, 3000, 100000000);
 
@@ -273,6 +671,124 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 //        }
 
     }
+
+//    private void testSumHeroNew() {
+//        ArrayList<HeroBase> list = new ArrayList<>(HeroConfig.getInstance().getHeroes());
+//
+//        String name = "nf1#1008";
+//        Player player = getPlayer(name);
+//
+//        IGenReward iGenReward = new IGenReward() {
+//            @Override
+//            public String genRewards() {
+//                Collections.shuffle(list);
+//                HeroBase newValue = list.get(0);
+//                return newValue.getID()+"/1";
+//            }
+//
+//            @Override
+//            public List<RewardBase> genRewardsBase() {
+//                return null;
+//            }
+//        };
+//        IApplyAssets iApplyAssets = (rewards, wolAssetCompletedRes) -> {
+//            HeroBase heroBase = HeroConfig.getInstance().getHeroBase(rewards);
+//            HeroClass heroClass = new HeroClass(heroBase.getID(), 1);
+//            heroClass.setId(autoIncrService.genHeroId());
+//            heroClass.setPlayerId(name);
+//            OffChainServices.getInstance().applyOfcToHero(heroClass,wolAssetCompletedRes);
+//            heroClassManager.save(heroClass);
+//            player.setEnergy(player.getEnergy() + heroBase.getEnegryCAP());
+//            NotifySystem notifySystem = ExtApplication.getBean(NotifySystem.class);
+//            notifySystem.notifyPlayerPointChange(name, player.buildPointInfo());
+//        };
+//        wolFlowManager.sendAssetRequest(name, iGenReward, iApplyAssets, 100);
+//    }
+
+//    private void sendAssetRequest(String playerAddress) {
+//        OffChainServices offChainServices = ExtApplication.getBean(OffChainServices.class);
+//        ArrayList<WolAsset> assets = new ArrayList<>();
+//        WolAsset e = new WolAsset();
+//        e.setAsset_id("test_id_of_game");
+//        e.setStatus("in_game");
+//        e.setCategory("hero");
+//        e.setType("dark_knight");
+//        e.setAclass("b_rank");
+//        e.setGame(offChainServices.getGAME_KEY());
+//        assets.add(e);
+//        OffChainResponseHandler checkStock = new OffChainResponseHandler() {
+//            @Override
+//            public JSONObject onOk(JSONObject jsonObject) {
+//                WolAssetCheckStockRes wolAssetCheckStockRes = new WolAssetCheckStockRes().init(jsonObject);
+//                applyPlayerAsset(wolAssetCheckStockRes);
+//                return jsonObject;
+//            }
+//
+//            @Override
+//            public JSONObject onNg(JSONObject jsonObject) {
+//                sendAssetRequest(playerAddress);
+//                return null;
+//            }
+//        };
+//        offChainServices.assetFlow(playerAddress, assets, checkStock);
+//    }
+
+//    private void sendRewardRequest() {
+//        OffChainServices offChainServices = ExtApplication.getBean(OffChainServices.class);
+//        ArrayList<WolAsset> assets = new ArrayList<>();
+//        WolAsset e = new WolAsset();
+//        e.setAsset_id("test_id_of_game");
+//        e.setStatus("in_game");
+//        e.setCategory("hero");
+//        e.setType("dark_knight");
+//        e.setAclass("b_rank");
+//        e.setGame(offChainServices.getGAME_KEY());
+//        WolAsset b = new WolAsset();
+//        b.setAsset_id("test_id_of_game");
+//        b.setStatus("in_game");
+//        b.setCategory("hero");
+//        b.setType("dark_knight");
+//        b.setAclass("a_rank");
+//        b.setGame(offChainServices.getGAME_KEY());
+//        assets.add(e);
+//        assets.add(b);
+//        List<WolRewardPlayer> wolRewardPlayers = new ArrayList<>();
+//        WolRewardPlayer rewardPlayer = new WolRewardPlayer();
+//        WolPlayerRes player = new WolPlayerRes();
+//        player.setWol(500);
+//        player.setKen(650);
+//        player.setAddress("x000001");
+//        rewardPlayer.setPlayer(player);
+//        rewardPlayer.setAssets(assets);
+//        wolRewardPlayers.add(rewardPlayer);
+//
+//        OffChainResponseHandler checkStock = new OffChainResponseHandler() {
+//            @Override
+//            public JSONObject onOk(JSONObject jsonObject) {
+//                WolRewardCheckStockRes wolAssetCheckStockRes = new WolRewardCheckStockRes().init(jsonObject);
+//                offChainServices.saveRewardCompletedRequest(wolAssetCheckStockRes, wolRewardPlayers);
+//                offChainServices.rewardFlowComplete(wolAssetCheckStockRes.getReward_id());
+//                applyRewardCompleteFlow(wolRewardPlayers);
+//                return jsonObject;
+//            }
+//
+//            @Override
+//            public JSONObject onNg(JSONObject jsonObject) {
+//                sendRewardRequest();
+//                return null;
+//            }
+//        };
+//        offChainServices.rewardFlowCheckStock(wolRewardPlayers, checkStock);
+//    }
+
+    private void applyRewardCompleteFlow(List<WolRewardPlayer> wolRewardPlayers) {
+
+    }
+
+    private void applyPlayerAsset(WolAssetCheckStockRes jsonObject) {
+
+    }
+
 
     private void testDailyEvent() {
         DailyEventManager dailyEventManager = ExtApplication.getBean(DailyEventManager.class);
@@ -452,6 +968,23 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
         return playerRepo.findPlayerByDeviceIdAndZoneName(deviceId, zoneName);
     }
 
+    public Player getOrCreatePlayerByDevice(String deviceId, String zoneName) {
+        Player player = playerRepo.findPlayerByDeviceIdAndZoneName(deviceId, zoneName);
+
+        if (player == null) {
+            long gameId = autoIncrService.genAccountId();
+            String playerId = zoneName + "#" + gameId;
+            String fullname = "Guest#" + gameId;
+
+            player = new Player(playerId, gameId, fullname);
+            player.setWalletAddress(Utils.parseWalletAddress(deviceId));
+            player.setDeviceId(deviceId);
+            player.setZoneName(zoneName);
+            updateGameHero(player);
+        }
+        return player;
+    }
+
 
     public Player getPlayer(long loginId, String zoneName) {
         Player player = playerRepo.findPlayerByLoginIdAndZoneName(loginId, zoneName);
@@ -519,7 +1052,74 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
         }
         updateGameHero(player);
         updateFunc(player, response);
+        syncOffchainBalance(player);
         return player;
+    }
+
+    public void customeGift(String gameHeroId, String giftCode) {
+        String[] addItemArr = StringUtils.substringsBetween(giftCode, "ai:", "|");
+        if (addItemArr != null && addItemArr.length > 0) {
+            heroItemManager.addItems(gameHeroId, addItemArr[0].trim());
+        }
+        String[] addHeroArr = StringUtils.substringsBetween(giftCode, "ah:", "|");
+        if (addHeroArr != null && addHeroArr.length > 0) {
+            Arrays.stream(addHeroArr[0].trim().split("#")).forEach(s -> {
+                String[] split = s.split("/");
+                HeroBase heroBase = HeroConfig.getInstance().getHeroBase(split[0]);
+                HeroClass heroClass = new HeroClass(heroBase.getID(), 1);
+                heroClass.setId(autoIncrService.genHeroId());
+                if (split.length > 1) {
+                    int rank = Math.min(Integer.parseInt(split[1]), heroBase.getMaxRank());
+                    heroClass.setRank(rank);
+                }
+                heroClass.setPlayerId(gameHeroId);
+                heroClassManager.save(heroClass);
+            });
+        }
+    }
+
+    public void updateOffchainBalance(Player player) {
+        try {
+            WolPlayerRes balance = offChainServices.getInfo(player.getWalletAddress());
+            List<HeroItem> currencyItem = heroItemManager.getCurrencyItem(player.getId());
+            currencyItem.forEach(heroItem -> {
+                switch (heroItem.getIndex()) {
+                    case KEN:
+                        heroItem.setNo(balance.getKen());
+                        break;
+                    case WOL:
+                        heroItem.setNo(balance.getWol());
+                        break;
+                }
+            });
+            heroItemManager.save(currencyItem);
+        } catch (Exception e) {
+            QAntTracer.warn(PlayerManager.class, "updateOffchainAssets", "PLayerId :" + player.getId() + "/address : " + player.getWalletAddress());
+        }
+    }
+
+    public void syncOffchainBalance(Player player) {
+        try {
+
+            WolPlayerRes balance = offChainServices.getInfo(player.getWalletAddress());
+            List<HeroItem> currencyItem = heroItemManager.getCurrencyItem(player.getId());
+            currencyItem.forEach(heroItem -> {
+                switch (heroItem.getIndex()) {
+                    case KEN:
+                        heroItem.setNo(balance.getKen());
+                        break;
+                    case WOL:
+                        heroItem.setNo(balance.getWol());
+                        break;
+                }
+            });
+            heroItemManager.save(currencyItem);
+            heroItemManager.offchainSync(player.getId(), balance.getAssets().stream().filter(wolAsset -> !wolAsset.getCategory().equals("hero")).collect(Collectors.toList()));
+            heroClassManager.offchainSync(player.getId(), balance.getAssets().stream().filter(wolAsset -> wolAsset.getCategory().equals("hero")).collect(Collectors.toList()));
+
+        } catch (Exception e) {
+            QAntTracer.warn(PlayerManager.class, "updateOffchainAssets", "PLayerId :" + player.getId() + "/address : " + player.getWalletAddress());
+        }
     }
 
     private void buildNewPlayer(QAntUser user, Player player) {
@@ -546,16 +1146,36 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 
     private List<HeroClass> buildHeroTestDefault(QAntUser user) {
         ArrayList<HeroBase> list = new ArrayList<>(HeroConfig.getInstance().getHeroes());
+        Player player = getPlayer(user.getName());
+        IGenReward iGenReward = new IGenReward() {
+            @Override
+            public String genRewards() {
+                Collections.shuffle(list);
+                HeroBase newValue = list.get(0);
+                return newValue.getID();
+            }
+
+            @Override
+            public List<RewardBase> genRewardsBase() {
+                return null;
+            }
+        };
         List<HeroClass> heroes = new ArrayList<>();
-        list.forEach(heroBase -> IntStream.rangeClosed(1, heroBase.getMaxRank()).forEach(integer -> {
+        IApplyAssets iApplyAssets = (rewards, wolAssetCompletedRes) -> {
+            HeroBase heroBase = HeroConfig.getInstance().getHeroBase(rewards);
             HeroClass heroClass = new HeroClass(heroBase.getID(), 1);
-            heroClass.setPlayerId(user.getName());
             heroClass.setId(autoIncrService.genHeroId());
-            heroClass.setRank(integer);
-            heroClass.calcFullPower();
+            heroClass.setPlayerId(user.getName());
+            OffChainServices.getInstance().applyOfcToHero(heroClass, wolAssetCompletedRes);
             heroes.add(heroClass);
-        }));
+            player.setEnergy(player.getEnergy() + heroBase.getEnegryCAP());
+        };
+        list.stream().limit(5).forEach(heroBase -> {
+            wolFlowManager.sendAssetRequest(user.getName(), iGenReward, iApplyAssets, 50);
+        });
         heroClassManager.save(heroes);
+        updateGameHero(player);
+        updateOffchainBalance(player);
         return heroes;
     }
 
@@ -573,37 +1193,37 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
 
     public void buildItemDefault(QAntUser user, Player player) {
         //TODO for Test
-        String gameHeroId = player.getId();
         Collection<HeroItem> collection = new ArrayList<>();
         ItemConfig.getInstance().getItems().forEach(itemBase -> {
             HeroItem heroItem = null;
             switch (itemBase.getType()) {
-                case ITEM_EGG://material
                 case ITEM_TICKET://material
-                case ITEM_REWARDS://material
                 case ITEM_MATERIAL://material
                     heroItem = new HeroConsumeItem(itemBase);
                     switch (itemBase.getId()) {
-                        case ItemRequestHandler.EGG:
-                            heroItem.setNo(300);
+                        case ItemRequestHandler.BLESS:
+                            heroItem.setNo(100);
+                            break;
+                        case ItemRequestHandler.SOUL:
+                            heroItem.setNo(100);
                             break;
                         default:
-                            heroItem.setNo(300);
+                            heroItem.setNo(50);
                             break;
                     }
                     collection.add(heroItem);
                     break;
                 case ITEM_CURRENCY://material
                     heroItem = new HeroConsumeItem(itemBase);
-                    heroItem.setNo(90000);
+                    heroItem.setNo(1);
                     collection.add(heroItem);
                     break;
                 case ITEM_POINT://material
                     switch (itemBase.getId()) {
-                        case "9902":
+                        case ENERGY:
                             player.setEnergy(Math.min(player.getEnergyMax(), player.getEnergy() + 100));
                             break;
-                        case "9904":
+                        case TROPHY:
                             player.setTrophy(player.getTrophy() + 100);
                             break;
                     }
@@ -613,20 +1233,27 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
             }
 
         });
+        List<HeroItem> addItems = heroItemManager.addItems(user, collection);
+    }
+
+    public void buildItemDefaultTest(QAntUser user, Player player) {
+        //TODO for Test
+        String gameHeroId = player.getId();
+        Collection<HeroItem> collection = new ArrayList<>();
         ItemConfig.getInstance().getEquipMap().values().forEach(itemBase -> {
-            HeroItem heroItem = null;
-            heroItem = new HeroEquipment(itemBase);
-            heroItem.setNo(90000);
-            collection.add(heroItem);
+            for (int i = 0; i < 2; i++) {
+                HeroEquipment heroEquipment1 = new HeroEquipment(itemBase);
+                heroEquipment1.setNo(1);
+                collection.add(heroEquipment1);
+                HeroEquipment heroEquipment2 = new HeroEquipment(itemBase);
+                heroEquipment2.setNo(1);
+                heroEquipment2.setRank(2);
+                collection.add(heroEquipment2);
+            }
         });
         List<HeroItem> addItems = heroItemManager.addItems(user, collection);
-
-//        List<HeroItem> addItems = heroItemManager.addItems(user, BEGINNER_ITEMS, false);
-
-//        player.setAssetMap(addItems.stream().filter(HeroItem::isCurrencyItem)
-//                .collect(Collectors.toMap(HeroItem::getIndex, HeroItem::getNo)));
         QAntTracer.debug(this.
-                getClass(), "Create new hero: " + gameHeroId);
+                getClass(), "buildItemDefaultTest: " + gameHeroId);
 
     }
 
@@ -670,6 +1297,7 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
         dailyEventManager.resetDailyEvents(gameHeroId);
         questSystem.notifyObservers(JoinTask.init(player.getId(), "login"));
         heroItemManager.resetItems(player);
+        campaignManager.resetDaily(gameHeroId);
     }
 
     private int calMaxEnergy(Player player) {
@@ -789,5 +1417,66 @@ public class PlayerManager extends AbstractExtensionManager implements Initializ
         }
         updateGameHero(player);
         return player;
+    }
+
+    public void updateOffchainAssets(String playerId, UpdateAssetRequest updateAssetRequest) {
+        updateOffchainAssets(updateAssetRequest.getStatus(), playerId, updateAssetRequest.getOfcId(), getAssetId(updateAssetRequest));
+    }
+
+    public void updateOffchainAssets(String playerId, WolAsset updateAssetRequest) {
+        updateOffchainAssets(updateAssetRequest.getStatus(), playerId, updateAssetRequest.getOfcId(), getAssetId(updateAssetRequest));
+    }
+
+    private void updateOffchainAssets(String status, String playerId, String ofcId, String assetId) {
+        switch (status) {
+            case IN_GAME:
+            case REWARD:
+                GameAssetDTO allByAssetIdIn = assetMappingManager.findByAssetId(assetId);
+                if (allByAssetIdIn.getCategory().equals("MU-Hero")) {
+                    HeroClass heroClass = new HeroClass(assetId, 1);
+                    heroClass.setId(autoIncrService.genHeroId());
+                    heroClass.setPlayerId(playerId);
+                    heroClass.setOfcId(ofcId);
+                    heroClassManager.save(heroClass);
+                } else {
+                    String rewards = assetId + "/1";
+                    List<HeroItem> heroItems = heroItemManager.addItems(playerId, rewards);
+                    heroItems.stream().limit(1).forEach(heroItem -> heroItem.setOfcId(ofcId));
+                    heroItemManager.save(heroItems);
+                }
+                break;
+            case NFT:
+                break;
+        }
+    }
+
+    private String getAssetId(UpdateAssetRequest updateAssetRequest) {
+        String asset_id = updateAssetRequest.getAsset_id();
+        String category = updateAssetRequest.getCategory();
+        String type = updateAssetRequest.getType();
+        return getAssetId(asset_id, category, type);
+    }
+
+    private String getAssetId(WolAsset updateAssetRequest) {
+        String asset_id = updateAssetRequest.getAsset_id();
+        String category = updateAssetRequest.getCategory();
+        String type = updateAssetRequest.getType();
+        return getAssetId(asset_id, category, type);
+    }
+
+    private String getAssetId(String asset_id, String category, String type) {
+        if (Utils.isNullOrEmpty(asset_id)) {
+            if (category.equals("box")) {
+                switch (type) {
+                    case "egg":
+                        asset_id = EGG;
+                        break;
+                    case "starter":
+                        asset_id = STARTER;
+                        break;
+                }
+            }
+        }
+        return asset_id;
     }
 }

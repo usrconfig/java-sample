@@ -1,6 +1,7 @@
 package com.seagame.ext.controllers;
 
 import com.creants.creants_2x.core.extension.BaseClientRequestHandler;
+import com.creants.creants_2x.core.util.AppConfig;
 import com.creants.creants_2x.core.util.QAntTracer;
 import com.creants.creants_2x.socket.gate.entities.IQAntObject;
 import com.creants.creants_2x.socket.gate.entities.QAntObject;
@@ -15,18 +16,18 @@ import java.util.List;
 public abstract class ZClientRequestHandler extends BaseClientRequestHandler implements NetworkConstant, ExtensionEvent {
     protected Integer action;
     private Integer correlationId;
-    private boolean isTrackDebug = true;
 
 
     protected void responseError(QAntUser user, GameErrorCode error, String... attrs) {
         IQAntObject createErrorMsg = MessageFactory.createErrorMsg(this.getHandlerCmd(), this.action, error, attrs);
-        QAntTracer.debug(ZClientRequestHandler.class, String.join(",", attrs));
         sendError(createErrorMsg, user);
+        trackParams(createErrorMsg);
     }
 
 
     public void trackParams(IQAntObject params) {
-        if (this.isTrackDebug)
+        String property = AppConfig.getProps().getProperty("game.evi");
+        if (property.equals("dev"))
             QAntTracer.warn(PlayerManager.class, getHandlerCmd() + "/" + this.action + params.getDump());
     }
 
@@ -36,6 +37,7 @@ public abstract class ZClientRequestHandler extends BaseClientRequestHandler imp
     protected Integer getAction(IQAntObject params) {
         this.action = params.getInt(KEYI_ACTION);
         this.correlationId = params.getInt(KEYI_CORR_ID);
+        trackParams(params);
         return this.action;
     }
 
@@ -63,6 +65,7 @@ public abstract class ZClientRequestHandler extends BaseClientRequestHandler imp
 
     protected void send(IQAntObject params, QAntUser recipient) {
         send(getHandlerCmd(), params, recipient);
+        trackParams(params);
     }
 
     @Override

@@ -7,6 +7,7 @@ import com.seagame.ext.bot.UnityBotManager;
 import com.seagame.ext.controllers.*;
 import com.seagame.ext.managers.HeroItemManager;
 import com.seagame.ext.managers.PlayerManager;
+import com.seagame.ext.offchain.services.OffChainApiController;
 import com.seagame.ext.quest.QuestSystem;
 import com.seagame.ext.services.NotifySystem;
 import com.seagame.ext.services.ServiceHelper;
@@ -28,6 +29,7 @@ public class GameExtension extends QAntExtension implements ExtensionEvent {
         ExtApplication.getBean(NotifySystem.class).setExtension(this);
         ExtApplication.getBean(UnityBotManager.class).setExtension(this);
         ExtApplication.getBean(QuestSystem.class).setExtension(this);
+        ExtApplication.getBean(OffChainApiController.class).setExtension(this);
 
         QAntTracer.info(this.getClass(),
                 "------- start time: " + (System.currentTimeMillis() - startTime) / 1000 + " seconds");

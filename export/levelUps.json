@@ -1,1 +1,422 @@
-[{"id":1,"chaos":0,"zen":0,"bless":0},{"id":2,"chaos":1,"zen":20,"bless":1},{"id":3,"chaos":1,"zen":90,"bless":1},{"id":4,"chaos":1,"zen":240,"bless":1},{"id":5,"chaos":1,"zen":500,"bless":1},{"id":6,"chaos":1,"zen":900,"bless":1},{"id":7,"chaos":2,"zen":1470,"bless":2},{"id":8,"chaos":2,"zen":2240,"bless":2},{"id":9,"chaos":2,"zen":3240,"bless":2},{"id":10,"chaos":2,"zen":4500,"bless":2},{"id":11,"chaos":2,"zen":6050,"bless":2},{"id":12,"chaos":3,"zen":7920,"bless":3},{"id":13,"chaos":3,"zen":10140,"bless":3},{"id":14,"chaos":3,"zen":12740,"bless":3},{"id":15,"chaos":3,"zen":15750,"bless":3},{"id":16,"chaos":3,"zen":19200,"bless":3},{"id":17,"chaos":4,"zen":23120,"bless":4},{"id":18,"chaos":4,"zen":27540,"bless":4},{"id":19,"chaos":4,"zen":32490,"bless":4},{"id":20,"chaos":4,"zen":38000,"bless":4},{"id":21,"chaos":5,"zen":44100,"bless":5},{"id":22,"chaos":5,"zen":50820,"bless":5},{"id":23,"chaos":5,"zen":58190,"bless":5},{"id":24,"chaos":5,"zen":66240,"bless":5},{"id":25,"chaos":5,"zen":75000,"bless":5},{"id":26,"chaos":6,"zen":84500,"bless":6},{"id":27,"chaos":6,"zen":94770,"bless":6},{"id":28,"chaos":6,"zen":105840,"bless":6},{"id":29,"chaos":6,"zen":117740,"bless":6},{"id":30,"chaos":6,"zen":130500,"bless":6},{"id":31,"chaos":7,"zen":144150,"bless":7},{"id":32,"chaos":7,"zen":158720,"bless":7},{"id":33,"chaos":7,"zen":174240,"bless":7},{"id":34,"chaos":7,"zen":190740,"bless":7},{"id":35,"chaos":7,"zen":208250,"bless":7},{"id":36,"chaos":8,"zen":226800,"bless":8},{"id":37,"chaos":8,"zen":246420,"bless":8},{"id":38,"chaos":8,"zen":267140,"bless":8},{"id":39,"chaos":8,"zen":288990,"bless":8},{"id":40,"chaos":8,"zen":312000,"bless":8},{"id":41,"chaos":9,"zen":336200,"bless":9},{"id":42,"chaos":9,"zen":361620,"bless":9},{"id":43,"chaos":9,"zen":388290,"bless":9},{"id":44,"chaos":9,"zen":416240,"bless":9},{"id":45,"chaos":9,"zen":445500,"bless":9},{"id":46,"chaos":10,"zen":476100,"bless":10},{"id":47,"chaos":10,"zen":508070,"bless":10},{"id":48,"chaos":10,"zen":541440,"bless":10},{"id":49,"chaos":10,"zen":576240,"bless":10},{"id":50,"chaos":10,"zen":612500,"bless":10},{"id":51,"chaos":12,"zen":650250,"bless":12},{"id":52,"chaos":12,"zen":689520,"bless":12},{"id":53,"chaos":12,"zen":730340,"bless":12},{"id":54,"chaos":12,"zen":772740,"bless":12},{"id":55,"chaos":12,"zen":816750,"bless":12},{"id":56,"chaos":15,"zen":862400,"bless":15},{"id":57,"chaos":15,"zen":909720,"bless":15},{"id":58,"chaos":15,"zen":958740,"bless":15},{"id":59,"chaos":15,"zen":1009490,"bless":15},{"id":60,"chaos":15,"zen":1062000,"bless":15}]
+[
+  {
+    "id": 1,
+    "ken": 0,
+    "chaos": 0,
+    "items": "9913/1",
+    "wol": 0
+  },
+  {
+    "id": 2,
+    "ken": 1,
+    "chaos": 1,
+    "items": "9913/1",
+    "wol": 0
+  },
+  {
+    "id": 3,
+    "ken": 2,
+    "chaos": 1,
+    "items": "9913/1",
+    "wol": 0
+  },
+  {
+    "id": 4,
+    "ken": 3,
+    "chaos": 1,
+    "items": "9913/1",
+    "wol": 0
+  },
+  {
+    "id": 5,
+    "ken": 4,
+    "chaos": 1,
+    "items": "9913/1",
+    "wol": 0
+  },
+  {
+    "id": 6,
+    "ken": 5,
+    "chaos": 1,
+    "items": "9913/2",
+    "wol": 0
+  },
+  {
+    "id": 7,
+    "ken": 6,
+    "chaos": 1,
+    "items": "9913/2",
+    "wol": 0
+  },
+  {
+    "id": 8,
+    "ken": 7,
+    "chaos": 1,
+    "items": "9913/2",
+    "wol": 0
+  },
+  {
+    "id": 9,
+    "ken": 8,
+    "chaos": 1,
+    "items": "9913/2",
+    "wol": 0
+  },
+  {
+    "id": 10,
+    "ken": 9,
+    "chaos": 1,
+    "items": "9913/2",
+    "wol": 0
+  },
+  {
+    "id": 11,
+    "ken": 10,
+    "chaos": 1,
+    "items": "9913/3",
+    "wol": 0
+  },
+  {
+    "id": 12,
+    "ken": 11,
+    "chaos": 1,
+    "items": "9913/3",
+    "wol": 0
+  },
+  {
+    "id": 13,
+    "ken": 12,
+    "chaos": 1,
+    "items": "9913/3",
+    "wol": 0
+  },
+  {
+    "id": 14,
+    "ken": 13,
+    "chaos": 1,
+    "items": "9913/3",
+    "wol": 0
+  },
+  {
+    "id": 15,
+    "ken": 14,
+    "chaos": 1,
+    "items": "9913/3",
+    "wol": 0
+  },
+  {
+    "id": 16,
+    "ken": 15,
+    "chaos": 1,
+    "items": "9913/4",
+    "wol": 0
+  },
+  {
+    "id": 17,
+    "ken": 16,
+    "chaos": 1,
+    "items": "9913/4",
+    "wol": 0
+  },
+  {
+    "id": 18,
+    "ken": 17,
+    "chaos": 1,
+    "items": "9913/4",
+    "wol": 0
+  },
+  {
+    "id": 19,
+    "ken": 18,
+    "chaos": 1,
+    "items": "9913/4",
+    "wol": 0
+  },
+  {
+    "id": 20,
+    "ken": 19,
+    "chaos": 1,
+    "items": "9913/4",
+    "wol": 0
+  },
+  {
+    "id": 21,
+    "ken": 20,
+    "chaos": 1,
+    "items": "9914/1",
+    "wol": 0
+  },
+  {
+    "id": 22,
+    "ken": 21,
+    "chaos": 1,
+    "items": "9914/1",
+    "wol": 0
+  },
+  {
+    "id": 23,
+    "ken": 22,
+    "chaos": 1,
+    "items": "9914/1",
+    "wol": 0
+  },
+  {
+    "id": 24,
+    "ken": 23,
+    "chaos": 1,
+    "items": "9914/1",
+    "wol": 0
+  },
+  {
+    "id": 25,
+    "ken": 24,
+    "chaos": 1,
+    "items": "9914/1",
+    "wol": 0
+  },
+  {
+    "id": 26,
+    "ken": 25,
+    "chaos": 1,
+    "items": "9914/2",
+    "wol": 0
+  },
+  {
+    "id": 27,
+    "ken": 26,
+    "chaos": 1,
+    "items": "9914/2",
+    "wol": 0
+  },
+  {
+    "id": 28,
+    "ken": 27,
+    "chaos": 1,
+    "items": "9914/2",
+    "wol": 0
+  },
+  {
+    "id": 29,
+    "ken": 28,
+    "chaos": 1,
+    "items": "9914/2",
+    "wol": 0
+  },
+  {
+    "id": 30,
+    "ken": 29,
+    "chaos": 1,
+    "items": "9914/2",
+    "wol": 0
+  },
+  {
+    "id": 31,
+    "ken": 30,
+    "chaos": 1,
+    "items": "9914/3",
+    "wol": 0
+  },
+  {
+    "id": 32,
+    "ken": 31,
+    "chaos": 1,
+    "items": "9914/3",
+    "wol": 0
+  },
+  {
+    "id": 33,
+    "ken": 32,
+    "chaos": 1,
+    "items": "9914/3",
+    "wol": 0
+  },
+  {
+    "id": 34,
+    "ken": 33,
+    "chaos": 1,
+    "items": "9914/3",
+    "wol": 0
+  },
+  {
+    "id": 35,
+    "ken": 34,
+    "chaos": 1,
+    "items": "9914/3",
+    "wol": 0
+  },
+  {
+    "id": 36,
+    "ken": 35,
+    "chaos": 1,
+    "items": "9914/4",
+    "wol": 0
+  },
+  {
+    "id": 37,
+    "ken": 36,
+    "chaos": 1,
+    "items": "9914/4",
+    "wol": 0
+  },
+  {
+    "id": 38,
+    "ken": 37,
+    "chaos": 1,
+    "items": "9914/4",
+    "wol": 0
+  },
+  {
+    "id": 39,
+    "ken": 38,
+    "chaos": 1,
+    "items": "9914/4",
+    "wol": 0
+  },
+  {
+    "id": 40,
+    "ken": 39,
+    "chaos": 1,
+    "items": "9914/4",
+    "wol": 0
+  },
+  {
+    "id": 41,
+    "ken": 40,
+    "chaos": 1,
+    "items": "9915/1",
+    "wol": 0
+  },
+  {
+    "id": 42,
+    "ken": 41,
+    "chaos": 1,
+    "items": "9915/1",
+    "wol": 0
+  },
+  {
+    "id": 43,
+    "ken": 42,
+    "chaos": 1,
+    "items": "9915/1",
+    "wol": 0
+  },
+  {
+    "id": 44,
+    "ken": 43,
+    "chaos": 1,
+    "items": "9915/1",
+    "wol": 0
+  },
+  {
+    "id": 45,
+    "ken": 44,
+    "chaos": 1,
+    "items": "9915/1",
+    "wol": 0
+  },
+  {
+    "id": 46,
+    "ken": 45,
+    "chaos": 1,
+    "items": "9915/2",
+    "wol": 0
+  },
+  {
+    "id": 47,
+    "ken": 46,
+    "chaos": 1,
+    "items": "9915/2",
+    "wol": 0
+  },
+  {
+    "id": 48,
+    "ken": 47,
+    "chaos": 1,
+    "items": "9915/2",
+    "wol": 0
+  },
+  {
+    "id": 49,
+    "ken": 48,
+    "chaos": 1,
+    "items": "9915/2",
+    "wol": 0
+  },
+  {
+    "id": 50,
+    "ken": 49,
+    "chaos": 1,
+    "items": "9915/2",
+    "wol": 0
+  },
+  {
+    "id": 51,
+    "ken": 50,
+    "chaos": 1,
+    "items": "9915/3",
+    "wol": 0
+  },
+  {
+    "id": 52,
+    "ken": 51,
+    "chaos": 1,
+    "items": "9915/3",
+    "wol": 0
+  },
+  {
+    "id": 53,
+    "ken": 52,
+    "chaos": 1,
+    "items": "9915/3",
+    "wol": 0
+  },
+  {
+    "id": 54,
+    "ken": 53,
+    "chaos": 1,
+    "items": "9915/3",
+    "wol": 0
+  },
+  {
+    "id": 55,
+    "ken": 54,
+    "chaos": 1,
+    "items": "9915/3",
+    "wol": 0
+  },
+  {
+    "id": 56,
+    "ken": 55,
+    "chaos": 1,
+    "items": "9915/4",
+    "wol": 0
+  },
+  {
+    "id": 57,
+    "ken": 56,
+    "chaos": 1,
+    "items": "9915/4",
+    "wol": 0
+  },
+  {
+    "id": 58,
+    "ken": 57,
+    "chaos": 1,
+    "items": "9915/4",
+    "wol": 0
+  },
+  {
+    "id": 59,
+    "ken": 58,
+    "chaos": 1,
+    "items": "9915/4",
+    "wol": 0
+  },
+  {
+    "id": 60,
+    "ken": 59,
+    "chaos": 1,
+    "items": "9915/4",
+    "wol": 0
+  }
+]

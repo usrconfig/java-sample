@@ -1,0 +1,140 @@
+image: public.ecr.aws/v6d3n9b7/ci-builder:v1
+# BITBUCKET_COMMIT=b8c5c57d5cd7851c0e18cdbac72cf67d6f904eea
+# BITBUCKET_REPO_SLUG=api-base
+# BITBUCKET_BRANCH=develop
+
+pipelines:
+  pull-requests:
+    '**':
+    - step:
+        name: 'PR pipeline'
+        image: atlassian/default-image:latest
+        script:
+        - echo "Promote this PR to development environment"
+    - step:
+          name: 'Build docker image and push to ECR'
+          trigger: manual
+          runs-on: ci.builder
+          script:
+          - export IMAGE_TAG="pr-${BITBUCKET_COMMIT:0:7}"
+          - export ECR_URL="852044738190.dkr.ecr.ap-southeast-1.amazonaws.com"
+          - export IMAGE_REPO="${ECR_URL}/${BITBUCKET_REPO_SLUG}:${IMAGE_TAG}"
+          - echo "Building docker image ${IMAGE_REPO}"
+          - docker build -t ${IMAGE_REPO} .
+          - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+          - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+          - aws configure set region $AWS_DEFAULT_REGION
+          - aws ecr get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${ECR_URL}
+          - docker push ${IMAGE_REPO}
+          services:
+          - docker
+    - step:
+        name: 'deploy-to-develop'
+        image: public.ecr.aws/v6d3n9b7/git-operator:v2
+        script:
+        - export WORKLOAD="develop"
+        - export IMAGE_TAG="pr-${BITBUCKET_COMMIT:0:7}"
+        - export ECR_URL="852044738190.dkr.ecr.ap-southeast-1.amazonaws.com"
+        - export IMAGE_REPO="${ECR_URL}/${BITBUCKET_REPO_SLUG}"
+        - (umask  077 ; echo $GIT_SSH_KEY | base64 -d > git_ssh_key | true)
+        - export GIT_SSH_COMMAND="ssh -i $(pwd)/git_ssh_key"
+        - echo "Deploying docker image ${IMAGE_REPO} to ${WORKLOAD}"
+        - git clone git@bitbucket.org:battle-city/workloads.git && cd workloads
+        - YAML_FILE=$(grep -ilr ${IMAGE_REPO} ${WORKLOAD})
+        - python3.7 /app/yaml-editor.py --yamlfile ${YAML_FILE} --tag ${IMAGE_TAG}
+        - git status
+        - git commit -a -m "X-Bot has released ${BITBUCKET_REPO_SLUG}:${IMAGE_TAG} in [${WORKLOAD}]" | true
+        - git push origin master | true
+  branches:
+      develop:
+        - step:
+            name: 'develop-dockerize'
+            runs-on: ci.builder
+            script:
+            - export IMAGE_TAG="develop-${BITBUCKET_COMMIT:0:7}"
+            - export ECR_URL="852044738190.dkr.ecr.ap-southeast-1.amazonaws.com"
+            - export IMAGE_REPO="${ECR_URL}/${BITBUCKET_REPO_SLUG}:${IMAGE_TAG}"
+            - echo "Building docker image ${IMAGE_REPO}"
+            - docker build -t ${IMAGE_REPO} .
+            - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+            - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+            - aws configure set region $AWS_DEFAULT_REGION
+            - aws ecr get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${ECR_URL}
+            - docker push ${IMAGE_REPO}
+            services:
+            - docker
+        - step:
+            name: 'deploy-to-develop'
+            image: public.ecr.aws/v6d3n9b7/git-operator:v2
+            script:
+            - export WORKLOAD="develop"
+            - export IMAGE_TAG="develop-${BITBUCKET_COMMIT:0:7}"
+            - export ECR_URL="852044738190.dkr.ecr.ap-southeast-1.amazonaws.com"
+            - export IMAGE_REPO="${ECR_URL}/${BITBUCKET_REPO_SLUG}"
+            - (umask  077 ; echo $GIT_SSH_KEY | base64 -d > git_ssh_key | true)
+            - export GIT_SSH_COMMAND="ssh -i $(pwd)/git_ssh_key"
+            - echo "Deploying docker image ${IMAGE_REPO} to ${WORKLOAD}"
+            - git clone git@bitbucket.org:battle-city/workloads.git && cd workloads
+            - YAML_FILE=$(grep -ilr ${IMAGE_REPO} ${WORKLOAD})
+            - python3.7 /app/yaml-editor.py --yamlfile ${YAML_FILE} --tag ${IMAGE_TAG}
+            - git status
+            - git commit -a -m "X-Bot has released ${BITBUCKET_REPO_SLUG}:${IMAGE_TAG} in [${WORKLOAD}]" | true
+            - git push origin master | true
+        - step:
+            name: 'deploy-to-staging'
+            image: public.ecr.aws/v6d3n9b7/git-operator:v2
+            trigger: manual
+            script:
+            - export WORKLOAD="stage"
+            - export IMAGE_TAG="develop-${BITBUCKET_COMMIT:0:7}"
+            - export ECR_URL="852044738190.dkr.ecr.ap-southeast-1.amazonaws.com"
+            - export IMAGE_REPO="${ECR_URL}/${BITBUCKET_REPO_SLUG}"
+            - (umask  077 ; echo $GIT_SSH_KEY | base64 -d > git_ssh_key | true)
+            - export GIT_SSH_COMMAND="ssh -i $(pwd)/git_ssh_key"
+            - echo "Deploying docker image ${IMAGE_REPO} to ${WORKLOAD}"
+            - git clone git@bitbucket.org:battle-city/workloads.git && cd workloads
+            - YAML_FILE=$(grep -ilr ${IMAGE_REPO} ${WORKLOAD})
+            - python3.7 /app/yaml-editor.py --yamlfile ${YAML_FILE} --tag ${IMAGE_TAG}
+            - git status
+            - git commit -a -m "X-Bot has released ${BITBUCKET_REPO_SLUG}:${IMAGE_TAG} in [${WORKLOAD}]" | true
+            - git push origin master | true
+      master:
+        - step:
+            name: 'master-dockerize'
+            runs-on: ci.builder
+            script:
+            - export IMAGE_TAG="master-${BITBUCKET_COMMIT:0:7}"
+            - export ECR_URL="852044738190.dkr.ecr.ap-southeast-1.amazonaws.com"
+            - export IMAGE_REPO="${ECR_URL}/${BITBUCKET_REPO_SLUG}:${IMAGE_TAG}"
+            - echo "Building docker image ${IMAGE_REPO}"
+            - docker build -t ${IMAGE_REPO} .
+            - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+            - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+            - aws configure set region $AWS_DEFAULT_REGION
+            - aws ecr get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${ECR_URL} | true
+            - docker push ${IMAGE_REPO} | true
+            services:
+            - docker
+        - step:
+            name: 'deploy-to-production'
+            image: public.ecr.aws/v6d3n9b7/git-operator:v2
+            trigger: manual
+            script:
+            - export WORKLOAD="production"
+            - export IMAGE_TAG="master-${BITBUCKET_COMMIT:0:7}"
+            - export ECR_URL="665019912954.dkr.ecr.ap-southeast-1.amazonaws.com"
+            - export IMAGE_REPO="${ECR_URL}/${BITBUCKET_REPO_SLUG}"
+            - (umask  077 ; echo $GIT_SSH_KEY | base64 -d > git_ssh_key | true)
+            - export GIT_SSH_COMMAND="ssh -i $(pwd)/git_ssh_key"
+            - echo "Deploying docker image ${IMAGE_REPO} to ${WORKLOAD}"
+            - git clone git@bitbucket.org:battle-city/workloads.git && cd workloads
+            - YAML_FILE=$(grep -ilr ${IMAGE_REPO} ${WORKLOAD})
+            - python3.7 /app/yaml-editor.py --yamlfile ${YAML_FILE} --tag ${IMAGE_TAG}
+            - git status
+            - git commit -a -m "X-Bot has released ${BITBUCKET_REPO_SLUG}:${IMAGE_TAG} in [${WORKLOAD}]" | true
+            - git push origin master | true
+
+definitions:
+  services:
+    docker:
+      memory: 3072

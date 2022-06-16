@@ -1,27 +1,32 @@
 package com.seagame.ext.managers;
 
 import com.creants.creants_2x.core.util.QAntTracer;
-import com.creants.creants_2x.socket.gate.entities.IQAntArray;
 import com.creants.creants_2x.socket.gate.entities.IQAntObject;
 import com.creants.creants_2x.socket.gate.entities.QAntArray;
 import com.creants.creants_2x.socket.gate.entities.QAntObject;
 import com.creants.creants_2x.socket.gate.wood.QAntUser;
+import com.seagame.ext.ExtApplication;
 import com.seagame.ext.Utils;
 import com.seagame.ext.config.game.ItemConfig;
 import com.seagame.ext.controllers.ExtensionEvent;
+import com.seagame.ext.controllers.ItemRequestHandler;
 import com.seagame.ext.dao.HeroItemRepository;
 import com.seagame.ext.entities.Player;
-import com.seagame.ext.entities.item.HeroEquipment;
-import com.seagame.ext.entities.item.HeroItem;
-import com.seagame.ext.entities.item.ItemBase;
-import com.seagame.ext.entities.item.RewardBase;
+import com.seagame.ext.entities.hero.HeroClass;
+import com.seagame.ext.entities.item.*;
 import com.seagame.ext.exception.GameException;
 import com.seagame.ext.exception.UseItemException;
+import com.seagame.ext.offchain.IApplyRewards;
+import com.seagame.ext.offchain.IApplyUseItemRewards;
+import com.seagame.ext.offchain.IGenReward;
+import com.seagame.ext.offchain.entities.WolAsset;
+import com.seagame.ext.offchain.entities.WolAssetCompletedRes;
+import com.seagame.ext.offchain.services.OffChainServices;
+import com.seagame.ext.offchain.services.WolFlowManager;
 import com.seagame.ext.services.AutoIncrementService;
 import com.seagame.ext.util.NetworkConstant;
 import com.seagame.ext.util.RandomRangeUtil;
-import io.netty.util.internal.StringUtil;
-import org.apache.commons.collections.CollectionUtils;
+import net.sf.json.JSONObject;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +54,8 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
     private PlayerManager playerManager;
     @Autowired
     private AutoIncrementService autoIncrService;
+    @Autowired
+    private WolFlowManager wolFlowManager;
 
     @Override
     public void afterPropertiesSet() {
@@ -70,33 +77,37 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
         Page<HeroItem> itemPage = heroItemRep.getItemList(gameHeroId, player.getActiveHeroId(),
                 PageRequest.of(page - 1, MAX_ITEM_PER_PAGE));
         itemPage.getContent()
-                .forEach(heroItem -> heroItem.setItemBase(itemConfig.getItem(heroItem.getIndex())));
+                .forEach(heroItem -> heroItem.initItemBase());
         return itemPage;
     }
 
 
-    public Page<HeroItem> getItemInCofferExceptMoneyType(String gameHeroId, int page) {
-        Page<HeroItem> itemPage = heroItemRep.getItemInCoffer(gameHeroId, PageRequest.of(page - 1, MAX_ITEM_PER_PAGE));
-        itemPage.getContent()
-                .forEach(heroItem -> heroItem.setItemBase(itemConfig.getItem(heroItem.getIndex())));
-
-        IQAntArray arr = QAntArray.newInstance();
-        itemPage.getContent().forEach(item -> arr.addQAntObject(QAntObject.newFromObject(item)));
-        System.out.println(arr.getDump());
-        return itemPage;
-    }
+//    public Page<HeroItem> getItemInCofferExceptMoneyType(String gameHeroId, int page) {
+//        Page<HeroItem> itemPage = heroItemRep.getItemInCoffer(gameHeroId, PageRequest.of(page - 1, MAX_ITEM_PER_PAGE));
+//        itemPage.getContent()
+//                .forEach(heroItem -> heroItem.setItemBase(itemConfig.getItem(heroItem.getIndex())));
+//
+//        IQAntArray arr = QAntArray.newInstance();
+//        itemPage.getContent().forEach(item -> arr.addQAntObject(QAntObject.newFromObject(item)));
+//        System.out.println(arr.getDump());
+//        return itemPage;
+//    }
 
     public List<HeroItem> getConsumableItem(String gameHeroId) {
         return heroItemRep.getConsumableItem(gameHeroId);
     }
 
-
-    public List<HeroItem> save(Collection<HeroItem> items) {
-        return heroItemRep.saveAll(items);
+    public List<HeroItem> getCurrencyItem(String gameHeroId) {
+        return heroItemRep.getCurrencyItem(gameHeroId);
     }
 
-    public HeroItem save(HeroItem items) {
-        return heroItemRep.save(items);
+
+    public void save(Collection<HeroItem> items) {
+        update(items);
+    }
+
+    public void save(HeroItem items) {
+        heroItemRep.save(items);
     }
 
 
@@ -114,7 +125,7 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
         List<HeroItem> items = heroItemRep.getEquipmentFor(player, heroId);
         QAntTracer.debug(HeroItemManager.class, player);
         QAntTracer.debug(HeroItemManager.class, items.toString());
-        items.forEach(heroItem -> heroItem.setItemBase(itemConfig.getItem(heroItem.getIndex())));
+        items.forEach(HeroItem::initItemBase);
         return items;
     }
 
@@ -122,22 +133,22 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
     public HeroEquipment getEquipment(long itemId, String gameHeroId) {
         HeroEquipment equipment = heroItemRep.getEquipment(itemId, gameHeroId);
         if (equipment != null)
-            equipment.setItemBase(itemConfig.getItem(equipment.getIndex()));
+            equipment.initItemBase();
         return equipment;
     }
 
 
-    public List<HeroItem> putItemInToCoffer(String gameHeroId, Collection<Long> itemIds, boolean isPutIn) {
-        List<HeroItem> itemList = heroItemRep.getItemByItemId(gameHeroId, itemIds);
-        itemList.forEach(item -> {
-            item.putInCoffer(isPutIn);
-            item.setItemBase(itemConfig.getItem(item.getIndex()));
-        });
-
-        if (itemList.size() <= 0)
-            return new ArrayList<>();
-        return heroItemRep.saveAll(itemList);
-    }
+//    public List<HeroItem> putItemInToCoffer(String gameHeroId, Collection<Long> itemIds, boolean isPutIn) {
+//        List<HeroItem> itemList = heroItemRep.getItemByItemId(gameHeroId, itemIds);
+//        itemList.forEach(item -> {
+//            item.putInCoffer(isPutIn);
+//            item.setItemBase(itemConfig.getItem(item.getIndex()));
+//        });
+//
+//        if (itemList.size() <= 0)
+//            return new ArrayList<>();
+//        return heroItemRep.saveAll(itemList);
+//    }
 
 
     public HeroItem useItem(QAntUser user, String itemIndex, int useNo) throws UseItemException {
@@ -171,12 +182,18 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
 
     public Collection<HeroItem> useItemWithIndex(String playerId, Map<String, Integer> itemMap) throws UseItemException {
         List<HeroItem> consumeAbleItems = getByIndexes(playerId, itemMap.keySet());
-        if (consumeAbleItems.size() != itemMap.size())
-            throw UseItemException.lackOfItem();
-
-        Optional<HeroItem> lackOfMaterial = consumeAbleItems.stream()
-                .filter(item -> item.decr(itemMap.get(item.getIndex())) < 0).findFirst();
-        if (lackOfMaterial.isPresent())
+        itemMap.keySet().forEach(s -> {
+            final int[] val = {itemMap.get(s)};
+            consumeAbleItems.forEach(heroItem -> {
+                if (heroItem.getIndex().equals(s)) {
+                    int desc = Math.min(heroItem.getNo(), val[0]);
+                    heroItem.setNo(heroItem.getNo() - desc);
+                    val[0] -= desc;
+                }
+            });
+            itemMap.put(s, val[0]);
+        });
+        if (itemMap.values().stream().anyMatch(integer -> integer > 0))
             throw UseItemException.lackOfItem();
         return consumeAbleItems;
     }
@@ -192,15 +209,15 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
     }
 
 
-    public void update(HeroItem heroItem) {
-        if (heroItem.getNo() < 0)
+    private void update(HeroItem heroItem) {
+        if (heroItem.getNo() <= 0 && heroItem.canBeRemoved())
             heroItemRep.delete(heroItem);
         else
             heroItemRep.save(heroItem);
     }
 
 
-    public void update(Collection<HeroItem> heroItems) {
+    private void update(Collection<HeroItem> heroItems) {
         heroItemRep.deleteAll(heroItems.stream().filter(HeroItem::canBeRemoved).collect(Collectors.toList()));
         heroItemRep.saveAll(heroItems.stream().filter(HeroItem::canNotRemove).collect(Collectors.toList()));
     }
@@ -289,54 +306,74 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
         }
         AtomicBoolean eggPiece = new AtomicBoolean(false);
         List<HeroItem> assetList = items.stream().filter(HeroItem::isBuildAssets).collect(Collectors.toList());
+        Map<String, Integer> stringIntegerMap = new HashMap<>();
         if (assetList.size() > 0) {
-            IQAntObject result = QAntObject.newInstance();
-            QAntArray array = QAntArray.newInstance();
-            assetList.forEach(item -> {
-                QAntObject object = QAntObject.newInstance();
-                object.putUtfString("id", item.getIndex());
-                object.putInt("value", item.getNo());
-                array.addQAntObject(object);
-                if (item.getIndex().equals("9910")) {
-                    eggPiece.set(true);
+            assetList.forEach(heroItem -> {
+                int no = heroItem.getNo();
+                String index = heroItem.getIndex();
+                if (stringIntegerMap.containsKey(index)) {
+                    no += stringIntegerMap.get(index);
                 }
+                stringIntegerMap.put(index, no);
             });
-            result.putQAntArray("assets", array);
-            send(CMD_NTF_ASSETS_CHANGE, result, user);
-
-            if (eggPiece.get()) {
-                notifyEggpieceConvert(user);
+        }
+        IQAntObject result = QAntObject.newInstance();
+        QAntArray array = QAntArray.newInstance();
+        stringIntegerMap.keySet().forEach(s -> {
+            QAntObject object = QAntObject.newInstance();
+            object.putUtfString("id", s);
+            object.putInt("value", stringIntegerMap.get(s));
+            array.addQAntObject(object);
+            if (s.equals(EGG_PIECE)) {
+                eggPiece.set(true);
             }
+        });
+        result.putQAntArray("assets", array);
+        send(CMD_NTF_ASSETS_CHANGE, result, user);
+        if (eggPiece.get()) {
+            notifyEggpieceConvert(user);
         }
         return assetList;
     }
 
     private void notifyEggpieceConvert(QAntUser user) {
         try {
-            Collection<HeroItem> itemEgg = getItemsByIndex(user.getName(), "9911");
-            Collection<HeroItem> itemEggPiece = getItemsByIndex(user.getName(), "9910");
-            if (itemEgg.size() > 0 && itemEggPiece.size() > 0) {
-                HeroItem eggpiece = itemEggPiece.stream().findFirst().get();
-                HeroItem egg = itemEgg.stream().findFirst().get();
-                int no = eggpiece.getNo();
-                if (no >= 100) {
-                    eggpiece.setNo(no % 100);
-                    egg.setNo(egg.getNo() + no / 100);
-                    heroItemRep.saveAll(itemEgg);
-                    heroItemRep.saveAll(itemEggPiece);
-                    itemEgg.addAll(itemEggPiece);
-                    if (itemEgg.size() > 0) {
+            Collection<HeroItem> itemEggPiece = getItemsByIndex(user.getName(), ItemRequestHandler.EGG_PIECE);
+            if (itemEggPiece.size() > 0) {
+                HeroItem item = itemEggPiece.stream().findFirst().get();
+                if (item.getNo() >= ItemRequestHandler.EGG_PIECE_TO_EGE) {
+                    int no = Math.floorMod(item.getNo(), ItemRequestHandler.EGG_PIECE_TO_EGE);
+                    int noEgg = Math.floorDiv(item.getNo(), ItemRequestHandler.EGG_PIECE_TO_EGE);
+                    IGenReward genRewards = new IGenReward() {
+                        @Override
+                        public String genRewards() {
+                            return ItemRequestHandler.EGG + "/" + noEgg;
+                        }
+
+                        @Override
+                        public List<RewardBase> genRewardsBase() {
+                            return null;
+                        }
+                    };
+
+                    IApplyRewards iApplyRewards = (rewards, wolRewardCompleteRes) -> {
+                        item.setNo(no);
+                        List<HeroItem> addItems = addItems(user, rewards);
+                        OffChainServices.getInstance().applyOfcToItem(user.getName(), addItems, wolRewardCompleteRes);
+                        addItems.add(item);
+                        save(addItems);
                         IQAntObject result = new QAntObject();
                         QAntArray array = new QAntArray();
-                        itemEgg.forEach(item -> {
+                        addItems.forEach(heroItem -> {
                             QAntObject object = new QAntObject();
-                            object.putUtfString("id", item.getIndex());
-                            object.putInt("value", item.getNo());
+                            object.putUtfString("id", heroItem.getIndex());
+                            object.putInt("value", heroItem.getNo());
                             array.addQAntObject(object);
                         });
                         result.putQAntArray("assets", array);
                         send(CMD_NTF_ASSETS_CHANGE, result, user);
-                    }
+                    };
+                    wolFlowManager.sendRewardRequest(user.getName(), genRewards, iApplyRewards, 10);
                 }
             }
         } catch (Exception e) {
@@ -360,32 +397,60 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
     }
 
 
-    public Collection<HeroItem> sellItems(QAntUser user, Map<Long, Integer> items) throws UseItemException {
-        Collection<HeroItem> collection = this.useItemsWithIds(user, items);
-        Map<String, Integer> refund = new ConcurrentHashMap<>();
-        collection.forEach(heroItem -> {
-            heroItem.setItemBase(itemConfig.getItem(heroItem.getIndex()));
-            int itemNo = items.get(heroItem.getId());
-            String sellPrice = heroItem.getSellPrice();
-            if (!StringUtil.isNullOrEmpty(sellPrice))
-                for (int i = 1; i <= itemNo; i++) {
-                    ItemConfig.getInstance().convertToMap(refund, sellPrice);
-                }
-        });
-        Collection<HeroItem> heroItems = addItems(user.getName(), ItemConfig.getInstance().convertToHeroItem(refund));
-        heroItems.addAll(collection);
-        return heroItems;
-    }
+//    public Collection<HeroItem> sellItems(QAntUser user, Map<Long, Integer> items) throws UseItemException {
+//        Collection<HeroItem> collection = this.useItemsWithIds(user, items);
+//        Map<String, Integer> refund = new ConcurrentHashMap<>();
+//        collection.forEach(heroItem -> {
+//            heroItem.setItemBase(itemConfig.getItem(heroItem.getIndex()));
+//            int itemNo = items.get(heroItem.getId());
+//            String sellPrice = heroItem.getSellPrice();
+//            if (!StringUtil.isNullOrEmpty(sellPrice))
+//                for (int i = 1; i <= itemNo; i++) {
+//                    ItemConfig.getInstance().convertToMap(refund, sellPrice);
+//                }
+//        });
+//        Collection<HeroItem> heroItems = addItems(user.getName(), ItemConfig.getInstance().convertToHeroItem(refund));
+//        heroItems.addAll(collection);
+//        return heroItems;
+//    }
 
     public Collection<HeroItem> openEgg(QAntUser user, Map<Long, Integer> items, IQAntObject params) throws UseItemException {
         Collection<HeroItem> collection = this.useItemsWithIds(user, items);
         Map<String, Integer> refund = new ConcurrentHashMap<>();
-        String rewards = RandomRangeUtil.randomDroprate(ItemConfig.getInstance().getEggRewards(), ItemConfig.getInstance().getEggRewardsRate(), 1, 100);
-        ItemConfig.getInstance().convertToMap(refund, rewards);
-        Collection<HeroItem> items1 = ItemConfig.getInstance().convertToHeroItem(refund);
-        ItemConfig.getInstance().buildRewardsReceipt(params, refund.keySet().stream().map(heroItem -> heroItem + "/" + refund.get(heroItem)).collect(Collectors.joining("#")));
-        Collection<HeroItem> heroItems = addItems(user.getName(), items1);
-        heroItems.addAll(collection);
+        Collection<HeroItem> heroItems = new ArrayList<>();
+        IGenReward genRewards = new IGenReward() {
+            @Override
+            public String genRewards() {
+                return RandomRangeUtil.randomDroprate(ItemConfig.getInstance().getEggRewards(), ItemConfig.getInstance().getEggRewardsRate(), 1, 1000);
+            }
+
+            @Override
+            public List<RewardBase> genRewardsBase() {
+                return null;
+            }
+        };
+        IApplyUseItemRewards iApplyUpgrade = new IApplyUseItemRewards() {
+            @Override
+            public void applyRewards(String rewards, WolAssetCompletedRes wolAssetCompletedRes, JSONObject jsonObject) {
+                ItemConfig.getInstance().convertToMap(refund, rewards);
+                Collection<HeroItem> items1 = ItemConfig.getInstance().convertToHeroItem(refund);
+                OffChainServices.getInstance().applyOfcToItem(items1, wolAssetCompletedRes);
+                save(heroItems);
+                ItemConfig.getInstance().buildRewardsReceipt(params, refund.keySet().stream().map(heroItem -> heroItem + "/" + refund.get(heroItem)).collect(Collectors.joining("#")));
+                List<HeroItem> heroItems1 = addItems(user.getName(), items1);
+                heroItems.addAll(heroItems1);
+                heroItems.addAll(collection);
+            }
+
+            @Override
+            public void applyRewards(List<RewardBase> rewardBases, WolAssetCompletedRes wolAssetCompletedRes, JSONObject jsonObject) {
+
+            }
+        };
+        wolFlowManager.sendUseItemRequest(user.getName(), collection, genRewards, iApplyUpgrade);
+
+        if (heroItems.size() == 0)
+            throw new UseItemException();
         return heroItems;
     }
 
@@ -393,7 +458,13 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
         ItemBase item = itemConfig.getItem(index);
         List<RewardBase> rewardBases = ItemConfig.getInstance().getRewardBaseMap().get(index);
         if (item != null) {
-            RandomRangeUtil.nRandomInRange(rewardBases.size(), itemNo).forEach(integer -> refund.add(rewardBases.get(integer)));
+            RewardBase rewardBase = rewardBases.get(rewardBases.size() - 1);
+            int repeat = rewardBase.getRepeat();
+            if (rewardBase.getRate() <= 0) {
+                refund.addAll(rewardBases);
+            } else {
+                RandomRangeUtil.nRandomInRange(rewardBases.size(), itemNo * repeat).forEach(integer -> refund.add(rewardBases.get(integer)));
+            }
         }
     }
 
@@ -456,5 +527,43 @@ public class HeroItemManager extends AbstractExtensionManager implements Initial
     }
 
     public void useDailyFreeTicket(QAntUser user, int i) {
+    }
+
+    public List<HeroItem> getAllItems(String id) {
+        return heroItemRep.getAllItems(id);
+    }
+
+    public void offchainSync(String playerId, List<WolAsset> items) {
+        List<HeroItem> allItems = heroItemRep.getAllItems(playerId);
+        List<HeroItem> itemsRemove = new ArrayList<>();
+        List<String> ids = items.stream().map(WolAsset::getOfcId).collect(Collectors.toList());
+        List<String> idsCreated = new ArrayList<>();
+        allItems.forEach(item -> {
+            String ofcId = item.getOfcId();
+            if (Utils.isNullOrEmpty(ofcId)) {
+                if (isOffchainItem(item)) {
+                    itemsRemove.add(item);
+                }
+            } else {
+                if (!ids.contains(ofcId)) {
+                    itemsRemove.add(item);
+                } else {
+                    idsCreated.add(ofcId);
+                }
+            }
+        });
+        PlayerManager playerManager = ExtApplication.getBean(PlayerManager.class);
+        items.forEach(wolAsset -> {
+            if (!idsCreated.contains(wolAsset.getOfcId())) {
+                playerManager.updateOffchainAssets(playerId, wolAsset);
+            }
+        });
+        remove(itemsRemove);
+    }
+
+    private boolean isOffchainItem(HeroItem heroItem) {
+        if (heroItem instanceof HeroConsumeItem) {
+            return heroItem.getIndex().equals(EGG) || heroItem.getIndex().equals(STARTER);
+        } else return heroItem instanceof HeroEquipment;
     }
 }

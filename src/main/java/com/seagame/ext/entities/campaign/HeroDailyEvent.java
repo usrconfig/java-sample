@@ -22,11 +22,15 @@ public class HeroDailyEvent implements SerializableQAntType {
     public String stageIdx;
     public int chance;
     private int maxChance;
+    private boolean dailyFirstTime;
 
 
     public HeroDailyEvent() {
     }
 
+    public void dailyFirstTime() {
+        this.dailyFirstTime = true;
+    }
 
     public HeroDailyEvent(String playerId, DailyEvent dailyEvent) {
         this.id = genKey(playerId, dailyEvent.getGroup());
@@ -50,6 +54,7 @@ public class HeroDailyEvent implements SerializableQAntType {
 
     public void resetChance() {
         this.chance = maxChance;
+        this.dailyFirstTime = true;
     }
 
     public boolean isMaxChance() {

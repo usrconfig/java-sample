@@ -1,8 +1,11 @@
 package com.seagame.ext.managers;
 
 import com.creants.creants_2x.socket.gate.entities.IQAntObject;
+import com.seagame.ext.ExtApplication;
+import com.seagame.ext.Utils;
 import com.seagame.ext.dao.HeroRepository;
 import com.seagame.ext.entities.hero.HeroClass;
+import com.seagame.ext.offchain.entities.WolAsset;
 import com.seagame.ext.services.AutoIncrementService;
 import com.seagame.ext.util.NetworkConstant;
 import org.springframework.beans.factory.InitializingBean;
@@ -11,6 +14,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -120,5 +124,31 @@ public class HeroClassManager implements InitializingBean, NetworkConstant {
 
     public List<HeroClass> getHeroes(String id) {
         return heroRepository.getHeroByPlayerId(id);
+    }
+
+    public void offchainSync(String playerId, List<WolAsset> hero) {
+        List<HeroClass> heroClasses = heroRepository.getHeroByPlayerId(playerId);
+        List<HeroClass> heroClassesRemove = new ArrayList<>();
+        List<String> ids = hero.stream().map(WolAsset::getOfcId).collect(Collectors.toList());
+        List<String> idsCreated = new ArrayList<>();
+        heroClasses.forEach(heroClass -> {
+            String ofcId = heroClass.getOfcId();
+            if (Utils.isNullOrEmpty(ofcId)) {
+                heroClassesRemove.add(heroClass);
+            } else {
+                if (!ids.contains(ofcId)) {
+                    heroClassesRemove.add(heroClass);
+                } else {
+                    idsCreated.add(ofcId);
+                }
+            }
+        });
+        PlayerManager playerManager = ExtApplication.getBean(PlayerManager.class);
+        hero.forEach(wolAsset -> {
+            if (!idsCreated.contains(wolAsset.getOfcId())) {
+                playerManager.updateOffchainAssets(playerId, wolAsset);
+            }
+        });
+        remove(heroClassesRemove);
     }
 }

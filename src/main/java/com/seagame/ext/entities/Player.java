@@ -50,6 +50,8 @@ public class Player implements Serializable {
     @Indexed
     private String deviceId;
     @Indexed
+    private String walletAddress;
+    @Indexed
     private String zoneName;
     private String avatar;
     public String name;

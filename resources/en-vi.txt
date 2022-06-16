@@ -1,0 +1,444 @@
+txtZega	Zega - Fire Dragon Knight
+txtZeban	Zeban - Scale Armor Knight
+txtKai	Kai - Dark Dragon Knight
+txtAbel	Abel - Ice Storm Wizard
+txtWinchy	Winchy - Halloween Summonner
+txtErika	Erika - Guardian Battle Elf
+txtLisa	Lisa - Divine Fairy Elf
+txtHana	Hana - Flame Rose Elf
+txtLegolas	Legolas - Prince Of The Elves
+txtJackob	Jakob - Sacred Fire Fighter
+txtBard	Bard - Red Fighter
+txtHenry	Henry - Dark Claw Fighter
+txtRoy	Roy - Crystal Magic Gladiator
+txtJack	Jack - Dark Skeleton Gladiator
+txtTharja	Tharja - Black Rose Summoner
+txtElsa	Elsa - Frozen Princess Summoner
+txtSerra	Serra - The Lapid Lancer
+txtLyn	Lyn - Light Guardian Lancer
+txtArthas	Arthas - Dark Master Warlord
+txtJulius	Julius - Lord Of The Flames
+txtZegaLeader	Fire Power Aura
+txtZegaActive	Twisting Slash
+txtZegaAuto	Swell Life
+txtZegaPassive	Inner Strength
+txtZebanLeader	Endurance Aura
+txtZebanActive	Guardian Pray
+txtZebanAuto	Cutting Slash
+txtZebanPassive	Great Shield
+txtKaiLeader	Dark Dragon Power
+txtKaiActive	Unleashed Fury
+txtKaiAuto	Dark Slash
+txtKaiPassive	Uncontrollable Darkness
+txtAbelLeader	Blizzard Magic Aura
+txtAbelActive	Ice Pillars
+txtAbelAuto	Ice Rain
+txtAbelPassive	Ice Magic Mastery
+txtWinchyLeader	Dark Magic
+txtWinchyActive	Hex Of Darkness
+txtWinchyAuto	Deadly Rain
+txtWinchyPassive	Fear Of Darkness
+txtErikaLeader	Light Guardian Aura
+txtErikaActive	Penetration Arrows
+txtErikaAuto	Magic Light Arrows
+txtErikaPassive	Fatal Arrrow
+txtLisaLeader	Divine Fairy Aura
+txtLisaActive	Blessing Of Light
+txtLisaAuto	Greater Damage
+txtLisaPassive	Shield Of Light
+txtHanaLeader	Red Spirit
+txtHanaActive	Fire Penetration Arrow
+txtHanaAuto	Triple Shot
+txtHanaPassive	Burning Arrow
+txtLegolasLeader	Magic Arrow
+txtLegolasActive	Silent Arrow
+txtLegolasAuto	Invisible Cloak
+txtLegolasPassive	Mana Burn
+txtJackobLeader	Sacred Fighter Aura
+txtJackobActive	Dragon Roar
+txtJackobAuto	Absorb Shield
+txtJackobPassive	Strong Body
+txtBardLeader	Earth Fighter Aura
+txtBardActive	Power Punch
+txtBardAuto	Disarm
+txtBardPassive	Jungle Cursed
+txtHenryLeader	Dark Assassin Aura
+txtHenryActive	Dark Claw
+txtHenryAuto	Deadly Claw
+txtHenryPassive	Powered Claw
+txtRoyLeader	Blue Magic Power
+txtRoyActive	Power Thrust
+txtRoyAuto	Icy Blade
+txtRoyPassive	Ice Magic Mastery
+txtJackLeader	Deadly Hunter
+txtJackActive	Deadly Hollows
+txtJackAuto	Deadly Cyclone
+txtJackPassive	Deadly Scythe
+txtTharjaLeader	Black Rose
+txtTharjaActive	Lightning Shock
+txtTharjaAuto	Blood Of Berserker
+txtTharjaPassive	Weakness
+txtElsaLeader	Blizzard Cursed
+txtElsaActive	Frost Blades
+txtElsaAuto	Ice Jail
+txtElsaPassive	Chilling Wind
+txtSerraLeader	Tidebringer
+txtSerraActive	Water Pillar
+txtSerraAuto	Tide Wrath
+txtSerraPassive	Water Shield Mastery
+txtLynLeader	Light Guardian Spirit
+txtLynActive	Mighty Thunder Shield
+txtLynAuto	Honorable Charge
+txtLynPassive	Sacred Aura
+txtArthasLeader	Endurance Aura
+txtArthasActive	Force Wave
+txtArthasAuto	Great Shield
+txtArthasPassive	HP Regeneration
+txtJuliusLeader	Breath Of Fire
+txtJuliusActive	Chain Of Flames
+txtJuliusAuto	Soul Of Sun
+txtJuliusPassive	Sun Cursed
+txtZegaLeaderDesLV_1	Increase 10% ATK for fire element allies
+txtZegaLeaderDesLV_2	Increase 15% ATK for fire element allies
+txtZegaLeaderDesLV_3	Increase 25% ATK for fire element allies
+txtZegaActiveDesLV_1	Deal 120% ATK to 3 enemies & cause decover effect to make the targets can't recovery HP in 3 turns
+txtZegaActiveDesLV_2	Deal 140% ATK to 3 enemies & cause decover effect to make the targets can't recovery HP in 4 turns
+txtZegaActiveDesLV_3	Deal 160% ATK to 3 enemies & cause decover effect to make the targets can't recovery HP in 5 turns
+txtZegaAutoDesLV_1	Restore 5% max HP & Increase attack power in 2 turns.
+txtZegaAutoDesLV_2	Restore 10% max HP & Increase attack power in 2 turns.
+txtZegaAutoDesLV_3	Restore 15% max HP & Increase attack power in 2 turns.
+txtZegaPassiveDesLV_1	Increase 5% max HP for himself
+txtZegaPassiveDesLV_2	Increase 10% max HP for himself
+txtZegaPassiveDesLV_3	Increase 20% max HP for himself
+txtZebanLeaderDesLV_1	Increase max HP by 10% for all allies
+txtZebanLeaderDesLV_2	Increase max HP by 20% for all allies
+txtZebanLeaderDesLV_3	Increase max HP by 30% for all allies
+txtZebanActiveDesLV_1	Increase DEF in 1 turn for himself & a random ally
+txtZebanActiveDesLV_2	Increase DEF in 2 turns for himself & a random ally
+txtZebanActiveDesLV_3	Increase DEF in 3 turns for himself & a random ally
+txtZebanAutoDesLV_1	Deal 105% ATK to an enemy, also deal extra damage by + 3% enemy's maxHP
+txtZebanAutoDesLV_2	Deal 115% ATK to an enemy, also deal extra damage by + 6% enemy's maxHP
+txtZebanAutoDesLV_3	Deal 150% ATK to an enemy, also deal extra damage by + 10% enemy's maxHP
+txtZebanPassiveDesLV_1	Increase 15% DEF for himself
+txtZebanPassiveDesLV_2	Increase 25% DEF for himself
+txtZebanPassiveDesLV_3	Increase 35% DEF for himself
+txtKaiLeaderDesLV_1	Increase 5% ATK and 5% HP for Dark elements allies
+txtKaiLeaderDesLV_2	Increase 10% ATK and 10% HP for Dark elements allies
+txtKaiLeaderDesLV_3	Increase 15% ATK and 15% HP for Dark elements allies
+txtKaiActiveDesLV_1	Deal 150% ATK to an enemy & cause decover effect to make the target can't recovery HP in 3 turns
+txtKaiActiveDesLV_2	Deal 180% ATK to an enemy & cause decover effect to make the target can't recovery HP in 3 turns
+txtKaiActiveDesLV_3	Deal 220% ATK to an enemy & cause decover effect to make the target can't recovery HP in 3 turns
+txtKaiAutoDesLV_1	Deal 120% ATK to 2 enemies at backside & have chance to reduce  ATK of them in 3 turns (50% chance)
+txtKaiAutoDesLV_2	Deal 160% ATK to 2 enemies at backside & have chance to reduce  ATK of them in 3 turns (50% chance)
+txtKaiAutoDesLV_3	Deal 180% ATK to 2 enemies at backside & have chance to reduce  ATK of them in 3 turns (50% chance)
+txtKaiPassiveDesLV_1	Increase 15% critical chance for himself
+txtKaiPassiveDesLV_2	Increase 25% critical chance for himself
+txtKaiPassiveDesLV_3	Increase 35% critical chance for himself
+txtAbelLeaderDesLV_1	Increase 10% ATK for water element allies
+txtAbelLeaderDesLV_2	Increase 15% ATK for water element allies
+txtAbelLeaderDesLV_3	Increase 25% ATK for water element allies
+txtAbelActiveDesLV_1	Casts frozen pillars that deal 150% ATK to 2 enemies, also have 50% chance to freeze enemy for 1 turn
+txtAbelActiveDesLV_2	Casts frozen pillars that deal 200% ATK to 2 enemies, also have 65% chance to freeze enemy for 1 turn
+txtAbelActiveDesLV_3	Casts frozen pillars that deal 250% ATK to 2 enemies, also have 75% chance to freeze enemy for 1 turn
+txtAbelAutoDesLV_1	Cast ice rain that deal 120% ATK to 2 enemies, also slow them for 2 turns
+txtAbelAutoDesLV_2	Cast ice rain that deal 140% ATK to 2 enemies, also slow them for 2 turns
+txtAbelAutoDesLV_3	Cast ice rain that deal 160% ATK to 2 enemies, also slow them for 3 turns
+txtAbelPassiveDesLV_1	Increase 10% ATK for himself
+txtAbelPassiveDesLV_2	Increase 20% ATK for himself
+txtAbelPassiveDesLV_3	Increase 30% ATK for himself
+txtWinchyLeaderDesLV_1	Increase 15% ATK for Dark elements allies
+txtWinchyLeaderDesLV_2	Increase 20% ATK for Dark elements allies
+txtWinchyLeaderDesLV_3	Increase 55% ATK for Dark elements allies
+txtWinchyActiveDesLV_1	Transforms 1 enemy into a harmless critter for 2 turns
+txtWinchyActiveDesLV_2	Transforms 2 enemies  into a harmless critter for 2 turns
+txtWinchyActiveDesLV_3	Transforms 3 enemies  into a harmless critter for 3 turns
+txtWinchyAutoDesLV_1	Deal 120% ATK to 3 enemies
+txtWinchyAutoDesLV_2	Deal 160% ATK to 3 enemies
+txtWinchyAutoDesLV_3	Deal 180% ATK to 3 enemies
+txtWinchyPassiveDesLV_1	Reduce 15% DEF of all enemies
+txtWinchyPassiveDesLV_2	Reduce 20% DEF of all enemies
+txtWinchyPassiveDesLV_3	Reduce 25% DEF of all enemies
+txtErikaLeaderDesLV_1	Increase ATK by 5% & DEF by 5/% for all allies
+txtErikaLeaderDesLV_2	Increase ATK by 10% & DEF by 10/% for all allies
+txtErikaLeaderDesLV_3	Increase ATK by 15% & DEF by 15/% for all allies
+txtErikaActiveDesLV_1	Deal damage by 135% ATK to 2 enemies on the backline by light arrows and make them blind for 2 turns
+txtErikaActiveDesLV_2	Deal damage by 165% ATK to 2 enemies on the backline by light arrows and make them blind for 2 turns
+txtErikaActiveDesLV_3	Deal damage by 195% ATK to 2 enemies on the backline by light arrows and make them blind for 3 turns
+txtErikaAutoDesLV_1	Deal 125% ATK to 1 enemy & reduce  DEF of target for 2 turns
+txtErikaAutoDesLV_2	Deal155% ATK to 1 enemy & reduce  DEF of target for 2 turns
+txtErikaAutoDesLV_3	Deal 200% ATK to 1 enemy & reduce  DEF of target for 3 turns
+txtErikaPassiveDesLV_1	Increase 10% critical chance for herself
+txtErikaPassiveDesLV_2	Increase 15% critical chance for herself
+txtErikaPassiveDesLV_3	Increase 20% critical chance for herself
+txtLisaLeaderDesLV_1	Increase 15% DEF for all allies
+txtLisaLeaderDesLV_2	Increase 25% DEF for all allies
+txtLisaLeaderDesLV_3	Increase 35% DEF for all allies
+txtLisaActiveDesLV_1	Restore 10% max HP to all allies & removes all harmful effects on them.
+txtLisaActiveDesLV_2	Restore 15% max HP to all allies & removes all harmful effects on them.
+txtLisaActiveDesLV_3	Restore 20% max HP to all allies & removes all harmful effects on them.
+txtLisaAutoDesLV_1	Increase damage for 1 random ally in 3 turns
+txtLisaAutoDesLV_2	Increase damage for 2 random allies in 3 turns
+txtLisaAutoDesLV_3	Increase damage for 3 random allies in 3 turns
+txtLisaPassiveDesLV_1	Increase 10% Defense for herself
+txtLisaPassiveDesLV_2	Increase 15% Defense for herself
+txtLisaPassiveDesLV_3	Increase 25% Defense for herself
+txtHanaLeaderDesLV_1	Increase 10% damage for fire element allies
+txtHanaLeaderDesLV_2	Increase 15% damage for fire element allies
+txtHanaLeaderDesLV_3	Increase 20% damage for fire element allies
+txtHanaActiveDesLV_1	Deal excellent damage by 200% ATK to an enemy & reduce DEF of target for 2 turns
+txtHanaActiveDesLV_2	Deal excellent damage by 220% ATK to an enemy & reduce DEF of target for 2 turns
+txtHanaActiveDesLV_3	Deal excellent damage by 250% ATK to an enemy & reduce DEF of target for 2 turns
+txtHanaAutoDesLV_1	Shoot 3 arrows at same time to deal 100%  ATK to 3 random enemies
+txtHanaAutoDesLV_2	Shoot 3 arrows at same time to deal 120%  ATK to 3 random enemies
+txtHanaAutoDesLV_3	Shoot 3 arrows at same time to deal 150%  ATK to 3 random enemies
+txtHanaPassiveDesLV_1	Increase 10% ATK for herself
+txtHanaPassiveDesLV_2	Increase 20% ATK for herself
+txtHanaPassiveDesLV_3	Increase 25% ATK for herself
+txtLegolasLeaderDesLV_1	Increase 15% ATK for elves
+txtLegolasLeaderDesLV_2	Increase 25% ATK for elves
+txtLegolasLeaderDesLV_3	Increase 35% ATK for elves
+txtLegolasActiveDesLV_1	Deal 140% ATK to 3 enemies and have 40% chance to silence them in 3 turns
+txtLegolasActiveDesLV_2	Deal 160% ATK to 3 enemies and have 60% chance to silence them in 3 turns
+txtLegolasActiveDesLV_3	Deal 180% ATK to 3 enemies and have 70% chance to silence them in 3 turns
+txtLegolasAutoDesLV_1	Become invisible and can not be target in 1 turn
+txtLegolasAutoDesLV_2	Become invisible and can not be target in 2 turns
+txtLegolasAutoDesLV_3	Become invisible and can not be target in 2 turns and increase his critical chance in 2 turns
+txtLegolasPassiveDesLV_1	Burn 10% MP of enemies per hit
+txtLegolasPassiveDesLV_2	Burn 15% MP of enemies per hit
+txtLegolasPassiveDesLV_3	Burn 20% MP of enemies per hit
+txtJackobLeaderDesLV_1	Increase 10% critical chances of fire allies
+txtJackobLeaderDesLV_2	Increase 15% critical chances of fire allies
+txtJackobLeaderDesLV_3	Increase 20% critical chances of fire allies
+txtJackobActiveDesLV_1	Deal 125% ATK to 2 enemies & reduce  enemy's DEF for 2 turns
+txtJackobActiveDesLV_2	Deal 145% ATK to 2 enemies & reduce  enemy's DEF for 2 turns
+txtJackobActiveDesLV_3	Deal 175% ATK to 2 enemies & reduce  enemy's DEF for 2 turns
+txtJackobAutoDesLV_1	Create a powerful shield (1000) to protect himself and 1 random ally in 1 turn
+txtJackobAutoDesLV_2	Create a powerful shield to increase (2500) to protect himself and 1 random ally in 2 turns
+txtJackobAutoDesLV_3	Create a powerful shield to increase (4500) to protect himself and 1 random ally in 3 turns
+txtJackobPassiveDesLV_1	Increase 10% max HP for himself
+txtJackobPassiveDesLV_2	Increase 15% max HP for himself
+txtJackobPassiveDesLV_3	Increase 20% max HP for himself
+txtBardLeaderDesLV_1	Increase 10/% ATK for earth element allies
+txtBardLeaderDesLV_2	Increase 15/% ATK for earth element allies
+txtBardLeaderDesLV_3	Increase 20/% ATK for earth element allies
+txtBardActiveDesLV_1	Deal 120% ATK to an enemy & reduce enemy defense for 3 turns (50% chance)
+txtBardActiveDesLV_2	Deal 150% ATK to an enemy & reduce enemy defense for 3 turns (60% chance)
+txtBardActiveDesLV_3	Deal 200% ATK to an enemy & reduce enemy defense for 3 turns (75% chance)
+txtBardAutoDesLV_1	Deal 100% ATK and decrease  ATK of 1 random enemy in 2 turns
+txtBardAutoDesLV_2	Deal 110% ATK and decrease  ATK of 1 random enemy in 2 turns
+txtBardAutoDesLV_3	Deal 120% ATK and decrease  ATK of 1 random enemy in 3 turns
+txtBardPassiveDesLV_1	Reduce 5% Damage of all enemies
+txtBardPassiveDesLV_2	Reduce 10% Damage of all enemies
+txtBardPassiveDesLV_3	Reduce 15% Damage of all enemies
+txtHenryLeaderDesLV_1	Increase 15% ATK for dark element allies
+txtHenryLeaderDesLV_2	Increase 20% ATK for dark element allies
+txtHenryLeaderDesLV_3	Increase 25% ATK for dark element allies
+txtHenryActiveDesLV_1	Deal 130% ATK to an enemy & cause enemy to bleed for 3 turns (50% chance)
+txtHenryActiveDesLV_2	Deal 150% ATK to an enemy & cause enemy to bleed for 4 turns (60% chance)
+txtHenryActiveDesLV_3	Deal 200% ATK to an enemy & cause enemy to bleed for 5 turns (70% chance)
+txtHenryAutoDesLV_1	Deal 120% ATK and silence 2 random enemies in 1 turn
+txtHenryAutoDesLV_2	Deal 140% ATK and silence 2 random enemies in 2 turns
+txtHenryAutoDesLV_3	Deal 160% ATK and silence 2 random enemies in 2 turns
+txtHenryPassiveDesLV_1	Increase 10% Critical Chance for himself
+txtHenryPassiveDesLV_2	Increase 15% Critical Chance for himself
+txtHenryPassiveDesLV_3	Increase 20% Critical Chance for himself
+txtRoyLeaderDesLV_1	Increases 5% damage for all water element allies
+txtRoyLeaderDesLV_2	Increases 10% damage for all water element allies
+txtRoyLeaderDesLV_3	Increases 15% damage for all water element allies
+txtRoyActiveDesLV_1	Deal 120% ATK to an enemy & reduce  DEF of target for 3 turns (50% chance)
+txtRoyActiveDesLV_2	Deal 150% ATK to an enemy & reduce  DEF of target for 3 turns (60% chance)
+txtRoyActiveDesLV_3	Deal 200% ATK to an enemy & reduce  DEF of target for 3 turns (70% chance)
+txtRoyAutoDesLV_1	Casts frozen pillars that deal 50% ATK to an enemy, also have 50% chance to freeze enemy for 2 turns
+txtRoyAutoDesLV_2	Casts frozen pillars that deal 80% ATK to an enemy, also have 60% chance to freeze enemy for 2 turns
+txtRoyAutoDesLV_3	Casts frozen pillars that deal 120% ATK to an enemy, also have 80% chance to freeze enemy for 2 turns
+txtRoyPassiveDesLV_1	Increase 10% ATK for himself
+txtRoyPassiveDesLV_2	Increase 20% ATK for himself
+txtRoyPassiveDesLV_3	Increase 30% ATK for himself
+txtJackLeaderDesLV_1	Increase 15% Critical Chance for Dark elements
+txtJackLeaderDesLV_2	Increase 20% Critical Chance for Dark elements
+txtJackLeaderDesLV_3	Increase 25% Critical Chance for Dark elements
+txtJackActiveDesLV_1	Deal 120% ATK to 2 enemies on the frontline
+txtJackActiveDesLV_2	Deal 150% ATK to 2 enemies on the frontline
+txtJackActiveDesLV_3	Deal 200% ATK to 2 enemies on the frontline
+txtJackAutoDesLV_1	Deal 100% ATK  to 2 enemies on the frontline and reduce thier DEF for 2 turns
+txtJackAutoDesLV_2	Deal 120% ATK  to 2 enemies on the frontline and reduce thier DEF for 3 turns
+txtJackAutoDesLV_3	Deal 140% ATK  to 2 enemies on the frontline and reduce thier DEF for 4 turns
+txtJackPassiveDesLV_1	Increase 10%HP for himself
+txtJackPassiveDesLV_2	Increase 20%HP for himself
+txtJackPassiveDesLV_3	Increase 30%HP for himself
+txtTharjaLeaderDesLV_1	Decrease 10% DEF of all enemies
+txtTharjaLeaderDesLV_2	Decrease 15% DEF of all enemies
+txtTharjaLeaderDesLV_3	Decrease 20% DEF of all enemies
+txtTharjaActiveDesLV_1	Summon a powerful lightning from hell to deal 100% ATK to 2 enemies & decrease their damage in 1 turn
+txtTharjaActiveDesLV_2	Summon a powerful lightning from hell to deal 120% ATK to 2 enemies & decrease their damage in 2 turns
+txtTharjaActiveDesLV_3	Summon a powerful lightning from hell to deal 140% ATK to 2 enemies & decrease their damage in 3 turns
+txtTharjaAutoDesLV_1	Increase ATK in 2 turns for herself (Costs 25%HP to use)
+txtTharjaAutoDesLV_2	Increase ATK in 3 turns for herself (Costs 25%HP to use)
+txtTharjaAutoDesLV_3	Increase ATK in 4 turns for herself (Costs 25%HP to use)
+txtTharjaPassiveDesLV_1	Decrease 10% damage of all enemies
+txtTharjaPassiveDesLV_2	Decrease 15% damage of all enemies
+txtTharjaPassiveDesLV_3	Decrease 20% damage of all enemies
+txtElsaLeaderDesLV_1	Decrease water enemies DEF and ATK by 15%
+txtElsaLeaderDesLV_2	Decrease water enemies DEF and ATK by 20%
+txtElsaLeaderDesLV_3	Decrease water enemies DEF and ATK by 30%
+txtElsaActiveDesLV_1	Deal 120% ATK damage to 2 enemies & reduce DEF& ATK of target in 2 turn(50% chance)
+txtElsaActiveDesLV_2	Deal 150% ATK damage to 2 enemies & reduce DEF& ATK of target in 2 turn(60% chance)
+txtElsaActiveDesLV_3	Deal 200% ATK damage to 2 enemies & reduce DEF& ATK of target in 2 turn(70% chance)
+txtElsaAutoDesLV_1	Deal 110% ATK damage & Frezee 2 enemies in 2 turns (50% chance)
+txtElsaAutoDesLV_2	Deal 130% ATK damage & Frezee 2 enemies in 2 turns (60% chance)
+txtElsaAutoDesLV_3	Deal 150% ATK damage & Frezee 2 enemies in 2 turns (70% chance)
+txtElsaPassiveDesLV_1	Decrease enemies speed by 10%
+txtElsaPassiveDesLV_2	Decrease enemies speed by 15%
+txtElsaPassiveDesLV_3	Decrease enemies speed by 20%
+txtSerraLeaderDesLV_1	Increase ATK and DEF by 10% for all water element heroes
+txtSerraLeaderDesLV_2	Increase ATK and DEF by 15% for all water element heroes
+txtSerraLeaderDesLV_3	Increase ATK and DEF by 20% for all water element heroes
+txtSerraActiveDesLV_1	Deal 110% ATK to 3 enemies & stuns them in 2 turns (chance: 45%)
+txtSerraActiveDesLV_2	Deal 130% ATK to 3 enemies & stuns them in 2 turns (chance: 55%)
+txtSerraActiveDesLV_3	Deal 150% ATK to 3 enemies & stuns them in 2 turns (chance: 65%)
+txtSerraAutoDesLV_1	Increase DEF for 2 random allies in 1 turn
+txtSerraAutoDesLV_2	Increase DEF for 2 random allies in 2 turns
+txtSerraAutoDesLV_3	Increase DEF for 2 random allies in 3 turns
+txtSerraPassiveDesLV_1	Increase 10% DEF for herself
+txtSerraPassiveDesLV_2	Increase 15% DEF for herself
+txtSerraPassiveDesLV_3	Increase 20% DEF for herself
+txtLynLeaderDesLV_1	Increase 15% DEF for Light elements allies
+txtLynLeaderDesLV_2	Increase 25% DEF for Light elements allies
+txtLynLeaderDesLV_3	Increase 35% DEF for Light elements allies
+txtLynActiveDesLV_1	Grant herself an Holy Armor to block damage for herself in 1 turn
+txtLynActiveDesLV_2	Grant herself an Holy Armor to block damage for herself in 2 turn
+txtLynActiveDesLV_3	Grant herself an Holy Armor to block damage for herself in 3 turn
+txtLynAutoDesLV_1	Deal 120% ATK to an enemy & reduce DEF of target for 3 turns (50% chance).
+txtLynAutoDesLV_2	Deal 160% ATK to an enemy & reduce DEF of target for 3 turns (60% chance).
+txtLynAutoDesLV_3	Deal 200% ATK to an enemy & reduce DEF of target for 3 turns (80% chance).
+txtLynPassiveDesLV_1	Decrease 10% Damage of Dark enemies
+txtLynPassiveDesLV_2	Decrease 15% Damage of Dark enemies
+txtLynPassiveDesLV_3	Decrease 25% Damage of Dark enemies
+txtArthasLeaderDesLV_1	Increase max 15% HP, DEF for allies
+txtArthasLeaderDesLV_2	Increase max 20% HP, DEF for allies
+txtArthasLeaderDesLV_3	Increase max 25% HP, DEF for allies
+txtArthasActiveDesLV_1	Deal 115% ATK to an enemy & reduce enemy's ATK in 1 turn
+txtArthasActiveDesLV_2	Deal 135% ATK to an enemy & reduce enemy's ATK in 2 turns
+txtArthasActiveDesLV_3	Deal 155% ATK to an enemy & reduce enemy's ATK in 2 turns
+txtArthasAutoDesLV_1	Increase DEF for 1 ally in 3 turns
+txtArthasAutoDesLV_2	Increase DEF for 2 allies in 3 turns
+txtArthasAutoDesLV_3	Increase DEF for /3 allies in 3 turns
+txtArthasPassiveDesLV_1	Auto restore 5%HP for himself every turns
+txtArthasPassiveDesLV_2	Auto restore 10%HP for himself every turns
+txtArthasPassiveDesLV_3	Auto restore 15%HP for himself every turns
+txtJuliusLeaderDesLV_1	Increase 20% HP and DEF of fire element allies
+txtJuliusLeaderDesLV_2	Increase 25% HP and DEF of fire element allies
+txtJuliusLeaderDesLV_3	Increase 30% HP and DEF of fire element allies
+txtJuliusActiveDesLV_1	Deal 120% ATK to 3 enemies and have 60% chance to stun them in 1 turn
+txtJuliusActiveDesLV_2	Deal 130% ATK to 3 enemies and have 65% chance to stun them in 1 turn
+txtJuliusActiveDesLV_3	Deal 150% ATK to 3 enemies and have 70% chance to stun them in 1 turn
+txtJuliusAutoDesLV_1	Deal 100% ATK and have 50% chance to silence 2 random enemies in 2 turns
+txtJuliusAutoDesLV_2	Deal 120% ATK and have 60% chance to silence 2 random enemies in 2 turns
+txtJuliusAutoDesLV_3	Deal 140% ATK and have 70% chance to silence 2 random enemies in 2 turns
+txtJuliusPassiveDesLV_1	Decrease 10% Damage of Fire element enemies
+txtJuliusPassiveDesLV_2	Decrease 15% Damage of Fire element enemies
+txtJuliusPassiveDesLV_3	Decrease 20% Damage of Fire element enemies
+txtItemKEN	KEN
+txtItemWOL	WOL
+txtItemBless	Bless
+txtItemSoul	Soul
+txtItemChaos	Chaos
+txtItemEnegry	Energy
+txtItemArenaTicket	Arena Ticket
+txtItemArenaCups	Arena Cup
+txtItemHeroTicket1Star	1 Star Hero Ticket
+txtItemHeroTicket2Star	2 Star Hero Ticket
+txtItemHeroTicket3Star	3 Star Hero Ticket
+txtItemZenPack	Zen Pack
+txtItemGiftBox	Gift Box
+txtItemEggPiece	Egg Piece
+txtItemEgg	Egg
+txtItemStarterPack	Starter Pack
+txtDesItemKEN	KEN, a main crypto currency
+txtDesItemWOL	WOL, a most valuable crypto currency
+txtDesItemBless	Use for in-game upgrading
+txtDesItemSoul	Use for in-game upgrading
+txtDesItemChaos	Use for in-game upgrading
+txtDesItemEnegry	Use for in-game activities
+txtDesItemArenaTicket	Chance to earn KEN from Arena
+txtDesItemArenaCups	Collect from winning Arena
+txtDesItemHeroTicket1Star	Use to summon 1 Star Hero
+txtDesItemHeroTicket2Star	Use to summon 2 Stars Hero
+txtDesItemHeroTicket3Star	Use to summon 3 Stars Hero
+txtDesItemZenPack	Open and get ZENs
+txtDesItemGiftBox	Open and get Gifts
+txtDesItemEggPiece	Collect 100 pieces to create 1 Egg
+txtDesItemEgg	Break the Egg and get the Rewards
+txtNormalExpBook	Experience Book
+txtMediumExpBook	High Experience Book
+txtGreatExpBook	Greate Experience Book
+txtDesNormalExpBook	Used to upgrade heroes from level 1 to level 20
+txtDesMediumExpBook	Used to upgrade heroes from level 21 to level 40
+txtDesGreatExpBook	Used to upgrade heroes from level 41 to level 60
+txtRedGiftBox	Red Gift Box
+txtGreenGiftBox	Green Gift Box
+txtBlueGiftBox	Blue Gift Box
+txtDesRedGiftBox	Open to get rewards
+txtDesGreenGiftBox	Open to get valuable rewards
+txtDesBlueGiftBox	Open to get extreme rewards
+txtEquipShortSword	Short Sword
+txtEquipDoubleBlade	Double Blade
+txtEquipLightningSword	Lightning Sword
+txtEquipSerpentStaff	Serpent Staff
+txtEquipGorgonStaff	Gorgon Staff
+txtEquipLegendaryStaff	Legendary Staff
+txtEquipWoodenBow	Wooden Bow
+txtEquipIrisBow	Iris Bow
+txtEquipGuardianBow	Guardian Bow
+txtEquipKriss	Kriss
+txtEquipBronzeClaw	Bronze Claw
+txtEquipGoldenClaw	Golden Claw
+txtEquipSacredGlove	Sacred Glove
+txtEquipBlade	Blade
+txtEquipLegendarySword	Legendary Sword
+txtEquipCrystalSword	Crystal Sword
+txtEquipAncientStick	Ancient Stick
+txtEquipRedwingStick	Redwing Stick
+txtEquipRavenStick	Raven Stick
+txtEquipRobustLancer	Robust Lancer
+txtEquipLapidLancer	Lapid Lancer
+txtEquipPrincieLancer1	Princie Lancer1
+txtEquipBattleScepter	Battle Scepter
+txtEquipGreatScepter	Great Scepter
+txtEquipMasterScepter	Master Scepter
+txtEquipLeatherArmor	Leather Armor
+txtEquipDragonArmor	Dragon Armor
+txtEquipBoneArmor	Bone Armor
+txtEquipLegendaryArmor	Legendary Armor
+txtEquipSilkArmor	Silk Armor
+txtEquipGuardianArmor	Guardian Armor
+txtEquipVioletWingArmor	VioletWing Armor
+txtEquipRedWingArmor	RedWing Armor
+txtEquipRobustArmor	Robust Armor
+txtEquipLapidArmor	Lapid Armor
+txtEquipLightPlateArmor	Light Plate Armor
+txtEquipAdamantinArmor	Adamantin Armor
+txtEquipSacredFireArmor	Sacred Fire Armor
+txtEquipStormZahardArmor	Storm Zahard Armor
+txtEquipScaleArmor	Scale Armor
+txtEquipHurricaneArmor	Hurricane Armor
+txtEquipSkeletonRing	Skeleton Ring
+txtEquipWizardRing	Wizard Ring
+txtEquipToxicRing	Toxic Ring
+txtEquipMoonRing	Moon Ring
+txtEquipDragonRing	Dragon Ring
+txtEquipFirePendant	Fire Pendant
+txtEquipWaterPendant	Water Pendant
+txtEquipEarthPendant	Earth Pendant
+txtEquipLightPendant	Light Pendant
+txtEquipDarkPendant	Dark Pendant
+txtQuestLoginCheckin	Daily Check-in
+txtQuestClearStages	Protect the Continent
+txtQuestWin10ArenaMatch	Arena Warriors
+txtQuestWin3TypeOfDailyEventChallenge	Daily Medals
+txtQuestFinishQuestDaily	Perfect day
+txtQuestDesLoginCheckin	Log in daily to get rewards
+txtQuestDesClearStages	Clear 10 stages to help protecting continent
+txtQuestDesWin10ArenaMatch	Fight and win 10 battles in the Arena
+txtQuestDesWin3TypeOfDailyEventChallenge	Conquer 3 different daily events for rewards
+txtQuestDesFinishQuestDaily	Complete all daily quests for great rewards

@@ -22,7 +22,7 @@
              <xs:attribute name="DailyFirstTimeReward" type="xs:string"/>
              <xs:attribute name="RandomReward" type="xs:string"/>
              <xs:attribute name="RandomRate" type="xs:string"/>
-             <xs:attribute name="ZenReward" type="xs:int"/>
+             <xs:attribute name="KenReward" type="xs:int"/>
              <xs:attribute name="Mode" type="xs:string"/>
              <xs:attribute name="Chance" type="xs:int"/>
         </xs:complexType>

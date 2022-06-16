@@ -4,6 +4,8 @@ import com.creants.creants_2x.core.util.QAntTracer;
 import com.creants.creants_2x.socket.gate.entities.IQAntObject;
 import com.creants.creants_2x.socket.gate.protocol.serialization.SerializableQAntType;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.seagame.ext.Utils;
+import com.seagame.ext.config.game.ItemConfig;
 import com.seagame.ext.exception.GameException;
 import com.seagame.ext.util.NetworkConstant;
 import lombok.Getter;
@@ -39,6 +41,8 @@ public abstract class HeroItem implements SerializableQAntType, NetworkConstant 
     boolean lock;
     long equipFor;
 
+    String ofcId;
+
     private String nftToken = "tokenNFT";
 
     @Transient
@@ -48,10 +52,15 @@ public abstract class HeroItem implements SerializableQAntType, NetworkConstant 
     public HeroItem() {
     }
 
+    public void setOfcId(String ofcId) {
+        if (!Utils.isNullOrEmpty(ofcId))
+            this.ofcId = ofcId;
+    }
+
     public HeroItem(ItemBase itemBase) {
-        setItemBase(itemBase);
         setIndex(itemBase.getId());
         setType(itemBase.getType());
+        initItemBase();
         setRank(Math.max(itemBase.getRank(), rank));
     }
 
@@ -85,9 +94,10 @@ public abstract class HeroItem implements SerializableQAntType, NetworkConstant 
         return type != null && !type.equals("equip");
     }
 
-    public void setItemBase(ItemBase itemBase) {
+    public void initItemBase() {
+        ItemBase itemBase = ItemConfig.getInstance().getItem(getIndex());
         if (itemBase == null) {
-            QAntTracer.error(this.getClass(), "[ERROR] item not found: " + getIndex());
+            QAntTracer.warn(this.getClass(), "[ERROR] item not found: " + getIndex());
             return;
         }
         this.itemBase = itemBase;
@@ -100,7 +110,7 @@ public abstract class HeroItem implements SerializableQAntType, NetworkConstant 
 
     @JsonIgnore
     public boolean canBeRemoved() {
-        return !isBuildAssets() && no <= 0;
+        return !isOverlap() && no <= 0;
     }
 
 
@@ -116,6 +126,7 @@ public abstract class HeroItem implements SerializableQAntType, NetworkConstant 
 
 
     public abstract int getPower();
+
     public abstract boolean isEquip();
 
     public String getSellPrice() {

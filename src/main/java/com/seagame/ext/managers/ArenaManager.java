@@ -49,7 +49,7 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
     private static final ItemConfig itemConfig = ItemConfig.getInstance();
 
     private static final TriggerKey arenaRankingKey = new TriggerKey("arena" + "_trigger");
-    private static final String ARENA_COIN_INDEX = "9999";
+    private static final String ARENA_COIN_INDEX = "9999/5";
 
 
     @Value("${arena.opponent.min}")
@@ -360,8 +360,7 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
 
         if (isWin) {
             defender.setShieldTime(shieldTime);
-            int rewardCoin = 10;
-            heroItemManager.addItems(attacker.getPlayerId(), ARENA_COIN_INDEX + "/" + rewardCoin);
+            heroItemManager.addItems(attacker.getPlayerId(), ARENA_COIN_INDEX);
             attackerTrophy = CalculateUtil.calcTrophyAttackerWin();
             defenderTrophy = CalculateUtil.calcTrophyDefLose();
             attacker.incrTrophy(attackerTrophy);
@@ -519,13 +518,14 @@ public class ArenaManager extends AbstractExtensionManager implements Initializi
 //		System.out.println("toPower " + toPower);
 //		System.out.println("(int) attacker.getArenaPoint() " + (int) attacker.getArenaPoint());
         // count all game hero with max power from fromPower to toPower,
-        int rowNo = arenaSearchRepo.countByPower(fromPower, toPower,
+        long nowMilis = System.currentTimeMillis();
+        int rowNo = arenaSearchRepo.countByPower(nowMilis, fromPower, toPower,
                 (int) attacker.getArenaPoint(), zone);
         System.out.println("rowNo" + rowNo);
         int randomNum = Math.max(rowNo - 3, 1);
         System.out.println("randomNum" + randomNum);
         // get 3 game hero from random rowNo
-        List<ArenaPower> powerList = arenaSearchRepo.findOpponent(fromPower, toPower,
+        List<ArenaPower> powerList = arenaSearchRepo.findOpponent(nowMilis, fromPower, toPower,
                 RandomUtils.nextInt(randomNum), (int) attacker.getArenaPoint(), zone);
         System.out.println("powerList " + powerList);
         List<ArenaPower> updateList = powerList.stream().filter(this::checkUpdateNewSeason)

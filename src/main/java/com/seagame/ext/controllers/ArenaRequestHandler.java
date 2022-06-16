@@ -45,7 +45,6 @@ public class ArenaRequestHandler extends ZClientRequestHandler {
     private static final int GET_OPPONENT_INFO = 8;
     private static final int GET_ARENA_RANKING = 9;
 
-    private static final String BLESS_INDEX = "9999";
     private static final int ARENA_ENERGY_COST = 1;
 
     private ArenaManager arenaManager;

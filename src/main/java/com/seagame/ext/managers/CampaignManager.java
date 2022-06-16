@@ -30,11 +30,24 @@ public class CampaignManager extends AbstractExtensionManager {
         return heroCampaign;
     }
 
-    public boolean isDailyFirstTime(String idx) {
-        return true;
+    public boolean isDailyFirstTime(String gameHeroId, String idx) {
+        HeroCampaign heroCampaign = getOrCreateCampaign(gameHeroId);
+        return heroCampaign.isDailyFirstTime(idx);
     }
 
     public HeroCampaign save(HeroCampaign campaign) {
         return heroCampaignRepo.save(campaign);
+    }
+
+    public void resetDaily(String gameHeroId) {
+        HeroCampaign heroCampaign = getOrCreateCampaign(gameHeroId);
+        heroCampaign.resetDaily();
+        heroCampaignRepo.save(heroCampaign);
+    }
+
+    public void dailyFirstTimeRewarded(String gameHeroId, String idx) {
+        HeroCampaign heroCampaign = getOrCreateCampaign(gameHeroId);
+        heroCampaign.dailyFirstTimeRewarded(idx);
+        heroCampaignRepo.save(heroCampaign);
     }
 }

@@ -1,12 +1,12 @@
 package com.seagame.ext.entities.hero;
 
+import com.creants.eventhandling.dto.GameAssetDTO;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.seagame.ext.Utils;
 import lombok.Getter;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -66,13 +66,32 @@ public class HeroBase {
         soundFXarr.addAll(Arrays.stream(soundFX.split("#")).collect(Collectors.toList()));
         hitFXarr.addAll(Arrays.stream(hitFX.split("#")).collect(Collectors.toList()));
     }
+
     @JsonIgnore
     private String getSoundFX() {
         return this.soundFX;
     }
+
     @JsonIgnore
     private String getHitFX() {
         return this.hitFX;
     }
 
+    public GameAssetDTO toGameAsset() {
+        GameAssetDTO gameAssetDTO = new GameAssetDTO();
+        gameAssetDTO.setAssetId(getID());
+        gameAssetDTO.setCategory("MU-Hero");
+        gameAssetDTO.setAclass(Utils.getOClassHero(getRarity()));
+        gameAssetDTO.setType(Utils.getOTypeHero(getHeroClass()));
+        Map<String, Object> of = new HashMap<>();
+        of.put("name", getName());
+        of.put("enegryCap", getEnegryCAP());
+        of.put("maxRank", getMaxRank());
+        of.put("rarity", getRarity());
+        of.put("spine", getSpine());
+        of.put("image_url", getID());
+        of.put("description", getClassTitle());
+        gameAssetDTO.setAttribute(of);
+        return gameAssetDTO;
+    }
 }

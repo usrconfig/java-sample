@@ -47,9 +47,10 @@ public class MatchManager implements InitializingBean {
     }
 
 
-    public void removeMatch(String gameHeroId) {
+    public MatchInfo removeMatch(String gameHeroId) {
         if (matchMap.containsKey(gameHeroId))
-            matchMap.remove(gameHeroId);
+            return matchMap.remove(gameHeroId);
+        return null;
     }
 
 }

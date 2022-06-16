@@ -5,7 +5,6 @@
             <xs:sequence>
                 <xs:element name="HeroList" type="HeroList"/>
                 <xs:element name="RankList" type="RankList"/>
-                <xs:element name="RankUpList" type="RankUpList"/>
                 <xs:element name="LevelUpList" type="LevelUpList"/>
             </xs:sequence>
         </xs:complexType>
@@ -77,9 +76,10 @@
     <xs:element name="LevelUp">
         <xs:complexType>
             <xs:attribute name="ID" type="xs:int"/>
-            <xs:attribute name="Zen" type="xs:int"/>
-            <xs:attribute name="Bless" type="xs:int"/>
+            <xs:attribute name="Wol" type="xs:int"/>
+            <xs:attribute name="Ken" type="xs:int"/>
             <xs:attribute name="Chaos" type="xs:int"/>
+            <xs:attribute name="Items" type="xs:string"/>
         </xs:complexType>
     </xs:element>
 </xs:schema>

@@ -18,7 +18,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Setter
 @Document(collection = "arena")
 public class ArenaPower implements SerializableQAntType {
-    private static final long SHIELD_TIME_MILI = 3600000, RESET_TIME_MILI = 14400000;
+    private static final long RESET_TIME_MILI = 14400000;
     private @Id
     String playerId;
     private @Indexed
@@ -121,10 +121,6 @@ public class ArenaPower implements SerializableQAntType {
 
     public void win() {
         winNo++;
-    }
-
-    public void setShieldTime() {
-        setShieldTime(SHIELD_TIME_MILI);
     }
 
 

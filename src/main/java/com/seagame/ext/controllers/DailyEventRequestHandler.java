@@ -12,9 +12,14 @@ import com.seagame.ext.entities.campaign.DailyEvent;
 import com.seagame.ext.entities.campaign.HeroDailyEvent;
 import com.seagame.ext.entities.campaign.MatchInfo;
 import com.seagame.ext.entities.item.HeroItem;
+import com.seagame.ext.entities.item.RewardBase;
 import com.seagame.ext.exception.GameErrorCode;
 import com.seagame.ext.exception.UseItemException;
 import com.seagame.ext.managers.*;
+import com.seagame.ext.offchain.IApplyRewards;
+import com.seagame.ext.offchain.IGenReward;
+import com.seagame.ext.offchain.services.OffChainServices;
+import com.seagame.ext.offchain.services.WolFlowManager;
 import com.seagame.ext.quest.CollectionTask;
 import com.seagame.ext.quest.QuestSystem;
 
@@ -45,6 +50,7 @@ public class DailyEventRequestHandler extends ZClientRequestHandler {
     private DailyEventManager dailyEventManager;
     private PlayerManager playerManager;
     private HeroClassManager heroClassManager;
+    private WolFlowManager wolFlowManager;
 
 
     public DailyEventRequestHandler() {
@@ -54,6 +60,8 @@ public class DailyEventRequestHandler extends ZClientRequestHandler {
         playerManager = ExtApplication.getBean(PlayerManager.class);
         heroClassManager = ExtApplication.getBean(HeroClassManager.class);
         questSystem = ExtApplication.getBean(QuestSystem.class);
+        wolFlowManager = ExtApplication.getBean(WolFlowManager.class);
+
     }
 
 
@@ -98,12 +106,11 @@ public class DailyEventRequestHandler extends ZClientRequestHandler {
 
     private void finish(QAntUser user, IQAntObject params) {
         String playerId = user.getName();
-        MatchInfo match = matchManager.getMatch(playerId);
+        MatchInfo match = matchManager.removeMatch(playerId);
         if (match == null) {
             QAntTracer.warn(this.getClass(), "Request finish match not found!");
             return;
         }
-        matchManager.removeMatch(playerId);
         String event = match.getEvent();
         String group = match.getGroup();
         params.putUtfString("event", event);
@@ -114,27 +121,50 @@ public class DailyEventRequestHandler extends ZClientRequestHandler {
             send(params, user);
             return;
         }
+
+        if (!heroDailyEvent.isDailyFirstTime()) {
+            try {
+                heroDailyEvent.dailyFirstTime();
+                questSystem.notifyObservers(CollectionTask.init(user.getName(), "dailyevent", 1));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
         String nextStage = DailyEventConfig.getInstance().findNextStage(heroDailyEvent.getStageIdx());
         if (!nextStage.equals("x")) heroDailyEvent.setStageIdx(nextStage);
         dailyEventManager.save(heroDailyEvent);
         processReward(params, user, event);
         params.putQAntObject("eventInfo", heroDailyEvent.build());
         send(params, user);
-        try {
-            questSystem.notifyObservers(CollectionTask.init(user.getName(), "dailyevent", 1));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
 
     public void processReward(IQAntObject params, QAntUser user, String event) {
         DailyEvent dailyEvent = DailyEventConfig.getInstance().getEvents().get(event);
-        String rewards = dailyEvent.getReward();
-        List<HeroItem> addItems = heroItemManager.addItems(user, rewards);
-        heroItemManager.notifyAssetChange(user, addItems);
-        ItemConfig.getInstance().buildUpdateRewardsReceipt(params, addItems);
-        ItemConfig.getInstance().buildRewardsReceipt(params, rewards);
+
+        IGenReward genRewards = new IGenReward() {
+            @Override
+            public String genRewards() {
+                return dailyEvent.getReward();
+            }
+
+            @Override
+            public List<RewardBase> genRewardsBase() {
+                return null;
+            }
+        };
+
+        IApplyRewards iApplyRewards = (rewards, wolRewardCompleteRes) -> {
+            List<HeroItem> addItems = heroItemManager.addItems(user, rewards);
+            OffChainServices.getInstance().applyOfcToItem(user.getName(), addItems, wolRewardCompleteRes);
+            heroItemManager.save(addItems);
+            heroItemManager.notifyAssetChange(user, addItems);
+            ItemConfig.getInstance().buildUpdateRewardsReceipt(params, addItems);
+            ItemConfig.getInstance().buildRewardsReceipt(params, rewards);
+        };
+        wolFlowManager.sendRewardRequest(user.getName(), genRewards, iApplyRewards, 10);
+
     }
 
 

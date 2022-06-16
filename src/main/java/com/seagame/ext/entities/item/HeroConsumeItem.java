@@ -2,6 +2,7 @@ package com.seagame.ext.entities.item;
 
 import com.creants.creants_2x.socket.gate.entities.IQAntObject;
 import com.creants.creants_2x.socket.gate.entities.QAntObject;
+import com.seagame.ext.Utils;
 
 /**
  * @author LamHM
@@ -43,5 +44,8 @@ public class HeroConsumeItem extends HeroItem {
         return false;
     }
 
-
+    @Override
+    public boolean isOverlap() {
+        return !Utils.isNotOverLap(getIndex());
+    }
 }

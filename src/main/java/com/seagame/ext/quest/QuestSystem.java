@@ -74,7 +74,7 @@ public class QuestSystem extends AbstractExtensionManager implements Initializin
     }
 
     private boolean testKey(int taskType, int type) {
-        return taskType == type || (type == QuestObserver.TYPE_COLLECT);
+        return taskType == type;
     }
 
 
@@ -149,7 +149,6 @@ public class QuestSystem extends AbstractExtensionManager implements Initializin
         if (questFinishList.stream().anyMatch(QuestProgress::isDailyQuest)) {
             notifyObservers(FinishDailyTask.init(playerId, "daily"));
         }
-        ;
     }
 
     public void removeGameHeroData(String gameHeroId) {

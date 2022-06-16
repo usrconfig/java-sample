@@ -8,6 +8,7 @@
                 <xs:element name="Equips" type="EquipList"/>
                 <xs:element name="Ranks" type="RankList"/>
                 <xs:element name="EggRewards" type="EggRewardList"/>
+                <xs:element name="EquipLevels" type="EquipLevelList"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -35,6 +36,11 @@
     <xs:complexType name="RankList">
         <xs:sequence>
             <xs:element ref="Rank" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EquipLevelList">
+        <xs:sequence>
+            <xs:element ref="EquipLevel" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
     <xs:element name="Item">
@@ -68,6 +74,7 @@
             <xs:attribute name="Count" type="xs:int"/>
             <xs:attribute name="Rank" type="xs:int"/>
             <xs:attribute name="Level" type="xs:int"/>
+            <xs:attribute name="Repeat" type="xs:int"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="EggReward">
@@ -76,6 +83,15 @@
             <xs:attribute name="Reward" type="xs:string"/>
             <xs:attribute name="Count" type="xs:int"/>
             <xs:attribute name="Rate" type="xs:int"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="EquipLevel">
+        <xs:complexType>
+            <xs:attribute name="Level" type="xs:int"/>
+            <xs:attribute name="CombineMaterial" type="xs:string"/>
+            <xs:attribute name="KENCost" type="xs:int"/>
+            <xs:attribute name="SuccessRatePercent" type="xs:int"/>
+            <xs:attribute name="LevelDown" type="xs:int"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="Rank">

@@ -84,71 +84,66 @@
 		<RankInfo ID="801" Rank="2" maxLevel="40" skills="8010#8011#8012" baseATK="475" baseMAG="25" baseHP="7695" baseDEF="354" baseRES="331" baseSPD="105" baseCRIT="5" baseMPR="20" growthATK="29" growthMAG="1" growthHP="64" growthDEF="4" growthRES="4" growthSPD="1" growthMPR="1"/>
 		<RankInfo ID="801" Rank="3" maxLevel="60" skills="8010#8011#8012#8013" baseATK="634" baseMAG="33" baseHP="10260" baseDEF="473" baseRES="441" baseSPD="140" baseCRIT="5" baseMPR="20" growthATK="44" growthMAG="1" growthHP="100" growthDEF="7" growthRES="6" growthSPD="2" growthMPR="1"/>
 	</RankList>
-	<RankUpList>
-		<LevelUp ID="1" Zen="0" Bless="0" Chaos="0"/>
-		<LevelUp ID="2" Zen="100000" Bless="500" Chaos="500"/>
-		<LevelUp ID="3" Zen="500000" Bless="1000" Chaos="1000"/>
-	</RankUpList>
 	<LevelUpList>
-		<LevelUp ID="1" Zen="0" Bless="0" Chaos="0"/>
-		<LevelUp ID="2" Zen="20" Bless="1" Chaos="1"/>
-		<LevelUp ID="3" Zen="90" Bless="1" Chaos="1"/>
-		<LevelUp ID="4" Zen="240" Bless="1" Chaos="1"/>
-		<LevelUp ID="5" Zen="500" Bless="1" Chaos="1"/>
-		<LevelUp ID="6" Zen="900" Bless="1" Chaos="1"/>
-		<LevelUp ID="7" Zen="1470" Bless="2" Chaos="2"/>
-		<LevelUp ID="8" Zen="2240" Bless="2" Chaos="2"/>
-		<LevelUp ID="9" Zen="3240" Bless="2" Chaos="2"/>
-		<LevelUp ID="10" Zen="4500" Bless="2" Chaos="2"/>
-		<LevelUp ID="11" Zen="6050" Bless="2" Chaos="2"/>
-		<LevelUp ID="12" Zen="7920" Bless="3" Chaos="3"/>
-		<LevelUp ID="13" Zen="10140" Bless="3" Chaos="3"/>
-		<LevelUp ID="14" Zen="12740" Bless="3" Chaos="3"/>
-		<LevelUp ID="15" Zen="15750" Bless="3" Chaos="3"/>
-		<LevelUp ID="16" Zen="19200" Bless="3" Chaos="3"/>
-		<LevelUp ID="17" Zen="23120" Bless="4" Chaos="4"/>
-		<LevelUp ID="18" Zen="27540" Bless="4" Chaos="4"/>
-		<LevelUp ID="19" Zen="32490" Bless="4" Chaos="4"/>
-		<LevelUp ID="20" Zen="38000" Bless="4" Chaos="4"/>
-		<LevelUp ID="21" Zen="44100" Bless="5" Chaos="5"/>
-		<LevelUp ID="22" Zen="50820" Bless="5" Chaos="5"/>
-		<LevelUp ID="23" Zen="58190" Bless="5" Chaos="5"/>
-		<LevelUp ID="24" Zen="66240" Bless="5" Chaos="5"/>
-		<LevelUp ID="25" Zen="75000" Bless="5" Chaos="5"/>
-		<LevelUp ID="26" Zen="84500" Bless="6" Chaos="6"/>
-		<LevelUp ID="27" Zen="94770" Bless="6" Chaos="6"/>
-		<LevelUp ID="28" Zen="105840" Bless="6" Chaos="6"/>
-		<LevelUp ID="29" Zen="117740" Bless="6" Chaos="6"/>
-		<LevelUp ID="30" Zen="130500" Bless="6" Chaos="6"/>
-		<LevelUp ID="31" Zen="144150" Bless="7" Chaos="7"/>
-		<LevelUp ID="32" Zen="158720" Bless="7" Chaos="7"/>
-		<LevelUp ID="33" Zen="174240" Bless="7" Chaos="7"/>
-		<LevelUp ID="34" Zen="190740" Bless="7" Chaos="7"/>
-		<LevelUp ID="35" Zen="208250" Bless="7" Chaos="7"/>
-		<LevelUp ID="36" Zen="226800" Bless="8" Chaos="8"/>
-		<LevelUp ID="37" Zen="246420" Bless="8" Chaos="8"/>
-		<LevelUp ID="38" Zen="267140" Bless="8" Chaos="8"/>
-		<LevelUp ID="39" Zen="288990" Bless="8" Chaos="8"/>
-		<LevelUp ID="40" Zen="312000" Bless="8" Chaos="8"/>
-		<LevelUp ID="41" Zen="336200" Bless="9" Chaos="9"/>
-		<LevelUp ID="42" Zen="361620" Bless="9" Chaos="9"/>
-		<LevelUp ID="43" Zen="388290" Bless="9" Chaos="9"/>
-		<LevelUp ID="44" Zen="416240" Bless="9" Chaos="9"/>
-		<LevelUp ID="45" Zen="445500" Bless="9" Chaos="9"/>
-		<LevelUp ID="46" Zen="476100" Bless="10" Chaos="10"/>
-		<LevelUp ID="47" Zen="508070" Bless="10" Chaos="10"/>
-		<LevelUp ID="48" Zen="541440" Bless="10" Chaos="10"/>
-		<LevelUp ID="49" Zen="576240" Bless="10" Chaos="10"/>
-		<LevelUp ID="50" Zen="612500" Bless="10" Chaos="10"/>
-		<LevelUp ID="51" Zen="650250" Bless="12" Chaos="12"/>
-		<LevelUp ID="52" Zen="689520" Bless="12" Chaos="12"/>
-		<LevelUp ID="53" Zen="730340" Bless="12" Chaos="12"/>
-		<LevelUp ID="54" Zen="772740" Bless="12" Chaos="12"/>
-		<LevelUp ID="55" Zen="816750" Bless="12" Chaos="12"/>
-		<LevelUp ID="56" Zen="862400" Bless="15" Chaos="15"/>
-		<LevelUp ID="57" Zen="909720" Bless="15" Chaos="15"/>
-		<LevelUp ID="58" Zen="958740" Bless="15" Chaos="15"/>
-		<LevelUp ID="59" Zen="1009490" Bless="15" Chaos="15"/>
-		<LevelUp ID="60" Zen="1062000" Bless="15" Chaos="15"/>
+		<LevelUp ID="1" Wol="0" Ken="0" Chaos="0" Items="9913/1"/>
+		<LevelUp ID="2" Wol="0" Ken="1" Chaos="1" Items="9913/1"/>
+		<LevelUp ID="3" Wol="0" Ken="2" Chaos="1" Items="9913/1"/>
+		<LevelUp ID="4" Wol="0" Ken="3" Chaos="1" Items="9913/1"/>
+		<LevelUp ID="5" Wol="0" Ken="4" Chaos="1" Items="9913/1"/>
+		<LevelUp ID="6" Wol="0" Ken="5" Chaos="1" Items="9913/2"/>
+		<LevelUp ID="7" Wol="0" Ken="6" Chaos="1" Items="9913/2"/>
+		<LevelUp ID="8" Wol="0" Ken="7" Chaos="1" Items="9913/2"/>
+		<LevelUp ID="9" Wol="0" Ken="8" Chaos="1" Items="9913/2"/>
+		<LevelUp ID="10" Wol="0" Ken="9" Chaos="1" Items="9913/2"/>
+		<LevelUp ID="11" Wol="0" Ken="10" Chaos="1" Items="9913/3"/>
+		<LevelUp ID="12" Wol="0" Ken="11" Chaos="1" Items="9913/3"/>
+		<LevelUp ID="13" Wol="0" Ken="12" Chaos="1" Items="9913/3"/>
+		<LevelUp ID="14" Wol="0" Ken="13" Chaos="1" Items="9913/3"/>
+		<LevelUp ID="15" Wol="0" Ken="14" Chaos="1" Items="9913/3"/>
+		<LevelUp ID="16" Wol="0" Ken="15" Chaos="1" Items="9913/4"/>
+		<LevelUp ID="17" Wol="0" Ken="16" Chaos="1" Items="9913/4"/>
+		<LevelUp ID="18" Wol="0" Ken="17" Chaos="1" Items="9913/4"/>
+		<LevelUp ID="19" Wol="0" Ken="18" Chaos="1" Items="9913/4"/>
+		<LevelUp ID="20" Wol="0" Ken="19" Chaos="1" Items="9913/4"/>
+		<LevelUp ID="21" Wol="0" Ken="20" Chaos="1" Items="9914/1"/>
+		<LevelUp ID="22" Wol="0" Ken="21" Chaos="1" Items="9914/1"/>
+		<LevelUp ID="23" Wol="0" Ken="22" Chaos="1" Items="9914/1"/>
+		<LevelUp ID="24" Wol="0" Ken="23" Chaos="1" Items="9914/1"/>
+		<LevelUp ID="25" Wol="0" Ken="24" Chaos="1" Items="9914/1"/>
+		<LevelUp ID="26" Wol="0" Ken="25" Chaos="1" Items="9914/2"/>
+		<LevelUp ID="27" Wol="0" Ken="26" Chaos="1" Items="9914/2"/>
+		<LevelUp ID="28" Wol="0" Ken="27" Chaos="1" Items="9914/2"/>
+		<LevelUp ID="29" Wol="0" Ken="28" Chaos="1" Items="9914/2"/>
+		<LevelUp ID="30" Wol="0" Ken="29" Chaos="1" Items="9914/2"/>
+		<LevelUp ID="31" Wol="0" Ken="30" Chaos="1" Items="9914/3"/>
+		<LevelUp ID="32" Wol="0" Ken="31" Chaos="1" Items="9914/3"/>
+		<LevelUp ID="33" Wol="0" Ken="32" Chaos="1" Items="9914/3"/>
+		<LevelUp ID="34" Wol="0" Ken="33" Chaos="1" Items="9914/3"/>
+		<LevelUp ID="35" Wol="0" Ken="34" Chaos="1" Items="9914/3"/>
+		<LevelUp ID="36" Wol="0" Ken="35" Chaos="1" Items="9914/4"/>
+		<LevelUp ID="37" Wol="0" Ken="36" Chaos="1" Items="9914/4"/>
+		<LevelUp ID="38" Wol="0" Ken="37" Chaos="1" Items="9914/4"/>
+		<LevelUp ID="39" Wol="0" Ken="38" Chaos="1" Items="9914/4"/>
+		<LevelUp ID="40" Wol="0" Ken="39" Chaos="1" Items="9914/4"/>
+		<LevelUp ID="41" Wol="0" Ken="40" Chaos="1" Items="9915/1"/>
+		<LevelUp ID="42" Wol="0" Ken="41" Chaos="1" Items="9915/1"/>
+		<LevelUp ID="43" Wol="0" Ken="42" Chaos="1" Items="9915/1"/>
+		<LevelUp ID="44" Wol="0" Ken="43" Chaos="1" Items="9915/1"/>
+		<LevelUp ID="45" Wol="0" Ken="44" Chaos="1" Items="9915/1"/>
+		<LevelUp ID="46" Wol="0" Ken="45" Chaos="1" Items="9915/2"/>
+		<LevelUp ID="47" Wol="0" Ken="46" Chaos="1" Items="9915/2"/>
+		<LevelUp ID="48" Wol="0" Ken="47" Chaos="1" Items="9915/2"/>
+		<LevelUp ID="49" Wol="0" Ken="48" Chaos="1" Items="9915/2"/>
+		<LevelUp ID="50" Wol="0" Ken="49" Chaos="1" Items="9915/2"/>
+		<LevelUp ID="51" Wol="0" Ken="50" Chaos="1" Items="9915/3"/>
+		<LevelUp ID="52" Wol="0" Ken="51" Chaos="1" Items="9915/3"/>
+		<LevelUp ID="53" Wol="0" Ken="52" Chaos="1" Items="9915/3"/>
+		<LevelUp ID="54" Wol="0" Ken="53" Chaos="1" Items="9915/3"/>
+		<LevelUp ID="55" Wol="0" Ken="54" Chaos="1" Items="9915/3"/>
+		<LevelUp ID="56" Wol="0" Ken="55" Chaos="1" Items="9915/4"/>
+		<LevelUp ID="57" Wol="0" Ken="56" Chaos="1" Items="9915/4"/>
+		<LevelUp ID="58" Wol="0" Ken="57" Chaos="1" Items="9915/4"/>
+		<LevelUp ID="59" Wol="0" Ken="58" Chaos="1" Items="9915/4"/>
+		<LevelUp ID="60" Wol="0" Ken="59" Chaos="1" Items="9915/4"/>
 	</LevelUpList>
 </Heroes>

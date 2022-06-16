@@ -31,4 +31,6 @@ public class RewardBase implements Serializable {
     private int Rank;
     @JacksonXmlProperty(localName = "Level", isAttribute = true)
     private int Level;
+    @JacksonXmlProperty(localName = "Repeat", isAttribute = true)
+    private int Repeat;
 }

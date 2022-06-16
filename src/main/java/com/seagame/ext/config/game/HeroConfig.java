@@ -22,7 +22,6 @@ public class HeroConfig {
     public static final String HEROES_CONFIG = "heroes.xml";
     private Map<String, HeroBase> heroes;
     private Map<Integer, LevelBase> levelUps;
-    private Map<Integer, LevelBase> rankUps;
 
     public static HeroConfig getInstance() {
         if (instance == null) {
@@ -39,7 +38,6 @@ public class HeroConfig {
 
     private void loadHeroes() {
         heroes = new ConcurrentHashMap<>();
-        rankUps = new ConcurrentHashMap<>();
         levelUps = new ConcurrentHashMap<>();
         try {
             XMLStreamReader sr = SourceFileHelper.getStreamReader(HEROES_CONFIG);
@@ -52,14 +50,13 @@ public class HeroConfig {
             List<HeroRankBase> rankList = heroesInfo.getRankList();
             //TODO build full skill all rank
             rankList.forEach(heroRankBase -> {
-                if(heroRankBase.getRank()!=3){
-                    rankList.stream().filter(heroRankBase1 -> (heroRankBase1.getRank()==3&&heroRankBase1.getID().equals(heroRankBase.getID()))).limit(1).forEach(heroRankBase1 -> heroRankBase.setSkills(heroRankBase1.getSkills()));
+                if (heroRankBase.getRank() != 3) {
+                    rankList.stream().filter(heroRankBase1 -> (heroRankBase1.getRank() == 3 && heroRankBase1.getID().equals(heroRankBase.getID()))).limit(1).forEach(heroRankBase1 -> heroRankBase.setSkills(heroRankBase1.getSkills()));
                 }
             });
             //
             rankList.forEach(heroRankBase -> heroes.get(heroRankBase.getID()).pushRank(heroRankBase));
             heroesInfo.getLevelUpList().forEach(levelBase -> levelUps.put(levelBase.getID(), levelBase));
-            heroesInfo.getRankUpList().forEach(levelBase -> rankUps.put(levelBase.getID(), levelBase));
             sr.close();
         } catch (Exception ignored) {
             ignored.printStackTrace();
@@ -80,9 +77,6 @@ public class HeroConfig {
         return heroes.get(index);
     }
 
-    public LevelBase getRankUp(int rank) {
-        return rankUps.getOrDefault(rank, null);
-    }
 
     public LevelBase getLevelUp(int level) {
         return levelUps.getOrDefault(level, null);
@@ -112,7 +106,6 @@ public class HeroConfig {
     public static void main(String[] args) throws Exception {
         HeroConfig.getInstance().writeToJsonFile();
         SourceFileHelper.exportJsonFile(getInstance().levelUps.values(), "levelUps.json");
-        SourceFileHelper.exportJsonFile(getInstance().rankUps.values(), "rankUps.json");
     }
 
     public int getMaxLevel(String charIndex, int rank) {

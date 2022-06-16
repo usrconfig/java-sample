@@ -12,7 +12,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  *
  * @author LamHM
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.seagame.ext", "com.creants.eventhandling"})
 @EnableScheduling
 public class ExtApplication {
     private static ConfigurableApplicationContext context;

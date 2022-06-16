@@ -66,8 +66,18 @@ public interface NetworkConstant {
     String CONSUMABLE_KEY = "ic";
     String EQUIP_KEY = "vk";
 
-    String WOL = "9999";
-    String KEN = "9900";
+    String KEN = "9999";
+    String WOL = "9900";
+    String CHAO = "9901";
+    String EGG = "9911";
+    String STARTER = "9912";
+
+    int EGG_PIECE_TO_EGE = 100;
+    String EGG_PIECE = "9910";
+    String BLESS = "9998";
+    String SOUL = "9997";
+    String ENERGY = "9902";
+    String TROPHY = "9904";
 
     String ITEM_CURRENCY = "currency";
     String ITEM_REWARDS = "rewards";

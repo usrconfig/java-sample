@@ -6,16 +6,21 @@ import com.creants.creants_2x.socket.gate.entities.IQAntObject;
 import com.creants.creants_2x.socket.gate.wood.QAntUser;
 import com.seagame.ext.ExtApplication;
 import com.seagame.ext.Utils;
-import com.seagame.ext.config.game.QuestConfig;
 import com.seagame.ext.config.game.ItemConfig;
+import com.seagame.ext.config.game.QuestConfig;
 import com.seagame.ext.entities.Player;
 import com.seagame.ext.entities.item.HeroItem;
+import com.seagame.ext.entities.item.RewardBase;
 import com.seagame.ext.entities.quest.HeroQuest;
 import com.seagame.ext.entities.quest.QuestBase;
 import com.seagame.ext.exception.GameErrorCode;
 import com.seagame.ext.exception.UseItemException;
 import com.seagame.ext.managers.HeroItemManager;
 import com.seagame.ext.managers.PlayerManager;
+import com.seagame.ext.offchain.IApplyRewards;
+import com.seagame.ext.offchain.IGenReward;
+import com.seagame.ext.offchain.services.OffChainServices;
+import com.seagame.ext.offchain.services.WolFlowManager;
 import com.seagame.ext.quest.CollectionTask;
 import com.seagame.ext.quest.QuestObserver;
 import com.seagame.ext.quest.QuestSystem;
@@ -45,12 +50,14 @@ public class QuestRequestHandler extends ZClientRequestHandler {
     private QuestSystem questSystem;
     private HeroItemManager heroItemManager;
     private PlayerManager playerManager;
+    private WolFlowManager wolFlowManager;
 
 
     public QuestRequestHandler() {
         questSystem = ExtApplication.getBean(QuestSystem.class);
         heroItemManager = ExtApplication.getBean(HeroItemManager.class);
         playerManager = ExtApplication.getBean(PlayerManager.class);
+        wolFlowManager = ExtApplication.getBean(WolFlowManager.class);
     }
 
 
@@ -153,22 +160,43 @@ public class QuestRequestHandler extends ZClientRequestHandler {
         }
         QuestBase questBase = QuestConfig.getInstance().getQuest(questProgress.getIndex());
 
-        List<HeroItem> heroItems = heroItemManager.addItems(user, questBase.getItemReward());
-        QAntTracer.debug(PlayerManager.class, "applyRewards : " + heroItems.toString());
-        heroItemManager.notifyAssetChange(user, heroItems);
-        ItemConfig.getInstance().buildUpdateRewardsReceipt(params, heroItems);
-        Collection<HeroItem> heroItemsRewards = ItemConfig.getInstance().buildRewardsReceipt(params, questBase.getItemReward());
-        heroItemsRewards.forEach(heroItem -> questSystem.notifyObservers(CollectionTask.init(user.getName(), heroItem.getIndex(), heroItem.getNo())));
-        questProgress.setClaimed(true);
-        params.putQAntObject("queststat", questProgress.build());
 
-        boolean isLevelUp = player.expUp(10);
-        NotifySystem notifySystem = ExtApplication.getBean(NotifySystem.class);
-        notifySystem.notifyExpChange(user.getName(), player.buildLevelInfo(), user);
+        String itemReward = questBase.getItemReward();
 
-        send(params, user);
-        questSystem.save(heroQuest);
-        questSystem.notifyQuestChange(heroQuest);
+
+        IGenReward genRewards = new IGenReward() {
+            @Override
+            public String genRewards() {
+                return questBase.getItemReward();
+            }
+
+            @Override
+            public List<RewardBase> genRewardsBase() {
+                return null;
+            }
+        };
+        IApplyRewards iApplyRewards = (rewards, wolRewardCompleteRes) -> {
+            List<HeroItem> heroItems = heroItemManager.addItems(user, itemReward);
+            OffChainServices.getInstance().applyOfcToItem(user.getName(),heroItems, wolRewardCompleteRes);
+            heroItemManager.save(heroItems);
+            QAntTracer.debug(PlayerManager.class, "applyRewards : " + heroItems.toString());
+            heroItemManager.notifyAssetChange(user, heroItems);
+            ItemConfig.getInstance().buildUpdateRewardsReceipt(params, heroItems);
+            Collection<HeroItem> heroItemsRewards = ItemConfig.getInstance().buildRewardsReceipt(params, itemReward);
+            heroItemsRewards.forEach(heroItem -> questSystem.notifyObservers(CollectionTask.init(user.getName(), heroItem.getIndex(), heroItem.getNo())));
+            questProgress.setClaimed(true);
+            params.putQAntObject("queststat", questProgress.build());
+
+            boolean isLevelUp = player.expUp(10);
+            NotifySystem notifySystem = ExtApplication.getBean(NotifySystem.class);
+            notifySystem.notifyExpChange(user.getName(), player.buildLevelInfo(), user);
+
+            send(params, user);
+            questSystem.save(heroQuest);
+            questSystem.notifyQuestChange(heroQuest);
+        };
+        wolFlowManager.sendRewardRequest(user.getName(), genRewards, iApplyRewards, 10);
+
     }
 
     private void startQuest(QAntUser user, IQAntObject params) {

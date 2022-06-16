@@ -11,6 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Getter
@@ -53,5 +54,18 @@ public class HeroCampaign {
 
         });
         return iqAntArray;
+    }
+
+    public void resetDaily() {
+        stages.forEach(HeroStage::resetDaily);
+    }
+
+    public boolean isDailyFirstTime(String idx) {
+        return stages.stream().anyMatch(heroStage -> heroStage.getIndex().equals(idx) && !heroStage.isRewardFirstTimeDaily());
+    }
+
+    public void dailyFirstTimeRewarded(String idx) {
+        Optional<HeroStage> first = stages.stream().filter(heroStage -> heroStage.getIndex().equals(idx) && !heroStage.isRewardFirstTimeDaily()).findFirst();
+        first.ifPresent(heroStage -> heroStage.setRewardFirstTimeDaily(true));
     }
 }

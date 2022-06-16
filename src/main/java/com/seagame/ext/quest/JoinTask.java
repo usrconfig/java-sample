@@ -43,14 +43,14 @@ public class JoinTask extends QuestObserver {
                     }
                 }
         ));
-        if (questFinishList.size() > 0) {
-            questSystem.finishQuest(heroQuest.getPlayerId(), questFinishList);
-        }
         if (hasChange.get()) {
+            hasChange.set(false);
             questSystem.notifyQuestChange(heroQuest);
             questSystem.save(heroQuest);
         }
-
+        if (questFinishList.size() > 0) {
+            questSystem.finishQuest(heroQuest.getPlayerId(), questFinishList);
+        }
     }
 
     @Override

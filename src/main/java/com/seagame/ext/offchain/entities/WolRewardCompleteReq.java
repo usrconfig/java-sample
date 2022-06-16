@@ -1,5 +1,13 @@
 package com.seagame.ext.offchain.entities;
 
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.List;
+
+@Getter
+@Setter
 public class WolRewardCompleteReq extends WolReq {
-    WolPlayer wolPlayer;
+    List<WolRewardPlayer> players;
+    String reward_id;
 }

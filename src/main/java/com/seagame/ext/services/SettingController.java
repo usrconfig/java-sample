@@ -19,8 +19,8 @@ import java.util.stream.Collectors;
 /**
  * @author LamHM
  */
-@RestController
-@RequestMapping("/game-setting")
+//@RestController
+//@RequestMapping("/game-setting")
 public class SettingController {
     private static final List<String> fileList;
 

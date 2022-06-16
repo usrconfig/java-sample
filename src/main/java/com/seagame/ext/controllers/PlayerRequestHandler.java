@@ -93,28 +93,11 @@ public class PlayerRequestHandler extends ZClientRequestHandler {
     private void addItemHero(QAntUser user, IQAntObject params) {
         String giftCode = params.getUtfString("code");
         if (giftCode.startsWith("add:")) {
-            customeGift(user, giftCode);
+            playerManager.customeGift(user.getName(), giftCode);
             send(params, user);
         }
     }
 
-    private void customeGift(QAntUser user, String giftCode) {
-        String gameHeroId = user.getName();
-        String[] addItemArr = StringUtils.substringsBetween(giftCode, "ai:", "|");
-        if (addItemArr != null && addItemArr.length > 0) {
-            heroItemManager.addItems(gameHeroId, addItemArr[0].trim());
-        }
-        String[] addHeroArr = StringUtils.substringsBetween(giftCode, "ah:", "|");
-        if (addHeroArr != null && addHeroArr.length > 0) {
-            Arrays.stream(addHeroArr[0].trim().split("#")).forEach(s -> {
-                HeroBase heroBase = HeroConfig.getInstance().getHeroBase(s);
-                HeroClass heroClass = new HeroClass(heroBase.getID(), 1);
-                heroClass.setId(autoIncrementService.genHeroId());
-                heroClass.setPlayerId(user.getName());
-                heroClassManager.save(heroClass);
-            });
-        }
-    }
 
     private void unlinkAccount(QAntUser user, IQAntObject params) {
         Player player = playerManager.getPlayer(user.getName());

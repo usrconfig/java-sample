@@ -41,8 +41,8 @@ public class Stage {
     private String RandomReward;
     @JacksonXmlProperty(localName = "RandomRate", isAttribute = true)
     private String RandomRate;
-    @JacksonXmlProperty(localName = "ZenReward", isAttribute = true)
-    private int ZenReward;
+    @JacksonXmlProperty(localName = "KenReward", isAttribute = true)
+    private int KenReward;
     @JacksonXmlProperty(localName = "Mode", isAttribute = true)
     private String Mode;
     @JacksonXmlProperty(localName = "Chance", isAttribute = true)

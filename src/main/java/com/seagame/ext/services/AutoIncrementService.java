@@ -94,6 +94,9 @@ public class AutoIncrementService implements InitializingBean {
     public long genHeroId() {
         return sequenceRepository.getNextSequenceId(HERO_ID);
     }
+    public long getHeroId() {
+        return sequenceRepository.getSequenceId(HERO_ID);
+    }
 
 
     public long genAccountId() {

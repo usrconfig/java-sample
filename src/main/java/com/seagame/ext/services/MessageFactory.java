@@ -25,7 +25,7 @@ public class MessageFactory implements NetworkConstant, ExtensionEvent {
         if (attrbutes == null)
             params.putUtfString("msg", errorCode.getMsg());
         else
-            params.putUtfString("msg", new MessageFormat(errorCode.getMsg()).format(attrbutes));
+            params.putUtfString("msg", new MessageFormat("{0}").format(attrbutes));
 
         params.putUtfString("cmd", errorCmd);
         return params;

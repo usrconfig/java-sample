@@ -11,7 +11,6 @@ import com.creants.creants_2x.core.controllers.system.Login;
 import com.creants.creants_2x.core.exception.QAntErrorCode;
 import com.creants.creants_2x.core.exception.QAntException;
 import com.creants.creants_2x.core.extension.BaseServerEventHandler;
-import com.creants.creants_2x.core.service.WebService;
 import com.creants.creants_2x.core.util.QAntTracer;
 import com.creants.creants_2x.socket.gate.entities.IQAntObject;
 import com.creants.creants_2x.socket.gate.entities.QAntObject;
@@ -20,15 +19,19 @@ import com.creants.creants_2x.socket.io.IRequest;
 import com.creants.creants_2x.socket.io.IResponse;
 import com.creants.creants_2x.socket.io.Response;
 import com.seagame.ext.ExtApplication;
+import com.seagame.ext.Utils;
 import com.seagame.ext.bot.UnityBotManager;
 import com.seagame.ext.entities.Player;
 import com.seagame.ext.exception.GameErrorCode;
 import com.seagame.ext.managers.PlayerManager;
+import com.seagame.ext.offchain.services.OffChainServices;
 import com.seagame.ext.services.AutoIncrementService;
 import com.seagame.ext.services.MessageFactory;
 import com.seagame.ext.util.NetworkConstant;
 import io.netty.channel.Channel;
 import net.sf.json.JSONObject;
+
+import java.io.IOException;
 
 /**
  * @author LamHM
@@ -61,38 +64,25 @@ public class LoginEventHandler extends BaseServerEventHandler implements Network
         response.setTargetController(QAntAPI.SYSTEM_CONTROLLER);
         Channel sender = sysParameter.getSender();
         response.setRecipients(sender);
-
-        String verify;
+        JSONObject verifyToken = null;
+        String deviceId = null;
         try {
-            QAntTracer.info(this.getClass(), "verifying token: " + token);
-            verify = WebService.getInstance().verify(token);
+            verifyToken = OffChainServices.getInstance().verifyToken(token);
+            if (!verifyToken.containsKey("status") || !verifyToken.getString("status").equals("active")) {
+                sendError(zoneName, response, QAntErrorCode.GRAPH_API_FAIL);
+                getApi().disconnect(sender);
+                throw new QAntException("Verify graph api fail. Token:" + token);
+            } else {
+                deviceId = verifyToken.getString("address");
+            }
         } catch (Exception e) {
             sendError(zoneName, response, QAntErrorCode.GRAPH_API_FAIL);
             getApi().disconnect(sender);
             throw new QAntException("Verify graph api fail. Token:" + token);
         }
 
-        IQAntObject outData = (IQAntObject) event.getParameter(QAntEventParam.LOGIN_OUT_DATA);
-        JSONObject userInfo = JSONObject.fromObject(verify);
-        int code = userInfo.getInt("code");
-        outData.putInt("code", code);
-        if (code != 1) {
-            sendError(zoneName, response, QAntErrorCode.TOKEN_EXPIRED);
-            return;
-        }
-
-        JSONObject userObj = userInfo.getJSONObject("data");
-        long loginId = userObj.getLong("id");
-        String provider = userObj.getString("provider");
-
-        String deviceId = null;
         Player player;
-        if (loginId > 0) {
-            player = playerManager.getPlayer(loginId, zoneName);
-        } else {
-            deviceId = userObj.getString("deviceId");
-            player = playerManager.getPlayerByDevice(deviceId, zoneName);
-        }
+        player = playerManager.getPlayerByDevice(deviceId, zoneName);
 
         if (player == null) {
             long gameId = autoIncrService.genAccountId();
@@ -100,12 +90,16 @@ public class LoginEventHandler extends BaseServerEventHandler implements Network
             String fullname = "Guest#" + gameId;
 
             player = new Player(playerId, gameId, fullname);
+            player.setWalletAddress(Utils.parseWalletAddress(deviceId));
             player.setDeviceId(deviceId);
-            player.setLoginId(loginId, provider);
             player.setZoneName(zoneName);
             playerManager.updateGameHero(player);
         }
 
+
+        IQAntObject outData = (IQAntObject) event.getParameter(QAntEventParam.LOGIN_OUT_DATA);
+        int code = 1;
+        outData.putInt("code", code);
 
         String gameHeroName = player.getName();
         QAntUser user = getApi().getUserByName(player.getId());
@@ -123,12 +117,8 @@ public class LoginEventHandler extends BaseServerEventHandler implements Network
         outData.putUtfString("fn", gameHeroName);
         outData.putUtfString("tk", token);
         String avatar = "";
-        if (userObj.containsKey("avatar"))
-            avatar = userObj.getString("avatar");
         outData.putUtfString("avt", avatar);
-
         QAntTracer.info(this.getClass(), "-login: " + player.getId() + "-" + gameHeroName);
-
         unityBotManager.trackBotIn(player);
     }
 

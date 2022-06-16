@@ -15,12 +15,17 @@ import com.seagame.ext.entities.campaign.HeroStage;
 import com.seagame.ext.entities.campaign.MatchInfo;
 import com.seagame.ext.entities.campaign.Stage;
 import com.seagame.ext.entities.item.HeroItem;
+import com.seagame.ext.entities.item.RewardBase;
 import com.seagame.ext.exception.GameErrorCode;
 import com.seagame.ext.exception.UseItemException;
 import com.seagame.ext.managers.CampaignManager;
 import com.seagame.ext.managers.HeroItemManager;
 import com.seagame.ext.managers.MatchManager;
 import com.seagame.ext.managers.PlayerManager;
+import com.seagame.ext.offchain.IApplyRewards;
+import com.seagame.ext.offchain.IGenReward;
+import com.seagame.ext.offchain.services.OffChainServices;
+import com.seagame.ext.offchain.services.WolFlowManager;
 import com.seagame.ext.quest.CollectionTask;
 import com.seagame.ext.quest.QuestSystem;
 import com.seagame.ext.services.NotifySystem;
@@ -49,6 +54,7 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
     private PlayerManager playerManager;
     private CampaignManager campaignManager;
     private QuestSystem questSystem;
+    private WolFlowManager wolFlowManager;
 
 
     public CampaignRequestHandler() {
@@ -57,6 +63,7 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
         playerManager = ExtApplication.getBean(PlayerManager.class);
         campaignManager = ExtApplication.getBean(CampaignManager.class);
         questSystem = ExtApplication.getBean(QuestSystem.class);
+        wolFlowManager = ExtApplication.getBean(WolFlowManager.class);
     }
 
 
@@ -95,13 +102,12 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
 
     private void finish(QAntUser user, IQAntObject params) {
         String playerId = user.getName();
-        MatchInfo match = matchManager.getMatch(playerId);
+        MatchInfo match = matchManager.removeMatch(playerId);
         if (match == null) {
             QAntTracer.warn(this.getClass(), "Request finish match not found!");
             responseError(user, GameErrorCode.MATCH_NOT_FOUND);
             return;
         }
-        matchManager.removeMatch(playerId);
         String event = match.getEvent();
         String group = match.getGroup();
         params.putUtfString("event", event);
@@ -163,23 +169,46 @@ public class CampaignRequestHandler extends ZClientRequestHandler implements Net
 
 
     public void processReward(IQAntObject params, QAntUser user, String idx, String group, int no) {
+
         Stage stage = StageConfig.getInstance().getStage(idx);
-        String rewards = RandomRangeUtil.randomDroprate(stage.getRandomReward(), stage.getRandomRate(), 1);
-        String dailyFirstTimeReward = stage.getDailyFirstTimeReward();
-        if (campaignManager.isDailyFirstTime(idx) && !Utils.isNullOrEmpty(dailyFirstTimeReward)) {
-            rewards += "#" + dailyFirstTimeReward;
-        }
-        List<HeroItem> addItems = heroItemManager.addItems(user, rewards);
-        heroItemManager.notifyAssetChange(user, addItems);
-        ItemConfig.getInstance().buildUpdateRewardsReceipt(params, addItems);
-        ItemConfig.getInstance().buildRewardsReceipt(params, rewards);
+        IGenReward genRewards = new IGenReward() {
+            @Override
+            public String genRewards() {
+                String rewards = RandomRangeUtil.randomDroprateCanEmpty(stage.getRandomReward(), stage.getRandomRate(), 1, 100);
+                String dailyFirstTimeReward = stage.getDailyFirstTimeReward();
+                if (stage.getKenReward() > 0) {
+                    rewards += "#" + KEN + "/" + stage.getKenReward();
+                }
+                if (campaignManager.isDailyFirstTime(user.getName(), idx) && !Utils.isNullOrEmpty(dailyFirstTimeReward)) {
+                    rewards += "#" + dailyFirstTimeReward;
+                }
+                return rewards;
+            }
+
+            @Override
+            public List<RewardBase> genRewardsBase() {
+                return null;
+            }
+        };
+
+        IApplyRewards iApplyRewards = (rewards, wolRewardCompleteRes) -> {
+            List<HeroItem> addItems = heroItemManager.addItems(user, rewards);
+            OffChainServices.getInstance().applyOfcToItem(user.getName(), addItems, wolRewardCompleteRes);
+            heroItemManager.save(addItems);
+            heroItemManager.notifyAssetChange(user, addItems);
+            ItemConfig.getInstance().buildUpdateRewardsReceipt(params, addItems);
+            ItemConfig.getInstance().buildRewardsReceipt(params, rewards);
+            campaignManager.dailyFirstTimeRewarded(user.getName(), idx);
+        };
+        wolFlowManager.sendRewardRequest(user.getName(), genRewards, iApplyRewards);
     }
 
 
     private void fight(QAntUser user, IQAntObject params) {
         String idx = params.getUtfString("idx");
         try {
-            int energyCost = StageConfig.getInstance().getStage(idx).getEnergyCost();
+            Stage stage = StageConfig.getInstance().getStage(idx);
+            int energyCost = stage.getEnergyCost();
             Player player = playerManager.useEnergy(user.getName(), energyCost);
             NotifySystem notifySystem = ExtApplication.getBean(NotifySystem.class);
             notifySystem.notifyPlayerPointChange(user.getName(), player.buildPointInfo());

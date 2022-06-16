@@ -5,6 +5,7 @@ import com.creants.creants_2x.socket.gate.entities.QAntArray;
 import com.creants.creants_2x.socket.gate.entities.QAntObject;
 import com.creants.creants_2x.socket.gate.protocol.serialization.SerializableQAntType;
 import com.seagame.ext.ExtApplication;
+import com.seagame.ext.Utils;
 import com.seagame.ext.config.game.HeroConfig;
 import com.seagame.ext.entities.hero.skill.Skill;
 import com.seagame.ext.entities.item.HeroEquipment;
@@ -36,13 +37,14 @@ public class HeroClass implements SerializableQAntType, NetworkConstant {
     public String name;
     private int exp;
     private int level = 1;
-    private int rank = 3;
+    private int rank = 1;
     private List<Skill> skills;
     private @Transient
     List<HeroItem> equipments;
     private Date loginTime;
     private int power;
     private Set<String> onTeam;
+    String ofcId;
 
 
     public HeroClass(String id, int level) {
@@ -76,8 +78,11 @@ public class HeroClass implements SerializableQAntType, NetworkConstant {
     }
 
     private void refreshSkillLevel() {
+    }
 
-
+    public void setOfcId(String ofcId) {
+        if (!Utils.isNullOrEmpty(ofcId))
+            this.ofcId = ofcId;
     }
 
     private void initSkills(String charIndex) {

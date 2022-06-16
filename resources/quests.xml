@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <QuestInfo>
 	<Quests>
-		<QuestBase Index="100" Group="daily" Name="txtQuestLoginCheckin" Description="txtQuestDesLoginCheckin" TaskType="1" Task="login" TargetCount="1" ItemReward="9910/100"/>
-		<QuestBase Index="101" Group="daily" Name="txtQuestClearStages" Description="txtQuestDesClearStages" TaskType="2" Task="campaign" TargetCount="10" ItemReward="9999/10#9900/5"/>
-		<QuestBase Index="102" Group="daily" Name="txtQuestWin10ArenaMatch" Description="txtQuestDesWin10ArenaMatch" TaskType="2" Task="arena" TargetCount="10" ItemReward="9900/5#9910/100"/>
-		<QuestBase Index="103" Group="daily" Name="txtQuestWin3TypeOfDailyEventChallenge" Description="txtQuestDesWin3TypeOfDailyEventChallenge" TaskType="2" Task="dailyevent" TargetCount="3" ItemReward="9999/15"/>
-		<QuestBase Index="200" Group="special" Name="txtQuestFinishQuestDaily" Description="txtQuestDesFinishQuestDaily" TaskType="3" Task="daily" TargetCount="4" ItemReward="9999/10#9900/5#9910/100"/>
+		<QuestBase Index="100" Group="daily" Name="txtQuestLoginCheckin" Description="txtQuestDesLoginCheckin" TaskType="1" Task="login" TargetCount="1" ItemReward="9998/1#9997/1#9901/1"/>
+		<QuestBase Index="101" Group="daily" Name="txtQuestClearStages" Description="txtQuestDesClearStages" TaskType="2" Task="campaign" TargetCount="10" ItemReward="9997/2#9910/5"/>
+		<QuestBase Index="102" Group="daily" Name="txtQuestWin10ArenaMatch" Description="txtQuestDesWin10ArenaMatch" TaskType="2" Task="arena" TargetCount="10" ItemReward="9901/2#9910/5"/>
+		<QuestBase Index="103" Group="daily" Name="txtQuestWin3TypeOfDailyEventChallenge" Description="txtQuestDesWin3TypeOfDailyEventChallenge" TaskType="2" Task="dailyevent" TargetCount="3" ItemReward="9998/2#9910/5"/>
+		<QuestBase Index="200" Group="special" Name="txtQuestFinishQuestDaily" Description="txtQuestDesFinishQuestDaily" TaskType="3" Task="daily" TargetCount="4" ItemReward="9999/10#9910/10"/>
 	</Quests>
 </QuestInfo>

@@ -1,5 +1,6 @@
 package com.seagame.ext.dao;
 
+import com.seagame.ext.entities.hero.HeroClass;
 import com.seagame.ext.entities.item.HeroEquipment;
 import com.seagame.ext.entities.item.HeroItem;
 import org.springframework.data.domain.Page;
@@ -20,6 +21,9 @@ public interface HeroItemRepository extends MongoRepository<HeroItem, Long> {
 
     @Query("{playerId: ?0, type: 'equip' }")
     Page<HeroItem> getItemList(String playerId, long heroId, Pageable page);
+
+    @Query("{playerId: ?0}")
+    List<HeroItem> getAllItems(String playerId);
 
 
     @Query("{playerId: ?0, cofferState: 1, $and :[{type:{ $ne: 'currency'}}]}")
@@ -48,6 +52,9 @@ public interface HeroItemRepository extends MongoRepository<HeroItem, Long> {
     @Query("{'playerId' : ?0, 'type' :{ $ne: 'equip'}}}")
     List<HeroItem> getConsumableItem(String playerId);
 
+    @Query("{'playerId' : ?0, 'type' :'currency'}")
+    List<HeroItem> getCurrencyItem(String playerId);
+
 
     @Query("{'playerId' : ?0, 'index' : {'$in' : ?2}}")
     List<HeroItem> getItemList(String playerId, Collection<String> indexes);
@@ -61,5 +68,8 @@ public interface HeroItemRepository extends MongoRepository<HeroItem, Long> {
     @Query(value = "{ playerId: ?0}", delete = true)
     void remove(String playerId);
 
+
+    @Query(value = "{ playerId: ?0 , $or: [{ofcId: {$exists: false}}, {ofcId: \"\" }]}")
+    List<HeroItem> getItemWithoutOfcId(String playerId);
 
 }

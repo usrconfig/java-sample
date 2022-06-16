@@ -107,8 +107,9 @@ public class RandomRangeUtil {
         return indexes.stream().map(index -> splitReward[index]).limit(dropNumber).collect(Collectors.joining("#"));
 
     }
+
     //1000/1000
-    public static String randomDroprateCanEmpty(String reward, String dropRate, int dropNumber) {
+    public static String randomDroprateCanEmpty(String reward, String dropRate, int dropNumber, int total) {
         if (reward == null)
             return null;
         String[] splitReward = StringUtils.split(reward, "#");
@@ -124,7 +125,7 @@ public class RandomRangeUtil {
                     .collect(Collectors.joining("#"));
         // random for dropRate -> dropNumber
         Set<Integer> indexes = Stream.iterate(0, i -> i + 1).limit(dropRateList.length)
-                .filter(i -> isSuccessPerPercent(Integer.parseInt(dropRateList[i]), 1000)).collect(Collectors.toSet());
+                .filter(i -> isSuccessPerPercent(Integer.parseInt(dropRateList[i]), total)).collect(Collectors.toSet());
 //        if (indexes.size() < dropNumber) {
 //            Collection<Integer> moreIndexs = new Random().ints(dropNumber - indexes.size(), 0, maxLength).distinct()
 //                    .boxed().collect(Collectors.toList());

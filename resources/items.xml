@@ -10,35 +10,215 @@
 		<Item ID="9905" Name="txtItemHeroTicket1Star" Description="txtDesItemHeroTicket1Star" Type="rewards" Rank="1" Icon="1starheroticket"/>
 		<Item ID="9906" Name="txtItemHeroTicket2Star" Description="txtDesItemHeroTicket2Star" Type="rewards" Rank="2" Icon="2starheroticket"/>
 		<Item ID="9907" Name="txtItemHeroTicket3Star" Description="txtDesItemHeroTicket3Star" Type="rewards" Rank="3" Icon="3starheroticket"/>
-		<Item ID="9908" Name="txtItemZenPack" Description="txtDesItemZenPack" Type="rewards" Rank="1" Icon="giftboxred"/>
+		<Item ID="9908" Name="txtItemZenPack" Description="txtDesItemZenPack" Type="rewards" Rank="1" Icon="magicchest"/>
 		<Item ID="9909" Name="txtItemGiftBox" Description="txtDesItemGiftBox" Type="rewards" Rank="5" Icon="gmgiftchest"/>
 		<Item ID="9910" Name="txtItemEggPiece" Description="txtDesItemEggPiece" Type="eggpiece" Rank="5" Icon="eggpiece"/>
 		<Item ID="9911" Name="txtItemEgg" Description="txtDesItemEgg" Type="egg" Rank="5" Icon="egg"/>
+		<Item ID="9912" Name="txtItemStarterPack" Description="txtDesStarterPack" Type="rewards" Rank="5" Icon="epicchest"/>
 		<Item ID="9920" Name="txtIItemEventChallengeTicketFree" Description="txtDesIItemEventChallengeTicketFree" Type="ticket" Rank="5" Icon="challengeticket"/>
 		<Item ID="9921" Name="txtIItemEventChallengeTicket" Description="txtDesIItemEventChallengeTicket" Type="ticket" Rank="5" Icon="challengeticket"/>
+		<Item ID="9998" Name="txtItemBless" Description="txtDesItemBless" Type="material" Rank="2" Icon="bless"/>
+		<Item ID="9997" Name="txtItemSoul" Description="txtDesItemSoul" Type="material" Rank="2" Icon="soul"/>
+		<Item ID="9913" Name="txtNormalExpBook" Description="txtDesNormalExpBook" Type="material" Rank="1" Icon="darkexpbook1"/>
+		<Item ID="9914" Name="txtMediumExpBook" Description="txtDesMediumExpBook" Type="material" Rank="2" Icon="darkexpbook2"/>
+		<Item ID="9915" Name="txtGreatExpBook" Description="txtDesGreatExpBook" Type="material" Rank="3" Icon="darkexpbook3"/>
+		<Item ID="9916" Name="txtRedGiftBox" Description="txtDesRedGiftBox" Type="rewards" Rank="1" Icon="giftboxred"/>
+		<Item ID="9917" Name="txtGreenGiftBox" Description="txtDesGreenGiftBox" Type="rewards" Rank="2" Icon="giftboxgreen"/>
+		<Item ID="9918" Name="txtBlueGiftBox" Description="txtDesBlueGiftBox" Type="rewards" Rank="3" Icon="giftboxblue"/>
 	</Items>
 	<Rewards>
-		<Reward RewardsID="9905" Rate="250" ID="100" Type="hero" Count="1" Rank="1" Level="1"/>
-		<Reward RewardsID="9905" Rate="250" ID="200" Type="hero" Count="1" Rank="1" Level="1"/>
-		<Reward RewardsID="9905" Rate="250" ID="300" Type="hero" Count="1" Rank="1" Level="1"/>
-		<Reward RewardsID="9905" Rate="250" ID="400" Type="hero" Count="1" Rank="1" Level="1"/>
-		<Reward RewardsID="9906" Rate="200" ID="400" Type="hero" Count="1" Rank="2" Level="1"/>
-		<Reward RewardsID="9906" Rate="200" ID="401" Type="hero" Count="1" Rank="2" Level="1"/>
-		<Reward RewardsID="9906" Rate="200" ID="402" Type="hero" Count="1" Rank="2" Level="1"/>
-		<Reward RewardsID="9906" Rate="200" ID="500" Type="hero" Count="1" Rank="2" Level="1"/>
-		<Reward RewardsID="9906" Rate="200" ID="501" Type="hero" Count="1" Rank="2" Level="1"/>
-		<Reward RewardsID="9907" Rate="333" ID="601" Type="hero" Count="1" Rank="1" Level="1"/>
-		<Reward RewardsID="9907" Rate="333" ID="701" Type="hero" Count="1" Rank="1" Level="1"/>
-		<Reward RewardsID="9907" Rate="334" ID="801" Type="hero" Count="1" Rank="1" Level="1"/>
-		<Reward RewardsID="9908" Rate="250" ID="9900" Type="consumable" Count="10000"/>
-		<Reward RewardsID="9908" Rate="250" ID="9900" Type="consumable" Count="500000"/>
-		<Reward RewardsID="9908" Rate="250" ID="9900" Type="consumable" Count="10000000"/>
-		<Reward RewardsID="9908" Rate="250" ID="9900" Type="consumable" Count="30000000"/>
-		<Reward RewardsID="9909" ID="1000" Type="equip" Count="1" Rank="1" Level="1"/>
-		<Reward RewardsID="9909" ID="2000" Type="equip" Count="1" Rank="2" Level="5"/>
-		<Reward RewardsID="9909" ID="3000" Type="equip" Count="1" Rank="3" Level="3"/>
-		<Reward RewardsID="9909" ID="4000" Type="equip" Count="1" Rank="1" Level="2"/>
-		<Reward RewardsID="9909" ID="1001" Type="equip" Count="1" Rank="2" Level="1"/>
+		<Reward RewardsID="9905" Rate="250" ID="100" Type="hero" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9905" Rate="250" ID="200" Type="hero" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9905" Rate="250" ID="300" Type="hero" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9905" Rate="250" ID="400" Type="hero" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9906" Rate="200" ID="400" Type="hero" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9906" Rate="200" ID="401" Type="hero" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9906" Rate="200" ID="402" Type="hero" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9906" Rate="200" ID="500" Type="hero" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9906" Rate="200" ID="501" Type="hero" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9907" Rate="333" ID="601" Type="hero" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9907" Rate="333" ID="701" Type="hero" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9907" Rate="334" ID="801" Type="hero" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9908" Rate="500" ID="9900" Type="consumable" Count="9999" Repeat="1"/>
+		<Reward RewardsID="9908" Rate="500" ID="9999" Type="consumable" Count="9999" Repeat="1"/>
+		<Reward RewardsID="9909" ID="9901" Type="consumable" Count="999" Repeat="1"/>
+		<Reward RewardsID="9909" ID="9998" Type="consumable" Count="999" Repeat="1"/>
+		<Reward RewardsID="9909" ID="9997" Type="consumable" Count="999" Repeat="1"/>
+		<Reward RewardsID="9909" ID="4000" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9909" ID="1001" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9912" Rate="50" ID="100" Type="hero" Count="1" Rank="1" Level="1" Repeat="5"/>
+		<Reward RewardsID="9912" Rate="50" ID="101" Type="hero" Count="1" Rank="1" Level="1" Repeat="5"/>
+		<Reward RewardsID="9912" Rate="50" ID="102" Type="hero" Count="1" Rank="1" Level="1" Repeat="5"/>
+		<Reward RewardsID="9912" Rate="50" ID="200" Type="hero" Count="1" Rank="1" Level="1" Repeat="5"/>
+		<Reward RewardsID="9912" Rate="50" ID="201" Type="hero" Count="1" Rank="1" Level="1" Repeat="5"/>
+		<Reward RewardsID="9912" Rate="50" ID="300" Type="hero" Count="1" Rank="1" Level="1" Repeat="5"/>
+		<Reward RewardsID="9912" Rate="50" ID="301" Type="hero" Count="1" Rank="1" Level="1" Repeat="5"/>
+		<Reward RewardsID="9912" Rate="50" ID="302" Type="hero" Count="1" Rank="1" Level="1" Repeat="5"/>
+		<Reward RewardsID="9912" Rate="50" ID="303" Type="hero" Count="1" Rank="1" Level="1" Repeat="5"/>
+		<Reward RewardsID="9912" Rate="50" ID="400" Type="hero" Count="1" Rank="1" Level="1" Repeat="5"/>
+		<Reward RewardsID="9912" Rate="50" ID="401" Type="hero" Count="1" Rank="1" Level="1" Repeat="5"/>
+		<Reward RewardsID="9912" Rate="50" ID="402" Type="hero" Count="1" Rank="1" Level="1" Repeat="5"/>
+		<Reward RewardsID="9912" Rate="50" ID="500" Type="hero" Count="1" Rank="1" Level="1" Repeat="5"/>
+		<Reward RewardsID="9912" Rate="50" ID="501" Type="hero" Count="1" Rank="1" Level="1" Repeat="5"/>
+		<Reward RewardsID="9912" Rate="50" ID="600" Type="hero" Count="1" Rank="1" Level="1" Repeat="5"/>
+		<Reward RewardsID="9912" Rate="50" ID="601" Type="hero" Count="1" Rank="1" Level="1" Repeat="5"/>
+		<Reward RewardsID="9912" Rate="50" ID="700" Type="hero" Count="1" Rank="1" Level="1" Repeat="5"/>
+		<Reward RewardsID="9912" Rate="50" ID="701" Type="hero" Count="1" Rank="1" Level="1" Repeat="5"/>
+		<Reward RewardsID="9912" Rate="50" ID="800" Type="hero" Count="1" Rank="1" Level="1" Repeat="5"/>
+		<Reward RewardsID="9912" Rate="50" ID="801" Type="hero" Count="1" Rank="1" Level="1" Repeat="5"/>
+		<Reward RewardsID="9916" Rate="20" ID="1000" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1010" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1020" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1100" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1110" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1120" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1200" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1210" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1220" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1230" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1300" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1310" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1320" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1400" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1410" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1420" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1500" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1510" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1520" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1600" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1610" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1620" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1700" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1710" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="1720" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="2000" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="2010" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="2100" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="2110" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="2200" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="20" ID="2210" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="19" ID="2300" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="19" ID="2310" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="19" ID="2400" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="19" ID="2410" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="19" ID="2500" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="19" ID="2510" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="19" ID="2600" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="19" ID="2610" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="19" ID="2700" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="19" ID="2710" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="19" ID="3000" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="19" ID="3100" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="19" ID="3200" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="19" ID="3300" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="19" ID="3400" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="19" ID="4000" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="19" ID="4100" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="19" ID="4200" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="19" ID="4300" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9916" Rate="19" ID="4400" Type="equip" Count="1" Rank="1" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1000" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1010" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1020" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1100" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1110" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1120" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1200" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1210" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1220" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1230" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1300" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1310" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1320" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1400" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1410" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1420" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1500" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1510" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1520" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1600" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1610" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1620" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1700" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1710" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="1720" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="2000" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="2010" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="2100" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="2110" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="2200" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="20" ID="2210" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="19" ID="2300" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="19" ID="2310" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="19" ID="2400" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="19" ID="2410" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="19" ID="2500" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="19" ID="2510" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="19" ID="2600" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="19" ID="2610" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="19" ID="2700" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="19" ID="2710" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="19" ID="3000" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="19" ID="3100" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="19" ID="3200" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="19" ID="3300" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="19" ID="3400" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="19" ID="4000" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="19" ID="4100" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="19" ID="4200" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="19" ID="4300" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9917" Rate="19" ID="4400" Type="equip" Count="1" Rank="2" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1000" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1010" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1020" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1100" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1110" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1120" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1200" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1210" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1220" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1230" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1300" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1310" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1320" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1400" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1410" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1420" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1500" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1510" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1520" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1600" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1610" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1620" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1700" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1710" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="1720" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="2000" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="2010" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="2100" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="2110" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="2200" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="20" ID="2210" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="19" ID="2300" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="19" ID="2310" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="19" ID="2400" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="19" ID="2410" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="19" ID="2500" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="19" ID="2510" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="19" ID="2600" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="19" ID="2610" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="19" ID="2700" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="19" ID="2710" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="19" ID="3000" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="19" ID="3100" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="19" ID="3200" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="19" ID="3300" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="19" ID="3400" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="19" ID="4000" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="19" ID="4100" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="19" ID="4200" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="19" ID="4300" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
+		<Reward RewardsID="9918" Rate="19" ID="4400" Type="equip" Count="1" Rank="3" Level="1" Repeat="1"/>
 	</Rewards>
 	<Equips>
 		<Equip ID="1000" Name="txtEquipShortSword" Description="txtEquipDesShortSword" Slot="Weapon" maxRank="3" OptionType="Offensive" HeroClass="knight" RefundCost="1000"/>
@@ -97,9 +277,9 @@
 		<Rank ID="1000" Rank="1" Icon="ico_sword_short1" maxLevel="6" baseATK="80" baseMAG="0" baseHP="0" baseDEF="0" baseRES="0" baseSPD="0" baseCRIT="0" baseMPR="0" growthATK="0" growthMAG="0" growthHP="0" growthDEF="0" growthRES="0" growthSPD="0" growthCRIT="0" growthMPR="0"/>
 		<Rank ID="1000" Rank="2" Icon="ico_sword_short2" maxLevel="6" baseATK="120" baseMAG="0" baseHP="0" baseDEF="0" baseRES="0" baseSPD="0" baseCRIT="0" baseMPR="0" growthATK="10" growthMAG="0" growthHP="0" growthDEF="0" growthRES="0" growthSPD="0" growthCRIT="0" growthMPR="0"/>
 		<Rank ID="1000" Rank="3" Icon="ico_sword_short3" maxLevel="6" baseATK="150" baseMAG="0" baseHP="0" baseDEF="0" baseRES="0" baseSPD="0" baseCRIT="0" baseMPR="0" growthATK="12" growthMAG="0" growthHP="0" growthDEF="0" growthRES="0" growthSPD="0" growthCRIT="0" growthMPR="0"/>
-		<Rank ID="1010" Rank="1" Icon="ico_sword_double1" maxLevel="6" baseATK="260" baseMAG="0" baseHP="0" baseDEF="0" baseRES="0" baseSPD="0" baseCRIT="0" baseMPR="0" growthATK="21" growthMAG="0" growthHP="0" growthDEF="0" growthRES="0" growthSPD="0" growthCRIT="0" growthMPR="0"/>
-		<Rank ID="1010" Rank="2" Icon="ico_sword_double2" maxLevel="6" baseATK="325" baseMAG="0" baseHP="0" baseDEF="0" baseRES="0" baseSPD="50" baseCRIT="0" baseMPR="0" growthATK="39" growthMAG="0" growthHP="0" growthDEF="0" growthRES="0" growthSPD="3" growthCRIT="0" growthMPR="0"/>
-		<Rank ID="1010" Rank="3" Icon="ico_sword_double3" maxLevel="6" baseATK="410" baseMAG="0" baseHP="0" baseDEF="150" baseRES="0" baseSPD="100" baseCRIT="0" baseMPR="0" growthATK="66" growthMAG="0" growthHP="0" growthDEF="24" growthRES="0" growthSPD="8" growthCRIT="0" growthMPR="0"/>
+		<Rank ID="1010" Rank="1" Icon="ico_sword_doubleblade1" maxLevel="6" baseATK="260" baseMAG="0" baseHP="0" baseDEF="0" baseRES="0" baseSPD="0" baseCRIT="0" baseMPR="0" growthATK="21" growthMAG="0" growthHP="0" growthDEF="0" growthRES="0" growthSPD="0" growthCRIT="0" growthMPR="0"/>
+		<Rank ID="1010" Rank="2" Icon="ico_sword_doubleblade2" maxLevel="6" baseATK="325" baseMAG="0" baseHP="0" baseDEF="0" baseRES="0" baseSPD="50" baseCRIT="0" baseMPR="0" growthATK="39" growthMAG="0" growthHP="0" growthDEF="0" growthRES="0" growthSPD="3" growthCRIT="0" growthMPR="0"/>
+		<Rank ID="1010" Rank="3" Icon="ico_sword_doubleblade3" maxLevel="6" baseATK="410" baseMAG="0" baseHP="0" baseDEF="150" baseRES="0" baseSPD="100" baseCRIT="0" baseMPR="0" growthATK="66" growthMAG="0" growthHP="0" growthDEF="24" growthRES="0" growthSPD="8" growthCRIT="0" growthMPR="0"/>
 		<Rank ID="1020" Rank="1" Icon="ico_sword_lightning1" maxLevel="6" baseATK="360" baseMAG="0" baseHP="0" baseDEF="0" baseRES="0" baseSPD="0" baseCRIT="0" baseMPR="0" growthATK="29" growthMAG="0" growthHP="0" growthDEF="0" growthRES="0" growthSPD="0" growthCRIT="0" growthMPR="0"/>
 		<Rank ID="1020" Rank="2" Icon="ico_sword_lightning2" maxLevel="6" baseATK="450" baseMAG="0" baseHP="0" baseDEF="0" baseRES="0" baseSPD="120" baseCRIT="0" baseMPR="0" growthATK="54" growthMAG="0" growthHP="0" growthDEF="0" growthRES="0" growthSPD="7" growthCRIT="0" growthMPR="0"/>
 		<Rank ID="1020" Rank="3" Icon="ico_sword_lightning3" maxLevel="6" baseATK="560" baseMAG="0" baseHP="0" baseDEF="300" baseRES="0" baseSPD="175" baseCRIT="0" baseMPR="0" growthATK="90" growthMAG="0" growthHP="0" growthDEF="48" growthRES="0" growthSPD="14" growthCRIT="0" growthMPR="0"/>
@@ -249,15 +429,35 @@
 		<Rank ID="4400" Rank="3" Icon="ico_pendant_dark3" maxLevel="6" baseATK="500" baseMAG="0" baseHP="0" baseDEF="0" baseRES="0" baseSPD="0" baseCRIT="0" baseMPR="0" growthATK="50" growthMAG="0" growthHP="0" growthDEF="0" growthRES="0" growthSPD="0" growthCRIT="0" growthMPR="0"/>
 	</Ranks>
 	<EggRewards>
-		<EggReward Index="1" Reward="9999" Count="1" Rate="5"/>
-		<EggReward Index="2" Reward="9900" Count="1" Rate="5"/>
-		<EggReward Index="3" Reward="9901" Count="1" Rate="10"/>
-		<EggReward Index="4" Reward="9902" Count="1" Rate="10"/>
-		<EggReward Index="5" Reward="9903" Count="1" Rate="10"/>
-		<EggReward Index="6" Reward="9904" Count="1" Rate="10"/>
-		<EggReward Index="7" Reward="9905" Count="1" Rate="10"/>
-		<EggReward Index="8" Reward="9906" Count="1" Rate="10"/>
-		<EggReward Index="9" Reward="9907" Count="1" Rate="10"/>
-		<EggReward Index="10" Reward="9908" Count="1" Rate="20"/>
+		<EggReward Index="1" Reward="9999" Count="100" Rate="250"/>
+		<EggReward Index="2" Reward="9999" Count="200" Rate="160"/>
+		<EggReward Index="3" Reward="9999" Count="500" Rate="40"/>
+		<EggReward Index="4" Reward="9999" Count="1000" Rate="20"/>
+		<EggReward Index="5" Reward="9999" Count="5000" Rate="10"/>
+		<EggReward Index="6" Reward="9905" Count="1" Rate="30"/>
+		<EggReward Index="7" Reward="9906" Count="1" Rate="20"/>
+		<EggReward Index="8" Reward="9907" Count="1" Rate="10"/>
+		<EggReward Index="9" Reward="9916" Count="1" Rate="100"/>
+		<EggReward Index="10" Reward="9917" Count="1" Rate="50"/>
+		<EggReward Index="11" Reward="9918" Count="1" Rate="10"/>
+		<EggReward Index="12" Reward="9901" Count="100" Rate="100"/>
+		<EggReward Index="13" Reward="9998" Count="100" Rate="100"/>
+		<EggReward Index="14" Reward="9997" Count="100" Rate="100"/>
 	</EggRewards>
+	<EquipLevels>
+		<EquipLevel Level="2" CombineMaterial="9998/10" KENCost="9999/10" SuccessRatePercent="50" LevelDown="0"/>
+		<EquipLevel Level="3" CombineMaterial="9998/10" KENCost="9999/10" SuccessRatePercent="50" LevelDown="1"/>
+		<EquipLevel Level="4" CombineMaterial="9998/10" KENCost="9999/10" SuccessRatePercent="50" LevelDown="1"/>
+		<EquipLevel Level="5" CombineMaterial="9998/10" KENCost="9999/10" SuccessRatePercent="50" LevelDown="1"/>
+		<EquipLevel Level="6" CombineMaterial="9998/10" KENCost="9999/10" SuccessRatePercent="50" LevelDown="1"/>
+		<EquipLevel Level="7" CombineMaterial="#9997/10" KENCost="9999/10" SuccessRatePercent="50" LevelDown="5"/>
+		<EquipLevel Level="8" CombineMaterial="#9997/10" KENCost="9999/10" SuccessRatePercent="50" LevelDown="6"/>
+		<EquipLevel Level="9" CombineMaterial="#9997/10" KENCost="9999/10" SuccessRatePercent="50" LevelDown="7"/>
+		<EquipLevel Level="10" CombineMaterial="9998/10#9997/10#9901/10" KENCost="9999/10" SuccessRatePercent="65" LevelDown="99"/>
+		<EquipLevel Level="11" CombineMaterial="9998/20#9997/20#9901/10" KENCost="9999/20" SuccessRatePercent="60" LevelDown="99"/>
+		<EquipLevel Level="12" CombineMaterial="9998/30#9997/30#9901/10" KENCost="9999/30" SuccessRatePercent="55" LevelDown="99"/>
+		<EquipLevel Level="13" CombineMaterial="9998/40#9997/40#9901/10" KENCost="9999/40" SuccessRatePercent="50" LevelDown="99"/>
+		<EquipLevel Level="14" CombineMaterial="9998/50#9997/50#9901/10" KENCost="9999/50" SuccessRatePercent="45" LevelDown="99"/>
+		<EquipLevel Level="15" CombineMaterial="9998/60#9997/60#9901/10" KENCost="9999/60" SuccessRatePercent="40" LevelDown="99"/>
+	</EquipLevels>
 </Items>
